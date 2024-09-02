@@ -1,13 +1,17 @@
-#include <utils/hello.h>
 #include "utilidades.h"
 
+extern t_log* logger;
+extern char* puerto;
+
 int main(int argc, char* argv[]) {
-    t_config* config = iniciar_config();
-    char* log_level = config_get_string_value(config,"LOG_LEVEL");
+ 
+    iniciar_filesystem();
+    int server_fd = iniciar_servidor(logger, puerto);
+    int cliente_fd = esperar_cliente(server_fd, logger,"Memoria");
 
-    logger = log_create("logFS.log","FileSystem",true,log_level_from_string(log_level));
 
-    int server_fd = iniciar_servidor();
+
+    
 
     terminar_ejecucion(server_fd);
 

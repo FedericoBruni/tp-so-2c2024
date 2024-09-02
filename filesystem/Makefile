@@ -92,3 +92,7 @@ $(DEPS): $$(shell find $$(patsubst %lib/,%src/,$$(dir $$@)) -iname "*.c" -or -in
 
 $(sort $(dir $(OUT) $(OBJS))):
 	mkdir -pv $@
+
+filesystem:
+	make
+	./bin/filesystem

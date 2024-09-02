@@ -11,12 +11,15 @@
 #include<string.h>
 #include<assert.h>
 #include<commons/config.h>
+#include "utils/utils.h"
+#include <pthread.h>
 
-extern t_log* logger;
-extern t_config* config;
+//extern t_log* logger;
+//extern t_config* config;
 
-t_config* iniciar_config(void);
-int iniciar_servidor(void);
+void iniciar_filesystem(void);
+
 void terminar_ejecucion(int socket);
+
 
 #endif //UTILIDADES_H_
