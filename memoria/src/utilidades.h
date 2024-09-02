@@ -10,5 +10,5 @@
 
 void iniciar_memoria(void);
 int conectarse_a_filesystem(void);
-void terminar_ejecucion(int socket_conexion,int socket_servidor);
+void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel,int socket_servidor_cpu);
 #endif //UTILIDADES_H_

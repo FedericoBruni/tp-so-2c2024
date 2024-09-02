@@ -2,7 +2,7 @@
 
 t_log* logger;
 t_config* config;
-int* puerto_escucha;
+char* puerto_escucha;
 char* ip_filesystem;
 char* puerto_filesystem;
 int* tam_memoria;
@@ -37,9 +37,10 @@ int conectarse_a_filesystem(void){
     return crear_conexion(ip_filesystem,puerto_filesystem,logger);
 }
 
-void terminar_ejecucion(int socket_conexion, int socket_servidor){
+void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel,int socket_servidor_cpu){
     close(socket_conexion);
-    close(socket_servidor);
+    close(socket_servidor_kernel);
+    close(socket_servidor_cpu);
     log_destroy(logger);
     config_destroy(config);
     exit(EXIT_SUCCESS);
