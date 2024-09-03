@@ -38,6 +38,7 @@ int conectarse_a_filesystem(void){
 }
 
 void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel,int socket_servidor_cpu){
+    log_info(logger, "Finalizando ejecución de MEMORIA");
     close(socket_conexion);
     close(socket_servidor_kernel);
     close(socket_servidor_cpu);

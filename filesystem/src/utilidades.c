@@ -23,8 +23,8 @@ void iniciar_filesystem(void) {
 
 void terminar_ejecucion(int socket)
 {
+    log_info(logger, "Finalizando ejecución de FILESYSTEM");
     close(socket);
-    log_trace(logger,"Servidor cerrado");
     log_destroy(logger);
     config_destroy(config);
     exit(EXIT_SUCCESS);

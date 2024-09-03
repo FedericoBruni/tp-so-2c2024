@@ -37,7 +37,7 @@ int conectarse_a_memoria(void){
 }
 
 void terminar_ejecucion(int dispatch,int memoria,int interrupt){
-    log_info(logger,"Finalizando ejecucion");
+    log_info(logger,"Finalizando ejecucion de KERNEL");
     close(dispatch);
     close(memoria);
     close(interrupt);

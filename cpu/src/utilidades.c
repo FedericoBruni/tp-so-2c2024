@@ -25,7 +25,7 @@ int conectarse_a_memoria(void) {
 }
 
 void terminar_ejecucion(int servidor_dispatch,int servidor_interrupt,int socket_memoria){
-    log_info(logger, "Finalizando ejecución de CPU.");
+    log_info(logger, "Finalizando ejecución de CPU");
     close(servidor_dispatch);
     close(servidor_interrupt);
     close(socket_memoria);
