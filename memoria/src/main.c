@@ -17,8 +17,9 @@ int main(int argc, char* argv[]) {
     int fd_filesystem = conectarse_a_filesystem();
     if (realizar_handshake(logger, fd_filesystem, HANDSHAKE_MEMORIA) == -1){
         exit(EXIT_FAILURE);
-    }
-
+    }    
+    
+    
     cliente_fd_cpu = esperar_cliente(server_fd, logger, "Cpu");
     cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
 

@@ -139,7 +139,7 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	int resultado;
 	send(socket_cliente, &handshake, sizeof(int), 0);
 	recv(socket_cliente, &resultado, sizeof(int), MSG_WAITALL);
-	if (resultado != -1)
+	if (resultado != -1 && resultado != 0)
 	{
 		log_info(logger, "Handshake OK");
 	}
