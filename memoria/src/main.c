@@ -21,24 +21,23 @@ int main(int argc, char* argv[]) {
     
     
     cliente_fd_cpu = esperar_cliente(server_fd, logger, "Cpu");
+    pthread_t hilo_cpu_memoria;
+    pthread_create(&hilo_cpu_memoria,NULL,(void*)escuchar_mensajes_cpu,NULL);
+    pthread_detach(hilo_cpu_memoria);
+    
     cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
 
     pthread_t hilo_kernel_memoria;
     pthread_create(&hilo_kernel_memoria,NULL,(void*)escuchar_mensajes_kernel,NULL);
-    pthread_detach(hilo_kernel_memoria);
+    pthread_join(hilo_kernel_memoria, NULL);
 
-    pthread_t hilo_cpu_memoria;
-    pthread_create(&hilo_cpu_memoria,NULL,(void*)escuchar_mensajes_cpu,NULL);
-    pthread_join(hilo_cpu_memoria,NULL);
+    
 
     while(1){
         if(cliente_fd_cpu == -1 && cliente_fd_kernel == -1){
             terminar_ejecucion(server_fd,cliente_fd_cpu,cliente_fd_kernel);
         }
     }
-
-
-
 
     return 0;
 }

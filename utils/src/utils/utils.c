@@ -128,12 +128,14 @@ void rechazar_handshake(t_log *logger, int socket_cliente)
 }
 
 int realizar_handshake(t_log *logger, int socket_servidor, op_code handshake){
-
+	printf("a\n");
 	if(enviar_handshake(logger, socket_servidor, handshake) == -1){
 		close(socket_servidor);
 		log_error(logger, "No se pudo realizar el handshake con el servidor");
+		printf("c\n");
 		return -1;
 	}
+	printf("b\n");
 	return 0;
 }
 
