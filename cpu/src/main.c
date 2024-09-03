@@ -8,15 +8,18 @@ int cliente_fd_interrupt;
 
 int main(int argc, char* argv[]) {
     iniciar_cpu();
+
+    // Iniciar servidores
+    int server_fd_dispatch = iniciar_servidor(logger,puerto_escucha_dispatch);
+    int server_fd_interrupt = iniciar_servidor(logger,puerto_escucha_interrupt);
+    
     // Conectarse a FS
     int fd_memoria = conectarse_a_memoria();
 
     if (realizar_handshake(logger, fd_memoria, HANDSHAKE_CPU) == -1){
         exit(EXIT_FAILURE);
     }
-    // Iniciar servidores
-    int server_fd_dispatch = iniciar_servidor(logger,puerto_escucha_dispatch);
-    int server_fd_interrupt = iniciar_servidor(logger,puerto_escucha_interrupt);
+    
 
     cliente_fd_dispatch = esperar_cliente(server_fd_dispatch, logger,"Kernel - Dispatcher");
     cliente_fd_interrupt = esperar_cliente(server_fd_interrupt, logger,"Kernel - Interrupt");

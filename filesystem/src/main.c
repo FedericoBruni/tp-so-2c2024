@@ -11,7 +11,7 @@ int main(int argc, char* argv[]) {
     cliente_fd = esperar_cliente(server_fd, logger,"Memoria");
 
     pthread_t hilo_fs_memoria;
-    pthread_create(&hilo_fs_memoria,NULL,(void*)escuchar_mensajes_memoria(),NULL);
+    pthread_create(&hilo_fs_memoria,NULL,(void*) escuchar_mensajes_memoria, NULL);
     pthread_join(hilo_fs_memoria,NULL);
 
     

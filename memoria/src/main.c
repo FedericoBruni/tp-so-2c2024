@@ -19,26 +19,22 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
+    cliente_fd_cpu = esperar_cliente(server_fd, logger, "Cpu");
+    cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
 
+    pthread_t hilo_kernel_memoria;
+    pthread_create(&hilo_kernel_memoria,NULL,(void*)escuchar_mensajes_kernel,NULL);
+    pthread_detach(hilo_kernel_memoria);
 
+    pthread_t hilo_cpu_memoria;
+    pthread_create(&hilo_cpu_memoria,NULL,(void*)escuchar_mensajes_cpu,NULL);
+    pthread_join(hilo_cpu_memoria,NULL);
 
-
-     cliente_fd_cpu = esperar_cliente(server_fd, logger, "Cpu");
-     cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
-
-     pthread_t hilo_kernel_memoria;
-     pthread_create(&hilo_kernel_memoria,NULL,(void*)escuchar_mensajes_kernel(),NULL);
-     pthread_detach(hilo_kernel_memoria);
-
-     pthread_t hilo_cpu_memoria;
-     pthread_create(&hilo_cpu_memoria,NULL,(void*)escuchar_mensajes_cpu(),NULL);
-     pthread_join(hilo_cpu_memoria,NULL);
-
-     while(1){
+    while(1){
         if(cliente_fd_cpu == -1 && cliente_fd_kernel == -1){
             terminar_ejecucion(server_fd,cliente_fd_cpu,cliente_fd_kernel);
         }
-     }
+    }
 
 
 

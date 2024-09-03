@@ -8,17 +8,18 @@ int main(int argc, char* argv[]) {
     
     // Conectarse a memoria
     int fd_memoria = conectarse_a_memoria();
-     if (realizar_handshake(logger, fd_memoria, HANDSHAKE_KERNEL) == -1){
-        exit(EXIT_FAILURE);
-    }
     // Conectarse a cpu dispatch
     int fd_cpu_dispatch = conectarse_a_cpu_dispatch();
-     if (realizar_handshake(logger, fd_cpu_dispatch, HANDSHAKE_KERNEL_DISPATCH) == -1){
-        exit(EXIT_FAILURE);
-    }
     // Conectarse a cpu interrupt
     int fd_cpu_interrupt = conectarse_a_cpu_interrupt();
 
+    // Handshakes
+    if (realizar_handshake(logger, fd_memoria, HANDSHAKE_KERNEL) == -1){
+        exit(EXIT_FAILURE);
+    }
+    if (realizar_handshake(logger, fd_cpu_dispatch, HANDSHAKE_KERNEL_DISPATCH) == -1){
+        exit(EXIT_FAILURE);
+    }
     if (realizar_handshake(logger, fd_cpu_interrupt, HANDSHAKE_KERNEL_INTERRUPT) == -1){
         exit(EXIT_FAILURE);
     }

@@ -8,6 +8,7 @@
 #include <pthread.h> 
 #include "utils/utils.h"
 #include <commons/collections/list.h>
+#include "escuchar_mensajes_memoria.h"
 
 void iniciar_memoria(void);
 int conectarse_a_filesystem(void);

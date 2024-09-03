@@ -13,6 +13,7 @@
 #include<commons/config.h>
 #include "utils/utils.h"
 #include <pthread.h>
+#include "escuchar_memoria.h"
 
 //extern t_log* logger;
 //extern t_config* config;
