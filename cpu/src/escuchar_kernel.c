@@ -12,8 +12,8 @@ void escuchar_mensajes_kernel_dispatch(void){
 			//printf("---recibir_operacion--->cod_op= %d\n",cod_op);
 
 		switch(cod_op){
-			case HANDSHAKE_KERNEL_DISPATCH:
-				aceptar_handshake(logger, cliente_fd_dispatch, "dispatch");
+			case HANDSHAKE_KERNEL_CPU_DISPATCH:
+				aceptar_handshake(logger, cliente_fd_dispatch, HANDSHAKE_KERNEL_CPU_DISPATCH);
 				break;
 
 			case -1:
@@ -33,8 +33,8 @@ void escuchar_mensajes_kernel_interrupt(void){
 	while(!desconexion_kernel_interrupt){
 		int cod_op = recibir_operacion(cliente_fd_interrupt); // recv() es bloqueante por ende no queda loopeando infinitamente
 		switch(cod_op){
-			case HANDSHAKE_KERNEL_INTERRUPT:
-				aceptar_handshake(logger, cliente_fd_interrupt, "interrupt");
+			case HANDSHAKE_KERNEL_CPU_INTERRUPT:
+				aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 				break;
 
 			case -1:

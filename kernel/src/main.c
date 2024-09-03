@@ -14,13 +14,13 @@ int main(int argc, char* argv[]) {
     int fd_cpu_interrupt = conectarse_a_cpu_interrupt();
 
     // Handshakes
-    if (realizar_handshake(logger, fd_memoria, HANDSHAKE_KERNEL) == -1){
+    if (realizar_handshake(logger, fd_memoria, HANDSHAKE_KERNEL_MEMORIA) == -1){
         exit(EXIT_FAILURE);
     }
-    if (realizar_handshake(logger, fd_cpu_dispatch, HANDSHAKE_KERNEL_DISPATCH) == -1){
+    if (realizar_handshake(logger, fd_cpu_dispatch, HANDSHAKE_KERNEL_CPU_DISPATCH) == -1){
         exit(EXIT_FAILURE);
     }
-    if (realizar_handshake(logger, fd_cpu_interrupt, HANDSHAKE_KERNEL_INTERRUPT) == -1){
+    if (realizar_handshake(logger, fd_cpu_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT) == -1){
         exit(EXIT_FAILURE);
     }
     

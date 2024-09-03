@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     // Conectarse a FS
 
     int fd_filesystem = conectarse_a_filesystem();
-    if (realizar_handshake(logger, fd_filesystem, HANDSHAKE_MEMORIA) == -1){
+    if (realizar_handshake(logger, fd_filesystem, HANDSHAKE_MEMORIA_FS) == -1){
         exit(EXIT_FAILURE);
     }    
     

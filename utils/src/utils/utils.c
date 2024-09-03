@@ -1,5 +1,8 @@
 #include "utils.h"
 
+char* desc_code_op[] = {
+"HANDSHAKE KERNEL - MEMORIA", "HANDSHAKE KERNEL - CPU DISPATCH", "HANDSHAKE KERNEL - CPU INTERRUPT", 
+"HANDSHAKE CPU - MEMORIA", "HANDSHAKE MEMORIA - FILESYSTEM"};
 
 t_config* iniciar_config(char* ruta){
     t_config* config = config_create(ruta);
@@ -110,10 +113,10 @@ int recibir_operacion(int socket_cliente)
 	}
 }
 
-void aceptar_handshake(t_log *logger, int socket_cliente, char* origen)
+void aceptar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 {
 	int result_ok = 0;
-	log_info(logger, "Recibido handshake: %s", origen);
+	log_info(logger, "Recibido handshake: %s", desc_code_op[handshake]);
 	send(socket_cliente, &result_ok, sizeof(int), 0);
 }
 
@@ -139,9 +142,12 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	int resultado;
 	send(socket_cliente, &handshake, sizeof(int), 0);
 	recv(socket_cliente, &resultado, sizeof(int), MSG_WAITALL);
-	if (resultado != -1 && resultado != 0)
+	if (socket_cliente == -1) {
+		log_warning(logger, "Handshake enviado - Servidor apagado");
+	}
+	else if (resultado != -1)
 	{
-		log_info(logger, "Handshake OK");
+		log_info(logger, "Handshake OK %s", desc_code_op[handshake]);
 	}
 	else
 	{

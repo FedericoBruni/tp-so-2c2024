@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     // Conectarse a FS
     int fd_memoria = conectarse_a_memoria();
 
-    if (realizar_handshake(logger, fd_memoria, HANDSHAKE_CPU) == -1){
+    if (realizar_handshake(logger, fd_memoria, HANDSHAKE_CPU_MEMORIA) == -1){
         exit(EXIT_FAILURE);
     }
     

@@ -9,8 +9,8 @@ void escuchar_mensajes_kernel(void){
         int cod_op = recibir_operacion(cliente_fd_kernel);
         
         switch(cod_op){
-            case HANDSHAKE_KERNEL:
-                aceptar_handshake(logger,cliente_fd_kernel,"Kernel");
+            case HANDSHAKE_KERNEL_MEMORIA:
+                aceptar_handshake(logger,cliente_fd_kernel, HANDSHAKE_KERNEL_MEMORIA);
                 break;
             case -1:
             	log_error(logger, "Kernel desconectado\n");
@@ -29,8 +29,8 @@ void escuchar_mensajes_cpu(void){
         int cod_op = recibir_operacion(cliente_fd_cpu);
         
         switch(cod_op){
-            case HANDSHAKE_CPU:
-                aceptar_handshake(logger,cliente_fd_cpu,"Cpu");
+            case HANDSHAKE_CPU_MEMORIA:
+                aceptar_handshake(logger,cliente_fd_cpu, HANDSHAKE_CPU_MEMORIA);
                 break;
             case -1:
             	log_error(logger, "Cpu desconectado\n");

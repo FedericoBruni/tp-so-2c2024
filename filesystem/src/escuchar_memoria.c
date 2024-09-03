@@ -9,8 +9,8 @@ void escuchar_mensajes_memoria(){
         int cod_op = recibir_operacion(cliente_fd);
         
         switch(cod_op){
-            case HANDSHAKE_MEMORIA:
-                aceptar_handshake(logger,cliente_fd,"Memoria");
+            case HANDSHAKE_MEMORIA_FS:
+                aceptar_handshake(logger,cliente_fd, HANDSHAKE_MEMORIA_FS);
                 break;
             case -1:
             	log_error(logger, "Memoria desconectado\n");

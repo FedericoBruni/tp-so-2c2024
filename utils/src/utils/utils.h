@@ -15,15 +15,13 @@
 
 typedef enum
 {
-	HANDSHAKE_OK, 
-	MENSAJE_A_MEMORIA,
-	HANDSHAKE_KERNEL,
-	HANDSHAKE_KERNEL_DISPATCH,
-	HANDSHAKE_KERNEL_INTERRUPT,
-	HANDSHAKE_ENTRADASALIDA,
-	HANDSHAKE_MEMORIA,
-	HANDSHAKE_CPU,
+	HANDSHAKE_KERNEL_MEMORIA,
+	HANDSHAKE_KERNEL_CPU_DISPATCH,
+	HANDSHAKE_KERNEL_CPU_INTERRUPT,
+	HANDSHAKE_CPU_MEMORIA,
+	HANDSHAKE_MEMORIA_FS
 } op_code;
+
 
 t_config* iniciar_config(char* ruta);
 t_log* iniciar_logger(char *ruta_logger, char *nombre_logger, t_log_level level_logger);
@@ -31,7 +29,7 @@ int esperar_cliente(int socket_servidor, t_log *logger, char *cliente);
 int crear_conexion(char *ip, char *puerto, t_log *logger);
 int iniciar_servidor(t_log* logger, char* puerto);
 int recibir_operacion(int socket_cliente);
-void aceptar_handshake(t_log *logger, int socket_cliente, char*);
+void aceptar_handshake(t_log *logger, int socket_cliente, op_code handshake);
 void rechazar_handshake(t_log *logger, int socket_cliente);
 int realizar_handshake(t_log *logger, int socket_servidor, op_code handshake);
 int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake);
