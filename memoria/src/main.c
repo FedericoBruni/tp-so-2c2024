@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
 
      pthread_t hilo_cpu_memoria;
      pthread_create(&hilo_cpu_memoria,NULL,(void*)escuchar_mensajes_cpu(),NULL);
-     pthread_join(hilo_cpu_memoria);
+     pthread_join(hilo_cpu_memoria,NULL);
 
      while(1){
         if(cliente_fd_cpu == -1 && cliente_fd_kernel == -1){
