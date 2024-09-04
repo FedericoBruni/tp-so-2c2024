@@ -12,6 +12,11 @@ void escuchar_mensajes_kernel(void){
             case HANDSHAKE_KERNEL_MEMORIA:
                 aceptar_handshake(logger,cliente_fd_kernel, HANDSHAKE_KERNEL_MEMORIA);
                 break;
+            case SOLICITAR_MEMORIA_PROCESO:     // respuestas: 	OK_SOLICITUD_MEMORIA_PROCESO, ERROR_SOLICITUD_MEMORIA_PROCESO
+                int tamanio = recibir_paquete(cliente_fd_kernel);
+                log_info(logger,"Tamanio de memoria a reservar: %i",tamanio);
+                send(cliente_fd_kernel, OK_SOLICITUD_MEMORIA_PROCESO, sizeof(op_code), 0);
+                break;
             case -1:
             	log_error(logger, "Kernel desconectado\n");
 				cliente_fd_kernel = -1;
