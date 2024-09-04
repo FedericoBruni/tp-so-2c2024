@@ -74,7 +74,7 @@ void person_destroy(void *ptr)
 void destruir_tcb(void* ptr_tcb) {
     TCB *tcb = (TCB*) ptr_tcb;
     //free(tcb->prioridad);
-    free(tcb->tid);
+    //free(tcb->tid);
     free(tcb);
 }
 
@@ -84,14 +84,14 @@ void destruir_pcb(void* ptr_pcb) {
     // funcion para destruir mutex
     //list_destroy(pcb->mutexes);
     // funcion para destruir registros
-    free(pcb->pid);
+    //free(pcb->pid);
     free(pcb);
 }
 
 int solicitar_memoria(int socket_memoria,int tamanio_memoria, op_code cod_sol){
 
     t_paquete* paquete = crear_paquete(cod_sol);
-    agregar_a_paquete(paquete,tamanio_memoria,sizeof(tamanio_memoria));
+    agregar_a_paquete(paquete,"aaaaaa",sizeof("aaaaaa"));
     enviar_paquete(paquete,socket_memoria);
     if(recibir_operacion(socket_memoria) == OK_SOLICITUD_MEMORIA_PROCESO){
         return 1;

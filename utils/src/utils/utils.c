@@ -168,14 +168,13 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	return resultado;
 }
 
-
 /// 
 
-/*void enviar_mensaje(char* mensaje, int socket_cliente)
+void enviar_valor(int mensaje, int socket_cliente,op_code codigo)
 {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
-	paquete->codigo_operacion = MENSAJE;
+	paquete->codigo_operacion = codigo;
 	paquete->buffer = malloc(sizeof(t_buffer));
 	paquete->buffer->size = strlen(mensaje) + 1;
 	paquete->buffer->stream = malloc(paquete->buffer->size);
@@ -190,7 +189,7 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	free(a_enviar);
 	eliminar_paquete(paquete);
 }
-*/
+
 
 void crear_buffer(t_paquete* paquete)
 {
@@ -367,3 +366,12 @@ char *extraer_string_del_buffer(t_buffer *buffer)
 	char *valor_string = extraer_datos_del_buffer(buffer);
 	return valor_string;
 }
+
+
+
+
+
+
+
+
+

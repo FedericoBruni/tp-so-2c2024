@@ -90,7 +90,7 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake);
 void *recibir_buffer(int *, int);
 t_list *recibir_paquete(int);
 void recibir_mensaje(t_log *logger, int);
-void enviar_mensaje(char *mensaje, int socket_cliente);
+void enviar_valor(int mensaje, int socket_cliente, op_code codigo);
 t_paquete *crear_paquete(op_code codigo);
 void agregar_a_paquete(t_paquete *paquete, void *valor, int tamanio);
 void enviar_paquete(t_paquete *paquete, int socket_cliente);

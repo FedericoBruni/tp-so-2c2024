@@ -14,7 +14,7 @@ void escuchar_mensajes_kernel(void){
                 break;
             case SOLICITAR_MEMORIA_PROCESO:     // respuestas: 	OK_SOLICITUD_MEMORIA_PROCESO, ERROR_SOLICITUD_MEMORIA_PROCESO
                 int tamanio = recibir_paquete(cliente_fd_kernel);
-                log_info(logger,"Tamanio de memoria a reservar: %i",tamanio);
+                log_info(logger,"Tamanio de memoria a reservar: %s",tamanio);
                 send(cliente_fd_kernel, OK_SOLICITUD_MEMORIA_PROCESO, sizeof(op_code), 0);
                 break;
             case -1:
