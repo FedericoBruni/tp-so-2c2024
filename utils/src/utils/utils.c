@@ -191,18 +191,19 @@ void enviar_valor(int mensaje, int socket_cliente,op_code codigo)
 }
 
 
-void crear_buffer(t_paquete* paquete)
+t_buffer* crear_buffer(void)
 {
-	paquete->buffer = malloc(sizeof(t_buffer));
-	paquete->buffer->size = 0;
-	paquete->buffer->stream = NULL;
+	t_buffer *buffer = malloc(sizeof(t_buffer));
+	buffer->size = 0;
+	buffer->stream = NULL;
+	return buffer;
 }
 
-t_paquete* crear_paquete(op_code codigo)
+t_paquete *crear_paquete(op_code codigo_op, t_buffer *buffer)
 {
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-	paquete->codigo_operacion = codigo;
-	crear_buffer(paquete);
+	t_paquete *paquete = malloc(sizeof(t_paquete));
+	paquete->codigo_operacion = codigo_op;
+	paquete->buffer = buffer;
 	return paquete;
 }
 
@@ -253,7 +254,7 @@ void eliminar_paquete(t_paquete* paquete)
 //
 
 
-void *recibir_buffer(int *size, int socket_cliente)
+void* recibir_buffer(int *size, int socket_cliente)
 {
 	void *buffer;
 
@@ -363,13 +364,34 @@ int extraer_int_del_buffer(t_buffer *buffer)
 
 char *extraer_string_del_buffer(t_buffer *buffer)
 {
-	char *valor_string = extraer_datos_del_buffer(buffer);
+	char *valor_string = extraer_datos_del_buffer(buffer); // Después de usar el string hay que liberar la memoria
 	return valor_string;
 }
 
+t_buffer* recibir_buffer_completo(int socket_cliente)
+{ // Recibe todo lo enviado despues del OP_CODE ([cod_op][size][void*......])
+	t_buffer *buffer = malloc(sizeof(t_buffer));
 
-
-
+	if (recv(socket_cliente, &(buffer->size), sizeof(int), MSG_WAITALL) > 0)
+	{ // Guardo el [size]
+		buffer->stream = malloc(buffer->size);
+		if (recv(socket_cliente, buffer->stream, buffer->size, MSG_WAITALL) > 0)
+		{ // Guardo el [void*.......]
+			return buffer;
+		}
+		else
+		{
+			printf("Error al recibir el buffer");
+			exit(EXIT_FAILURE);
+		}
+	}
+	else
+	{
+		printf("Error el recibir el tamaño del buffer");
+		exit(EXIT_FAILURE);
+	}
+	return buffer;
+}
 
 
 

@@ -5,6 +5,7 @@ extern int cliente_fd_cpu;
 
 void escuchar_mensajes_kernel(void){
     int desconexion = 0;
+    t_buffer* buffer;
     while(!desconexion){
         int cod_op = recibir_operacion(cliente_fd_kernel);
         
@@ -13,8 +14,9 @@ void escuchar_mensajes_kernel(void){
                 aceptar_handshake(logger,cliente_fd_kernel, HANDSHAKE_KERNEL_MEMORIA);
                 break;
             case SOLICITAR_MEMORIA_PROCESO:     // respuestas: 	OK_SOLICITUD_MEMORIA_PROCESO, ERROR_SOLICITUD_MEMORIA_PROCESO
-                int tamanio = recibir_paquete(cliente_fd_kernel);
-                log_info(logger,"Tamanio de memoria a reservar: %s",tamanio);
+                buffer = recibir_buffer_completo(cliente_fd_kernel);
+                int tamanio = extraer_int_del_buffer(buffer);
+                log_info(logger,"Tamanio de memoria a reservar: %i",tamanio);
                 send(cliente_fd_kernel, OK_SOLICITUD_MEMORIA_PROCESO, sizeof(op_code), 0);
                 break;
             case -1:

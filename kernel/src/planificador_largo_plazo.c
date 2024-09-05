@@ -22,6 +22,7 @@ void planificador_largo_plazo(void){
             }
                 
         }
+        break; // por ahora, q lo haga una sola vez pq no tenemos el semaforo
 
     }
 
