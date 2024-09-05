@@ -17,7 +17,8 @@ void escuchar_mensajes_kernel(void){
                 buffer = recibir_buffer_completo(cliente_fd_kernel);
                 int tamanio = extraer_int_del_buffer(buffer);
                 log_info(logger,"Tamanio de memoria a reservar: %i",tamanio);
-                send(cliente_fd_kernel, OK_SOLICITUD_MEMORIA_PROCESO, sizeof(op_code), 0);
+                int rta = OK_SOLICITUD_MEMORIA_PROCESO;
+                send(cliente_fd_kernel, &rta, sizeof(op_code), 0);
                 break;
             case -1:
             	log_error(logger, "Kernel desconectado\n");
