@@ -1,12 +1,13 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "name": "run",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
-      "args": [],
+      "args": ["asd", "12"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],

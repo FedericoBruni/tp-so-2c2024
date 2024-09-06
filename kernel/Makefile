@@ -95,4 +95,4 @@ $(sort $(dir $(OUT) $(OBJS))):
 
 kernel:
 	make
-	./bin/kernel
+	./bin/kernel asd 12
