@@ -17,8 +17,8 @@ void planificador_largo_plazo(void){
             switch(resultado){
                 case 1:
                     log_info(logger, "Memoria reservada correctamente");
-                    // crear TCB con TID = 0
-                    // asignar el TCB al PCB INICIAL.
+                    TCB* tcb = crear_tcb(pcb, pcb->prioridad_main);
+                    agregar_hilo(tcb,pcb);
                     imprimir_pcb(pcb);
                     break;
 

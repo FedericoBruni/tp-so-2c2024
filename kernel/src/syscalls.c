@@ -13,8 +13,6 @@ void PROCESS_CREATE(char* archivo,int tamanio_memoria,int prioridad){
     PCB* pcb_inicial = crear_pcb(archivo,tamanio_memoria,prioridad); // dsp agregar arch_pseudocodigo y tam_proceso
     list_add(cola_new,pcb_inicial);
     //signal
-    // TCB* tcb_inicial = crear_tcb(pcb_inicial,prioridad); // dsp agregar tcb_inicial
-    // agregar_hilo(tcb_inicial,pcb_inicial);
-    
+
 }
 

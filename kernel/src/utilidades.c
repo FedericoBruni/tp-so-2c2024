@@ -145,6 +145,7 @@ TCB *crear_tcb(PCB *pcb, int prioridad)
 
 void agregar_hilo(TCB *tcb,PCB *pcb){
     list_add(pcb->tids,tcb->tid);
+    list_add(pcb->threads, tcb);
 }
 
 // int pid;
