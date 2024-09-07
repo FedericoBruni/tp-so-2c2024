@@ -67,6 +67,7 @@ typedef struct
 {
 	int tid;
 	int prioridad;
+	STATUS status;
 	REGISTROS* Registros;
 	int pcb_pid;
 } TCB;

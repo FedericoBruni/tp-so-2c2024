@@ -1,6 +1,6 @@
 #include "syscalls.h"
 
-    extern t_list* cola_new;
+    extern t_queue* cola_new;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que 
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad 
@@ -10,9 +10,13 @@ El Kernel c: 12
 */
 
 void PROCESS_CREATE(char* archivo,int tamanio_memoria,int prioridad){
-    PCB* pcb_inicial = crear_pcb(archivo,tamanio_memoria,prioridad); // dsp agregar arch_pseudocodigo y tam_proceso
-    list_add(cola_new,pcb_inicial);
+    PCB* pcb = crear_pcb(archivo,tamanio_memoria,prioridad); 
+    queue_push(cola_new,pcb);
     //signal
 
+}
+
+void PROCESS_EXIT(void){
+    
 }
 

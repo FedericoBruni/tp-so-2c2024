@@ -3,6 +3,7 @@
 #include "utilidades.h"
 #include "utils/utils.h"
 
-void planificador_largo_plazo(void);
+void creacion_de_procesos(void);
+void finalizacion_de_procesos(void);
 
 #endif

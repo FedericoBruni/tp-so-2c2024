@@ -41,13 +41,9 @@ int main(int argc, char* argv[]) {
     }
     
     pthread_t hilo_planificador_largo_plazo;
-    pthread_create(&hilo_planificador_largo_plazo, NULL, (void *)planificador_largo_plazo,NULL); // Crea el hilo y le pasa la funcion a ejecutarse
+    pthread_create(&hilo_planificador_largo_plazo, NULL, (void *)creacion_de_procesos,NULL); // Crea el hilo y le pasa la funcion a ejecutarse
     pthread_join(hilo_planificador_largo_plazo, NULL);       
 
-
-    
-    
-    
     terminar_ejecucion(fd_cpu_dispatch,fd_memoria,fd_cpu_interrupt);
 
     return 0;

@@ -10,10 +10,10 @@ char *puerto_cpu_interrupt;
 char *algoritmo_planificacion;
 int *quantum;
 char *log_level;
-t_list *cola_new;
-t_list *cola_ready;
-t_list *cola_blocked;
-t_list *cola_exit;
+t_queue *cola_new;
+t_queue *cola_ready;
+t_queue *cola_blocked;
+t_queue *cola_exit;
 int autoincremental_pcb = 0;
 
 void iniciar_kernel(void)
@@ -28,10 +28,10 @@ void iniciar_kernel(void)
     quantum = config_get_int_value(config, "QUANTUM");
     log_level = config_get_string_value(config, "LOG_LEVEL");
     logger = iniciar_logger("logKernel.log", "Kernel", log_level_from_string(log_level));
-    cola_new = list_create();
-    cola_ready = list_create();
-    cola_blocked = list_create();
-    cola_exit = list_create();
+    cola_new = queue_create();
+    cola_ready = queue_create();
+    cola_blocked = queue_create();
+    cola_exit = queue_create();
 }
 
 int conectarse_a_cpu_interrupt(void)
@@ -51,16 +51,29 @@ int conectarse_a_memoria(void)
 
 void terminar_ejecucion(int dispatch, int memoria, int interrupt)
 {
-    log_info(logger, "Finalizando ejecucion de KERNEL");
     close(dispatch);
     close(memoria);
     close(interrupt);
+    // queue_destroy_and_destroy_elements(cola_new, liberar_pcb);
+    // if(cola_new != NULL){
+    //     log_error(logger,"Cola NEW no se borro correctamente");
+    // }
+    // queue_destroy_and_destroy_elements(cola_ready, liberar_pcb);
+    // if(cola_ready != NULL){
+    //     log_error(logger,"Cola READY no se borro correctamente");
+    // }
+    // queue_destroy_and_destroy_elements(cola_blocked, liberar_pcb);
+    // if(cola_blocked != NULL){
+    //     log_error(logger,"Cola BLOCKED no se borro correctamente");
+    // }
+    // queue_destroy_and_destroy_elements(cola_exit, liberar_pcb);
+    // if(cola_exit != NULL){
+    //     log_error(logger,"Cola EXIT no se borro correctamente");
+    // } HAY Q ARREGLAR LAS FUNCIONES DE DESTRUCCION
+    log_info(logger, "Finalizando ejecucion de KERNEL");
     log_destroy(logger);
     config_destroy(config);
-    list_destroy_and_destroy_elements(cola_new, destruir_pcb);
-    list_destroy_and_destroy_elements(cola_ready, destruir_pcb);
-    list_destroy_and_destroy_elements(cola_blocked, destruir_pcb);
-    list_destroy_and_destroy_elements(cola_exit, destruir_pcb);
+    exit(EXIT_SUCCESS);
 }
 
 /* Ejemplo
@@ -71,22 +84,25 @@ void person_destroy(void *ptr)
     free(person);
 } */
 
-void destruir_tcb(void *ptr_tcb)
+void liberar_tcb(void *ptr_tcb)
 {
     TCB *tcb = (TCB *)ptr_tcb;
-    // free(tcb->prioridad);
-    // free(tcb->tid);
+    liberar_registros(tcb->Registros);
     free(tcb);
 }
 
-void destruir_pcb(void *ptr_pcb)
+void liberar_registros(REGISTROS *registros){
+    REGISTROS *registros_a_liberar = (REGISTROS *)registros;
+    free(registros_a_liberar);
+}
+
+
+void liberar_pcb(void *ptr_pcb)
 {
     PCB *pcb = (PCB *)ptr_pcb;
-    list_destroy_and_destroy_elements(pcb->tids, destruir_tcb);
-    // funcion para destruir mutex
-    // list_destroy(pcb->mutexes);
-    // funcion para destruir registros
-    // free(pcb->pid);
+    liberar_registros(pcb->Registros);//libero registros
+    free(pcb->tids);
+    list_destroy_and_destroy_elements(pcb->threads,liberar_tcb);
     free(pcb);
 }
 
@@ -139,7 +155,8 @@ TCB *crear_tcb(PCB *pcb, int prioridad)
         tcb->prioridad = pcb->prioridad_main;
     }else{
         tcb->prioridad = prioridad;}
-    tcb->Registros = pcb->Registros;
+    tcb->Registros = malloc(sizeof(REGISTROS));
+    memcpy(tcb->Registros,pcb->Registros,sizeof(REGISTROS));
     return tcb;
 }
 
@@ -194,6 +211,7 @@ void imprimir_hilos(t_list *threads)
         TCB* tcb = list_get(threads, i);
         printf("TID: %i\n", tcb->tid);
         printf("Prioridad: %i\n", tcb->prioridad);
+        printf("STATUS: %s\n", desc_status[tcb->status]);
         printf("REGISTROS DEL HILO: \n");
         imprimir_registros(tcb->Registros);
     }
@@ -210,6 +228,10 @@ void inicializar_registros(REGISTROS* registros){
     registros->FX = 0;
     registros->GX = 0;
     registros->HX = 0;
+}
+
+void cambiar_estado_hilo(TCB *tcb, STATUS estado){
+    tcb->status = estado;
 }
 
 // typedef struct
