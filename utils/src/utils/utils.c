@@ -3,7 +3,7 @@
 char *desc_code_op[] = {
 	"HANDSHAKE KERNEL - MEMORIA", "HANDSHAKE KERNEL - CPU DISPATCH", "HANDSHAKE KERNEL - CPU INTERRUPT",
 	"HANDSHAKE CPU - MEMORIA", "HANDSHAKE MEMORIA - FILESYSTEM", "SOLICITAR MEMORIA PROCESO",
-	"OK SOLICITUD MEMORIA PROCESO", "ERROR SOLICITUD MEMORIA PROCESO"};
+	"OK SOLICITUD MEMORIA PROCESO", "ERROR SOLICITUD MEMORIA PROCESO", "FINAL_PROCESO", "OK_FINAL_PROCESO", "ERROR_FINAL_PROCESO"};
 
 t_config *iniciar_config(char *ruta)
 {
@@ -168,11 +168,11 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	return resultado;
 }
 
-/// 
+///
 
-void enviar_valor(int mensaje, int socket_cliente,op_code codigo)
+void enviar_valor(int mensaje, int socket_cliente, op_code codigo)
 {
-	t_paquete* paquete = malloc(sizeof(t_paquete));
+	t_paquete *paquete = malloc(sizeof(t_paquete));
 
 	paquete->codigo_operacion = codigo;
 	paquete->buffer = malloc(sizeof(t_buffer));
@@ -180,9 +180,9 @@ void enviar_valor(int mensaje, int socket_cliente,op_code codigo)
 	paquete->buffer->stream = malloc(paquete->buffer->size);
 	memcpy(paquete->buffer->stream, mensaje, paquete->buffer->size);
 
-	int bytes = paquete->buffer->size + 2*sizeof(int);
+	int bytes = paquete->buffer->size + 2 * sizeof(int);
 
-	void* a_enviar = serializar_paquete(paquete, bytes);
+	void *a_enviar = serializar_paquete(paquete, bytes);
 
 	send(socket_cliente, a_enviar, bytes, 0);
 
@@ -190,8 +190,7 @@ void enviar_valor(int mensaje, int socket_cliente,op_code codigo)
 	eliminar_paquete(paquete);
 }
 
-
-t_buffer* crear_buffer(void)
+t_buffer *crear_buffer(void)
 {
 	t_buffer *buffer = malloc(sizeof(t_buffer));
 	buffer->size = 0;
@@ -207,7 +206,7 @@ t_paquete *crear_paquete(op_code codigo_op, t_buffer *buffer)
 	return paquete;
 }
 
-void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
+void agregar_a_paquete(t_paquete *paquete, void *valor, int tamanio)
 {
 	paquete->buffer->stream = realloc(paquete->buffer->stream, paquete->buffer->size + tamanio + sizeof(int));
 
@@ -215,36 +214,34 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio)
 	memcpy(paquete->buffer->stream + paquete->buffer->size + sizeof(int), valor, tamanio);
 
 	paquete->buffer->size += tamanio + sizeof(int);
-
 }
 
-void* serializar_paquete(t_paquete* paquete, int bytes)
+void *serializar_paquete(t_paquete *paquete, int bytes)
 {
-	void * magic = malloc(bytes);
+	void *magic = malloc(bytes);
 	int desplazamiento = 0;
 
 	memcpy(magic + desplazamiento, &(paquete->codigo_operacion), sizeof(int));
-	desplazamiento+= sizeof(int);
+	desplazamiento += sizeof(int);
 	memcpy(magic + desplazamiento, &(paquete->buffer->size), sizeof(int));
-	desplazamiento+= sizeof(int);
+	desplazamiento += sizeof(int);
 	memcpy(magic + desplazamiento, paquete->buffer->stream, paquete->buffer->size);
-	desplazamiento+= paquete->buffer->size;
+	desplazamiento += paquete->buffer->size;
 
 	return magic;
 }
 
-
-void enviar_paquete(t_paquete* paquete, int socket_cliente)
+void enviar_paquete(t_paquete *paquete, int socket_cliente)
 {
-	int bytes = paquete->buffer->size + 2*sizeof(int);
-	void* a_enviar = serializar_paquete(paquete, bytes);
+	int bytes = paquete->buffer->size + 2 * sizeof(int);
+	void *a_enviar = serializar_paquete(paquete, bytes);
 
 	send(socket_cliente, a_enviar, bytes, 0);
 
 	free(a_enviar);
 }
 
-void eliminar_paquete(t_paquete* paquete)
+void eliminar_paquete(t_paquete *paquete)
 {
 	free(paquete->buffer->stream);
 	free(paquete->buffer);
@@ -253,8 +250,7 @@ void eliminar_paquete(t_paquete* paquete)
 
 //
 
-
-void* recibir_buffer(int *size, int socket_cliente)
+void *recibir_buffer(int *size, int socket_cliente)
 {
 	void *buffer;
 
@@ -265,7 +261,7 @@ void* recibir_buffer(int *size, int socket_cliente)
 	return buffer;
 }
 
-void recibir_mensaje(t_log* logger, int socket_cliente)
+void recibir_mensaje(t_log *logger, int socket_cliente)
 {
 	int size;
 	char *buffer = recibir_buffer(&size, socket_cliente);
@@ -368,7 +364,7 @@ char *extraer_string_del_buffer(t_buffer *buffer)
 	return valor_string;
 }
 
-t_buffer* recibir_buffer_completo(int socket_cliente)
+t_buffer *recibir_buffer_completo(int socket_cliente)
 { // Recibe todo lo enviado despues del OP_CODE ([cod_op][size][void*......])
 	t_buffer *buffer = malloc(sizeof(t_buffer));
 
@@ -392,8 +388,3 @@ t_buffer* recibir_buffer_completo(int socket_cliente)
 	}
 	return buffer;
 }
-
-
-
-
-

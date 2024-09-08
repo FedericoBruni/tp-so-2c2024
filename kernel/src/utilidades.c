@@ -14,6 +14,7 @@ t_queue *cola_new;
 t_queue *cola_ready;
 t_queue *cola_blocked;
 t_queue *cola_exit;
+t_queue *cola_finalizacion;
 int autoincremental_pcb = 0;
 
 void iniciar_kernel(void)
@@ -32,6 +33,7 @@ void iniciar_kernel(void)
     cola_ready = queue_create();
     cola_blocked = queue_create();
     cola_exit = queue_create();
+    cola_finalizacion = queue_create();
 }
 
 int conectarse_a_cpu_interrupt(void)
@@ -91,41 +93,22 @@ void liberar_tcb(void *ptr_tcb)
     free(tcb);
 }
 
-void liberar_registros(REGISTROS *registros){
+void liberar_registros(REGISTROS *registros)
+{
     REGISTROS *registros_a_liberar = (REGISTROS *)registros;
     free(registros_a_liberar);
 }
 
-
 void liberar_pcb(void *ptr_pcb)
 {
     PCB *pcb = (PCB *)ptr_pcb;
-    liberar_registros(pcb->Registros);//libero registros
+    liberar_registros(pcb->Registros); // libero registros
     free(pcb->tids);
-    list_destroy_and_destroy_elements(pcb->threads,liberar_tcb);
+    list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
     free(pcb);
 }
 
-int solicitar_memoria(int socket_memoria, int tamanio_memoria, op_code cod_sol)
-{
-
-    t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, tamanio_memoria);
-    t_paquete *paquete = crear_paquete(cod_sol, buffer);
-    enviar_paquete(paquete, socket_memoria);
-    eliminar_paquete(paquete);
-
-    if (recibir_operacion(socket_memoria) == OK_SOLICITUD_MEMORIA_PROCESO)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-
-PCB *crear_pcb(char* archivo,int tamanio_memoria,int prioridad_main)
+PCB *crear_pcb(char *archivo, int tamanio_memoria, int prioridad_main)
 {
     PCB *pcb = malloc(sizeof(PCB));
     pcb->pid = autoincremental_pcb;
@@ -143,7 +126,6 @@ PCB *crear_pcb(char* archivo,int tamanio_memoria,int prioridad_main)
     return pcb;
 }
 
-
 TCB *crear_tcb(PCB *pcb, int prioridad)
 {
     TCB *tcb = malloc(sizeof(TCB));
@@ -151,17 +133,23 @@ TCB *crear_tcb(PCB *pcb, int prioridad)
     tcb->tid = pcb->autoincremental_tcb;
     pcb->autoincremental_tcb++;
     tcb->pcb_pid = pcb->pid;
-    if(tcb->tid == 0){
+    if (tcb->tid == 0)
+    {
         tcb->prioridad = pcb->prioridad_main;
-    }else{
-        tcb->prioridad = prioridad;}
+    }
+    else
+    {
+        tcb->prioridad = prioridad;
+    }
     tcb->Registros = malloc(sizeof(REGISTROS));
-    memcpy(tcb->Registros,pcb->Registros,sizeof(REGISTROS));
+    memcpy(tcb->Registros, pcb->Registros, sizeof(REGISTROS));
+    tcb->pcb = pcb;
     return tcb;
 }
 
-void agregar_hilo(TCB *tcb,PCB *pcb){
-    list_add(pcb->tids,tcb->tid);
+void agregar_hilo(TCB *tcb, PCB *pcb)
+{
+    list_add(pcb->tids, tcb->tid);
     list_add(pcb->threads, tcb);
 }
 
@@ -177,8 +165,8 @@ char *desc_status[] = {"NEW", "READY", "EXEC", "BLOCKED", "EXIT"};
 void imprimir_pcb(PCB *pcb)
 {
     printf("PCB ID: %i\n", pcb->pid);
-    printf("Archivo a leer: %s\n",pcb->archivo);
-    printf("Tamaño del archivo: %i\n",pcb->tamanio);
+    printf("Archivo a leer: %s\n", pcb->archivo);
+    printf("Tamaño del archivo: %i\n", pcb->tamanio);
     printf("LISTA TIDS: \n");
     imprimir_lista_ids(pcb->tids);
     printf("STATUS: %s\n", desc_status[pcb->status]);
@@ -191,7 +179,7 @@ void imprimir_pcb(PCB *pcb)
 void imprimir_registros(REGISTROS *registros)
 {
     printf("PC: %i\nAX: %i\nBX: %i\nCX: %i\nDX: %i\nEX: %i\nFX: %i\nGX: %i\nHX: %i\n", registros->PC, registros->AX,
-    registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX);
+           registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX);
 }
 
 void imprimir_lista_ids(t_list *tids)
@@ -202,23 +190,36 @@ void imprimir_lista_ids(t_list *tids)
         printf("TID: %i\n", list_get(tids, i));
     }
 }
+void imprimir_pcb_sin_hilos(PCB *pcb)
+{
+    printf("PCB ID: %i\n", pcb->pid);
+    printf("Archivo a leer: %s\n", pcb->archivo);
+    printf("Tamaño del archivo: %i\n", pcb->tamanio);
+    printf("LISTA TIDS: \n");
+    imprimir_lista_ids(pcb->tids);
+    printf("STATUS: %s\n", desc_status[pcb->status]);
+    printf("REGISTROS: \n");
+    imprimir_registros(pcb->Registros);
+}
 
 void imprimir_hilos(t_list *threads)
 {
     int size = list_size(threads);
     for (unsigned int i = 0; i < size; i++)
     {
-        TCB* tcb = list_get(threads, i);
+        TCB *tcb = list_get(threads, i);
         printf("TID: %i\n", tcb->tid);
         printf("Prioridad: %i\n", tcb->prioridad);
         printf("STATUS: %s\n", desc_status[tcb->status]);
         printf("REGISTROS DEL HILO: \n");
         imprimir_registros(tcb->Registros);
+        printf("DATOS DEL PROCESO PADRE: \n");
+        imprimir_pcb_sin_hilos(tcb->pcb);
     }
 }
 
-
-void inicializar_registros(REGISTROS* registros){
+void inicializar_registros(REGISTROS *registros)
+{
     registros->PC = 0;
     registros->AX = 0;
     registros->BX = 0;
@@ -230,8 +231,20 @@ void inicializar_registros(REGISTROS* registros){
     registros->HX = 0;
 }
 
-void cambiar_estado_hilo(TCB *tcb, STATUS estado){
+void cambiar_estado_hilo(TCB *tcb, STATUS estado)
+{
     tcb->status = estado;
+}
+
+mover_tcbs_exit(PCB *pcb)
+{
+    int size = list_size(pcb->threads);
+    for (unsigned int i = 0; i < size; i++)
+    {
+        TCB *tcb = list_get(pcb->threads, i);
+        cambiar_estado_hilo(tcb, EXIT);
+        queue_push(cola_exit, tcb);
+    }
 }
 
 // typedef struct

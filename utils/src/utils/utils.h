@@ -22,7 +22,10 @@ typedef enum
 	HANDSHAKE_MEMORIA_FS,
 	SOLICITAR_MEMORIA_PROCESO,
 	OK_SOLICITUD_MEMORIA_PROCESO,
-	ERROR_SOLICITUD_MEMORIA_PROCESO
+	ERROR_SOLICITUD_MEMORIA_PROCESO,
+	FINAL_PROCESO,
+	OK_FINAL_PROCESO,
+	ERROR_FINAL_PROCESO
 } op_code;
 
 typedef enum
@@ -54,7 +57,7 @@ typedef struct
 	t_list *tids;
 	t_list *mutex;
 	STATUS status;
-	char* archivo;
+	char *archivo;
 	int tamanio;
 	REGISTROS *Registros;
 	int autoincremental_tcb;
@@ -68,8 +71,9 @@ typedef struct
 	int tid;
 	int prioridad;
 	STATUS status;
-	REGISTROS* Registros;
+	REGISTROS *Registros;
 	int pcb_pid;
+	PCB *pcb;
 } TCB;
 
 typedef struct
@@ -103,10 +107,10 @@ void agregar_a_paquete(t_paquete *paquete, void *valor, int tamanio);
 void enviar_paquete(t_paquete *paquete, int socket_cliente);
 void eliminar_paquete(t_paquete *paquete);
 void *serializar_paquete(t_paquete *paquete, int bytes);
-t_buffer* recibir_buffer_completo(int socket_cliente);
+t_buffer *recibir_buffer_completo(int socket_cliente);
 void cargar_int_al_buffer(t_buffer *buffer, int valor_int);
 void cargar_string_al_buffer(t_buffer *buffer, char *valor_string);
 int extraer_int_del_buffer(t_buffer *buffer);
 char *extraer_string_del_buffer(t_buffer *buffer);
-t_buffer* crear_buffer(void);
+t_buffer *crear_buffer(void);
 #endif // UTILS_H_
