@@ -108,7 +108,7 @@ void liberar_pcb(void *ptr_pcb)
     free(pcb);
 }
 
-PCB *crear_pcb(char *archivo, int tamanio_memoria, int prioridad_main)
+PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_main)
 {
     PCB *pcb = malloc(sizeof(PCB));
     pcb->pid = autoincremental_pcb;
@@ -120,13 +120,13 @@ PCB *crear_pcb(char *archivo, int tamanio_memoria, int prioridad_main)
     pcb->autoincremental_tcb = 0;
     pcb->threads = list_create();
     pcb->prioridad_main = prioridad_main;
-    pcb->archivo = archivo;
+    pcb->archivo_pseudocodigo = archivo_pseudocodigo;
     pcb->tamanio = tamanio_memoria;
     pcb->prioridad_main = prioridad_main;
     return pcb;
 }
 
-TCB *crear_tcb(PCB *pcb, int prioridad)
+TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
 {
     TCB *tcb = malloc(sizeof(TCB));
 
@@ -144,6 +144,7 @@ TCB *crear_tcb(PCB *pcb, int prioridad)
     tcb->Registros = malloc(sizeof(REGISTROS));
     memcpy(tcb->Registros, pcb->Registros, sizeof(REGISTROS));
     tcb->pcb = pcb;
+    tcb->archivo_pseudocodigo = archivo_pseudocodigo;
     return tcb;
 }
 
@@ -165,7 +166,7 @@ char *desc_status[] = {"NEW", "READY", "EXEC", "BLOCKED", "EXIT"};
 void imprimir_pcb(PCB *pcb)
 {
     printf("PCB ID: %i\n", pcb->pid);
-    printf("Archivo a leer: %s\n", pcb->archivo);
+    printf("Archivo a leer: %s\n", pcb->archivo_pseudocodigo);
     printf("Tamaño del archivo: %i\n", pcb->tamanio);
     printf("LISTA TIDS: \n");
     imprimir_lista_ids(pcb->tids);
@@ -193,7 +194,7 @@ void imprimir_lista_ids(t_list *tids)
 void imprimir_pcb_sin_hilos(PCB *pcb)
 {
     printf("PCB ID: %i\n", pcb->pid);
-    printf("Archivo a leer: %s\n", pcb->archivo);
+    printf("Archivo a leer: %s\n", pcb->archivo_pseudocodigo);
     printf("Tamaño del archivo: %i\n", pcb->tamanio);
     printf("LISTA TIDS: \n");
     imprimir_lista_ids(pcb->tids);
@@ -211,6 +212,7 @@ void imprimir_hilos(t_list *threads)
         printf("TID: %i\n", tcb->tid);
         printf("Prioridad: %i\n", tcb->prioridad);
         printf("STATUS: %s\n", desc_status[tcb->status]);
+        printf("ARCHIVO A LEER: %s\n", tcb->archivo_pseudocodigo);
         printf("REGISTROS DEL HILO: \n");
         imprimir_registros(tcb->Registros);
         printf("DATOS DEL PROCESO PADRE: \n");
@@ -236,7 +238,7 @@ void cambiar_estado_hilo(TCB *tcb, STATUS estado)
     tcb->status = estado;
 }
 
-mover_tcbs_exit(PCB *pcb)
+void mover_tcbs_exit(PCB *pcb)
 {
     int size = list_size(pcb->threads);
     for (unsigned int i = 0; i < size; i++)

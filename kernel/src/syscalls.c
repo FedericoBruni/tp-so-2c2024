@@ -36,5 +36,16 @@ void PROCESS_EXIT(TCB *tcb)
     PCB *pcb = tcb->pcb;
     mover_tcbs_exit(pcb);
     queue_push(cola_finalizacion, pcb);
+    // Faltaría avisarle a Memoria??
+    // Y sacar el pcb de la cola en la que está?
     // singal final_proceso
 }
+
+// void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
+//     TCB* tcb = crear_tcb(pcb_en_ejecucion, prioridad, archivo_pseudocodigo);
+//     cambiar_estado_hilo(tcb, READY); // para mi se pone acá en ready y listo, por como dice el enunciado
+//     // Al momento de crear el nuevo hilo, deberá generar el nuevo TCB con un TID autoincremental y 
+//     // poner al mismo en el estado READY.
+//      Dejo todo comentado pq no existe "pcb_en_ejecucion" y rompe
+// }
+

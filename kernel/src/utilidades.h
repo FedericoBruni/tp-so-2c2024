@@ -19,8 +19,8 @@ int conectarse_a_cpu_interrupt(void);
 int conectarse_a_cpu_dispatch(void);
 int conectarse_a_memoria(void);
 void terminar_ejecucion(int dispatch, int memoria, int interrupt);
-PCB *crear_pcb(char *archivo, int tamanio_memoria, int prioridad_main);
-TCB *crear_tcb(PCB *pcb, int prioridad);
+PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_main);
+TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo);
 void liberar_tcb(void *ptr_tcb);
 void liberar_registros(REGISTROS *registros);
 void liberar_pcb(void *ptr_pcb);
@@ -30,6 +30,8 @@ void imprimir_lista_ids(t_list *tids);
 void imprimir_hilos(t_list *threads);
 void agregar_hilo(TCB *tcb, PCB *pcb);
 void cambiar_estado(PCB *pcb, STATUS estado);
+void cambiar_estado_hilo(TCB *tcb, STATUS estado);
 void inicializar_registros(REGISTROS *registros);
+void mover_tcbs_exit(PCB *pcb);
 
 #endif // UTILIDADES_H_

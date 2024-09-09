@@ -57,7 +57,7 @@ typedef struct
 	t_list *tids;
 	t_list *mutex;
 	STATUS status;
-	char *archivo;
+	char *archivo_pseudocodigo;
 	int tamanio;
 	REGISTROS *Registros;
 	int autoincremental_tcb;
@@ -74,6 +74,7 @@ typedef struct
 	REGISTROS *Registros;
 	int pcb_pid;
 	PCB *pcb;
+	char* archivo_pseudocodigo;
 } TCB;
 
 typedef struct

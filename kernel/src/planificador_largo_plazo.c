@@ -25,7 +25,7 @@ void creacion_de_procesos(void)
             {
             case 1:
                 log_info(logger, "Memoria reservada correctamente");
-                TCB *tcb = crear_tcb(pcb, pcb->prioridad_main);
+                TCB *tcb = crear_tcb(pcb, pcb->prioridad_main, archivo_pseudocodigo);
                 agregar_hilo(tcb, pcb);
                 cambiar_estado_hilo(tcb, READY); // el estado del proceso depende del estado de los hilos, hay q ver como implementar eso
                 queue_push(cola_ready, tcb);     // los hilos van en la cola de ready o los procesos? o ambos por separado
