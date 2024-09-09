@@ -49,3 +49,6 @@ void PROCESS_EXIT(TCB *tcb)
 //      Dejo todo comentado pq no existe "pcb_en_ejecucion" y rompe
 // }
 
+
+// Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
+// tener una variable tcb_en_ejecucion?
