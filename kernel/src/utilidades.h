@@ -33,5 +33,6 @@ void cambiar_estado(PCB *pcb, STATUS estado);
 void cambiar_estado_hilo(TCB *tcb, STATUS estado);
 void inicializar_registros(REGISTROS *registros);
 void mover_tcbs_exit(PCB *pcb);
+PCB *buscar_pcb_en_ejecucion(int pid);
 
 #endif // UTILIDADES_H_

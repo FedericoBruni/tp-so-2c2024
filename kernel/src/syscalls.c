@@ -3,6 +3,7 @@
 extern t_queue *cola_new;
 extern t_queue *cola_ready;
 extern t_queue *cola_finalizacion;
+extern t_list *
 extern t_log *logger;
 extern t_list *procesos;
 /*
@@ -41,13 +42,16 @@ void PROCESS_EXIT(TCB *tcb)
     // singal final_proceso
 }
 
-// void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
-//     TCB* tcb = crear_tcb(pcb_en_ejecucion, prioridad, archivo_pseudocodigo);
-//     cambiar_estado_hilo(tcb, READY); // para mi se pone acá en ready y listo, por como dice el enunciado
-//     // Al momento de crear el nuevo hilo, deberá generar el nuevo TCB con un TID autoincremental y 
-//     // poner al mismo en el estado READY.
-//      Dejo todo comentado pq no existe "pcb_en_ejecucion" y rompe
-// }
+void THREAD_CREATE(int pid,char* archivo_pseudocodigo, int prioridad){
+    PCB *pcb_en_ejecucion = buscar_pcb_en_ejecucion(pid);
+    TCB *tcb = crear_tcb(pcb_en_ejecucion,prioridad,archivo_pseudocodigo);
+    cambiar_estado_hilo(tcb,READY);
+    //señal d creacion
+    // para mi se pone acá en ready y listo, por como dice el enunciado
+    // Al momento de crear el nuevo hilo, deberá generar el nuevo TCB con un TID autoincremental y 
+    // poner al mismo en el estado READY.
+    //Dejo todo comentado pq no existe "pcb_en_ejecucion" y rompe
+}
 
 
 // Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 

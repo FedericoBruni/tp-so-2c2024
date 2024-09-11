@@ -15,6 +15,7 @@ t_queue *cola_ready;
 t_queue *cola_blocked;
 t_queue *cola_exit;
 t_queue *cola_finalizacion;
+t_list *pcbs_en_ejecucion;
 int autoincremental_pcb = 0;
 
 void iniciar_kernel(void)
@@ -34,6 +35,7 @@ void iniciar_kernel(void)
     cola_blocked = queue_create();
     cola_exit = queue_create();
     cola_finalizacion = queue_create();
+    pcbs_en_ejecucion = list_create();
 }
 
 int conectarse_a_cpu_interrupt(void)
@@ -248,7 +250,24 @@ void mover_tcbs_exit(PCB *pcb)
         queue_push(cola_exit, tcb);
     }
 }
+	// * t_person* find_by_name_contains(t_list* people, char* substring) {
+	// *     bool _name_contains(void* ptr) {
+	// *         t_person* person = (t_person*) ptr;
+	// *         return string_contains(person->name, substring);
+	// *     }
+	// *     return list_find(people, _name_contains);
+	// * }
 
+PCB *buscar_pcb_en_ejecucion(int pid){
+    bool tiene_pid(void* ptr){
+    PCB* pcb = (PCB*)ptr;
+    if(pcb->pid == pid){
+        return true;
+    }
+    else {return false;}
+    }
+    return list_find(pcbs_en_ejecucion,tiene_pid);
+}
 // typedef struct
 // {
 // 	uint32_t PC;
