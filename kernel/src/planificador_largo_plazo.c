@@ -106,7 +106,7 @@ void creacion_de_hilos(void){
                 break;
             case 0:
                 log_error(logger, "Error al crear el hilo: %i\n", tcb->tid);
-                break;
+                break; 
         }
     }
 }
