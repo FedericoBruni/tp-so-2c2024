@@ -44,19 +44,23 @@ int main(int argc, char *argv[])
     if (realizar_handshake(logger, fd_cpu_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT) == -1)
     {
         exit(EXIT_FAILURE);
-    }
+    }    
 
     pthread_t hilo_creacion_de_procesos;
     pthread_create(&hilo_creacion_de_procesos, NULL, (void *)creacion_de_procesos, NULL); // Crea el hilo y le pasa la funcion a ejecutarse
-    pthread_join(hilo_creacion_de_procesos, NULL);
+    pthread_detach(hilo_creacion_de_procesos);
 
     pthread_t hilo_finalizacion_de_procesos;
     pthread_create(&hilo_finalizacion_de_procesos, NULL, (void *)finalizacion_de_procesos, NULL);
-    pthread_join(hilo_finalizacion_de_procesos, NULL);
+    pthread_detach(hilo_finalizacion_de_procesos);
 
-    while (hilo_creacion_muerto != false && hilo_fin_proc_muerto != false)
-    {
-    }
+    pthread_t hilo_creacion_de_hilos;
+    pthread_create(&hilo_creacion_de_hilos, NULL, (void *)creacion_de_hilos, NULL);
+    pthread_join(hilo_creacion_de_hilos, NULL);
+
+    // while (hilo_creacion_muerto != false && hilo_fin_proc_muerto != false)
+    // {
+    // }
 
     terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
 

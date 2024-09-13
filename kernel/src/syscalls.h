@@ -5,5 +5,6 @@
 
 void PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad);
 void PROCESS_EXIT(TCB *tcb);
+void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad);
 
 #endif

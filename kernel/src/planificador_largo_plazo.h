@@ -5,5 +5,6 @@
 
 void creacion_de_procesos(void);
 void finalizacion_de_procesos(void);
+void creacion_de_hilos(void);
 
 #endif

@@ -1,11 +1,16 @@
 #include "syscalls.h"
 
 extern t_queue *cola_new;
-extern t_queue *cola_ready;
+extern t_queue* cola_ready;
 extern t_queue *cola_finalizacion;
-extern t_list *
 extern t_log *logger;
 extern t_list *procesos;
+extern pthread_mutex_t mutex_new;
+extern pthread_mutex_t mutex_exit;
+extern PCB *pcb_en_ejecucion;
+extern TCB *tcb_a_crear;
+extern sem_t sem_crear_hilo;
+extern sem_t sem_finalizar_proceso;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -17,7 +22,7 @@ El Kernel c: 12
 void PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
 {
     PCB *pcb = crear_pcb(archivo, tamanio_memoria, prioridad);
-    queue_push(cola_new, pcb);
+    encolar(cola_new, pcb, mutex_new);
     // signal
 }
 
@@ -31,21 +36,25 @@ void PROCESS_EXIT(TCB *tcb)
 {
     if (tcb->tid != 0)
     {
-        log_warning(logger, "Este hilo no tiene los permisos para finalizar el proceso: %i", tcb->pcb_pid);
-        return -1;
+        log_warning(logger, "Este hilo de tid: %i  con prioridad ; %i no tiene los permisos para finalizar el proceso: %i",tcb->tid ,tcb->prioridad,tcb->pcb_pid);
+        return;
     }
     PCB *pcb = tcb->pcb;
     mover_tcbs_exit(pcb);
-    queue_push(cola_finalizacion, pcb);
+    //queue_push(cola_finalizacion, pcb);
+    encolar(cola_finalizacion, pcb, mutex_exit); 
+    sem_post(&sem_finalizar_proceso);
+
+    //sem_post(&sem_);
     // Faltaría avisarle a Memoria??
     // Y sacar el pcb de la cola en la que está?
     // singal final_proceso
 }
 
-void THREAD_CREATE(int pid,char* archivo_pseudocodigo, int prioridad){
-    PCB *pcb_en_ejecucion = buscar_pcb_en_ejecucion(pid);
-    TCB *tcb = crear_tcb(pcb_en_ejecucion,prioridad,archivo_pseudocodigo);
-    cambiar_estado_hilo(tcb,READY);
+void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
+    TCB *tcb = crear_tcb(pcb_en_ejecucion, prioridad, archivo_pseudocodigo);
+    tcb_a_crear = tcb;
+    sem_post(&sem_crear_hilo);
     //señal d creacion
     // para mi se pone acá en ready y listo, por como dice el enunciado
     // Al momento de crear el nuevo hilo, deberá generar el nuevo TCB con un TID autoincremental y 

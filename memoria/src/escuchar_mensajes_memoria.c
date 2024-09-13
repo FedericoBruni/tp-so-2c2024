@@ -30,6 +30,13 @@ void escuchar_mensajes_kernel(void)
             int rta_fin_proc = OK_FINAL_PROCESO;
             send(cliente_fd_kernel, &rta_fin_proc, sizeof(op_code), 0);
             break;
+        case SOLICITAR_CREACION_HILO:
+            buffer = recibir_buffer_completo(cliente_fd_kernel);
+            int tid = extraer_int_del_buffer(buffer);
+            log_info(logger, "Creando hilo con id: %i", tid);
+            int rta_crear_hilo = OK_CREACION_HILO;
+            send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
+            break;
         case -1:
             log_error(logger, "Kernel desconectado\n");
             cliente_fd_kernel = -1;
