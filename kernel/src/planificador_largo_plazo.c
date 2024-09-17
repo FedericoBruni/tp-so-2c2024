@@ -16,6 +16,7 @@ extern sem_t sem_hay_memoria;
 extern TCB* tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
+extern sem_t sem_finalizar_hilo;
 
 void creacion_de_procesos(void)
 {
@@ -111,3 +112,31 @@ void creacion_de_hilos(void){
     }
 }
 
+
+void finalizacion_de_hilos(void)
+{
+    while (true)
+    {
+        sem_wait(&sem_finalizar_hilo); 
+
+        pthread_mutex_lock(&mutex_exit);
+        TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
+        pthread_mutex_unlock(&mutex_exit);
+
+        int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, FINAL_HILO);
+        switch (resultado)
+        {
+        case 1:
+            log_info(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid);
+            liberar_tcb(tcb);
+            break;
+        case 0:
+            log_error(logger, "Error al finalizar el hilo: %i del proceso: %i", tcb->tid, tcb->pcb_pid);
+          
+            pthread_mutex_lock(&mutex_exit);
+            encolar(cola_finalizacion, tcb, mutex_exit);
+            pthread_mutex_unlock(&mutex_exit);
+            break;
+        }
+    }
+}

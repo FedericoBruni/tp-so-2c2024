@@ -11,6 +11,7 @@ extern PCB *pcb_en_ejecucion;
 extern TCB *tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
+extern sem_t sem_finalizar_hilo;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -65,3 +66,22 @@ void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
 
 // Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
 // tener una variable tcb_en_ejecucion?
+
+
+
+void THREAD_EXIT(TCB *tcb) {
+    if (tcb->tid == 0) {
+        log_warning(logger, "El hilo TID 0 debe invocar a PROCESS_EXIT para finalizar el proceso.");
+        PROCESS_EXIT(tcb);
+        return;
+    }
+
+    log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
+    encolar(cola_finalizacion, tcb->pcb, mutex_exit);
+
+    cambiar_estado_hilo(tcb, EXIT);
+
+    liberar_tcb(tcb);
+
+    sem_post(&sem_finalizar_hilo);
+}

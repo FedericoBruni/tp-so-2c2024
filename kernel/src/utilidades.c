@@ -24,6 +24,7 @@ pthread_mutex_t mutex_blocked;
 sem_t sem_hay_memoria;
 sem_t sem_crear_hilo;
 sem_t sem_finalizar_proceso;
+sem_t sem_finalizar_hilo;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 
@@ -60,6 +61,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_hay_memoria, "Hay memoria", 0);
     inicializar_semaforo(&sem_crear_hilo, "Crear hilo", 0);
     inicializar_semaforo(&sem_finalizar_proceso, "Finalizar proceso", 0);
+    inicializar_semaforo(&sem_finalizar_hilo, "Finalizar hilo", 0);
 
 }
 

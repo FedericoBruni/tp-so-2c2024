@@ -51,3 +51,20 @@ int solicitar_creacion_hilo(int socket_memoria, int tid ,op_code operacion){
         return 0;
     }
 }
+
+int notificar_finalizacion_hilo(int socket_memoria, int pid, op_code operacion)
+{
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, pid);
+    t_paquete *paquete = crear_paquete(operacion, buffer);
+    enviar_paquete(paquete, socket_memoria);
+    eliminar_paquete(paquete);
+    if (recibir_operacion(socket_memoria) == FINAL_HILO)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}

@@ -37,6 +37,8 @@ void escuchar_mensajes_kernel(void)
             int rta_crear_hilo = OK_CREACION_HILO;
             send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
             break;
+        case FINAL_HILO:
+            break;
         case -1:
             log_error(logger, "Kernel desconectado\n");
             cliente_fd_kernel = -1;
