@@ -59,7 +59,7 @@ int notificar_finalizacion_hilo(int socket_memoria, int pid, op_code operacion)
     t_paquete *paquete = crear_paquete(operacion, buffer);
     enviar_paquete(paquete, socket_memoria);
     eliminar_paquete(paquete);
-    if (recibir_operacion(socket_memoria) == FINAL_HILO)
+    if (recibir_operacion(socket_memoria) == OK_FINAL_HILO)
     {
         return 1;
     }
