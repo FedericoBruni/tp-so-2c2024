@@ -5,6 +5,7 @@ extern char *puerto_escucha_interrupt;
 extern t_log *logger;
 int cliente_fd_dispatch;
 int cliente_fd_interrupt;
+int fd_memoria;
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +16,7 @@ int main(int argc, char *argv[])
     int server_fd_interrupt = iniciar_servidor(logger, puerto_escucha_interrupt);
 
     // Conectarse a FS
-    int fd_memoria = conectarse_a_memoria();
+    fd_memoria = conectarse_a_memoria();
     if (realizar_handshake(logger, fd_memoria, HANDSHAKE_CPU_MEMORIA) == -1)
     {
         exit(EXIT_FAILURE);

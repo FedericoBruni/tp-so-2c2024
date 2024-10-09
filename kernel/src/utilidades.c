@@ -15,6 +15,7 @@ t_queue *cola_ready;
 t_queue *cola_blocked;
 t_queue *cola_exit;
 t_queue *cola_finalizacion;
+TCB *tcb_en_ejecucion;
 int autoincremental_pcb = 0;
 pthread_mutex_t mutex_new;
 pthread_mutex_t mutex_ready;
@@ -25,8 +26,11 @@ sem_t sem_hay_memoria;
 sem_t sem_crear_hilo;
 sem_t sem_finalizar_proceso;
 sem_t sem_finalizar_hilo;
+sem_t sem_hay_ready;
+sem_t sem_hay_new;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
+t_list* colas_prioridades;
 
 
 
@@ -48,6 +52,7 @@ void iniciar_kernel(void)
     cola_blocked = queue_create();
     cola_exit = queue_create();
     cola_finalizacion = queue_create();
+    colas_prioridades = list_create();
     iniciar_semaforos();
 }
 
@@ -62,6 +67,9 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_crear_hilo, "Crear hilo", 0);
     inicializar_semaforo(&sem_finalizar_proceso, "Finalizar proceso", 0);
     inicializar_semaforo(&sem_finalizar_hilo, "Finalizar hilo", 0);
+    inicializar_semaforo(&sem_hay_ready, "Hay hilo en ready", 0);
+    inicializar_semaforo(&sem_hay_new, "Hay proceso en new", 0);
+
 
 }
 
@@ -162,6 +170,49 @@ void* desencolar(t_queue* cola, pthread_mutex_t mutex){
     void* elemento = queue_pop(cola);
     pthread_mutex_unlock(&mutex);
     return elemento;
+}
+
+bool comparar_prioridad(void *a, void *b){
+    COLA_PRIORIDAD* cola1 = (COLA_PRIORIDAD*)a;
+    COLA_PRIORIDAD* cola2 = (COLA_PRIORIDAD*)b;
+    return cola1->prioridad <= cola2->prioridad;
+}
+
+COLA_PRIORIDAD* crear_multinivel(TCB* tcb){
+    COLA_PRIORIDAD* cola_nueva = malloc(sizeof(COLA_PRIORIDAD));
+    cola_nueva->cola_prioridad = queue_create();
+    cola_nueva->prioridad = tcb->prioridad;
+    cola_nueva->quantum = quantum;
+    inicializar_mutex(&cola_nueva->mutex, "Mutex cola prioridad");
+    list_add(colas_prioridades, cola_nueva);
+    list_sort(colas_prioridades, (void*)comparar_prioridad);
+    return cola_nueva;
+}
+
+COLA_PRIORIDAD *existe_cola_con_prioridad(int prioridad) {
+    bool _tiene_prioridad(void *ptr){
+        COLA_PRIORIDAD* cola = (COLA_PRIORIDAD*) ptr;
+        return cola->prioridad == prioridad;
+    }
+    list_find(colas_prioridades, _tiene_prioridad);
+}
+
+void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb){
+    encolar(cola->cola_prioridad, tcb, cola->mutex);
+
+}
+
+void* desencolar_multinivel(COLA_PRIORIDAD *cola){
+    return desencolar(cola->cola_prioridad,cola->mutex);
+}
+
+COLA_PRIORIDAD* obtener_cola_con_mayor_prioridad() { // y q tenga elementos
+    for (unsigned int i = 0; i < list_size(colas_prioridades) ; i++){
+        COLA_PRIORIDAD*  cola_prioridad = list_get(colas_prioridades,i);
+        if(!queue_is_empty(cola_prioridad->cola_prioridad))
+            return cola_prioridad; 
+    }
+    return NULL;
 }
 
 

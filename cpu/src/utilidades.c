@@ -7,6 +7,8 @@ char *puerto_memoria;
 char *puerto_escucha_dispatch;
 char *puerto_escucha_interrupt;
 char *log_level;
+extern int fd_memoria;
+extern int cliente_fd_dispatch;
 
 void iniciar_cpu(void)
 {
@@ -33,4 +35,32 @@ void terminar_ejecucion(int servidor_dispatch, int servidor_interrupt, int socke
     config_destroy(config);
     log_destroy(logger);
     exit(EXIT_SUCCESS);
+}
+
+void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
+{
+
+	t_buffer* buffer = recibir_buffer_completo(socket_cliente);
+    int tid = extraer_int_del_buffer(buffer);
+    int pid = extraer_int_del_buffer(buffer);
+    log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
+
+    //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
+    //ejecutar();
+
+    sleep(5);
+    int resultado_ejecucion = OK_EJECUCION;
+    send(socket_cliente, &resultado_ejecucion,sizeof(op_code),0);
+}
+
+procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
+    t_buffer* buffer = recibir_buffer_completo(socket_cliente);
+    int tid = extraer_int_del_buffer(buffer);
+    int pid = extraer_int_del_buffer(buffer);
+    log_info(logger, "Recibida interrupcion de Fin de Quantum (%i y %i):",tid ,pid);
+    int resultado_interrupt = OK_FIN_QUANTUM;
+    send(socket_cliente, &resultado_interrupt,sizeof(op_code),0);
+    sleep(1);
+    int resultado_dispatch = DESALOJO_POR_QUANTUM;
+    send(cliente_fd_dispatch,&resultado_dispatch,sizeof(op_code),0);
 }

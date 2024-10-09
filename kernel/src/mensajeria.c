@@ -1,4 +1,8 @@
 #include "mensajeria.h"
+extern int fd_cpu_dispatch;
+extern int fd_cpu_interrupt;
+extern char *desc_code_op[];
+extern t_log *logger;
 
 int solicitar_memoria(int socket_memoria, int tamanio_memoria, op_code cod_sol)
 {
@@ -67,4 +71,40 @@ int notificar_finalizacion_hilo(int socket_memoria, int pid, op_code operacion)
     {
         return 0;
     }
+}
+
+int enviar_exec_a_cpu(int tid, int pid){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, tid);
+    cargar_int_al_buffer(buffer, pid);
+    t_paquete *paquete = crear_paquete(ENVIAR_EXEC, buffer);
+    enviar_paquete(paquete, fd_cpu_dispatch);
+    eliminar_paquete(paquete);
+    switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
+        case OK_EJECUCION:
+            log_info(logger,"Respuesta OK");
+            return 1;
+
+        default:
+            return 0;
+    }
+}
+
+void enviar_fin_quantum(int tid, int pid){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, tid);
+    cargar_int_al_buffer(buffer, pid);
+    t_paquete *paquete = crear_paquete(FIN_QUANTUM, buffer);
+    enviar_paquete(paquete, fd_cpu_interrupt);
+    eliminar_paquete(paquete);
+    // habria q recibir un ok de que se recibió la interrupción?
+    switch(recibir_operacion(fd_cpu_interrupt)){
+        case OK_FIN_QUANTUM:
+            log_info(logger,"Respuesta OK");
+            return 1;
+
+        default:
+            return 0;
+    }
+    
 }

@@ -17,51 +17,65 @@ extern TCB* tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
+extern sem_t sem_hay_ready;
+extern sem_t sem_hay_new;
+extern char *algoritmo_planificacion;
 
 void creacion_de_procesos(void)
 {
     hilo_creacion_muerto = false;
     while (true)
     {
+        
 
-        //pthread_mutex_lock(&mutex_new);
-        PCB *pcb = desencolar(cola_new,mutex_new);
-        if (queue_is_empty(cola_new))
+        
+        sem_wait(&sem_hay_new);
+        PCB* pcb = desencolar(cola_new,mutex_new);
+        log_info(logger, "solicitando memoria");
+        int resultado = solicitar_memoria(fd_memoria, tamanio_proceso, SOLICITAR_MEMORIA_PROCESO);
+        switch (resultado)
         {
-            log_info(logger, "solicitando memoria");
-            int resultado = solicitar_memoria(fd_memoria, tamanio_proceso, SOLICITAR_MEMORIA_PROCESO);
-            switch (resultado)
-            {
-            case 1:
-                log_info(logger, "Memoria reservada correctamente");
-                log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
-                TCB *tcb = crear_tcb(pcb, pcb->prioridad_main, archivo_pseudocodigo);
-                cambiar_estado_hilo(tcb, READY); // el estado del proceso depende del estado de los hilos, hay q ver como implementar eso
+        case 1:
+            log_info(logger, "Memoria reservada correctamente");
+            log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
+            TCB *tcb = crear_tcb(pcb, pcb->prioridad_main, archivo_pseudocodigo);
+            cambiar_estado_hilo(tcb, READY); // el estado del proceso depende del estado de los hilos, hay q ver como implementar eso
+            
+            if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+                COLA_PRIORIDAD * cola = existe_cola_con_prioridad(tcb->prioridad);
+                if(cola != NULL){
+                    encolar_multinivel(cola, tcb);
+                } else{
+                    COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
+                    log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+                    encolar_multinivel(cola_nueva, tcb);
+                }         
+            }else{
                 encolar(cola_ready, tcb,mutex_ready);     // los hilos van en la cola de ready o los procesos? o ambos por separado
-                imprimir_pcb(pcb);
-
-                pcb_en_ejecucion = pcb;
-                THREAD_CREATE(archivo_pseudocodigo, 3);
-                sleep(5);
-                PROCESS_EXIT(tcb);
-                //liberar_pcb(pcb);
-                // if(pcb != NULL){
-                //     log_error(logger,"aaaaaaa");
-                // } habria que liberar el pcb que creamos o no?
-                // si hay que borrar hay q fijarse las funciones d borrar pq andan medio mal
-                break;
-
-            case 0:
-                log_warning(logger, "No hay espacio en memoria");
-                sem_wait(&sem_hay_memoria);
-                encolar(cola_new, pcb,mutex_new);
-                break;
+                //imprimir_pcb(pcb); 
             }
+            sem_post(&sem_hay_ready);
+
+
+            //liberar_pcb(pcb);
+            // if(pcb != NULL){
+            //     log_error(logger,"aaaaaaa");
+            // } habria que liberar el pcb que creamos o no?
+            // si hay que borrar hay q fijarse las funciones d borrar pq andan medio mal
+            break;
+
+        case 0:
+            log_warning(logger, "No hay espacio en memoria");
+            encolar(cola_new, pcb,mutex_new);
+            sem_wait(&sem_hay_memoria);
+            sem_post(&sem_hay_new);
+            break;
         }
-        break; // por ahora, q lo haga una sola vez pq no tenemos el semaforo
-    }
+        //break; // por ahora, q lo haga una sola vez pq no tenemos el semaforo
     hilo_creacion_muerto = true;
+    }
 }
+
 
 void finalizacion_de_procesos(void)
 {

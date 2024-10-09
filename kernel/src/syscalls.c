@@ -2,6 +2,7 @@
 
 extern t_queue *cola_new;
 extern t_queue* cola_ready;
+extern t_queue *cola_exit;
 extern t_queue *cola_finalizacion;
 extern t_log *logger;
 extern t_list *procesos;
@@ -12,6 +13,7 @@ extern TCB *tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
+extern sem_t sem_hay_new;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -24,7 +26,8 @@ void PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
 {
     PCB *pcb = crear_pcb(archivo, tamanio_memoria, prioridad);
     encolar(cola_new, pcb, mutex_new);
-    // signal
+    sem_post(&sem_hay_new);
+    
 }
 
 /*
@@ -70,14 +73,13 @@ void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
 
 
 void THREAD_EXIT(TCB *tcb) {
-    if (tcb->tid == 0) {
-        log_warning(logger, "El hilo TID 0 debe invocar a PROCESS_EXIT para finalizar el proceso.");
-        PROCESS_EXIT(tcb);
+    if (tcb->tid != 0) {
+        log_warning(logger, "El hilo TID 0 debe invocar a THREAD_EXIT para finalizar el hilo.");
         return;
     }
 
     log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
-    encolar(cola_finalizacion, tcb->pcb, mutex_exit);
+    encolar(cola_exit, tcb->pcb, mutex_exit);
 
     cambiar_estado_hilo(tcb, EXIT);
 
@@ -85,3 +87,21 @@ void THREAD_EXIT(TCB *tcb) {
 
     sem_post(&sem_finalizar_hilo);
 }
+
+
+void THREAD_CANCEL(TCB *tcb) {
+    if (tcb->tid != 0) {
+        log_warning(logger, "El hilo TID 0 debe invocar a THREAD_CANCEL para cancelar el hilo.");
+        return;
+    }
+
+    log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
+    encolar(cola_exit, tcb->pcb, mutex_exit);
+
+    cambiar_estado_hilo(tcb, EXIT);
+
+    liberar_tcb(tcb);
+
+    sem_post(&sem_finalizar_hilo);
+}
+

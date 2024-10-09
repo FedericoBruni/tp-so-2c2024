@@ -39,6 +39,8 @@ void escuchar_mensajes_kernel(void)
             break;
         case FINAL_HILO:
             break;
+        case CANCELAR_HILO:
+            break;
         case -1:
             log_error(logger, "Kernel desconectado\n");
             cliente_fd_kernel = -1;

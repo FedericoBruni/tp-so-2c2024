@@ -147,6 +147,8 @@ void inicializar_registros(REGISTROS *registros)
     registros->FX = 0;
     registros->GX = 0;
     registros->HX = 0;
+    registros->BASE = 0;
+    registros->LIMITE = 0;
 }
 
 void cambiar_estado_hilo(TCB *tcb, STATUS estado)

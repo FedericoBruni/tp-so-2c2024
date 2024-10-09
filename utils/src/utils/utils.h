@@ -30,7 +30,13 @@ typedef enum
 	OK_CREACION_HILO,
 	ERROR_CREACION_HILO,
 	FINAL_HILO,
-	OK_FINAL_HILO
+	CANCELAR_HILO,
+	OK_FINAL_HILO,
+	ENVIAR_EXEC,
+	OK_EJECUCION,
+	FIN_QUANTUM,
+	DESALOJO_POR_QUANTUM,
+	OK_FIN_QUANTUM
 } op_code;
 
 typedef enum
@@ -53,6 +59,8 @@ typedef struct
 	uint32_t FX;
 	uint32_t GX;
 	uint32_t HX;
+	uint32_t BASE;
+	uint32_t LIMITE;
 } REGISTROS;
 
 typedef struct

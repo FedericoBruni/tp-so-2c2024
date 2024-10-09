@@ -19,6 +19,9 @@ void escuchar_mensajes_kernel_dispatch(void)
 			aceptar_handshake(logger, cliente_fd_dispatch, HANDSHAKE_KERNEL_CPU_DISPATCH);
 			break;
 
+		case ENVIAR_EXEC:
+			recibir_exec(logger,cliente_fd_dispatch,cod_op);
+			break;
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");
 			cliente_fd_dispatch = -1;
@@ -42,6 +45,9 @@ void escuchar_mensajes_kernel_interrupt(void)
 		case HANDSHAKE_KERNEL_CPU_INTERRUPT:
 			aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 			break;
+		case FIN_QUANTUM:
+		    procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
+			break;
 
 		case -1:
 			log_error(logger, "Interrupt desconectado\n");
@@ -54,3 +60,4 @@ void escuchar_mensajes_kernel_interrupt(void)
 		}
 	}
 }
+
