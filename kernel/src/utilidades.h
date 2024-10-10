@@ -23,7 +23,6 @@ typedef struct{
     t_queue *cola_prioridad;
     int quantum;
     pthread_mutex_t mutex;
-
 } COLA_PRIORIDAD;
 
 void iniciar_kernel(void);
@@ -44,4 +43,6 @@ void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb);
 void* desencolar_multinivel(COLA_PRIORIDAD *cola);
 COLA_PRIORIDAD* existe_cola_con_prioridad(int prioridad);
 COLA_PRIORIDAD* obtener_cola_con_mayor_prioridad();
+void replanificar(TCB *tcb);
+MUTEX *existe_mutex(char* recurso);
 #endif // UTILIDADES_H_

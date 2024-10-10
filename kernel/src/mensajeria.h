@@ -9,4 +9,5 @@ int solicitar_creacion_hilo(int socket_memoria, int tid, op_code cod_sol);
 int notificar_finalizacion_hilo(int socket_memoria, int pid, op_code operacion);
 int enviar_exec_a_cpu(int tid, int pid);
 void enviar_fin_quantum(int tid, int pid);
+void esperar_respuesta();
 #endif

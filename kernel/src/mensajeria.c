@@ -3,6 +3,8 @@ extern int fd_cpu_dispatch;
 extern int fd_cpu_interrupt;
 extern char *desc_code_op[];
 extern t_log *logger;
+extern sem_t sem_cpu_ejecutando;
+extern TCB* tcb_en_ejecucion;
 
 int solicitar_memoria(int socket_memoria, int tamanio_memoria, op_code cod_sol)
 {
@@ -79,12 +81,13 @@ int enviar_exec_a_cpu(int tid, int pid){
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(ENVIAR_EXEC, buffer);
     enviar_paquete(paquete, fd_cpu_dispatch);
+    
     eliminar_paquete(paquete);
     switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
-        case OK_EJECUCION:
-            log_info(logger,"Respuesta OK");
+        case EXEC_RECIBIDO:
+            log_info(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
+            sem_post(&sem_cpu_ejecutando);
             return 1;
-
         default:
             return 0;
     }
@@ -100,11 +103,25 @@ void enviar_fin_quantum(int tid, int pid){
     // habria q recibir un ok de que se recibió la interrupción?
     switch(recibir_operacion(fd_cpu_interrupt)){
         case OK_FIN_QUANTUM:
-            log_info(logger,"Respuesta OK");
+            log_info(logger,"finalizando por quantum");
             return 1;
 
         default:
             return 0;
     }
     
+}
+
+void esperar_respuesta(){
+    switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
+        case DESALOJO_POR_QUANTUM:
+            replanificar(tcb_en_ejecucion);
+            log_info(logger,"Desalojo por quantum");
+            break;
+        case OK_EJECUCION:
+            log_info(logger,"Ok ejecucion");
+            break;
+        default:
+            return 0;
+    }
 }

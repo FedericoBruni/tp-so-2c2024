@@ -19,7 +19,8 @@ void liberar_registros(REGISTROS *registros)
 void liberar_pcb(void *ptr_pcb)
 {
     PCB *pcb = (PCB *)ptr_pcb;
-    liberar_registros(pcb->Registros); // libero registros
+    //liberar_registros(pcb->Registros); // libero registros
+    list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
     free(pcb->tids);
     list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
     free(pcb);
@@ -31,11 +32,10 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
     pcb->pid = autoincremental_pcb;
     autoincremental_pcb++;
     pcb->status = NEW;
-    pcb->Registros = malloc(sizeof(REGISTROS));
-    inicializar_registros(pcb->Registros);
     pcb->tids = list_create();
     pcb->autoincremental_tcb = 0;
     pcb->threads = list_create();
+    pcb->mutex = list_create();
     pcb->prioridad_main = prioridad_main;
     pcb->archivo_pseudocodigo = archivo_pseudocodigo;
     pcb->tamanio = tamanio_memoria;
@@ -52,9 +52,10 @@ TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
     tcb->pcb_pid = pcb->pid;
     tcb->prioridad = prioridad;
     tcb->Registros = malloc(sizeof(REGISTROS));
-    memcpy(tcb->Registros, pcb->Registros, sizeof(REGISTROS));
+    inicializar_registros(tcb->Registros);
     tcb->pcb = pcb;
     tcb->archivo_pseudocodigo = archivo_pseudocodigo;
+    tcb->bloqueadoPor = NULL;
     agregar_hilo(tcb,pcb);
     return tcb;
 }
@@ -75,16 +76,14 @@ void imprimir_pcb(PCB *pcb)
     printf("LISTA TIDS: \n");
     imprimir_lista_ids(pcb->tids);
     printf("STATUS: %s\n", desc_status[pcb->status]);
-    printf("REGISTROS: \n");
-    imprimir_registros(pcb->Registros);
     printf("THREADS: \n");
     imprimir_hilos(pcb->threads);
 }
 
 void imprimir_registros(REGISTROS *registros)
 {
-    printf("PC: %i\nAX: %i\nBX: %i\nCX: %i\nDX: %i\nEX: %i\nFX: %i\nGX: %i\nHX: %i\n", registros->PC, registros->AX,
-           registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX);
+    printf("PC: %i\nAX: %i\nBX: %i\nCX: %i\nDX: %i\nEX: %i\nFX: %i\nGX: %i\nHX: %i\nBASE: %i\nLIMITE: %i\n", registros->PC, registros->AX,
+           registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX,registros->BASE,registros->LIMITE);
 }
 
 void imprimir_lista_ids(t_list *tids)
@@ -103,8 +102,6 @@ void imprimir_pcb_sin_hilos(PCB *pcb)
     printf("LISTA TIDS: \n");
     imprimir_lista_ids(pcb->tids);
     printf("STATUS: %s\n", desc_status[pcb->status]);
-    printf("REGISTROS: \n");
-    imprimir_registros(pcb->Registros);
 }
 
 void imprimir_hilos(t_list *threads)

@@ -28,9 +28,11 @@ sem_t sem_finalizar_proceso;
 sem_t sem_finalizar_hilo;
 sem_t sem_hay_ready;
 sem_t sem_hay_new;
+sem_t sem_cpu_ejecutando;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
+t_list* mutex_sistema;
 
 
 
@@ -53,6 +55,7 @@ void iniciar_kernel(void)
     cola_exit = queue_create();
     cola_finalizacion = queue_create();
     colas_prioridades = list_create();
+    mutex_sistema = list_create();
     iniciar_semaforos();
 }
 
@@ -69,6 +72,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_finalizar_hilo, "Finalizar hilo", 0);
     inicializar_semaforo(&sem_hay_ready, "Hay hilo en ready", 0);
     inicializar_semaforo(&sem_hay_new, "Hay proceso en new", 0);
+    inicializar_semaforo(&sem_cpu_ejecutando, "Hay un hilo ejecutando en cpu", 0);
 
 
 }
@@ -215,35 +219,77 @@ COLA_PRIORIDAD* obtener_cola_con_mayor_prioridad() { // y q tenga elementos
     return NULL;
 }
 
+void replanificar(TCB *tcb){
+    if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+        COLA_PRIORIDAD * cola = existe_cola_con_prioridad(tcb->prioridad);
+        if(cola != NULL){
+            encolar_multinivel(cola, tcb);
+        } else{
+            COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
+            log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+            encolar_multinivel(cola_nueva, tcb);
+        }         
+    }else{
+        encolar(cola_ready, tcb,mutex_ready);     // los hilos van en la cola de ready o los procesos? o ambos por separado
+        //imprimir_pcb(pcb); 
+    }
+    sem_post(&sem_hay_ready);
+}
+
+MUTEX *existe_mutex(char* recurso){
+    bool _hay_recurso(void *ptr){
+        MUTEX *mutex = (MUTEX *)ptr;
+        return string_equals_ignore_case(mutex->recurso, recurso);
+    }
+    list_find(mutex_sistema,_hay_recurso);
+}
+
+void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb){
+    queue_push(cola_bloqueados,tcb);
+    cambiar_estado_hilo(tcb, BLOCKED);
+    sem_post(&sem_hay_ready);
+}
+
+void desbloquear_hilo_mutex(MUTEX *mutex){
+    TCB *tcb = queue_pop(mutex->cola_bloqueados);
+    if(tcb != NULL){
+        mutex->asignadoA = tcb->tid;
+        cambiar_estado_hilo(tcb, READY);
+        replanificar(tcb);
+    }else{
+        mutex->asignadoA = NULL;
+        mutex->binario = 1;
+    }
+}
+void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb){
+    mutex->asignadoA=tcb->tid;
+    mutex->binario = 0;
+}
+
+void bloquear_hilo_syscall(TCB *tcb,int tid){
+    cambiar_estado_hilo(tcb,BLOCKED);
+    tcb->bloqueadoPor = tid;
+    encolar(cola_blocked,mutex_blocked);
+    sem_post(&sem_hay_ready);
+}
 
 
-// typedef struct
-// {
-// 	uint32_t PC;
-// 	uint32_t AX;
-// 	uint32_t BX;
-// 	uint32_t CX;
-// 	uint32_t DX;
-// 	uint32_t EX;
-// 	uint32_t FX;
-// 	uint32_t GX;
-// 	uint32_t HX;
-// } REGISTROS;
 
-// typedef struct
-// {
+void desbloquear_bloqueados_por_hilo(tidBloqueante){
+    t_list* hilos_bloqueados = list_create();
+    bool _esBloqueado(void *ptr){
+        TCB *tcb = (TCB *)ptr;
+        return tcb->bloqueadoPor == tidBloqueante;
+    }
+    hilos_bloqueados = list_filter(cola_blocked,_esBloqueado);
+    for(int i = 0; i< list_size(hilos_bloqueados); i++){
+        desbloquear_hilo(list_get(hilos_bloqueados,i));
+    }
+    
+    list_destroy(hilos_bloqueados);
+}
 
-// 	int pid;
-// 	t_list *tids;
-// 	t_list *mutex;
-// 	STATUS status;
-// 	REGISTROS Registros;
-
-// } PCB;
-
-// typedef struct
-// {
-// 	int tid;
-// 	int prioridad;
-// 	REGISTROS Registros;
-// } TCB;
+void desbloquear_hilo(TCB *tcb){
+    cambiar_estado_hilo(tcb,READY);
+    replanificar(tcb);
+}

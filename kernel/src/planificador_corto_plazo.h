@@ -7,5 +7,5 @@ void fifo();
 void prioridad();
 int comparar_prioridades(TCB* tcb1, TCB* tcb2);
 void multinivel();
-void fin_de_quantum();
+void fin_de_quantum(int quantumCola);
 #endif

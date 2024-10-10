@@ -14,6 +14,8 @@ extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
 extern sem_t sem_hay_new;
+extern TCB *tcb_en_ejecucion;
+extern t_list *mutex_sistema;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -70,6 +72,10 @@ void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
 // Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
 // tener una variable tcb_en_ejecucion?
 
+void THREAD_JOIN(int tid){
+    bloquear_hilo_syscall(tcb_en_ejecucion,tid);
+}
+
 
 
 void THREAD_EXIT(TCB *tcb) {
@@ -95,7 +101,7 @@ void THREAD_CANCEL(TCB *tcb) {
         return;
     }
 
-    log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
+    log_info(logger, "Cancelando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
     encolar(cola_exit, tcb->pcb, mutex_exit);
 
     cambiar_estado_hilo(tcb, EXIT);
@@ -103,5 +109,56 @@ void THREAD_CANCEL(TCB *tcb) {
     liberar_tcb(tcb);
 
     sem_post(&sem_finalizar_hilo);
+}
+
+void MUTEX_CREATE(char* recurso){
+    MUTEX* mutex = malloc(sizeof(MUTEX));
+    mutex->recurso = recurso;
+    mutex->binario = 1;
+    mutex->asignadoA = NULL;
+    PCB* pcb = tcb_en_ejecucion->pcb;
+    mutex->cola_bloqueados = queue_create();
+    list_add(pcb->mutex, mutex);
+    list_add(mutex_sistema, mutex);
+    
+}
+/*
+ se deberá verificar primero que exista el mutex solicitado y en caso de que exista y el mismo no se encuentre tomado 
+ se deberá asignar dicho mutex al hilo correspondiente. En caso de que el mutex se encuentre tomado, el hilo que 
+ realizó MUTEX_LOCK se bloqueará en la cola de bloqueados correspondiente a dicho mutex.
+*/
+void MUTEX_LOCK(char* recurso)
+{
+    MUTEX *mutex = existe_mutex(char* recurso);
+
+    if(mutex == NULL){
+        THREAD_EXIT(tcb_en_ejecucion);
+        exit(EXIT_FAILURE);
+    }
+
+    if(mutex->binario == 1){
+        asignar_a_hilo_mutex(tcb_en_ejecucion);
+    }else{
+        bloquear_hilo_mutex(mutex->cola_bloqueados, tcb_en_ejecucion);
+    }
+}
+
+void MUTEX_UNLOCK(char *recurso){
+    MUTEX *mutex = existe_mutex(char* recurso);
+
+    if(mutex == NULL){
+        THREAD_EXIT(tcb_en_ejecucion);
+        exit(EXIT_FAILURE);
+    }
+    
+    if(mutex->binario == 0 && mutex->asignadoA == tcb_en_ejecucion->tid) {
+        desbloquear_hilo_mutex(mutex,tcb_en_ejecucion);
+    }else{
+        log_error(logger,"El hilo que desbloqueo el mutex no lo tiene")
+    }
+}
+
+void DUMP_MEMORY(){
+    
 }
 

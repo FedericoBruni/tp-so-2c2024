@@ -33,10 +33,11 @@ typedef enum
 	CANCELAR_HILO,
 	OK_FINAL_HILO,
 	ENVIAR_EXEC,
-	OK_EJECUCION,
+	EXEC_RECIBIDO,
 	FIN_QUANTUM,
 	DESALOJO_POR_QUANTUM,
-	OK_FIN_QUANTUM
+	OK_FIN_QUANTUM,
+	OK_EJECUCION
 } op_code;
 
 typedef enum
@@ -72,7 +73,6 @@ typedef struct
 	STATUS status;
 	char *archivo_pseudocodigo;
 	int tamanio;
-	REGISTROS *Registros;
 	int autoincremental_tcb;
 	t_list *threads;
 	int prioridad_main;
@@ -88,6 +88,7 @@ typedef struct
 	int pcb_pid;
 	PCB *pcb;
 	char* archivo_pseudocodigo;
+	int bloqueadoPor;
 } TCB;
 
 typedef struct
@@ -101,6 +102,16 @@ typedef struct
 	op_code codigo_operacion;
 	t_buffer *buffer;
 } t_paquete;
+
+typedef struct
+{
+	char *recurso;
+	int binario;
+	int asignadoA;
+	t_queue *cola_bloqueados;
+} MUTEX;
+
+
 
 t_config *iniciar_config(char *ruta);
 t_log *iniciar_logger(char *ruta_logger, char *nombre_logger, t_log_level level_logger);

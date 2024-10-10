@@ -132,10 +132,8 @@ void finalizacion_de_hilos(void)
     while (true)
     {
         sem_wait(&sem_finalizar_hilo); 
-
-        pthread_mutex_lock(&mutex_exit);
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
-        pthread_mutex_unlock(&mutex_exit);
+        int tidBloqueante = tcb->tid;
 
         int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, FINAL_HILO);
         switch (resultado)
@@ -143,13 +141,11 @@ void finalizacion_de_hilos(void)
         case 1:
             log_info(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid);
             liberar_tcb(tcb);
+            desbloquear_bloqueados_por_hilo(tidBloqueante);
             break;
         case 0:
             log_error(logger, "Error al finalizar el hilo: %i del proceso: %i", tcb->tid, tcb->pcb_pid);
-          
-            pthread_mutex_lock(&mutex_exit);
             encolar(cola_finalizacion, tcb, mutex_exit);
-            pthread_mutex_unlock(&mutex_exit);
             break;
         }
     }

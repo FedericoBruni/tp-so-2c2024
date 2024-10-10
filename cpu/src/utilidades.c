@@ -48,7 +48,9 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
     //ejecutar();
 
-    sleep(5);
+    int recibido = EXEC_RECIBIDO;
+    send(socket_cliente, &recibido,sizeof(op_code),0);
+    sleep(1);
     int resultado_ejecucion = OK_EJECUCION;
     send(socket_cliente, &resultado_ejecucion,sizeof(op_code),0);
 }
