@@ -5,7 +5,7 @@ char *desc_code_op[] = {
 	"HANDSHAKE CPU - MEMORIA", "HANDSHAKE MEMORIA - FILESYSTEM", "SOLICITAR MEMORIA PROCESO",
 	"OK SOLICITUD MEMORIA PROCESO", "ERROR SOLICITUD MEMORIA PROCESO", "FINAL_PROCESO", "OK_FINAL_PROCESO", "ERROR_FINAL_PROCESO",
 	"SOLICITAR_CREACION_HILO", "OK_CREACION_HILO", "ERROR_CREACION_HILO","FINAL_HILO","OK_FINAL_HILO", "CANCELAR_HILO","ENIVAR_EXEC", "EXEC_RECIBIDO","FIN_QUANTUM",
-	"DESALOJO_POR_QUANTUM","OK_FIN_QUANTUM","OK_EJECUCION"};
+	"DESALOJO_POR_QUANTUM","OK_FIN_QUANTUM","OK_EJECUCION", "SOLICITAR_CONTEXTO", "CONTEXTO_ENVIADO"};
 
 t_config *iniciar_config(char *ruta)
 {
@@ -293,6 +293,45 @@ t_list *recibir_paquete(int socket_cliente)
 	return valores;
 }
 
+
+/*
+t_buffer* buffer = recibir_buffer_completo(socket_cliente);
+    TCB *tcb = malloc(sizeof(TCB));
+    tcb->tid = extraer_int_del_buffer(buffer);
+    tcb->prioridad = extraer_int_del_buffer(buffer);
+    tcb->STATUS = extraer_int_del_buffer(buffer);
+    tcb->Registros = extraer_registros_del_buffer(buffer);
+    tcb->pcb_pid = extraer_int_del_buffer(buffer);
+    tcb->pcb = NULL; // por ahora, dsp ver si lo necesitamos
+    tcb->archivo_pseudocodigo = extraer_string_del_buffer(buffer);
+    tcb->bloqueadoPor = extraer_int_del_buffer(buffer);
+    return tcb;
+*/
+void cargar_tcb_al_buffer(t_buffer *buffer,TCB *tcb){
+	cargar_int_al_buffer(buffer,tcb->tid);
+	cargar_int_al_buffer(buffer,tcb->pcb_pid);
+	cargar_string_al_buffer(buffer,tcb->archivo_pseudocodigo);
+	cargar_registros_al_buffer(buffer,tcb->Registros);
+}
+
+void cargar_pcb_al_buffer(t_buffer* buffer, PCB* pcb){
+	cargar_int_al_buffer(buffer, pcb->pid);
+	cargar_int_al_buffer(buffer, pcb->BASE);
+	cargar_int_al_buffer(buffer, pcb->LIMITE);
+}
+
+void cargar_registros_al_buffer(t_buffer *buffer, REGISTROS* registros){
+	cargar_int_al_buffer(buffer, registros->PC);
+	cargar_int_al_buffer(buffer, registros->AX);
+	cargar_int_al_buffer(buffer, registros->BX);
+	cargar_int_al_buffer(buffer, registros->CX);
+	cargar_int_al_buffer(buffer, registros->DX);
+	cargar_int_al_buffer(buffer, registros->EX);
+	cargar_int_al_buffer(buffer, registros->FX);
+	cargar_int_al_buffer(buffer, registros->GX);
+	cargar_int_al_buffer(buffer, registros->HX);
+}
+
 void cargar_int_al_buffer(t_buffer *buffer, int valor_int)
 {
 	cargar_datos_al_buffer(buffer, &valor_int, sizeof(int));
@@ -366,6 +405,41 @@ char *extraer_string_del_buffer(t_buffer *buffer)
 	return valor_string;
 }
 
+REGISTROS *extraer_registros_del_buffer(t_buffer *buffer){
+	REGISTROS *registros = malloc(sizeof(REGISTROS));
+    registros->PC = extraer_int_del_buffer(buffer);
+    registros->AX = extraer_int_del_buffer(buffer);
+	registros->BX = extraer_int_del_buffer(buffer);
+	registros->CX = extraer_int_del_buffer(buffer);
+	registros->DX = extraer_int_del_buffer(buffer);
+	registros->EX = extraer_int_del_buffer(buffer);
+	registros->FX = extraer_int_del_buffer(buffer);
+	registros->GX = extraer_int_del_buffer(buffer);
+	registros->HX = extraer_int_del_buffer(buffer);
+    return registros;
+}
+
+CONTEXTO_PROCESO *extraer_pcb_del_buffer(t_buffer *buffer){
+
+    CONTEXTO_PROCESO *contexto = malloc(sizeof(CONTEXTO_PROCESO));
+    contexto->pid = extraer_int_del_buffer(buffer);
+	contexto->BASE = extraer_int_del_buffer(buffer);
+	contexto->LIMITE = extraer_int_del_buffer(buffer);
+	return contexto;
+}
+
+
+CONTEXTO_HILO *extraer_tcb_del_buffer(t_buffer *buffer){
+    CONTEXTO_HILO *contexto = malloc(sizeof(CONTEXTO_HILO));
+    contexto->tid = extraer_int_del_buffer(buffer);
+    contexto->pid = extraer_int_del_buffer(buffer);
+    contexto->archivo_pseudocodigo = extraer_string_del_buffer(buffer);
+    contexto->Registros = extraer_registros_del_buffer(buffer);
+    return contexto;
+}
+
+
+
 t_buffer *recibir_buffer_completo(int socket_cliente)
 { // Recibe todo lo enviado despues del OP_CODE ([cod_op][size][void*......])
 	t_buffer *buffer = malloc(sizeof(t_buffer));
@@ -390,3 +464,34 @@ t_buffer *recibir_buffer_completo(int socket_cliente)
 	}
 	return buffer;
 }
+
+void cargar_contexto_hilo(t_buffer* buffer, CONTEXTO_HILO *ctx){
+	cargar_int_al_buffer(buffer,ctx->tid);
+	cargar_int_al_buffer(buffer,ctx->pid);
+	cargar_string_al_buffer(buffer,ctx->archivo_pseudocodigo);
+	cargar_registros_al_buffer(buffer,ctx->Registros);
+}
+
+void cargar_contexto_proceso(t_buffer* buffer, CONTEXTO_PROCESO *ctx){
+	cargar_int_al_buffer(buffer, ctx->pid);
+	cargar_int_al_buffer(buffer, ctx->BASE);
+	cargar_int_al_buffer(buffer, ctx->LIMITE);
+}
+
+CONTEXTO_HILO *extraer_contexto_hilo(t_buffer *buffer){
+	CONTEXTO_HILO *ctx = malloc(sizeof(CONTEXTO_HILO));
+	ctx->tid = extraer_int_del_buffer(buffer);
+	ctx->pid = extraer_int_del_buffer(buffer);
+	ctx->archivo_pseudocodigo = extraer_string_del_buffer(buffer);
+	ctx->Registros = extraer_registros_del_buffer(buffer);
+	return ctx;
+}
+
+CONTEXTO_PROCESO* extraer_contexto_proceso(t_buffer *buffer){
+	CONTEXTO_PROCESO* ctx = malloc(sizeof(CONTEXTO_PROCESO));
+	ctx->pid = extraer_int_del_buffer(buffer);
+	ctx->BASE = extraer_int_del_buffer(buffer);
+	ctx->LIMITE = extraer_int_del_buffer(buffer);
+	return ctx;
+}
+

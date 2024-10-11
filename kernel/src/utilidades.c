@@ -29,6 +29,7 @@ sem_t sem_finalizar_hilo;
 sem_t sem_hay_ready;
 sem_t sem_hay_new;
 sem_t sem_cpu_ejecutando;
+sem_t memoria_libre;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
@@ -73,6 +74,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_hay_ready, "Hay hilo en ready", 0);
     inicializar_semaforo(&sem_hay_new, "Hay proceso en new", 0);
     inicializar_semaforo(&sem_cpu_ejecutando, "Hay un hilo ejecutando en cpu", 0);
+    inicializar_semaforo(&memoria_libre, "Memoria liberado", 1);
 
 
 }
@@ -269,7 +271,7 @@ void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb){
 void bloquear_hilo_syscall(TCB *tcb,int tid){
     cambiar_estado_hilo(tcb,BLOCKED);
     tcb->bloqueadoPor = tid;
-    encolar(cola_blocked,mutex_blocked);
+    encolar(cola_blocked,tcb,mutex_blocked);
     sem_post(&sem_hay_ready);
 }
 

@@ -6,11 +6,11 @@ extern t_log *logger;
 extern sem_t sem_cpu_ejecutando;
 extern TCB* tcb_en_ejecucion;
 
-int solicitar_memoria(int socket_memoria, int tamanio_memoria, op_code cod_sol)
+int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
 
     t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, tamanio_memoria);
+    cargar_pcb_al_buffer(buffer, pcb);
     t_paquete *paquete = crear_paquete(cod_sol, buffer);
     enviar_paquete(paquete, socket_memoria);
     eliminar_paquete(paquete);
@@ -42,9 +42,9 @@ int notificar_finalizacion_proceso(int socket_memoria, int pid, op_code operacio
     }
 }
 
-int solicitar_creacion_hilo(int socket_memoria, int tid ,op_code operacion){
+int solicitar_creacion_hilo(int socket_memoria, TCB *tcb ,op_code operacion){
     t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, tid);
+    cargar_tcb_al_buffer(buffer,tcb);
     t_paquete *paquete = crear_paquete(operacion,buffer);
     enviar_paquete(paquete, socket_memoria);
     eliminar_paquete(paquete);
@@ -58,9 +58,10 @@ int solicitar_creacion_hilo(int socket_memoria, int tid ,op_code operacion){
     }
 }
 
-int notificar_finalizacion_hilo(int socket_memoria, int pid, op_code operacion)
+int notificar_finalizacion_hilo(int socket_memoria, int tid, int pid,op_code operacion)
 {
     t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(operacion, buffer);
     enviar_paquete(paquete, socket_memoria);

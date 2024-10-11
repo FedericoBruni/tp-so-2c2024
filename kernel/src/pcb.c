@@ -40,6 +40,8 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
     pcb->archivo_pseudocodigo = archivo_pseudocodigo;
     pcb->tamanio = tamanio_memoria;
     pcb->prioridad_main = prioridad_main;
+    pcb->BASE =0;
+    pcb->LIMITE =0;
     return pcb;
 }
 
@@ -83,7 +85,7 @@ void imprimir_pcb(PCB *pcb)
 void imprimir_registros(REGISTROS *registros)
 {
     printf("PC: %i\nAX: %i\nBX: %i\nCX: %i\nDX: %i\nEX: %i\nFX: %i\nGX: %i\nHX: %i\nBASE: %i\nLIMITE: %i\n", registros->PC, registros->AX,
-           registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX,registros->BASE,registros->LIMITE);
+           registros->BX, registros->CX, registros->DX, registros->EX, registros->FX, registros->GX, registros->HX);
 }
 
 void imprimir_lista_ids(t_list *tids)
@@ -144,8 +146,6 @@ void inicializar_registros(REGISTROS *registros)
     registros->FX = 0;
     registros->GX = 0;
     registros->HX = 0;
-    registros->BASE = 0;
-    registros->LIMITE = 0;
 }
 
 void cambiar_estado_hilo(TCB *tcb, STATUS estado)

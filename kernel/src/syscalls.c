@@ -57,8 +57,9 @@ void PROCESS_EXIT(TCB *tcb)
     // singal final_proceso
 }
 
-void THREAD_CREATE(char* archivo_pseudocodigo, int prioridad){
-    TCB *tcb = crear_tcb(pcb_en_ejecucion, prioridad, archivo_pseudocodigo);
+void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
+    
+    TCB *tcb = crear_tcb(pcb, prioridad, archivo_pseudocodigo);
     tcb_a_crear = tcb;
     sem_post(&sem_crear_hilo);
     //señal d creacion
@@ -129,7 +130,7 @@ void MUTEX_CREATE(char* recurso){
 */
 void MUTEX_LOCK(char* recurso)
 {
-    MUTEX *mutex = existe_mutex(char* recurso);
+    MUTEX *mutex = existe_mutex(recurso);
 
     if(mutex == NULL){
         THREAD_EXIT(tcb_en_ejecucion);
@@ -144,7 +145,7 @@ void MUTEX_LOCK(char* recurso)
 }
 
 void MUTEX_UNLOCK(char *recurso){
-    MUTEX *mutex = existe_mutex(char* recurso);
+    MUTEX *mutex = existe_mutex(recurso);
 
     if(mutex == NULL){
         THREAD_EXIT(tcb_en_ejecucion);
@@ -154,7 +155,7 @@ void MUTEX_UNLOCK(char *recurso){
     if(mutex->binario == 0 && mutex->asignadoA == tcb_en_ejecucion->tid) {
         desbloquear_hilo_mutex(mutex,tcb_en_ejecucion);
     }else{
-        log_error(logger,"El hilo que desbloqueo el mutex no lo tiene")
+        log_error(logger,"El hilo que desbloqueo el mutex no lo tiene");
     }
 }
 

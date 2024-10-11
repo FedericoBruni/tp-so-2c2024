@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <netdb.h>
 #include <commons/collections/list.h>
+#include <commons/collections/queue.h>
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -37,7 +38,9 @@ typedef enum
 	FIN_QUANTUM,
 	DESALOJO_POR_QUANTUM,
 	OK_FIN_QUANTUM,
-	OK_EJECUCION
+	OK_EJECUCION,
+	SOLICITAR_CONTEXTO,
+	CONTEXTO_ENVIADO
 } op_code;
 
 typedef enum
@@ -60,8 +63,6 @@ typedef struct
 	uint32_t FX;
 	uint32_t GX;
 	uint32_t HX;
-	uint32_t BASE;
-	uint32_t LIMITE;
 } REGISTROS;
 
 typedef struct
@@ -76,6 +77,8 @@ typedef struct
 	int autoincremental_tcb;
 	t_list *threads;
 	int prioridad_main;
+	uint32_t BASE;
+	uint32_t LIMITE;
 
 } PCB;
 
@@ -112,6 +115,25 @@ typedef struct
 } MUTEX;
 
 
+typedef struct{
+	int pid;
+	uint32_t BASE;
+	uint32_t LIMITE;
+} CONTEXTO_PROCESO;
+
+typedef struct{
+	int tid;
+	int pid;
+	char *archivo_pseudocodigo;
+	REGISTROS *Registros;
+} CONTEXTO_HILO;
+
+typedef struct{
+	CONTEXTO_PROCESO *contexto_proceso;
+	CONTEXTO_HILO *contexto_hilo;
+} CONTEXTO_CPU;
+
+
 
 t_config *iniciar_config(char *ruta);
 t_log *iniciar_logger(char *ruta_logger, char *nombre_logger, t_log_level level_logger);
@@ -138,4 +160,15 @@ void cargar_string_al_buffer(t_buffer *buffer, char *valor_string);
 int extraer_int_del_buffer(t_buffer *buffer);
 char *extraer_string_del_buffer(t_buffer *buffer);
 t_buffer *crear_buffer(void);
+void cargar_registros_al_buffer(t_buffer *buffer, REGISTROS* registros);
+void cargar_pcb_al_buffer(t_buffer *buffer, PCB *pcb);
+void cargar_tcb_al_buffer(t_buffer *buffer,TCB *tcb);
+REGISTROS *extraer_registros_del_buffer(t_buffer *buffer);
+CONTEXTO_HILO *extraer_tcb_del_buffer(t_buffer *buffer);
+CONTEXTO_PROCESO *extraer_pcb_del_buffer(t_buffer *buffer);
+void cargar_contexto_hilo(t_buffer* buffer, CONTEXTO_HILO *ctx);
+void cargar_contexto_proceso(t_buffer* buffer, CONTEXTO_PROCESO *ctx);
+CONTEXTO_HILO *extraer_contexto_hilo(t_buffer *buffer);
+CONTEXTO_PROCESO* extraer_contexto_proceso(t_buffer *buffer);
+
 #endif // UTILS_H_

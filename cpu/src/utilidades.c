@@ -46,8 +46,9 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
+    CONTEXTO_CPU* contexto = solicitar_contexto_ejecucion(tid, pid);
     //ejecutar();
-
+    printf("dsp de solicitar ctx\n");
     int recibido = EXEC_RECIBIDO;
     send(socket_cliente, &recibido,sizeof(op_code),0);
     sleep(1);
@@ -65,4 +66,36 @@ procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     sleep(1);
     int resultado_dispatch = DESALOJO_POR_QUANTUM;
     send(cliente_fd_dispatch,&resultado_dispatch,sizeof(op_code),0);
+}
+
+
+
+CONTEXTO_HILO* solicitar_contexto_ejecucion(int tid, int pid){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, tid);
+    cargar_int_al_buffer(buffer, pid);
+    t_paquete *paquete = crear_paquete(SOLICITAR_CONTEXTO, buffer);
+    enviar_paquete(paquete, fd_memoria);
+    
+    eliminar_paquete(paquete);
+    switch(recibir_operacion(fd_memoria)){ 
+        case CONTEXTO_ENVIADO:
+            CONTEXTO_CPU *contexto_cpu = recibir_contexto(fd_memoria);
+            log_info(logger,"Contexto del proceso: %d, hilo %d recibido",contexto_cpu->contexto_proceso->pid,contexto_cpu->contexto_hilo->tid);
+            return contexto_cpu;
+        default:
+            printf("default?\n");
+            return 0;
+    }
+}
+
+
+
+CONTEXTO_CPU *recibir_contexto(int socket_cliente){
+    printf("aaa\n");
+    t_buffer* buffer = recibir_buffer_completo(socket_cliente);
+    CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
+    contexto_cpu->contexto_hilo = extraer_contexto_hilo(buffer);
+    contexto_cpu->contexto_proceso = extraer_contexto_proceso(buffer);
+    return contexto_cpu;
 }

@@ -19,6 +19,7 @@ extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
 extern sem_t sem_hay_ready;
 extern sem_t sem_hay_new;
+extern sem_t memoria_libre;
 extern char *algoritmo_planificacion;
 
 void creacion_de_procesos(void)
@@ -26,42 +27,20 @@ void creacion_de_procesos(void)
     hilo_creacion_muerto = false;
     while (true)
     {
-        
-
-        
         sem_wait(&sem_hay_new);
+        sem_wait(&memoria_libre);
         PCB* pcb = desencolar(cola_new,mutex_new);
-        log_info(logger, "solicitando memoria");
-        int resultado = solicitar_memoria(fd_memoria, tamanio_proceso, SOLICITAR_MEMORIA_PROCESO);
+        log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
+        int resultado = solicitar_memoria(fd_memoria, pcb, SOLICITAR_MEMORIA_PROCESO);
         switch (resultado)
         {
         case 1:
             log_info(logger, "Memoria reservada correctamente");
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
-            TCB *tcb = crear_tcb(pcb, pcb->prioridad_main, archivo_pseudocodigo);
-            cambiar_estado_hilo(tcb, READY); // el estado del proceso depende del estado de los hilos, hay q ver como implementar eso
+            THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, 0);
             
-            if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
-                COLA_PRIORIDAD * cola = existe_cola_con_prioridad(tcb->prioridad);
-                if(cola != NULL){
-                    encolar_multinivel(cola, tcb);
-                } else{
-                    COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-                    log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
-                    encolar_multinivel(cola_nueva, tcb);
-                }         
-            }else{
-                encolar(cola_ready, tcb,mutex_ready);     // los hilos van en la cola de ready o los procesos? o ambos por separado
-                //imprimir_pcb(pcb); 
-            }
-            sem_post(&sem_hay_ready);
+            
 
-
-            //liberar_pcb(pcb);
-            // if(pcb != NULL){
-            //     log_error(logger,"aaaaaaa");
-            // } habria que liberar el pcb que creamos o no?
-            // si hay que borrar hay q fijarse las funciones d borrar pq andan medio mal
             break;
 
         case 0:
@@ -111,13 +90,26 @@ void creacion_de_hilos(void){
         sem_wait(&sem_crear_hilo);
         TCB* tcb = tcb_a_crear;
         //mandar por buffer a memoria
-        int resultado = solicitar_creacion_hilo(fd_memoria, tcb->tid, SOLICITAR_CREACION_HILO);
+        int resultado = solicitar_creacion_hilo(fd_memoria, tcb, SOLICITAR_CREACION_HILO);
         switch (resultado){
             case 1:
-                log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
-                encolar(cola_ready, tcb, mutex_ready);
-                cambiar_estado_hilo(tcb, READY);
-                imprimir_hilo(tcb);
+                if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+                    COLA_PRIORIDAD * cola = existe_cola_con_prioridad(tcb->prioridad);
+                    if(cola != NULL){
+                        encolar_multinivel(cola, tcb);
+                        log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
+                    } else{
+                        COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
+                        log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+                        encolar_multinivel(cola_nueva, tcb);
+                        log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
+                    }         
+                }else{
+                    encolar(cola_ready, tcb,mutex_ready);
+                    log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
+                }
+                sem_post(&sem_hay_ready);
+                sem_post(&memoria_libre);
                 break;
             case 0:
                 log_error(logger, "Error al crear el hilo: %i\n", tcb->tid);
@@ -135,7 +127,7 @@ void finalizacion_de_hilos(void)
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
         int tidBloqueante = tcb->tid;
 
-        int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, FINAL_HILO);
+        int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, tcb->pcb_pid,FINAL_HILO);
         switch (resultado)
         {
         case 1:
