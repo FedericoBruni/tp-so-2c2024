@@ -7,6 +7,7 @@ char *puerto_memoria;
 char *puerto_escucha_dispatch;
 char *puerto_escucha_interrupt;
 char *log_level;
+CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 
@@ -46,14 +47,15 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
-    CONTEXTO_CPU* contexto = solicitar_contexto_ejecucion(tid, pid);
+    contexto_en_ejecucion = solicitar_contexto_ejecucion(tid, pid);
     //ejecutar();
-    printf("dsp de solicitar ctx\n");
+    log_info(logger,"Contexto solicitado del proceso: %d hilo: %d",pid,tid);
     int recibido = EXEC_RECIBIDO;
     send(socket_cliente, &recibido,sizeof(op_code),0);
     sleep(1);
     int resultado_ejecucion = OK_EJECUCION;
     send(socket_cliente, &resultado_ejecucion,sizeof(op_code),0);
+    log_info(logger,"Ejecucion finalizada");
 }
 
 procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
@@ -98,4 +100,30 @@ CONTEXTO_CPU *recibir_contexto(int socket_cliente){
     contexto_cpu->contexto_hilo = extraer_contexto_hilo(buffer);
     contexto_cpu->contexto_proceso = extraer_contexto_proceso(buffer);
     return contexto_cpu;
+}
+
+
+uint32_t *obtenerRegistro(char *registro){
+    if(string_equals_ignore_case(registro,"PC")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->PC;
+    }else if(string_equals_ignore_case(registro,"AX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->AX;
+    } else if(string_equals_ignore_case(registro,"BX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->BX;
+    }else if(string_equals_ignore_case(registro,"CX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->CX;
+    }else if(string_equals_ignore_case(registro,"DX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->DX;
+    }else if(string_equals_ignore_case(registro,"EX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->EX;
+    }else if(string_equals_ignore_case(registro,"FX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->FX;
+    }else if(string_equals_ignore_case(registro,"GX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->GX;
+    }else if(string_equals_ignore_case(registro,"HX")){
+        return &contexto_en_ejecucion->contexto_hilo->Registros->HX;
+    }else{
+        log_error(logger, "No existe el registro indicado");
+        exit(EXIT_FAILURE);
+    }
 }

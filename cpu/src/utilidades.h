@@ -17,4 +17,5 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake);
 void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake);
 CONTEXTO_HILO* solicitar_contexto_ejecucion(int tid, int pid);
 CONTEXTO_CPU *recibir_contexto(int socket_cliente);
+uint32_t *obtenerRegistro(char *registro);
 #endif // UTILIDADES_H_

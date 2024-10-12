@@ -15,6 +15,7 @@ t_queue *cola_ready;
 t_queue *cola_blocked;
 t_queue *cola_exit;
 t_queue *cola_finalizacion;
+t_queue *cola_new_hilo;
 TCB *tcb_en_ejecucion;
 int autoincremental_pcb = 0;
 pthread_mutex_t mutex_new;
@@ -51,6 +52,7 @@ void iniciar_kernel(void)
     log_level = config_get_string_value(config, "LOG_LEVEL");
     logger = iniciar_logger("logKernel.log", "Kernel", log_level_from_string(log_level));
     cola_new = queue_create();
+    cola_new_hilo = queue_create();
     cola_ready = queue_create();
     cola_blocked = queue_create();
     cola_exit = queue_create();

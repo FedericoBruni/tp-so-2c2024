@@ -1,6 +1,7 @@
 #include "syscalls.h"
 
 extern t_queue *cola_new;
+extern t_queue *cola_new_hilo;
 extern t_queue* cola_ready;
 extern t_queue *cola_exit;
 extern t_queue *cola_finalizacion;
@@ -60,7 +61,7 @@ void PROCESS_EXIT(TCB *tcb)
 void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
     
     TCB *tcb = crear_tcb(pcb, prioridad, archivo_pseudocodigo);
-    tcb_a_crear = tcb;
+    encolar(cola_new_hilo,tcb,mutex_new);
     sem_post(&sem_crear_hilo);
     //señal d creacion
     // para mi se pone acá en ready y listo, por como dice el enunciado

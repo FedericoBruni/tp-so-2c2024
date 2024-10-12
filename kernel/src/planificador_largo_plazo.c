@@ -2,6 +2,7 @@
 extern t_queue *cola_new;
 extern t_queue *cola_ready;
 extern t_queue *cola_finalizacion;
+extern t_queue *cola_new_hilo;
 extern t_log *logger;
 extern PCB *pcb_en_ejecucion;
 extern int fd_memoria;
@@ -28,7 +29,6 @@ void creacion_de_procesos(void)
     while (true)
     {
         sem_wait(&sem_hay_new);
-        sem_wait(&memoria_libre);
         PCB* pcb = desencolar(cola_new,mutex_new);
         log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
         int resultado = solicitar_memoria(fd_memoria, pcb, SOLICITAR_MEMORIA_PROCESO);
@@ -37,7 +37,7 @@ void creacion_de_procesos(void)
         case 1:
             log_info(logger, "Memoria reservada correctamente");
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
-            THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, 0);
+            THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
             
             
 
@@ -88,7 +88,7 @@ void creacion_de_hilos(void){
     while(true){
         
         sem_wait(&sem_crear_hilo);
-        TCB* tcb = tcb_a_crear;
+        TCB* tcb = desencolar(cola_new_hilo,mutex_new);
         //mandar por buffer a memoria
         int resultado = solicitar_creacion_hilo(fd_memoria, tcb, SOLICITAR_CREACION_HILO);
         switch (resultado){
@@ -109,7 +109,6 @@ void creacion_de_hilos(void){
                     log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
                 }
                 sem_post(&sem_hay_ready);
-                sem_post(&memoria_libre);
                 break;
             case 0:
                 log_error(logger, "Error al crear el hilo: %i\n", tcb->tid);
