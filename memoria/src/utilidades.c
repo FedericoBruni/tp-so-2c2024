@@ -105,3 +105,35 @@ CONTEXTO_CPU* buscar_contextos(int tid, int pid){
     
 
 // }
+
+void eliminar_hilo_y_contexto(int tid, int pid) {
+    bool _es_hilo(void *ptr) {
+        CONTEXTO_HILO *ctx_hilo = (CONTEXTO_HILO *)ptr;
+        return ctx_hilo->tid == tid && ctx_hilo->pid == pid;
+    }
+
+    bool _es_proceso(void *ptr) {
+        CONTEXTO_PROCESO *ctx_proceso = (CONTEXTO_PROCESO *)ptr;
+        return ctx_proceso->pid == pid;
+    }
+
+    CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos, _es_hilo);
+    if (contexto_hilo != NULL) {
+        list_remove_and_destroy_element(contextos_hilos, list_index_of(contextos_hilos, contexto_hilo), free);
+        log_info(logger, "Contexto del hilo con TID %d eliminado correctamente.", tid);
+
+        t_list *hilos_restantes = list_filter(contextos_hilos, _es_hilo);
+
+        //Si el proceso no tiene mas hilos activos lo elimino???
+        if (list_is_empty(hilos_restantes)) {
+            CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _es_proceso);
+            if (contexto_proceso != NULL) {
+                list_remove_and_destroy_element(contextos_procesos, list_index_of(contextos_procesos, contexto_proceso), free);
+                log_info(logger, "Contexto del proceso con PID %d eliminado ya que no tiene hilos activos.", pid);
+            }
+        }
+        list_destroy(hilos_restantes);
+    } else {
+        log_error(logger, "No se encontro un contexto de hilo con TID %d.", tid);
+    }
+}

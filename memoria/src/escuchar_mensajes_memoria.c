@@ -41,18 +41,21 @@ void escuchar_mensajes_kernel(void)
             int rta_crear_hilo = OK_CREACION_HILO;
             send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
             break;
-        case FINAL_HILO:
+        case FINAL_HILO: {
             buffer = recibir_buffer_completo(cliente_fd_kernel);
             int tid_a_finalizar = extraer_int_del_buffer(buffer);
             int pid_del_hilo = extraer_int_del_buffer(buffer);
-            log_info("Finalizando hilo con tid: %i", tid_a_finalizar);
-            
-            
-            CONTEXTO_CPU *contexto_cpu = buscar_contextos(tid_a_finalizar,pid_del_hilo);
-            if(contexto_cpu->contexto_hilo != NULL && contexto_cpu->contexto_proceso != NULL){
-                int rta_fin_hilo = OK_FINAL_HILO;
-                send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
-            }
+
+            log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo);
+
+            eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo);
+
+            int rta_fin_hilo = OK_FINAL_HILO;
+            send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
+
+            break;
+        }
+
 
             break;
         case CANCELAR_HILO:
