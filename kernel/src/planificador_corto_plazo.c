@@ -11,6 +11,7 @@ extern sem_t sem_hay_ready;
 extern sem_t sem_cpu_ejecutando;
 extern t_list* colas_prioridades;
 extern int quantum;
+extern PCB *pcb_en_ejecucion;
 
 
 
@@ -44,7 +45,9 @@ void fifo(){
         tcb_en_ejecucion = tcb;
         log_info(logger,"Planificando TCB %d,PID %d con algoritmo FIFO\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid); 
         cambiar_estado_hilo(tcb, EXEC);
+        pcb_en_ejecucion = tcb_en_ejecucion->pcb;
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
+        esperar_respuesta();
         }
     }
 }
@@ -58,7 +61,9 @@ void prioridad(){
         tcb_en_ejecucion = tcb;
         log_info(logger,"Planificando TCB %d,PID %d con algoritmo PRIORIDADES\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid); 
         cambiar_estado_hilo(tcb, EXEC);
+        pcb_en_ejecucion = tcb_en_ejecucion->pcb;
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
+        esperar_respuesta();
         }
     }
 }
@@ -76,11 +81,12 @@ void multinivel(){
         tcb_en_ejecucion = tcb;
         log_info(logger,"Planificando TCB %d,PID %d con algoritmo MULTINIVEL\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
         cambiar_estado_hilo(tcb, EXEC);
+        pcb_en_ejecucion = tcb_en_ejecucion->pcb;
         pthread_t hilo_contador;
         pthread_create(&hilo_contador, NULL, (void *)fin_de_quantum, cola->quantum);
         pthread_detach(hilo_contador);
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
-        esperar_respuesta(hilo_contador);
+        esperar_respuesta();
         pthread_cancel(hilo_contador);
         printf("hilo cancelado del proceso: %i, hilo: %i\n",tcb_en_ejecucion->pcb_pid,tcb_en_ejecucion->tid);
         }

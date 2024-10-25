@@ -47,7 +47,7 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
-    contexto_en_ejecucion = solicitar_contexto_ejecucion(tid, pid);
+    contexto_en_ejecucion = solicitar_contexto_ejecucion(tid, pid); // esto es contexto_cpu pero la funcion devuelve contexto_hilo, ver
     //ejecutar();
     log_info(logger,"Contexto solicitado del proceso: %d hilo: %d",pid,tid);
     int recibido = EXEC_RECIBIDO;

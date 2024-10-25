@@ -1,7 +1,7 @@
 #include "escuchar_mensajes_memoria.h"
 extern t_log *logger;
 extern int cliente_fd_kernel;
-extern int cliente_fd_cpu;
+extern int cliente_fd_dispatch;
 extern t_list *contextos_procesos;
 extern t_list *contextos_hilos;
 
@@ -41,24 +41,31 @@ void escuchar_mensajes_kernel(void)
             int rta_crear_hilo = OK_CREACION_HILO;
             send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
             break;
-        case FINAL_HILO: {
-            buffer = recibir_buffer_completo(cliente_fd_kernel);
+        case FINAL_HILO: 
+            t_buffer *buffer_fin = recibir_buffer_completo(cliente_fd_kernel);
             int tid_a_finalizar = extraer_int_del_buffer(buffer);
-            int pid_del_hilo = extraer_int_del_buffer(buffer);
+            int pid_del_hilo_fin = extraer_int_del_buffer(buffer);
 
-            log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo);
+            log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo_fin);
 
-            eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo);
+            eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
 
             int rta_fin_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
 
             break;
-        }
-
-
-            break;
         case CANCELAR_HILO:
+            t_buffer *buffer_cancel = recibir_buffer_completo(cliente_fd_kernel);
+            int tid_a_cancelar = extraer_int_del_buffer(buffer);
+            int pid_del_hilo_cancel = extraer_int_del_buffer(buffer);
+
+            log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_cancelar, pid_del_hilo_cancel);
+
+            eliminar_hilo_y_contexto(tid_a_cancelar, pid_del_hilo_cancel);
+
+            int rta_cancel_hilo = OK_FINAL_HILO;
+            send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
+
             break;
         case -1:
             log_error(logger, "Kernel desconectado\n");
@@ -76,20 +83,24 @@ void escuchar_mensajes_cpu(void)
     int desconexion = 0;
     while (!desconexion)
     {
-        int cod_op = recibir_operacion(cliente_fd_cpu);
+        int cod_op = recibir_operacion(cliente_fd_dispatch);
 
         switch (cod_op)
         {
         case HANDSHAKE_CPU_MEMORIA:
-            aceptar_handshake(logger, cliente_fd_cpu, HANDSHAKE_CPU_MEMORIA);
+            aceptar_handshake(logger, cliente_fd_dispatch, HANDSHAKE_CPU_MEMORIA);
             break;
         case SOLICITAR_CONTEXTO:
             printf("Contexto solicitado\n");
-            enviar_contexto(cliente_fd_cpu);
+            enviar_contexto(cliente_fd_dispatch);
+            break;
+        case ACTUALIZAR_CONTEXTO:
+            printf("Actualizando contexto");
+            actualizar_contexto(cliente_fd_dispatch);
             break;
         case -1:
             log_error(logger, "Cpu desconectado\n");
-            cliente_fd_cpu = -1;
+            cliente_fd_dispatch = -1;
             return;
         default:
             log_warning(logger, "Codigo de operacion invalido Cpu");

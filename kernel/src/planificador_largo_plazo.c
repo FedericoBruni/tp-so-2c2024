@@ -22,6 +22,7 @@ extern sem_t sem_hay_ready;
 extern sem_t sem_hay_new;
 extern sem_t memoria_libre;
 extern char *algoritmo_planificacion;
+extern pthread_mutex_t mutex_fd_memoria;
 
 void creacion_de_procesos(void)
 {
@@ -31,7 +32,9 @@ void creacion_de_procesos(void)
         sem_wait(&sem_hay_new);
         PCB* pcb = desencolar(cola_new,mutex_new);
         log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
+        pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_memoria(fd_memoria, pcb, SOLICITAR_MEMORIA_PROCESO);
+        pthread_mutex_unlock(&mutex_fd_memoria);
         switch (resultado)
         {
         case 1:
@@ -65,7 +68,9 @@ void finalizacion_de_procesos(void)
         //pthread_mutex_lock(&mutex_exit);
         PCB *pcb = desencolar(cola_finalizacion,mutex_exit);
         log_info(logger, "intentando finalizar proceso con pid: %i", pcb->pid);
+        pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_proceso(fd_memoria, pcb->pid, FINAL_PROCESO);
+        pthread_mutex_unlock(&mutex_fd_memoria);
         switch (resultado)
         {
         case 1:
@@ -90,7 +95,9 @@ void creacion_de_hilos(void){
         sem_wait(&sem_crear_hilo);
         TCB* tcb = desencolar(cola_new_hilo,mutex_new);
         //mandar por buffer a memoria
+        pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_creacion_hilo(fd_memoria, tcb, SOLICITAR_CREACION_HILO);
+        pthread_mutex_unlock(&mutex_fd_memoria);
         switch (resultado){
             case 1:
                 if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
@@ -125,8 +132,9 @@ void finalizacion_de_hilos(void)
         sem_wait(&sem_finalizar_hilo); 
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
         int tidBloqueante = tcb->tid;
-
+        pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, tcb->pcb_pid,FINAL_HILO);
+        pthread_mutex_unlock(&mutex_fd_memoria);
         switch (resultado)
         {
         case 1:

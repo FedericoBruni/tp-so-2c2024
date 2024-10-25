@@ -5,6 +5,7 @@ extern char *desc_code_op[];
 extern t_log *logger;
 extern sem_t sem_cpu_ejecutando;
 extern TCB* tcb_en_ejecucion;
+extern PCB *pcb_en_ejecucion;
 
 int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
@@ -122,7 +123,91 @@ void esperar_respuesta(){
         case OK_EJECUCION:
             log_info(logger,"Ok ejecucion");
             break;
+        case SYSCALL_PROCESS_CREATE:
+            log_info(logger, "Syscall Process Create");
+            deserializar_process_create();
+            break;
+        case SYSCALL_THREAD_CREATE:
+            deserializar_thread_create();
+            break;
+        case SYSCALL_THREAD_JOIN:
+            deserializar_thread_join();
+            break;
+        case SYSCALL_THREAD_CANCEL:
+            deserializar_thread_cancel();
+            break;
+        case SYSCALL_MUTEX_CREATE:
+            deserializar_mutex_create();
+            break;
+        case SYSCALL_MUTEX_LOCK:
+            deserializar_mutex_lock();
+            break;
+        case SYSCALL_MUTEX_UNLOCK:
+            deserializar_mutex_unlock();
+            break;
+        case SYSCALL_THREAD_EXIT:
+            deserializar_thread_exit();;
+            break;
+        case SYSCALL_PROCESS_EXIT:
+            deserializar_process_exit();
+            break;
         default:
             return 0;
     }
+}
+
+void deserializar_process_create(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    
+    char* archivo_pseudocodigo = extraer_string_del_buffer(buffer);
+    int tam_archivo = extraer_int_del_buffer(buffer);
+    int prio_hilo = extraer_int_del_buffer(buffer);
+    PROCESS_CREATE(archivo_pseudocodigo,tam_archivo,prio_hilo);
+
+}
+
+void deserializar_thread_create(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    char* archivo_pseudocodigo = extraer_string_del_buffer(buffer);
+    int prio_hilo = extraer_int_del_buffer(buffer);
+    THREAD_CREATE(pcb_en_ejecucion,archivo_pseudocodigo,prio_hilo);
+}
+
+void deserializar_thread_join(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int tid = extraer_int_del_buffer(buffer);
+    THREAD_JOIN(tid);
+}
+
+void deserializar_thread_cancel(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int tid = extraer_int_del_buffer(fd_cpu_dispatch);
+    int pid = extraer_int_del_buffer(fd_cpu_dispatch);
+    //THREAD_CANCEL(tid,pid);
+}
+void deserializar_mutex_create(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    char *recurso = extraer_string_del_buffer(fd_cpu_dispatch);
+    MUTEX_CREATE(recurso);
+}
+void deserializar_mutex_lock(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    char *recurso = extraer_string_del_buffer(fd_cpu_dispatch);
+    MUTEX_LOCK(recurso);
+}
+void deserializar_mutex_unlock(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    char *recurso = extraer_string_del_buffer(fd_cpu_dispatch);
+    MUTEX_UNLOCK(recurso);
+}
+void deserializar_thread_exit(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int tid = extraer_int_del_buffer(fd_cpu_dispatch);
+    int pid = extraer_int_del_buffer(fd_cpu_dispatch);
+    //THREAD_EXIT(tid,pid);
+}
+void deserializar_process_exit(){
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int pid = extraer_int_del_buffer(fd_cpu_dispatch);
+    //PROCESS_EXIT(pid);
 }

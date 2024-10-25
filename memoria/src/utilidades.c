@@ -49,8 +49,8 @@ void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int soc
     exit(EXIT_SUCCESS);
 }
 
-void enviar_contexto(int cliente_fd_cpu){
-    t_buffer *buffer = recibir_buffer_completo(cliente_fd_cpu);
+void enviar_contexto(int cliente_fd_dispatch){
+    t_buffer *buffer = recibir_buffer_completo(cliente_fd_dispatch);
     
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
@@ -62,15 +62,14 @@ void enviar_contexto(int cliente_fd_cpu){
     cargar_contexto_hilo(bufferRta, contexto_cpu->contexto_hilo);
     cargar_contexto_proceso(bufferRta, contexto_cpu->contexto_proceso);
     t_paquete *paquete = crear_paquete(CONTEXTO_ENVIADO,bufferRta);
-    enviar_paquete(paquete, cliente_fd_cpu);
+    enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
     printf("Contexto enviado -> TID: %i, PID: %i\n", tid, pid);
-    //enviar_contexto(cliente_fd_cpu,contexto_cpu);
+    //enviar_contexto(cliente_fd_dispatch,contexto_cpu);
     //int rta_sol_mem = CONTEXTO_ENVIADO;
-    //send(cliente_fd_cpu, &rta_sol_mem, sizeof(op_code), 0);
+    //send(cliente_fd_dispatch, &rta_sol_mem, sizeof(op_code), 0);
     
 }
-
 
 CONTEXTO_CPU* buscar_contextos(int tid, int pid){
     bool _hayHilo(void *ptr){
@@ -93,47 +92,79 @@ CONTEXTO_CPU* buscar_contextos(int tid, int pid){
 }
 
 
-// void enviar_contexto(int cliente_fd_cpu, CONTEXTO_CPU *contexto_cpu){
+// void enviar_contexto(int cliente_fd_dispatch, CONTEXTO_CPU *contexto_cpu){
 //     t_buffer *buffer = crear_buffer();
 //     cargar_contexto_hilo(buffer, contexto_cpu->contexto_hilo);
 //     cargar_contexto_proceso(buffer, contexto_cpu->contexto_proceso);
 
 //     t_paquete *paquete = crear_paquete(CONTEXTO_ENVIADO,buffer);
-//     enviar_paquete(paquete, cliente_fd_cpu);
+//     enviar_paquete(paquete, cliente_fd_dispatch);
 //     eliminar_paquete(paquete);
 
     
 
 // }
-
 void eliminar_hilo_y_contexto(int tid, int pid) {
+    // bool _es_hilo(void *ptr) {
+    //     CONTEXTO_HILO *ctx_hilo = (CONTEXTO_HILO *)ptr;
+    //     return ctx_hilo->tid == tid && ctx_hilo->pid == pid;
+    // }
+
+    // bool _es_proceso(void *ptr) {
+    //     CONTEXTO_PROCESO *ctx_proceso = (CONTEXTO_PROCESO *)ptr;
+    //     return ctx_proceso->pid == pid;
+    // }
+
+    // CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos, _es_hilo);
+    // if (contexto_hilo != NULL) {
+    //     list_remove_and_destroy_by_condition(contextos_hilos, _es_hilo, free);
+    //     log_info(logger, "Contexto del hilo con TID %d eliminado correctamente.", tid);
+
+    //     t_list *hilos_restantes = list_filter(contextos_hilos, _es_hilo);
+    //     if (list_is_empty(hilos_restantes)) {
+    //         CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _es_proceso);
+    //         if (contexto_proceso != NULL) {
+    //             list_remove_and_destroy_by_condition(contexto_procesos, _es_proceso, free);
+    //             log_info(logger, "Contexto del proceso con PID %d eliminado ya que no tiene hilos activos.", pid);
+    //         }
+    //     }
+    //     list_destroy(hilos_restantes);
+    // } else {
+    //     log_error(logger, "No se encontro un contexto de hilo con TID %d.", tid);
+    // }
+}
+
+//int list_index_of(t_list* contextos, CONTEXTO_PROCESO *contexto_proceso);
+
+void actualizar_contexto(int cliente_fd_dispatch){
+    
+    t_buffer *buffer = recibir_buffer_completo(cliente_fd_dispatch);
+    CONTEXTO_HILO *ctx_hilo = malloc(sizeof(CONTEXTO_HILO));
+    CONTEXTO_PROCESO *ctx_proceso = malloc(sizeof(CONTEXTO_PROCESO));
+    ctx_hilo = extraer_contexto_hilo(buffer);
+    ctx_proceso = extraer_contexto_proceso(buffer);
+    
     bool _es_hilo(void *ptr) {
-        CONTEXTO_HILO *ctx_hilo = (CONTEXTO_HILO *)ptr;
-        return ctx_hilo->tid == tid && ctx_hilo->pid == pid;
+        CONTEXTO_HILO *ctx_hilo_en_memoria = (CONTEXTO_HILO *)ptr;
+        return ctx_hilo_en_memoria->tid == ctx_hilo->tid && ctx_hilo_en_memoria->pid == ctx_hilo->pid;
     }
 
     bool _es_proceso(void *ptr) {
-        CONTEXTO_PROCESO *ctx_proceso = (CONTEXTO_PROCESO *)ptr;
-        return ctx_proceso->pid == pid;
+        CONTEXTO_PROCESO *ctx_proceso_en_memoria = (CONTEXTO_PROCESO *)ptr;
+        return ctx_proceso_en_memoria->pid == ctx_proceso->pid;
     }
 
-    CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos, _es_hilo);
-    if (contexto_hilo != NULL) {
-        list_remove_and_destroy_element(contextos_hilos, list_index_of(contextos_hilos, contexto_hilo), free);
-        log_info(logger, "Contexto del hilo con TID %d eliminado correctamente.", tid);
+    CONTEXTO_HILO *hilo_actual = list_find(contextos_hilos, _es_hilo);
+    CONTEXTO_PROCESO *proceso_actual = list_find(contextos_procesos, _es_proceso);
 
-        t_list *hilos_restantes = list_filter(contextos_hilos, _es_hilo);
-
-        //Si el proceso no tiene mas hilos activos lo elimino???
-        if (list_is_empty(hilos_restantes)) {
-            CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _es_proceso);
-            if (contexto_proceso != NULL) {
-                list_remove_and_destroy_element(contextos_procesos, list_index_of(contextos_procesos, contexto_proceso), free);
-                log_info(logger, "Contexto del proceso con PID %d eliminado ya que no tiene hilos activos.", pid);
-            }
-        }
-        list_destroy(hilos_restantes);
+    if (hilo_actual && proceso_actual) {
+        memcpy(hilo_actual->Registros, ctx_hilo->Registros, sizeof(REGISTROS));
+        log_info(logger, "Contexto de hilo y proceso actualizado para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     } else {
-        log_error(logger, "No se encontro un contexto de hilo con TID %d.", tid);
+        log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
 }
+
+
+
+

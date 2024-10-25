@@ -2,6 +2,7 @@
 #define PLANIFICADOR_CORTO_PLAZO_H
 #include "utilidades.h"
 #include "utils/utils.h"
+
 void planificador_corto_plazo();
 void fifo();
 void prioridad();

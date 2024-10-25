@@ -13,7 +13,8 @@
 void iniciar_memoria(void);
 int conectarse_a_filesystem(void);
 void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int socket_servidor_cpu);
-void enviar_contexto(int cliente_fd_cpu);
+void enviar_contexto(int cliente_fd_dispatch);
 CONTEXTO_CPU* buscar_contextos(int tid, int pid);
 void eliminar_hilo_y_contexto(int tid, int pid);
+void actualizar_contexto(int cliente_fd_dispatch);
 #endif // UTILIDADES_H_

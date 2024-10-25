@@ -9,6 +9,7 @@
 #include <commons/collections/list.h>
 #include <pthread.h>
 #include "escuchar_kernel.h"
+#include "mensajeria.h"
 
 void iniciar_cpu(void);
 int conectarse_a_memoria(void);
