@@ -60,18 +60,17 @@ int main(int argc, char *argv[])
     pthread_create(&hilo_creacion_de_hilos, NULL, (void *)creacion_de_hilos, NULL);
     pthread_detach(hilo_creacion_de_hilos);
 
+    // [512, 16, 32, 16, 256, 64, 128]
     PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 0);
-    PROCESS_CREATE(archivo_pseudocodigo,tamanio_proceso, 5);
-    PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 3);
-    PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 1);
-    PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 1);
+    PROCESS_CREATE("archivo2", 100, 0);
+    PROCESS_CREATE("archivo3",60, 5);
+    PROCESS_CREATE("archivo4", 353, 3);
+    PROCESS_CREATE("archivo4", 50, 6);
+    PROCESS_CREATE("archivo4", 50, 6);
 
     pthread_t hilo_planificador_corto_plazo;
     pthread_create(&hilo_planificador_corto_plazo, NULL, (void *)planificador_corto_plazo, NULL);
-    pthread_join(hilo_planificador_corto_plazo, NULL);
-    // while (hilo_creacion_muerto != false && hilo_fin_proc_muerto != false)
-    // {
-    // }
+    pthread_join(hilo_planificador_corto_plazo,NULL);
 
     terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
 

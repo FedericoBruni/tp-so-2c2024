@@ -10,6 +10,7 @@
 #include <netdb.h>
 #include <commons/collections/list.h>
 #include <commons/collections/queue.h>
+#include <commons/collections/dictionary.h>
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -143,6 +144,23 @@ typedef struct{
 	CONTEXTO_PROCESO *contexto_proceso;
 	CONTEXTO_HILO *contexto_hilo;
 } CONTEXTO_CPU;
+
+typedef struct{
+	int tid;
+	int pid;
+	t_dictionary* instrucciones;
+}CONTEXTO_ARCHIVO;
+
+typedef struct{
+	void* memoria_usuario;
+	t_list* particiones;
+}MEMORIA_USUARIO;
+
+typedef struct{
+	int inicio;
+	int tamanio;
+	bool estaOcupado; //0 no 1 si
+}Particion;
 
 
 

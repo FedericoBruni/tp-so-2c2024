@@ -319,6 +319,7 @@ void cargar_tcb_al_buffer(t_buffer *buffer,TCB *tcb){
 
 void cargar_pcb_al_buffer(t_buffer* buffer, PCB* pcb){
 	cargar_int_al_buffer(buffer, pcb->pid);
+	cargar_int_al_buffer(buffer,pcb->tamanio);
 	cargar_int_al_buffer(buffer, pcb->BASE);
 	cargar_int_al_buffer(buffer, pcb->LIMITE);
 }
@@ -426,8 +427,8 @@ CONTEXTO_PROCESO *extraer_pcb_del_buffer(t_buffer *buffer){
 
     CONTEXTO_PROCESO *contexto = malloc(sizeof(CONTEXTO_PROCESO));
     contexto->pid = extraer_int_del_buffer(buffer);
-	contexto->BASE = extraer_int_del_buffer(buffer);
-	contexto->LIMITE = extraer_int_del_buffer(buffer);
+	// contexto->BASE = extraer_int_del_buffer(buffer);
+	// contexto->LIMITE = extraer_int_del_buffer(buffer);
 	return contexto;
 }
 

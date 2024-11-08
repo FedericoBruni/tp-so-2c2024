@@ -12,7 +12,7 @@ void escuchar_mensajes_kernel(void)
     while (!desconexion)
     {
         int cod_op = recibir_operacion(cliente_fd_kernel);
-
+        int pid;
         switch (cod_op)
         {
         case HANDSHAKE_KERNEL_MEMORIA:
@@ -20,16 +20,28 @@ void escuchar_mensajes_kernel(void)
             break;
         case SOLICITAR_MEMORIA_PROCESO: // respuestas: 	OK_SOLICITUD_MEMORIA_PROCESO, ERROR_SOLICITUD_MEMORIA_PROCESO
             buffer = recibir_buffer_completo(cliente_fd_kernel);
-            CONTEXTO_PROCESO* contexto_proceso = extraer_pcb_del_buffer(buffer);
-            list_add(contextos_procesos, contexto_proceso);
-            printf("Contexto recibido\nPID: %i\nBASE: %i\nLIMITE: %i\n", contexto_proceso->pid, contexto_proceso->BASE, contexto_proceso->LIMITE);
-            int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
-            send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0);
+            pid = extraer_int_del_buffer(buffer);
+            int tamanio = extraer_int_del_buffer(buffer);
+            Particion* particion = buscar_particion(tamanio);
+            if(particion != NULL){
+                CONTEXTO_PROCESO* contexto_proceso = malloc(sizeof(CONTEXTO_PROCESO));
+                contexto_proceso->pid = pid;
+                contexto_proceso->BASE = particion->inicio;
+                contexto_proceso->LIMITE = particion->inicio + particion->tamanio;
+                list_add(contextos_procesos, contexto_proceso);
+                printf("Contexto recibido\nPID: %i\nBASE: %i\nLIMITE: %i\n", contexto_proceso->pid, contexto_proceso->BASE, contexto_proceso->LIMITE);
+                int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
+                send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0); 
+            } else {
+                int rta_sol_mem_err = ERROR_CREACION_HILO;
+                send(cliente_fd_kernel, &rta_sol_mem_err, sizeof(op_code), 0); 
+            }
             break;
         case FINAL_PROCESO:
             buffer = recibir_buffer_completo(cliente_fd_kernel);
-            int pid = extraer_int_del_buffer(buffer);
+            pid = extraer_int_del_buffer(buffer);
             log_info(logger, "Finalizando proceso con id: %i", pid);
+            finalizacion_de_proceso(pid);
             int rta_fin_proc = OK_FINAL_PROCESO;
             send(cliente_fd_kernel, &rta_fin_proc, sizeof(op_code), 0);
             break;
@@ -37,6 +49,7 @@ void escuchar_mensajes_kernel(void)
             buffer = recibir_buffer_completo(cliente_fd_kernel);
             CONTEXTO_HILO *contexto_hilo = extraer_tcb_del_buffer(buffer);
             list_add(contextos_hilos,contexto_hilo);
+            cargar_archivo(contexto_hilo->archivo_pseudocodigo, contexto_hilo->tid,contexto_hilo->pid);
             log_info(logger, "Creando hilo con id: %i", contexto_hilo->tid);
             int rta_crear_hilo = OK_CREACION_HILO;
             send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
@@ -48,7 +61,7 @@ void escuchar_mensajes_kernel(void)
 
             log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo_fin);
 
-            eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
+            //eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
 
             int rta_fin_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
@@ -61,7 +74,7 @@ void escuchar_mensajes_kernel(void)
 
             log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_cancelar, pid_del_hilo_cancel);
 
-            eliminar_hilo_y_contexto(tid_a_cancelar, pid_del_hilo_cancel);
+            //eliminar_hilo_y_contexto(tid_a_cancelar, pid_del_hilo_cancel);
 
             int rta_cancel_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);

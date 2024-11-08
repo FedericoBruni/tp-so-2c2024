@@ -11,7 +11,9 @@ int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
 
     t_buffer *buffer = crear_buffer();
-    cargar_pcb_al_buffer(buffer, pcb);
+    //cargar_pcb_al_buffer(buffer, pcb);
+    cargar_int_al_buffer(buffer, pcb->pid);
+    cargar_int_al_buffer(buffer, pcb->tamanio);
     t_paquete *paquete = crear_paquete(cod_sol, buffer);
     enviar_paquete(paquete, socket_memoria);
     eliminar_paquete(paquete);

@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
     pthread_create(&hilo_kernel_memoria, NULL, (void *)escuchar_mensajes_kernel, NULL);
     pthread_join(hilo_kernel_memoria, NULL);
 
+
     while (1)
     {
         if (cliente_fd_dispatch == -1 && cliente_fd_kernel == -1)
