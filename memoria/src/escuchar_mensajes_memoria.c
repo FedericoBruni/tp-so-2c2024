@@ -61,7 +61,7 @@ void escuchar_mensajes_kernel(void)
 
             log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo_fin);
 
-            //eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
+            eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
 
             int rta_fin_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);

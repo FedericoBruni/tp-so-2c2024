@@ -62,11 +62,11 @@ int main(int argc, char *argv[])
 
     // [512, 16, 32, 16, 256, 64, 128]
     PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 0);
-    PROCESS_CREATE("archivo2", 100, 0);
-    PROCESS_CREATE("archivo3",60, 5);
-    PROCESS_CREATE("archivo4", 353, 3);
-    PROCESS_CREATE("archivo4", 50, 6);
-    PROCESS_CREATE("archivo4", 50, 6);
+    // PROCESS_CREATE("archivo2", 100, 0);
+    // PROCESS_CREATE("archivo3",60, 5);
+    // PROCESS_CREATE("archivo4", 353, 3);
+    // PROCESS_CREATE("archivo4", 50, 6);
+    // PROCESS_CREATE("archivo4", 50, 6);
 
     pthread_t hilo_planificador_corto_plazo;
     pthread_create(&hilo_planificador_corto_plazo, NULL, (void *)planificador_corto_plazo, NULL);

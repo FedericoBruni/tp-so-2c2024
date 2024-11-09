@@ -16,11 +16,20 @@ void iniciar_memoria(void);
 int conectarse_a_filesystem(void);
 void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int socket_servidor_cpu);
 void enviar_contexto(int cliente_fd_dispatch);
-CONTEXTO_CPU* buscar_contextos(int tid, int pid);
+CONTEXTO_HILO *buscar_contexto_hilo(int pid,int tid);
+CONTEXTO_CPU *buscar_contextos(int tid, int pid);
 CONTEXTO_PROCESO *buscar_contexto_proceso(int pid);
-void eliminar_hilo_y_contexto(int tid, int pid);
+CONTEXTO_ARCHIVO *buscar_archivo(int pid, int tid);
 void actualizar_contexto(int cliente_fd_dispatch);
 void cargar_archivo(char* nombre_archivo,int tid,int pid);
 Particion *buscar_particion(int tamanio);
+Particion *buscar_first_dinamicas(int tamanio);
+Particion *buscar_best_dinamicas(int tamanio);
+Particion *buscar_worst_dinamicas(int tamanio);
+Particion *buscar_first_fijas(int tamanio);
+Particion *buscar_best_fijas(int tamanio);
+Particion *buscar_worst_fijas(int tamanio);
 void finalizacion_de_proceso(int pid);
+void eliminar_hilo_y_contexto(int tid, int pid);
+
 #endif // UTILIDADES_H_

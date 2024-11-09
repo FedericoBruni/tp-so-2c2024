@@ -17,6 +17,8 @@ t_list *contextos_hilos;
 t_list *archivos;
 MEMORIA_USUARIO* memoria_usuario;
 
+void test();
+
 void iniciar_memoria()
 {
     config = iniciar_config("memoria.config");
@@ -104,7 +106,14 @@ CONTEXTO_PROCESO *buscar_contexto_proceso(int pid){
     CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _hayProceso);
     return contexto_proceso;
 }
-
+CONTEXTO_HILO *buscar_contexto_hilo(int pid,int tid){
+    bool _hayHilo(void *ptr2){
+        CONTEXTO_HILO *ctx_proc = (CONTEXTO_HILO*) ptr2;
+        return ctx_proc->pid == pid && ctx_proc->tid == tid;
+    }
+    CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos, _hayHilo);
+    return contexto_hilo;
+}
 
 
 
@@ -230,7 +239,6 @@ void cargar_memoria_usuario() {
         particion->tamanio = tam_memoria;
         list_add(memoria_usuario->particiones, particion);
     }
-    imprimir_memoria_usuario();
 
 }
 
@@ -240,6 +248,7 @@ void imprimir_memoria_usuario() {
         printf("Esta ocupado: %i\n", particion->estaOcupado);
         printf("Inicio: %i\n", particion->inicio);
         printf("Tamanio: %i\n", particion->tamanio);
+        printf("------------\n");
     }
 }
 
@@ -466,10 +475,61 @@ Particion *buscar_particion(int tamanio){
     
 }
 
-
+t_list *buscar_hilos_de_proceso(int pid){
+    bool _esDelProceso(void *ptr2){
+        CONTEXTO_HILO *ctx_proc = (CONTEXTO_HILO*) ptr2;
+        return ctx_proc->pid == pid;
+    }
+    return list_filter(contextos_hilos,_esDelProceso);
+}
 
 //contexto_proceso->BASE = particion->inicio;
 //contexto_proceso->LIMITE = particion->inicio + particion->tamanio;
+
+void agrupar_particiones(Particion* particion) {
+    int indice = buscar_indice(particion);
+    printf("agrupar con indice: %d\n",indice);
+    printf("list_size: %d\n",list_size(memoria_usuario->particiones));
+    if ((indice > 0)  && (list_size(memoria_usuario->particiones)  > indice)){
+        printf("entro a particion del medio\n"); //BORRAR
+        Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice + 1);
+        Particion *particionAnterior = list_get(memoria_usuario->particiones, indice - 1);
+        if(particionSiguiente->estaOcupado == 0){
+            printf("Particion siguiente libre\n");
+            particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
+            list_remove_element(memoria_usuario->particiones, particionSiguiente);
+            free(particionSiguiente);
+        }
+        if(particionAnterior->estaOcupado == 0){
+            printf("Particion anterior libre\n");
+            particion->inicio = particionAnterior->inicio;
+            particion->tamanio = particion->tamanio + particionAnterior->tamanio;
+            list_remove_element(memoria_usuario->particiones, particionAnterior);
+            free(particionAnterior);
+        }
+    } else if(indice == 0){
+        printf("Entra a es primera particion\n");
+        Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
+        if(particionSiguiente->estaOcupado == 0){
+            printf("Particion siguiente libre\n");
+            particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
+            list_remove_element(memoria_usuario->particiones, particionSiguiente);
+            free(particionSiguiente);
+        }
+    }else if(indice == list_size(memoria_usuario->particiones) - 1 ){
+        printf("Entra a es ultima particion\n");
+        Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
+        if(particionAnterior->estaOcupado == 0){
+            printf("Particion anterior libre\n");
+            particion->inicio = particionAnterior->inicio;
+            particion->tamanio = particion->tamanio + particionAnterior->tamanio;
+            list_remove_element(memoria_usuario->particiones, particionAnterior);
+            free(particionAnterior);
+        }
+    }
+    //if(particionSiguiente)
+    
+}
 
 void finalizacion_de_proceso(int pid){
     CONTEXTO_PROCESO *contexto_proceso = buscar_contexto_proceso(pid); // pid base limite
@@ -481,15 +541,177 @@ void finalizacion_de_proceso(int pid){
 
     // buscar los hilos del proceso
     // borrarlos -> borrar los registros free(CONTEXTO_HILO)
+    t_list *lista_a_borrar = buscar_hilos_de_proceso(pid);
+    for(int i = 0; i < list_size(lista_a_borrar);i++){
+        CONTEXTO_HILO *contexto_hilo = list_get(lista_a_borrar, i);
+        eliminar_hilo_y_contexto(contexto_hilo->tid, contexto_hilo->pid);
+    }
+
     Particion* particion = list_find(memoria_usuario->particiones,_esLaParticion);
     particion->estaOcupado=0;
     log_info(logger, "Finalizado proceso: %d",pid);
     // marcar la partición del proceso como libre
     // chequear si hay que agruppar particiones libres
+    if (string_equals_ignore_case(esquema, "DINAMICAS")) {
+        agrupar_particiones(particion);
+    }
+}
+
+/*
+typedef struct{
+	int tid;
+	int pid;
+	t_dictionary* instrucciones;
+}CONTEXTO_ARCHIVO;
+*/
+void liberar_contexto_hilo(CONTEXTO_HILO *contexto_hilo) {
+    free(contexto_hilo->Registros);
+    free(contexto_hilo);
+}
+
+void liberar_archivo(CONTEXTO_ARCHIVO *archivo) {
+    dictionary_destroy_and_destroy_elements(archivo->instrucciones, free);
+    free(archivo);
+}
+
+void eliminar_hilo_y_contexto(int tid, int pid){
+    //borrar contexto hilo
+    //borrar archivo
+
+    CONTEXTO_HILO *contexto_hilo = buscar_contexto_hilo(pid, tid);
+    CONTEXTO_ARCHIVO *archivo = buscar_archivo(pid,tid);
+    // esto devuelve 0 si no existe el ctx_hilo
+    if (list_remove_element(contextos_hilos, contexto_hilo))
+        liberar_contexto_hilo(contexto_hilo);
+    else {
+        log_error(logger, "No existe el par (<PID: %i>:<TID: %i>)\n", pid, tid);
+        return EXIT_FAILURE;
+    }    
+    if(list_remove_element(archivos,archivo))
+        liberar_archivo(archivo);
+    else{
+        log_error(logger,"No existe el archivo del par (<PID: %d>),(<TID:%d>)\n",pid,tid);
+        return EXIT_FAILURE;
+    }
+    
+    log_info(logger,"## Hilo <Destruido> - (PID:TID) - (<%d>:<%d>)",pid,tid);
+
+
+    
+
+}
+
+CONTEXTO_ARCHIVO *buscar_archivo(int pid, int tid){
+    bool _esArchivo(void* ptr){
+        CONTEXTO_ARCHIVO *ctx = (CONTEXTO_ARCHIVO *) ptr;
+        return ctx->pid == pid && ctx->tid == tid;
+    }
+    return list_find(archivos,_esArchivo);
+}
+
+void leer_memoria(int direccion){
+    int *dir = *((int*)memoria_usuario->memoria_usuario + direccion);
+    int valor = dir;
+    printf("el valor es: %d",valor);
+}
+
+void escribir_memoria(int direccion, int valor){
+    *((int*)memoria_usuario->memoria_usuario + direccion) = valor;
+}
+
+/*
+Obtener instrucción
+Deberemos devolverle la instrucción correspondiente al hilo y al Program Counter recibido. 
+Por ejemplo, si el hilo 3 del proceso 1 pide la instrucción número 4, deberemos devolver la 5ta instrucción del 
+pseudocódigo correspondiente a ese hilo.
+*/
+
+char* obtener_instruccion(int key, int pid, int tid){
+    char key_diccionario[256];
+    snprintf(key_diccionario, 256, "%d", key);
+    printf("Key INT: %i, Key CHAR*: %s\n", key, key_diccionario);
+    
+    
+    CONTEXTO_ARCHIVO *archivo = buscar_archivo(pid, tid);
+    char* instruccion = dictionary_get(archivo->instrucciones, key_diccionario);
+    printf("Instruccion: %s\n", instruccion);
+    return instruccion;
 }
 
 
 
+
+
+
+
+
+
+
+
+void test(){
+
+    
+    CONTEXTO_HILO *contexto_hilo = malloc(sizeof(CONTEXTO_HILO));
+    contexto_hilo->pid = 0;
+    contexto_hilo->tid = 0;
+    contexto_hilo->archivo_pseudocodigo = "archivo1";
+    cargar_archivo(contexto_hilo->archivo_pseudocodigo, contexto_hilo->tid,contexto_hilo->pid);
+    obtener_instruccion(0,0,0);
+    obtener_instruccion(1,0,0);
+    obtener_instruccion(2,0,0);
+    // *((int*)memoria_usuario->memoria_usuario + 50) = 15;
+    // leer_memoria(50);
+    // escribir_memoria(51,16);
+    // leer_memoria(51);
+
+
+    // CONTEXTO_PROCESO* ctx1 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx1->pid = 0;
+    // CONTEXTO_PROCESO* ctx2 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx2->pid = 1;
+    // CONTEXTO_PROCESO* ctx3 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx3->pid = 2;
+    // CONTEXTO_PROCESO* ctx4 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx4->pid = 3;
+    //  CONTEXTO_PROCESO* ctx5 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx5->pid = 4;
+
+
+    // Particion *part1 = buscar_worst_dinamicas(50);
+    // ctx1->BASE = part1->inicio;
+    // ctx1->LIMITE = part1->inicio + part1->tamanio;
+    // list_add(contextos_procesos,ctx1);
+    // Particion *part2 = buscar_worst_dinamicas(100);
+    // ctx2->BASE = part2->inicio;
+    // ctx2->LIMITE = part2->inicio + part2->tamanio;
+    // list_add(contextos_procesos,ctx2);
+    // Particion *part3 = buscar_worst_dinamicas(400);
+    // ctx3->BASE = part3->inicio;
+    // ctx3->LIMITE = part3->inicio + part3->tamanio;
+    // list_add(contextos_procesos,ctx3);
+    // Particion *part4 = buscar_worst_dinamicas(250);
+    // ctx4->BASE = part4->inicio;
+    // ctx4->LIMITE = part4->inicio + part4->tamanio;
+    // list_add(contextos_procesos,ctx4);
+    // Particion *part5 = buscar_worst_dinamicas(200);
+    // ctx5->BASE = part5->inicio;
+    // ctx5->LIMITE = part5->inicio + part5->tamanio;
+    // list_add(contextos_procesos,ctx5);
+
+    // //imprimir_memoria_usuario();
+    // finalizacion_de_proceso(1);
+    // //imprimir_memoria_usuario();
+    // finalizacion_de_proceso(3);
+
+    // CONTEXTO_PROCESO* ctx6 = malloc(sizeof(CONTEXTO_PROCESO));
+    // ctx6->pid = 4;
+    // Particion *part6 = buscar_worst_dinamicas(50);
+    // ctx6->BASE = part6->inicio;
+    // ctx6->LIMITE = part6->inicio + part6->tamanio;
+    // list_add(contextos_procesos,ctx6);
+
+    // imprimir_memoria_usuario();
+}
 
 
 
