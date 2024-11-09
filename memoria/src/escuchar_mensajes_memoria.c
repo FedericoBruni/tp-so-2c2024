@@ -19,6 +19,7 @@ void escuchar_mensajes_kernel(void)
             aceptar_handshake(logger, cliente_fd_kernel, HANDSHAKE_KERNEL_MEMORIA);
             break;
         case SOLICITAR_MEMORIA_PROCESO: // respuestas: 	OK_SOLICITUD_MEMORIA_PROCESO, ERROR_SOLICITUD_MEMORIA_PROCESO
+            sleep(1);
             buffer = recibir_buffer_completo(cliente_fd_kernel);
             pid = extraer_int_del_buffer(buffer);
             int tamanio = extraer_int_del_buffer(buffer);
@@ -48,6 +49,7 @@ void escuchar_mensajes_kernel(void)
         case SOLICITAR_CREACION_HILO:
             buffer = recibir_buffer_completo(cliente_fd_kernel);
             CONTEXTO_HILO *contexto_hilo = extraer_tcb_del_buffer(buffer);
+            printf("Case solicitar creacion, DX: %i\n", contexto_hilo->Registros->DX);
             list_add(contextos_hilos,contexto_hilo);
             cargar_archivo(contexto_hilo->archivo_pseudocodigo, contexto_hilo->tid,contexto_hilo->pid);
             log_info(logger, "Creando hilo con id: %i", contexto_hilo->tid);
@@ -110,6 +112,10 @@ void escuchar_mensajes_cpu(void)
         case ACTUALIZAR_CONTEXTO:
             printf("Actualizando contexto");
             actualizar_contexto(cliente_fd_dispatch);
+            break;
+        case SOLICITAR_INSTRUCCION:
+            printf("Instruccion solicitada\n");
+            enviar_instruccion(cliente_fd_dispatch);
             break;
         case -1:
             log_error(logger, "Cpu desconectado\n");

@@ -6,6 +6,8 @@ extern t_log *logger;
 extern sem_t sem_cpu_ejecutando;
 extern TCB* tcb_en_ejecucion;
 extern PCB *pcb_en_ejecucion;
+extern sem_t sem_puede_ejecutar;
+extern sem_t sem_syscall_fin;
 
 int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
@@ -116,18 +118,25 @@ void enviar_fin_quantum(int tid, int pid){
     
 }
 
-void esperar_respuesta(){
-    switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
+int esperar_respuesta(){
+    int resultado = 0;
+    int operacion;
+    while(1){
+    operacion = recibir_operacion(fd_cpu_dispatch);
+    switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
             replanificar(tcb_en_ejecucion);
             log_info(logger,"Desalojo por quantum");
-            break;
+            return 1;
         case OK_EJECUCION:
             log_info(logger,"Ok ejecucion");
             break;
         case SYSCALL_PROCESS_CREATE:
             log_info(logger, "Syscall Process Create");
             deserializar_process_create();
+            sem_wait(&sem_syscall_fin);
+            int proceso_creado = PROCESO_CREADO;
+            send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_CREATE:
             deserializar_thread_create();
@@ -153,9 +162,15 @@ void esperar_respuesta(){
         case SYSCALL_PROCESS_EXIT:
             deserializar_process_exit();
             break;
+        case FIN_DE_ARCHIVO:
+            sleep(5);
+            sem_post(&sem_puede_ejecutar);
+            return 1;
         default:
             return 0;
     }
+
+}
 }
 
 void deserializar_process_create(){
@@ -164,7 +179,7 @@ void deserializar_process_create(){
     char* archivo_pseudocodigo = extraer_string_del_buffer(buffer);
     int tam_archivo = extraer_int_del_buffer(buffer);
     int prio_hilo = extraer_int_del_buffer(buffer);
-    PROCESS_CREATE(archivo_pseudocodigo,tam_archivo,prio_hilo);
+    SYS_PROCESS_CREATE(archivo_pseudocodigo,tam_archivo,prio_hilo);
 
 }
 

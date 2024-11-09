@@ -16,6 +16,8 @@ void iniciar_memoria(void);
 int conectarse_a_filesystem(void);
 void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int socket_servidor_cpu);
 void enviar_contexto(int cliente_fd_dispatch);
+void enviar_instruccion(int cliente_fd_dispatch);
+char* obtener_instruccion(int key, int pid, int tid);
 CONTEXTO_HILO *buscar_contexto_hilo(int pid,int tid);
 CONTEXTO_CPU *buscar_contextos(int tid, int pid);
 CONTEXTO_PROCESO *buscar_contexto_proceso(int pid);

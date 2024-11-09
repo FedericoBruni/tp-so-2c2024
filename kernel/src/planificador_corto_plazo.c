@@ -12,6 +12,7 @@ extern sem_t sem_cpu_ejecutando;
 extern t_list* colas_prioridades;
 extern int quantum;
 extern PCB *pcb_en_ejecucion;
+extern sem_t sem_puede_ejecutar;
 
 
 
@@ -39,7 +40,8 @@ void planificador_corto_plazo(){
 
 void fifo(){
     while(1){ 
-        sem_wait(&sem_hay_ready);  
+        sem_wait(&sem_hay_ready);
+        sem_wait(&sem_puede_ejecutar);
         TCB* tcb = desencolar(cola_ready,mutex_ready);
         if(tcb != NULL){
         tcb_en_ejecucion = tcb;
@@ -47,7 +49,9 @@ void fifo(){
         cambiar_estado_hilo(tcb, EXEC);
         pcb_en_ejecucion = tcb_en_ejecucion->pcb;
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
-        esperar_respuesta();
+        if (esperar_respuesta() == 1){
+            continue;
+        }
         }
     }
 }

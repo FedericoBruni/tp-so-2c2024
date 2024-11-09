@@ -16,6 +16,8 @@ t_list *contextos_procesos;
 t_list *contextos_hilos;
 t_list *archivos;
 MEMORIA_USUARIO* memoria_usuario;
+extern int cliente_fd_kernel;
+extern int cliente_fd_dispatch;
 
 void test();
 
@@ -56,6 +58,25 @@ void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int soc
     exit(EXIT_SUCCESS);
 }
 
+void imprimir_ctx_cpu(CONTEXTO_CPU *contexto_cpu) {
+    printf("CTX de <PID: %i>:<TID: %i>\n", contexto_cpu->contexto_hilo->pid, contexto_cpu->contexto_hilo->tid);
+    printf("REGISTROS: PC: %i, AX: %i, BX: %i, CX: %i, DX: %i\n", contexto_cpu->contexto_hilo->Registros->PC, contexto_cpu->contexto_hilo->Registros->AX,
+    contexto_cpu->contexto_hilo->Registros->CX, contexto_cpu->contexto_hilo->Registros->DX);
+    printf("REGISTROS: EX: %i, FX: %i, GX: %i, HX: %i, BASE: %i, LIMITE: %i\n", contexto_cpu->contexto_hilo->Registros->EX, contexto_cpu->contexto_hilo->Registros->FX,
+    contexto_cpu->contexto_hilo->Registros->GX, contexto_cpu->contexto_hilo->Registros->HX, contexto_cpu->contexto_proceso->BASE,
+    contexto_cpu->contexto_proceso->LIMITE);
+    printf("--------------------------------------------------\n");
+}
+
+void imprimir_ctx_hilo(CONTEXTO_HILO *contexto_hilo) {
+    printf("CTX de <PID: %i>:<TID: %i>\n",contexto_hilo->pid,contexto_hilo->tid);
+    printf("REGISTROS: PC: %i, AX: %i, BX: %i, CX: %i, DX: %i\n", contexto_hilo->Registros->PC, contexto_hilo->Registros->AX,
+    contexto_hilo->Registros->CX, contexto_hilo->Registros->DX);
+    printf("REGISTROS: EX: %i, FX: %i, GX: %i, HX: %i\n", contexto_hilo->Registros->EX, contexto_hilo->Registros->FX,
+    contexto_hilo->Registros->GX, contexto_hilo->Registros->HX);
+    printf("--------------------------------------------------\n");
+}
+
 void enviar_contexto(int cliente_fd_dispatch){
     t_buffer *buffer = recibir_buffer_completo(cliente_fd_dispatch);
     
@@ -64,11 +85,15 @@ void enviar_contexto(int cliente_fd_dispatch){
 
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu = buscar_contextos(tid,pid);
+
+    printf("CTX DX Antes de mandar contexto: %i\n", contexto_cpu->contexto_hilo->Registros->DX);
+    
     
     t_buffer *bufferRta = crear_buffer();
     cargar_contexto_hilo(bufferRta, contexto_cpu->contexto_hilo);
     cargar_contexto_proceso(bufferRta, contexto_cpu->contexto_proceso);
-    t_paquete *paquete = crear_paquete(CONTEXTO_ENVIADO,bufferRta);
+    int cod_rta = CONTEXTO_ENVIADO;
+    t_paquete *paquete = crear_paquete(cod_rta,bufferRta);
     enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
     printf("Contexto enviado -> TID: %i, PID: %i\n", tid, pid);
@@ -76,6 +101,33 @@ void enviar_contexto(int cliente_fd_dispatch){
     //int rta_sol_mem = CONTEXTO_ENVIADO;
     //send(cliente_fd_dispatch, &rta_sol_mem, sizeof(op_code), 0);
     
+}
+
+void enviar_instruccion(int cliente_fd_dispatch) {
+    t_buffer *buffer = recibir_buffer_completo(cliente_fd_dispatch);
+    int pc = extraer_int_del_buffer(buffer);
+    int pid = extraer_int_del_buffer(buffer);
+    int tid = extraer_int_del_buffer(buffer);
+
+    char* instruccion = obtener_instruccion(pc, pid, tid);
+    t_buffer *bufferRta = crear_buffer();
+    t_paquete *paquete;
+    if (!instruccion) {
+        //paquete = crear_paquete(EOF_INSTRUCCION, bufferRta);
+        int resp_eof = EOF_INSTRUCCION;
+        send(cliente_fd_dispatch, &resp_eof, sizeof(op_code), 0);
+    } else {
+        
+        cargar_string_al_buffer(bufferRta, instruccion);
+        paquete = crear_paquete(PROXIMA_INSTRUCCION, bufferRta);
+        enviar_paquete(paquete, cliente_fd_dispatch);
+        eliminar_paquete(paquete);
+        
+        printf("Instruccion enviada: %s\n", instruccion);
+    }
+    
+    
+
 }
 
 CONTEXTO_CPU* buscar_contextos(int tid, int pid){
@@ -90,11 +142,13 @@ CONTEXTO_CPU* buscar_contextos(int tid, int pid){
     }
 
     CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos,_hayHilo);
+    printf("CTX DX CUANDO SE BUSCA EL CONTEXTO; %i\n", contexto_hilo->Registros->DX);
     CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _hayProceso);
 
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu->contexto_hilo = contexto_hilo;
     contexto_cpu->contexto_proceso = contexto_proceso;
+    printf("CTX DX Cuando se arma el contexto cpu: %i\n",contexto_cpu->contexto_hilo->Registros->DX);
     return contexto_cpu;
 }
 
@@ -144,6 +198,9 @@ void actualizar_contexto(int cliente_fd_dispatch){
     } else {
         log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
+
+    int cod_op = CONTEXTO_ACTUALIZADO_OK;
+    send(cliente_fd_dispatch, &cod_op, sizeof(cod_op), 0);
 }
 
 
@@ -635,6 +692,7 @@ char* obtener_instruccion(int key, int pid, int tid){
     CONTEXTO_ARCHIVO *archivo = buscar_archivo(pid, tid);
     char* instruccion = dictionary_get(archivo->instrucciones, key_diccionario);
     printf("Instruccion: %s\n", instruccion);
+    if (!instruccion) printf("NULL\n");
     return instruccion;
 }
 

@@ -1,6 +1,7 @@
 #ifndef MENSAJERIA_H
 #define MENSAJERIA_H
 #include "utils/utils.h"
+#include "utilidades.h"
 #include "main.h"
 
 void actualizar_contexto(int fd_memoria);

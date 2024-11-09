@@ -32,6 +32,8 @@ sem_t sem_hay_ready;
 sem_t sem_hay_new;
 sem_t sem_cpu_ejecutando;
 sem_t memoria_libre;
+sem_t sem_puede_ejecutar;
+sem_t sem_syscall_fin;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
@@ -79,6 +81,8 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_hay_new, "Hay proceso en new", 0);
     inicializar_semaforo(&sem_cpu_ejecutando, "Hay un hilo ejecutando en cpu", 0);
     inicializar_semaforo(&memoria_libre, "Memoria liberado", 1);
+    inicializar_semaforo(&sem_puede_ejecutar, "Puede ejecutar", 1);
+    inicializar_semaforo(&sem_syscall_fin, "sem_syscall_fin", 0);
     
 
 

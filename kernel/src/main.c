@@ -9,6 +9,7 @@ bool hilo_creacion_muerto;
 bool hilo_fin_proc_muerto;
 int fd_cpu_dispatch;
 int fd_cpu_interrupt;
+extern sem_t sem_syscall_fin;
 
 int main(int argc, char *argv[])
 {
@@ -61,7 +62,8 @@ int main(int argc, char *argv[])
     pthread_detach(hilo_creacion_de_hilos);
 
     // [512, 16, 32, 16, 256, 64, 128]
-    PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 0);
+    SYS_PROCESS_CREATE(archivo_pseudocodigo, tamanio_proceso, 0);
+    sem_wait(&sem_syscall_fin);
     // PROCESS_CREATE("archivo2", 100, 0);
     // PROCESS_CREATE("archivo3",60, 5);
     // PROCESS_CREATE("archivo4", 353, 3);

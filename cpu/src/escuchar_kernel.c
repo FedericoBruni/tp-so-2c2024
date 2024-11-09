@@ -22,11 +22,14 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case ENVIAR_EXEC:
 			recibir_exec(logger,cliente_fd_dispatch,cod_op);
 			break;
+
+		
+			
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");
 			cliente_fd_dispatch = -1;
 			return;
-
+		
 		default:
 			log_warning(logger, "Codigo de operacion invalido dispatch");
 			break;

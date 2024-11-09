@@ -7,7 +7,8 @@ char *desc_code_op[] = {
 	"SOLICITAR_CREACION_HILO", "OK_CREACION_HILO", "ERROR_CREACION_HILO","FINAL_HILO","OK_FINAL_HILO", "CANCELAR_HILO","ENIVAR_EXEC", "EXEC_RECIBIDO","FIN_QUANTUM",
 	"DESALOJO_POR_QUANTUM","OK_FIN_QUANTUM","OK_EJECUCION", "SOLICITAR_CONTEXTO", "CONTEXTO_ENVIADO", "ACTUALIZAR_CONTEXTO", "SYSCALL_PROCESS_CREATE", "SYSCALL_THREAD_CREATE", 
 	"SYSCALL_THREAD_JOIN", "SYSCALL_THREAD_CANCEL", "SYSCALL_MUTEX_CREATE", "SYSCALL_MUTEX_LOCK", "SYSCALL_MUTEX_UNLOCK",
-	"SYSCALL_THREAD_EXIT", "SYSCALL_PROCESS_EXIT"};
+	"SYSCALL_THREAD_EXIT", "SYSCALL_PROCESS_EXIT", "SOLICITAR_INSTRUCCION", "PROXIMA_INSTRUCCION", "EOF_INSTRUCCION","CONTEXTO_ACTUALIZADO_OK",
+	"CONTEXTO_ACTUALIZADO_ERROR","FIN_DE_ARCHIVO", "PROCESO_CREADO"};
 
 t_config *iniciar_config(char *ruta)
 {
@@ -115,8 +116,9 @@ int recibir_operacion(int socket_cliente)
 {
 	int cod_op;
 
-	if (recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0)
-		return cod_op;
+	if (recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0){
+		printf("cod_op: %s\n",desc_code_op[cod_op]);
+		return cod_op;}
 	else
 	{
 		close(socket_cliente);
@@ -439,6 +441,7 @@ CONTEXTO_HILO *extraer_tcb_del_buffer(t_buffer *buffer){
     contexto->pid = extraer_int_del_buffer(buffer);
     contexto->archivo_pseudocodigo = extraer_string_del_buffer(buffer);
     contexto->Registros = extraer_registros_del_buffer(buffer);
+	printf("CTX DX: %i\n", contexto->Registros->DX);
     return contexto;
 }
 

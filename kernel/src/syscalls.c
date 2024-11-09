@@ -25,7 +25,7 @@ El Kernel c: 12
 [INFO] 20:reará un nuevo PCB y un TCB asociado con TID 0 y lo dejará en estado NEW.
 */
 
-void PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
+void SYS_PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
 {
     PCB *pcb = crear_pcb(archivo, tamanio_memoria, prioridad);
     encolar(cola_new, pcb, mutex_new);

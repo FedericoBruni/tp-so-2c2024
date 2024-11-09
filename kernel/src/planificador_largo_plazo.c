@@ -21,6 +21,7 @@ extern sem_t sem_finalizar_hilo;
 extern sem_t sem_hay_ready;
 extern sem_t sem_hay_new;
 extern sem_t memoria_libre;
+extern sem_t sem_syscall_fin;
 extern char *algoritmo_planificacion;
 extern pthread_mutex_t mutex_fd_memoria;
 
@@ -116,6 +117,7 @@ void creacion_de_hilos(void){
                     log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
                 }
                 sem_post(&sem_hay_ready);
+                sem_post(&sem_syscall_fin);
                 break;
             case 0:
                 log_error(logger, "Error al crear el hilo: %i\n", tcb->tid);

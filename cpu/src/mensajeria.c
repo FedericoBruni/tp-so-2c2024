@@ -3,6 +3,8 @@
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
+extern pthread_mutex_t mutex_conexion_dispatch;
+extern pthread_mutex_t mutex_conexion_memoria;
 
 void crear_proceso(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){
     t_buffer *buffer = crear_buffer();
@@ -10,7 +12,9 @@ void crear_proceso(char *archivo_de_instrucciones,int tamanio_proceso, int prio_
     cargar_int_al_buffer(buffer,tamanio_proceso);
     cargar_int_al_buffer(buffer,prio_hilo);
     t_paquete *paquete = crear_paquete(SYSCALL_PROCESS_CREATE, buffer);
+    pthread_mutex_lock(&mutex_conexion_dispatch);
     enviar_paquete(paquete, cliente_fd_dispatch);
+    pthread_mutex_unlock(&mutex_conexion_dispatch);
     eliminar_paquete(paquete);
 }
 
@@ -23,9 +27,9 @@ void crear_hilo(char* archivo_pseudocodigo, int prioridad) {
     eliminar_paquete(paquete);
 }
 
-void thread_join(int tid) {
+void thread_join(int tid_bloqueante) {
     t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, tid);
+    cargar_int_al_buffer(buffer, tid_bloqueante);
     t_paquete *paquete = crear_paquete(SYSCALL_THREAD_JOIN, buffer);
     enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
@@ -87,7 +91,23 @@ void actualizar_contexto(int fd_memoria){
     cargar_contexto_hilo(bufferCtx, contexto_en_ejecucion->contexto_hilo);
     cargar_contexto_proceso(bufferCtx,contexto_en_ejecucion->contexto_proceso);
     t_paquete *paquete = crear_paquete(ACTUALIZAR_CONTEXTO, bufferCtx);
+    pthread_mutex_lock(&mutex_conexion_memoria);
     enviar_paquete(paquete,fd_memoria);
+    pthread_mutex_unlock(&mutex_conexion_memoria);
     eliminar_paquete(paquete);
+
+    switch (recibir_operacion(fd_memoria)){
+        case CONTEXTO_ACTUALIZADO_OK:
+            log_info(logger, "Contexto Actualizado correctamente\n");
+            break;
+        case CONTEXTO_ACTUALIZADO_ERROR:
+            printf("Ok\n");
+            break;
+        default:
+            log_error(logger, "Error actualizando el contexto");
+            break;
+
+    }
+    
     
 }
