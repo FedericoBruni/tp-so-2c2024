@@ -287,17 +287,22 @@ void bloquear_hilo_syscall(TCB *tcb,int tid){
 
 
 void desbloquear_bloqueados_por_hilo(int tidBloqueante){
-    t_list* hilos_bloqueados = list_create();
-    bool _esBloqueado(void *ptr){
-        TCB *tcb = (TCB *)ptr;
-        return tcb->bloqueadoPor == tidBloqueante;
+    t_queue* cola_aux = queue_create();
+    while(!queue_is_empty(cola_blocked)){
+        void* elemento = desencolar(cola_blocked,mutex_blocked);
+
+        TCB* tcb = (TCB*) elemento;
+        if(tcb->bloqueadoPor==tidBloqueante){
+            desbloquear_hilo(tcb);
+        }else{
+            queue_push(cola_aux,elemento);
+        }
     }
-    hilos_bloqueados = list_filter(cola_blocked,_esBloqueado);
-    for(int i = 0; i< list_size(hilos_bloqueados); i++){
-        desbloquear_hilo(list_get(hilos_bloqueados,i));
+    while(!queue_is_empty(cola_aux)){
+        queue_push(cola_blocked,queue_pop(cola_aux));
     }
     
-    list_destroy(hilos_bloqueados);
+    queue_destroy(cola_aux);
 }
 
 void desbloquear_hilo(TCB *tcb){

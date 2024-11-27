@@ -58,8 +58,8 @@ void escuchar_mensajes_kernel(void)
             break;
         case FINAL_HILO: 
             t_buffer *buffer_fin = recibir_buffer_completo(cliente_fd_kernel);
-            int tid_a_finalizar = extraer_int_del_buffer(buffer);
-            int pid_del_hilo_fin = extraer_int_del_buffer(buffer);
+            int tid_a_finalizar = extraer_int_del_buffer(buffer_fin);
+            int pid_del_hilo_fin = extraer_int_del_buffer(buffer_fin);
 
             log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_finalizar, pid_del_hilo_fin);
 

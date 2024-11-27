@@ -87,7 +87,8 @@ void THREAD_EXIT(TCB *tcb) {
     // }
 
     log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
-    encolar(cola_exit, tcb->pcb, mutex_exit);
+
+    encolar(cola_finalizacion, tcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);
     //liberar_tcb(tcb);
 
