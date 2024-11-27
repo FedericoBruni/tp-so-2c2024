@@ -164,6 +164,16 @@ int esperar_respuesta(){
             break;
         case FIN_DE_ARCHIVO:
             sleep(5);
+            if(tcb_en_ejecucion->tid == 0){
+                PROCESS_EXIT(tcb_en_ejecucion);
+            }else{
+                THREAD_EXIT(tcb_en_ejecucion);
+            }
+            sem_post(&sem_puede_ejecutar);
+            return 1;
+        case SUSP_PROCESO:
+            sleep(5);
+            log_info(logger,"Hilo suspendido");
             sem_post(&sem_puede_ejecutar);
             return 1;
         default:

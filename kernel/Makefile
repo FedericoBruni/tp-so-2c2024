@@ -95,4 +95,4 @@ $(sort $(dir $(OUT) $(OBJS))):
 
 kernel:
 	make
-	./bin/kernel archivo1 511
+	./bin/kernel archivo1 12

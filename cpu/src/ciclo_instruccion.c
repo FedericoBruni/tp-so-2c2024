@@ -4,15 +4,18 @@ extern CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 extern t_log* logger;
+
 void ciclo_de_instruccion() {
-    while (1) {
+    while (true) {
         sem_wait(&sem_ejecucion);
         char* instruccion = fetch();
         printf("instr: %s\n",instruccion);
         if(instruccion){
             printf("ENTRO A DECODE\n");
             char* instruccion_a_ejecutar = decode(instruccion);
-            sem_post(&sem_ejecucion);
+            if(instruccion_a_ejecutar != NULL &&string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
+                suspender_proceso();
+            }else{sem_post(&sem_ejecucion);}
         }else{
             printf("ENTRO A FIN DE ARCHIVO\n");
             enviar_fin_de_proceso();
@@ -27,6 +30,10 @@ void ciclo_de_instruccion() {
 
 void enviar_fin_de_proceso(){
     int cod_op = FIN_DE_ARCHIVO;
+    send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
+}
+void suspender_proceso(){
+    int cod_op = SUSP_PROCESO;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
 
@@ -78,6 +85,7 @@ char* decode(char* instruccion) {
         char* registro = lista[1];
         int valor = atoi(lista[2]);
         SET(registro,valor);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "READ_MEM")){
         
     } else if (string_equals_ignore_case(instr, "WRITE_MEM")){
@@ -89,6 +97,7 @@ char* decode(char* instruccion) {
         registroOrigen[strlen(registroOrigen)-1] = '\0';
         printf("origen: %s\n",registroOrigen);
         SUM(registroDestino,registroOrigen);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "SUB")){
         char* registroDestino = lista[1];
         printf("destino: %s\n",registroDestino);
@@ -96,14 +105,17 @@ char* decode(char* instruccion) {
         registroOrigen[strlen(registroOrigen)-1] = '\0';
         printf("origen: %s\n",registroOrigen);
         SUB(registroDestino,registroOrigen);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "JNZ")){
         char* registro = lista[1];
         int valor = atoi(lista[2]);
         JNZ(registro,valor);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "LOG")){
         char* registro = lista[1];
         registro[strlen(registro)-1] = '\0';
         LOG(registro);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "DUMP_MEMORY")){
         
     } else if (string_equals_ignore_case(instr, "IO")){
@@ -113,13 +125,16 @@ char* decode(char* instruccion) {
         int tam = atoi(lista[2]);
         int prio = atoi(lista[3]);
         PROCESS_CREATE(archivo,tam,prio);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "THREAD_CREATE")){
         char* archivo = lista[1];
         int prio = atoi(lista[2]);
         THREAD_CREATE(archivo,prio);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "THREAD_JOIN")){
         int tid = atoi(lista[1]);
         THREAD_JOIN(tid);
+        return "SUSPPROCESO";
     } else if (string_equals_ignore_case(instr, "THREAD_CANCEL")){
         
     } else if (string_equals_ignore_case(instr, "MUTEX_CREATE")){

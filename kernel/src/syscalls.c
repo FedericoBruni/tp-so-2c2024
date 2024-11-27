@@ -81,17 +81,15 @@ void THREAD_JOIN(int tid){
 
 
 void THREAD_EXIT(TCB *tcb) {
-    if (tcb->tid != 0) {
-        log_warning(logger, "El hilo TID 0 debe invocar a THREAD_EXIT para finalizar el hilo.");
-        return;
-    }
+    // if (tcb->tid != 0) {
+    //     log_warning(logger, "El hilo TID 0 debe invocar a THREAD_EXIT para finalizar el hilo.");
+    //     return;
+    // }
 
     log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
     encolar(cola_exit, tcb->pcb, mutex_exit);
-
     cambiar_estado_hilo(tcb, EXIT);
-
-    liberar_tcb(tcb);
+    //liberar_tcb(tcb);
 
     sem_post(&sem_finalizar_hilo);
 }

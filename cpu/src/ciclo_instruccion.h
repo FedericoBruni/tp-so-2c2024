@@ -11,4 +11,5 @@ char* decode(char* instruccion);
 void pedir_prox_instruccion();
 char* recibir_prox_instruccion();
 void imprimir_ctx_cpu(CONTEXTO_CPU *contexto_cpu); //de prueba
+void suspender_proceso();
 #endif /* CICLO_INSTRUCCION_H */

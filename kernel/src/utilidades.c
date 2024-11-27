@@ -281,12 +281,12 @@ void bloquear_hilo_syscall(TCB *tcb,int tid){
     cambiar_estado_hilo(tcb,BLOCKED);
     tcb->bloqueadoPor = tid;
     encolar(cola_blocked,tcb,mutex_blocked);
-    sem_post(&sem_hay_ready);
+    //sem_post(&sem_hay_ready);
 }
 
 
 
-void desbloquear_bloqueados_por_hilo(tidBloqueante){
+void desbloquear_bloqueados_por_hilo(int tidBloqueante){
     t_list* hilos_bloqueados = list_create();
     bool _esBloqueado(void *ptr){
         TCB *tcb = (TCB *)ptr;

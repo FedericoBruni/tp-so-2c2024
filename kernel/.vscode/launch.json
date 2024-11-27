@@ -7,7 +7,7 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
-      "args": ["asd", "12"],
+      "args": ["archivo1", "12"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],

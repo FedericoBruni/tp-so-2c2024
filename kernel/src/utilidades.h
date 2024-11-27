@@ -43,6 +43,8 @@ void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb);
 void* desencolar_multinivel(COLA_PRIORIDAD *cola);
 COLA_PRIORIDAD* existe_cola_con_prioridad(int prioridad);
 COLA_PRIORIDAD* obtener_cola_con_mayor_prioridad();
+void bloquear_hilo_syscall(TCB *tcb,int tid);
+void desbloquear_bloqueados_por_hilo(int tidBloqueante);
 void replanificar(TCB *tcb);
 MUTEX *existe_mutex(char* recurso);
 #endif // UTILIDADES_H_
