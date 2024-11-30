@@ -117,6 +117,8 @@ char* decode(char* instruccion) {
         LOG(registro);
         return "OK";
     } else if (string_equals_ignore_case(instr, "DUMP_MEMORY")){
+        DUMP_MEMORY(contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
+        return "OK";
         
     } else if (string_equals_ignore_case(instr, "IO")){
         

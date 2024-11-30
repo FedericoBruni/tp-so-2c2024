@@ -44,8 +44,10 @@ void LOG(char *registro){
     log_info(logger, "El valor del registro %s es: %u",registro,*reg);
 }
 
-void DUMP_MEMORY() {
-
+void DUMP_MEMORY(int pid, int tid) {
+    enviar_dump_memory(pid, tid);
+    actualizar_contexto(fd_memoria);
+    //hay q esperar respuesta?
 }
 
 void IO (int tiempo) {

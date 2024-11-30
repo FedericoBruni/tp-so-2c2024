@@ -11,5 +11,6 @@ void THREAD_JOIN(int tid);
 void THREAD_CANCEL(TCB *tcb);
 void MUTEX_CREATE(char* recurso);
 void MUTEX_LOCK(char* recurso);
+void DUMP_MEMORY(int pid, int tid);
 
 #endif

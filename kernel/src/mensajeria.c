@@ -176,11 +176,15 @@ int esperar_respuesta(){
             log_info(logger,"Hilo suspendido");
             sem_post(&sem_puede_ejecutar);
             return 1;
+
+        case SYSCALL_DUMP_MEMORY:
+            deserializar_dump_memory();
+            break;
         default:
             return 0;
-    }
+        }
 
-}
+    }
 }
 
 void deserializar_process_create(){
@@ -237,4 +241,13 @@ void deserializar_process_exit(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int pid = extraer_int_del_buffer(fd_cpu_dispatch);
     //PROCESS_EXIT(pid);
+}
+
+void deserializar_dump_memory() {
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int pid = extraer_int_del_buffer(fd_cpu_dispatch);
+    int tid = extraer_int_del_buffer(fd_cpu_dispatch);
+    //PROCESS_EXIT(pid);
+    log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
+    DUMP_MEMORY(pid, tid);
 }

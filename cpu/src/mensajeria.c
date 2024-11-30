@@ -85,6 +85,17 @@ void process_exit(int pid) {
     eliminar_paquete(paquete);
 }
 
+void enviar_dump_memory(int pid, int tid){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, pid);
+    cargar_int_al_buffer(buffer, tid);
+    t_paquete *paquete = crear_paquete(SYSCALL_DUMP_MEMORY, buffer);
+    pthread_mutex_lock(&mutex_conexion_dispatch);
+    enviar_paquete(paquete, cliente_fd_dispatch);
+    pthread_mutex_unlock(&mutex_conexion_dispatch);
+    eliminar_paquete(paquete);
+}
+
 void actualizar_contexto(int fd_memoria){
     t_buffer *bufferCtx = crear_buffer();
 

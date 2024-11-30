@@ -159,7 +159,8 @@ void MUTEX_UNLOCK(char *recurso){
     }
 }
 
-void DUMP_MEMORY(){
-    
+void DUMP_MEMORY(int pid, int tid){
+    log_info(logger, "DUMP MEMORY en syscalls.c");
+    // implementar logica
 }
 
