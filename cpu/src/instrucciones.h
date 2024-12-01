@@ -16,7 +16,7 @@ void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad);
 void THREAD_JOIN (int tid);
 void THREAD_CANCEL (int tid, int pid);
 void MUTEX_CREATE (char *recurso);
-void MUTEX_LOCK (char* recurso);
+char* MUTEX_LOCK (char* recurso);
 void MUTEX_UNLOCK (char* recurso);
 void THREAD_EXIT(int tid, int pid);
 void PROCESS_EXIT(int pid);

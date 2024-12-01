@@ -3,6 +3,7 @@
 extern int autoincremental_pcb;
 extern t_log *logger;
 
+
 void liberar_tcb(void *ptr_tcb)
 {
     TCB *tcb = (TCB *)ptr_tcb;
@@ -79,7 +80,8 @@ void imprimir_pcb(PCB *pcb)
     imprimir_lista_ids(pcb->tids);
     printf("STATUS: %s\n", desc_status[pcb->status]);
     printf("THREADS: \n");
-    imprimir_hilos(pcb->threads);
+    //imprimir_hilos(pcb->threads);
+    printf("TAMANIO LISTA MUTEX: %i\n", list_size(pcb->mutex));
 }
 
 void imprimir_registros(REGISTROS *registros)
@@ -152,3 +154,25 @@ void cambiar_estado_hilo(TCB *tcb, STATUS estado)
 {
     tcb->status = estado;
 }
+
+
+TCB* buscar_tcb_en_cola(t_queue* cola, pthread_mutex_t mutex,int tid, int pid){
+    t_queue* cola_aux = queue_create();
+    TCB* rta = NULL;
+    while(!queue_is_empty(cola)){
+        void* elemento = desencolar(cola,mutex);
+
+        TCB* tcb = (TCB*) elemento;
+        if(tcb->tid == tid && tcb->pcb_pid == pid){
+            rta = tcb;
+        }else{
+            queue_push(cola_aux,elemento);
+        }
+    }
+    while(!queue_is_empty(cola_aux)){
+        encolar(cola,queue_pop(cola_aux),mutex);
+    }
+    queue_destroy(cola_aux);
+    return rta;
+}
+

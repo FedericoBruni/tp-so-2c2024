@@ -86,7 +86,7 @@ void enviar_contexto(int cliente_fd_dispatch){
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu = buscar_contextos(tid,pid);
 
-    printf("CTX DX Antes de mandar contexto: %i\n", contexto_cpu->contexto_hilo->Registros->DX);
+
     
     
     t_buffer *bufferRta = crear_buffer();
@@ -96,7 +96,7 @@ void enviar_contexto(int cliente_fd_dispatch){
     t_paquete *paquete = crear_paquete(cod_rta,bufferRta);
     enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
-    printf("Contexto enviado -> TID: %i, PID: %i\n", tid, pid);
+
     //enviar_contexto(cliente_fd_dispatch,contexto_cpu);
     //int rta_sol_mem = CONTEXTO_ENVIADO;
     //send(cliente_fd_dispatch, &rta_sol_mem, sizeof(op_code), 0);
@@ -123,7 +123,6 @@ void enviar_instruccion(int cliente_fd_dispatch) {
         enviar_paquete(paquete, cliente_fd_dispatch);
         eliminar_paquete(paquete);
         
-        printf("Instruccion enviada: %s\n", instruccion);
     }
     
     
@@ -142,13 +141,11 @@ CONTEXTO_CPU* buscar_contextos(int tid, int pid){
     }
 
     CONTEXTO_HILO *contexto_hilo = list_find(contextos_hilos,_hayHilo);
-    printf("CTX DX CUANDO SE BUSCA EL CONTEXTO; %i\n", contexto_hilo->Registros->DX);
     CONTEXTO_PROCESO *contexto_proceso = list_find(contextos_procesos, _hayProceso);
 
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu->contexto_hilo = contexto_hilo;
     contexto_cpu->contexto_proceso = contexto_proceso;
-    printf("CTX DX Cuando se arma el contexto cpu: %i\n",contexto_cpu->contexto_hilo->Registros->DX);
     return contexto_cpu;
 }
 
@@ -220,7 +217,6 @@ void cargar_archivo(char* nombre_archivo, int tid,int pid) {
     strcat(ruta_archivo, "/");
     strcat(ruta_archivo, nombre_archivo);
 
-    printf("String concatenado: %s\n", ruta_archivo);
 
 
     FILE* archivo = fopen(ruta_archivo, "r");
@@ -252,8 +248,6 @@ void cargar_archivo(char* nombre_archivo, int tid,int pid) {
 
 
 void leer(CONTEXTO_ARCHIVO* archivo){
-    printf("TID: %d\n", archivo->tid);
-    printf("PID: %d\n", archivo->pid);
     dictionary_iterator(archivo->instrucciones,imprimir_elemento);
 }
 void leer_archivos(){
@@ -495,7 +489,6 @@ Particion *buscar_worst_dinamicas(int tamanio) {
             return mayor_particion;
         }
         list_add_in_index(memoria_usuario->particiones, buscar_indice(mayor_particion)+1, particionSiguiente);
-        printf("particion agregada con base: %d y tamaño: %d",particionSiguiente->inicio,particionSiguiente->tamanio);
        return mayor_particion;
     }
 }
@@ -545,39 +538,30 @@ t_list *buscar_hilos_de_proceso(int pid){
 
 void agrupar_particiones(Particion* particion) {
     int indice = buscar_indice(particion);
-    printf("agrupar con indice: %d\n",indice);
-    printf("list_size: %d\n",list_size(memoria_usuario->particiones));
     if ((indice > 0)  && (list_size(memoria_usuario->particiones)  > indice)){
-        printf("entro a particion del medio\n"); //BORRAR
         Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice + 1);
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice - 1);
         if(particionSiguiente->estaOcupado == 0){
-            printf("Particion siguiente libre\n");
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
         }
         if(particionAnterior->estaOcupado == 0){
-            printf("Particion anterior libre\n");
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
             free(particionAnterior);
         }
     } else if(indice == 0){
-        printf("Entra a es primera particion\n");
         Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
         if(particionSiguiente->estaOcupado == 0){
-            printf("Particion siguiente libre\n");
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
         }
     }else if(indice == list_size(memoria_usuario->particiones) - 1 ){
-        printf("Entra a es ultima particion\n");
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
         if(particionAnterior->estaOcupado == 0){
-            printf("Particion anterior libre\n");
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
@@ -669,7 +653,6 @@ CONTEXTO_ARCHIVO *buscar_archivo(int pid, int tid){
 void leer_memoria(int direccion){
     int *dir = *((int*)memoria_usuario->memoria_usuario + direccion);
     int valor = dir;
-    printf("el valor es: %d",valor);
 }
 
 void escribir_memoria(int direccion, int valor){
@@ -686,12 +669,10 @@ pseudocódigo correspondiente a ese hilo.
 char* obtener_instruccion(int key, int pid, int tid){
     char key_diccionario[256];
     snprintf(key_diccionario, 256, "%d", key);
-    printf("Key INT: %i, Key CHAR*: %s\n", key, key_diccionario);
     
     
     CONTEXTO_ARCHIVO *archivo = buscar_archivo(pid, tid);
     char* instruccion = dictionary_get(archivo->instrucciones, key_diccionario);
-    printf("Instruccion: %s\n", instruccion);
     if (!instruccion) printf("NULL\n");
     return instruccion;
 }

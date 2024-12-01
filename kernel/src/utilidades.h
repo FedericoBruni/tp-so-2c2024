@@ -47,4 +47,7 @@ void bloquear_hilo_syscall(TCB *tcb,int tid);
 void desbloquear_bloqueados_por_hilo(int tidBloqueante);
 void replanificar(TCB *tcb);
 MUTEX *existe_mutex(char* recurso);
+void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb);
+void desbloquear_hilo_mutex(MUTEX *mutex);
+void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb);
 #endif // UTILIDADES_H_

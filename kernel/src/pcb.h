@@ -17,5 +17,6 @@ void cambiar_estado(PCB *pcb, STATUS estado);
 void cambiar_estado_hilo(TCB *tcb, STATUS estado);
 void inicializar_registros(REGISTROS *registros); 
 void imprimir_hilo(TCB* tcb);
+TCB* buscar_tcb_en_cola(t_queue* cola, pthread_mutex_t mutex,int tid, int pid);
 
 #endif

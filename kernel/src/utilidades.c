@@ -252,16 +252,17 @@ MUTEX *existe_mutex(char* recurso){
         MUTEX *mutex = (MUTEX *)ptr;
         return string_equals_ignore_case(mutex->recurso, recurso);
     }
-    list_find(mutex_sistema,_hay_recurso);
+    return list_find(mutex_sistema,_hay_recurso);
 }
 
 void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb){
     queue_push(cola_bloqueados,tcb);
     cambiar_estado_hilo(tcb, BLOCKED);
-    sem_post(&sem_hay_ready);
+    if(!queue_is_empty(cola_ready)) sem_post(&sem_hay_ready);
 }
 
 void desbloquear_hilo_mutex(MUTEX *mutex){
+    if (queue_is_empty(mutex->cola_bloqueados)) return;
     TCB *tcb = queue_pop(mutex->cola_bloqueados);
     if(tcb != NULL){
         mutex->asignadoA = tcb->tid;

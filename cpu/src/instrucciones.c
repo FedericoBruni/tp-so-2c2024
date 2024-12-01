@@ -3,6 +3,13 @@ extern CONTEXTO_CPU *contexto_en_ejecucion;
 extern t_log *logger;
 extern int cliente_fd_dispatch;
 extern int fd_memoria;
+extern sem_t sem_proceso_creado;
+extern sem_t sem_mutex_creado;
+extern sem_t sem_mutex_lockeado;
+extern sem_t sem_mutex_unlockeado;
+extern char* rta_mutex_lock;
+
+
 void SET(char *registro, uint32_t valor){
     uint32_t *reg = obtenerRegistro(registro);
 
@@ -57,7 +64,7 @@ void LOG(char *registro){
 void DUMP_MEMORY(int pid, int tid) {
     enviar_dump_memory(pid, tid);
     actualizar_contexto(fd_memoria);
-    // esperar rta?
+    // esperar rta?extern sem_t sem_mutex_lockeado;
 }
 
 void IO (int tiempo) {
@@ -70,14 +77,14 @@ void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio
     crear_proceso(archivo_de_instrucciones,tamanio_proceso,prio_hilo);
     actualizar_contexto(fd_memoria);
 
-    switch(recibir_operacion(cliente_fd_dispatch)){
-        case PROCESO_CREADO:
-            printf("Llego PROCESO_CREADO\n");
-            break;
-        default:
-            log_error(logger,"Error, codigo de operacion desconocido");
-            break;
-    }
+    sem_wait(&sem_proceso_creado);
+    // switch(recibir_operacion(cliente_fd_dispatch)){
+    //     case PROCESO_CREADO:
+    //         break;
+    //     default:
+    //         log_error(logger,"Error, codigo de operacion desconocido");
+    //         break;
+    // }
 
     
 }
@@ -99,17 +106,31 @@ void THREAD_CANCEL (int tid, int pid) {
 
 void MUTEX_CREATE (char *recurso) {
     mutex_create(recurso);
+    //sleep(5);
     actualizar_contexto(fd_memoria);
+
+    sem_wait(&sem_mutex_creado);
+    // switch(recibir_operacion(cliente_fd_dispatch)){
+    //     case MUTEX_CREADO:
+    //         log_error(logger, "Mutex creado correctamente");
+    //         break;
+    //     default:
+    //         log_error(logger,"Error, codigo de operacion desconocido");
+    //         break;
+    // }
 }
 
-void MUTEX_LOCK (char* recurso) {
+char* MUTEX_LOCK (char* recurso) {
     mutex_lock(recurso);
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_mutex_lockeado);
+    return rta_mutex_lock;
 }
 
 void MUTEX_UNLOCK (char* recurso) {
     mutex_unlock(recurso);
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_mutex_unlockeado);
 }
 
 void THREAD_EXIT(int tid, int pid) {

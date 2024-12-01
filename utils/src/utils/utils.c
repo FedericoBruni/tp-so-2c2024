@@ -8,7 +8,8 @@ char *desc_code_op[] = {
 	"DESALOJO_POR_QUANTUM","OK_FIN_QUANTUM","OK_EJECUCION", "SOLICITAR_CONTEXTO", "CONTEXTO_ENVIADO", "ACTUALIZAR_CONTEXTO", "SYSCALL_PROCESS_CREATE", "SYSCALL_THREAD_CREATE", 
 	"SYSCALL_THREAD_JOIN", "SYSCALL_THREAD_CANCEL", "SYSCALL_MUTEX_CREATE", "SYSCALL_MUTEX_LOCK", "SYSCALL_MUTEX_UNLOCK",
 	"SYSCALL_THREAD_EXIT", "SYSCALL_PROCESS_EXIT", "SOLICITAR_INSTRUCCION", "PROXIMA_INSTRUCCION", "EOF_INSTRUCCION","CONTEXTO_ACTUALIZADO_OK",
-	"CONTEXTO_ACTUALIZADO_ERROR","FIN_DE_ARCHIVO", "PROCESO_CREADO","SUSP_PROCESO", "SYSCALL_DUMP_MEMORY", "SYSCALL_IO"};
+	"CONTEXTO_ACTUALIZADO_ERROR","FIN_DE_ARCHIVO", "PROCESO_CREADO","SUSP_PROCESO", "SYSCALL_DUMP_MEMORY", "SYSCALL_IO","MUTEX_CREADO", "MUTEX_LOCKEADO", "MUTEX_UNLOCKEADO",
+	"LOCKEAR_HILO"};
 
 t_config *iniciar_config(char *ruta)
 {
@@ -117,8 +118,10 @@ int recibir_operacion(int socket_cliente)
 	int cod_op;
 
 	if (recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0){
-		printf("cod_op: %s\n",desc_code_op[cod_op]);
-		return cod_op;}
+		printf("Cod_Op: %s\n", desc_code_op[cod_op]);
+		return cod_op;
+	}
+		
 	else
 	{
 		close(socket_cliente);
@@ -142,15 +145,12 @@ void rechazar_handshake(t_log *logger, int socket_cliente)
 
 int realizar_handshake(t_log *logger, int socket_servidor, op_code handshake)
 {
-	printf("a\n");
 	if (enviar_handshake(logger, socket_servidor, handshake) == -1)
 	{
 		close(socket_servidor);
 		log_error(logger, "No se pudo realizar el handshake con el servidor");
-		printf("c\n");
 		return -1;
 	}
-	printf("b\n");
 	return 0;
 }
 
@@ -441,7 +441,6 @@ CONTEXTO_HILO *extraer_tcb_del_buffer(t_buffer *buffer){
     contexto->pid = extraer_int_del_buffer(buffer);
     contexto->archivo_pseudocodigo = extraer_string_del_buffer(buffer);
     contexto->Registros = extraer_registros_del_buffer(buffer);
-	printf("CTX DX: %i\n", contexto->Registros->DX);
     return contexto;
 }
 

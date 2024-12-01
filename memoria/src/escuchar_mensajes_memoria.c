@@ -30,7 +30,6 @@ void escuchar_mensajes_kernel(void)
                 contexto_proceso->BASE = particion->inicio;
                 contexto_proceso->LIMITE = particion->inicio + particion->tamanio;
                 list_add(contextos_procesos, contexto_proceso);
-                printf("Contexto recibido\nPID: %i\nBASE: %i\nLIMITE: %i\n", contexto_proceso->pid, contexto_proceso->BASE, contexto_proceso->LIMITE);
                 int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
                 send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0); 
             } else {
@@ -49,7 +48,6 @@ void escuchar_mensajes_kernel(void)
         case SOLICITAR_CREACION_HILO:
             buffer = recibir_buffer_completo(cliente_fd_kernel);
             CONTEXTO_HILO *contexto_hilo = extraer_tcb_del_buffer(buffer);
-            printf("Case solicitar creacion, DX: %i\n", contexto_hilo->Registros->DX);
             list_add(contextos_hilos,contexto_hilo);
             cargar_archivo(contexto_hilo->archivo_pseudocodigo, contexto_hilo->tid,contexto_hilo->pid);
             log_info(logger, "Creando hilo con id: %i", contexto_hilo->tid);
@@ -106,15 +104,12 @@ void escuchar_mensajes_cpu(void)
             aceptar_handshake(logger, cliente_fd_dispatch, HANDSHAKE_CPU_MEMORIA);
             break;
         case SOLICITAR_CONTEXTO:
-            printf("Contexto solicitado\n");
             enviar_contexto(cliente_fd_dispatch);
             break;
         case ACTUALIZAR_CONTEXTO:
-            printf("Actualizando contexto");
             actualizar_contexto(cliente_fd_dispatch);
             break;
         case SOLICITAR_INSTRUCCION:
-            printf("Instruccion solicitada\n");
             enviar_instruccion(cliente_fd_dispatch);
             break;
         case -1:

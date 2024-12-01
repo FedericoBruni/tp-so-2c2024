@@ -11,6 +11,10 @@ CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 sem_t sem_ejecucion;
+sem_t sem_proceso_creado;
+sem_t sem_mutex_creado;
+sem_t sem_mutex_lockeado;
+sem_t sem_mutex_unlockeado;
 pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
 
@@ -24,8 +28,14 @@ void iniciar_cpu(void)
     log_level = config_get_string_value(config, "LOG_LEVEL");
     logger = iniciar_logger("logCpu.log", "Cpu", log_level_from_string(log_level));
     inicializar_semaforo(&sem_ejecucion,"sem_ejecucion",0);
+    inicializar_semaforo(&sem_proceso_creado, "sem_proceso_creado", 0);
+    inicializar_semaforo(&sem_mutex_creado, "sem_mutex_creado", 0);
+    inicializar_semaforo(&sem_mutex_lockeado, "sem_mutex_lockeado", 0);
+    inicializar_semaforo(&sem_mutex_unlockeado, "sem_mutex_unlockeado", 0);
     inicializar_mutex(&mutex_conexion_dispatch,"mutex_dispatch");
     inicializar_mutex(&mutex_conexion_memoria, "mutex memoria");
+
+
 }
 
 void inicializar_semaforo(sem_t* semaforo, char* nombre, int valor){

@@ -3,6 +3,11 @@
 extern t_log *logger;
 extern int cliente_fd_dispatch;
 extern int cliente_fd_interrupt;
+extern sem_t sem_proceso_creado;
+extern sem_t sem_mutex_creado;
+extern sem_t sem_mutex_lockeado;
+extern sem_t sem_mutex_unlockeado;
+char* rta_mutex_lock;
 
 void escuchar_mensajes_kernel_dispatch(void)
 {
@@ -23,7 +28,24 @@ void escuchar_mensajes_kernel_dispatch(void)
 			recibir_exec(logger,cliente_fd_dispatch,cod_op);
 			break;
 
-		
+		case PROCESO_CREADO:
+			sem_post(&sem_proceso_creado);
+			break;
+		case MUTEX_CREADO:
+			sem_post(&sem_mutex_creado);
+			break;
+		case MUTEX_LOCKEADO:
+			rta_mutex_lock = "OK";
+			sem_post(&sem_mutex_lockeado);
+			break;
+		case MUTEX_UNLOCKEADO:
+			sem_post(&sem_mutex_unlockeado);
+			break;	
+
+		case LOCKEAR_HILO:
+			rta_mutex_lock = "SUSPPROCESO";
+			sem_post(&sem_mutex_lockeado);
+			break;
 			
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");

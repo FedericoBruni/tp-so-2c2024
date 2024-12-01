@@ -77,48 +77,51 @@ char* fetch() {
     return instruccion;
 }
 
+char* corregir_linea(char* string) {
+    if(string[strlen(string)-1] == '\n')
+            string[strlen(string)-1] = '\0';
+    return string;
+}
+
 char* decode(char* instruccion) {
     if(!instruccion) return NULL;
     char** lista = string_split(instruccion, " ");
     char* instr = lista[0];
     if (string_equals_ignore_case(instr, "SET")){
         char* registro = lista[1];
-        int valor = atoi(lista[2]);
+        int valor = atoi(corregir_linea(lista[2]));
         SET(registro,valor);
         return "OK";
     } else if (string_equals_ignore_case(instr, "READ_MEM")){
         char* registroDatos = lista[1];
-        char* registroDireccion = lista[2];
-        registroDireccion[strlen(registroDireccion)-1] = '\0';
+        char* registroDireccion = corregir_linea(lista[2]);
         READ_MEM(registroDatos, registroDireccion);
         return "OK";
         
     } else if (string_equals_ignore_case(instr, "WRITE_MEM")){
+
         
     } else if (string_equals_ignore_case(instr, "SUM")){
         char* registroDestino = lista[1];
         printf("destino: %s\n",registroDestino);
-        char* registroOrigen = lista[2];
-        registroOrigen[strlen(registroOrigen)-1] = '\0';
+        //char* registroOrigen = lista[2];
+        char* registroOrigen = corregir_linea(lista[2]);
+        //registroOrigen[strlen(registroOrigen)-1] = '\0';
         printf("origen: %s\n",registroOrigen);
         SUM(registroDestino,registroOrigen);
         return "OK";
     } else if (string_equals_ignore_case(instr, "SUB")){
         char* registroDestino = lista[1];
-        printf("destino: %s\n",registroDestino);
-        char* registroOrigen = lista[2];
-        registroOrigen[strlen(registroOrigen)-1] = '\0';
-        printf("origen: %s\n",registroOrigen);
+        char* registroOrigen = corregir_linea(lista[2]);
         SUB(registroDestino,registroOrigen);
         return "OK";
     } else if (string_equals_ignore_case(instr, "JNZ")){
         char* registro = lista[1];
-        int valor = atoi(lista[2]);
+        int valor = atoi(corregir_linea(lista[2]));
         JNZ(registro,valor);
         return "OK";
     } else if (string_equals_ignore_case(instr, "LOG")){
-        char* registro = lista[1];
-        registro[strlen(registro)-1] = '\0';
+        char* registro = corregir_linea(lista[1]);
         LOG(registro);
         return "OK";
     } else if (string_equals_ignore_case(instr, "DUMP_MEMORY")){
@@ -126,11 +129,9 @@ char* decode(char* instruccion) {
         return "OK";
         
     } else if (string_equals_ignore_case(instr, "IO")){
-        char* milisegundos = lista[1];
-        milisegundos[strlen(milisegundos)-1] = '\0';
-        IO(atoi(milisegundos));
+        int milisegundos = atoi(lista[1]);
+        IO(milisegundos);
         return "OK";
-        
     } else if (string_equals_ignore_case(instr, "PROCESS_CREATE")){
         char* archivo = lista[1];
         int tam = atoi(lista[2]);
@@ -147,13 +148,22 @@ char* decode(char* instruccion) {
         THREAD_JOIN(tid);
         return "SUSPPROCESO";
     } else if (string_equals_ignore_case(instr, "THREAD_CANCEL")){
-        
+        int tid = atoi(lista[1]);
+        //printf("TID: %i, PID: %i\n", tid, contexto_en_ejecucion->contexto_hilo->pid);
+        THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "MUTEX_CREATE")){
-        
+        char* recurso = corregir_linea(lista[1]);
+        MUTEX_CREATE(recurso);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "MUTEX_LOCK")){
-        
+        char* recurso = corregir_linea(lista[1]);
+        char* rta = MUTEX_LOCK(recurso);
+        return rta;
     } else if (string_equals_ignore_case(instr, "MUTEX_UNLOCK")){
-        
+        char* recurso = corregir_linea(lista[1]);
+        MUTEX_UNLOCK(recurso);
+        return "OK";
     } else if (string_equals_ignore_case(instr, "THREAD_EXIT")){
         
     } else if (string_equals_ignore_case(instr, "PROCESS_EXIT")){
@@ -163,7 +173,6 @@ char* decode(char* instruccion) {
     //sem_post(&sem_ejecucion);
     //printf("POST\n");
 }
-
 
 void imprimir_ctx_cpu(CONTEXTO_CPU *contexto_cpu) {
     

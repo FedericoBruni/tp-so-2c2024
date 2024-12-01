@@ -8,9 +8,10 @@ void PROCESS_EXIT(TCB *tcb);
 void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad);
 void THREAD_EXIT(TCB *tcb);
 void THREAD_JOIN(int tid);
-void THREAD_CANCEL(TCB *tcb);
+void THREAD_CANCEL(int tid, int pid);
 void MUTEX_CREATE(char* recurso);
 void MUTEX_LOCK(char* recurso);
+void MUTEX_UNLOCK(char* recurso);
 void DUMP_MEMORY(int pid, int tid);
 
 #endif

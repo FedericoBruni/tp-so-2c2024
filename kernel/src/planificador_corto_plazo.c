@@ -48,6 +48,7 @@ void fifo(){
         log_info(logger,"Planificando TCB %d,PID %d con algoritmo FIFO\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid); 
         cambiar_estado_hilo(tcb, EXEC);
         pcb_en_ejecucion = tcb_en_ejecucion->pcb;
+        log_error(logger,"PID: %d",pcb_en_ejecucion->pid);
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
         if (esperar_respuesta() == 1){
             continue;
@@ -92,7 +93,7 @@ void multinivel(){
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
         esperar_respuesta();
         pthread_cancel(hilo_contador);
-        printf("hilo cancelado del proceso: %i, hilo: %i\n",tcb_en_ejecucion->pcb_pid,tcb_en_ejecucion->tid);
+
         }
     }
 }
@@ -105,17 +106,14 @@ void fin_de_quantum(int quantumCola){
     sleep(quantumCola);
     int pid = tcb_en_ejecucion->pcb_pid;
     int tid = tcb_en_ejecucion->tid;
-    printf("Enviando interrupcion fin de quantum del proceso: %i, hilo: %i\n", pid,tid);
     enviar_fin_quantum(tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
     //TODO mandar interrupt a cpu
 }
 
 
 void printear_colas_y_prioridades(){
-    printf("Colas de prioridad\n");
     for (unsigned int i = 0; i < list_size(colas_prioridades); i++){
         COLA_PRIORIDAD* cola_prioridad = list_get(colas_prioridades, i);
-        printf("Cola de prioridad: %i\n", cola_prioridad->prioridad);
     }
 }
 
