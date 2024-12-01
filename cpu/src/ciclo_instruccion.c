@@ -87,6 +87,11 @@ char* decode(char* instruccion) {
         SET(registro,valor);
         return "OK";
     } else if (string_equals_ignore_case(instr, "READ_MEM")){
+        char* registroDatos = lista[1];
+        char* registroDireccion = lista[2];
+        registroDireccion[strlen(registroDireccion)-1] = '\0';
+        READ_MEM(registroDatos, registroDireccion);
+        return "OK";
         
     } else if (string_equals_ignore_case(instr, "WRITE_MEM")){
         
@@ -121,6 +126,10 @@ char* decode(char* instruccion) {
         return "OK";
         
     } else if (string_equals_ignore_case(instr, "IO")){
+        char* milisegundos = lista[1];
+        milisegundos[strlen(milisegundos)-1] = '\0';
+        IO(atoi(milisegundos));
+        return "OK";
         
     } else if (string_equals_ignore_case(instr, "PROCESS_CREATE")){
         char* archivo = lista[1];

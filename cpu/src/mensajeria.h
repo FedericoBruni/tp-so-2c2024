@@ -15,5 +15,6 @@ void mutex_unlock(char* recurso);
 void thread_exit(int tid, int pid);
 void process_exit(int pid);
 void enviar_dump_memory(int pid, int tid);
+void enviar_io(int tiempo);
 
 #endif /*MENSAJERIA_H*/

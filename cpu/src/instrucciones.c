@@ -9,9 +9,19 @@ void SET(char *registro, uint32_t valor){
     *reg = valor;
 }
 
-// void READ_MEM(){
+// Lee el valor de memoria correspondiente a la dirección física obtenida a partir de la Dirección Lógica 
+// que se encuentra en el Registro Dirección y lo almacena en el Registro Datos.
+void READ_MEM(char* registroDatos, char* registroDireccion){
+    // DF = obtener_dir_fisica(registroDireccion)
+    // contenido = leer_dir_fisica(DF)
+    // obtener_registro(registroDatos) = contenido
+    // las direcciones lógicas son el desplazamiento dentro de la partición en la que se encuentra el proceso.
+    // las direcciones físicas se generarán como: [Base + desplazamiento]
+    // Se debe validar que las solicitudes se encuentren dentro de la partición asignada,  es decir que sea menor al límite de la 
+    // partición. De fallar dicha validación, ocurrirá un “Segmentation Fault”, en cuyo caso, se deberá actualizar el contexto 
+    // de ejecución en Memoria y devolver el Tid al Kernel con motivo de Segmentation Fault.
 
-// }
+}
 
 // void WRITE MEM(){
 
@@ -47,11 +57,13 @@ void LOG(char *registro){
 void DUMP_MEMORY(int pid, int tid) {
     enviar_dump_memory(pid, tid);
     actualizar_contexto(fd_memoria);
-    //hay q esperar respuesta?
+    // esperar rta?
 }
 
 void IO (int tiempo) {
-
+    enviar_io(tiempo);
+    actualizar_contexto(fd_memoria); // xq es syscall, pero lo necesitamos?
+    // esperar rta?
 }
 
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){
