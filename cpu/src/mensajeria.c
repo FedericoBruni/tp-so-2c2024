@@ -122,6 +122,25 @@ void actualizar_contexto(int fd_memoria){
             break;
 
     }
-    
-    
+}
+
+void enviar_write_mem(int valor, int direccion_fisica){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, valor);
+    cargar_int_al_buffer(buffer, direccion_fisica);
+    t_paquete *paquete = crear_paquete(WRITE_MEM, buffer);
+    pthread_mutex_lock(&mutex_conexion_memoria);
+    enviar_paquete(paquete, fd_memoria);
+    pthread_mutex_unlock(&mutex_conexion_memoria);
+    eliminar_paquete(paquete);
+}
+
+void enviar_read_mem(int direccion_fisica){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, direccion_fisica);
+    t_paquete *paquete = crear_paquete(READ_MEM, buffer);
+    pthread_mutex_lock(&mutex_conexion_memoria);
+    enviar_paquete(paquete, fd_memoria);
+    pthread_mutex_unlock(&mutex_conexion_memoria);
+    eliminar_paquete(paquete);
 }

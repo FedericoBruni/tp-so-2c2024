@@ -95,11 +95,14 @@ char* decode(char* instruccion) {
     } else if (string_equals_ignore_case(instr, "READ_MEM")){
         char* registroDatos = lista[1];
         char* registroDireccion = corregir_linea(lista[2]);
-        READ_MEM(registroDatos, registroDireccion);
+        read_mem(registroDatos, registroDireccion);
         return "OK";
         
     } else if (string_equals_ignore_case(instr, "WRITE_MEM")){
-
+        char* registroDatos = lista[1];
+        char* registroDireccion = corregir_linea(lista[2]);
+        write_mem(registroDatos, registroDireccion);
+        return "OK";
         
     } else if (string_equals_ignore_case(instr, "SUM")){
         char* registroDestino = lista[1];
@@ -164,7 +167,8 @@ char* decode(char* instruccion) {
         char* recurso = corregir_linea(lista[1]);
         MUTEX_UNLOCK(recurso);
         return "OK";
-    } else if (string_equals_ignore_case(instr, "THREAD_EXIT\n")){
+    } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_EXIT")){
+        log_trace(logger, "THEXIT");
         THREAD_EXIT();
         return "SUSPPROCESO";
     } else if (string_equals_ignore_case(instr, "PROCESS_EXIT\n")){

@@ -20,8 +20,23 @@ void SET(char *registro, uint32_t valor){
 
 // Lee el valor de memoria correspondiente a la dirección física obtenida a partir de la Dirección Lógica 
 // que se encuentra en el Registro Dirección y lo almacena en el Registro Datos.
-void READ_MEM(char* registroDatos, char* registroDireccion){
-    // DF = obtener_dir_fisica(registroDireccion)
+void read_mem(char* registroDatos, char* registroDireccion){
+    int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
+    log_trace(logger, "Dir física: %i", dir_fisica);
+    if (dir_fisica == -1) {
+        log_error(logger, "ERROR");
+        return; // en realidad hay q hacer lo del segmentation fault
+    }
+    enviar_read_mem(dir_fisica);
+    switch(recibir_operacion(fd_memoria)){
+        case WRITE_MEM_RTA:
+            log_trace(logger, "Dato escrito");
+            break;
+        default:
+            log_error(logger,"Error, codigo de operacion desconocido");
+            break;
+    }
+
     // contenido = leer_dir_fisica(DF)
     // obtener_registro(registroDatos) = contenido
     // las direcciones lógicas son el desplazamiento dentro de la partición en la que se encuentra el proceso.
@@ -32,9 +47,32 @@ void READ_MEM(char* registroDatos, char* registroDireccion){
 
 }
 
-// void WRITE MEM(){
 
-// }
+int deserializar_rta_read_mem(int fd_memoria) {
+    t_buffer* buffer = recibir_buffer_completo(fd_memoria);
+    return extraer_int_del_buffer(buffer);
+
+}
+
+void write_mem(char* registroDatos, char* registroDireccion){
+    int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
+    log_trace(logger, "Dir física: %i", dir_fisica);
+    if (dir_fisica == -1) {
+        log_error(logger, "ERROR");
+        return; // en realidad hay q hacer lo del segmentation fault
+    }
+    int valor = *obtenerRegistro(registroDatos);
+    enviar_write_mem(valor, dir_fisica);
+    switch(recibir_operacion(fd_memoria)){
+        case READ_MEM_RTA:
+            int dato = deserializar_rta_read_mem(fd_memoria);
+            log_trace(logger, "Dato leido: %i", dato);
+            break;
+        default:
+            log_error(logger,"Error, codigo de operacion desconocido");
+            break;
+    }
+}
 
 void SUM(char *registro_destino, char *registro_origen){
     uint32_t *destino = obtenerRegistro(registro_destino);

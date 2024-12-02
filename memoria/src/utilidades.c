@@ -650,9 +650,8 @@ CONTEXTO_ARCHIVO *buscar_archivo(int pid, int tid){
     return list_find(archivos,_esArchivo);
 }
 
-void leer_memoria(int direccion){
-    int *dir = *((int*)memoria_usuario->memoria_usuario + direccion);
-    int valor = dir;
+int leer_memoria(int direccion){
+    return *((int*)memoria_usuario->memoria_usuario + direccion);
 }
 
 void escribir_memoria(int direccion, int valor){
@@ -677,8 +676,34 @@ char* obtener_instruccion(int key, int pid, int tid){
     return instruccion;
 }
 
+void deserializar_write_mem(int cliente_fd_dispatch) {
+    t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
+    int valor = extraer_int_del_buffer(buffer);
+    int direccion = extraer_int_del_buffer(buffer);
+    log_trace(logger, "Dirección en deserializar_write_mem: %i", direccion);
+    log_trace(logger, "Valor en deserializar_write_mem: %i", valor);
+    escribir_memoria(direccion, valor);
+    //WRITE_MEM_RTA
+    int rta = WRITE_MEM_RTA;
+    send(cliente_fd_dispatch, &rta, sizeof(op_code), 0);
+}
+
+void deserializar_read_mem(cliente_fd_dispatch) {
+    t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
+    int direccion = extraer_int_del_buffer(buffer);
+    log_trace(logger, "Dirección en deserializar_read_mem: %i", direccion);
+    enviar_lectura(leer_memoria(direccion));
 
 
+}
+
+void enviar_lectura(int dato) {
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, dato);
+    t_paquete *paquete = crear_paquete(READ_MEM_RTA, buffer);
+    enviar_paquete(paquete, cliente_fd_dispatch);
+    eliminar_paquete(paquete);
+}
 
 
 

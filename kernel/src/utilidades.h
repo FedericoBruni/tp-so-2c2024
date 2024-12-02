@@ -14,7 +14,6 @@
 #include "syscalls.h"
 #include "mensajeria.h"
 #include "pcb.h"
-#include "MMU.h"
 #include <semaphore.h>
 #include <commons/string.h>
 #include <commons/temporal.h>

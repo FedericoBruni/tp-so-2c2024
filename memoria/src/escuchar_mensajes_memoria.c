@@ -112,6 +112,12 @@ void escuchar_mensajes_cpu(void)
         case SOLICITAR_INSTRUCCION:
             enviar_instruccion(cliente_fd_dispatch);
             break;
+        case WRITE_MEM:
+            deserializar_write_mem(cliente_fd_dispatch);
+            break;
+        case READ_MEM:
+            deserializar_read_mem(cliente_fd_dispatch);
+            break;
         case -1:
             log_error(logger, "Cpu desconectado\n");
             cliente_fd_dispatch = -1;

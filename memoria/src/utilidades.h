@@ -33,5 +33,10 @@ Particion *buscar_best_fijas(int tamanio);
 Particion *buscar_worst_fijas(int tamanio);
 void finalizacion_de_proceso(int pid);
 void eliminar_hilo_y_contexto(int tid, int pid);
+int leer_memoria(int direccion);
+void escribir_memoria(int direccion, int valor);
+void deserializar_write_mem(int cliente_fd_dispatch);
+void deserializar_read_mem(int cliente_fd_dispatch);
+void enviar_lectura(int dato);
 
 #endif // UTILIDADES_H_
