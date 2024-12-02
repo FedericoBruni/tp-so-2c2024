@@ -28283,3 +28283,531 @@
 [ERROR] 21:05:07:752 Cpu/(52481:52579): Dispatch desconectado
 
 [INFO] 21:05:07:752 Cpu/(52481:52481): Finalizando ejecución de CPU
+[TRACE] 22:29:50:394 Cpu/(3039:3039): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:29:50:394 Cpu/(3039:3039): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:29:50:394 Cpu/(3039:3039): Conexión exitosa
+[INFO] 22:29:50:395 Cpu/(3039:3039): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:30:38:000 Cpu/(3039:3039): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:30:38:000 Cpu/(3039:3039): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:30:38:001 Cpu/(3039:3427): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:30:38:002 Cpu/(3039:3429): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:30:39:011 Cpu/(3039:3427): Recibido EXEC (0 y 0):
+[INFO] 22:30:39:011 Cpu/(3039:3427): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:30:39:011 Cpu/(3039:3427): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:30:39:011 Cpu/(3039:3428): Dir física: 9
+[ERROR] 22:30:39:012 Cpu/(3039:3428): Error, codigo de operacion desconocido
+[TRACE] 22:30:39:012 Cpu/(3039:3428): Dir física: 10
+[ERROR] 22:30:39:012 Cpu/(3039:3428): Error, codigo de operacion desconocido
+[ERROR] 22:30:39:013 Cpu/(3039:3428): Error al intentar obtener la instruccion: 5
+[ERROR] 22:31:32:110 Cpu/(3039:3427): Dispatch desconectado
+
+[ERROR] 22:31:32:110 Cpu/(3039:3429): Interrupt desconectado
+
+[INFO] 22:31:32:111 Cpu/(3039:3039): Finalizando ejecución de CPU
+[TRACE] 22:31:35:201 Cpu/(3777:3777): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:31:35:201 Cpu/(3777:3777): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:31:35:202 Cpu/(3777:3777): Conexión exitosa
+[INFO] 22:31:35:203 Cpu/(3777:3777): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:31:36:498 Cpu/(3777:3777): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:31:36:499 Cpu/(3777:3777): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:31:36:500 Cpu/(3777:3875): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:31:36:501 Cpu/(3777:3877): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:31:37:504 Cpu/(3777:3875): Recibido EXEC (0 y 0):
+[INFO] 22:31:37:504 Cpu/(3777:3875): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:31:37:504 Cpu/(3777:3875): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:31:37:505 Cpu/(3777:3876): Dir física: 10
+[ERROR] 22:31:37:505 Cpu/(3777:3876): Error, codigo de operacion desconocido
+[TRACE] 22:31:37:506 Cpu/(3777:3876): Dir física: 10
+[ERROR] 22:31:37:506 Cpu/(3777:3876): Error, codigo de operacion desconocido
+[ERROR] 22:31:37:506 Cpu/(3777:3876): Error al intentar obtener la instruccion: 5
+[ERROR] 22:31:47:990 Cpu/(3777:3875): Dispatch desconectado
+
+[ERROR] 22:31:47:990 Cpu/(3777:3877): Interrupt desconectado
+
+[INFO] 22:31:47:991 Cpu/(3777:3777): Finalizando ejecución de CPU
+[TRACE] 22:32:06:688 Cpu/(4242:4242): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:32:06:689 Cpu/(4242:4242): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:32:06:690 Cpu/(4242:4242): Conexión exitosa
+[INFO] 22:32:06:690 Cpu/(4242:4242): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:32:07:304 Cpu/(4242:4242): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:32:07:304 Cpu/(4242:4242): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:32:07:305 Cpu/(4242:4340): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:32:07:305 Cpu/(4242:4342): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:32:08:308 Cpu/(4242:4340): Recibido EXEC (0 y 0):
+[INFO] 22:32:08:308 Cpu/(4242:4340): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:32:08:308 Cpu/(4242:4340): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:32:08:309 Cpu/(4242:4341): Dir física: 10
+[ERROR] 22:32:08:309 Cpu/(4242:4341): Error, codigo de operacion desconocido
+[TRACE] 22:32:08:310 Cpu/(4242:4341): Dir física: 10
+[ERROR] 22:32:08:310 Cpu/(4242:4341): Error, codigo de operacion desconocido
+[ERROR] 22:32:08:310 Cpu/(4242:4341): Error al intentar obtener la instruccion: 5
+[ERROR] 22:35:00:038 Cpu/(4242:4340): Dispatch desconectado
+
+[ERROR] 22:35:00:038 Cpu/(4242:4342): Interrupt desconectado
+
+[INFO] 22:35:00:042 Cpu/(4242:4242): Finalizando ejecución de CPU
+[TRACE] 22:35:02:711 Cpu/(4680:4680): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:35:02:711 Cpu/(4680:4680): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:35:02:712 Cpu/(4680:4680): Conexión exitosa
+[INFO] 22:35:02:713 Cpu/(4680:4680): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:35:03:257 Cpu/(4680:4680): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:35:03:257 Cpu/(4680:4680): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:35:03:259 Cpu/(4680:4778): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:03:259 Cpu/(4680:4780): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:04:262 Cpu/(4680:4778): Recibido EXEC (0 y 0):
+[INFO] 22:35:04:262 Cpu/(4680:4778): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:35:04:262 Cpu/(4680:4778): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:35:04:262 Cpu/(4680:4779): Dir física: 10
+[ERROR] 22:35:04:262 Cpu/(4680:4779): Error, codigo de operacion desconocido
+[TRACE] 22:35:04:263 Cpu/(4680:4779): Dir física: 10
+[ERROR] 22:35:04:263 Cpu/(4680:4779): Error, codigo de operacion desconocido
+[ERROR] 22:35:04:263 Cpu/(4680:4779): Error al intentar obtener la instruccion: 5
+[ERROR] 22:35:50:343 Cpu/(4680:4778): Dispatch desconectado
+
+[ERROR] 22:35:50:344 Cpu/(4680:4780): Interrupt desconectado
+
+[INFO] 22:35:50:346 Cpu/(4680:4680): Finalizando ejecución de CPU
+[TRACE] 22:35:53:209 Cpu/(5119:5119): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:35:53:209 Cpu/(5119:5119): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:35:53:210 Cpu/(5119:5119): Conexión exitosa
+[INFO] 22:35:53:211 Cpu/(5119:5119): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:35:53:925 Cpu/(5119:5119): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:35:53:925 Cpu/(5119:5119): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:35:53:926 Cpu/(5119:5217): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:53:926 Cpu/(5119:5219): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:54:929 Cpu/(5119:5217): Recibido EXEC (0 y 0):
+[INFO] 22:35:54:929 Cpu/(5119:5217): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:35:54:929 Cpu/(5119:5217): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:35:54:930 Cpu/(5119:5218): Dir física: 10
+[ERROR] 22:36:12:917 Cpu/(5119:5217): Dispatch desconectado
+
+[ERROR] 22:36:12:917 Cpu/(5119:5219): Interrupt desconectado
+
+[INFO] 22:36:12:926 Cpu/(5119:5119): Finalizando ejecución de CPU
+[TRACE] 22:37:59:518 Cpu/(5638:5638): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:37:59:518 Cpu/(5638:5638): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:37:59:519 Cpu/(5638:5638): Conexión exitosa
+[INFO] 22:37:59:519 Cpu/(5638:5638): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:38:00:321 Cpu/(5638:5638): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:38:00:321 Cpu/(5638:5638): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:38:00:322 Cpu/(5638:5736): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:38:00:323 Cpu/(5638:5738): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:38:01:327 Cpu/(5638:5736): Recibido EXEC (0 y 0):
+[INFO] 22:38:01:327 Cpu/(5638:5736): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:38:01:328 Cpu/(5638:5736): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:38:01:329 Cpu/(5638:5737): Dir física: 10
+[ERROR] 22:38:01:329 Cpu/(5638:5737): entre al mutex
+[ERROR] 22:38:01:329 Cpu/(5638:5737): sali del mutex
+[ERROR] 22:38:15:168 Cpu/(5638:5736): Dispatch desconectado
+
+[ERROR] 22:38:15:168 Cpu/(5638:5738): Interrupt desconectado
+
+[INFO] 22:38:15:170 Cpu/(5638:5638): Finalizando ejecución de CPU
+[TRACE] 22:39:27:888 Cpu/(6077:6077): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:39:27:888 Cpu/(6077:6077): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:39:27:888 Cpu/(6077:6077): Conexión exitosa
+[INFO] 22:39:27:889 Cpu/(6077:6077): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:39:28:399 Cpu/(6077:6077): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:39:28:400 Cpu/(6077:6077): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:39:28:401 Cpu/(6077:6175): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:39:28:401 Cpu/(6077:6177): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:39:29:405 Cpu/(6077:6175): Recibido EXEC (0 y 0):
+[INFO] 22:39:29:405 Cpu/(6077:6175): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:39:29:405 Cpu/(6077:6175): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:39:29:406 Cpu/(6077:6176): Dir física: 10
+[ERROR] 22:39:29:406 Cpu/(6077:6176): ENTRO A WRITE_MEM_RTA
+[ERROR] 22:42:04:999 Cpu/(6077:6175): Dispatch desconectado
+
+[ERROR] 22:42:04:999 Cpu/(6077:6177): Interrupt desconectado
+
+[INFO] 22:42:05:002 Cpu/(6077:6077): Finalizando ejecución de CPU
+[TRACE] 22:42:07:235 Cpu/(6594:6594): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:42:07:235 Cpu/(6594:6594): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:42:07:236 Cpu/(6594:6594): Conexión exitosa
+[INFO] 22:42:07:236 Cpu/(6594:6594): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:42:07:788 Cpu/(6594:6594): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:42:07:788 Cpu/(6594:6594): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:42:07:790 Cpu/(6594:6692): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:42:07:791 Cpu/(6594:6694): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:42:08:796 Cpu/(6594:6692): Recibido EXEC (0 y 0):
+[INFO] 22:42:08:796 Cpu/(6594:6692): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:42:08:797 Cpu/(6594:6692): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:42:08:798 Cpu/(6594:6693): Dir física: 10
+[ERROR] 22:42:08:798 Cpu/(6594:6693): Error, codigo de operacion desconocido
+[ERROR] 22:42:08:799 Cpu/(6594:6693): Error al intentar obtener la instruccion: 3
+[ERROR] 22:44:14:968 Cpu/(6594:6692): Dispatch desconectado
+
+[ERROR] 22:44:14:968 Cpu/(6594:6694): Interrupt desconectado
+
+[INFO] 22:44:14:970 Cpu/(6594:6594): Finalizando ejecución de CPU
+[TRACE] 22:44:17:239 Cpu/(7028:7028): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:44:17:239 Cpu/(7028:7028): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:44:17:241 Cpu/(7028:7028): Conexión exitosa
+[INFO] 22:44:17:242 Cpu/(7028:7028): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:44:17:512 Cpu/(7028:7028): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:44:17:512 Cpu/(7028:7028): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:44:17:513 Cpu/(7028:7126): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:44:17:514 Cpu/(7028:7128): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:44:18:516 Cpu/(7028:7126): Recibido EXEC (0 y 0):
+[INFO] 22:44:18:516 Cpu/(7028:7126): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:44:18:516 Cpu/(7028:7126): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:44:18:517 Cpu/(7028:7127): Dir física: 10
+[TRACE] 22:44:18:517 Cpu/(7028:7127): Dato escrito
+[TRACE] 22:44:18:517 Cpu/(7028:7127): Dir física: 10
+[TRACE] 22:44:18:517 Cpu/(7028:7127): Dato leido: 9
+[INFO] 22:44:18:518 Cpu/(7028:7127): El valor del registro DX es: 0
+[INFO] 22:44:18:518 Cpu/(7028:7127): Fin del archivo
+[ERROR] 22:45:02:103 Cpu/(7028:7126): Dispatch desconectado
+
+[ERROR] 22:45:02:103 Cpu/(7028:7128): Interrupt desconectado
+
+[INFO] 22:45:02:106 Cpu/(7028:7028): Finalizando ejecución de CPU
+[TRACE] 22:45:04:131 Cpu/(7435:7435): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:45:04:132 Cpu/(7435:7435): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:45:04:132 Cpu/(7435:7435): Conexión exitosa
+[INFO] 22:45:04:133 Cpu/(7435:7435): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:45:04:497 Cpu/(7435:7435): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:45:04:498 Cpu/(7435:7435): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:45:04:499 Cpu/(7435:7533): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:45:04:499 Cpu/(7435:7535): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:45:05:504 Cpu/(7435:7533): Recibido EXEC (0 y 0):
+[INFO] 22:45:05:504 Cpu/(7435:7533): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:45:05:504 Cpu/(7435:7533): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:45:05:505 Cpu/(7435:7534): Dir física: 10
+[TRACE] 22:45:05:506 Cpu/(7435:7534): Dato escrito
+[TRACE] 22:45:05:507 Cpu/(7435:7534): Dir física: 10
+[TRACE] 22:45:05:507 Cpu/(7435:7534): Dato leido: 9
+[INFO] 22:45:05:508 Cpu/(7435:7534): El valor del registro DX es: 0
+[INFO] 22:45:05:508 Cpu/(7435:7534): El valor del registro AX es: 10
+[INFO] 22:45:05:509 Cpu/(7435:7534): Fin del archivo
+[ERROR] 22:46:28:147 Cpu/(7435:7533): Dispatch desconectado
+
+[ERROR] 22:46:28:147 Cpu/(7435:7535): Interrupt desconectado
+
+[INFO] 22:46:28:149 Cpu/(7435:7435): Finalizando ejecución de CPU
+[TRACE] 22:46:30:095 Cpu/(7911:7911): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:46:30:095 Cpu/(7911:7911): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:46:30:096 Cpu/(7911:7911): Conexión exitosa
+[INFO] 22:46:30:097 Cpu/(7911:7911): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:46:30:383 Cpu/(7911:7911): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:46:30:383 Cpu/(7911:7911): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:46:30:384 Cpu/(7911:8009): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:46:30:385 Cpu/(7911:8011): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:46:31:388 Cpu/(7911:8009): Recibido EXEC (0 y 0):
+[INFO] 22:46:31:389 Cpu/(7911:8009): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:46:31:389 Cpu/(7911:8009): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:46:31:390 Cpu/(7911:8010): Dir física: 10
+[TRACE] 22:46:31:391 Cpu/(7911:8010): Dato escrito
+[TRACE] 22:46:31:391 Cpu/(7911:8010): Dir física: 10
+[TRACE] 22:46:31:392 Cpu/(7911:8010): Dato leido: 9
+[INFO] 22:46:31:392 Cpu/(7911:8010): El valor del registro DX es: 0
+[INFO] 22:46:31:393 Cpu/(7911:8010): El valor del registro AX es: 10
+[INFO] 22:46:31:393 Cpu/(7911:8010): Fin del archivo
+[ERROR] 22:52:39:058 Cpu/(7911:8009): Dispatch desconectado
+
+[ERROR] 22:52:39:059 Cpu/(7911:8011): Interrupt desconectado
+
+[INFO] 22:52:39:061 Cpu/(7911:7911): Finalizando ejecución de CPU
+[TRACE] 22:52:41:553 Cpu/(8502:8502): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:52:41:554 Cpu/(8502:8502): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:52:41:554 Cpu/(8502:8502): Conexión exitosa
+[INFO] 22:52:41:555 Cpu/(8502:8502): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:52:41:831 Cpu/(8502:8502): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:52:41:831 Cpu/(8502:8502): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:52:41:833 Cpu/(8502:8600): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:52:41:834 Cpu/(8502:8602): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:52:42:837 Cpu/(8502:8600): Recibido EXEC (0 y 0):
+[INFO] 22:52:42:837 Cpu/(8502:8600): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:52:42:837 Cpu/(8502:8600): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:52:42:838 Cpu/(8502:8601): Dir física: 10
+[TRACE] 22:52:42:838 Cpu/(8502:8601): Dato escrito
+[TRACE] 22:52:42:838 Cpu/(8502:8601): Dir física: 10
+[TRACE] 22:52:42:838 Cpu/(8502:8601): Dato leido: 9
+[INFO] 22:52:42:839 Cpu/(8502:8601): El valor del registro DX es: 9
+[INFO] 22:52:42:839 Cpu/(8502:8601): El valor del registro AX es: 10
+[INFO] 22:52:42:839 Cpu/(8502:8601): Fin del archivo
+[ERROR] 22:52:59:271 Cpu/(8502:8600): Dispatch desconectado
+
+[ERROR] 22:52:59:271 Cpu/(8502:8602): Interrupt desconectado
+
+[INFO] 22:52:59:274 Cpu/(8502:8502): Finalizando ejecución de CPU
+[TRACE] 22:53:01:875 Cpu/(8918:8918): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:53:01:876 Cpu/(8918:8918): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:53:01:876 Cpu/(8918:8918): Conexión exitosa
+[INFO] 22:53:01:876 Cpu/(8918:8918): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:53:02:488 Cpu/(8918:8918): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 22:53:02:489 Cpu/(8918:8918): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 22:53:02:490 Cpu/(8918:9016): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:53:02:491 Cpu/(8918:9018): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:53:03:495 Cpu/(8918:9016): Recibido EXEC (0 y 0):
+[INFO] 22:53:03:495 Cpu/(8918:9016): Solicitando contexto de: 0 hilo: 0
+[INFO] 22:53:03:496 Cpu/(8918:9016): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 22:53:03:497 Cpu/(8918:9017): Dir física: 10
+[TRACE] 22:53:03:497 Cpu/(8918:9017): Dato escrito
+[TRACE] 22:53:03:498 Cpu/(8918:9017): Dir física: 10
+[TRACE] 22:53:03:499 Cpu/(8918:9017): Dato leido: 999
+[INFO] 22:53:03:499 Cpu/(8918:9017): El valor del registro DX es: 999
+[INFO] 22:53:03:499 Cpu/(8918:9017): El valor del registro AX es: 10
+[INFO] 22:53:03:500 Cpu/(8918:9017): Fin del archivo
+[ERROR] 22:53:06:509 Cpu/(8918:9016): Dispatch desconectado
+
+[ERROR] 22:53:06:509 Cpu/(8918:9018): Interrupt desconectado
+
+[INFO] 22:53:06:514 Cpu/(8918:8918): Finalizando ejecución de CPU
+[TRACE] 23:00:25:021 Cpu/(9981:9981): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:00:25:022 Cpu/(9981:9981): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:00:25:022 Cpu/(9981:9981): Conexión exitosa
+[INFO] 23:00:25:022 Cpu/(9981:9981): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:00:27:025 Cpu/(9981:9981): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:00:27:026 Cpu/(9981:9981): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:00:27:026 Cpu/(9981:10112): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:00:27:027 Cpu/(9981:10114): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:00:28:029 Cpu/(9981:10112): Recibido EXEC (0 y 0):
+[INFO] 23:00:28:029 Cpu/(9981:10112): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:00:28:029 Cpu/(9981:10112): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:00:28:030 Cpu/(9981:10113): Dir física: 10
+[TRACE] 23:00:28:030 Cpu/(9981:10113): Dato escrito
+[TRACE] 23:00:28:030 Cpu/(9981:10113): Dir física: 10
+[TRACE] 23:00:28:031 Cpu/(9981:10113): Dato leido: 999
+[INFO] 23:00:28:031 Cpu/(9981:10113): El valor del registro DX es: 999
+[INFO] 23:00:28:031 Cpu/(9981:10113): El valor del registro AX es: 10
+[INFO] 23:00:28:032 Cpu/(9981:10113): Contexto Actualizado correctamente
+
+[INFO] 23:00:28:033 Cpu/(9981:10113): Contexto Actualizado correctamente
+
+[INFO] 23:00:28:073 Cpu/(9981:10112): Recibido EXEC (1 y 0):
+[INFO] 23:00:28:074 Cpu/(9981:10112): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:00:28:074 Cpu/(9981:10112): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 23:00:28:074 Cpu/(9981:10113): THEXIT
+[INFO] 23:00:28:074 Cpu/(9981:10113): Contexto Actualizado correctamente
+
+[INFO] 23:00:28:118 Cpu/(9981:10112): Recibido EXEC (0 y 0):
+[INFO] 23:00:28:118 Cpu/(9981:10112): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:00:28:118 Cpu/(9981:10112): Contexto del proceso: 0, hilo 0 recibido
+[INFO] 23:00:28:118 Cpu/(9981:10113): Fin del archivo
+[ERROR] 23:04:19:831 Cpu/(9981:10112): Dispatch desconectado
+
+[ERROR] 23:04:19:831 Cpu/(9981:10114): Interrupt desconectado
+
+[INFO] 23:04:19:834 Cpu/(9981:9981): Finalizando ejecución de CPU
+[TRACE] 23:04:23:503 Cpu/(10892:10892): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:04:23:503 Cpu/(10892:10892): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:04:23:503 Cpu/(10892:10892): Conexión exitosa
+[INFO] 23:04:23:505 Cpu/(10892:10892): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:04:24:620 Cpu/(10892:10892): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:04:24:620 Cpu/(10892:10892): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:04:24:622 Cpu/(10892:11023): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:04:24:622 Cpu/(10892:11025): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:04:25:626 Cpu/(10892:11023): Recibido EXEC (0 y 0):
+[INFO] 23:04:25:626 Cpu/(10892:11023): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:04:25:627 Cpu/(10892:11023): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:04:25:628 Cpu/(10892:11024): Dir física: 10
+[TRACE] 23:04:25:629 Cpu/(10892:11024): Dato escrito
+[TRACE] 23:04:25:630 Cpu/(10892:11024): Dir física: 10
+[TRACE] 23:04:25:631 Cpu/(10892:11024): Dato leido: 999
+[INFO] 23:04:25:631 Cpu/(10892:11024): El valor del registro DX es: 999
+[INFO] 23:04:25:632 Cpu/(10892:11024): El valor del registro AX es: 10
+[INFO] 23:04:25:633 Cpu/(10892:11024): Contexto Actualizado correctamente
+
+[INFO] 23:04:25:637 Cpu/(10892:11024): Contexto Actualizado correctamente
+
+[INFO] 23:04:25:638 Cpu/(10892:11023): Recibido EXEC (1 y 0):
+[INFO] 23:04:25:638 Cpu/(10892:11023): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:04:25:638 Cpu/(10892:11023): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 23:04:25:638 Cpu/(10892:11024): THEXIT
+[INFO] 23:04:25:638 Cpu/(10892:11024): Contexto Actualizado correctamente
+
+[INFO] 23:04:25:682 Cpu/(10892:11023): Recibido EXEC (0 y 0):
+[INFO] 23:04:25:682 Cpu/(10892:11023): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:04:25:682 Cpu/(10892:11023): Contexto del proceso: 0, hilo 0 recibido
+[INFO] 23:04:25:682 Cpu/(10892:11024): Fin del archivo
+[ERROR] 23:07:45:271 Cpu/(10892:11023): Dispatch desconectado
+
+[ERROR] 23:07:45:271 Cpu/(10892:11025): Interrupt desconectado
+
+[INFO] 23:07:45:273 Cpu/(10892:10892): Finalizando ejecución de CPU
+[TRACE] 23:07:48:375 Cpu/(11855:11855): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:07:48:375 Cpu/(11855:11855): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:07:48:375 Cpu/(11855:11855): Conexión exitosa
+[INFO] 23:07:48:376 Cpu/(11855:11855): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:07:49:549 Cpu/(11855:11855): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:07:49:550 Cpu/(11855:11855): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:07:49:551 Cpu/(11855:11986): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:07:49:552 Cpu/(11855:11988): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:07:50:554 Cpu/(11855:11986): Recibido EXEC (0 y 0):
+[INFO] 23:07:50:554 Cpu/(11855:11986): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:07:50:554 Cpu/(11855:11986): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:07:50:555 Cpu/(11855:11987): Dir física: 10
+[TRACE] 23:07:50:555 Cpu/(11855:11987): Dato escrito
+[TRACE] 23:07:50:555 Cpu/(11855:11987): Dir física: 10
+[TRACE] 23:07:50:555 Cpu/(11855:11987): Dato leido: 999
+[INFO] 23:07:50:555 Cpu/(11855:11987): El valor del registro DX es: 999
+[INFO] 23:07:50:556 Cpu/(11855:11987): El valor del registro AX es: 10
+[INFO] 23:07:50:556 Cpu/(11855:11987): Contexto Actualizado correctamente
+
+[INFO] 23:07:50:557 Cpu/(11855:11987): Contexto Actualizado correctamente
+
+[INFO] 23:07:50:558 Cpu/(11855:11986): Recibido EXEC (1 y 0):
+[INFO] 23:07:50:558 Cpu/(11855:11986): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:07:50:558 Cpu/(11855:11986): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 23:08:53:200 Cpu/(12375:12375): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:08:53:200 Cpu/(12375:12375): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:08:53:201 Cpu/(12375:12375): Conexión exitosa
+[INFO] 23:08:53:202 Cpu/(12375:12375): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:08:53:859 Cpu/(12375:12375): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:08:53:859 Cpu/(12375:12375): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:08:53:861 Cpu/(12375:12473): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:08:53:861 Cpu/(12375:12475): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:08:54:866 Cpu/(12375:12473): Recibido EXEC (0 y 0):
+[INFO] 23:08:54:866 Cpu/(12375:12473): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:08:54:867 Cpu/(12375:12473): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:08:54:868 Cpu/(12375:12474): Dir física: 10
+[TRACE] 23:08:54:868 Cpu/(12375:12474): Dato escrito
+[TRACE] 23:08:54:869 Cpu/(12375:12474): Dir física: 10
+[TRACE] 23:08:54:870 Cpu/(12375:12474): Dato leido: 999
+[INFO] 23:08:54:870 Cpu/(12375:12474): El valor del registro DX es: 999
+[INFO] 23:08:54:871 Cpu/(12375:12474): El valor del registro AX es: 10
+[INFO] 23:08:54:871 Cpu/(12375:12474): Contexto Actualizado correctamente
+
+[INFO] 23:08:54:874 Cpu/(12375:12474): Contexto Actualizado correctamente
+
+[INFO] 23:08:54:874 Cpu/(12375:12473): Recibido EXEC (1 y 0):
+[INFO] 23:08:54:874 Cpu/(12375:12473): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:08:54:875 Cpu/(12375:12473): Contexto del proceso: 0, hilo 1 recibido
+[INFO] 23:08:54:875 Cpu/(12375:12474): Contexto Actualizado correctamente
+
+[ERROR] 23:10:59:410 Cpu/(12375:12473): Dispatch desconectado
+
+[ERROR] 23:10:59:410 Cpu/(12375:12475): Interrupt desconectado
+
+[INFO] 23:10:59:414 Cpu/(12375:12375): Finalizando ejecución de CPU
+[TRACE] 23:11:02:615 Cpu/(12926:12926): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:11:02:615 Cpu/(12926:12926): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:11:02:616 Cpu/(12926:12926): Conexión exitosa
+[INFO] 23:11:02:617 Cpu/(12926:12926): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:11:03:464 Cpu/(12926:12926): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:11:03:465 Cpu/(12926:12926): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:11:03:465 Cpu/(12926:13033): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:11:03:466 Cpu/(12926:13035): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:11:04:470 Cpu/(12926:13033): Recibido EXEC (0 y 0):
+[INFO] 23:11:04:470 Cpu/(12926:13033): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:11:04:471 Cpu/(12926:13033): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:11:04:472 Cpu/(12926:13034): Dir física: 10
+[TRACE] 23:11:04:472 Cpu/(12926:13034): Dato escrito
+[TRACE] 23:11:04:473 Cpu/(12926:13034): Dir física: 10
+[TRACE] 23:11:04:474 Cpu/(12926:13034): Dato leido: 999
+[INFO] 23:11:04:474 Cpu/(12926:13034): El valor del registro DX es: 999
+[INFO] 23:11:04:475 Cpu/(12926:13034): El valor del registro AX es: 10
+[INFO] 23:11:04:476 Cpu/(12926:13034): Contexto Actualizado correctamente
+
+[INFO] 23:11:04:479 Cpu/(12926:13034): Contexto Actualizado correctamente
+
+[INFO] 23:11:04:479 Cpu/(12926:13033): Recibido EXEC (1 y 0):
+[INFO] 23:11:04:479 Cpu/(12926:13033): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:11:04:479 Cpu/(12926:13033): Contexto del proceso: 0, hilo 1 recibido
+[INFO] 23:11:04:480 Cpu/(12926:13034): Contexto Actualizado correctamente
+
+[INFO] 23:11:04:522 Cpu/(12926:13034): Fin del archivo
+[ERROR] 23:13:40:725 Cpu/(12926:13033): Dispatch desconectado
+
+[ERROR] 23:13:40:725 Cpu/(12926:13035): Interrupt desconectado
+
+[INFO] 23:13:40:730 Cpu/(12926:12926): Finalizando ejecución de CPU
+[TRACE] 23:13:42:861 Cpu/(13500:13500): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:13:42:861 Cpu/(13500:13500): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:13:42:861 Cpu/(13500:13500): Conexión exitosa
+[INFO] 23:13:42:862 Cpu/(13500:13500): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:13:43:041 Cpu/(13500:13500): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:13:43:041 Cpu/(13500:13500): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:13:43:042 Cpu/(13500:13598): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:13:43:042 Cpu/(13500:13600): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:13:44:046 Cpu/(13500:13598): Recibido EXEC (0 y 0):
+[INFO] 23:13:44:046 Cpu/(13500:13598): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:13:44:046 Cpu/(13500:13598): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:13:44:047 Cpu/(13500:13599): Dir física: 10
+[TRACE] 23:13:44:048 Cpu/(13500:13599): Dato escrito
+[TRACE] 23:13:44:049 Cpu/(13500:13599): Dir física: 10
+[TRACE] 23:13:44:050 Cpu/(13500:13599): Dato leido: 999
+[INFO] 23:13:44:050 Cpu/(13500:13599): El valor del registro DX es: 999
+[INFO] 23:13:44:051 Cpu/(13500:13599): El valor del registro AX es: 10
+[INFO] 23:13:44:051 Cpu/(13500:13599): Contexto Actualizado correctamente
+
+[INFO] 23:13:44:053 Cpu/(13500:13599): Contexto Actualizado correctamente
+
+[INFO] 23:13:44:054 Cpu/(13500:13598): Recibido EXEC (1 y 0):
+[INFO] 23:13:44:054 Cpu/(13500:13598): Solicitando contexto de: 0 hilo: 1
+[INFO] 23:13:44:054 Cpu/(13500:13598): Contexto del proceso: 0, hilo 1 recibido
+[INFO] 23:13:44:055 Cpu/(13500:13599): Contexto Actualizado correctamente
+
+[ERROR] 23:14:01:444 Cpu/(13500:13598): Dispatch desconectado
+
+[ERROR] 23:14:01:444 Cpu/(13500:13600): Interrupt desconectado
+
+[INFO] 23:14:01:446 Cpu/(13500:13500): Finalizando ejecución de CPU
+[TRACE] 23:14:24:737 Cpu/(13904:13904): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 23:14:24:737 Cpu/(13904:13904): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 23:14:24:738 Cpu/(13904:13904): Conexión exitosa
+[INFO] 23:14:24:738 Cpu/(13904:13904): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 23:14:25:388 Cpu/(13904:13904): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 23:14:25:388 Cpu/(13904:13904): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 23:14:25:389 Cpu/(13904:14002): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:14:25:390 Cpu/(13904:14004): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:14:26:392 Cpu/(13904:14002): Recibido EXEC (0 y 0):
+[INFO] 23:14:26:392 Cpu/(13904:14002): Solicitando contexto de: 0 hilo: 0
+[INFO] 23:14:26:392 Cpu/(13904:14002): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 23:14:26:393 Cpu/(13904:14003): Dir física: 10
+[TRACE] 23:14:26:393 Cpu/(13904:14003): Dato escrito
+[TRACE] 23:14:26:393 Cpu/(13904:14003): Dir física: 10
+[TRACE] 23:14:26:393 Cpu/(13904:14003): Dato leido: 999
+[INFO] 23:14:26:393 Cpu/(13904:14003): El valor del registro DX es: 999
+[INFO] 23:14:26:394 Cpu/(13904:14003): El valor del registro AX es: 10
+[INFO] 23:14:26:394 Cpu/(13904:14003): Contexto Actualizado correctamente
+
+[INFO] 23:14:26:395 Cpu/(13904:14003): Contexto Actualizado correctamente
+
+[ERROR] 23:14:26:517 Cpu/(13904:14003): Error al intentar obtener la instruccion: 9
+[ERROR] 23:14:26:638 Cpu/(13904:14004): Interrupt desconectado
+
+[ERROR] 23:14:26:638 Cpu/(13904:14002): Dispatch desconectado
+
+[INFO] 23:14:26:639 Cpu/(13904:13904): Finalizando ejecución de CPU

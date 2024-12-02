@@ -692,6 +692,7 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
     int direccion = extraer_int_del_buffer(buffer);
     log_trace(logger, "Dirección en deserializar_read_mem: %i", direccion);
+    log_trace(logger,"valor: %d",leer_memoria(direccion));
     enviar_lectura(leer_memoria(direccion));
 
 

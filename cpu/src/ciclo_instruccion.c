@@ -152,8 +152,10 @@ char* decode(char* instruccion) {
         return "SUSPPROCESO";
     } else if (string_equals_ignore_case(instr, "THREAD_CANCEL")){
         int tid = atoi(lista[1]);
-        //printf("TID: %i, PID: %i\n", tid, contexto_en_ejecucion->contexto_hilo->pid);
         THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);
+        if(tid == contexto_en_ejecucion->contexto_hilo->tid){
+            return "SUSPPROCESO";
+        }
         return "OK";
     } else if (string_equals_ignore_case(instr, "MUTEX_CREATE")){
         char* recurso = corregir_linea(lista[1]);

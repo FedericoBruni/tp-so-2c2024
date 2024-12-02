@@ -3512,3 +3512,143 @@
 [ERROR] 21:05:07:753 FileSystem/(52281:52377): Memoria desconectado
 
 [INFO] 21:05:07:754 FileSystem/(52281:52281): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:29:40:397 FileSystem/(2627:2627): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:29:45:511 FileSystem/(2627:2627): Se conecto el cliente: Memoria
+
+[INFO] 22:29:45:512 FileSystem/(2627:2798): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:31:32:115 FileSystem/(2627:2798): Memoria desconectado
+
+[INFO] 22:31:32:115 FileSystem/(2627:2627): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:31:33:546 FileSystem/(3577:3577): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:31:34:285 FileSystem/(3577:3577): Se conecto el cliente: Memoria
+
+[INFO] 22:31:34:285 FileSystem/(3577:3673): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:31:47:993 FileSystem/(3577:3673): Memoria desconectado
+
+[INFO] 22:31:47:993 FileSystem/(3577:3577): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:32:05:481 FileSystem/(4051:4051): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:32:06:074 FileSystem/(4051:4051): Se conecto el cliente: Memoria
+
+[INFO] 22:32:06:075 FileSystem/(4051:4147): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:35:00:044 FileSystem/(4051:4147): Memoria desconectado
+
+[INFO] 22:35:00:044 FileSystem/(4051:4051): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:35:01:490 FileSystem/(4489:4489): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:35:02:110 FileSystem/(4489:4489): Se conecto el cliente: Memoria
+
+[INFO] 22:35:02:111 FileSystem/(4489:4585): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:35:50:350 FileSystem/(4489:4585): Memoria desconectado
+
+[INFO] 22:35:50:350 FileSystem/(4489:4489): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:35:51:644 FileSystem/(4919:4919): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:35:52:375 FileSystem/(4919:4919): Se conecto el cliente: Memoria
+
+[INFO] 22:35:52:375 FileSystem/(4919:5015): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:36:12:928 FileSystem/(4919:5015): Memoria desconectado
+
+[INFO] 22:36:12:928 FileSystem/(4919:4919): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:37:58:211 FileSystem/(5438:5438): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:37:58:711 FileSystem/(5438:5438): Se conecto el cliente: Memoria
+
+[INFO] 22:37:58:712 FileSystem/(5438:5534): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:38:15:171 FileSystem/(5438:5534): Memoria desconectado
+
+[INFO] 22:38:15:171 FileSystem/(5438:5438): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:39:26:309 FileSystem/(5873:5873): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:39:27:033 FileSystem/(5873:5873): Se conecto el cliente: Memoria
+
+[INFO] 22:39:27:034 FileSystem/(5873:5969): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:42:05:003 FileSystem/(5873:5969): Memoria desconectado
+
+[INFO] 22:42:05:003 FileSystem/(5873:5873): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:42:05:857 FileSystem/(6394:6394): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:42:06:518 FileSystem/(6394:6394): Se conecto el cliente: Memoria
+
+[INFO] 22:42:06:519 FileSystem/(6394:6490): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:44:14:971 FileSystem/(6394:6490): Memoria desconectado
+
+[INFO] 22:44:14:971 FileSystem/(6394:6394): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:44:15:908 FileSystem/(6828:6828): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:44:16:471 FileSystem/(6828:6828): Se conecto el cliente: Memoria
+
+[INFO] 22:44:16:472 FileSystem/(6828:6924): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:45:02:107 FileSystem/(6828:6924): Memoria desconectado
+
+[INFO] 22:45:02:107 FileSystem/(6828:6828): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:45:03:109 FileSystem/(7244:7244): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:45:03:625 FileSystem/(7244:7244): Se conecto el cliente: Memoria
+
+[INFO] 22:45:03:626 FileSystem/(7244:7340): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:46:28:151 FileSystem/(7244:7340): Memoria desconectado
+
+[INFO] 22:46:28:151 FileSystem/(7244:7244): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:46:29:121 FileSystem/(7711:7711): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:46:29:841 FileSystem/(7711:7711): Se conecto el cliente: Memoria
+
+[INFO] 22:46:29:842 FileSystem/(7711:7816): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:52:39:063 FileSystem/(7711:7816): Memoria desconectado
+
+[INFO] 22:52:39:063 FileSystem/(7711:7711): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:52:40:136 FileSystem/(8302:8302): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:52:40:795 FileSystem/(8302:8302): Se conecto el cliente: Memoria
+
+[INFO] 22:52:40:796 FileSystem/(8302:8398): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:52:59:275 FileSystem/(8302:8398): Memoria desconectado
+
+[INFO] 22:52:59:275 FileSystem/(8302:8302): Finalizando ejecución de FILESYSTEM
+[TRACE] 22:53:00:743 FileSystem/(8727:8727): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 22:53:01:400 FileSystem/(8727:8727): Se conecto el cliente: Memoria
+
+[INFO] 22:53:01:400 FileSystem/(8727:8823): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 22:53:06:518 FileSystem/(8727:8823): Memoria desconectado
+
+[INFO] 22:53:06:518 FileSystem/(8727:8727): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:00:22:635 FileSystem/(9740:9740): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:00:23:786 FileSystem/(9740:9740): Se conecto el cliente: Memoria
+
+[INFO] 23:00:23:788 FileSystem/(9740:9853): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:04:19:835 FileSystem/(9740:9853): Memoria desconectado
+
+[INFO] 23:04:19:835 FileSystem/(9740:9740): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:04:21:303 FileSystem/(10651:10651): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:04:22:253 FileSystem/(10651:10651): Se conecto el cliente: Memoria
+
+[INFO] 23:04:22:254 FileSystem/(10651:10764): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:07:45:275 FileSystem/(10651:10764): Memoria desconectado
+
+[INFO] 23:07:45:275 FileSystem/(10651:10651): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:07:46:722 FileSystem/(11614:11614): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:07:47:299 FileSystem/(11614:11614): Se conecto el cliente: Memoria
+
+[INFO] 23:07:47:300 FileSystem/(11614:11727): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:08:50:985 FileSystem/(11614:11727): Memoria desconectado
+
+[INFO] 23:08:50:985 FileSystem/(11614:11614): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:08:51:929 FileSystem/(12184:12184): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:08:52:547 FileSystem/(12184:12184): Se conecto el cliente: Memoria
+
+[INFO] 23:08:52:548 FileSystem/(12184:12280): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:10:59:417 FileSystem/(12184:12280): Memoria desconectado
+
+[INFO] 23:10:59:417 FileSystem/(12184:12184): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:11:00:849 FileSystem/(12735:12735): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:11:01:678 FileSystem/(12735:12735): Se conecto el cliente: Memoria
+
+[INFO] 23:11:01:678 FileSystem/(12735:12831): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:13:40:732 FileSystem/(12735:12831): Memoria desconectado
+
+[INFO] 23:13:40:732 FileSystem/(12735:12735): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:13:41:733 FileSystem/(13300:13300): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:13:42:189 FileSystem/(13300:13300): Se conecto el cliente: Memoria
+
+[INFO] 23:13:42:190 FileSystem/(13300:13396): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:14:01:447 FileSystem/(13300:13396): Memoria desconectado
+
+[INFO] 23:14:01:447 FileSystem/(13300:13300): Finalizando ejecución de FILESYSTEM
+[TRACE] 23:14:23:698 FileSystem/(13713:13713): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 23:14:24:216 FileSystem/(13713:13713): Se conecto el cliente: Memoria
+
+[INFO] 23:14:24:216 FileSystem/(13713:13809): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[ERROR] 23:14:26:517 FileSystem/(13713:13809): Memoria desconectado
+
+[INFO] 23:14:26:517 FileSystem/(13713:13713): Finalizando ejecución de FILESYSTEM

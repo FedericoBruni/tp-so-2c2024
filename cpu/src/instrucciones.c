@@ -9,6 +9,9 @@ extern sem_t sem_mutex_lockeado;
 extern sem_t sem_mutex_unlockeado;
 extern sem_t sem_thread_exit;
 extern sem_t sem_process_exit;
+extern sem_t sem_hilo_creado;
+extern sem_t sem_join_hilo;
+extern sem_t sem_hilo_cancel;
 extern char* rta_mutex_lock;
 
 
@@ -20,14 +23,15 @@ void SET(char *registro, uint32_t valor){
 
 // Lee el valor de memoria correspondiente a la dirección física obtenida a partir de la Dirección Lógica 
 // que se encuentra en el Registro Dirección y lo almacena en el Registro Datos.
-void read_mem(char* registroDatos, char* registroDireccion){
+void write_mem(char* registroDireccion, char* registroDatos){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
     log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
         log_error(logger, "ERROR");
         return; // en realidad hay q hacer lo del segmentation fault
     }
-    enviar_read_mem(dir_fisica);
+    int valor = *obtenerRegistro(registroDatos);
+    enviar_write_mem(valor, dir_fisica);
     switch(recibir_operacion(fd_memoria)){
         case WRITE_MEM_RTA:
             log_trace(logger, "Dato escrito");
@@ -54,18 +58,18 @@ int deserializar_rta_read_mem(int fd_memoria) {
 
 }
 
-void write_mem(char* registroDatos, char* registroDireccion){
+void read_mem(char* registroDatos, char* registroDireccion){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
     log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
         log_error(logger, "ERROR");
         return; // en realidad hay q hacer lo del segmentation fault
     }
-    int valor = *obtenerRegistro(registroDatos);
-    enviar_write_mem(valor, dir_fisica);
+    enviar_read_mem(dir_fisica);
     switch(recibir_operacion(fd_memoria)){
         case READ_MEM_RTA:
             int dato = deserializar_rta_read_mem(fd_memoria);
+            *obtenerRegistro(registroDatos) = dato;
             log_trace(logger, "Dato leido: %i", dato);
             break;
         default:
@@ -116,7 +120,6 @@ void IO (int tiempo) {
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){
     crear_proceso(archivo_de_instrucciones,tamanio_proceso,prio_hilo);
     actualizar_contexto(fd_memoria);
-
     sem_wait(&sem_proceso_creado);
     // switch(recibir_operacion(cliente_fd_dispatch)){
     //     case PROCESO_CREADO:
@@ -132,16 +135,19 @@ void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio
 void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad) {
     crear_hilo(archivo_pseudocodigo, prioridad);
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_hilo_creado);
 }
 
 void THREAD_JOIN (int tid) {
     thread_join(tid);
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_join_hilo);
 }
 
 void THREAD_CANCEL (int tid, int pid) {
     thread_cancel(tid, pid);
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_hilo_cancel);
 }
 
 void MUTEX_CREATE (char *recurso) {

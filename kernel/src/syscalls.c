@@ -80,9 +80,9 @@ void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
 
 // Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
 // tener una variable tcb_en_ejecucion?
-
 void THREAD_JOIN(int tid){
     bloquear_hilo_syscall(tcb_en_ejecucion,tid);
+    sem_post(&sem_syscall_fin);
 }
 
 
@@ -124,10 +124,15 @@ void THREAD_CANCEL(int tid, int pid) {
     if(tcb == NULL){
         tcb = buscar_tcb_en_cola(cola_blocked,mutex_blocked,tid,pid);
         if(tcb == NULL){
+            if(tcb_en_ejecucion->tid == tid && tcb_en_ejecucion->pcb_pid==pid){
+                tcb=tcb_en_ejecucion;
+            }else{
             log_info(logger,"No se encontro el hilo <TID:%i>;<PID:%i>", tid, pid);
             return;
+            }
         }   
     }
+    
     log_info(logger, "Cancelando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
     encolar(cola_finalizacion, tcb->pcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);

@@ -141,13 +141,21 @@ int esperar_respuesta(){
             break;
         case SYSCALL_THREAD_CREATE:
             deserializar_thread_create();
+            sem_wait(&sem_syscall_fin);
+            int hilo_creado = HILO_CREADO;
+            send(fd_cpu_dispatch,&hilo_creado,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_JOIN:
             deserializar_thread_join();
+            sem_wait(&sem_syscall_fin);
+            int hilo_join = HILO_JOINEADO;
+            send(fd_cpu_dispatch,&hilo_join,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_CANCEL:
             deserializar_thread_cancel();
-            //sleep(5);
+            sem_wait(&sem_syscall_fin);
+            int hilo_cancel = HILO_CANCEL;
+            send(fd_cpu_dispatch,&hilo_cancel,sizeof(op_code),0);
             break;
         case SYSCALL_MUTEX_CREATE:
             deserializar_mutex_create();

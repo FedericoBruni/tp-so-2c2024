@@ -9,6 +9,9 @@ extern sem_t sem_mutex_lockeado;
 extern sem_t sem_mutex_unlockeado;
 extern sem_t sem_thread_exit;
 extern sem_t sem_process_exit;
+extern sem_t sem_hilo_creado;
+extern sem_t sem_join_hilo;
+extern sem_t sem_hilo_cancel;
 char* rta_mutex_lock;
 
 void escuchar_mensajes_kernel_dispatch(void)
@@ -32,6 +35,15 @@ void escuchar_mensajes_kernel_dispatch(void)
 
 		case PROCESO_CREADO:
 			sem_post(&sem_proceso_creado);
+			break;
+		case HILO_CREADO:
+			sem_post(&sem_hilo_creado);
+			break;	
+		case HILO_JOINEADO:
+			sem_post(&sem_join_hilo);
+			break;
+		case HILO_CANCEL:
+			sem_post(&sem_hilo_cancel);
 			break;
 		case MUTEX_CREADO:
 			sem_post(&sem_mutex_creado);

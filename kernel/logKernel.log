@@ -15347,3 +15347,545 @@
 
 [INFO] 21:04:56:311 Kernel/(52577:52583): intentando finalizar proceso con pid: 0
 [INFO] 21:04:56:311 Kernel/(52577:52583): ## Finaliza el proceso <0>
+[INFO] 22:30:37:999 Kernel/(3425:3425): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:30:38:000 Kernel/(3425:3425): Conexión exitosa
+[INFO] 22:30:38:000 Kernel/(3425:3425): Conexión exitosa
+[INFO] 22:30:38:000 Kernel/(3425:3425): Conexión exitosa
+[INFO] 22:30:38:001 Kernel/(3425:3425): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:30:38:001 Kernel/(3425:3425): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:30:38:002 Kernel/(3425:3425): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:30:38:002 Kernel/(3425:3433): entro a fin_hilo
+[INFO] 22:30:38:002 Kernel/(3425:3430): Solicitando memoria para el proceso: 0
+
+[INFO] 22:30:39:010 Kernel/(3425:3430): Memoria reservada correctamente
+[INFO] 22:30:39:010 Kernel/(3425:3430): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:30:39:010 Kernel/(3425:3430): Creando TCB de prioridad: 0
+
+[ERROR] 22:30:39:010 Kernel/(3425:3430): PID del HILO creado: 0
+[INFO] 22:30:39:010 Kernel/(3425:3432): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:30:39:010 Kernel/(3425:3434): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:30:39:011 Kernel/(3425:3434): PID: 0
+[INFO] 22:30:39:013 Kernel/(3425:3434): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:30:39:013 Kernel/(3425:3431): intentando finalizar proceso con pid: 0
+[INFO] 22:30:39:013 Kernel/(3425:3431): ## Finaliza el proceso <0>
+[INFO] 22:31:36:498 Kernel/(3873:3873): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:31:36:498 Kernel/(3873:3873): Conexión exitosa
+[INFO] 22:31:36:499 Kernel/(3873:3873): Conexión exitosa
+[INFO] 22:31:36:499 Kernel/(3873:3873): Conexión exitosa
+[INFO] 22:31:36:499 Kernel/(3873:3873): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:31:36:500 Kernel/(3873:3873): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:31:36:501 Kernel/(3873:3873): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:31:36:501 Kernel/(3873:3881): entro a fin_hilo
+[INFO] 22:31:36:502 Kernel/(3873:3878): Solicitando memoria para el proceso: 0
+
+[INFO] 22:31:37:502 Kernel/(3873:3878): Memoria reservada correctamente
+[INFO] 22:31:37:503 Kernel/(3873:3878): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:31:37:503 Kernel/(3873:3878): Creando TCB de prioridad: 0
+
+[ERROR] 22:31:37:503 Kernel/(3873:3878): PID del HILO creado: 0
+[INFO] 22:31:37:503 Kernel/(3873:3880): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:31:37:503 Kernel/(3873:3882): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:31:37:504 Kernel/(3873:3882): PID: 0
+[INFO] 22:31:37:506 Kernel/(3873:3882): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:31:37:507 Kernel/(3873:3879): intentando finalizar proceso con pid: 0
+[INFO] 22:31:37:507 Kernel/(3873:3879): ## Finaliza el proceso <0>
+[INFO] 22:32:07:303 Kernel/(4338:4338): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:32:07:303 Kernel/(4338:4338): Conexión exitosa
+[INFO] 22:32:07:304 Kernel/(4338:4338): Conexión exitosa
+[INFO] 22:32:07:304 Kernel/(4338:4338): Conexión exitosa
+[INFO] 22:32:07:304 Kernel/(4338:4338): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:32:07:305 Kernel/(4338:4338): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:32:07:305 Kernel/(4338:4338): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:32:07:306 Kernel/(4338:4346): entro a fin_hilo
+[INFO] 22:32:07:306 Kernel/(4338:4343): Solicitando memoria para el proceso: 0
+
+[INFO] 22:32:08:306 Kernel/(4338:4343): Memoria reservada correctamente
+[INFO] 22:32:08:307 Kernel/(4338:4343): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:32:08:307 Kernel/(4338:4343): Creando TCB de prioridad: 0
+
+[ERROR] 22:32:08:307 Kernel/(4338:4343): PID del HILO creado: 0
+[INFO] 22:32:08:307 Kernel/(4338:4345): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:32:08:307 Kernel/(4338:4347): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:32:08:308 Kernel/(4338:4347): PID: 0
+[INFO] 22:32:08:311 Kernel/(4338:4347): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:32:08:311 Kernel/(4338:4344): intentando finalizar proceso con pid: 0
+[INFO] 22:32:08:311 Kernel/(4338:4344): ## Finaliza el proceso <0>
+[INFO] 22:35:03:256 Kernel/(4776:4776): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:35:03:257 Kernel/(4776:4776): Conexión exitosa
+[INFO] 22:35:03:257 Kernel/(4776:4776): Conexión exitosa
+[INFO] 22:35:03:257 Kernel/(4776:4776): Conexión exitosa
+[INFO] 22:35:03:258 Kernel/(4776:4776): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:03:259 Kernel/(4776:4776): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:03:259 Kernel/(4776:4776): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:03:260 Kernel/(4776:4784): entro a fin_hilo
+[INFO] 22:35:03:260 Kernel/(4776:4781): Solicitando memoria para el proceso: 0
+
+[INFO] 22:35:04:261 Kernel/(4776:4781): Memoria reservada correctamente
+[INFO] 22:35:04:261 Kernel/(4776:4781): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:35:04:261 Kernel/(4776:4781): Creando TCB de prioridad: 0
+
+[ERROR] 22:35:04:261 Kernel/(4776:4781): PID del HILO creado: 0
+[INFO] 22:35:04:261 Kernel/(4776:4783): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:35:04:261 Kernel/(4776:4785): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:35:04:261 Kernel/(4776:4785): PID: 0
+[INFO] 22:35:04:263 Kernel/(4776:4785): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:35:04:263 Kernel/(4776:4782): intentando finalizar proceso con pid: 0
+[INFO] 22:35:04:264 Kernel/(4776:4782): ## Finaliza el proceso <0>
+[INFO] 22:35:53:924 Kernel/(5215:5215): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:35:53:924 Kernel/(5215:5215): Conexión exitosa
+[INFO] 22:35:53:925 Kernel/(5215:5215): Conexión exitosa
+[INFO] 22:35:53:925 Kernel/(5215:5215): Conexión exitosa
+[INFO] 22:35:53:926 Kernel/(5215:5215): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:53:926 Kernel/(5215:5215): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:53:926 Kernel/(5215:5215): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:53:927 Kernel/(5215:5223): entro a fin_hilo
+[INFO] 22:35:53:927 Kernel/(5215:5220): Solicitando memoria para el proceso: 0
+
+[INFO] 22:35:54:927 Kernel/(5215:5220): Memoria reservada correctamente
+[INFO] 22:35:54:928 Kernel/(5215:5220): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:35:54:928 Kernel/(5215:5220): Creando TCB de prioridad: 0
+
+[ERROR] 22:35:54:928 Kernel/(5215:5220): PID del HILO creado: 0
+[INFO] 22:35:54:928 Kernel/(5215:5222): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:35:54:928 Kernel/(5215:5224): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:35:54:929 Kernel/(5215:5224): PID: 0
+[INFO] 22:35:54:930 Kernel/(5215:5224): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:38:00:320 Kernel/(5734:5734): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:38:00:321 Kernel/(5734:5734): Conexión exitosa
+[INFO] 22:38:00:321 Kernel/(5734:5734): Conexión exitosa
+[INFO] 22:38:00:322 Kernel/(5734:5734): Conexión exitosa
+[INFO] 22:38:00:322 Kernel/(5734:5734): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:38:00:323 Kernel/(5734:5734): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:38:00:323 Kernel/(5734:5734): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:38:00:323 Kernel/(5734:5742): entro a fin_hilo
+[INFO] 22:38:00:323 Kernel/(5734:5739): Solicitando memoria para el proceso: 0
+
+[INFO] 22:38:01:324 Kernel/(5734:5739): Memoria reservada correctamente
+[INFO] 22:38:01:325 Kernel/(5734:5739): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:38:01:325 Kernel/(5734:5739): Creando TCB de prioridad: 0
+
+[ERROR] 22:38:01:325 Kernel/(5734:5739): PID del HILO creado: 0
+[INFO] 22:38:01:326 Kernel/(5734:5741): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:38:01:326 Kernel/(5734:5743): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:38:01:327 Kernel/(5734:5743): PID: 0
+[INFO] 22:38:01:330 Kernel/(5734:5743): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:39:28:399 Kernel/(6173:6173): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:39:28:399 Kernel/(6173:6173): Conexión exitosa
+[INFO] 22:39:28:400 Kernel/(6173:6173): Conexión exitosa
+[INFO] 22:39:28:400 Kernel/(6173:6173): Conexión exitosa
+[INFO] 22:39:28:400 Kernel/(6173:6173): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:39:28:401 Kernel/(6173:6173): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:39:28:401 Kernel/(6173:6173): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:39:28:402 Kernel/(6173:6181): entro a fin_hilo
+[INFO] 22:39:28:402 Kernel/(6173:6178): Solicitando memoria para el proceso: 0
+
+[INFO] 22:39:29:402 Kernel/(6173:6178): Memoria reservada correctamente
+[INFO] 22:39:29:403 Kernel/(6173:6178): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:39:29:403 Kernel/(6173:6178): Creando TCB de prioridad: 0
+
+[ERROR] 22:39:29:403 Kernel/(6173:6178): PID del HILO creado: 0
+[INFO] 22:39:29:404 Kernel/(6173:6180): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:39:29:404 Kernel/(6173:6182): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:39:29:404 Kernel/(6173:6182): PID: 0
+[INFO] 22:39:29:406 Kernel/(6173:6182): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:42:07:787 Kernel/(6690:6690): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:42:07:788 Kernel/(6690:6690): Conexión exitosa
+[INFO] 22:42:07:788 Kernel/(6690:6690): Conexión exitosa
+[INFO] 22:42:07:788 Kernel/(6690:6690): Conexión exitosa
+[INFO] 22:42:07:789 Kernel/(6690:6690): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:42:07:790 Kernel/(6690:6690): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:42:07:791 Kernel/(6690:6690): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:42:07:792 Kernel/(6690:6698): entro a fin_hilo
+[INFO] 22:42:07:792 Kernel/(6690:6695): Solicitando memoria para el proceso: 0
+
+[INFO] 22:42:08:793 Kernel/(6690:6695): Memoria reservada correctamente
+[INFO] 22:42:08:794 Kernel/(6690:6695): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:42:08:794 Kernel/(6690:6695): Creando TCB de prioridad: 0
+
+[ERROR] 22:42:08:794 Kernel/(6690:6695): PID del HILO creado: 0
+[INFO] 22:42:08:795 Kernel/(6690:6697): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:42:08:795 Kernel/(6690:6699): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:42:08:796 Kernel/(6690:6699): PID: 0
+[INFO] 22:42:08:799 Kernel/(6690:6699): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:42:08:800 Kernel/(6690:6696): intentando finalizar proceso con pid: 0
+[INFO] 22:42:08:800 Kernel/(6690:6696): ## Finaliza el proceso <0>
+[INFO] 22:44:17:511 Kernel/(7124:7124): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:44:17:512 Kernel/(7124:7124): Conexión exitosa
+[INFO] 22:44:17:512 Kernel/(7124:7124): Conexión exitosa
+[INFO] 22:44:17:512 Kernel/(7124:7124): Conexión exitosa
+[INFO] 22:44:17:513 Kernel/(7124:7124): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:44:17:513 Kernel/(7124:7124): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:44:17:514 Kernel/(7124:7124): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:44:17:514 Kernel/(7124:7132): entro a fin_hilo
+[INFO] 22:44:17:514 Kernel/(7124:7129): Solicitando memoria para el proceso: 0
+
+[INFO] 22:44:18:515 Kernel/(7124:7129): Memoria reservada correctamente
+[INFO] 22:44:18:515 Kernel/(7124:7129): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:44:18:515 Kernel/(7124:7129): Creando TCB de prioridad: 0
+
+[ERROR] 22:44:18:515 Kernel/(7124:7129): PID del HILO creado: 0
+[INFO] 22:44:18:516 Kernel/(7124:7131): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:44:18:516 Kernel/(7124:7133): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:44:18:516 Kernel/(7124:7133): PID: 0
+[INFO] 22:44:18:518 Kernel/(7124:7133): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:44:18:518 Kernel/(7124:7130): intentando finalizar proceso con pid: 0
+[INFO] 22:44:18:519 Kernel/(7124:7130): ## Finaliza el proceso <0>
+[INFO] 22:45:04:497 Kernel/(7531:7531): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:45:04:497 Kernel/(7531:7531): Conexión exitosa
+[INFO] 22:45:04:498 Kernel/(7531:7531): Conexión exitosa
+[INFO] 22:45:04:498 Kernel/(7531:7531): Conexión exitosa
+[INFO] 22:45:04:498 Kernel/(7531:7531): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:45:04:499 Kernel/(7531:7531): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:45:04:499 Kernel/(7531:7531): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:45:04:499 Kernel/(7531:7539): entro a fin_hilo
+[INFO] 22:45:04:500 Kernel/(7531:7536): Solicitando memoria para el proceso: 0
+
+[INFO] 22:45:05:501 Kernel/(7531:7536): Memoria reservada correctamente
+[INFO] 22:45:05:501 Kernel/(7531:7536): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:45:05:501 Kernel/(7531:7536): Creando TCB de prioridad: 0
+
+[ERROR] 22:45:05:502 Kernel/(7531:7536): PID del HILO creado: 0
+[INFO] 22:45:05:502 Kernel/(7531:7538): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:45:05:503 Kernel/(7531:7540): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:45:05:503 Kernel/(7531:7540): PID: 0
+[INFO] 22:45:05:510 Kernel/(7531:7540): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:45:05:510 Kernel/(7531:7537): intentando finalizar proceso con pid: 0
+[INFO] 22:45:05:511 Kernel/(7531:7537): ## Finaliza el proceso <0>
+[INFO] 22:46:30:383 Kernel/(8007:8007): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:46:30:383 Kernel/(8007:8007): Conexión exitosa
+[INFO] 22:46:30:383 Kernel/(8007:8007): Conexión exitosa
+[INFO] 22:46:30:384 Kernel/(8007:8007): Conexión exitosa
+[INFO] 22:46:30:384 Kernel/(8007:8007): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:46:30:384 Kernel/(8007:8007): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:46:30:385 Kernel/(8007:8007): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:46:30:385 Kernel/(8007:8015): entro a fin_hilo
+[INFO] 22:46:30:385 Kernel/(8007:8012): Solicitando memoria para el proceso: 0
+
+[INFO] 22:46:31:386 Kernel/(8007:8012): Memoria reservada correctamente
+[INFO] 22:46:31:386 Kernel/(8007:8012): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:46:31:386 Kernel/(8007:8012): Creando TCB de prioridad: 0
+
+[ERROR] 22:46:31:387 Kernel/(8007:8012): PID del HILO creado: 0
+[INFO] 22:46:31:387 Kernel/(8007:8014): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:46:31:388 Kernel/(8007:8016): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:46:31:388 Kernel/(8007:8016): PID: 0
+[INFO] 22:46:31:394 Kernel/(8007:8016): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:46:31:395 Kernel/(8007:8013): intentando finalizar proceso con pid: 0
+[INFO] 22:46:31:395 Kernel/(8007:8013): ## Finaliza el proceso <0>
+[INFO] 22:52:41:830 Kernel/(8598:8598): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:52:41:831 Kernel/(8598:8598): Conexión exitosa
+[INFO] 22:52:41:831 Kernel/(8598:8598): Conexión exitosa
+[INFO] 22:52:41:832 Kernel/(8598:8598): Conexión exitosa
+[INFO] 22:52:41:833 Kernel/(8598:8598): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:52:41:833 Kernel/(8598:8598): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:52:41:834 Kernel/(8598:8598): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:52:41:834 Kernel/(8598:8606): entro a fin_hilo
+[INFO] 22:52:41:834 Kernel/(8598:8603): Solicitando memoria para el proceso: 0
+
+[INFO] 22:52:42:835 Kernel/(8598:8603): Memoria reservada correctamente
+[INFO] 22:52:42:835 Kernel/(8598:8603): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:52:42:835 Kernel/(8598:8603): Creando TCB de prioridad: 0
+
+[ERROR] 22:52:42:836 Kernel/(8598:8603): PID del HILO creado: 0
+[INFO] 22:52:42:836 Kernel/(8598:8605): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:52:42:836 Kernel/(8598:8607): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:52:42:836 Kernel/(8598:8607): PID: 0
+[INFO] 22:52:42:839 Kernel/(8598:8607): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:52:42:840 Kernel/(8598:8604): intentando finalizar proceso con pid: 0
+[INFO] 22:52:42:840 Kernel/(8598:8604): ## Finaliza el proceso <0>
+[INFO] 22:53:02:488 Kernel/(9014:9014): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 22:53:02:488 Kernel/(9014:9014): Conexión exitosa
+[INFO] 22:53:02:489 Kernel/(9014:9014): Conexión exitosa
+[INFO] 22:53:02:489 Kernel/(9014:9014): Conexión exitosa
+[INFO] 22:53:02:490 Kernel/(9014:9014): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:53:02:490 Kernel/(9014:9014): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:53:02:491 Kernel/(9014:9014): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:53:02:491 Kernel/(9014:9022): entro a fin_hilo
+[INFO] 22:53:02:491 Kernel/(9014:9019): Solicitando memoria para el proceso: 0
+
+[INFO] 22:53:03:492 Kernel/(9014:9019): Memoria reservada correctamente
+[INFO] 22:53:03:493 Kernel/(9014:9019): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:53:03:493 Kernel/(9014:9019): Creando TCB de prioridad: 0
+
+[ERROR] 22:53:03:493 Kernel/(9014:9019): PID del HILO creado: 0
+[INFO] 22:53:03:494 Kernel/(9014:9021): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:53:03:494 Kernel/(9014:9023): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 22:53:03:495 Kernel/(9014:9023): PID: 0
+[INFO] 22:53:03:500 Kernel/(9014:9023): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 22:53:03:501 Kernel/(9014:9020): intentando finalizar proceso con pid: 0
+[INFO] 22:53:03:502 Kernel/(9014:9020): ## Finaliza el proceso <0>
+[INFO] 23:00:27:025 Kernel/(10110:10110): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:00:27:025 Kernel/(10110:10110): Conexión exitosa
+[INFO] 23:00:27:025 Kernel/(10110:10110): Conexión exitosa
+[INFO] 23:00:27:026 Kernel/(10110:10110): Conexión exitosa
+[INFO] 23:00:27:026 Kernel/(10110:10110): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:00:27:027 Kernel/(10110:10110): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:00:27:027 Kernel/(10110:10110): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:00:27:027 Kernel/(10110:10118): entro a fin_hilo
+[INFO] 23:00:27:027 Kernel/(10110:10115): Solicitando memoria para el proceso: 0
+
+[INFO] 23:00:28:028 Kernel/(10110:10115): Memoria reservada correctamente
+[INFO] 23:00:28:028 Kernel/(10110:10115): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:00:28:028 Kernel/(10110:10115): Creando TCB de prioridad: 0
+
+[ERROR] 23:00:28:028 Kernel/(10110:10115): PID del HILO creado: 0
+[INFO] 23:00:28:029 Kernel/(10110:10117): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:00:28:029 Kernel/(10110:10119): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:00:28:029 Kernel/(10110:10119): PID: 0
+[INFO] 23:00:28:032 Kernel/(10110:10119): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:00:28:032 Kernel/(10110:10119): Creando TCB de prioridad: 0
+
+[ERROR] 23:00:28:032 Kernel/(10110:10119): PID del HILO creado: 0
+[INFO] 23:00:28:032 Kernel/(10110:10117): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:00:28:073 Kernel/(10110:10119): Hilo suspendido
+[INFO] 23:00:28:073 Kernel/(10110:10119): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:00:28:073 Kernel/(10110:10119): PID: 0
+[INFO] 23:00:28:074 Kernel/(10110:10119): CPU ejecutando el hilo: 1 del proceso: 0
+
+[ERROR] 23:00:28:117 Kernel/(10110:10119): ENTRO A SYSCALL_THREAD_EXIT
+[INFO] 23:00:28:117 Kernel/(10110:10119): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 23:00:28:118 Kernel/(10110:10118): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 23:00:28:118 Kernel/(10110:10118): entro a fin_hilo
+[INFO] 23:00:28:118 Kernel/(10110:10119): Hilo suspendido
+[INFO] 23:00:28:118 Kernel/(10110:10119): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:00:28:118 Kernel/(10110:10119): PID: 0
+[INFO] 23:00:28:118 Kernel/(10110:10119): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:00:28:161 Kernel/(10110:10116): intentando finalizar proceso con pid: 0
+[INFO] 23:00:28:162 Kernel/(10110:10116): ## Finaliza el proceso <0>
+[INFO] 23:04:24:619 Kernel/(11021:11021): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:04:24:619 Kernel/(11021:11021): Conexión exitosa
+[INFO] 23:04:24:620 Kernel/(11021:11021): Conexión exitosa
+[INFO] 23:04:24:620 Kernel/(11021:11021): Conexión exitosa
+[INFO] 23:04:24:621 Kernel/(11021:11021): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:04:24:622 Kernel/(11021:11021): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:04:24:622 Kernel/(11021:11021): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:04:24:623 Kernel/(11021:11029): entro a fin_hilo
+[INFO] 23:04:24:623 Kernel/(11021:11026): Solicitando memoria para el proceso: 0
+
+[INFO] 23:04:25:623 Kernel/(11021:11026): Memoria reservada correctamente
+[INFO] 23:04:25:624 Kernel/(11021:11026): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:04:25:624 Kernel/(11021:11026): Creando TCB de prioridad: 0
+
+[ERROR] 23:04:25:624 Kernel/(11021:11026): PID del HILO creado: 0
+[INFO] 23:04:25:625 Kernel/(11021:11028): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:04:25:625 Kernel/(11021:11036): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:04:25:626 Kernel/(11021:11036): PID: 0
+[INFO] 23:04:25:635 Kernel/(11021:11036): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:04:25:636 Kernel/(11021:11036): Creando TCB de prioridad: 0
+
+[ERROR] 23:04:25:636 Kernel/(11021:11036): PID del HILO creado: 0
+[INFO] 23:04:25:636 Kernel/(11021:11028): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:04:25:637 Kernel/(11021:11036): Hilo suspendido
+[INFO] 23:04:25:637 Kernel/(11021:11036): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:04:25:637 Kernel/(11021:11036): PID: 0
+[INFO] 23:04:25:639 Kernel/(11021:11036): CPU ejecutando el hilo: 1 del proceso: 0
+
+[ERROR] 23:04:25:681 Kernel/(11021:11036): ENTRO A SYSCALL_THREAD_EXIT
+[INFO] 23:04:25:681 Kernel/(11021:11036): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 23:04:25:681 Kernel/(11021:11029): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 23:04:25:681 Kernel/(11021:11029): entro a fin_hilo
+[INFO] 23:04:25:682 Kernel/(11021:11036): Hilo suspendido
+[INFO] 23:04:25:682 Kernel/(11021:11036): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:04:25:682 Kernel/(11021:11036): PID: 0
+[INFO] 23:04:25:682 Kernel/(11021:11036): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:04:25:725 Kernel/(11021:11027): intentando finalizar proceso con pid: 0
+[INFO] 23:04:25:725 Kernel/(11021:11027): ## Finaliza el proceso <0>
+[INFO] 23:07:49:548 Kernel/(11984:11984): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:07:49:549 Kernel/(11984:11984): Conexión exitosa
+[INFO] 23:07:49:550 Kernel/(11984:11984): Conexión exitosa
+[INFO] 23:07:49:551 Kernel/(11984:11984): Conexión exitosa
+[INFO] 23:07:49:551 Kernel/(11984:11984): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:07:49:551 Kernel/(11984:11984): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:07:49:552 Kernel/(11984:11984): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:07:49:552 Kernel/(11984:11992): entro a fin_hilo
+[INFO] 23:07:49:552 Kernel/(11984:11989): Solicitando memoria para el proceso: 0
+
+[INFO] 23:07:50:553 Kernel/(11984:11989): Memoria reservada correctamente
+[INFO] 23:07:50:553 Kernel/(11984:11989): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:07:50:553 Kernel/(11984:11989): Creando TCB de prioridad: 0
+
+[ERROR] 23:07:50:553 Kernel/(11984:11989): PID del HILO creado: 0
+[INFO] 23:07:50:553 Kernel/(11984:11991): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:07:50:554 Kernel/(11984:11993): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:07:50:554 Kernel/(11984:11993): PID: 0
+[INFO] 23:07:50:556 Kernel/(11984:11993): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:07:50:556 Kernel/(11984:11993): Creando TCB de prioridad: 0
+
+[ERROR] 23:07:50:556 Kernel/(11984:11993): PID del HILO creado: 0
+[INFO] 23:07:50:557 Kernel/(11984:11991): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:07:50:557 Kernel/(11984:11993): Hilo suspendido
+[INFO] 23:07:50:558 Kernel/(11984:11993): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:07:50:558 Kernel/(11984:11993): PID: 0
+[INFO] 23:07:50:559 Kernel/(11984:11993): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 23:08:53:858 Kernel/(12471:12471): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:08:53:859 Kernel/(12471:12471): Conexión exitosa
+[INFO] 23:08:53:859 Kernel/(12471:12471): Conexión exitosa
+[INFO] 23:08:53:859 Kernel/(12471:12471): Conexión exitosa
+[INFO] 23:08:53:861 Kernel/(12471:12471): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:08:53:861 Kernel/(12471:12471): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:08:53:862 Kernel/(12471:12471): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:08:53:862 Kernel/(12471:12479): entro a fin_hilo
+[INFO] 23:08:53:862 Kernel/(12471:12476): Solicitando memoria para el proceso: 0
+
+[INFO] 23:08:54:863 Kernel/(12471:12476): Memoria reservada correctamente
+[INFO] 23:08:54:863 Kernel/(12471:12476): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:08:54:864 Kernel/(12471:12476): Creando TCB de prioridad: 0
+
+[ERROR] 23:08:54:864 Kernel/(12471:12476): PID del HILO creado: 0
+[INFO] 23:08:54:865 Kernel/(12471:12478): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:08:54:865 Kernel/(12471:12480): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:08:54:866 Kernel/(12471:12480): PID: 0
+[INFO] 23:08:54:872 Kernel/(12471:12480): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:08:54:873 Kernel/(12471:12480): Creando TCB de prioridad: 0
+
+[ERROR] 23:08:54:873 Kernel/(12471:12480): PID del HILO creado: 0
+[INFO] 23:08:54:874 Kernel/(12471:12478): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:08:54:874 Kernel/(12471:12480): Hilo suspendido
+[INFO] 23:08:54:874 Kernel/(12471:12480): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:08:54:874 Kernel/(12471:12480): PID: 0
+[INFO] 23:08:54:875 Kernel/(12471:12480): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 23:08:54:917 Kernel/(12471:12480): No se encontro el hilo <TID:1>;<PID:0>
+[INFO] 23:11:03:464 Kernel/(13031:13031): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:11:03:464 Kernel/(13031:13031): Conexión exitosa
+[INFO] 23:11:03:464 Kernel/(13031:13031): Conexión exitosa
+[INFO] 23:11:03:465 Kernel/(13031:13031): Conexión exitosa
+[INFO] 23:11:03:465 Kernel/(13031:13031): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:11:03:466 Kernel/(13031:13031): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:11:03:466 Kernel/(13031:13031): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:11:03:466 Kernel/(13031:13039): entro a fin_hilo
+[INFO] 23:11:03:466 Kernel/(13031:13036): Solicitando memoria para el proceso: 0
+
+[INFO] 23:11:04:467 Kernel/(13031:13036): Memoria reservada correctamente
+[INFO] 23:11:04:468 Kernel/(13031:13036): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:11:04:468 Kernel/(13031:13036): Creando TCB de prioridad: 0
+
+[ERROR] 23:11:04:469 Kernel/(13031:13036): PID del HILO creado: 0
+[INFO] 23:11:04:469 Kernel/(13031:13038): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:11:04:470 Kernel/(13031:13040): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:11:04:470 Kernel/(13031:13040): PID: 0
+[INFO] 23:11:04:476 Kernel/(13031:13040): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:11:04:477 Kernel/(13031:13040): Creando TCB de prioridad: 0
+
+[ERROR] 23:11:04:478 Kernel/(13031:13040): PID del HILO creado: 0
+[INFO] 23:11:04:478 Kernel/(13031:13038): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:11:04:479 Kernel/(13031:13040): Hilo suspendido
+[INFO] 23:11:04:479 Kernel/(13031:13040): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:11:04:479 Kernel/(13031:13040): PID: 0
+[INFO] 23:11:04:480 Kernel/(13031:13040): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 23:11:04:521 Kernel/(13031:13040): Cancelando hilo con TID: 1 del proceso con PID: 0
+[INFO] 23:11:04:522 Kernel/(13031:13039): ## Finaliza el hilo <0> del proceso <0>
+[INFO] 23:11:04:522 Kernel/(13031:13039): entro a fin_hilo
+[INFO] 23:11:04:522 Kernel/(13031:13040): Finalizando hilo con TID: -33996800 del proceso con PID: 0
+[INFO] 23:11:04:522 Kernel/(13031:13039): ## Finaliza el hilo <-33996800> del proceso <0>
+[INFO] 23:11:04:522 Kernel/(13031:13039): entro a fin_hilo
+[INFO] 23:13:43:040 Kernel/(13596:13596): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:13:43:041 Kernel/(13596:13596): Conexión exitosa
+[INFO] 23:13:43:041 Kernel/(13596:13596): Conexión exitosa
+[INFO] 23:13:43:041 Kernel/(13596:13596): Conexión exitosa
+[INFO] 23:13:43:042 Kernel/(13596:13596): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:13:43:042 Kernel/(13596:13596): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:13:43:043 Kernel/(13596:13596): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:13:43:043 Kernel/(13596:13604): entro a fin_hilo
+[INFO] 23:13:43:043 Kernel/(13596:13601): Solicitando memoria para el proceso: 0
+
+[INFO] 23:13:44:043 Kernel/(13596:13601): Memoria reservada correctamente
+[INFO] 23:13:44:044 Kernel/(13596:13601): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:13:44:044 Kernel/(13596:13601): Creando TCB de prioridad: 0
+
+[ERROR] 23:13:44:044 Kernel/(13596:13601): PID del HILO creado: 0
+[INFO] 23:13:44:045 Kernel/(13596:13603): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:13:44:045 Kernel/(13596:13605): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:13:44:045 Kernel/(13596:13605): PID: 0
+[INFO] 23:13:44:052 Kernel/(13596:13605): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:13:44:052 Kernel/(13596:13605): Creando TCB de prioridad: 0
+
+[ERROR] 23:13:44:053 Kernel/(13596:13605): PID del HILO creado: 0
+[INFO] 23:13:44:053 Kernel/(13596:13603): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:13:44:053 Kernel/(13596:13605): Hilo suspendido
+[INFO] 23:13:44:054 Kernel/(13596:13605): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 23:13:44:054 Kernel/(13596:13605): PID: 0
+[INFO] 23:13:44:055 Kernel/(13596:13605): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 23:13:44:098 Kernel/(13596:13605): Cancelando hilo con TID: 1 del proceso con PID: 0
+[INFO] 23:13:44:098 Kernel/(13596:13604): ## Finaliza el hilo <0> del proceso <0>
+[INFO] 23:13:44:098 Kernel/(13596:13604): entro a fin_hilo
+[INFO] 23:13:44:098 Kernel/(13596:13605): Hilo suspendido
+[INFO] 23:14:25:387 Kernel/(14000:14000): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 23:14:25:388 Kernel/(14000:14000): Conexión exitosa
+[INFO] 23:14:25:388 Kernel/(14000:14000): Conexión exitosa
+[INFO] 23:14:25:388 Kernel/(14000:14000): Conexión exitosa
+[INFO] 23:14:25:389 Kernel/(14000:14000): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 23:14:25:389 Kernel/(14000:14000): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 23:14:25:390 Kernel/(14000:14000): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 23:14:25:390 Kernel/(14000:14008): entro a fin_hilo
+[INFO] 23:14:25:390 Kernel/(14000:14005): Solicitando memoria para el proceso: 0
+
+[INFO] 23:14:26:391 Kernel/(14000:14005): Memoria reservada correctamente
+[INFO] 23:14:26:391 Kernel/(14000:14005): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 23:14:26:391 Kernel/(14000:14005): Creando TCB de prioridad: 0
+
+[ERROR] 23:14:26:391 Kernel/(14000:14005): PID del HILO creado: 0
+[INFO] 23:14:26:391 Kernel/(14000:14007): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 23:14:26:392 Kernel/(14000:14009): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[ERROR] 23:14:26:392 Kernel/(14000:14009): PID: 0
+[INFO] 23:14:26:394 Kernel/(14000:14009): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 23:14:26:394 Kernel/(14000:14009): Creando TCB de prioridad: 0
+
+[ERROR] 23:14:26:394 Kernel/(14000:14009): PID del HILO creado: 0
+[INFO] 23:14:26:395 Kernel/(14000:14007): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 23:14:26:395 Kernel/(14000:14009): Cancelando hilo con TID: 1 del proceso con PID: 0
+[INFO] 23:14:26:395 Kernel/(14000:14008): ## Finaliza el hilo <0> del proceso <0>
+[INFO] 23:14:26:395 Kernel/(14000:14008): entro a fin_hilo
