@@ -7,6 +7,8 @@ extern sem_t sem_proceso_creado;
 extern sem_t sem_mutex_creado;
 extern sem_t sem_mutex_lockeado;
 extern sem_t sem_mutex_unlockeado;
+extern sem_t sem_thread_exit;
+extern sem_t sem_process_exit;
 extern char* rta_mutex_lock;
 
 
@@ -133,12 +135,14 @@ void MUTEX_UNLOCK (char* recurso) {
     sem_wait(&sem_mutex_unlockeado);
 }
 
-void THREAD_EXIT(int tid, int pid) {
-    thread_exit(tid, pid);
+void THREAD_EXIT() {
+    thread_exit();
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_thread_exit);
 }
 
-void PROCESS_EXIT(int pid) {
-    process_exit(pid);
+void PROCESS_EXIT() {
+    process_exit();
     actualizar_contexto(fd_memoria);
+    sem_wait(&sem_process_exit);
 }

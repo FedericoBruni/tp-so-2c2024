@@ -6,6 +6,7 @@ extern t_queue* cola_ready;
 extern t_queue *cola_exit;
 extern t_queue *cola_blocked;
 extern t_queue *cola_finalizacion;
+extern t_queue *cola_fin_pcb;
 extern t_log *logger;
 extern t_list *procesos;
 extern pthread_mutex_t mutex_new;
@@ -54,7 +55,7 @@ void PROCESS_EXIT(TCB *tcb)
     PCB *pcb = tcb->pcb;
     mover_tcbs_exit(pcb);
     //queue_push(cola_finalizacion, pcb);
-    encolar(cola_finalizacion, pcb, mutex_exit); 
+    encolar(cola_fin_pcb, pcb, mutex_exit); 
     sem_post(&sem_finalizar_proceso);
 
     //sem_post(&sem_);

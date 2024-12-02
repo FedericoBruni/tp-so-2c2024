@@ -12,8 +12,8 @@ void thread_cancel(int tid, int pid);
 void mutex_create(char* recurso);
 void mutex_lock(char* recurso);
 void mutex_unlock(char* recurso);
-void thread_exit(int tid, int pid);
-void process_exit(int pid);
+void thread_exit();
+void process_exit();
 void enviar_dump_memory(int pid, int tid);
 void enviar_io(int tiempo);
 

@@ -68,21 +68,14 @@ void mutex_unlock(char* recurso) {
     eliminar_paquete(paquete);
 }
 
-void thread_exit(int tid, int pid) {
-    t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, tid);
-    cargar_int_al_buffer(buffer, pid);
-    t_paquete *paquete = crear_paquete(SYSCALL_THREAD_EXIT, buffer);
-    enviar_paquete(paquete, cliente_fd_dispatch);
-    eliminar_paquete(paquete);
+void thread_exit() {
+    int rta = SYSCALL_THREAD_EXIT;
+    send(cliente_fd_dispatch, &rta,sizeof(op_code),0);
 }
 
-void process_exit(int pid) {
-    t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer, pid);
-    t_paquete *paquete = crear_paquete(SYSCALL_PROCESS_EXIT, buffer);
-    enviar_paquete(paquete, cliente_fd_dispatch);
-    eliminar_paquete(paquete);
+void process_exit() {
+    int process_exit = SYSCALL_PROCESS_EXIT;
+    send(cliente_fd_dispatch, &process_exit,sizeof(op_code),0);
 }
 
 void enviar_dump_memory(int pid, int tid){

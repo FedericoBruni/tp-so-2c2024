@@ -174,10 +174,17 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &mutex_unlock, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_EXIT:
-            deserializar_thread_exit();;
+            log_error(logger,"ENTRO A SYSCALL_THREAD_EXIT");
+            THREAD_EXIT(tcb_en_ejecucion);
+            sem_wait(&sem_syscall_fin);
+            int thread_exit = FIN_HILO;
+            send(fd_cpu_dispatch, &thread_exit, sizeof(op_code), 0);
             break;
         case SYSCALL_PROCESS_EXIT:
-            deserializar_process_exit();
+            PROCESS_EXIT(tcb_en_ejecucion);
+            sem_wait(&sem_syscall_fin);
+            int process_exit = FIN_PROCESO;
+            send(fd_cpu_dispatch, &process_exit, sizeof(op_code), 0);
             break;
         case FIN_DE_ARCHIVO:
             //sleep(5);
@@ -249,17 +256,15 @@ void deserializar_mutex_unlock(){
     char *recurso = extraer_string_del_buffer(buffer);
     MUTEX_UNLOCK(recurso);
 }
-void deserializar_thread_exit(){
-    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
-    int tid = extraer_int_del_buffer(buffer);
-    int pid = extraer_int_del_buffer(buffer);
-    //THREAD_EXIT(tid,pid);
-}
-void deserializar_process_exit(){
-    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
-    int pid = extraer_int_del_buffer(buffer);
-    //PROCESS_EXIT(pid);
-}
+// void deserializar_thread_exit(){
+
+//     //THREAD_EXIT(tid,pid);
+// }
+// void deserializar_process_exit(){
+//     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+//     int pid = extraer_int_del_buffer(buffer);
+//     //PROCESS_EXIT(pid);
+// }
 
 void deserializar_dump_memory() {
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);

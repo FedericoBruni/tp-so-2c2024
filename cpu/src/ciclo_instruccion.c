@@ -164,10 +164,12 @@ char* decode(char* instruccion) {
         char* recurso = corregir_linea(lista[1]);
         MUTEX_UNLOCK(recurso);
         return "OK";
-    } else if (string_equals_ignore_case(instr, "THREAD_EXIT")){
-        
-    } else if (string_equals_ignore_case(instr, "PROCESS_EXIT")){
-        
+    } else if (string_equals_ignore_case(instr, "THREAD_EXIT\n")){
+        THREAD_EXIT();
+        return "SUSPPROCESO";
+    } else if (string_equals_ignore_case(instr, "PROCESS_EXIT\n")){
+        PROCESS_EXIT();
+        return "SUSPPROCESO";
     }
     imprimir_ctx_cpu(contexto_en_ejecucion);
     //sem_post(&sem_ejecucion);

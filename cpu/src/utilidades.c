@@ -15,6 +15,8 @@ sem_t sem_proceso_creado;
 sem_t sem_mutex_creado;
 sem_t sem_mutex_lockeado;
 sem_t sem_mutex_unlockeado;
+sem_t sem_thread_exit;
+sem_t sem_process_exit;
 pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
 
@@ -32,6 +34,8 @@ void iniciar_cpu(void)
     inicializar_semaforo(&sem_mutex_creado, "sem_mutex_creado", 0);
     inicializar_semaforo(&sem_mutex_lockeado, "sem_mutex_lockeado", 0);
     inicializar_semaforo(&sem_mutex_unlockeado, "sem_mutex_unlockeado", 0);
+    inicializar_semaforo(&sem_thread_exit,"Finalizacion de hilo",0);
+    inicializar_semaforo(&sem_process_exit,"Finalizacion de proceso",0);
     inicializar_mutex(&mutex_conexion_dispatch,"mutex_dispatch");
     inicializar_mutex(&mutex_conexion_memoria, "mutex memoria");
 

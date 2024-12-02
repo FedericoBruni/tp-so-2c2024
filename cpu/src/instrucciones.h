@@ -18,6 +18,6 @@ void THREAD_CANCEL (int tid, int pid);
 void MUTEX_CREATE (char *recurso);
 char* MUTEX_LOCK (char* recurso);
 void MUTEX_UNLOCK (char* recurso);
-void THREAD_EXIT(int tid, int pid);
-void PROCESS_EXIT(int pid);
+void THREAD_EXIT();
+void PROCESS_EXIT();
 #endif /*INSTRUCCIONES_H*/

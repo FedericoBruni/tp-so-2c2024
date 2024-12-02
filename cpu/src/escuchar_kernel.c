@@ -7,6 +7,8 @@ extern sem_t sem_proceso_creado;
 extern sem_t sem_mutex_creado;
 extern sem_t sem_mutex_lockeado;
 extern sem_t sem_mutex_unlockeado;
+extern sem_t sem_thread_exit;
+extern sem_t sem_process_exit;
 char* rta_mutex_lock;
 
 void escuchar_mensajes_kernel_dispatch(void)
@@ -45,6 +47,12 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case LOCKEAR_HILO:
 			rta_mutex_lock = "SUSPPROCESO";
 			sem_post(&sem_mutex_lockeado);
+			break;
+		case FIN_HILO:
+			sem_post(&sem_thread_exit);
+			break;	
+		case FIN_PROCESO:
+			sem_post(&sem_process_exit);
 			break;
 			
 		case -1:

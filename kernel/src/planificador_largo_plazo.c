@@ -3,6 +3,7 @@ extern t_queue *cola_new;
 extern t_queue *cola_ready;
 extern t_queue *cola_finalizacion;
 extern t_queue *cola_new_hilo;
+extern t_queue *cola_fin_pcb;
 extern t_log *logger;
 extern PCB *pcb_en_ejecucion;
 extern int fd_memoria;
@@ -42,9 +43,6 @@ void creacion_de_procesos(void)
             log_info(logger, "Memoria reservada correctamente");
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
             THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
-            
-            
-
             break;
 
         case 0:
@@ -67,7 +65,7 @@ void finalizacion_de_procesos(void)
     {
         sem_wait(&sem_finalizar_proceso);
         //pthread_mutex_lock(&mutex_exit);
-        PCB *pcb = desencolar(cola_finalizacion,mutex_exit);
+        PCB *pcb = desencolar(cola_fin_pcb,mutex_exit);
         log_info(logger, "intentando finalizar proceso con pid: %i", pcb->pid);
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_proceso(fd_memoria, pcb->pid, FINAL_PROCESO);
@@ -78,6 +76,7 @@ void finalizacion_de_procesos(void)
             log_info(logger, "## Finaliza el proceso <%i>", pcb->pid);
             liberar_pcb(pcb);
             sem_post(&sem_hay_memoria);
+            sem_post(&sem_syscall_fin);
             break;
         case 0:
             log_error(logger, "Error al finalizar el proceso: %i\n", pcb->pid);
@@ -145,6 +144,7 @@ void finalizacion_de_hilos(void)
             log_info(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid);
             liberar_tcb(tcb);
             desbloquear_bloqueados_por_hilo(tidBloqueante);
+            sem_post(&sem_syscall_fin);
             break;
         case 0:
             log_error(logger, "Error al finalizar el hilo: %i del proceso: %i", tcb->tid, tcb->pcb_pid);
