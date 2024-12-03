@@ -23,6 +23,7 @@ extern TCB *tcb_en_ejecucion;
 extern t_list *mutex_sistema;
 extern sem_t sem_syscall_fin;
 char* estado_lock;
+extern sem_t sem_io;
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -201,3 +202,26 @@ void DUMP_MEMORY(int pid, int tid){
     // implementar logica
 }
 
+void IO(int tiempo){
+    pthread_t hilo_io;
+    pthread_create(&hilo_io,NULL,(void*) ejecucion_io, tiempo);
+    pthread_detach(hilo_io);
+    sem_wait(&sem_io);
+    log_trace(logger, "B");
+}
+
+void ejecucion_io(int tiempo) {
+    log_trace(logger, "A1");
+    
+    // bloquear el tcb en ejec
+    encolar(cola_blocked, tcb_en_ejecucion, mutex_blocked);
+    imprimir_cola(cola_ready, mutex_ready);
+    imprimir_cola(cola_blocked, mutex_blocked);
+    cambiar_estado_hilo(tcb_en_ejecucion, BLOCKED);
+    sem_post(&sem_io);
+    sleep(tiempo);
+    // pasar a ready el tcb en ejec
+    TCB *tcb = desencolar(cola_blocked, mutex_blocked);
+    encolar(cola_ready, tcb, mutex_ready);
+    log_trace(logger, "A2");
+}

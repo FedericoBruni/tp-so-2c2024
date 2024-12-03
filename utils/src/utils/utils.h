@@ -74,7 +74,8 @@ typedef enum
 	READ_MEM_RTA,
 	HILO_CREADO,
 	HILO_JOINEADO,
-	HILO_CANCEL
+	HILO_CANCEL,
+	IO_SOLICITADA
 
 } op_code;
 

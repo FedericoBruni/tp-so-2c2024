@@ -35,6 +35,7 @@ sem_t sem_cpu_ejecutando;
 sem_t memoria_libre;
 sem_t sem_puede_ejecutar;
 sem_t sem_syscall_fin;
+sem_t sem_io;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
@@ -85,6 +86,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&memoria_libre, "Memoria liberado", 1);
     inicializar_semaforo(&sem_puede_ejecutar, "Puede ejecutar", 1);
     inicializar_semaforo(&sem_syscall_fin, "sem_syscall_fin", 0);
+    inicializar_semaforo(&sem_io, "sem_io", 0);
     
 
 
@@ -311,4 +313,21 @@ void desbloquear_bloqueados_por_hilo(int tidBloqueante){
 void desbloquear_hilo(TCB *tcb){
     cambiar_estado_hilo(tcb,READY);
     replanificar(tcb);
+}
+
+void imprimir_cola(t_queue *cola, pthread_mutex_t mutex){
+    t_queue* cola_aux = queue_create();
+    printf("Cola: ");
+    while(!queue_is_empty(cola)){
+        void* elemento = desencolar(cola, mutex);
+
+        TCB* tcb = (TCB*) elemento;
+        printf("%i; ", tcb->tid);
+        queue_push(cola_aux,elemento);
+    }
+    while(!queue_is_empty(cola_aux)){
+        queue_push(cola,queue_pop(cola_aux));
+    }
+    printf("\n");
+    queue_destroy(cola_aux);
 }

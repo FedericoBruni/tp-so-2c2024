@@ -9,9 +9,8 @@ void ciclo_de_instruccion() {
     while (true) {
         sem_wait(&sem_ejecucion);
         char* instruccion = fetch();
-        printf("instr: %s\n",instruccion);
+        log_trace(logger, "instr: %s\n",instruccion);
         if(instruccion){
-            printf("ENTRO A DECODE\n");
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL &&string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
                 suspender_proceso();
@@ -133,8 +132,8 @@ char* decode(char* instruccion) {
         
     } else if (string_equals_ignore_case(instr, "IO")){
         int milisegundos = atoi(lista[1]);
-        IO(milisegundos);
-        return "OK";
+        io(milisegundos);
+        return "SUSPPROCESO";
     } else if (string_equals_ignore_case(instr, "PROCESS_CREATE")){
         char* archivo = lista[1];
         int tam = atoi(lista[2]);

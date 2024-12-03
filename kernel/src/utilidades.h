@@ -50,4 +50,5 @@ MUTEX *existe_mutex(char* recurso);
 void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb);
 void desbloquear_hilo_mutex(MUTEX *mutex);
 void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb);
+void imprimir_cola(t_queue *cola, pthread_mutex_t mutex);
 #endif // UTILIDADES_H_

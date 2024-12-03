@@ -92,7 +92,7 @@ int enviar_exec_a_cpu(int tid, int pid){
     eliminar_paquete(paquete);
     switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
         case EXEC_RECIBIDO:
-            log_info(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
+            log_trace(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
             sem_post(&sem_cpu_ejecutando);
             return 1;
         default:
@@ -195,9 +195,10 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &process_exit, sizeof(op_code), 0);
             break;
         case FIN_DE_ARCHIVO:
-            //sleep(5);
+            sleep(5);
             if(tcb_en_ejecucion->tid == 0){
                 PROCESS_EXIT(tcb_en_ejecucion);
+                //THREAD_EXIT(tcb_en_ejecucion);
             }else{
                 THREAD_EXIT(tcb_en_ejecucion);
             }
@@ -211,6 +212,12 @@ int esperar_respuesta(){
 
         case SYSCALL_DUMP_MEMORY:
             deserializar_dump_memory();
+            break;
+
+        case SYSCALL_IO:
+            deserializar_io();
+            int io_solicitada = IO_SOLICITADA;
+            send(fd_cpu_dispatch,&io_solicitada,sizeof(op_code),0);
             break;
         default:
             return 0;
@@ -278,7 +285,13 @@ void deserializar_dump_memory() {
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
-    //PROCESS_EXIT(pid);
     log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
     DUMP_MEMORY(pid, tid);
+}
+
+void deserializar_io() {
+    t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
+    int tiempo = extraer_int_del_buffer(buffer);
+    IO(tiempo);
+    
 }

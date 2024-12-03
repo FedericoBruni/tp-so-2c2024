@@ -20,6 +20,7 @@ sem_t sem_process_exit;
 sem_t sem_hilo_creado;
 sem_t sem_join_hilo;
 sem_t sem_hilo_cancel;
+sem_t sem_io_solicitada;
 pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
 
@@ -42,6 +43,7 @@ void iniciar_cpu(void)
     inicializar_semaforo(&sem_hilo_creado,"Hilo creado",0);
     inicializar_semaforo(&sem_join_hilo,"Hilo creado",0);
     inicializar_semaforo(&sem_hilo_cancel,"Hilo creado",0);
+    inicializar_semaforo(&sem_io_solicitada, "sem_io_solicitada", 0);
     inicializar_mutex(&mutex_conexion_dispatch,"mutex_dispatch");
     inicializar_mutex(&mutex_conexion_memoria, "mutex memoria");
 

@@ -1,8 +1,10 @@
 #include "planificador_corto_plazo.h"
 
 extern pthread_mutex_t mutex_ready;
+extern pthread_mutex_t mutex_blocked;
 extern char* algoritmo_planificacion;
 extern t_queue *cola_ready;
+extern t_queue *cola_blocked;
 extern TCB *tcb_en_ejecucion;
 extern t_log *logger;
 extern int fd_cpu_interrupt;
@@ -42,13 +44,16 @@ void fifo(){
     while(1){ 
         sem_wait(&sem_hay_ready);
         sem_wait(&sem_puede_ejecutar);
+        log_trace(logger, "Cola Ready:");
+        imprimir_cola(cola_ready, mutex_ready);
+        log_trace(logger, "Cola Blocked:");
+        imprimir_cola(cola_blocked, mutex_blocked);
         TCB* tcb = desencolar(cola_ready,mutex_ready);
         if(tcb != NULL){
         tcb_en_ejecucion = tcb;
-        log_info(logger,"Planificando TCB %d,PID %d con algoritmo FIFO\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid); 
+        log_trace(logger,"Planificando TCB %d,PID %d con algoritmo FIFO\n", tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid); 
         cambiar_estado_hilo(tcb, EXEC);
         pcb_en_ejecucion = tcb_en_ejecucion->pcb;
-        log_error(logger,"PID: %d",pcb_en_ejecucion->pid);
         enviar_exec_a_cpu(tcb->tid,tcb->pcb_pid);
         if (esperar_respuesta() == 1){
             continue;

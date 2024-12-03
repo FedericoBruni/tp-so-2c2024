@@ -12,6 +12,7 @@ extern sem_t sem_process_exit;
 extern sem_t sem_hilo_creado;
 extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
+extern sem_t sem_io_solicitada;
 extern char* rta_mutex_lock;
 
 
@@ -111,10 +112,11 @@ void DUMP_MEMORY(int pid, int tid) {
     // esperar rta?extern sem_t sem_mutex_lockeado;
 }
 
-void IO (int tiempo) {
+void io(int tiempo) {
     enviar_io(tiempo);
     actualizar_contexto(fd_memoria); // xq es syscall, pero lo necesitamos?
     // esperar rta?
+    sem_wait(&sem_io_solicitada);
 }
 
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){

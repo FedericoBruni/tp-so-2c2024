@@ -8492,3 +8492,308 @@
 [INFO] 23:14:26:395 Memoria/(13808:13905): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
 [INFO] 23:14:26:395 Memoria/(13808:14001): Finalizando hilo con TID: 0 y PID: 0
 [INFO] 23:14:26:395 Memoria/(13808:14001): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[TRACE] 18:16:00:424 Memoria/(5723:5723): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:16:00:430 Memoria/(5723:5723): Conexión exitosa
+[INFO] 18:16:00:436 Memoria/(5723:5723): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:16:01:251 Memoria/(5723:5723): Se conecto el cliente: Cpu
+
+[INFO] 18:16:01:251 Memoria/(5723:5975): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:18:37:928 Memoria/(5723:5723): Se conecto el cliente: Kernel
+
+[INFO] 18:18:37:930 Memoria/(5723:6478): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:18:38:946 Memoria/(5723:6478): Creando hilo con id: 0
+[INFO] 18:18:38:958 Memoria/(5723:6478): Creando hilo con id: 1
+[INFO] 18:18:38:958 Memoria/(5723:5975): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:18:38:959 Memoria/(5723:5975): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:18:39:004 Memoria/(5723:6478): Finalizando proceso con id: 0
+[INFO] 18:18:39:004 Memoria/(5723:6478): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:18:39:004 Memoria/(5723:6478): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:18:39:004 Memoria/(5723:6478): Finalizado proceso: 0
+[TRACE] 18:23:47:660 Memoria/(6795:6795): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:23:47:663 Memoria/(6795:6795): Conexión exitosa
+[INFO] 18:23:47:666 Memoria/(6795:6795): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:23:48:489 Memoria/(6795:6795): Se conecto el cliente: Cpu
+
+[INFO] 18:23:48:489 Memoria/(6795:6892): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:23:49:354 Memoria/(6795:6795): Se conecto el cliente: Kernel
+
+[INFO] 18:23:49:355 Memoria/(6795:6997): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:23:50:384 Memoria/(6795:6997): Creando hilo con id: 0
+[INFO] 18:23:50:393 Memoria/(6795:6892): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:23:50:393 Memoria/(6795:6997): Creando hilo con id: 1
+[INFO] 18:23:50:396 Memoria/(6795:6892): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:23:50:459 Memoria/(6795:6997): Finalizando proceso con id: 0
+[INFO] 18:23:50:459 Memoria/(6795:6997): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:23:50:459 Memoria/(6795:6997): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:23:50:459 Memoria/(6795:6997): Finalizado proceso: 0
+[TRACE] 18:24:50:449 Memoria/(7287:7287): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:24:50:450 Memoria/(7287:7287): Conexión exitosa
+[INFO] 18:24:50:451 Memoria/(7287:7287): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:24:51:172 Memoria/(7287:7287): Se conecto el cliente: Cpu
+
+[INFO] 18:24:51:175 Memoria/(7287:7384): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:24:51:894 Memoria/(7287:7287): Se conecto el cliente: Kernel
+
+[INFO] 18:24:51:895 Memoria/(7287:7489): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:24:52:905 Memoria/(7287:7489): Creando hilo con id: 0
+[INFO] 18:24:52:910 Memoria/(7287:7384): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:24:52:911 Memoria/(7287:7489): Creando hilo con id: 1
+[INFO] 18:24:52:919 Memoria/(7287:7384): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:24:52:978 Memoria/(7287:7489): Finalizando hilo con TID: 0 y PID: 0
+[INFO] 18:24:52:978 Memoria/(7287:7489): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:24:53:027 Memoria/(7287:7489): Finalizando hilo con TID: 1 y PID: 0
+[INFO] 18:24:53:027 Memoria/(7287:7489): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[TRACE] 18:25:39:644 Memoria/(7736:7736): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:25:39:647 Memoria/(7736:7736): Conexión exitosa
+[INFO] 18:25:39:649 Memoria/(7736:7736): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:25:40:375 Memoria/(7736:7736): Se conecto el cliente: Cpu
+
+[INFO] 18:25:40:379 Memoria/(7736:7833): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:25:41:045 Memoria/(7736:7736): Se conecto el cliente: Kernel
+
+[INFO] 18:25:41:047 Memoria/(7736:7938): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:25:42:063 Memoria/(7736:7938): Creando hilo con id: 0
+[INFO] 18:25:42:066 Memoria/(7736:7833): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:25:42:066 Memoria/(7736:7938): Creando hilo con id: 1
+[INFO] 18:25:42:068 Memoria/(7736:7833): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:25:47:120 Memoria/(7736:7938): Finalizando proceso con id: 0
+[INFO] 18:25:47:120 Memoria/(7736:7938): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:25:47:120 Memoria/(7736:7938): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:25:47:120 Memoria/(7736:7938): Finalizado proceso: 0
+[TRACE] 18:28:09:661 Memoria/(8297:8297): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:28:09:662 Memoria/(8297:8297): Conexión exitosa
+[INFO] 18:28:09:662 Memoria/(8297:8297): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:28:10:349 Memoria/(8297:8297): Se conecto el cliente: Cpu
+
+[INFO] 18:28:10:350 Memoria/(8297:8394): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:28:11:113 Memoria/(8297:8297): Se conecto el cliente: Kernel
+
+[INFO] 18:28:11:114 Memoria/(8297:8503): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:28:12:120 Memoria/(8297:8503): Creando hilo con id: 0
+[INFO] 18:28:12:129 Memoria/(8297:8394): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:28:12:129 Memoria/(8297:8503): Creando hilo con id: 1
+[INFO] 18:28:12:130 Memoria/(8297:8394): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:28:17:174 Memoria/(8297:8503): Finalizando proceso con id: 0
+[INFO] 18:28:17:175 Memoria/(8297:8503): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:28:17:175 Memoria/(8297:8503): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:28:17:175 Memoria/(8297:8503): Finalizado proceso: 0
+[TRACE] 18:29:00:005 Memoria/(8759:8759): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:29:00:006 Memoria/(8759:8759): Conexión exitosa
+[INFO] 18:29:00:008 Memoria/(8759:8759): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:29:00:654 Memoria/(8759:8759): Se conecto el cliente: Cpu
+
+[INFO] 18:29:00:655 Memoria/(8759:8856): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:29:01:370 Memoria/(8759:8759): Se conecto el cliente: Kernel
+
+[INFO] 18:29:01:374 Memoria/(8759:8961): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:29:02:385 Memoria/(8759:8961): Creando hilo con id: 0
+[INFO] 18:29:02:392 Memoria/(8759:8856): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:29:02:392 Memoria/(8759:8961): Creando hilo con id: 1
+[INFO] 18:29:02:395 Memoria/(8759:8856): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:29:07:445 Memoria/(8759:8961): Finalizando proceso con id: 0
+[INFO] 18:29:07:445 Memoria/(8759:8961): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:29:07:445 Memoria/(8759:8961): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:29:07:445 Memoria/(8759:8961): Finalizado proceso: 0
+[TRACE] 18:30:21:134 Memoria/(9283:9283): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:30:21:134 Memoria/(9283:9283): Conexión exitosa
+[INFO] 18:30:21:138 Memoria/(9283:9283): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:30:21:760 Memoria/(9283:9283): Se conecto el cliente: Cpu
+
+[INFO] 18:30:21:760 Memoria/(9283:9380): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:30:22:352 Memoria/(9283:9283): Se conecto el cliente: Kernel
+
+[INFO] 18:30:22:353 Memoria/(9283:9476): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:30:23:360 Memoria/(9283:9476): Creando hilo con id: 0
+[INFO] 18:30:23:365 Memoria/(9283:9380): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:30:23:366 Memoria/(9283:9476): Creando hilo con id: 1
+[INFO] 18:30:23:368 Memoria/(9283:9380): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:30:28:417 Memoria/(9283:9476): Finalizando proceso con id: 0
+[INFO] 18:30:28:417 Memoria/(9283:9476): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:30:28:417 Memoria/(9283:9476): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:30:28:417 Memoria/(9283:9476): Finalizado proceso: 0
+[TRACE] 18:31:22:746 Memoria/(9713:9713): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:31:22:750 Memoria/(9713:9713): Conexión exitosa
+[INFO] 18:31:22:752 Memoria/(9713:9713): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:31:23:325 Memoria/(9713:9713): Se conecto el cliente: Cpu
+
+[INFO] 18:31:23:326 Memoria/(9713:9810): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:31:23:933 Memoria/(9713:9713): Se conecto el cliente: Kernel
+
+[INFO] 18:31:23:934 Memoria/(9713:9906): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:31:24:949 Memoria/(9713:9906): Creando hilo con id: 0
+[INFO] 18:31:24:960 Memoria/(9713:9810): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:31:24:961 Memoria/(9713:9906): Creando hilo con id: 1
+[INFO] 18:31:24:962 Memoria/(9713:9810): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:31:24:970 Memoria/(9713:9810): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 18:31:30:013 Memoria/(9713:9906): Finalizando hilo con TID: 1 y PID: 0
+[INFO] 18:31:30:013 Memoria/(9713:9906): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[ERROR] 18:33:47:896 Memoria/(9713:9906): Kernel desconectado
+
+[ERROR] 18:33:47:896 Memoria/(9713:9810): Cpu desconectado
+
+[INFO] 18:33:47:896 Memoria/(9713:9713): Finalizando ejecución de MEMORIA
+[TRACE] 18:33:49:496 Memoria/(10244:10244): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:33:49:499 Memoria/(10244:10244): Conexión exitosa
+[INFO] 18:33:49:499 Memoria/(10244:10244): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:33:50:050 Memoria/(10244:10244): Se conecto el cliente: Cpu
+
+[INFO] 18:33:50:052 Memoria/(10244:10341): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:33:50:730 Memoria/(10244:10244): Se conecto el cliente: Kernel
+
+[INFO] 18:33:50:737 Memoria/(10244:10446): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:33:51:751 Memoria/(10244:10446): Creando hilo con id: 0
+[INFO] 18:33:51:760 Memoria/(10244:10341): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:33:51:760 Memoria/(10244:10446): Creando hilo con id: 1
+[INFO] 18:33:51:762 Memoria/(10244:10341): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:33:56:809 Memoria/(10244:10446): Finalizando proceso con id: 0
+[INFO] 18:33:56:809 Memoria/(10244:10446): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:33:56:809 Memoria/(10244:10446): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:33:56:809 Memoria/(10244:10446): Finalizado proceso: 0
+[TRACE] 18:34:54:033 Memoria/(10732:10732): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:34:54:036 Memoria/(10732:10732): Conexión exitosa
+[INFO] 18:34:54:037 Memoria/(10732:10732): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:34:54:885 Memoria/(10732:10732): Se conecto el cliente: Cpu
+
+[INFO] 18:34:54:886 Memoria/(10732:10838): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:34:55:564 Memoria/(10732:10732): Se conecto el cliente: Kernel
+
+[INFO] 18:34:55:566 Memoria/(10732:10940): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:34:56:575 Memoria/(10732:10940): Creando hilo con id: 0
+[INFO] 18:34:56:578 Memoria/(10732:10838): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:34:56:579 Memoria/(10732:10940): Creando hilo con id: 1
+[INFO] 18:34:56:585 Memoria/(10732:10838): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:35:01:630 Memoria/(10732:10940): Finalizando proceso con id: 0
+[INFO] 18:35:01:630 Memoria/(10732:10940): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:35:01:630 Memoria/(10732:10940): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:35:01:630 Memoria/(10732:10940): Finalizado proceso: 0
+[TRACE] 18:42:02:819 Memoria/(11856:11856): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:42:02:820 Memoria/(11856:11856): Conexión exitosa
+[INFO] 18:42:02:826 Memoria/(11856:11856): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:42:03:920 Memoria/(11856:11856): Se conecto el cliente: Cpu
+
+[INFO] 18:42:03:923 Memoria/(11856:11986): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:42:05:116 Memoria/(11856:11856): Se conecto el cliente: Kernel
+
+[INFO] 18:42:05:116 Memoria/(11856:12115): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:42:06:134 Memoria/(11856:12115): Creando hilo con id: 0
+[INFO] 18:42:06:137 Memoria/(11856:11986): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:42:06:137 Memoria/(11856:12115): Creando hilo con id: 1
+[INFO] 18:42:06:139 Memoria/(11856:11986): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:42:11:145 Memoria/(11856:12115): Finalizando proceso con id: 0
+[INFO] 18:42:11:145 Memoria/(11856:12115): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:42:11:145 Memoria/(11856:12115): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:42:11:145 Memoria/(11856:12115): Finalizado proceso: 0
+[TRACE] 18:49:55:227 Memoria/(13048:13048): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:49:55:228 Memoria/(13048:13048): Conexión exitosa
+[INFO] 18:49:55:230 Memoria/(13048:13048): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:49:55:958 Memoria/(13048:13048): Se conecto el cliente: Cpu
+
+[INFO] 18:49:55:959 Memoria/(13048:13145): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:49:57:049 Memoria/(13048:13048): Se conecto el cliente: Kernel
+
+[INFO] 18:49:57:056 Memoria/(13048:13274): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:49:58:064 Memoria/(13048:13274): Creando hilo con id: 0
+[INFO] 18:49:58:071 Memoria/(13048:13145): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:49:58:071 Memoria/(13048:13274): Creando hilo con id: 1
+[INFO] 18:49:58:074 Memoria/(13048:13145): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:50:03:078 Memoria/(13048:13274): Finalizando proceso con id: 0
+[INFO] 18:50:03:078 Memoria/(13048:13274): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:50:03:078 Memoria/(13048:13274): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:50:03:078 Memoria/(13048:13274): Finalizado proceso: 0
+[TRACE] 18:51:25:222 Memoria/(13505:13505): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:51:25:223 Memoria/(13505:13505): Conexión exitosa
+[INFO] 18:51:25:225 Memoria/(13505:13505): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:51:25:920 Memoria/(13505:13505): Se conecto el cliente: Cpu
+
+[INFO] 18:51:25:920 Memoria/(13505:13602): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:51:26:613 Memoria/(13505:13505): Se conecto el cliente: Kernel
+
+[INFO] 18:51:26:616 Memoria/(13505:13698): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:51:27:635 Memoria/(13505:13698): Creando hilo con id: 0
+[INFO] 18:51:27:638 Memoria/(13505:13602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:51:27:638 Memoria/(13505:13698): Creando hilo con id: 1
+[INFO] 18:51:27:640 Memoria/(13505:13602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:51:32:644 Memoria/(13505:13698): Finalizando proceso con id: 0
+[INFO] 18:51:32:644 Memoria/(13505:13698): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:51:32:644 Memoria/(13505:13698): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:51:32:644 Memoria/(13505:13698): Finalizado proceso: 0
+[TRACE] 18:53:06:058 Memoria/(13971:13971): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:53:06:059 Memoria/(13971:13971): Conexión exitosa
+[INFO] 18:53:06:059 Memoria/(13971:13971): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:53:06:634 Memoria/(13971:13971): Se conecto el cliente: Cpu
+
+[INFO] 18:53:06:637 Memoria/(13971:14068): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:53:07:314 Memoria/(13971:13971): Se conecto el cliente: Kernel
+
+[INFO] 18:53:07:316 Memoria/(13971:14173): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:53:08:327 Memoria/(13971:14173): Creando hilo con id: 0
+[INFO] 18:53:08:336 Memoria/(13971:14068): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:53:08:338 Memoria/(13971:14173): Creando hilo con id: 1
+[INFO] 18:53:08:345 Memoria/(13971:14068): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:53:13:358 Memoria/(13971:14173): Finalizando proceso con id: 0
+[INFO] 18:53:13:358 Memoria/(13971:14173): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:53:13:358 Memoria/(13971:14173): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:53:13:358 Memoria/(13971:14173): Finalizado proceso: 0
+[TRACE] 18:56:22:064 Memoria/(14413:14413): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:56:22:065 Memoria/(14413:14413): Conexión exitosa
+[INFO] 18:56:22:067 Memoria/(14413:14413): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:56:22:726 Memoria/(14413:14413): Se conecto el cliente: Cpu
+
+[INFO] 18:56:22:727 Memoria/(14413:14510): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:56:23:347 Memoria/(14413:14413): Se conecto el cliente: Kernel
+
+[INFO] 18:56:23:348 Memoria/(14413:14606): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:56:24:352 Memoria/(14413:14606): Creando hilo con id: 0
+[INFO] 18:56:24:360 Memoria/(14413:14510): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:56:24:360 Memoria/(14413:14606): Creando hilo con id: 1
+[INFO] 18:56:24:365 Memoria/(14413:14510): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:56:29:418 Memoria/(14413:14606): Finalizando hilo con TID: 1 y PID: 0
+[INFO] 18:56:29:418 Memoria/(14413:14606): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 18:56:34:440 Memoria/(14413:14606): Finalizando proceso con id: 0
+[INFO] 18:56:34:441 Memoria/(14413:14606): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 18:56:34:441 Memoria/(14413:14606): Finalizado proceso: 0
+[ERROR] 18:59:16:817 Memoria/(14413:14606): Kernel desconectado
+
+[ERROR] 18:59:16:818 Memoria/(14413:14510): Cpu desconectado
+
+[INFO] 18:59:16:818 Memoria/(14413:14413): Finalizando ejecución de MEMORIA
+[TRACE] 18:59:20:064 Memoria/(14916:14916): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 18:59:20:064 Memoria/(14916:14916): Conexión exitosa
+[INFO] 18:59:20:065 Memoria/(14916:14916): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 18:59:20:890 Memoria/(14916:14916): Se conecto el cliente: Cpu
+
+[INFO] 18:59:20:890 Memoria/(14916:15022): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 18:59:21:654 Memoria/(14916:14916): Se conecto el cliente: Kernel
+
+[INFO] 18:59:21:658 Memoria/(14916:15118): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 18:59:22:670 Memoria/(14916:15118): Creando hilo con id: 0
+[INFO] 18:59:22:679 Memoria/(14916:15022): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:59:22:681 Memoria/(14916:15118): Creando hilo con id: 1
+[INFO] 18:59:22:686 Memoria/(14916:15022): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 18:59:27:735 Memoria/(14916:15118): Finalizando hilo con TID: 1 y PID: 0
+[INFO] 18:59:27:735 Memoria/(14916:15118): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[ERROR] 19:00:54:009 Memoria/(14916:15118): Kernel desconectado
+
+[ERROR] 19:00:54:013 Memoria/(14916:15022): Cpu desconectado
+
+[INFO] 19:00:54:013 Memoria/(14916:14916): Finalizando ejecución de MEMORIA
+[TRACE] 19:00:55:812 Memoria/(15379:15379): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 19:00:55:812 Memoria/(15379:15379): Conexión exitosa
+[INFO] 19:00:55:813 Memoria/(15379:15379): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 19:00:56:602 Memoria/(15379:15379): Se conecto el cliente: Cpu
+
+[INFO] 19:00:56:603 Memoria/(15379:15476): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:00:57:376 Memoria/(15379:15379): Se conecto el cliente: Kernel
+
+[INFO] 19:00:57:378 Memoria/(15379:15572): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:00:58:402 Memoria/(15379:15572): Creando hilo con id: 0
+[INFO] 19:00:58:411 Memoria/(15379:15476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:00:58:411 Memoria/(15379:15572): Creando hilo con id: 1
+[INFO] 19:00:58:413 Memoria/(15379:15476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:01:03:465 Memoria/(15379:15572): Finalizando hilo con TID: 1 y PID: 0
+[INFO] 19:01:03:465 Memoria/(15379:15572): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[ERROR] 19:01:37:068 Memoria/(15379:15572): Kernel desconectado
+
+[ERROR] 19:01:37:069 Memoria/(15379:15476): Cpu desconectado
+
+[INFO] 19:01:37:069 Memoria/(15379:15379): Finalizando ejecución de MEMORIA

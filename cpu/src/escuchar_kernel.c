@@ -12,6 +12,7 @@ extern sem_t sem_process_exit;
 extern sem_t sem_hilo_creado;
 extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
+extern sem_t sem_io_solicitada;
 char* rta_mutex_lock;
 
 void escuchar_mensajes_kernel_dispatch(void)
@@ -65,6 +66,9 @@ void escuchar_mensajes_kernel_dispatch(void)
 			break;	
 		case FIN_PROCESO:
 			sem_post(&sem_process_exit);
+			break;
+		case IO_SOLICITADA:
+			sem_post(&sem_io_solicitada);
 			break;
 			
 		case -1:
