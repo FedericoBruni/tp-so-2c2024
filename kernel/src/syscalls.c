@@ -13,6 +13,7 @@ extern pthread_mutex_t mutex_new;
 extern pthread_mutex_t mutex_exit;
 extern pthread_mutex_t mutex_ready;
 extern pthread_mutex_t mutex_blocked;
+extern sem_t sem_hay_ready;
 extern PCB *pcb_en_ejecucion;
 extern TCB *tcb_a_crear;
 extern sem_t sem_crear_hilo;
@@ -223,5 +224,6 @@ void ejecucion_io(int tiempo) {
     // pasar a ready el tcb en ejec
     TCB *tcb = desencolar(cola_blocked, mutex_blocked);
     encolar(cola_ready, tcb, mutex_ready);
+    sem_post(&sem_hay_ready);
     log_trace(logger, "A2");
 }

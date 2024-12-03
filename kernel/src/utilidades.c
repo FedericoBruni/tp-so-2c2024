@@ -331,3 +331,21 @@ void imprimir_cola(t_queue *cola, pthread_mutex_t mutex){
     printf("\n");
     queue_destroy(cola_aux);
 }
+
+// devuelve 1 si existe un tcb del proceso
+bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
+    t_queue* cola_aux = queue_create();
+    int respuesta = 0;
+    while(!queue_is_empty(cola)){
+        void* elemento = desencolar(cola, mutex);
+
+        TCB* tcb = (TCB*) elemento;
+        if (tcb->pcb_pid == pid) respuesta = 1;
+        queue_push(cola_aux,elemento);
+    }
+    while(!queue_is_empty(cola_aux)){
+        queue_push(cola,queue_pop(cola_aux));
+    }
+    queue_destroy(cola_aux);
+    return respuesta;
+}

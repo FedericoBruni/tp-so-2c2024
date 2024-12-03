@@ -125,7 +125,6 @@ void creacion_de_hilos(void){
     }
 }
 
-
 void finalizacion_de_hilos(void)
 {
     while (true)
@@ -133,6 +132,8 @@ void finalizacion_de_hilos(void)
         log_info(logger,"entro a fin_hilo");
         sem_wait(&sem_finalizar_hilo); 
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
+        // de test:
+        
 
         int tidBloqueante = tcb->tid;
         pthread_mutex_lock(&mutex_fd_memoria);

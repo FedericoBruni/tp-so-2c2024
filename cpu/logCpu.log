@@ -29434,3 +29434,326 @@
 [ERROR] 19:01:37:068 Cpu/(15475:15573): Dispatch desconectado
 
 [INFO] 19:01:37:068 Cpu/(15475:15475): Finalizando ejecución de CPU
+[TRACE] 19:20:01:143 Cpu/(17902:17902): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:20:01:143 Cpu/(17902:17902): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:20:01:143 Cpu/(17902:17902): Conexión exitosa
+[INFO] 19:20:01:145 Cpu/(17902:17902): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:20:03:946 Cpu/(17902:17902): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 19:20:03:955 Cpu/(17902:17902): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 19:20:03:959 Cpu/(17902:18035): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 19:20:03:962 Cpu/(17902:18037): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 19:20:04:987 Cpu/(17902:18035): Recibido EXEC (0 y 0):
+[INFO] 19:20:04:987 Cpu/(17902:18035): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:20:04:987 Cpu/(17902:18035): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:20:04:988 Cpu/(17902:18036): instr: THREAD_CREATE archivo2 0
+
+
+[INFO] 19:20:04:988 Cpu/(17902:18036): Contexto Actualizado correctamente
+
+[TRACE] 19:20:04:992 Cpu/(17902:18036): instr: SET AX 1
+
+
+[TRACE] 19:20:04:995 Cpu/(17902:18036): instr: IO 1
+
+
+[INFO] 19:20:04:995 Cpu/(17902:18036): Contexto Actualizado correctamente
+
+[INFO] 19:20:04:996 Cpu/(17902:18035): Recibido EXEC (1 y 0):
+[INFO] 19:20:04:996 Cpu/(17902:18035): Solicitando contexto de: 0 hilo: 1
+[INFO] 19:20:04:996 Cpu/(17902:18035): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET BX 10
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SUM AX BX
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 1
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 2
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 3
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 4
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 5
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 6
+
+
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: SET DX 7
+
+[INFO] 19:20:04:997 Cpu/(17902:18036): Fin del archivo
+[TRACE] 19:20:04:997 Cpu/(17902:18036): instr: (null)
+
+[ERROR] 19:22:50:470 Cpu/(17902:18037): Interrupt desconectado
+
+[ERROR] 19:22:50:470 Cpu/(17902:18035): Dispatch desconectado
+
+[INFO] 19:22:50:471 Cpu/(17902:17902): Finalizando ejecución de CPU
+[TRACE] 19:22:52:683 Cpu/(18446:18446): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:22:52:683 Cpu/(18446:18446): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:22:52:686 Cpu/(18446:18446): Conexión exitosa
+[INFO] 19:22:52:687 Cpu/(18446:18446): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:22:53:403 Cpu/(18446:18446): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 19:22:53:403 Cpu/(18446:18446): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 19:22:53:406 Cpu/(18446:18553): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 19:22:53:407 Cpu/(18446:18555): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 19:22:54:427 Cpu/(18446:18553): Recibido EXEC (0 y 0):
+[INFO] 19:22:54:427 Cpu/(18446:18553): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:22:54:427 Cpu/(18446:18553): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:22:54:430 Cpu/(18446:18554): instr: THREAD_CREATE archivo2 0
+
+
+[INFO] 19:22:54:431 Cpu/(18446:18554): Contexto Actualizado correctamente
+
+[TRACE] 19:22:54:432 Cpu/(18446:18554): instr: SET AX 1
+
+
+[TRACE] 19:22:54:432 Cpu/(18446:18554): instr: IO 1
+
+
+[INFO] 19:22:54:435 Cpu/(18446:18554): Contexto Actualizado correctamente
+
+[INFO] 19:22:54:436 Cpu/(18446:18553): Recibido EXEC (1 y 0):
+[INFO] 19:22:54:436 Cpu/(18446:18553): Solicitando contexto de: 0 hilo: 1
+[INFO] 19:22:54:436 Cpu/(18446:18553): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET BX 10
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SUM AX BX
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 1
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 2
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 3
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 4
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 5
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 6
+
+
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: SET DX 7
+
+[INFO] 19:22:54:442 Cpu/(18446:18554): Fin del archivo
+[TRACE] 19:22:54:442 Cpu/(18446:18554): instr: (null)
+
+[ERROR] 19:24:58:227 Cpu/(18446:18555): Interrupt desconectado
+
+[ERROR] 19:24:58:227 Cpu/(18446:18553): Dispatch desconectado
+
+[INFO] 19:24:58:227 Cpu/(18446:18446): Finalizando ejecución de CPU
+[TRACE] 19:25:00:821 Cpu/(18933:18933): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:25:00:821 Cpu/(18933:18933): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:25:00:821 Cpu/(18933:18933): Conexión exitosa
+[INFO] 19:25:00:822 Cpu/(18933:18933): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:25:34:272 Cpu/(18933:18933): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 19:25:34:274 Cpu/(18933:18933): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 19:25:34:278 Cpu/(18933:19200): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 19:25:34:282 Cpu/(18933:19202): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 19:25:35:286 Cpu/(18933:19200): Recibido EXEC (0 y 0):
+[INFO] 19:25:35:286 Cpu/(18933:19200): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:25:35:288 Cpu/(18933:19200): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:25:35:289 Cpu/(18933:19201): instr: THREAD_CREATE archivo2 0
+
+
+[INFO] 19:25:35:289 Cpu/(18933:19201): Contexto Actualizado correctamente
+
+[TRACE] 19:25:35:291 Cpu/(18933:19201): instr: SET AX 1
+
+
+[TRACE] 19:25:35:292 Cpu/(18933:19201): instr: IO 1
+
+
+[INFO] 19:25:35:299 Cpu/(18933:19201): Contexto Actualizado correctamente
+
+[INFO] 19:25:35:300 Cpu/(18933:19200): Recibido EXEC (1 y 0):
+[INFO] 19:25:35:300 Cpu/(18933:19200): Solicitando contexto de: 0 hilo: 1
+[INFO] 19:25:35:302 Cpu/(18933:19200): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 19:25:35:302 Cpu/(18933:19201): instr: SET BX 10
+
+
+[TRACE] 19:25:35:303 Cpu/(18933:19201): instr: SUM AX BX
+
+
+[TRACE] 19:25:35:303 Cpu/(18933:19201): instr: SET DX 1
+
+
+[TRACE] 19:25:35:303 Cpu/(18933:19201): instr: SET DX 2
+
+
+[TRACE] 19:25:35:304 Cpu/(18933:19201): instr: SET DX 3
+
+
+[TRACE] 19:25:35:304 Cpu/(18933:19201): instr: SET DX 4
+
+
+[TRACE] 19:25:35:306 Cpu/(18933:19201): instr: SET DX 5
+
+
+[TRACE] 19:25:35:307 Cpu/(18933:19201): instr: SET DX 6
+
+
+[TRACE] 19:25:35:307 Cpu/(18933:19201): instr: SET DX 7
+
+[INFO] 19:25:35:307 Cpu/(18933:19201): Fin del archivo
+[TRACE] 19:25:35:307 Cpu/(18933:19201): instr: (null)
+
+[ERROR] 19:26:15:701 Cpu/(18933:19202): Interrupt desconectado
+
+[ERROR] 19:26:15:701 Cpu/(18933:19200): Dispatch desconectado
+
+[INFO] 19:26:15:701 Cpu/(18933:18933): Finalizando ejecución de CPU
+[TRACE] 19:26:18:178 Cpu/(19520:19520): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:26:18:178 Cpu/(19520:19520): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:26:18:179 Cpu/(19520:19520): Conexión exitosa
+[INFO] 19:26:18:179 Cpu/(19520:19520): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:26:19:077 Cpu/(19520:19520): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 19:26:19:077 Cpu/(19520:19520): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 19:26:19:079 Cpu/(19520:19626): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 19:26:19:080 Cpu/(19520:19628): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 19:26:20:094 Cpu/(19520:19626): Recibido EXEC (0 y 0):
+[INFO] 19:26:20:094 Cpu/(19520:19626): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:26:20:094 Cpu/(19520:19626): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:26:20:095 Cpu/(19520:19627): instr: THREAD_CREATE archivo2 0
+
+
+[INFO] 19:26:20:096 Cpu/(19520:19627): Contexto Actualizado correctamente
+
+[TRACE] 19:26:20:100 Cpu/(19520:19627): instr: SET AX 1
+
+
+[TRACE] 19:26:20:100 Cpu/(19520:19627): instr: IO 1
+
+
+[INFO] 19:26:20:101 Cpu/(19520:19627): Contexto Actualizado correctamente
+
+[INFO] 19:26:20:106 Cpu/(19520:19626): Recibido EXEC (1 y 0):
+[INFO] 19:26:20:106 Cpu/(19520:19626): Solicitando contexto de: 0 hilo: 1
+[INFO] 19:26:20:110 Cpu/(19520:19626): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 19:26:20:110 Cpu/(19520:19627): instr: SET BX 10
+
+
+[TRACE] 19:26:20:111 Cpu/(19520:19627): instr: SUM AX BX
+
+
+[TRACE] 19:26:20:111 Cpu/(19520:19627): instr: SET DX 1
+
+
+[TRACE] 19:26:20:111 Cpu/(19520:19627): instr: SET DX 2
+
+
+[TRACE] 19:26:20:112 Cpu/(19520:19627): instr: SET DX 3
+
+
+[TRACE] 19:26:20:112 Cpu/(19520:19627): instr: SET DX 4
+
+
+[TRACE] 19:26:20:113 Cpu/(19520:19627): instr: SET DX 5
+
+
+[TRACE] 19:26:20:113 Cpu/(19520:19627): instr: SET DX 6
+
+
+[TRACE] 19:26:20:119 Cpu/(19520:19627): instr: SET DX 7
+
+[INFO] 19:26:20:119 Cpu/(19520:19627): Fin del archivo
+[TRACE] 19:26:20:119 Cpu/(19520:19627): instr: (null)
+
+[ERROR] 19:28:28:869 Cpu/(19520:19628): Interrupt desconectado
+
+[ERROR] 19:28:28:869 Cpu/(19520:19626): Dispatch desconectado
+
+[INFO] 19:28:28:870 Cpu/(19520:19520): Finalizando ejecución de CPU
+[TRACE] 19:28:31:574 Cpu/(20125:20125): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:28:31:574 Cpu/(20125:20125): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:28:31:575 Cpu/(20125:20125): Conexión exitosa
+[INFO] 19:28:31:583 Cpu/(20125:20125): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:28:32:407 Cpu/(20125:20125): Se conecto el cliente: Kernel - Dispatcher
+
+[INFO] 19:28:32:408 Cpu/(20125:20125): Se conecto el cliente: Kernel - Interrupt
+
+[INFO] 19:28:32:408 Cpu/(20125:20236): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 19:28:32:413 Cpu/(20125:20238): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 19:28:33:433 Cpu/(20125:20236): Recibido EXEC (0 y 0):
+[INFO] 19:28:33:433 Cpu/(20125:20236): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:28:33:434 Cpu/(20125:20236): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:28:33:435 Cpu/(20125:20237): instr: THREAD_CREATE archivo2 0
+
+
+[INFO] 19:28:33:436 Cpu/(20125:20237): Contexto Actualizado correctamente
+
+[TRACE] 19:28:33:440 Cpu/(20125:20237): instr: SET AX 1
+
+
+[TRACE] 19:28:33:440 Cpu/(20125:20237): instr: IO 1
+
+
+[INFO] 19:28:33:443 Cpu/(20125:20237): Contexto Actualizado correctamente
+
+[INFO] 19:28:33:443 Cpu/(20125:20236): Recibido EXEC (1 y 0):
+[INFO] 19:28:33:443 Cpu/(20125:20236): Solicitando contexto de: 0 hilo: 1
+[INFO] 19:28:33:444 Cpu/(20125:20236): Contexto del proceso: 0, hilo 1 recibido
+[TRACE] 19:28:33:445 Cpu/(20125:20237): instr: SET BX 10
+
+
+[TRACE] 19:28:33:446 Cpu/(20125:20237): instr: SUM AX BX
+
+
+[TRACE] 19:28:33:446 Cpu/(20125:20237): instr: SET DX 1
+
+
+[TRACE] 19:28:33:447 Cpu/(20125:20237): instr: SET DX 2
+
+
+[TRACE] 19:28:33:447 Cpu/(20125:20237): instr: SET DX 3
+
+
+[TRACE] 19:28:33:449 Cpu/(20125:20237): instr: SET DX 4
+
+
+[TRACE] 19:28:33:449 Cpu/(20125:20237): instr: SET DX 5
+
+
+[TRACE] 19:28:33:450 Cpu/(20125:20237): instr: SET DX 6
+
+
+[TRACE] 19:28:33:450 Cpu/(20125:20237): instr: SET DX 7
+
+[INFO] 19:28:33:451 Cpu/(20125:20237): Fin del archivo
+[TRACE] 19:28:33:451 Cpu/(20125:20237): instr: (null)
+
+[INFO] 19:28:38:532 Cpu/(20125:20236): Recibido EXEC (0 y 0):
+[INFO] 19:28:38:532 Cpu/(20125:20236): Solicitando contexto de: 0 hilo: 0
+[INFO] 19:28:38:532 Cpu/(20125:20236): Contexto del proceso: 0, hilo 0 recibido
+[TRACE] 19:28:38:532 Cpu/(20125:20237): instr: SET CX 5
+
+[INFO] 19:28:38:532 Cpu/(20125:20237): Fin del archivo
+[TRACE] 19:28:38:533 Cpu/(20125:20237): instr: (null)
+
+[ERROR] 19:28:57:363 Cpu/(20125:20238): Interrupt desconectado
+
+[ERROR] 19:28:57:363 Cpu/(20125:20236): Dispatch desconectado
+
+[INFO] 19:28:57:364 Cpu/(20125:20125): Finalizando ejecución de CPU

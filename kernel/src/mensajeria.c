@@ -9,6 +9,10 @@ extern PCB *pcb_en_ejecucion;
 extern sem_t sem_puede_ejecutar;
 extern sem_t sem_syscall_fin;
 extern char* estado_lock;
+extern t_queue *cola_ready;
+extern t_queue *cola_blocked;
+extern pthread_mutex_t mutex_ready;
+extern pthread_mutex_t mutex_blocked;
 
 int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
@@ -196,10 +200,13 @@ int esperar_respuesta(){
             break;
         case FIN_DE_ARCHIVO:
             sleep(5);
-            if(tcb_en_ejecucion->tid == 0){
+            if (debe_finalizar_proceso()){
+                log_error(logger, "Finalizando proceso, PROCESS_EXIT");
+            //if(tcb_en_ejecucion->tid == 0){
                 PROCESS_EXIT(tcb_en_ejecucion);
                 //THREAD_EXIT(tcb_en_ejecucion);
             }else{
+                log_error(logger, "Finalizando hilo, THREAD_EXIT");
                 THREAD_EXIT(tcb_en_ejecucion);
             }
             sem_post(&sem_puede_ejecutar);
@@ -224,6 +231,12 @@ int esperar_respuesta(){
         }
 
     }
+}
+
+bool debe_finalizar_proceso() {
+    if (buscar_en_cola(cola_ready, mutex_ready, tcb_en_ejecucion->pcb_pid) || 
+    buscar_en_cola(cola_blocked, mutex_blocked, tcb_en_ejecucion->pcb_pid)) return 0;
+    return 1;
 }
 
 void deserializar_process_create(){
