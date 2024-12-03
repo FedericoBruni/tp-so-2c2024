@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+
     cliente_fd_dispatch = esperar_cliente(server_fd, logger, "Cpu");
     pthread_t hilo_cpu_memoria;
     pthread_create(&hilo_cpu_memoria, NULL, (void *)escuchar_mensajes_cpu, NULL);

@@ -8900,3 +8900,44 @@
 [ERROR] 19:28:57:366 Memoria/(20029:20126): Cpu desconectado
 
 [INFO] 19:28:57:368 Memoria/(20029:20029): Finalizando ejecución de MEMORIA
+[TRACE] 21:29:20:325 Memoria/(4322:4322): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:29:20:325 Memoria/(4322:4322): Conexión exitosa
+[TRACE] 21:31:47:433 Memoria/(4820:4820): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:31:47:433 Memoria/(4820:4820): Conexión exitosa
+[INFO] 21:33:30:251 Memoria/(4820:4820): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:33:32:262 Memoria/(5096:5096): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:33:32:263 Memoria/(5096:5096): Conexión exitosa
+[TRACE] 21:35:52:646 Memoria/(5416:5416): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:35:52:647 Memoria/(5416:5416): Conexión exitosa
+[INFO] 21:35:52:647 Memoria/(5416:5416): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:36:19:846 Memoria/(5642:5642): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:36:19:846 Memoria/(5642:5642): Conexión exitosa
+[INFO] 21:36:19:846 Memoria/(5642:5642): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:36:19:847 Memoria/(5642:5642): mando test
+[TRACE] 21:38:17:749 Memoria/(5921:5921): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:38:17:749 Memoria/(5921:5921): Conexión exitosa
+[INFO] 21:38:17:750 Memoria/(5921:5921): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:38:17:750 Memoria/(5921:5921): mando test
+[TRACE] 21:40:46:696 Memoria/(6294:6294): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:40:46:697 Memoria/(6294:6294): Conexión exitosa
+[INFO] 21:40:46:697 Memoria/(6294:6294): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:40:46:697 Memoria/(6294:6294): mando test
+[TRACE] 21:43:28:942 Memoria/(6646:6646): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:43:28:942 Memoria/(6646:6646): Conexión exitosa
+[INFO] 21:43:28:943 Memoria/(6646:6646): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:43:28:943 Memoria/(6646:6646): mando test
+[INFO] 21:43:28:943 Memoria/(6646:6646): Conexión exitosa
+[TRACE] 21:44:10:170 Memoria/(6914:6914): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:44:10:171 Memoria/(6914:6914): Conexión exitosa
+[INFO] 21:44:10:171 Memoria/(6914:6914): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:44:10:172 Memoria/(6914:6914): mando test
+[INFO] 21:44:10:172 Memoria/(6914:6914): Conexión exitosa
+[TRACE] 21:55:27:959 Memoria/(7784:7784): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:55:27:959 Memoria/(7784:7784): Conexión exitosa
+[INFO] 21:55:27:960 Memoria/(7784:7784): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:56:07:707 Memoria/(8064:8064): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:56:07:707 Memoria/(8064:8064): Conexión exitosa
+[INFO] 21:56:07:708 Memoria/(8064:8064): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:56:53:737 Memoria/(8330:8330): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 21:56:53:738 Memoria/(8330:8330): Conexión exitosa
+[INFO] 21:56:53:739 Memoria/(8330:8330): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM

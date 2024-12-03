@@ -1,19 +1,19 @@
 #include "escuchar_memoria.h"
 
 extern t_log *logger;
-extern int cliente_fd;
+//extern int cliente_fd;
 
-void escuchar_mensajes_memoria()
+void escuchar_mensajes_memoria(int cliente_fd)
 {
-    int desconexion = 0;
-    while (!desconexion)
-    {
         int cod_op = recibir_operacion(cliente_fd);
-
         switch (cod_op)
         {
         case HANDSHAKE_MEMORIA_FS:
             aceptar_handshake(logger, cliente_fd, HANDSHAKE_MEMORIA_FS);
+            log_trace(logger,"TEST HANDSHAKE");
+            break;
+        case TEST:
+            log_trace(logger,"TEST");
             break;
         case -1:
             log_error(logger, "Memoria desconectado\n");
@@ -22,6 +22,5 @@ void escuchar_mensajes_memoria()
         default:
             log_warning(logger, "Codigo de operacion invalido");
             break;
-        }
     }
-}
+}   

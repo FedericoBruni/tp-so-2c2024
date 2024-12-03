@@ -3806,3 +3806,266 @@
 [ERROR] 19:28:57:369 FileSystem/(19934:20030): Memoria desconectado
 
 [INFO] 19:28:57:369 FileSystem/(19934:19934): Finalizando ejecución de FILESYSTEM
+[TRACE] 21:29:13:640 FileSystem/(4151:4151): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:29:20:325 FileSystem/(4151:4151): Se conecto el cliente: Memoria
+
+[ERROR] 21:29:20:326 FileSystem/(4151:4323): Memoria desconectado
+
+[TRACE] 21:31:46:168 FileSystem/(4708:4708): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:31:47:433 FileSystem/(4708:4708): Se conecto el cliente: Memoria
+
+[ERROR] 21:31:47:433 FileSystem/(4708:4821): Memoria desconectado
+
+[TRACE] 21:33:31:594 FileSystem/(5001:5001): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:33:32:263 FileSystem/(5001:5001): Se conecto el cliente: Memoria
+
+[ERROR] 21:33:32:263 FileSystem/(5001:5097): Memoria desconectado
+
+[TRACE] 21:35:51:756 FileSystem/(5321:5321): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:35:52:646 FileSystem/(5321:5321): Se conecto el cliente: Memoria
+
+[INFO] 21:35:52:647 FileSystem/(5321:5417): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:35:52:647 FileSystem/(5321:5417): TEST HANDSHAKE
+[TRACE] 21:36:19:141 FileSystem/(5538:5538): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:36:19:846 FileSystem/(5538:5538): Se conecto el cliente: Memoria
+
+[INFO] 21:36:19:846 FileSystem/(5538:5643): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:36:19:847 FileSystem/(5538:5643): TEST HANDSHAKE
+[TRACE] 21:38:16:716 FileSystem/(5817:5817): Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:38:17:749 FileSystem/(5817:5817): Se conecto el cliente: Memoria
+
+[INFO] 21:38:17:749 FileSystem/(5817:5922): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:38:17:750 FileSystem/(5817:5922): TEST HANDSHAKE
+[TRACE] 21:40:46:115 FileSystem/(6199:6199): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:40:46:116 FileSystem/(6199:6199): Por aceptar serv
+[TRACE] 21:40:46:696 FileSystem/(6199:6199): Ya acepte serv
+[INFO] 21:40:46:697 FileSystem/(6199:6199): Se conecto el cliente: Memoria
+
+[TRACE] 21:40:46:697 FileSystem/(6199:6199): Por aceptar serv
+[INFO] 21:40:46:697 FileSystem/(6199:6295): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:40:46:698 FileSystem/(6199:6295): TEST HANDSHAKE
+[TRACE] 21:43:21:670 FileSystem/(6435:6435): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:43:21:670 FileSystem/(6435:6435): Por aceptar serv
+[TRACE] 21:43:28:942 FileSystem/(6435:6435): Ya acepte serv
+[INFO] 21:43:28:942 FileSystem/(6435:6435): Se conecto el cliente: Memoria
+
+[TRACE] 21:43:28:942 FileSystem/(6435:6435): Por aceptar serv
+[INFO] 21:43:28:943 FileSystem/(6435:6647): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:43:28:943 FileSystem/(6435:6435): Ya acepte serv
+[INFO] 21:43:28:943 FileSystem/(6435:6435): Se conecto el cliente: Memoria
+
+[TRACE] 21:43:28:943 FileSystem/(6435:6435): Por aceptar serv
+[TRACE] 21:43:28:944 FileSystem/(6435:6647): TEST HANDSHAKE
+[ERROR] 21:44:07:377 FileSystem/(6435:6648): Memoria desconectado
+
+[TRACE] 21:44:09:376 FileSystem/(6810:6810): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:44:09:376 FileSystem/(6810:6810): Por aceptar serv
+[TRACE] 21:44:10:171 FileSystem/(6810:6810): Ya acepte serv
+[INFO] 21:44:10:171 FileSystem/(6810:6810): Se conecto el cliente: Memoria
+
+[TRACE] 21:44:10:171 FileSystem/(6810:6810): Por aceptar serv
+[INFO] 21:44:10:171 FileSystem/(6810:6915): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:44:10:172 FileSystem/(6810:6810): Ya acepte serv
+[INFO] 21:44:10:172 FileSystem/(6810:6810): Se conecto el cliente: Memoria
+
+[TRACE] 21:44:10:172 FileSystem/(6810:6810): Por aceptar serv
+[TRACE] 21:44:10:172 FileSystem/(6810:6915): TEST HANDSHAKE
+[TRACE] 21:44:10:172 FileSystem/(6810:6916): TEST
+[TRACE] 21:55:20:081 FileSystem/(7672:7672): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:55:20:081 FileSystem/(7672:7672): Por aceptar serv
+[TRACE] 21:55:27:959 FileSystem/(7672:7672): Ya acepte serv
+[INFO] 21:55:27:959 FileSystem/(7672:7672): Se conecto el cliente: Memoria
+
+[TRACE] 21:55:27:959 FileSystem/(7672:7672): Por aceptar serv
+[INFO] 21:55:27:960 FileSystem/(7672:7785): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:55:27:960 FileSystem/(7672:7785): TEST HANDSHAKE
+[TRACE] 21:56:07:029 FileSystem/(7969:7969): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:56:07:030 FileSystem/(7969:7969): Por aceptar serv
+[TRACE] 21:56:07:707 FileSystem/(7969:7969): Ya acepte serv
+[INFO] 21:56:07:707 FileSystem/(7969:7969): Se conecto el cliente: Memoria
+
+[TRACE] 21:56:07:707 FileSystem/(7969:7969): Por aceptar serv
+[INFO] 21:56:07:708 FileSystem/(7969:8065): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:56:07:708 FileSystem/(7969:8065): TEST HANDSHAKE
+[TRACE] 21:56:53:041 FileSystem/(8235:8235): creando bitmap
+[TRACE] 21:56:53:041 FileSystem/(8235:8235): entre a creando bitmap
+[TRACE] 21:56:53:042 FileSystem/(8235:8235): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:56:53:042 FileSystem/(8235:8235): Por aceptar serv
+[TRACE] 21:56:53:738 FileSystem/(8235:8235): Ya acepte serv
+[INFO] 21:56:53:738 FileSystem/(8235:8235): Se conecto el cliente: Memoria
+
+[TRACE] 21:56:53:738 FileSystem/(8235:8235): Por aceptar serv
+[INFO] 21:56:53:738 FileSystem/(8235:8331): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 21:56:53:739 FileSystem/(8235:8331): TEST HANDSHAKE
+[TRACE] 21:57:20:093 FileSystem/(8439:8439): creando bitmap
+[TRACE] 21:57:20:093 FileSystem/(8439:8439): entre a creando bitmap
+[TRACE] 21:57:20:094 FileSystem/(8439:8439): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:57:20:094 FileSystem/(8439:8439): Por aceptar serv
+[TRACE] 21:57:39:626 FileSystem/(8734:8734): creando bitmap
+[TRACE] 21:57:53:329 FileSystem/(8734:8734): entre a creando bitmap
+[TRACE] 21:57:53:329 FileSystem/(8734:8734): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:57:53:329 FileSystem/(8734:8734): Por aceptar serv
+[TRACE] 21:58:28:387 FileSystem/(9139:9139): creando bitmap
+[TRACE] 21:58:33:519 FileSystem/(9139:9139): entre a creando bitmap
+[TRACE] 21:58:53:583 FileSystem/(9537:9537): creando bitmap
+[TRACE] 21:58:57:877 FileSystem/(9537:9537): entre a creando bitmap
+[TRACE] 21:59:13:828 FileSystem/(9744:9744): creando bitmap
+[TRACE] 21:59:13:832 FileSystem/(9744:9744): entre a creando bitmap
+[TRACE] 21:59:13:832 FileSystem/(9744:9744): Ruta_Completa: /home/utnso/mount_dir/bitmap.dat
+[TRACE] 21:59:13:832 FileSystem/(9744:9744): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:59:13:832 FileSystem/(9744:9744): Por aceptar serv
+[TRACE] 22:05:06:685 FileSystem/(16947:16947): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:05:06:685 FileSystem/(16947:16947): Por aceptar serv
+[TRACE] 22:15:59:500 FileSystem/(99509:99509): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:15:59:529 FileSystem/(99509:99509): Por aceptar serv
+[TRACE] 22:17:01:937 FileSystem/(101389:101389): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:17:01:937 FileSystem/(101389:101389): Por aceptar serv
+[TRACE] 22:17:31:438 FileSystem/(102090:102090): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:17:31:440 FileSystem/(102090:102090): Por aceptar serv
+[TRACE] 22:17:54:662 FileSystem/(102830:102830): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:17:54:662 FileSystem/(102830:102830): Por aceptar serv
+[TRACE] 22:18:11:828 FileSystem/(103368:103368): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:18:11:831 FileSystem/(103368:103368): Por aceptar serv
+[TRACE] 22:34:07:679 FileSystem/(136631:136631): Cant de bloques libres: 1024
+[TRACE] 22:34:07:680 FileSystem/(136631:136631): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:34:07:680 FileSystem/(136631:136631): Por aceptar serv
+[TRACE] 22:34:20:337 FileSystem/(136749:136749): Cant de bloques libres: 8
+[TRACE] 22:34:20:338 FileSystem/(136749:136749): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:34:20:338 FileSystem/(136749:136749): Por aceptar serv
+[TRACE] 22:34:35:392 FileSystem/(136859:136859): Cant de bloques libres: 96
+[TRACE] 22:34:35:393 FileSystem/(136859:136859): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:34:35:393 FileSystem/(136859:136859): Por aceptar serv
+[TRACE] 22:35:07:101 FileSystem/(136969:136969): Cant de bloques libres: 192
+[TRACE] 22:35:07:101 FileSystem/(136969:136969): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:35:07:101 FileSystem/(136969:136969): Por aceptar serv
+[TRACE] 22:39:46:118 FileSystem/(137131:137131): Cant de bloques libres: 192
+[TRACE] 22:39:46:118 FileSystem/(137131:137131): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:39:46:118 FileSystem/(137131:137131): Por aceptar serv
+[TRACE] 22:39:58:927 FileSystem/(137244:137244): Cant de bloques libres: 16
+[TRACE] 22:39:58:928 FileSystem/(137244:137244): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:39:58:929 FileSystem/(137244:137244): Por aceptar serv
+[TRACE] 22:40:16:404 FileSystem/(137359:137359): Cant de bloques libres: 104
+[TRACE] 22:40:16:404 FileSystem/(137359:137359): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:40:16:404 FileSystem/(137359:137359): Por aceptar serv
+[TRACE] 22:49:13:948 FileSystem/(137632:137632): Cant de bloques libres: 104
+[TRACE] 22:49:13:948 FileSystem/(137632:137632): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:49:13:948 FileSystem/(137632:137632): Por aceptar serv
+[TRACE] 22:49:26:059 FileSystem/(137737:137737): Cant de bloques libres: 16
+[TRACE] 22:49:26:059 FileSystem/(137737:137737): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:49:26:059 FileSystem/(137737:137737): Por aceptar serv
+[TRACE] 22:49:52:110 FileSystem/(137894:137894): Cant de bloques libres: 16
+[TRACE] 22:49:52:110 FileSystem/(137894:137894): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:49:52:110 FileSystem/(137894:137894): Por aceptar serv
+[TRACE] 22:53:05:032 FileSystem/(138071:138071): Cant de bloques libres: 10
+[TRACE] 22:53:05:032 FileSystem/(138071:138071): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:53:05:032 FileSystem/(138071:138071): Por aceptar serv
+[TRACE] 22:53:14:690 FileSystem/(138193:138193): Cant de bloques libres: 100
+[TRACE] 22:53:14:690 FileSystem/(138193:138193): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:53:14:690 FileSystem/(138193:138193): Por aceptar serv
+[TRACE] 22:53:19:694 FileSystem/(138298:138298): Cant de bloques libres: 1016
+[TRACE] 22:53:19:694 FileSystem/(138298:138298): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:53:19:694 FileSystem/(138298:138298): Por aceptar serv
+[TRACE] 22:55:13:632 FileSystem/(138451:138451): Cant de bloques libres: 1016
+[TRACE] 22:55:13:632 FileSystem/(138451:138451): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:55:13:633 FileSystem/(138451:138451): Por aceptar serv
+[TRACE] 22:56:03:289 FileSystem/(138580:138580): Cant de bloques libres: 1016
+[TRACE] 22:56:03:290 FileSystem/(138580:138580): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:56:03:290 FileSystem/(138580:138580): Por aceptar serv
+[TRACE] 22:56:13:320 FileSystem/(138691:138691): mascara
+[TRACE] 22:56:13:320 FileSystem/(138691:138691): Cant de bloques libres: 10
+[TRACE] 22:56:13:322 FileSystem/(138691:138691): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:56:13:322 FileSystem/(138691:138691): Por aceptar serv
+[TRACE] 22:56:20:618 FileSystem/(138797:138797): Cant de bloques libres: 1016
+[TRACE] 22:56:20:619 FileSystem/(138797:138797): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:56:20:619 FileSystem/(138797:138797): Por aceptar serv
+[TRACE] 22:58:37:550 FileSystem/(138941:138941): Cant de bloques libres: 0
+[TRACE] 22:58:37:550 FileSystem/(138941:138941): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:58:37:551 FileSystem/(138941:138941): Por aceptar serv
+[TRACE] 22:58:52:313 FileSystem/(139068:139068): Cant de bloques libres: 1016
+[TRACE] 22:58:52:314 FileSystem/(139068:139068): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:58:52:314 FileSystem/(139068:139068): Por aceptar serv
+[TRACE] 22:58:59:502 FileSystem/(139176:139176): Cant de bloques libres: 1023
+[TRACE] 22:58:59:502 FileSystem/(139176:139176): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:58:59:502 FileSystem/(139176:139176): Por aceptar serv
+[TRACE] 22:59:05:079 FileSystem/(139279:139279): Cant de bloques libres: 1016
+[TRACE] 22:59:05:079 FileSystem/(139279:139279): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:59:05:079 FileSystem/(139279:139279): Por aceptar serv
+[TRACE] 23:01:04:696 FileSystem/(139422:139422): Cant de bloques libres: 1017
+[TRACE] 23:01:04:696 FileSystem/(139422:139422): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:01:04:696 FileSystem/(139422:139422): Por aceptar serv
+[TRACE] 23:01:16:641 FileSystem/(139537:139537): Cant de bloques libres: 1024
+[TRACE] 23:01:16:641 FileSystem/(139537:139537): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:01:16:642 FileSystem/(139537:139537): Por aceptar serv
+[TRACE] 23:01:23:257 FileSystem/(139643:139643): Cant de bloques libres: 1023
+[TRACE] 23:01:23:258 FileSystem/(139643:139643): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:01:23:258 FileSystem/(139643:139643): Por aceptar serv
+[TRACE] 23:01:27:857 FileSystem/(139748:139748): Cant de bloques libres: 10
+[TRACE] 23:01:27:857 FileSystem/(139748:139748): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:01:27:858 FileSystem/(139748:139748): Por aceptar serv
+[TRACE] 23:01:31:530 FileSystem/(139850:139850): Cant de bloques libres: 1024
+[TRACE] 23:01:31:530 FileSystem/(139850:139850): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:01:31:530 FileSystem/(139850:139850): Por aceptar serv
+[TRACE] 23:17:42:512 FileSystem/(140787:140787): Cant de bloques libres: 1024
+[TRACE] 23:17:42:512 FileSystem/(140787:140787): Bloques reservados: 7
+[TRACE] 23:17:42:513 FileSystem/(140787:140787): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:17:42:513 FileSystem/(140787:140787): Por aceptar serv
+[TRACE] 23:17:51:100 FileSystem/(140902:140902): Cant de bloques libres: 1024
+[TRACE] 23:17:51:101 FileSystem/(140902:140902): Bloques reservados: 8
+[TRACE] 23:17:51:101 FileSystem/(140902:140902): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:17:51:101 FileSystem/(140902:140902): Por aceptar serv
+[TRACE] 23:17:56:672 FileSystem/(141015:141015): Cant de bloques libres: 1024
+[TRACE] 23:17:56:681 FileSystem/(141015:141015): Bloques reservados: 1024
+[TRACE] 23:17:56:681 FileSystem/(141015:141015): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:17:56:681 FileSystem/(141015:141015): Por aceptar serv
+[TRACE] 23:18:05:202 FileSystem/(141138:141138): Cant de bloques libres: 1024
+[TRACE] 23:18:05:210 FileSystem/(141138:141138): Bloques reservados: 1024
+[TRACE] 23:18:05:211 FileSystem/(141138:141138): Cant de bloques libres: 0
+[TRACE] 23:18:05:211 FileSystem/(141138:141138): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:18:05:211 FileSystem/(141138:141138): Por aceptar serv
+[TRACE] 23:18:11:782 FileSystem/(141254:141254): Cant de bloques libres: 1024
+[TRACE] 23:18:11:791 FileSystem/(141254:141254): Bloques reservados: 1004
+[TRACE] 23:18:11:791 FileSystem/(141254:141254): Cant de bloques libres: 20
+[TRACE] 23:18:11:791 FileSystem/(141254:141254): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:18:11:792 FileSystem/(141254:141254): Por aceptar serv
+[TRACE] 23:38:44:165 FileSystem/(142053:142053): Tiempo actual: 23:38:44
+[TRACE] 23:38:44:165 FileSystem/(142053:142053): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:38:44:166 FileSystem/(142053:142053): Por aceptar serv
+[TRACE] 23:39:26:797 FileSystem/(142197:142197): Tiempo actual: 20:38:17:MS
+[TRACE] 23:39:26:798 FileSystem/(142197:142197): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:39:26:798 FileSystem/(142197:142197): Por aceptar serv
+[TRACE] 23:42:41:010 FileSystem/(142540:142540): Tiempo actual: 23:42:41:010
+[TRACE] 23:42:41:011 FileSystem/(142540:142540): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:41:011 FileSystem/(142540:142540): Por aceptar serv
+[TRACE] 23:42:44:170 FileSystem/(142635:142635): Tiempo actual: 23:42:44:170
+[TRACE] 23:42:44:171 FileSystem/(142635:142635): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:44:171 FileSystem/(142635:142635): Por aceptar serv
+[TRACE] 23:42:45:068 FileSystem/(142730:142730): Tiempo actual: 23:42:45:068
+[TRACE] 23:42:45:068 FileSystem/(142730:142730): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:45:071 FileSystem/(142730:142730): Por aceptar serv
+[TRACE] 23:42:46:212 FileSystem/(142825:142825): Tiempo actual: 23:42:46:212
+[TRACE] 23:42:46:213 FileSystem/(142825:142825): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:46:213 FileSystem/(142825:142825): Por aceptar serv
+[TRACE] 23:42:46:958 FileSystem/(142920:142920): Tiempo actual: 23:42:46:958
+[TRACE] 23:42:46:959 FileSystem/(142920:142920): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:46:959 FileSystem/(142920:142920): Por aceptar serv
+[TRACE] 23:42:47:740 FileSystem/(143015:143015): Tiempo actual: 23:42:47:740
+[TRACE] 23:42:47:740 FileSystem/(143015:143015): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:47:740 FileSystem/(143015:143015): Por aceptar serv
+[TRACE] 23:42:48:390 FileSystem/(143110:143110): Tiempo actual: 23:42:48:390
+[TRACE] 23:42:48:391 FileSystem/(143110:143110): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:48:391 FileSystem/(143110:143110): Por aceptar serv
+[TRACE] 23:42:49:175 FileSystem/(143205:143205): Tiempo actual: 23:42:49:175
+[TRACE] 23:42:49:175 FileSystem/(143205:143205): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:49:175 FileSystem/(143205:143205): Por aceptar serv
+[TRACE] 23:42:51:316 FileSystem/(143300:143300): Tiempo actual: 23:42:51:315
+[TRACE] 23:42:51:316 FileSystem/(143300:143300): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:51:316 FileSystem/(143300:143300): Por aceptar serv
+[TRACE] 23:42:55:564 FileSystem/(143395:143395): Tiempo actual: 23:42:55:563
+[TRACE] 23:42:55:564 FileSystem/(143395:143395): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:55:564 FileSystem/(143395:143395): Por aceptar serv
+[TRACE] 23:42:57:204 FileSystem/(143490:143490): Tiempo actual: 23:42:57:204
+[TRACE] 23:42:57:204 FileSystem/(143490:143490): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:42:57:205 FileSystem/(143490:143490): Por aceptar serv
+[TRACE] 23:43:02:378 FileSystem/(143585:143585): Tiempo actual: 23:43:02:378
+[TRACE] 23:43:02:378 FileSystem/(143585:143585): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 23:43:02:379 FileSystem/(143585:143585): Por aceptar serv

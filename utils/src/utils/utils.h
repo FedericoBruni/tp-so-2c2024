@@ -14,6 +14,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <math.h>
 
 typedef enum
 {
@@ -75,7 +76,8 @@ typedef enum
 	HILO_CREADO,
 	HILO_JOINEADO,
 	HILO_CANCEL,
-	IO_SOLICITADA
+	IO_SOLICITADA,
+	TEST
 
 } op_code;
 

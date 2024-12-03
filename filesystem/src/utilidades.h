@@ -19,7 +19,11 @@
 // extern t_config* config;
 
 void iniciar_filesystem(void);
-
+void crear_bitmap();
+void crear_bloques_de_datos();
+bool verificar_espacio_disponible(int tam_archivo);
+int cant_bloques_libres();
+void crear_archivo_metadata(int pid, int tid, int tamanio);
 void terminar_ejecucion(int socket);
 
 #endif // UTILIDADES_H_
