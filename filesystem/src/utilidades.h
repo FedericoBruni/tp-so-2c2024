@@ -24,6 +24,7 @@ void crear_bloques_de_datos();
 bool verificar_espacio_disponible(int tam_archivo);
 int cant_bloques_libres();
 void crear_archivo_metadata(int pid, int tid, int tamanio);
+char *obtenerTimeStamp();
 void terminar_ejecucion(int socket);
 
 #endif // UTILIDADES_H_

@@ -4069,3 +4069,29 @@
 [TRACE] 23:43:02:378 FileSystem/(143585:143585): Tiempo actual: 23:43:02:378
 [TRACE] 23:43:02:378 FileSystem/(143585:143585): Servidor levantado y listo para escuchar en el puerto: 8003
 [TRACE] 23:43:02:379 FileSystem/(143585:143585): Por aceptar serv
+[TRACE] 15:56:40:066 FileSystem/(2807:2807): Tiempo actual: 15:56:40:066
+[TRACE] 15:57:56:178 FileSystem/(3428:3428): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 15:57:56:179 FileSystem/(3428:3428): Por aceptar serv
+[TRACE] 15:58:11:301 FileSystem/(3579:3579): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 15:58:11:301 FileSystem/(3579:3579): Por aceptar serv
+[TRACE] 15:59:15:887 FileSystem/(3816:3816): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 15:59:15:887 FileSystem/(3816:3816): Por aceptar serv
+[TRACE] 15:59:41:219 FileSystem/(3956:3956): timestamp:(null)
+[TRACE] 15:59:41:219 FileSystem/(3956:3956): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 15:59:41:219 FileSystem/(3956:3956): Por aceptar serv
+[TRACE] 16:02:45:024 FileSystem/(4748:4748): timestamp:(null)
+[TRACE] 16:02:45:024 FileSystem/(4748:4748): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:02:45:024 FileSystem/(4748:4748): Por aceptar serv
+[TRACE] 16:03:34:508 FileSystem/(4878:4878): timestamp:16:03:34:508
+[TRACE] 16:03:34:508 FileSystem/(4878:4878): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:03:34:508 FileSystem/(4878:4878): Por aceptar serv
+[TRACE] 16:57:49:208 FileSystem/(7095:7095): Cant de bloques libres: 1024
+[TRACE] 16:57:49:208 FileSystem/(7095:7095): Bloques reservados: 0
+[TRACE] 16:57:49:215 FileSystem/(7095:7095): Archivo creado exitosamente
+[TRACE] 16:57:49:216 FileSystem/(7095:7095): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:57:49:216 FileSystem/(7095:7095): Por aceptar serv
+[TRACE] 16:58:20:163 FileSystem/(7272:7272): Cant de bloques libres: 1024
+[TRACE] 16:58:20:164 FileSystem/(7272:7272): Bloques reservados: 0
+[TRACE] 16:58:20:164 FileSystem/(7272:7272): Archivo creado exitosamente
+[TRACE] 16:58:20:164 FileSystem/(7272:7272): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:58:20:164 FileSystem/(7272:7272): Por aceptar serv

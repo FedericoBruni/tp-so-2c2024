@@ -22,7 +22,7 @@ void iniciar_filesystem(void)
     logger = iniciar_logger("logFS.log", "FileSystem", log_level_from_string(log_level));
     crear_bitmap();
     crear_bloques_de_datos();
-    crear_archivo_metadata(1,2,3);
+    crear_archivo(1,1,12,"Hola");
 }
 
 void terminar_ejecucion(int socket)
@@ -122,7 +122,7 @@ int cant_bloques_libres(){
     return bloques_libres;
 }
 
-void reservar_bloques(int cantidad){
+int *reservar_bloques(int cantidad){
     int tam_bitmap = (block_count +7)/8;
     int total_length = strlen(mount_dir) + strlen("bitmap.dat") + 2; // El "/" antes de la ruta, y el '\0' final
     char ruta_archivo[total_length];
@@ -136,6 +136,9 @@ void reservar_bloques(int cantidad){
     int bits_restantes = block_count % 8;
     int bloques_reservados = 0;
 
+    //array para guardar los bloques reservados, el 0 siempre es el indice, el resto son de datos
+    int *bloques = malloc(cantidad * sizeof(int));
+
     for(int i = 0; i<tam_bitmap;i++){
         fread(&byte,sizeof(char),1,archivoBitmap);
 
@@ -148,6 +151,7 @@ void reservar_bloques(int cantidad){
                 byte |= (1<<j);
                 fseek(archivoBitmap,i,SEEK_SET);
                 fwrite(&byte,sizeof(char),1,archivoBitmap);
+                bloques[bloques_reservados] = i*8+j;
                 bloques_reservados++;
                 bloques_restantes--;
             }
@@ -155,17 +159,102 @@ void reservar_bloques(int cantidad){
     }
     fclose(archivoBitmap);
     log_trace(logger,"Bloques reservados: %d",bloques_reservados);
+    return bloques;
 }
 
 void crear_archivo_metadata(int pid, int tid, int tamanio){
+    char *timestamp = obtenerTimeStamp();
+    char nombre_archivo[50];
+    snprintf(nombre_archivo,sizeof(nombre_archivo),"%d-%d-%s",pid,tid,timestamp);
 
+    int total_length = strlen(mount_dir) + strlen("/files/") + strlen(nombre_archivo+strlen(".dmp")) + 1;  // /files/ + nombre del archivo
+    char ruta_metadata[total_length];
+    strcpy(ruta_metadata, mount_dir);
+    strcat(ruta_metadata, "/files/");
+    strcat(ruta_metadata, nombre_archivo);
+    strcat(ruta_metadata,".dmp");
+
+    FILE *metadata = fopen(ruta_metadata,"wb");
+    fclose(metadata);
+    
+}
+
+char *obtenerTimeStamp() {
     struct timespec ts;
-    clock_gettime(CLOCK_REALTIME,&ts);
+    clock_gettime(CLOCK_REALTIME, &ts);
 
     struct tm *timestamp_info = localtime(&ts.tv_sec);
-    int ms = ts.tv_nsec / 1000000;
     char timestamp[20];
-    strftime(timestamp,sizeof(timestamp),"%H:%M:%S",timestamp_info);
-    snprintf(timestamp+strlen(timestamp),sizeof(timestamp)-strlen(timestamp),":%03d",ms);
-    log_trace(logger, "Tiempo actual: %s",timestamp);
+    // Generar el timestamp inicial (HH:MM:SS)
+    strftime(timestamp, 20, "%H:%M:%S", timestamp_info);
+
+    // Agregar milisegundos
+    size_t used_length = strlen(timestamp);
+    size_t remaining_length = 20 - used_length;
+
+    if (remaining_length > 0) {
+        snprintf(timestamp + used_length, remaining_length, ":%03d", ts.tv_nsec / 1000000);
+    }
+
+    return timestamp;
+}
+
+void crear_archivo(int pid, int tid, int tamanio, char *contenido){
+    int bloques_necesarios = ceil(tamanio/block_size);
+    if(cant_bloques_libres() < bloques_necesarios){
+        log_error(logger,"No hay espacio suficiente en el filesystem");
+        return;
+    }
+
+    int *bloques_reservados = reservar_bloques(bloques_necesarios);
+
+    int bloque_indice = bloques_reservados[0];
+    int *bloques_datos = &bloques_reservados[1];
+
+    char *timestamp = obtenerTimeStamp();
+    char nombre_archivo[50];
+    snprintf(nombre_archivo,sizeof(nombre_archivo),"%d-%d-%s",pid,tid,timestamp);
+
+    int tam_ruta_metadata = strlen(mount_dir) + strlen("/files/") + strlen(nombre_archivo+strlen(".dmp")) + 1;  // /files/ + nombre del archivo
+    char ruta_metadata[tam_ruta_metadata];
+    strcpy(ruta_metadata, mount_dir);
+    strcat(ruta_metadata, "/files/");
+    strcat(ruta_metadata, nombre_archivo);
+    strcat(ruta_metadata,".dmp");
+
+    FILE *metadata = fopen(ruta_metadata,"wb");
+    fprintf(metadata,"Tamaño:%i Bloque_Indice: %d\n",tamanio,bloque_indice);
+    fclose(metadata);
+
+    int tam_ruta_bloques = strlen(mount_dir) + strlen("/bloques.dat") + 1; // y el '\0' final
+    char ruta_archivo[tam_ruta_bloques];
+    strcpy(ruta_archivo, mount_dir);
+    strcat(ruta_archivo, "/bloques.dat");
+    archivoBloqueDeDatos = fopen(ruta_archivo,"r+b");
+
+    //Escribir bloque de indice
+    fseek(archivoBloqueDeDatos,bloque_indice*block_size, SEEK_SET);
+    for(int i = 0;i<bloques_necesarios;i++){
+        fwrite(&bloques_datos[i],sizeof(int),1,archivoBloqueDeDatos);
+    }
+
+    //escribir datos en los bloques de datos
+    int bytes_escritos = 0;
+    for(int i = 0;i<bloques_necesarios;i++){
+        int bytes_a_escribir;
+        if(tamanio-bytes_escritos > block_size){
+            bytes_a_escribir = block_size;
+        }else{
+            bytes_a_escribir = tamanio - bytes_escritos;
+        }
+        fseek(archivoBloqueDeDatos,bloques_datos[i]*block_size,SEEK_SET);
+        fwrite(contenido + bytes_a_escribir, sizeof(char),bytes_a_escribir,archivoBloqueDeDatos);
+        bytes_escritos += bytes_a_escribir;
+    }
+    fclose(archivoBloqueDeDatos);
+    free(bloques_reservados);
+    log_trace(logger,"Archivo creado exitosamente");
+
+
+
 }
