@@ -23,6 +23,7 @@ sem_t sem_hilo_cancel;
 sem_t sem_io_solicitada;
 pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
+bool flag_interrupt = false;
 
 void iniciar_cpu(void)
 {
@@ -116,6 +117,10 @@ void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     sleep(1);
     int resultado_dispatch = DESALOJO_POR_QUANTUM;
     send(cliente_fd_dispatch,&resultado_dispatch,sizeof(op_code),0);
+    
+    if(contexto_en_ejecucion->contexto_hilo->tid == tid && contexto_en_ejecucion->contexto_hilo->pid == pid){
+        flag_interrupt = true;
+    }
 }
 
 

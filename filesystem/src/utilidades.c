@@ -23,6 +23,7 @@ void iniciar_filesystem(void)
     crear_bitmap();
     crear_bloques_de_datos();
     crear_archivo(1,1,12,"Hola");
+    crear_archivo(2,1,12,"Chau");
 }
 
 void terminar_ejecucion(int socket)
@@ -36,7 +37,7 @@ void terminar_ejecucion(int socket)
 
 
 void crear_bitmap(){
-    int tam_bitmap = (block_count +7)/8;
+    int tam_bitmap = (block_count +7)/8; 
     int total_length = strlen(mount_dir) + strlen("bitmap.dat") + 2; // El "/" antes de la ruta, y el '\0' final
     char ruta_archivo[total_length];
     strcpy(ruta_archivo, mount_dir);
@@ -70,9 +71,9 @@ void crear_bloques_de_datos(){
         exit(EXIT_FAILURE);
     }
 
-    char *buffer = calloc(block_size,sizeof(char));
+    int *buffer = calloc(block_size,sizeof(int));
     for(size_t i = 0; i<block_count;i++){
-        fwrite(buffer,sizeof(char),block_size,archivoBloqueDeDatos);
+        fwrite(buffer,sizeof(int),block_size,archivoBloqueDeDatos);
     }
     free(buffer);
     fclose(archivoBloqueDeDatos);
@@ -152,6 +153,7 @@ int *reservar_bloques(int cantidad){
                 fseek(archivoBitmap,i,SEEK_SET);
                 fwrite(&byte,sizeof(char),1,archivoBitmap);
                 bloques[bloques_reservados] = i*8+j;
+                log_trace(logger, "Bloque reservado: %d",bloques[bloques_reservados]);
                 bloques_reservados++;
                 bloques_restantes--;
             }
@@ -183,8 +185,10 @@ char *obtenerTimeStamp() {
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);
 
+    setenv("TZ", "GMT+3", 1);
+    tzset(); // Actualiza la zona horaria en el programa
     struct tm *timestamp_info = localtime(&ts.tv_sec);
-    char timestamp[20];
+    static char timestamp[20];
     // Generar el timestamp inicial (HH:MM:SS)
     strftime(timestamp, 20, "%H:%M:%S", timestamp_info);
 
@@ -195,12 +199,14 @@ char *obtenerTimeStamp() {
     if (remaining_length > 0) {
         snprintf(timestamp + used_length, remaining_length, ":%03d", ts.tv_nsec / 1000000);
     }
-
+    log_trace(logger, "ts: %s", timestamp);
     return timestamp;
 }
 
 void crear_archivo(int pid, int tid, int tamanio, char *contenido){
-    int bloques_necesarios = ceil(tamanio/block_size);
+    int tamanio_contenido = strlen(contenido);
+    int bloques_necesarios = (tamanio_contenido + block_size-1)/block_size + 1;
+    log_trace(logger,"bloques necesarios: %d",bloques_necesarios);
     if(cant_bloques_libres() < bloques_necesarios){
         log_error(logger,"No hay espacio suficiente en el filesystem");
         return;
@@ -212,6 +218,7 @@ void crear_archivo(int pid, int tid, int tamanio, char *contenido){
     int *bloques_datos = &bloques_reservados[1];
 
     char *timestamp = obtenerTimeStamp();
+    log_trace(logger,"timestamp: %s",timestamp);
     char nombre_archivo[50];
     snprintf(nombre_archivo,sizeof(nombre_archivo),"%d-%d-%s",pid,tid,timestamp);
 
@@ -234,27 +241,27 @@ void crear_archivo(int pid, int tid, int tamanio, char *contenido){
 
     //Escribir bloque de indice
     fseek(archivoBloqueDeDatos,bloque_indice*block_size, SEEK_SET);
-    for(int i = 0;i<bloques_necesarios;i++){
+    for(int i = 0;i<bloques_necesarios - 1;i++){
         fwrite(&bloques_datos[i],sizeof(int),1,archivoBloqueDeDatos);
     }
 
     //escribir datos en los bloques de datos
     int bytes_escritos = 0;
-    for(int i = 0;i<bloques_necesarios;i++){
+    
+    for(int i = 0;i<bloques_necesarios-1;i++){
         int bytes_a_escribir;
-        if(tamanio-bytes_escritos > block_size){
+        if(tamanio_contenido-bytes_escritos > block_size){
             bytes_a_escribir = block_size;
         }else{
-            bytes_a_escribir = tamanio - bytes_escritos;
+            bytes_a_escribir = tamanio_contenido - bytes_escritos;
+            //log_trace();
         }
         fseek(archivoBloqueDeDatos,bloques_datos[i]*block_size,SEEK_SET);
-        fwrite(contenido + bytes_a_escribir, sizeof(char),bytes_a_escribir,archivoBloqueDeDatos);
+        fwrite(contenido + bytes_escritos, sizeof(char),bytes_a_escribir,archivoBloqueDeDatos);
         bytes_escritos += bytes_a_escribir;
     }
     fclose(archivoBloqueDeDatos);
     free(bloques_reservados);
     log_trace(logger,"Archivo creado exitosamente");
-
-
-
 }
+

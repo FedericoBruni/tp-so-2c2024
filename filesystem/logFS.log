@@ -4095,3 +4095,724 @@
 [TRACE] 16:58:20:164 FileSystem/(7272:7272): Archivo creado exitosamente
 [TRACE] 16:58:20:164 FileSystem/(7272:7272): Servidor levantado y listo para escuchar en el puerto: 8003
 [TRACE] 16:58:20:164 FileSystem/(7272:7272): Por aceptar serv
+[TRACE] 18:37:23:304 FileSystem/(3078:3078): Cant de bloques libres: 1024
+[TRACE] 18:37:23:305 FileSystem/(3078:3078): Bloques reservados: 0
+[TRACE] 18:37:23:305 FileSystem/(3078:3078): Archivo creado exitosamente
+[TRACE] 18:37:23:305 FileSystem/(3078:3078): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:37:23:305 FileSystem/(3078:3078): Por aceptar serv
+[TRACE] 18:39:53:478 FileSystem/(3449:3449): Cant de bloques libres: 1024
+[TRACE] 18:39:53:481 FileSystem/(3449:3449): Bloques reservados: 0
+[TRACE] 18:39:53:481 FileSystem/(3449:3449): Archivo creado exitosamente
+[TRACE] 18:39:53:481 FileSystem/(3449:3449): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:39:53:481 FileSystem/(3449:3449): Por aceptar serv
+[TRACE] 18:41:46:999 FileSystem/(3613:3613): Cant de bloques libres: 1024
+[TRACE] 18:41:46:999 FileSystem/(3613:3613): Bloques reservados: 0
+[TRACE] 18:41:47:000 FileSystem/(3613:3613): Archivo creado exitosamente
+[TRACE] 18:41:47:000 FileSystem/(3613:3613): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:41:47:000 FileSystem/(3613:3613): Por aceptar serv
+[TRACE] 18:42:37:170 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:170 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 0
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 1
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 1
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 1
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloque reservado: 1
+[TRACE] 18:42:37:172 FileSystem/(3979:3979): Bloques reservados: 12
+[TRACE] 18:42:37:173 FileSystem/(3979:3979): Cant de bloques libres: 1012
+[TRACE] 18:42:37:173 FileSystem/(3979:3979): Bloques reservados: 0
+[TRACE] 18:42:37:173 FileSystem/(3979:3979): Archivo creado exitosamente
+[TRACE] 18:42:37:173 FileSystem/(3979:3979): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:42:37:173 FileSystem/(3979:3979): Por aceptar serv
+[TRACE] 18:44:02:375 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 1
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 2
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 3
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 4
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 5
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 6
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 7
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 0
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 8
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 1
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 9
+[TRACE] 18:44:02:377 FileSystem/(4218:4218): Bloque reservado: 1
+[ERROR] 18:44:02:377 FileSystem/(4218:4218): bloque reservado despues: 10
+[TRACE] 18:44:02:378 FileSystem/(4218:4218): Bloque reservado: 1
+[ERROR] 18:44:02:378 FileSystem/(4218:4218): bloque reservado despues: 11
+[TRACE] 18:44:02:378 FileSystem/(4218:4218): Bloque reservado: 1
+[ERROR] 18:44:02:378 FileSystem/(4218:4218): bloque reservado despues: 12
+[TRACE] 18:44:02:378 FileSystem/(4218:4218): Bloques reservados: 12
+[TRACE] 18:44:02:378 FileSystem/(4218:4218): Cant de bloques libres: 1012
+[TRACE] 18:44:02:382 FileSystem/(4218:4218): Bloques reservados: 0
+[TRACE] 18:44:02:385 FileSystem/(4218:4218): Archivo creado exitosamente
+[TRACE] 18:44:02:387 FileSystem/(4218:4218): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:44:02:387 FileSystem/(4218:4218): Por aceptar serv
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 0
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 1
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 2
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 3
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 4
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 5
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 6
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 7
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 8
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 9
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 10
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloque reservado: 11
+[TRACE] 18:44:21:843 FileSystem/(4349:4349): Bloques reservados: 12
+[TRACE] 18:44:21:845 FileSystem/(4349:4349): Cant de bloques libres: 1012
+[TRACE] 18:44:21:845 FileSystem/(4349:4349): Bloques reservados: 0
+[TRACE] 18:44:21:845 FileSystem/(4349:4349): Archivo creado exitosamente
+[TRACE] 18:44:21:845 FileSystem/(4349:4349): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:44:21:845 FileSystem/(4349:4349): Por aceptar serv
+[TRACE] 18:44:45:323 FileSystem/(4472:4472): Cant de bloques libres: 1024
+[TRACE] 18:44:45:323 FileSystem/(4472:4472): Bloques reservados: 0
+[TRACE] 18:44:45:326 FileSystem/(4472:4472): Archivo creado exitosamente
+[TRACE] 18:44:45:326 FileSystem/(4472:4472): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:44:45:328 FileSystem/(4472:4472): Por aceptar serv
+[TRACE] 18:46:41:869 FileSystem/(4779:4779): bloques necesarios: 1
+[TRACE] 18:46:41:872 FileSystem/(4779:4779): Cant de bloques libres: 1024
+[TRACE] 18:46:41:872 FileSystem/(4779:4779): Bloque reservado: 0
+[TRACE] 18:46:41:872 FileSystem/(4779:4779): Bloques reservados: 1
+[TRACE] 18:46:41:872 FileSystem/(4779:4779): Archivo creado exitosamente
+[TRACE] 18:46:41:876 FileSystem/(4779:4779): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:46:41:876 FileSystem/(4779:4779): Por aceptar serv
+[TRACE] 18:49:00:854 FileSystem/(5052:5052): bloques necesarios: 1
+[TRACE] 18:49:00:860 FileSystem/(5052:5052):  sin ceil: 0
+[TRACE] 18:49:00:860 FileSystem/(5052:5052):  con ceil: -549932658
+[TRACE] 18:49:00:860 FileSystem/(5052:5052): Cant de bloques libres: 1024
+[TRACE] 18:49:00:860 FileSystem/(5052:5052): Bloque reservado: 0
+[TRACE] 18:49:00:860 FileSystem/(5052:5052): Bloques reservados: 1
+[TRACE] 18:49:00:860 FileSystem/(5052:5052): Archivo creado exitosamente
+[TRACE] 18:49:00:860 FileSystem/(5052:5052): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:49:00:861 FileSystem/(5052:5052): Por aceptar serv
+[TRACE] 18:50:50:210 FileSystem/(5290:5290): bloques necesarios: 1
+[TRACE] 18:50:50:210 FileSystem/(5290:5290):  sin ceil: 1
+[TRACE] 18:50:50:210 FileSystem/(5290:5290): test ceil: -1126317682
+[TRACE] 18:50:50:210 FileSystem/(5290:5290): Cant de bloques libres: 1024
+[TRACE] 18:50:50:211 FileSystem/(5290:5290): Bloque reservado: 0
+[TRACE] 18:50:50:211 FileSystem/(5290:5290): Bloques reservados: 1
+[TRACE] 18:50:50:213 FileSystem/(5290:5290): Archivo creado exitosamente
+[TRACE] 18:50:50:213 FileSystem/(5290:5290): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:50:50:216 FileSystem/(5290:5290): Por aceptar serv
+[TRACE] 18:51:32:724 FileSystem/(5449:5449): bloques necesarios: 2
+[TRACE] 18:51:32:725 FileSystem/(5449:5449): Cant de bloques libres: 1024
+[TRACE] 18:51:32:725 FileSystem/(5449:5449): Bloque reservado: 0
+[TRACE] 18:51:32:725 FileSystem/(5449:5449): Bloque reservado: 1
+[TRACE] 18:51:32:725 FileSystem/(5449:5449): Bloques reservados: 2
+[TRACE] 18:51:32:726 FileSystem/(5449:5449): Archivo creado exitosamente
+[TRACE] 18:51:32:726 FileSystem/(5449:5449): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:51:32:726 FileSystem/(5449:5449): Por aceptar serv
+[TRACE] 18:54:30:749 FileSystem/(5681:5681): bloques necesarios: 2
+[TRACE] 18:54:30:749 FileSystem/(5681:5681): Cant de bloques libres: 1024
+[TRACE] 18:54:30:749 FileSystem/(5681:5681): Bloque reservado: 0
+[TRACE] 18:54:30:749 FileSystem/(5681:5681): Bloque reservado: 1
+[TRACE] 18:54:30:749 FileSystem/(5681:5681): Bloques reservados: 2
+[TRACE] 18:54:30:754 FileSystem/(5681:5681): Archivo creado exitosamente
+[TRACE] 18:54:30:754 FileSystem/(5681:5681): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:54:30:754 FileSystem/(5681:5681): Por aceptar serv
+[TRACE] 18:54:55:040 FileSystem/(5839:5839): bloques necesarios: 2
+[TRACE] 18:54:55:040 FileSystem/(5839:5839): Cant de bloques libres: 1024
+[TRACE] 18:54:55:040 FileSystem/(5839:5839): Bloque reservado: 0
+[TRACE] 18:54:55:040 FileSystem/(5839:5839): Bloque reservado: 1
+[TRACE] 18:54:55:040 FileSystem/(5839:5839): Bloques reservados: 2
+[TRACE] 18:54:55:041 FileSystem/(5839:5839): Archivo creado exitosamente
+[TRACE] 18:54:55:041 FileSystem/(5839:5839): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:54:55:041 FileSystem/(5839:5839): Por aceptar serv
+[TRACE] 18:56:45:133 FileSystem/(6000:6000): bloques necesarios: 2
+[TRACE] 18:56:45:133 FileSystem/(6000:6000): Cant de bloques libres: 1024
+[TRACE] 18:56:45:133 FileSystem/(6000:6000): Bloque reservado: 0
+[TRACE] 18:56:45:133 FileSystem/(6000:6000): Bloque reservado: 1
+[TRACE] 18:56:45:133 FileSystem/(6000:6000): Bloques reservados: 2
+[TRACE] 18:56:45:136 FileSystem/(6000:6000): Archivo creado exitosamente
+[TRACE] 18:56:45:136 FileSystem/(6000:6000): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:56:45:136 FileSystem/(6000:6000): Por aceptar serv
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): bloques necesarios: 2
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): Cant de bloques libres: 1024
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): Bloque reservado: 0
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): Bloque reservado: 1
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): Bloques reservados: 2
+[TRACE] 18:57:50:776 FileSystem/(6186:6186): timestamp:18:57:50:776
+[TRACE] 18:57:50:777 FileSystem/(6186:6186): Archivo creado exitosamente
+[TRACE] 18:57:50:777 FileSystem/(6186:6186): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:57:50:777 FileSystem/(6186:6186): Por aceptar serv
+[TRACE] 18:59:35:937 FileSystem/(6343:6343): bloques necesarios: 2
+[TRACE] 18:59:35:938 FileSystem/(6343:6343): Cant de bloques libres: 1024
+[TRACE] 18:59:35:938 FileSystem/(6343:6343): Bloque reservado: 0
+[TRACE] 18:59:35:938 FileSystem/(6343:6343): Bloque reservado: 1
+[TRACE] 18:59:35:938 FileSystem/(6343:6343): Bloques reservados: 2
+[TRACE] 18:59:35:938 FileSystem/(6343:6343): timestamp:18:59:35:938
+[TRACE] 18:59:35:939 FileSystem/(6343:6343): Archivo creado exitosamente
+[TRACE] 18:59:35:939 FileSystem/(6343:6343): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:59:35:939 FileSystem/(6343:6343): Por aceptar serv
+[TRACE] 19:00:10:556 FileSystem/(6481:6481): bloques necesarios: 2
+[TRACE] 19:00:10:557 FileSystem/(6481:6481): Cant de bloques libres: 1024
+[TRACE] 19:00:10:557 FileSystem/(6481:6481): Bloque reservado: 0
+[TRACE] 19:00:10:557 FileSystem/(6481:6481): Bloque reservado: 1
+[TRACE] 19:00:10:557 FileSystem/(6481:6481): Bloques reservados: 2
+[TRACE] 22:00:10:557 FileSystem/(6481:6481): timestamp:19:00:10:557
+[TRACE] 22:00:10:560 FileSystem/(6481:6481): Archivo creado exitosamente
+[TRACE] 22:00:10:560 FileSystem/(6481:6481): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:00:10:560 FileSystem/(6481:6481): Por aceptar serv
+[TRACE] 19:01:03:680 FileSystem/(6630:6630): bloques necesarios: 2
+[TRACE] 19:01:03:680 FileSystem/(6630:6630): Cant de bloques libres: 1024
+[TRACE] 19:01:03:680 FileSystem/(6630:6630): Bloque reservado: 0
+[TRACE] 19:01:03:681 FileSystem/(6630:6630): Bloque reservado: 1
+[TRACE] 19:01:03:681 FileSystem/(6630:6630): Bloques reservados: 2
+[TRACE] 22:01:03:681 FileSystem/(6630:6630): timestamp:22:01:03:681
+[TRACE] 22:01:03:685 FileSystem/(6630:6630): Archivo creado exitosamente
+[TRACE] 22:01:03:685 FileSystem/(6630:6630): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:01:03:685 FileSystem/(6630:6630): Por aceptar serv
+[TRACE] 19:01:14:484 FileSystem/(6746:6746): bloques necesarios: 2
+[TRACE] 19:01:14:485 FileSystem/(6746:6746): Cant de bloques libres: 1024
+[TRACE] 19:01:14:485 FileSystem/(6746:6746): Bloque reservado: 0
+[TRACE] 19:01:14:485 FileSystem/(6746:6746): Bloque reservado: 1
+[TRACE] 19:01:14:485 FileSystem/(6746:6746): Bloques reservados: 2
+[TRACE] 16:01:14:485 FileSystem/(6746:6746): timestamp:16:01:14:485
+[TRACE] 16:01:14:496 FileSystem/(6746:6746): Archivo creado exitosamente
+[TRACE] 16:01:14:497 FileSystem/(6746:6746): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:01:14:497 FileSystem/(6746:6746): Por aceptar serv
+[TRACE] 19:01:48:205 FileSystem/(6907:6907): bloques necesarios: 2
+[TRACE] 19:01:48:206 FileSystem/(6907:6907): Cant de bloques libres: 1024
+[TRACE] 19:01:48:206 FileSystem/(6907:6907): Bloque reservado: 0
+[TRACE] 19:01:48:206 FileSystem/(6907:6907): Bloque reservado: 1
+[TRACE] 19:01:48:206 FileSystem/(6907:6907): Bloques reservados: 2
+[TRACE] 16:01:48:206 FileSystem/(6907:6907): timestamp: (null)
+[TRACE] 16:01:48:206 FileSystem/(6907:6907): Archivo creado exitosamente
+[TRACE] 16:01:48:206 FileSystem/(6907:6907): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:01:48:207 FileSystem/(6907:6907): Por aceptar serv
+[TRACE] 19:02:59:800 FileSystem/(7081:7081): bloques necesarios: 2
+[TRACE] 19:02:59:800 FileSystem/(7081:7081): Cant de bloques libres: 1024
+[TRACE] 19:02:59:800 FileSystem/(7081:7081): Bloque reservado: 0
+[TRACE] 19:02:59:801 FileSystem/(7081:7081): Bloque reservado: 1
+[TRACE] 19:02:59:801 FileSystem/(7081:7081): Bloques reservados: 2
+[TRACE] 16:02:59:801 FileSystem/(7081:7081): ts: 16:02:59:801
+[TRACE] 16:02:59:801 FileSystem/(7081:7081): timestamp: 16:02:59:801
+[TRACE] 16:02:59:802 FileSystem/(7081:7081): Archivo creado exitosamente
+[TRACE] 16:02:59:803 FileSystem/(7081:7081): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:02:59:803 FileSystem/(7081:7081): Por aceptar serv
+[TRACE] 19:03:18:812 FileSystem/(7199:7199): bloques necesarios: 2
+[TRACE] 19:03:18:814 FileSystem/(7199:7199): Cant de bloques libres: 1024
+[TRACE] 19:03:18:814 FileSystem/(7199:7199): Bloque reservado: 0
+[TRACE] 19:03:18:817 FileSystem/(7199:7199): Bloque reservado: 1
+[TRACE] 19:03:18:817 FileSystem/(7199:7199): Bloques reservados: 2
+[TRACE] 16:03:18:817 FileSystem/(7199:7199): ts: 16:03:18:817
+[TRACE] 16:03:18:817 FileSystem/(7199:7199): timestamp: (null)
+[TRACE] 16:03:18:818 FileSystem/(7199:7199): Archivo creado exitosamente
+[TRACE] 16:03:18:818 FileSystem/(7199:7199): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:03:18:820 FileSystem/(7199:7199): Por aceptar serv
+[TRACE] 19:03:24:596 FileSystem/(7305:7305): bloques necesarios: 2
+[TRACE] 19:03:24:596 FileSystem/(7305:7305): Cant de bloques libres: 1024
+[TRACE] 19:03:24:596 FileSystem/(7305:7305): Bloque reservado: 0
+[TRACE] 19:03:24:596 FileSystem/(7305:7305): Bloque reservado: 1
+[TRACE] 19:03:24:597 FileSystem/(7305:7305): Bloques reservados: 2
+[TRACE] 16:03:24:597 FileSystem/(7305:7305): ts: 16:03:24:597
+[TRACE] 16:03:24:597 FileSystem/(7305:7305): timestamp: 16:03:24:597
+[TRACE] 16:03:24:597 FileSystem/(7305:7305): Archivo creado exitosamente
+[TRACE] 16:03:24:597 FileSystem/(7305:7305): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:03:24:597 FileSystem/(7305:7305): Por aceptar serv
+[TRACE] 19:03:48:270 FileSystem/(7435:7435): bloques necesarios: 2
+[TRACE] 19:03:48:270 FileSystem/(7435:7435): Cant de bloques libres: 1024
+[TRACE] 19:03:48:270 FileSystem/(7435:7435): Bloque reservado: 0
+[TRACE] 19:03:48:271 FileSystem/(7435:7435): Bloque reservado: 1
+[TRACE] 19:03:48:271 FileSystem/(7435:7435): Bloques reservados: 2
+[TRACE] 16:03:48:272 FileSystem/(7435:7435): ts: 16:03:48:272
+[TRACE] 16:03:48:272 FileSystem/(7435:7435): timestamp: 16:03:48:272
+[TRACE] 16:03:48:272 FileSystem/(7435:7435): Archivo creado exitosamente
+[TRACE] 16:03:48:272 FileSystem/(7435:7435): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:03:48:272 FileSystem/(7435:7435): Por aceptar serv
+[TRACE] 19:05:29:475 FileSystem/(7600:7600): bloques necesarios: 2
+[TRACE] 19:05:29:477 FileSystem/(7600:7600): Cant de bloques libres: 1024
+[TRACE] 19:05:29:477 FileSystem/(7600:7600): Bloque reservado: 0
+[TRACE] 19:05:29:478 FileSystem/(7600:7600): Bloque reservado: 1
+[TRACE] 19:05:29:478 FileSystem/(7600:7600): Bloques reservados: 2
+[TRACE] 16:05:29:478 FileSystem/(7600:7600): ts: 16:05:29:478
+[TRACE] 16:05:29:478 FileSystem/(7600:7600): timestamp: 16:05:29:478
+[TRACE] 16:05:29:479 FileSystem/(7600:7600): Archivo creado exitosamente
+[TRACE] 16:05:29:479 FileSystem/(7600:7600): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:05:29:479 FileSystem/(7600:7600): Por aceptar serv
+[TRACE] 19:05:48:185 FileSystem/(7747:7747): bloques necesarios: 2
+[TRACE] 19:05:48:185 FileSystem/(7747:7747): Cant de bloques libres: 1024
+[TRACE] 19:05:48:185 FileSystem/(7747:7747): Bloque reservado: 0
+[TRACE] 19:05:48:185 FileSystem/(7747:7747): Bloque reservado: 1
+[TRACE] 19:05:48:185 FileSystem/(7747:7747): Bloques reservados: 2
+[TRACE] 16:05:48:185 FileSystem/(7747:7747): ts: 16:05:48:185
+[TRACE] 16:05:48:185 FileSystem/(7747:7747): timestamp: 16:05:48:185
+[TRACE] 16:05:48:185 FileSystem/(7747:7747): Archivo creado exitosamente
+[TRACE] 16:05:48:185 FileSystem/(7747:7747): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:05:48:185 FileSystem/(7747:7747): Por aceptar serv
+[TRACE] 19:09:45:616 FileSystem/(8056:8056): bloques necesarios: 2
+[TRACE] 19:09:45:616 FileSystem/(8056:8056): Cant de bloques libres: 1024
+[TRACE] 19:09:45:616 FileSystem/(8056:8056): Bloque reservado: 0
+[TRACE] 19:09:45:616 FileSystem/(8056:8056): Bloque reservado: 1
+[TRACE] 19:09:45:616 FileSystem/(8056:8056): Bloques reservados: 2
+[TRACE] 16:09:45:616 FileSystem/(8056:8056): ts: 16:09:45:616
+[TRACE] 16:09:45:616 FileSystem/(8056:8056): timestamp: 16:09:45:616
+[TRACE] 16:09:45:616 FileSystem/(8056:8056): cont: Hola
+[TRACE] 16:09:45:616 FileSystem/(8056:8056): Archivo creado exitosamente
+[TRACE] 16:09:45:617 FileSystem/(8056:8056): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:09:45:617 FileSystem/(8056:8056): Por aceptar serv
+[TRACE] 16:10:00:663 FileSystem/(8056:8056): Ya acepte serv
+[INFO] 16:10:00:665 FileSystem/(8056:8056): Se conecto el cliente: Memoria
+
+[TRACE] 16:10:00:665 FileSystem/(8056:8056): Por aceptar serv
+[INFO] 16:10:00:666 FileSystem/(8056:8451): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:10:00:666 FileSystem/(8056:8451): TEST HANDSHAKE
+[TRACE] 19:10:36:872 FileSystem/(8665:8665): bloques necesarios: 2
+[TRACE] 19:10:36:877 FileSystem/(8665:8665): Cant de bloques libres: 1024
+[TRACE] 19:10:36:877 FileSystem/(8665:8665): Bloque reservado: 0
+[TRACE] 19:10:36:877 FileSystem/(8665:8665): Bloque reservado: 1
+[TRACE] 19:10:36:877 FileSystem/(8665:8665): Bloques reservados: 2
+[TRACE] 16:10:36:877 FileSystem/(8665:8665): ts: 16:10:36:877
+[TRACE] 16:10:36:877 FileSystem/(8665:8665): timestamp: 16:10:36:877
+[TRACE] 16:10:36:877 FileSystem/(8665:8665): cont: Hola como estas Fede
+[TRACE] 16:10:36:878 FileSystem/(8665:8665): Archivo creado exitosamente
+[TRACE] 16:10:36:880 FileSystem/(8665:8665): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:10:36:880 FileSystem/(8665:8665): Por aceptar serv
+[TRACE] 19:10:58:426 FileSystem/(8797:8797): bloques necesarios: 3
+[TRACE] 19:10:58:428 FileSystem/(8797:8797): Cant de bloques libres: 1024
+[TRACE] 19:10:58:428 FileSystem/(8797:8797): Bloque reservado: 0
+[TRACE] 19:10:58:428 FileSystem/(8797:8797): Bloque reservado: 1
+[TRACE] 19:10:58:428 FileSystem/(8797:8797): Bloque reservado: 2
+[TRACE] 19:10:58:428 FileSystem/(8797:8797): Bloques reservados: 3
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): ts: 16:10:58:428
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): timestamp: 16:10:58:428
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): cont: Hola como estas Fede
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): cont: Hola como estas Fede
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): Archivo creado exitosamente
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:10:58:428 FileSystem/(8797:8797): Por aceptar serv
+[TRACE] 19:13:23:603 FileSystem/(8957:8957): bloques necesarios: 2
+[TRACE] 19:13:23:603 FileSystem/(8957:8957): Cant de bloques libres: 1024
+[TRACE] 19:13:23:603 FileSystem/(8957:8957): Bloque reservado: 0
+[TRACE] 19:13:23:603 FileSystem/(8957:8957): Bloque reservado: 1
+[TRACE] 19:13:23:603 FileSystem/(8957:8957): Bloques reservados: 2
+[TRACE] 16:13:23:603 FileSystem/(8957:8957): ts: 16:13:23:603
+[TRACE] 16:13:23:603 FileSystem/(8957:8957): timestamp: 16:13:23:603
+[TRACE] 16:13:23:603 FileSystem/(8957:8957): cont: Hola
+[TRACE] 16:13:23:603 FileSystem/(8957:8957): Archivo creado exitosamente
+[TRACE] 16:13:23:603 FileSystem/(8957:8957): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:13:23:604 FileSystem/(8957:8957): Por aceptar serv
+[TRACE] 19:13:59:217 FileSystem/(9106:9106): bloques necesarios: 2
+[TRACE] 19:13:59:218 FileSystem/(9106:9106): Cant de bloques libres: 1024
+[TRACE] 19:13:59:218 FileSystem/(9106:9106): Bloque reservado: 0
+[TRACE] 19:13:59:218 FileSystem/(9106:9106): Bloque reservado: 1
+[TRACE] 19:13:59:218 FileSystem/(9106:9106): Bloques reservados: 2
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): ts: 16:13:59:218
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): timestamp: 16:13:59:218
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): cont: Hola
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): Archivo creado exitosamente
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:13:59:218 FileSystem/(9106:9106): Por aceptar serv
+[TRACE] 19:14:27:618 FileSystem/(9288:9288): bloques necesarios: 2
+[TRACE] 19:14:27:618 FileSystem/(9288:9288): Cant de bloques libres: 1024
+[TRACE] 19:14:27:618 FileSystem/(9288:9288): Bloque reservado: 0
+[TRACE] 19:14:27:618 FileSystem/(9288:9288): Bloque reservado: 1
+[TRACE] 19:14:27:618 FileSystem/(9288:9288): Bloques reservados: 2
+[TRACE] 16:14:27:618 FileSystem/(9288:9288): ts: 16:14:27:618
+[TRACE] 16:14:27:619 FileSystem/(9288:9288): timestamp: 16:14:27:618
+[TRACE] 16:14:27:619 FileSystem/(9288:9288): Archivo creado exitosamente
+[TRACE] 16:14:27:619 FileSystem/(9288:9288): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:14:27:619 FileSystem/(9288:9288): Por aceptar serv
+[TRACE] 19:15:20:609 FileSystem/(9436:9436): bloques necesarios: 2
+[TRACE] 19:15:20:610 FileSystem/(9436:9436): Cant de bloques libres: 1024
+[TRACE] 19:15:20:610 FileSystem/(9436:9436): Bloque reservado: 0
+[TRACE] 19:15:20:610 FileSystem/(9436:9436): Bloque reservado: 1
+[TRACE] 19:15:20:610 FileSystem/(9436:9436): Bloques reservados: 2
+[TRACE] 16:15:20:610 FileSystem/(9436:9436): ts: 16:15:20:610
+[TRACE] 16:15:20:610 FileSystem/(9436:9436): timestamp: 16:15:20:610
+[TRACE] 19:15:56:636 FileSystem/(9784:9784): bloques necesarios: 2
+[TRACE] 19:15:56:636 FileSystem/(9784:9784): Cant de bloques libres: 1024
+[TRACE] 19:15:56:636 FileSystem/(9784:9784): Bloque reservado: 0
+[TRACE] 19:15:56:636 FileSystem/(9784:9784): Bloque reservado: 1
+[TRACE] 19:15:56:637 FileSystem/(9784:9784): Bloques reservados: 2
+[TRACE] 16:15:56:637 FileSystem/(9784:9784): ts: 16:15:56:637
+[TRACE] 16:15:56:637 FileSystem/(9784:9784): timestamp: 16:15:56:637
+[TRACE] 19:17:05:434 FileSystem/(10189:10189): bloques necesarios: 2
+[TRACE] 19:17:05:434 FileSystem/(10189:10189): Cant de bloques libres: 1024
+[TRACE] 19:17:05:434 FileSystem/(10189:10189): Bloque reservado: 0
+[TRACE] 19:17:05:434 FileSystem/(10189:10189): Bloque reservado: 1
+[TRACE] 19:17:05:434 FileSystem/(10189:10189): Bloques reservados: 2
+[TRACE] 16:17:05:434 FileSystem/(10189:10189): ts: 16:17:05:434
+[TRACE] 16:17:05:434 FileSystem/(10189:10189): timestamp: 16:17:05:434
+[TRACE] 19:17:27:513 FileSystem/(10558:10558): bloques necesarios: 2
+[TRACE] 19:17:27:514 FileSystem/(10558:10558): Cant de bloques libres: 1024
+[TRACE] 19:17:27:514 FileSystem/(10558:10558): Bloque reservado: 0
+[TRACE] 19:17:27:522 FileSystem/(10558:10558): Bloque reservado: 1
+[TRACE] 19:17:27:522 FileSystem/(10558:10558): Bloques reservados: 2
+[TRACE] 16:17:27:522 FileSystem/(10558:10558): ts: 16:17:27:522
+[TRACE] 16:17:27:522 FileSystem/(10558:10558): timestamp: 16:17:27:522
+[TRACE] 16:17:27:522 FileSystem/(10558:10558): bloque a escribir: 1
+[TRACE] 16:17:27:522 FileSystem/(10558:10558): bloque a escribir &: 1431697140
+[TRACE] 19:20:34:013 FileSystem/(10905:10905): bloques necesarios: 2
+[TRACE] 19:20:34:013 FileSystem/(10905:10905): Cant de bloques libres: 1024
+[TRACE] 19:20:34:013 FileSystem/(10905:10905): Bloque reservado: 0
+[TRACE] 19:20:34:013 FileSystem/(10905:10905): Bloque reservado: 1
+[TRACE] 19:20:34:014 FileSystem/(10905:10905): Bloques reservados: 2
+[TRACE] 16:20:34:014 FileSystem/(10905:10905): ts: 16:20:34:014
+[TRACE] 16:20:34:014 FileSystem/(10905:10905): timestamp: 16:20:34:014
+[TRACE] 16:20:34:014 FileSystem/(10905:10905): Archivo creado exitosamente
+[TRACE] 16:20:34:014 FileSystem/(10905:10905): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:20:34:016 FileSystem/(10905:10905): Por aceptar serv
+[TRACE] 19:21:52:391 FileSystem/(11092:11092): bloques necesarios: 2
+[TRACE] 19:21:52:395 FileSystem/(11092:11092): Cant de bloques libres: 1024
+[TRACE] 19:21:52:395 FileSystem/(11092:11092): Bloque reservado: 0
+[TRACE] 19:21:52:396 FileSystem/(11092:11092): Bloque reservado: 1
+[TRACE] 19:21:52:396 FileSystem/(11092:11092): Bloques reservados: 2
+[TRACE] 16:21:52:397 FileSystem/(11092:11092): ts: 16:21:52:397
+[TRACE] 16:21:52:398 FileSystem/(11092:11092): timestamp: 16:21:52:397
+[TRACE] 16:21:52:399 FileSystem/(11092:11092): Archivo creado exitosamente
+[TRACE] 16:21:52:400 FileSystem/(11092:11092): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:21:52:400 FileSystem/(11092:11092): Por aceptar serv
+[TRACE] 19:23:53:686 FileSystem/(11363:11363): bloques necesarios: 2
+[TRACE] 19:23:53:686 FileSystem/(11363:11363): Cant de bloques libres: 1024
+[TRACE] 19:23:53:686 FileSystem/(11363:11363): Bloque reservado: 0
+[TRACE] 19:23:53:686 FileSystem/(11363:11363): Bloque reservado: 1
+[TRACE] 19:23:53:687 FileSystem/(11363:11363): Bloques reservados: 2
+[TRACE] 16:23:53:687 FileSystem/(11363:11363): ts: 16:23:53:687
+[TRACE] 16:23:53:687 FileSystem/(11363:11363): timestamp: 16:23:53:687
+[TRACE] 19:24:48:560 FileSystem/(11518:11518): bloques necesarios: 2
+[TRACE] 19:24:48:560 FileSystem/(11518:11518): Cant de bloques libres: 1024
+[TRACE] 19:24:48:561 FileSystem/(11518:11518): Bloque reservado: 0
+[TRACE] 19:24:48:561 FileSystem/(11518:11518): Bloque reservado: 1
+[TRACE] 19:24:48:561 FileSystem/(11518:11518): Bloques reservados: 2
+[TRACE] 16:24:48:561 FileSystem/(11518:11518): ts: 16:24:48:561
+[TRACE] 16:24:48:561 FileSystem/(11518:11518): timestamp: 16:24:48:561
+[TRACE] 19:24:56:628 FileSystem/(11635:11635): bloques necesarios: 2
+[TRACE] 19:24:56:628 FileSystem/(11635:11635): Cant de bloques libres: 1024
+[TRACE] 19:24:56:629 FileSystem/(11635:11635): Bloque reservado: 0
+[TRACE] 19:24:56:629 FileSystem/(11635:11635): Bloque reservado: 1
+[TRACE] 19:24:56:631 FileSystem/(11635:11635): Bloques reservados: 2
+[TRACE] 16:24:56:631 FileSystem/(11635:11635): ts: 16:24:56:631
+[TRACE] 16:24:56:631 FileSystem/(11635:11635): timestamp: 16:24:56:631
+[TRACE] 19:25:09:590 FileSystem/(11775:11775): bloques necesarios: 2
+[TRACE] 19:25:09:592 FileSystem/(11775:11775): Cant de bloques libres: 1024
+[TRACE] 19:25:09:592 FileSystem/(11775:11775): Bloque reservado: 0
+[TRACE] 19:25:09:592 FileSystem/(11775:11775): Bloque reservado: 1
+[TRACE] 19:25:09:592 FileSystem/(11775:11775): Bloques reservados: 2
+[TRACE] 16:25:09:592 FileSystem/(11775:11775): ts: 16:25:09:592
+[TRACE] 16:25:09:592 FileSystem/(11775:11775): timestamp: 16:25:09:592
+[TRACE] 19:26:18:786 FileSystem/(11909:11909): bloques necesarios: 2
+[TRACE] 19:26:18:786 FileSystem/(11909:11909): Cant de bloques libres: 1024
+[TRACE] 19:26:18:786 FileSystem/(11909:11909): Bloque reservado: 0
+[TRACE] 19:26:18:787 FileSystem/(11909:11909): Bloque reservado: 1
+[TRACE] 19:26:18:787 FileSystem/(11909:11909): Bloques reservados: 2
+[TRACE] 16:26:18:787 FileSystem/(11909:11909): ts: 16:26:18:787
+[TRACE] 16:26:18:787 FileSystem/(11909:11909): timestamp: 16:26:18:787
+[TRACE] 16:26:18:787 FileSystem/(11909:11909): Archivo creado exitosamente
+[TRACE] 16:26:18:788 FileSystem/(11909:11909): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:26:18:788 FileSystem/(11909:11909): Por aceptar serv
+[TRACE] 19:31:58:018 FileSystem/(12735:12735): bloques necesarios: 2
+[TRACE] 19:31:58:024 FileSystem/(12735:12735): Cant de bloques libres: 1024
+[TRACE] 19:31:58:024 FileSystem/(12735:12735): Bloque reservado: 0
+[TRACE] 19:31:58:024 FileSystem/(12735:12735): Bloque reservado: 1
+[TRACE] 19:31:58:024 FileSystem/(12735:12735): Bloques reservados: 2
+[TRACE] 16:31:58:024 FileSystem/(12735:12735): ts: 16:31:58:024
+[TRACE] 16:31:58:024 FileSystem/(12735:12735): timestamp: 16:31:58:024
+[TRACE] 16:31:58:024 FileSystem/(12735:12735): Archivo creado exitosamente
+[TRACE] 16:31:58:024 FileSystem/(12735:12735): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:31:58:024 FileSystem/(12735:12735): Por aceptar serv
+[TRACE] 19:32:33:685 FileSystem/(12901:12901): bloques necesarios: 2
+[TRACE] 19:32:33:685 FileSystem/(12901:12901): Cant de bloques libres: 1024
+[TRACE] 19:32:33:685 FileSystem/(12901:12901): Bloque reservado: 0
+[TRACE] 19:32:33:686 FileSystem/(12901:12901): Bloque reservado: 1
+[TRACE] 19:32:33:686 FileSystem/(12901:12901): Bloques reservados: 2
+[TRACE] 16:32:33:686 FileSystem/(12901:12901): ts: 16:32:33:686
+[TRACE] 16:32:33:686 FileSystem/(12901:12901): timestamp: 16:32:33:686
+[TRACE] 16:32:33:686 FileSystem/(12901:12901): Archivo creado exitosamente
+[TRACE] 16:32:33:686 FileSystem/(12901:12901): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:32:33:687 FileSystem/(12901:12901): Por aceptar serv
+[TRACE] 19:32:50:741 FileSystem/(13005:13005): bloques necesarios: 3
+[TRACE] 19:32:50:741 FileSystem/(13005:13005): Cant de bloques libres: 1024
+[TRACE] 19:32:50:741 FileSystem/(13005:13005): Bloque reservado: 0
+[TRACE] 19:32:50:742 FileSystem/(13005:13005): Bloque reservado: 1
+[TRACE] 19:32:50:742 FileSystem/(13005:13005): Bloque reservado: 2
+[TRACE] 19:32:50:742 FileSystem/(13005:13005): Bloques reservados: 3
+[TRACE] 16:32:50:742 FileSystem/(13005:13005): ts: 16:32:50:742
+[TRACE] 16:32:50:743 FileSystem/(13005:13005): timestamp: 16:32:50:742
+[TRACE] 16:32:50:743 FileSystem/(13005:13005): Archivo creado exitosamente
+[TRACE] 16:32:50:743 FileSystem/(13005:13005): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:32:50:743 FileSystem/(13005:13005): Por aceptar serv
+[TRACE] 19:35:53:142 FileSystem/(13311:13311): bloques necesarios: 3
+[TRACE] 19:35:53:142 FileSystem/(13311:13311): Cant de bloques libres: 1024
+[TRACE] 19:35:53:142 FileSystem/(13311:13311): Bloque reservado: 0
+[TRACE] 19:35:53:142 FileSystem/(13311:13311): Bloque reservado: 1
+[TRACE] 19:35:53:143 FileSystem/(13311:13311): Bloque reservado: 2
+[TRACE] 19:35:53:143 FileSystem/(13311:13311): Bloques reservados: 3
+[TRACE] 16:35:53:143 FileSystem/(13311:13311): ts: 16:35:53:143
+[TRACE] 16:35:53:143 FileSystem/(13311:13311): timestamp: 16:35:53:143
+[TRACE] 16:35:53:145 FileSystem/(13311:13311): Archivo creado exitosamente
+[TRACE] 16:35:53:145 FileSystem/(13311:13311): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:35:53:145 FileSystem/(13311:13311): Por aceptar serv
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): bloques necesarios: 3
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): Cant de bloques libres: 1024
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): Bloque reservado: 0
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): Bloque reservado: 1
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): Bloque reservado: 2
+[TRACE] 19:43:26:875 FileSystem/(13689:13689): Bloques reservados: 3
+[TRACE] 16:43:26:875 FileSystem/(13689:13689): ts: 16:43:26:875
+[TRACE] 16:43:26:875 FileSystem/(13689:13689): timestamp: 16:43:26:875
+[TRACE] 16:43:26:876 FileSystem/(13689:13689): Archivo creado exitosamente
+[TRACE] 16:43:26:876 FileSystem/(13689:13689): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:43:26:876 FileSystem/(13689:13689): Por aceptar serv
+[TRACE] 19:43:41:302 FileSystem/(13897:13897): bloques necesarios: 3
+[TRACE] 19:43:41:302 FileSystem/(13897:13897): Cant de bloques libres: 1024
+[TRACE] 19:43:41:303 FileSystem/(13897:13897): Bloque reservado: 0
+[TRACE] 19:43:41:303 FileSystem/(13897:13897): Bloque reservado: 1
+[TRACE] 19:43:41:303 FileSystem/(13897:13897): Bloque reservado: 2
+[TRACE] 19:43:41:303 FileSystem/(13897:13897): Bloques reservados: 3
+[TRACE] 16:43:41:303 FileSystem/(13897:13897): ts: 16:43:41:303
+[TRACE] 16:43:41:303 FileSystem/(13897:13897): timestamp: 16:43:41:303
+[TRACE] 16:43:41:305 FileSystem/(13897:13897): Archivo creado exitosamente
+[TRACE] 16:43:41:308 FileSystem/(13897:13897): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:43:41:308 FileSystem/(13897:13897): Por aceptar serv
+[TRACE] 19:43:48:849 FileSystem/(14054:14054): bloques necesarios: 3
+[TRACE] 19:43:48:850 FileSystem/(14054:14054): Cant de bloques libres: 1024
+[TRACE] 19:43:48:850 FileSystem/(14054:14054): Bloque reservado: 0
+[TRACE] 19:43:48:851 FileSystem/(14054:14054): Bloque reservado: 1
+[TRACE] 19:43:48:851 FileSystem/(14054:14054): Bloque reservado: 2
+[TRACE] 19:43:48:851 FileSystem/(14054:14054): Bloques reservados: 3
+[TRACE] 16:43:48:851 FileSystem/(14054:14054): ts: 16:43:48:851
+[TRACE] 16:43:48:851 FileSystem/(14054:14054): timestamp: 16:43:48:851
+[TRACE] 16:43:48:852 FileSystem/(14054:14054): Archivo creado exitosamente
+[TRACE] 16:43:48:852 FileSystem/(14054:14054): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:43:48:852 FileSystem/(14054:14054): Por aceptar serv
+[TRACE] 19:43:59:482 FileSystem/(14203:14203): bloques necesarios: 3
+[TRACE] 19:43:59:484 FileSystem/(14203:14203): Cant de bloques libres: 1024
+[TRACE] 19:43:59:484 FileSystem/(14203:14203): Bloque reservado: 0
+[TRACE] 19:43:59:484 FileSystem/(14203:14203): Bloque reservado: 1
+[TRACE] 19:43:59:484 FileSystem/(14203:14203): Bloque reservado: 2
+[TRACE] 19:43:59:484 FileSystem/(14203:14203): Bloques reservados: 3
+[TRACE] 16:43:59:485 FileSystem/(14203:14203): ts: 16:43:59:484
+[TRACE] 16:43:59:485 FileSystem/(14203:14203): timestamp: 16:43:59:484
+[TRACE] 16:43:59:486 FileSystem/(14203:14203): Archivo creado exitosamente
+[TRACE] 16:43:59:488 FileSystem/(14203:14203): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:43:59:488 FileSystem/(14203:14203): Por aceptar serv
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): bloques necesarios: 3
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): Cant de bloques libres: 1024
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): Bloque reservado: 0
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): Bloque reservado: 1
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): Bloque reservado: 2
+[TRACE] 19:44:09:256 FileSystem/(14360:14360): Bloques reservados: 3
+[TRACE] 16:44:09:257 FileSystem/(14360:14360): ts: 16:44:09:257
+[TRACE] 16:44:09:257 FileSystem/(14360:14360): timestamp: 16:44:09:257
+[TRACE] 16:44:09:257 FileSystem/(14360:14360): Archivo creado exitosamente
+[TRACE] 16:44:09:257 FileSystem/(14360:14360): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:44:09:257 FileSystem/(14360:14360): Por aceptar serv
+[TRACE] 19:44:19:629 FileSystem/(14532:14532): bloques necesarios: 3
+[TRACE] 19:44:19:631 FileSystem/(14532:14532): Cant de bloques libres: 1024
+[TRACE] 19:44:19:631 FileSystem/(14532:14532): Bloque reservado: 0
+[TRACE] 19:44:19:631 FileSystem/(14532:14532): Bloque reservado: 1
+[TRACE] 19:44:19:631 FileSystem/(14532:14532): Bloque reservado: 2
+[TRACE] 19:44:19:631 FileSystem/(14532:14532): Bloques reservados: 3
+[TRACE] 16:44:19:631 FileSystem/(14532:14532): ts: 16:44:19:631
+[TRACE] 16:44:19:631 FileSystem/(14532:14532): timestamp: 16:44:19:631
+[TRACE] 16:44:19:631 FileSystem/(14532:14532): Archivo creado exitosamente
+[TRACE] 16:44:19:631 FileSystem/(14532:14532): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:44:19:631 FileSystem/(14532:14532): Por aceptar serv
+[TRACE] 19:44:26:902 FileSystem/(14682:14682): bloques necesarios: 3
+[TRACE] 19:44:26:904 FileSystem/(14682:14682): Cant de bloques libres: 1024
+[TRACE] 19:44:26:904 FileSystem/(14682:14682): Bloque reservado: 0
+[TRACE] 19:44:26:904 FileSystem/(14682:14682): Bloque reservado: 1
+[TRACE] 19:44:26:904 FileSystem/(14682:14682): Bloque reservado: 2
+[TRACE] 19:44:26:905 FileSystem/(14682:14682): Bloques reservados: 3
+[TRACE] 16:44:26:905 FileSystem/(14682:14682): ts: 16:44:26:905
+[TRACE] 16:44:26:905 FileSystem/(14682:14682): timestamp: 16:44:26:905
+[TRACE] 16:44:26:905 FileSystem/(14682:14682): Archivo creado exitosamente
+[TRACE] 16:44:26:905 FileSystem/(14682:14682): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:44:26:905 FileSystem/(14682:14682): Por aceptar serv
+[TRACE] 19:44:44:260 FileSystem/(14853:14853): bloques necesarios: 5
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Cant de bloques libres: 1024
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloque reservado: 0
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloque reservado: 1
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloque reservado: 2
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloque reservado: 3
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloque reservado: 4
+[TRACE] 19:44:44:265 FileSystem/(14853:14853): Bloques reservados: 5
+[TRACE] 16:44:44:265 FileSystem/(14853:14853): ts: 16:44:44:265
+[TRACE] 16:44:44:265 FileSystem/(14853:14853): timestamp: 16:44:44:265
+[TRACE] 16:44:44:274 FileSystem/(14853:14853): Archivo creado exitosamente
+[TRACE] 16:44:44:275 FileSystem/(14853:14853): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:44:44:275 FileSystem/(14853:14853): Por aceptar serv
+[TRACE] 19:45:15:996 FileSystem/(15033:15033): bloques necesarios: 17
+[TRACE] 19:45:15:996 FileSystem/(15033:15033): Cant de bloques libres: 1024
+[TRACE] 19:45:15:996 FileSystem/(15033:15033): Bloque reservado: 0
+[TRACE] 19:45:15:996 FileSystem/(15033:15033): Bloque reservado: 1
+[TRACE] 19:45:15:996 FileSystem/(15033:15033): Bloque reservado: 2
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 3
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 4
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 5
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 6
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 7
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 8
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 9
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 10
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 11
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 12
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 13
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 14
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 15
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloque reservado: 16
+[TRACE] 19:45:15:997 FileSystem/(15033:15033): Bloques reservados: 17
+[TRACE] 16:45:15:997 FileSystem/(15033:15033): ts: 16:45:15:997
+[TRACE] 16:45:15:997 FileSystem/(15033:15033): timestamp: 16:45:15:997
+[TRACE] 16:45:15:998 FileSystem/(15033:15033): Archivo creado exitosamente
+[TRACE] 16:45:15:998 FileSystem/(15033:15033): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:45:15:998 FileSystem/(15033:15033): Por aceptar serv
+[TRACE] 19:45:42:426 FileSystem/(15197:15197): bloques necesarios: 17
+[TRACE] 19:45:42:426 FileSystem/(15197:15197): Cant de bloques libres: 1024
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 0
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 1
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 2
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 3
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 4
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 5
+[TRACE] 19:45:42:428 FileSystem/(15197:15197): Bloque reservado: 6
+[TRACE] 19:45:42:429 FileSystem/(15197:15197): Bloque reservado: 7
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 8
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 9
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 10
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 11
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 12
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 13
+[TRACE] 19:45:42:430 FileSystem/(15197:15197): Bloque reservado: 14
+[TRACE] 19:45:42:431 FileSystem/(15197:15197): Bloque reservado: 15
+[TRACE] 19:45:42:431 FileSystem/(15197:15197): Bloque reservado: 16
+[TRACE] 19:45:42:431 FileSystem/(15197:15197): Bloques reservados: 17
+[TRACE] 16:45:42:431 FileSystem/(15197:15197): ts: 16:45:42:431
+[TRACE] 16:45:42:431 FileSystem/(15197:15197): timestamp: 16:45:42:431
+[TRACE] 16:45:42:431 FileSystem/(15197:15197): Archivo creado exitosamente
+[TRACE] 16:45:42:431 FileSystem/(15197:15197): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:45:42:431 FileSystem/(15197:15197): Por aceptar serv
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): bloques necesarios: 17
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Cant de bloques libres: 1024
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Bloque reservado: 0
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Bloque reservado: 1
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Bloque reservado: 2
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Bloque reservado: 3
+[TRACE] 19:45:50:351 FileSystem/(15349:15349): Bloque reservado: 4
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 5
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 6
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 7
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 8
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 9
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 10
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 11
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 12
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 13
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 14
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 15
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloque reservado: 16
+[TRACE] 19:45:50:352 FileSystem/(15349:15349): Bloques reservados: 17
+[TRACE] 16:45:50:352 FileSystem/(15349:15349): ts: 16:45:50:352
+[TRACE] 16:45:50:352 FileSystem/(15349:15349): timestamp: 16:45:50:352
+[TRACE] 16:45:50:353 FileSystem/(15349:15349): Archivo creado exitosamente
+[TRACE] 16:45:50:354 FileSystem/(15349:15349): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:45:50:354 FileSystem/(15349:15349): Por aceptar serv
+[TRACE] 19:49:15:929 FileSystem/(15581:15581): bloques necesarios: 17
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Cant de bloques libres: 1024
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 0
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 1
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 2
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 3
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 4
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 5
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 6
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 7
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 8
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 9
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 10
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 11
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 12
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 13
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 14
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 15
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloque reservado: 16
+[TRACE] 19:49:15:930 FileSystem/(15581:15581): Bloques reservados: 17
+[TRACE] 16:49:15:930 FileSystem/(15581:15581): ts: 16:49:15:930
+[TRACE] 16:49:15:930 FileSystem/(15581:15581): timestamp: 16:49:15:930
+[TRACE] 16:49:15:930 FileSystem/(15581:15581): Archivo creado exitosamente
+[TRACE] 16:49:15:930 FileSystem/(15581:15581): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:49:15:930 FileSystem/(15581:15581): Por aceptar serv
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): bloques necesarios: 17
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Cant de bloques libres: 1024
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 0
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 1
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 2
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 3
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 4
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 5
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 6
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 7
+[TRACE] 19:50:03:459 FileSystem/(15770:15770): Bloque reservado: 8
+[TRACE] 19:50:03:460 FileSystem/(15770:15770): Bloque reservado: 9
+[TRACE] 19:50:03:460 FileSystem/(15770:15770): Bloque reservado: 10
+[TRACE] 19:50:03:460 FileSystem/(15770:15770): Bloque reservado: 11
+[TRACE] 19:50:03:460 FileSystem/(15770:15770): Bloque reservado: 12
+[TRACE] 19:50:03:460 FileSystem/(15770:15770): Bloque reservado: 13
+[TRACE] 19:50:03:461 FileSystem/(15770:15770): Bloque reservado: 14
+[TRACE] 19:50:03:461 FileSystem/(15770:15770): Bloque reservado: 15
+[TRACE] 19:50:03:461 FileSystem/(15770:15770): Bloque reservado: 16
+[TRACE] 19:50:03:461 FileSystem/(15770:15770): Bloques reservados: 17
+[TRACE] 16:50:03:461 FileSystem/(15770:15770): ts: 16:50:03:461
+[TRACE] 16:50:03:461 FileSystem/(15770:15770): timestamp: 16:50:03:461
+[TRACE] 16:50:03:462 FileSystem/(15770:15770): Archivo creado exitosamente
+[TRACE] 16:50:03:462 FileSystem/(15770:15770): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:50:03:462 FileSystem/(15770:15770): Por aceptar serv
+[TRACE] 19:50:46:246 FileSystem/(15931:15931): bloques necesarios: 2
+[TRACE] 19:50:46:248 FileSystem/(15931:15931): Cant de bloques libres: 1024
+[TRACE] 19:50:46:248 FileSystem/(15931:15931): Bloque reservado: 0
+[TRACE] 19:50:46:248 FileSystem/(15931:15931): Bloque reservado: 1
+[TRACE] 19:50:46:248 FileSystem/(15931:15931): Bloques reservados: 2
+[TRACE] 16:50:46:248 FileSystem/(15931:15931): ts: 16:50:46:248
+[TRACE] 16:50:46:248 FileSystem/(15931:15931): timestamp: 16:50:46:248
+[TRACE] 16:50:46:249 FileSystem/(15931:15931): Archivo creado exitosamente
+[TRACE] 16:50:46:249 FileSystem/(15931:15931): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:50:46:249 FileSystem/(15931:15931): Por aceptar serv
+[TRACE] 19:52:07:229 FileSystem/(16303:16303): bloques necesarios: 2
+[TRACE] 19:52:07:235 FileSystem/(16303:16303): Cant de bloques libres: 1024
+[TRACE] 19:52:07:237 FileSystem/(16303:16303): Bloque reservado: 0
+[TRACE] 19:52:07:237 FileSystem/(16303:16303): Bloque reservado: 1
+[TRACE] 19:52:07:237 FileSystem/(16303:16303): Bloques reservados: 2
+[TRACE] 16:52:07:237 FileSystem/(16303:16303): ts: 16:52:07:237
+[TRACE] 16:52:07:237 FileSystem/(16303:16303): timestamp: 16:52:07:237
+[TRACE] 16:52:07:238 FileSystem/(16303:16303): Archivo creado exitosamente
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): bloques necesarios: 2
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Cant de bloques libres: 1022
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Bloque reservado: 2
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Bloque reservado: 3
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Bloques reservados: 2
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): ts: 16:52:07:240
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): timestamp: 16:52:07:240
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Archivo creado exitosamente
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:52:07:240 FileSystem/(16303:16303): Por aceptar serv
+[TRACE] 19:53:23:582 FileSystem/(16518:16518): bloques necesarios: 2
+[TRACE] 19:53:23:584 FileSystem/(16518:16518): Cant de bloques libres: 1024
+[TRACE] 19:53:23:584 FileSystem/(16518:16518): Bloque reservado: 0
+[TRACE] 19:53:23:584 FileSystem/(16518:16518): Bloque reservado: 1
+[TRACE] 19:53:23:584 FileSystem/(16518:16518): Bloques reservados: 2
+[TRACE] 16:53:23:584 FileSystem/(16518:16518): ts: 16:53:23:584
+[TRACE] 16:53:23:584 FileSystem/(16518:16518): timestamp: 16:53:23:584
+[TRACE] 16:53:23:584 FileSystem/(16518:16518): Archivo creado exitosamente
+[TRACE] 16:53:23:584 FileSystem/(16518:16518): bloques necesarios: 2
+[TRACE] 16:53:23:584 FileSystem/(16518:16518): Cant de bloques libres: 1022
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Bloque reservado: 2
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Bloque reservado: 3
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Bloques reservados: 2
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): ts: 16:53:23:585
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): timestamp: 16:53:23:585
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Archivo creado exitosamente
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 16:53:23:585 FileSystem/(16518:16518): Por aceptar serv

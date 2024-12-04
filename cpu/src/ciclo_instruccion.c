@@ -4,6 +4,7 @@ extern CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 extern t_log* logger;
+extern bool flag_interrupt;
 
 void ciclo_de_instruccion() {
     while (true) {
@@ -22,9 +23,21 @@ void ciclo_de_instruccion() {
 
         //execute();
 
-        //check_interrupt();
+        if (check_interrupt()) suspender_proceso();
         
     }
+}
+
+// En este momento, se deberá chequear si el Kernel nos envió una interrupción al TID 
+// que se está ejecutando, en caso afirmativo, se actualiza el Contexto de Ejecución en 
+// la Memoria y se devuelve el TID al Kernel con motivo de la interrupción. 
+// Caso contrario, se descarta la interrupción.
+bool check_interrupt() {
+    if(flag_interrupt){
+        flag_interrupt = false;
+        return true;
+    }
+    return false;
 }
 
 void enviar_fin_de_proceso(){

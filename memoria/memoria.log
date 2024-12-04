@@ -8941,3 +8941,6 @@
 [TRACE] 21:56:53:737 Memoria/(8330:8330): Servidor levantado y listo para escuchar en el puerto: 8002
 [INFO] 21:56:53:738 Memoria/(8330:8330): Conexión exitosa
 [INFO] 21:56:53:739 Memoria/(8330:8330): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 19:10:00:660 Memoria/(8390:8390): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 19:10:00:666 Memoria/(8390:8390): Conexión exitosa
+[INFO] 19:10:00:666 Memoria/(8390:8390): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
