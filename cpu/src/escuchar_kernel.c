@@ -14,6 +14,8 @@ extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
 char* rta_mutex_lock;
+extern bool flag_interrupt;
+extern pthread_mutex_t mutex_interrupt;
 
 void escuchar_mensajes_kernel_dispatch(void)
 {
@@ -95,7 +97,10 @@ void escuchar_mensajes_kernel_interrupt(void)
 			aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 			break;
 		case FIN_QUANTUM:
-		    procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
+			pthread_mutex_lock(&mutex_interrupt);
+			flag_interrupt = true;
+			pthread_mutex_unlock(&mutex_interrupt);
+		    //procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
 			break;
 
 		case -1:

@@ -4816,3 +4816,27 @@
 [TRACE] 16:53:23:585 FileSystem/(16518:16518): Archivo creado exitosamente
 [TRACE] 16:53:23:585 FileSystem/(16518:16518): Servidor levantado y listo para escuchar en el puerto: 8003
 [TRACE] 16:53:23:585 FileSystem/(16518:16518): Por aceptar serv
+[TRACE] 20:29:39:801 FileSystem/(18096:18096): bloques necesarios: 2
+[TRACE] 20:29:39:804 FileSystem/(18096:18096): Cant de bloques libres: 1024
+[TRACE] 20:29:39:804 FileSystem/(18096:18096): Bloque reservado: 0
+[TRACE] 20:29:39:804 FileSystem/(18096:18096): Bloque reservado: 1
+[TRACE] 20:29:39:804 FileSystem/(18096:18096): Bloques reservados: 2
+[TRACE] 17:29:39:804 FileSystem/(18096:18096): ts: 17:29:39:804
+[TRACE] 17:29:39:804 FileSystem/(18096:18096): timestamp: 17:29:39:804
+[TRACE] 17:29:39:804 FileSystem/(18096:18096): Archivo creado exitosamente
+[TRACE] 17:29:39:815 FileSystem/(18096:18096): bloques necesarios: 2
+[TRACE] 17:29:39:821 FileSystem/(18096:18096): Cant de bloques libres: 1022
+[TRACE] 17:29:39:821 FileSystem/(18096:18096): Bloque reservado: 2
+[TRACE] 17:29:39:823 FileSystem/(18096:18096): Bloque reservado: 3
+[TRACE] 17:29:39:823 FileSystem/(18096:18096): Bloques reservados: 2
+[TRACE] 17:29:39:823 FileSystem/(18096:18096): ts: 17:29:39:823
+[TRACE] 17:29:39:823 FileSystem/(18096:18096): timestamp: 17:29:39:823
+[TRACE] 17:29:39:824 FileSystem/(18096:18096): Archivo creado exitosamente
+[TRACE] 17:29:39:824 FileSystem/(18096:18096): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 17:29:39:824 FileSystem/(18096:18096): Por aceptar serv
+[TRACE] 17:29:40:927 FileSystem/(16518:16518): Ya acepte serv
+[INFO] 17:29:40:927 FileSystem/(16518:16518): Se conecto el cliente: Memoria
+
+[TRACE] 17:29:40:927 FileSystem/(16518:16518): Por aceptar serv
+[INFO] 17:29:40:927 FileSystem/(16518:18221): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:29:40:928 FileSystem/(16518:18221): TEST HANDSHAKE

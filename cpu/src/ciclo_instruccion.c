@@ -5,6 +5,7 @@ extern int fd_memoria;
 extern int cliente_fd_dispatch;
 extern t_log* logger;
 extern bool flag_interrupt;
+extern pthread_mutex_t mutex_interrupt;
 
 void ciclo_de_instruccion() {
     while (true) {
@@ -33,10 +34,14 @@ void ciclo_de_instruccion() {
 // la Memoria y se devuelve el TID al Kernel con motivo de la interrupción. 
 // Caso contrario, se descarta la interrupción.
 bool check_interrupt() {
+    pthread_mutex_lock(&mutex_interrupt);
     if(flag_interrupt){
         flag_interrupt = false;
+        pthread_mutex_unlock(&mutex_interrupt);
+        procesar_fin_quantum(logger, cliente_fd_interrupt, FIN_QUANTUM);
         return true;
     }
+    pthread_mutex_unlock(&mutex_interrupt);
     return false;
 }
 

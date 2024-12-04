@@ -16697,3 +16697,52 @@
 [ERROR] 19:28:43:543 Kernel/(20234:20243): Finalizando proceso, PROCESS_EXIT
 [INFO] 19:28:43:544 Kernel/(20234:20240): intentando finalizar proceso con pid: 0
 [INFO] 19:28:43:546 Kernel/(20234:20240): ## Finaliza el proceso <0>
+[INFO] 20:29:41:956 Kernel/(18492:18492): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 20:29:41:957 Kernel/(18492:18492): Conexión exitosa
+[INFO] 20:29:41:957 Kernel/(18492:18492): Conexión exitosa
+[INFO] 20:29:41:957 Kernel/(18492:18492): Conexión exitosa
+[INFO] 20:29:41:958 Kernel/(18492:18492): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 20:29:41:959 Kernel/(18492:18492): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 20:29:41:961 Kernel/(18492:18492): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 20:29:41:962 Kernel/(18492:18500): entro a fin_hilo
+[INFO] 20:29:41:962 Kernel/(18492:18497): Solicitando memoria para el proceso: 0
+
+[INFO] 20:29:42:963 Kernel/(18492:18497): Memoria reservada correctamente
+[INFO] 20:29:42:964 Kernel/(18492:18497): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 20:29:42:964 Kernel/(18492:18497): Creando TCB de prioridad: 0
+
+[ERROR] 20:29:42:964 Kernel/(18492:18497): PID del HILO creado: 0
+[INFO] 20:29:42:964 Kernel/(18492:18499): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 20:29:42:964 Kernel/(18492:18509): Cola Ready:
+[TRACE] 20:29:42:965 Kernel/(18492:18509): Cola Blocked:
+[TRACE] 20:29:42:965 Kernel/(18492:18509): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 20:29:42:969 Kernel/(18492:18509): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 20:29:42:970 Kernel/(18492:18509): Creando TCB de prioridad: 0
+
+[ERROR] 20:29:42:970 Kernel/(18492:18509): PID del HILO creado: 0
+[INFO] 20:29:42:974 Kernel/(18492:18499): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[TRACE] 20:29:42:975 Kernel/(18492:18510): A1
+[TRACE] 20:29:42:976 Kernel/(18492:18509): B
+[INFO] 20:29:42:976 Kernel/(18492:18509): Hilo suspendido
+[TRACE] 20:29:42:976 Kernel/(18492:18509): Cola Ready:
+[TRACE] 20:29:42:976 Kernel/(18492:18509): Cola Blocked:
+[TRACE] 20:29:42:976 Kernel/(18492:18509): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[TRACE] 20:29:42:978 Kernel/(18492:18509): CPU ejecutando el hilo: 1 del proceso: 0
+
+[TRACE] 20:29:43:978 Kernel/(18492:18510): A2
+[ERROR] 20:29:48:020 Kernel/(18492:18509): Finalizando hilo, THREAD_EXIT
+[INFO] 20:29:48:020 Kernel/(18492:18509): Finalizando hilo con TID: 1 del proceso con PID: 0
+[TRACE] 20:29:48:020 Kernel/(18492:18509): Cola Ready:
+[TRACE] 20:29:48:020 Kernel/(18492:18509): Cola Blocked:
+[TRACE] 20:29:48:020 Kernel/(18492:18509): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[INFO] 20:29:48:020 Kernel/(18492:18500): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 20:29:48:020 Kernel/(18492:18500): entro a fin_hilo
+[TRACE] 20:29:48:025 Kernel/(18492:18509): CPU ejecutando el hilo: 0 del proceso: 0
+
+[ERROR] 20:29:53:029 Kernel/(18492:18509): Finalizando proceso, PROCESS_EXIT
+[INFO] 20:29:53:029 Kernel/(18492:18498): intentando finalizar proceso con pid: 0
+[INFO] 20:29:53:035 Kernel/(18492:18498): ## Finaliza el proceso <0>
