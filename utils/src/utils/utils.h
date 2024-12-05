@@ -77,7 +77,8 @@ typedef enum
 	HILO_JOINEADO,
 	HILO_CANCEL,
 	IO_SOLICITADA,
-	TEST
+	MEM_DUMPEADA,
+	SOL_DUMP
 
 } op_code;
 

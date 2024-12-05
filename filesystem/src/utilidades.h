@@ -25,7 +25,7 @@ bool verificar_espacio_disponible(int tam_archivo);
 int cant_bloques_libres();
 void crear_archivo_metadata(int pid, int tid, int tamanio);
 void crear_archivo(int pid, int tid, int tamanio, char *contenido);
-int *reservar_bloques(int cantidad);
+int *reservar_bloques(int cantidad, char* nombre_archivo);
 char *obtenerTimeStamp();
 void leer_bloque_indice(int bloque_indice);
 void terminar_ejecucion(int socket);

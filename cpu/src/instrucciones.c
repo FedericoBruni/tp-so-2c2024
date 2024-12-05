@@ -13,6 +13,8 @@ extern sem_t sem_hilo_creado;
 extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
+extern sem_t sem_dump_mem;
+extern sem_t sem_dump_mem;
 extern char* rta_mutex_lock;
 
 
@@ -31,6 +33,9 @@ void write_mem(char* registroDireccion, char* registroDatos){
         log_error(logger, "ERROR");
         return; // en realidad hay q hacer lo del segmentation fault
     }
+
+    log_info(logger,"## TID: %d - Acción: ESCRIBIR - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
+
     int valor = *obtenerRegistro(registroDatos);
     enviar_write_mem(valor, dir_fisica);
     switch(recibir_operacion(fd_memoria)){
@@ -66,6 +71,9 @@ void read_mem(char* registroDatos, char* registroDireccion){
         log_error(logger, "ERROR");
         return; // en realidad hay q hacer lo del segmentation fault
     }
+
+    log_info(logger,"## TID: %d - Acción: LEER - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
+
     enviar_read_mem(dir_fisica);
     switch(recibir_operacion(fd_memoria)){
         case READ_MEM_RTA:
@@ -107,21 +115,22 @@ void LOG(char *registro){
 }
 
 void DUMP_MEMORY(int pid, int tid) {
-    enviar_dump_memory(pid, tid);
     actualizar_contexto(fd_memoria);
+    enviar_dump_memory(pid, tid);
+    sem_wait(&sem_dump_mem);
     // esperar rta?extern sem_t sem_mutex_lockeado;
 }
 
 void io(int tiempo) {
+    actualizar_contexto(fd_memoria);
     enviar_io(tiempo);
-    actualizar_contexto(fd_memoria); // xq es syscall, pero lo necesitamos?
     // esperar rta?
     sem_wait(&sem_io_solicitada);
 }
 
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){
-    crear_proceso(archivo_de_instrucciones,tamanio_proceso,prio_hilo);
     actualizar_contexto(fd_memoria);
+    crear_proceso(archivo_de_instrucciones,tamanio_proceso,prio_hilo);
     sem_wait(&sem_proceso_creado);
     // switch(recibir_operacion(cliente_fd_dispatch)){
     //     case PROCESO_CREADO:
@@ -135,28 +144,27 @@ void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio
 }
 
 void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad) {
-    crear_hilo(archivo_pseudocodigo, prioridad);
     actualizar_contexto(fd_memoria);
+    crear_hilo(archivo_pseudocodigo, prioridad);
     sem_wait(&sem_hilo_creado);
 }
 
 void THREAD_JOIN (int tid) {
-    thread_join(tid);
     actualizar_contexto(fd_memoria);
+    thread_join(tid);
     sem_wait(&sem_join_hilo);
 }
 
 void THREAD_CANCEL (int tid, int pid) {
-    thread_cancel(tid, pid);
     actualizar_contexto(fd_memoria);
+    thread_cancel(tid, pid);
     sem_wait(&sem_hilo_cancel);
 }
 
 void MUTEX_CREATE (char *recurso) {
+    actualizar_contexto(fd_memoria);
     mutex_create(recurso);
     //sleep(5);
-    actualizar_contexto(fd_memoria);
-
     sem_wait(&sem_mutex_creado);
     // switch(recibir_operacion(cliente_fd_dispatch)){
     //     case MUTEX_CREADO:
@@ -169,26 +177,26 @@ void MUTEX_CREATE (char *recurso) {
 }
 
 char* MUTEX_LOCK (char* recurso) {
-    mutex_lock(recurso);
     actualizar_contexto(fd_memoria);
+    mutex_lock(recurso);
     sem_wait(&sem_mutex_lockeado);
     return rta_mutex_lock;
 }
 
 void MUTEX_UNLOCK (char* recurso) {
-    mutex_unlock(recurso);
     actualizar_contexto(fd_memoria);
+    mutex_unlock(recurso);
     sem_wait(&sem_mutex_unlockeado);
 }
 
 void THREAD_EXIT() {
-    thread_exit();
     actualizar_contexto(fd_memoria);
+    thread_exit();
     sem_wait(&sem_thread_exit);
 }
 
 void PROCESS_EXIT() {
-    process_exit();
     actualizar_contexto(fd_memoria);
+    process_exit();
     sem_wait(&sem_process_exit);
 }

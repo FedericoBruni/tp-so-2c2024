@@ -83,6 +83,8 @@ void enviar_contexto(int cliente_fd_dispatch){
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
 
+    log_info(logger, "## Contexto Solicitado - (PID:TID) - (%d:%d)",pid,tid);
+
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu = buscar_contextos(tid,pid);
 
@@ -110,6 +112,9 @@ void enviar_instruccion(int cliente_fd_dispatch) {
     int tid = extraer_int_del_buffer(buffer);
 
     char* instruccion = obtener_instruccion(pc, pid, tid);
+
+    log_info(logger,"## Obtener instrucción - (PID:TID) - (%d:%d) - Instrucción: %s",pid,tid,instruccion);
+
     t_buffer *bufferRta = crear_buffer();
     t_paquete *paquete;
     if (!instruccion) {
@@ -176,6 +181,8 @@ void actualizar_contexto(int cliente_fd_dispatch){
     ctx_hilo = extraer_contexto_hilo(buffer);
     ctx_proceso = extraer_contexto_proceso(buffer);
     
+    log_info(logger, "## Contexto Actualizado - (PID:TID) - (%d:%d)",ctx_hilo->pid,ctx_hilo->tid);
+
     bool _es_hilo(void *ptr) {
         CONTEXTO_HILO *ctx_hilo_en_memoria = (CONTEXTO_HILO *)ptr;
         return ctx_hilo_en_memoria->tid == ctx_hilo->tid && ctx_hilo_en_memoria->pid == ctx_hilo->pid;
@@ -580,6 +587,8 @@ void finalizacion_de_proceso(int pid){
     return (particion->inicio == contexto_proceso->BASE && contexto_proceso->LIMITE == particion->inicio + particion->tamanio);
     }
 
+    
+
     // buscar los hilos del proceso
     // borrarlos -> borrar los registros free(CONTEXTO_HILO)
     t_list *lista_a_borrar = buscar_hilos_de_proceso(pid);
@@ -589,6 +598,7 @@ void finalizacion_de_proceso(int pid){
     }
 
     Particion* particion = list_find(memoria_usuario->particiones,_esLaParticion);
+    log_info(logger, "## Proceso Destruido - PID: %d - Tamaño: %d",pid,particion->tamanio);
     particion->estaOcupado=0;
     log_info(logger, "Finalizado proceso: %d",pid);
     // marcar la partición del proceso como libre
@@ -680,8 +690,7 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
     int valor = extraer_int_del_buffer(buffer);
     int direccion = extraer_int_del_buffer(buffer);
-    log_trace(logger, "Dirección en deserializar_write_mem: %i", direccion);
-    log_trace(logger, "Valor en deserializar_write_mem: %i", valor);
+    log_info(logger,"## Escritura - (PID:TID) - (d:d) - Dir.Física: %d - Tamaño: %d",direccion,sizeof(valor));
     escribir_memoria(direccion, valor);
     //WRITE_MEM_RTA
     int rta = WRITE_MEM_RTA;
@@ -691,11 +700,9 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
 void deserializar_read_mem(cliente_fd_dispatch) {
     t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
     int direccion = extraer_int_del_buffer(buffer);
-    log_trace(logger, "Dirección en deserializar_read_mem: %i", direccion);
-    log_trace(logger,"valor: %d",leer_memoria(direccion));
-    enviar_lectura(leer_memoria(direccion));
-
-
+    int dato = leer_memoria(direccion);
+    log_info(logger,"## Lecutra - (PID:TID) - (d:d) - Dir.Física: %d - Tamaño: %d",direccion,sizeof(dato));
+    enviar_lectura(dato);
 }
 
 void enviar_lectura(int dato) {
@@ -708,8 +715,63 @@ void enviar_lectura(int dato) {
 
 
 
+void dump_memory(int tid,  int pid){
+    CONTEXTO_CPU *contexto_a_dumpear = buscar_contextos(tid,pid);
+    char *contenido = parse_contexto_cpu(contexto_a_dumpear);
+    int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
+    int fd_filesystem = conectarse_a_filesystem();
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer,tid);
+    cargar_int_al_buffer(buffer,pid);
+    cargar_int_al_buffer(buffer,tamanio);
+    cargar_string_al_buffer(buffer,contenido);
 
+    log_info(logger,"## Memory Dump solicitado - (PID:TID) - (%d:%d)",pid,tid);
 
+    t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
+    enviar_paquete(paquete, fd_filesystem);
+    eliminar_paquete(paquete);
+    if (recibir_operacion(fd_filesystem) == MEM_DUMPEADA)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+char *parse_contexto_cpu(CONTEXTO_CPU *contexto) {
+    char *str = malloc(1024);
+    sprintf(str, "Contexto Proceso:\n");
+
+    // Proceso
+    sprintf(str + strlen(str), "  Proceso:\n");
+    sprintf(str + strlen(str), "    PID: %d\n", contexto->contexto_proceso->pid);
+    sprintf(str + strlen(str), "    BASE: %u\n", contexto->contexto_proceso->BASE);
+    sprintf(str + strlen(str), "    LIMITE: %u\n", contexto->contexto_proceso->LIMITE);
+
+    // Hilo
+    sprintf(str + strlen(str), "  Hilo:\n");
+    sprintf(str + strlen(str), "    TID: %d\n", contexto->contexto_hilo->tid);
+    sprintf(str + strlen(str), "    PID: %d\n", contexto->contexto_hilo->pid);
+    sprintf(str + strlen(str), "    Archivo Pseudocodigo: %s\n", contexto->contexto_hilo->archivo_pseudocodigo);
+
+    // Registros
+    sprintf(str + strlen(str), "    Registros:\n");
+    REGISTROS *regs = contexto->contexto_hilo->Registros;
+    sprintf(str + strlen(str), "      PC: %u\n", regs->PC);
+    sprintf(str + strlen(str), "      AX: %u\n", regs->AX);
+    sprintf(str + strlen(str), "      BX: %u\n", regs->BX);
+    sprintf(str + strlen(str), "      CX: %u\n", regs->CX);
+    sprintf(str + strlen(str), "      DX: %u\n", regs->DX);
+    sprintf(str + strlen(str), "      EX: %u\n", regs->EX);
+    sprintf(str + strlen(str), "      FX: %u\n", regs->FX);
+    sprintf(str + strlen(str), "      GX: %u\n", regs->GX);
+    sprintf(str + strlen(str), "      HX: %u\n", regs->HX);
+
+    return str;
+}
 
 
 

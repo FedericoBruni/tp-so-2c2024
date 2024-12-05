@@ -12,5 +12,6 @@ void pedir_prox_instruccion();
 char* recibir_prox_instruccion();
 void imprimir_ctx_cpu(CONTEXTO_CPU *contexto_cpu); //de prueba
 void suspender_proceso();
+void desalojar_por_quantum();
 bool check_interrupt();
 #endif /* CICLO_INSTRUCCION_H */

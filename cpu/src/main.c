@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     
     pthread_t hilo_kernel_interrupt;
     pthread_create(&hilo_kernel_interrupt, NULL, (void *)escuchar_mensajes_kernel_interrupt, NULL); // Crea el hilo y le pasa la funcion a ejecutarse
-    pthread_join(hilo_kernel_interrupt, NULL);
+    pthread_detach(hilo_kernel_interrupt);
     
     
     while (1)

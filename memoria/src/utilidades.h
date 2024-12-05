@@ -38,5 +38,7 @@ void escribir_memoria(int direccion, int valor);
 void deserializar_write_mem(int cliente_fd_dispatch);
 void deserializar_read_mem(int cliente_fd_dispatch);
 void enviar_lectura(int dato);
+void dump_memory(int tid,  int pid);
+char *parse_contexto_cpu(CONTEXTO_CPU *contexto);
 
 #endif // UTILIDADES_H_

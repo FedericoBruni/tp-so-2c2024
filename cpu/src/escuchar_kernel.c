@@ -13,9 +13,11 @@ extern sem_t sem_hilo_creado;
 extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
+extern sem_t sem_dump_mem;
 char* rta_mutex_lock;
 extern bool flag_interrupt;
 extern pthread_mutex_t mutex_interrupt;
+extern CONTEXTO_CPU *contexto_en_ejecucion;
 
 void escuchar_mensajes_kernel_dispatch(void)
 {
@@ -34,6 +36,8 @@ void escuchar_mensajes_kernel_dispatch(void)
 
 		case ENVIAR_EXEC:
 			recibir_exec(logger,cliente_fd_dispatch,cod_op);
+			
+			log_info(logger, "## (%d:%d) - Solicito Contexto Ejecucion", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
 			break;
 
 		case PROCESO_CREADO:
@@ -58,7 +62,6 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case MUTEX_UNLOCKEADO:
 			sem_post(&sem_mutex_unlockeado);
 			break;	
-
 		case LOCKEAR_HILO:
 			rta_mutex_lock = "SUSPPROCESO";
 			sem_post(&sem_mutex_lockeado);
@@ -72,7 +75,9 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case IO_SOLICITADA:
 			sem_post(&sem_io_solicitada);
 			break;
-			
+		case MEM_DUMPEADA:
+			sem_post(&sem_dump_mem);
+			break;	
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");
 			cliente_fd_dispatch = -1;
@@ -97,10 +102,9 @@ void escuchar_mensajes_kernel_interrupt(void)
 			aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 			break;
 		case FIN_QUANTUM:
-			pthread_mutex_lock(&mutex_interrupt);
-			flag_interrupt = true;
+		    pthread_mutex_lock(&mutex_interrupt);
+			procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
 			pthread_mutex_unlock(&mutex_interrupt);
-		    //procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
 			break;
 
 		case -1:

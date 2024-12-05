@@ -1,5 +1,5 @@
 #include "syscalls.h"
-
+extern int fd_memoria;
 extern t_queue *cola_new;
 extern t_queue *cola_new_hilo;
 extern t_queue* cola_ready;
@@ -177,6 +177,7 @@ void MUTEX_LOCK(char* recurso)
     }else{
         bloquear_hilo_mutex(mutex->cola_bloqueados, tcb_en_ejecucion);
         estado_lock = "LOCKEADO";
+        log_info(logger,"## (%d:%d) - Bloqueado por: <MUTEX>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
     }
     sem_post(&sem_syscall_fin);
 }
@@ -199,7 +200,8 @@ void MUTEX_UNLOCK(char *recurso){
 }
 
 void DUMP_MEMORY(int pid, int tid){
-    log_info(logger, "DUMP MEMORY en syscalls.c");
+    enviar_dump_memory(fd_memoria,tid,pid);
+    sem_post(&sem_syscall_fin);
     // implementar logica
 }
 
@@ -221,6 +223,7 @@ void ejecucion_io(int tiempo) {
     cambiar_estado_hilo(tcb_en_ejecucion, BLOCKED);
     sem_post(&sem_io);
     sleep(tiempo);
+    log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
     // pasar a ready el tcb en ejec
     TCB *tcb = desencolar(cola_blocked, mutex_blocked);
     encolar(cola_ready, tcb, mutex_ready);

@@ -1,11 +1,13 @@
 #include "ciclo_instruccion.h"
 extern sem_t sem_ejecucion;
+extern sem_t sem_hay_interrupt;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
 extern t_log* logger;
 extern bool flag_interrupt;
 extern pthread_mutex_t mutex_interrupt;
+extern TCB* pcb_en_ejecucion;
 
 void ciclo_de_instruccion() {
     while (true) {
@@ -24,7 +26,7 @@ void ciclo_de_instruccion() {
 
         //execute();
 
-        if (check_interrupt()) suspender_proceso();
+        if (check_interrupt()) desalojar_por_quantum();
         
     }
 }
@@ -38,7 +40,7 @@ bool check_interrupt() {
     if(flag_interrupt){
         flag_interrupt = false;
         pthread_mutex_unlock(&mutex_interrupt);
-        procesar_fin_quantum(logger, cliente_fd_interrupt, FIN_QUANTUM);
+		log_info(logger, "## Llega interrupción al puerto Interrupt");
         return true;
     }
     pthread_mutex_unlock(&mutex_interrupt);
@@ -51,6 +53,10 @@ void enviar_fin_de_proceso(){
 }
 void suspender_proceso(){
     int cod_op = SUSP_PROCESO;
+    send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
+}
+void desalojar_por_quantum(){
+    int cod_op = DESALOJO_POR_QUANTUM;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
 
@@ -81,9 +87,10 @@ char* recibir_prox_instruccion(){
 }
 
 char* fetch() {
+	log_info(logger, "## TID: <%d> - FETCH - Program Counter: <%d>", contexto_en_ejecucion->contexto_hilo->tid, contexto_en_ejecucion->contexto_hilo->Registros->PC);
     pedir_prox_instruccion();
     char* instruccion = recibir_prox_instruccion();
-    printf("instr dentro de feth: %s\n",instruccion);
+    log_info(logger, "“## TID: <%d> - Ejecutando: <%s>", contexto_en_ejecucion->contexto_hilo->tid, instruccion);
     if(instruccion){
         printf("Instruccion recibida: %s\n",instruccion);
         contexto_en_ejecucion->contexto_hilo->Registros->PC++;
@@ -145,6 +152,7 @@ char* decode(char* instruccion) {
         LOG(registro);
         return "OK";
     } else if (string_equals_ignore_case(instr, "DUMP_MEMORY")){
+        log_error(logger,"entro a dump");
         DUMP_MEMORY(contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
         return "OK";
         

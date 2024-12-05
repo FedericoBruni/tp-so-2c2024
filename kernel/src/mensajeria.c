@@ -131,31 +131,34 @@ int esperar_respuesta(){
     switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
             replanificar(tcb_en_ejecucion);
-            log_info(logger,"Desalojo por quantum");
+            log_info(logger,"## (%d:%d) - Desalojado por fin de Quantum", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             return 1;
         case OK_EJECUCION:
-            log_info(logger,"Ok ejecucion");
+            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             break;
         case SYSCALL_PROCESS_CREATE:
-            log_info(logger, "Syscall Process Create");
+            log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
             deserializar_process_create();
             sem_wait(&sem_syscall_fin);
             int proceso_creado = PROCESO_CREADO;
             send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_CREATE:
+            log_info(logger,"## (%d:%d) - Se crea el Hilo - Estado: READY", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_create();
             sem_wait(&sem_syscall_fin);
             int hilo_creado = HILO_CREADO;
             send(fd_cpu_dispatch,&hilo_creado,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_JOIN:
+            log_info(logger,"## (%d:%d) - Bloqueado por: <PTHREAD_JOIN>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_join();
             sem_wait(&sem_syscall_fin);
             int hilo_join = HILO_JOINEADO;
             send(fd_cpu_dispatch,&hilo_join,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_CANCEL:
+            log_info(logger, "## (%d:%d) Se cancela el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_cancel();
             sem_wait(&sem_syscall_fin);
             int hilo_cancel = HILO_CANCEL;
@@ -180,19 +183,21 @@ int esperar_respuesta(){
             
             break;
         case SYSCALL_MUTEX_UNLOCK:
+            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             deserializar_mutex_unlock();
             sem_wait(&sem_syscall_fin);
             int mutex_unlock = MUTEX_UNLOCKEADO;
             send(fd_cpu_dispatch, &mutex_unlock, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_EXIT:
-            log_error(logger,"ENTRO A SYSCALL_THREAD_EXIT");
+            log_info(logger, "## (%d:%d) Finaliza el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             THREAD_EXIT(tcb_en_ejecucion);
             sem_wait(&sem_syscall_fin);
             int thread_exit = FIN_HILO;
             send(fd_cpu_dispatch, &thread_exit, sizeof(op_code), 0);
             break;
         case SYSCALL_PROCESS_EXIT:
+            log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
             PROCESS_EXIT(tcb_en_ejecucion);
             sem_wait(&sem_syscall_fin);
             int process_exit = FIN_PROCESO;
@@ -201,27 +206,32 @@ int esperar_respuesta(){
         case FIN_DE_ARCHIVO:
             sleep(5);
             if (debe_finalizar_proceso()){
-                log_error(logger, "Finalizando proceso, PROCESS_EXIT");
+                log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
             //if(tcb_en_ejecucion->tid == 0){
                 PROCESS_EXIT(tcb_en_ejecucion);
                 //THREAD_EXIT(tcb_en_ejecucion);
             }else{
-                log_error(logger, "Finalizando hilo, THREAD_EXIT");
+                log_info(logger, "## (%d:%d) Finaliza el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
                 THREAD_EXIT(tcb_en_ejecucion);
             }
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SUSP_PROCESO:
             //sleep(5);
-            log_info(logger,"Hilo suspendido");
+            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             sem_post(&sem_puede_ejecutar);
             return 1;
 
         case SYSCALL_DUMP_MEMORY:
+            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             deserializar_dump_memory();
+            sem_wait(&sem_syscall_fin);
+            int res_dump = MEM_DUMPEADA;
+            send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
             break;
 
         case SYSCALL_IO:
+            log_info(logger,"## (%d:%d) - Bloqueado por: <PTHREAD_JOIN / MUTEX / IO>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_io();
             int io_solicitada = IO_SOLICITADA;
             send(fd_cpu_dispatch,&io_solicitada,sizeof(op_code),0);
@@ -307,4 +317,21 @@ void deserializar_io() {
     int tiempo = extraer_int_del_buffer(buffer);
     IO(tiempo);
     
+}
+
+void enviar_dump_memory(int socket_memoria, int tid, int pid){
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer, tid);
+    cargar_int_al_buffer(buffer, pid);
+    t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
+    enviar_paquete(paquete, socket_memoria);
+    eliminar_paquete(paquete);
+    if (recibir_operacion(socket_memoria) == MEM_DUMPEADA)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }

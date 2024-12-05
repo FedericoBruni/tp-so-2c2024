@@ -16746,3 +16746,713 @@
 [ERROR] 20:29:53:029 Kernel/(18492:18509): Finalizando proceso, PROCESS_EXIT
 [INFO] 20:29:53:029 Kernel/(18492:18498): intentando finalizar proceso con pid: 0
 [INFO] 20:29:53:035 Kernel/(18492:18498): ## Finaliza el proceso <0>
+[INFO] 00:18:06:292 Kernel/(4222:4222): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:18:06:293 Kernel/(4222:4222): Conexión exitosa
+[INFO] 00:18:06:293 Kernel/(4222:4222): Conexión exitosa
+[INFO] 00:18:06:293 Kernel/(4222:4222): Conexión exitosa
+[INFO] 00:18:06:294 Kernel/(4222:4222): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:18:06:294 Kernel/(4222:4222): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:18:06:295 Kernel/(4222:4222): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:18:06:295 Kernel/(4222:4230): entro a fin_hilo
+[INFO] 00:18:06:295 Kernel/(4222:4227): Solicitando memoria para el proceso: 0
+
+[INFO] 00:18:07:296 Kernel/(4222:4227): Memoria reservada correctamente
+[INFO] 00:18:07:296 Kernel/(4222:4227): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:18:07:296 Kernel/(4222:4227): Creando TCB de prioridad: 0
+
+[ERROR] 00:18:07:296 Kernel/(4222:4227): PID del HILO creado: 0
+[INFO] 00:18:07:296 Kernel/(4222:4229): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:18:07:297 Kernel/(4222:4231): Cola Ready:
+[TRACE] 00:18:07:297 Kernel/(4222:4231): Cola Blocked:
+[TRACE] 00:18:07:297 Kernel/(4222:4231): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:18:07:298 Kernel/(4222:4231): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:19:34:967 Kernel/(4931:4931): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:19:34:968 Kernel/(4931:4931): Conexión exitosa
+[INFO] 00:19:34:975 Kernel/(4931:4931): Conexión exitosa
+[INFO] 00:19:34:976 Kernel/(4931:4931): Conexión exitosa
+[INFO] 00:19:34:986 Kernel/(4931:4931): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:19:34:989 Kernel/(4931:4931): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:19:35:012 Kernel/(4931:4931): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:19:35:019 Kernel/(4931:4939): entro a fin_hilo
+[INFO] 00:19:35:019 Kernel/(4931:4936): Solicitando memoria para el proceso: 0
+
+[INFO] 00:19:36:020 Kernel/(4931:4936): Memoria reservada correctamente
+[INFO] 00:19:36:020 Kernel/(4931:4936): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:19:36:020 Kernel/(4931:4936): Creando TCB de prioridad: 0
+
+[ERROR] 00:19:36:020 Kernel/(4931:4936): PID del HILO creado: 0
+[INFO] 00:19:36:020 Kernel/(4931:4938): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:19:36:020 Kernel/(4931:4952): Cola Ready:
+[TRACE] 00:19:36:021 Kernel/(4931:4952): Cola Blocked:
+[TRACE] 00:19:36:021 Kernel/(4931:4952): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:19:36:027 Kernel/(4931:4952): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:20:15:265 Kernel/(5513:5513): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:20:15:265 Kernel/(5513:5513): Conexión exitosa
+[INFO] 00:20:15:266 Kernel/(5513:5513): Conexión exitosa
+[INFO] 00:20:15:272 Kernel/(5513:5513): Conexión exitosa
+[INFO] 00:20:15:273 Kernel/(5513:5513): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:20:15:273 Kernel/(5513:5513): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:20:15:274 Kernel/(5513:5513): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:20:15:274 Kernel/(5513:5521): entro a fin_hilo
+[INFO] 00:20:15:280 Kernel/(5513:5518): Solicitando memoria para el proceso: 0
+
+[INFO] 00:20:16:282 Kernel/(5513:5518): Memoria reservada correctamente
+[INFO] 00:20:16:282 Kernel/(5513:5518): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:20:16:282 Kernel/(5513:5518): Creando TCB de prioridad: 0
+
+[ERROR] 00:20:16:282 Kernel/(5513:5518): PID del HILO creado: 0
+[INFO] 00:20:16:282 Kernel/(5513:5520): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:20:16:284 Kernel/(5513:5522): Cola Ready:
+[TRACE] 00:20:16:285 Kernel/(5513:5522): Cola Blocked:
+[TRACE] 00:20:16:285 Kernel/(5513:5522): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:20:16:286 Kernel/(5513:5522): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:20:50:057 Kernel/(5930:5930): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:20:50:058 Kernel/(5930:5930): Conexión exitosa
+[INFO] 00:20:50:058 Kernel/(5930:5930): Conexión exitosa
+[INFO] 00:20:50:064 Kernel/(5930:5930): Conexión exitosa
+[INFO] 00:20:50:065 Kernel/(5930:5930): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:20:50:065 Kernel/(5930:5930): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:20:50:066 Kernel/(5930:5930): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:20:50:066 Kernel/(5930:5938): entro a fin_hilo
+[INFO] 00:20:50:066 Kernel/(5930:5935): Solicitando memoria para el proceso: 0
+
+[INFO] 00:20:51:070 Kernel/(5930:5935): Memoria reservada correctamente
+[INFO] 00:20:51:070 Kernel/(5930:5935): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:20:51:070 Kernel/(5930:5935): Creando TCB de prioridad: 0
+
+[ERROR] 00:20:51:070 Kernel/(5930:5935): PID del HILO creado: 0
+[INFO] 00:20:51:070 Kernel/(5930:5937): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:20:51:072 Kernel/(5930:5939): Cola Ready:
+[TRACE] 00:20:51:072 Kernel/(5930:5939): Cola Blocked:
+[TRACE] 00:20:51:072 Kernel/(5930:5939): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:20:51:073 Kernel/(5930:5939): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:21:22:593 Kernel/(6390:6390): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:21:22:594 Kernel/(6390:6390): Conexión exitosa
+[INFO] 00:21:22:594 Kernel/(6390:6390): Conexión exitosa
+[INFO] 00:21:22:599 Kernel/(6390:6390): Conexión exitosa
+[INFO] 00:21:22:604 Kernel/(6390:6390): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:21:22:605 Kernel/(6390:6390): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:21:22:605 Kernel/(6390:6390): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:21:22:605 Kernel/(6390:6398): entro a fin_hilo
+[INFO] 00:21:22:605 Kernel/(6390:6395): Solicitando memoria para el proceso: 0
+
+[INFO] 00:21:23:606 Kernel/(6390:6395): Memoria reservada correctamente
+[INFO] 00:21:23:606 Kernel/(6390:6395): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:21:23:606 Kernel/(6390:6395): Creando TCB de prioridad: 0
+
+[ERROR] 00:21:23:606 Kernel/(6390:6395): PID del HILO creado: 0
+[INFO] 00:21:23:607 Kernel/(6390:6397): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:21:23:608 Kernel/(6390:6399): Cola Ready:
+[TRACE] 00:21:23:609 Kernel/(6390:6399): Cola Blocked:
+[TRACE] 00:21:23:609 Kernel/(6390:6399): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:21:23:620 Kernel/(6390:6399): CPU ejecutando el hilo: 0 del proceso: 0
+
+[ERROR] 00:21:28:647 Kernel/(6390:6399): Finalizando proceso, PROCESS_EXIT
+[INFO] 00:21:28:647 Kernel/(6390:6396): intentando finalizar proceso con pid: 0
+[INFO] 00:21:28:648 Kernel/(6390:6396): ## Finaliza el proceso <0>
+[INFO] 00:24:08:347 Kernel/(6945:6945): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:24:08:347 Kernel/(6945:6945): Conexión exitosa
+[INFO] 00:24:08:348 Kernel/(6945:6945): Conexión exitosa
+[INFO] 00:24:08:352 Kernel/(6945:6945): Conexión exitosa
+[INFO] 00:24:08:353 Kernel/(6945:6945): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:24:08:353 Kernel/(6945:6945): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:24:08:355 Kernel/(6945:6945): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:24:08:368 Kernel/(6945:6953): entro a fin_hilo
+[INFO] 00:24:08:368 Kernel/(6945:6950): Solicitando memoria para el proceso: 0
+
+[INFO] 00:24:09:369 Kernel/(6945:6950): Memoria reservada correctamente
+[INFO] 00:24:09:369 Kernel/(6945:6950): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:24:09:369 Kernel/(6945:6950): Creando TCB de prioridad: 0
+
+[ERROR] 00:24:09:369 Kernel/(6945:6950): PID del HILO creado: 0
+[INFO] 00:24:09:370 Kernel/(6945:6952): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 00:24:09:372 Kernel/(6945:6954): Cola Ready:
+[TRACE] 00:24:09:372 Kernel/(6945:6954): Cola Blocked:
+[TRACE] 00:24:09:372 Kernel/(6945:6954): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 00:24:09:383 Kernel/(6945:6954): CPU ejecutando el hilo: 0 del proceso: 0
+
+[ERROR] 00:24:14:419 Kernel/(6945:6954): Finalizando proceso, PROCESS_EXIT
+[INFO] 00:24:14:420 Kernel/(6945:6951): intentando finalizar proceso con pid: 0
+[INFO] 00:24:14:420 Kernel/(6945:6951): ## Finaliza el proceso <0>
+[INFO] 00:24:57:671 Kernel/(7381:7381): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:24:57:672 Kernel/(7381:7381): Conexión exitosa
+[INFO] 00:24:57:672 Kernel/(7381:7381): Conexión exitosa
+[INFO] 00:24:57:687 Kernel/(7381:7381): Conexión exitosa
+[INFO] 00:24:57:687 Kernel/(7381:7381): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:24:57:688 Kernel/(7381:7381): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:24:57:691 Kernel/(7381:7381): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:24:57:691 Kernel/(7381:7389): entro a fin_hilo
+[INFO] 00:24:57:691 Kernel/(7381:7386): Solicitando memoria para el proceso: 0
+
+[INFO] 00:24:58:692 Kernel/(7381:7386): Memoria reservada correctamente
+[INFO] 00:24:58:692 Kernel/(7381:7386): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:24:58:692 Kernel/(7381:7386): Creando TCB de prioridad: 0
+
+[ERROR] 00:24:58:692 Kernel/(7381:7386): PID del HILO creado: 0
+[INFO] 00:24:58:693 Kernel/(7381:7388): Se creo la cola multinivel de prioridad: 0
+[INFO] 00:24:58:693 Kernel/(7381:7388): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 00:24:58:696 Kernel/(7381:7390): cola elegida:0
+[INFO] 00:24:58:697 Kernel/(7381:7390): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:24:58:707 Kernel/(7381:7390): CPU ejecutando el hilo: 0 del proceso: 0
+
+[ERROR] 00:25:03:735 Kernel/(7381:7390): Finalizando proceso, PROCESS_EXIT
+[INFO] 00:25:03:735 Kernel/(7381:7387): intentando finalizar proceso con pid: 0
+[INFO] 00:25:03:735 Kernel/(7381:7387): ## Finaliza el proceso <0>
+[INFO] 00:25:35:839 Kernel/(7807:7807): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:25:35:840 Kernel/(7807:7807): Conexión exitosa
+[INFO] 00:25:35:841 Kernel/(7807:7807): Conexión exitosa
+[INFO] 00:25:35:851 Kernel/(7807:7807): Conexión exitosa
+[INFO] 00:25:35:855 Kernel/(7807:7807): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:25:35:856 Kernel/(7807:7807): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:25:35:856 Kernel/(7807:7807): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:25:35:858 Kernel/(7807:7812): Solicitando memoria para el proceso: 0
+
+[INFO] 00:25:35:858 Kernel/(7807:7815): entro a fin_hilo
+[INFO] 00:25:36:861 Kernel/(7807:7812): Memoria reservada correctamente
+[INFO] 00:25:36:861 Kernel/(7807:7812): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:25:36:861 Kernel/(7807:7812): Creando TCB de prioridad: 0
+
+[ERROR] 00:25:36:861 Kernel/(7807:7812): PID del HILO creado: 0
+[INFO] 00:25:37:492 Kernel/(7807:7814): Se creo la cola multinivel de prioridad: 0
+[INFO] 00:25:37:492 Kernel/(7807:7814): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 00:25:37:496 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:37:496 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:37:507 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:39:514 Kernel/(7807:7817): finalizando por quantum
+[INFO] 00:25:39:514 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:39:514 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:39:514 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:39:514 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:41:521 Kernel/(7807:7818): finalizando por quantum
+[INFO] 00:25:41:521 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:41:521 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:41:521 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:41:522 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:43:526 Kernel/(7807:7819): finalizando por quantum
+[INFO] 00:25:43:526 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:43:526 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:43:526 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:43:527 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:45:535 Kernel/(7807:7820): finalizando por quantum
+[INFO] 00:25:45:536 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:45:536 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:45:536 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:45:537 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:47:542 Kernel/(7807:7821): finalizando por quantum
+[INFO] 00:25:47:542 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:47:542 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:47:542 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:47:542 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:49:547 Kernel/(7807:7822): finalizando por quantum
+[INFO] 00:25:49:547 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:49:547 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:49:547 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:49:547 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:51:555 Kernel/(7807:7823): finalizando por quantum
+[INFO] 00:25:51:556 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:51:556 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:51:556 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:51:556 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:53:566 Kernel/(7807:7824): finalizando por quantum
+[INFO] 00:25:53:566 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:53:566 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:53:566 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:53:566 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:25:55:572 Kernel/(7807:7825): finalizando por quantum
+[INFO] 00:25:55:572 Kernel/(7807:7816): Desalojo por quantum
+[INFO] 00:25:55:572 Kernel/(7807:7816): cola elegida:0
+[INFO] 00:25:55:572 Kernel/(7807:7816): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:25:55:573 Kernel/(7807:7816): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:34:421 Kernel/(8312:8312): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:27:34:425 Kernel/(8312:8312): Conexión exitosa
+[INFO] 00:27:34:425 Kernel/(8312:8312): Conexión exitosa
+[INFO] 00:27:34:431 Kernel/(8312:8312): Conexión exitosa
+[INFO] 00:27:34:433 Kernel/(8312:8312): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:27:34:433 Kernel/(8312:8312): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:27:34:433 Kernel/(8312:8312): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:27:34:436 Kernel/(8312:8320): entro a fin_hilo
+[INFO] 00:27:34:437 Kernel/(8312:8317): Solicitando memoria para el proceso: 0
+
+[INFO] 00:27:35:437 Kernel/(8312:8317): Memoria reservada correctamente
+[INFO] 00:27:35:438 Kernel/(8312:8317): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:27:35:438 Kernel/(8312:8317): Creando TCB de prioridad: 0
+
+[ERROR] 00:27:35:438 Kernel/(8312:8317): PID del HILO creado: 0
+[INFO] 00:27:36:977 Kernel/(8312:8319): Se creo la cola multinivel de prioridad: 0
+[INFO] 00:27:36:977 Kernel/(8312:8319): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 00:27:36:981 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:36:985 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:36:995 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:39:007 Kernel/(8312:8322): finalizando por quantum
+[INFO] 00:27:39:008 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:39:008 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:39:008 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:39:009 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:41:011 Kernel/(8312:8323): finalizando por quantum
+[INFO] 00:27:41:011 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:41:011 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:41:011 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:41:012 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:43:019 Kernel/(8312:8324): finalizando por quantum
+[INFO] 00:27:43:019 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:43:019 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:43:019 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:43:020 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:45:025 Kernel/(8312:8325): finalizando por quantum
+[INFO] 00:27:45:025 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:45:026 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:45:026 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:45:026 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:47:037 Kernel/(8312:8326): finalizando por quantum
+[INFO] 00:27:47:038 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:47:038 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:47:038 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:47:038 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:49:052 Kernel/(8312:8327): finalizando por quantum
+[INFO] 00:27:49:052 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:49:052 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:49:052 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:49:053 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:51:062 Kernel/(8312:8328): finalizando por quantum
+[INFO] 00:27:51:062 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:51:062 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:51:062 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:51:063 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:53:075 Kernel/(8312:8329): finalizando por quantum
+[INFO] 00:27:53:075 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:53:075 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:53:075 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:53:075 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:55:092 Kernel/(8312:8330): finalizando por quantum
+[INFO] 00:27:55:092 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:55:092 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:55:092 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:55:093 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:57:100 Kernel/(8312:8331): finalizando por quantum
+[INFO] 00:27:57:100 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:57:100 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:57:100 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:57:101 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:27:59:115 Kernel/(8312:8332): finalizando por quantum
+[INFO] 00:27:59:116 Kernel/(8312:8321): Desalojo por quantum
+[INFO] 00:27:59:116 Kernel/(8312:8321): cola elegida:0
+[INFO] 00:27:59:116 Kernel/(8312:8321): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:27:59:116 Kernel/(8312:8321): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:28:21:033 Kernel/(8721:8721): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:28:21:033 Kernel/(8721:8721): Conexión exitosa
+[INFO] 00:28:21:034 Kernel/(8721:8721): Conexión exitosa
+[INFO] 00:28:21:041 Kernel/(8721:8721): Conexión exitosa
+[INFO] 00:28:21:045 Kernel/(8721:8721): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:28:21:045 Kernel/(8721:8721): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:28:21:046 Kernel/(8721:8721): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:28:21:052 Kernel/(8721:8729): entro a fin_hilo
+[INFO] 00:28:21:053 Kernel/(8721:8726): Solicitando memoria para el proceso: 0
+
+[INFO] 00:28:22:053 Kernel/(8721:8726): Memoria reservada correctamente
+[INFO] 00:28:22:053 Kernel/(8721:8726): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:28:22:053 Kernel/(8721:8726): Creando TCB de prioridad: 0
+
+[ERROR] 00:28:22:053 Kernel/(8721:8726): PID del HILO creado: 0
+[INFO] 00:28:24:364 Kernel/(8721:8728): Se creo la cola multinivel de prioridad: 0
+[INFO] 00:28:24:364 Kernel/(8721:8728): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 00:28:24:365 Kernel/(8721:8730): cola elegida:0
+[INFO] 00:28:24:369 Kernel/(8721:8730): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:28:24:372 Kernel/(8721:8730): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:28:24:372 Kernel/(8721:8730): Creando TCB de prioridad: 0
+
+[ERROR] 00:28:24:372 Kernel/(8721:8730): PID del HILO creado: 0
+[INFO] 00:28:26:377 Kernel/(8721:8731): finalizando por quantum
+[INFO] 00:28:27:373 Kernel/(8721:8728): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 00:28:27:373 Kernel/(8721:8730): Desalojo por quantum
+[INFO] 00:28:27:374 Kernel/(8721:8730): cola elegida:0
+[INFO] 00:28:27:374 Kernel/(8721:8730): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[INFO] 00:28:27:633 Kernel/(8721:8730): cola elegida:0
+[INFO] 00:28:27:634 Kernel/(8721:8730): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[INFO] 00:31:44:857 Kernel/(9156:9156): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 00:31:44:857 Kernel/(9156:9156): Conexión exitosa
+[INFO] 00:31:44:858 Kernel/(9156:9156): Conexión exitosa
+[INFO] 00:31:44:858 Kernel/(9156:9156): Conexión exitosa
+[INFO] 00:31:44:867 Kernel/(9156:9156): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 00:31:44:868 Kernel/(9156:9156): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 00:31:44:868 Kernel/(9156:9156): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 00:31:44:872 Kernel/(9156:9161): Solicitando memoria para el proceso: 0
+
+[INFO] 00:31:44:872 Kernel/(9156:9164): entro a fin_hilo
+[INFO] 00:31:45:873 Kernel/(9156:9161): Memoria reservada correctamente
+[INFO] 00:31:45:873 Kernel/(9156:9161): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 00:31:45:873 Kernel/(9156:9161): Creando TCB de prioridad: 0
+
+[ERROR] 00:31:45:873 Kernel/(9156:9161): PID del HILO creado: 0
+[INFO] 00:31:46:752 Kernel/(9156:9163): Se creo la cola multinivel de prioridad: 0
+[INFO] 00:31:46:753 Kernel/(9156:9163): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 00:31:46:753 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:46:753 Kernel/(9156:9165): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:46:756 Kernel/(9156:9165): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:31:46:756 Kernel/(9156:9165): Creando TCB de prioridad: 0
+
+[ERROR] 00:31:46:756 Kernel/(9156:9165): PID del HILO creado: 0
+[INFO] 00:31:47:848 Kernel/(9156:9163): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 00:31:48:764 Kernel/(9156:9166): finalizando por quantum
+[INFO] 00:31:48:764 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:48:764 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:48:764 Kernel/(9156:9165): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:48:765 Kernel/(9156:9165): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 00:31:50:776 Kernel/(9156:9167): finalizando por quantum
+[INFO] 00:31:50:776 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:50:776 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:50:776 Kernel/(9156:9165): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:50:779 Kernel/(9156:9165): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:31:52:785 Kernel/(9156:9168): finalizando por quantum
+[INFO] 00:31:52:786 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:52:786 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:52:786 Kernel/(9156:9165): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:52:787 Kernel/(9156:9165): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 00:31:54:794 Kernel/(9156:9170): finalizando por quantum
+[INFO] 00:31:54:795 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:54:795 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:54:795 Kernel/(9156:9165): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:54:795 Kernel/(9156:9165): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:31:56:804 Kernel/(9156:9171): finalizando por quantum
+[INFO] 00:31:56:804 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:56:804 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:56:804 Kernel/(9156:9165): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:56:805 Kernel/(9156:9165): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 00:31:58:815 Kernel/(9156:9172): finalizando por quantum
+[INFO] 00:31:58:815 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:31:58:815 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:31:58:815 Kernel/(9156:9165): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:31:58:815 Kernel/(9156:9165): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 00:32:00:828 Kernel/(9156:9173): finalizando por quantum
+[INFO] 00:32:00:828 Kernel/(9156:9165): Desalojo por quantum
+[INFO] 00:32:00:828 Kernel/(9156:9165): cola elegida:0
+[INFO] 00:32:00:828 Kernel/(9156:9165): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 00:32:00:829 Kernel/(9156:9165): CPU ejecutando el hilo: 1 del proceso: 0
+
+[INFO] 01:20:25:429 Kernel/(14300:14300): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:20:25:429 Kernel/(14300:14300): Conexión exitosa
+[INFO] 01:20:25:429 Kernel/(14300:14300): Conexión exitosa
+[INFO] 01:20:25:433 Kernel/(14300:14300): Conexión exitosa
+[INFO] 01:20:25:437 Kernel/(14300:14300): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:20:25:437 Kernel/(14300:14300): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:20:25:438 Kernel/(14300:14300): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:20:25:438 Kernel/(14300:14308): entro a fin_hilo
+[INFO] 01:20:25:439 Kernel/(14300:14305): Solicitando memoria para el proceso: 0
+
+[INFO] 01:20:26:439 Kernel/(14300:14305): Memoria reservada correctamente
+[INFO] 01:20:26:439 Kernel/(14300:14305): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:20:26:439 Kernel/(14300:14305): Creando TCB de prioridad: 0
+
+[ERROR] 01:20:26:439 Kernel/(14300:14305): PID del HILO creado: 0
+[INFO] 01:20:26:440 Kernel/(14300:14307): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:20:26:440 Kernel/(14300:14307): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:20:26:445 Kernel/(14300:14309): cola elegida:0
+[INFO] 01:20:26:445 Kernel/(14300:14309): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:20:26:447 Kernel/(14300:14309): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:20:59:985 Kernel/(15002:15002): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:20:59:985 Kernel/(15002:15002): Conexión exitosa
+[INFO] 01:21:00:004 Kernel/(15002:15002): Conexión exitosa
+[INFO] 01:21:00:010 Kernel/(15002:15002): Conexión exitosa
+[INFO] 01:21:00:031 Kernel/(15002:15002): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:21:00:037 Kernel/(15002:15002): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:21:00:051 Kernel/(15002:15002): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:21:00:062 Kernel/(15002:15007): Solicitando memoria para el proceso: 0
+
+[INFO] 01:21:00:062 Kernel/(15002:15010): entro a fin_hilo
+[INFO] 01:21:01:065 Kernel/(15002:15007): Memoria reservada correctamente
+[INFO] 01:21:01:066 Kernel/(15002:15007): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:21:01:066 Kernel/(15002:15007): Creando TCB de prioridad: 0
+
+[ERROR] 01:21:01:066 Kernel/(15002:15007): PID del HILO creado: 0
+[INFO] 01:21:01:066 Kernel/(15002:15009): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:21:01:066 Kernel/(15002:15009): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:21:01:068 Kernel/(15002:15011): cola elegida:0
+[INFO] 01:21:01:069 Kernel/(15002:15011): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:21:01:077 Kernel/(15002:15011): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:22:18:754 Kernel/(15580:15580): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:22:18:755 Kernel/(15580:15580): Conexión exitosa
+[INFO] 01:22:18:755 Kernel/(15580:15580): Conexión exitosa
+[INFO] 01:22:18:760 Kernel/(15580:15580): Conexión exitosa
+[INFO] 01:22:18:761 Kernel/(15580:15580): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:22:18:761 Kernel/(15580:15580): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:22:18:762 Kernel/(15580:15580): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:22:18:764 Kernel/(15580:15588): entro a fin_hilo
+[INFO] 01:22:18:764 Kernel/(15580:15585): Solicitando memoria para el proceso: 0
+
+[INFO] 01:22:19:765 Kernel/(15580:15585): Memoria reservada correctamente
+[INFO] 01:22:19:765 Kernel/(15580:15585): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:22:19:765 Kernel/(15580:15585): Creando TCB de prioridad: 0
+
+[ERROR] 01:22:19:765 Kernel/(15580:15585): PID del HILO creado: 0
+[INFO] 01:22:19:765 Kernel/(15580:15587): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:22:19:765 Kernel/(15580:15587): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:22:19:768 Kernel/(15580:15589): cola elegida:0
+[INFO] 01:22:19:768 Kernel/(15580:15589): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:22:19:771 Kernel/(15580:15589): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:22:41:638 Kernel/(15990:15990): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:22:41:638 Kernel/(15990:15990): Conexión exitosa
+[INFO] 01:22:41:639 Kernel/(15990:15990): Conexión exitosa
+[INFO] 01:22:41:644 Kernel/(15990:15990): Conexión exitosa
+[INFO] 01:22:41:645 Kernel/(15990:15990): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:22:41:645 Kernel/(15990:15990): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:22:41:646 Kernel/(15990:15990): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:22:41:646 Kernel/(15990:15998): entro a fin_hilo
+[INFO] 01:22:41:648 Kernel/(15990:15995): Solicitando memoria para el proceso: 0
+
+[INFO] 01:22:42:649 Kernel/(15990:15995): Memoria reservada correctamente
+[INFO] 01:22:42:650 Kernel/(15990:15995): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:22:42:650 Kernel/(15990:15995): Creando TCB de prioridad: 0
+
+[ERROR] 01:22:42:650 Kernel/(15990:15995): PID del HILO creado: 0
+[INFO] 01:22:42:650 Kernel/(15990:15997): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:22:42:650 Kernel/(15990:15997): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:22:42:652 Kernel/(15990:15999): cola elegida:0
+[INFO] 01:22:42:652 Kernel/(15990:15999): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:22:42:658 Kernel/(15990:15999): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:23:11:011 Kernel/(16599:16599): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:23:11:013 Kernel/(16599:16599): Conexión exitosa
+[INFO] 01:23:11:014 Kernel/(16599:16599): Conexión exitosa
+[INFO] 01:23:11:014 Kernel/(16599:16599): Conexión exitosa
+[INFO] 01:23:11:027 Kernel/(16599:16599): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:23:11:028 Kernel/(16599:16599): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:23:11:029 Kernel/(16599:16599): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:23:11:056 Kernel/(16599:16609): Solicitando memoria para el proceso: 0
+
+[INFO] 01:23:11:061 Kernel/(16599:16613): entro a fin_hilo
+[INFO] 01:23:12:059 Kernel/(16599:16609): Memoria reservada correctamente
+[INFO] 01:23:12:059 Kernel/(16599:16609): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:23:12:059 Kernel/(16599:16609): Creando TCB de prioridad: 0
+
+[ERROR] 01:23:12:059 Kernel/(16599:16609): PID del HILO creado: 0
+[INFO] 01:23:12:060 Kernel/(16599:16611): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:23:12:060 Kernel/(16599:16611): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:23:12:075 Kernel/(16599:16620): cola elegida:0
+[INFO] 01:23:12:076 Kernel/(16599:16620): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:23:12:086 Kernel/(16599:16620): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:25:39:575 Kernel/(17319:17319): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:25:39:576 Kernel/(17319:17319): Conexión exitosa
+[INFO] 01:25:39:577 Kernel/(17319:17319): Conexión exitosa
+[INFO] 01:25:39:581 Kernel/(17319:17319): Conexión exitosa
+[INFO] 01:25:39:595 Kernel/(17319:17319): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:25:39:595 Kernel/(17319:17319): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:25:39:597 Kernel/(17319:17319): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:25:39:599 Kernel/(17319:17324): Solicitando memoria para el proceso: 0
+
+[INFO] 01:25:39:599 Kernel/(17319:17327): entro a fin_hilo
+[INFO] 01:25:40:600 Kernel/(17319:17324): Memoria reservada correctamente
+[INFO] 01:25:40:600 Kernel/(17319:17324): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:25:40:600 Kernel/(17319:17324): Creando TCB de prioridad: 0
+
+[ERROR] 01:25:40:600 Kernel/(17319:17324): PID del HILO creado: 0
+[INFO] 01:25:40:601 Kernel/(17319:17326): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:25:40:601 Kernel/(17319:17326): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:25:40:604 Kernel/(17319:17328): cola elegida:0
+[INFO] 01:25:40:605 Kernel/(17319:17328): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:25:40:607 Kernel/(17319:17328): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:25:40:607 Kernel/(17319:17328): ## (0:0) - Solicito syscall: SYSCALL_DUMP_MEMORY
+[INFO] 01:25:40:607 Kernel/(17319:17328): DUMP MEMORY de <PID:0>,<TID:0>
+[INFO] 01:25:42:611 Kernel/(17319:17329): finalizando por quantum
+[INFO] 01:25:45:610 Kernel/(17319:17328): ## Finaliza el proceso 0
+[INFO] 01:25:45:610 Kernel/(17319:17325): intentando finalizar proceso con pid: 0
+[INFO] 01:25:45:611 Kernel/(17319:17325): ## Finaliza el proceso <0>
+[INFO] 01:26:38:583 Kernel/(17797:17797): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 01:26:38:584 Kernel/(17797:17797): Conexión exitosa
+[INFO] 01:26:38:584 Kernel/(17797:17797): Conexión exitosa
+[INFO] 01:26:38:589 Kernel/(17797:17797): Conexión exitosa
+[INFO] 01:26:38:592 Kernel/(17797:17797): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 01:26:38:593 Kernel/(17797:17797): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 01:26:38:594 Kernel/(17797:17797): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 01:26:38:594 Kernel/(17797:17805): entro a fin_hilo
+[INFO] 01:26:38:595 Kernel/(17797:17802): Solicitando memoria para el proceso: 0
+
+[INFO] 01:26:39:596 Kernel/(17797:17802): Memoria reservada correctamente
+[INFO] 01:26:39:596 Kernel/(17797:17802): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 01:26:39:596 Kernel/(17797:17802): Creando TCB de prioridad: 0
+
+[ERROR] 01:26:39:596 Kernel/(17797:17802): PID del HILO creado: 0
+[INFO] 01:26:39:596 Kernel/(17797:17804): Se creo la cola multinivel de prioridad: 0
+[INFO] 01:26:39:596 Kernel/(17797:17804): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 01:26:39:600 Kernel/(17797:17806): cola elegida:0
+[INFO] 01:26:39:600 Kernel/(17797:17806): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 01:26:39:603 Kernel/(17797:17806): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 01:26:39:603 Kernel/(17797:17806): ## (0:0) - Solicito syscall: SYSCALL_DUMP_MEMORY
+[INFO] 01:26:39:604 Kernel/(17797:17806): DUMP MEMORY de <PID:0>,<TID:0>
+[INFO] 01:26:41:617 Kernel/(17797:17807): finalizando por quantum
+[INFO] 01:26:44:612 Kernel/(17797:17806): ## Finaliza el proceso 0
+[INFO] 01:26:44:612 Kernel/(17797:17803): intentando finalizar proceso con pid: 0
+[INFO] 01:26:44:613 Kernel/(17797:17803): ## Finaliza el proceso <0>
+[INFO] 02:13:16:006 Kernel/(22168:22168): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 02:13:16:006 Kernel/(22168:22168): Conexión exitosa
+[INFO] 02:13:16:007 Kernel/(22168:22168): Conexión exitosa
+[INFO] 02:13:16:013 Kernel/(22168:22168): Conexión exitosa
+[INFO] 02:13:16:021 Kernel/(22168:22168): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 02:13:16:021 Kernel/(22168:22168): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 02:13:16:022 Kernel/(22168:22168): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 02:13:16:024 Kernel/(22168:22173): Solicitando memoria para el proceso: 0
+
+[INFO] 02:13:16:024 Kernel/(22168:22176): entro a fin_hilo
+[INFO] 02:13:16:027 Kernel/(22168:22173): Memoria reservada correctamente
+[INFO] 02:13:16:027 Kernel/(22168:22173): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 02:13:16:027 Kernel/(22168:22173): Creando TCB de prioridad: 0
+
+[ERROR] 02:13:16:028 Kernel/(22168:22173): PID del HILO creado: 0
+[INFO] 02:13:16:031 Kernel/(22168:22175): Se creo la cola multinivel de prioridad: 0
+[INFO] 02:13:16:031 Kernel/(22168:22175): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 02:13:16:031 Kernel/(22168:22177): cola elegida:0
+[INFO] 02:13:16:031 Kernel/(22168:22177): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[INFO] 02:13:39:331 Kernel/(22626:22626): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 02:13:39:331 Kernel/(22626:22626): Conexión exitosa
+[INFO] 02:13:39:332 Kernel/(22626:22626): Conexión exitosa
+[INFO] 02:13:39:340 Kernel/(22626:22626): Conexión exitosa
+[INFO] 02:13:39:349 Kernel/(22626:22626): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 02:13:39:349 Kernel/(22626:22626): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 02:13:39:352 Kernel/(22626:22626): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 02:13:39:353 Kernel/(22626:22631): Solicitando memoria para el proceso: 0
+
+[INFO] 02:13:39:353 Kernel/(22626:22634): entro a fin_hilo
+[INFO] 02:13:39:354 Kernel/(22626:22631): Memoria reservada correctamente
+[INFO] 02:13:39:354 Kernel/(22626:22631): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 02:13:39:354 Kernel/(22626:22631): Creando TCB de prioridad: 0
+
+[ERROR] 02:13:39:354 Kernel/(22626:22631): PID del HILO creado: 0
+[INFO] 02:13:39:354 Kernel/(22626:22633): Se creo la cola multinivel de prioridad: 0
+[INFO] 02:13:39:355 Kernel/(22626:22633): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 02:13:39:356 Kernel/(22626:22635): cola elegida:0
+[INFO] 02:13:39:356 Kernel/(22626:22635): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[INFO] 02:14:18:826 Kernel/(23307:23307): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 02:14:18:827 Kernel/(23307:23307): Conexión exitosa
+[INFO] 02:14:18:828 Kernel/(23307:23307): Conexión exitosa
+[INFO] 02:14:18:837 Kernel/(23307:23307): Conexión exitosa
+[INFO] 02:14:18:860 Kernel/(23307:23307): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 02:14:18:862 Kernel/(23307:23307): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 02:14:18:890 Kernel/(23307:23307): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 02:14:18:892 Kernel/(23307:23315): entro a fin_hilo
+[INFO] 02:14:18:892 Kernel/(23307:23312): Solicitando memoria para el proceso: 0
+
+[INFO] 02:14:18:893 Kernel/(23307:23312): Memoria reservada correctamente
+[INFO] 02:14:18:893 Kernel/(23307:23312): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 02:14:18:893 Kernel/(23307:23312): Creando TCB de prioridad: 0
+
+[ERROR] 02:14:18:893 Kernel/(23307:23312): PID del HILO creado: 0
+[INFO] 02:14:18:894 Kernel/(23307:23314): Se creo la cola multinivel de prioridad: 0
+[INFO] 02:14:18:894 Kernel/(23307:23314): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 02:14:18:896 Kernel/(23307:23316): cola elegida:0
+[INFO] 02:14:18:896 Kernel/(23307:23316): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[INFO] 02:15:40:837 Kernel/(24165:24165): ruta de archivo : archivo1 ; tamanio_proceso : 12
+[INFO] 02:15:40:838 Kernel/(24165:24165): Conexión exitosa
+[INFO] 02:15:40:841 Kernel/(24165:24165): Conexión exitosa
+[INFO] 02:15:40:848 Kernel/(24165:24165): Conexión exitosa
+[INFO] 02:15:40:849 Kernel/(24165:24165): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 02:15:40:850 Kernel/(24165:24165): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 02:15:40:850 Kernel/(24165:24165): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 02:15:40:850 Kernel/(24165:24173): entro a fin_hilo
+[INFO] 02:15:40:850 Kernel/(24165:24170): Solicitando memoria para el proceso: 0
+
+[INFO] 02:15:40:851 Kernel/(24165:24170): Memoria reservada correctamente
+[INFO] 02:15:40:851 Kernel/(24165:24170): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 02:15:40:851 Kernel/(24165:24170): Creando TCB de prioridad: 0
+
+[ERROR] 02:15:40:851 Kernel/(24165:24170): PID del HILO creado: 0
+[INFO] 02:15:40:857 Kernel/(24165:24172): Se creo la cola multinivel de prioridad: 0
+[INFO] 02:15:40:857 Kernel/(24165:24172): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 02:15:40:857 Kernel/(24165:24174): cola elegida:0
+[INFO] 02:15:40:857 Kernel/(24165:24174): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 02:15:40:860 Kernel/(24165:24174): CPU ejecutando el hilo: 0 del proceso: 0
+
+[INFO] 02:15:40:901 Kernel/(24165:24174): ## (0:0) - Solicito syscall: SYSCALL_DUMP_MEMORY
+[INFO] 02:15:40:901 Kernel/(24165:24174): DUMP MEMORY de <PID:0>,<TID:0>
+[INFO] 02:15:42:861 Kernel/(24165:24175): finalizando por quantum
+[INFO] 02:15:46:167 Kernel/(24165:24174): ## Finaliza el proceso 0
+[INFO] 02:15:46:167 Kernel/(24165:24171): intentando finalizar proceso con pid: 0
+[INFO] 02:15:46:168 Kernel/(24165:24171): ## Finaliza el proceso <0>

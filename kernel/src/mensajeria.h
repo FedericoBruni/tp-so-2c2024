@@ -13,4 +13,5 @@ int enviar_exec_a_cpu(int tid, int pid);
 void enviar_fin_quantum(int tid, int pid);
 int esperar_respuesta();
 bool debe_finalizar_proceso();
+void enviar_dump_memory(int socket_memoria, int tid, int pid);
 #endif
