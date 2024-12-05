@@ -83,8 +83,9 @@ void escuchar_mensajes_kernel(void)
             t_buffer *buffer_dump = recibir_buffer_completo(cliente_fd_kernel);
             int tid_dump = extraer_int_del_buffer(buffer_dump);
             int pid_dump = extraer_int_del_buffer(buffer_dump);
-            dump_memory(tid_dump,pid_dump);
             int res_dump = MEM_DUMPEADA;
+            if (!dump_memory(tid_dump,pid_dump)) res_dump = MEM_DUMP_ERROR;
+            
 	        send(cliente_fd_kernel, &res_dump, sizeof(int), 0);
             break;
         case -1:

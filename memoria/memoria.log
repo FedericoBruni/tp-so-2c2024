@@ -9328,3 +9328,97 @@
 [ERROR] 02:16:04:668 Memoria/(23721:24037): Cpu desconectado
 
 [INFO] 02:16:04:669 Memoria/(23721:23721): Finalizando ejecución de MEMORIA
+[TRACE] 14:09:49:648 Memoria/(5225:5225): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 14:09:49:648 Memoria/(5225:5225): Conexión exitosa
+[INFO] 14:09:49:651 Memoria/(5225:5225): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 14:09:50:535 Memoria/(5225:5225): ## Kernel Conectado - FD del socket: 6
+[INFO] 14:09:50:535 Memoria/(5225:5474): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 14:09:50:702 Memoria/(5225:5225): ## Kernel Conectado - FD del socket: 7
+[INFO] 14:09:50:705 Memoria/(5225:5490): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 14:09:50:708 Memoria/(5225:5490): ## Proceso Creado - PID: 0 - Tamaño: 12
+[INFO] 14:09:50:709 Memoria/(5225:5490): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 14:09:50:711 Memoria/(5225:5474): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 14:09:50:712 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE archivo2 0
+
+[INFO] 14:09:50:713 Memoria/(5225:5474): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 14:09:50:713 Memoria/(5225:5474): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 14:09:50:764 Memoria/(5225:5490): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 14:09:50:765 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 14:09:50:767 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: IO 1
+
+[INFO] 14:09:50:768 Memoria/(5225:5474): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 14:09:50:768 Memoria/(5225:5474): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 14:09:50:770 Memoria/(5225:5474): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 14:09:50:770 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 10
+
+[INFO] 14:09:50:771 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUM AX BX
+
+[INFO] 14:09:50:772 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 1
+
+[INFO] 14:09:50:772 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 2
+
+[INFO] 14:09:50:773 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 3
+
+[INFO] 14:09:50:773 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 4
+
+[INFO] 14:09:50:774 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 5
+
+[INFO] 14:09:50:774 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 6
+
+[INFO] 14:09:50:775 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 7
+[INFO] 14:09:50:776 Memoria/(5225:5474): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: (null)
+[INFO] 14:09:55:820 Memoria/(5225:5490): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 14:09:55:820 Memoria/(5225:5490): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[ERROR] 14:09:55:939 Memoria/(5225:5490): Kernel desconectado
+
+[ERROR] 14:09:55:939 Memoria/(5225:5474): Cpu desconectado
+
+[INFO] 14:09:55:939 Memoria/(5225:5225): Finalizando ejecución de MEMORIA
+[TRACE] 14:10:08:776 Memoria/(5702:5702): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 14:10:08:776 Memoria/(5702:5702): Conexión exitosa
+[INFO] 14:10:08:784 Memoria/(5702:5702): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 14:10:10:038 Memoria/(5702:5702): ## Kernel Conectado - FD del socket: 6
+[INFO] 14:10:10:040 Memoria/(5702:5799): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 14:10:24:629 Memoria/(5702:5702): ## Kernel Conectado - FD del socket: 7
+[INFO] 14:10:24:630 Memoria/(5702:6122): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 14:10:24:639 Memoria/(5702:6122): ## Proceso Creado - PID: 0 - Tamaño: 12
+[INFO] 14:10:24:639 Memoria/(5702:6122): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 14:10:24:658 Memoria/(5702:5799): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 14:10:24:658 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE archivo2 0
+
+[INFO] 14:10:24:658 Memoria/(5702:5799): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 14:10:24:659 Memoria/(5702:5799): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 14:10:24:702 Memoria/(5702:6122): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 14:10:24:703 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 14:10:24:704 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: IO 1
+
+[INFO] 14:10:24:704 Memoria/(5702:5799): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 14:10:24:704 Memoria/(5702:5799): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 14:10:24:721 Memoria/(5702:5799): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 14:10:24:721 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 10
+
+[INFO] 14:10:24:722 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUM AX BX
+
+[INFO] 14:10:24:722 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 1
+
+[INFO] 14:10:24:722 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 2
+
+[INFO] 14:10:24:722 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 3
+
+[INFO] 14:10:24:723 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 4
+
+[INFO] 14:10:24:723 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 5
+
+[INFO] 14:10:24:723 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 6
+
+[INFO] 14:10:24:724 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET DX 7
+[INFO] 14:10:24:724 Memoria/(5702:5799): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: (null)
+[INFO] 14:10:29:767 Memoria/(5702:6122): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 14:10:29:767 Memoria/(5702:6122): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[ERROR] 14:11:18:174 Memoria/(5702:6122): Kernel desconectado
+
+[ERROR] 14:11:18:175 Memoria/(5702:5799): Cpu desconectado
+
+[INFO] 14:11:18:175 Memoria/(5702:5702): Finalizando ejecución de MEMORIA

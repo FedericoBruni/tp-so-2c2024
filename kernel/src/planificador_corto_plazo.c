@@ -93,7 +93,7 @@ void multinivel()
         sem_wait(&sem_hay_ready);
         printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
-        log_info(logger, "cola elegida:%i", cola->prioridad);
+        log_info(logger, "cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
         TCB *tcb = desencolar_multinivel(cola);
         if (tcb != NULL)
         {

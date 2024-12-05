@@ -715,7 +715,7 @@ void enviar_lectura(int dato) {
 
 
 
-void dump_memory(int tid,  int pid){
+int dump_memory(int tid,  int pid){
     CONTEXTO_CPU *contexto_a_dumpear = buscar_contextos(tid,pid);
     char *contenido = parse_contexto_cpu(contexto_a_dumpear);
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
@@ -731,13 +731,17 @@ void dump_memory(int tid,  int pid){
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, fd_filesystem);
     eliminar_paquete(paquete);
-    if (recibir_operacion(fd_filesystem) == MEM_DUMPEADA)
+    int cod_op = recibir_operacion(fd_filesystem);
+    if (cod_op == MEM_DUMPEADA)
     {
         return 1;
     }
-    else
+    else if (cod_op == MEM_DUMP_ERROR)
     {
+        log_trace(logger, "MEM DUMP ERROR");
         return 0;
+    } else {
+        return -1;
     }
 }
 

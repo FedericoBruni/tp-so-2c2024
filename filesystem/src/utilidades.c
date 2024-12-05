@@ -201,14 +201,14 @@ char *obtenerTimeStamp() {
     return timestamp;
 }
 
-void crear_archivo(int pid, int tid, int tamanio, char *contenido){
+bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
     int tamanio_contenido = strlen(contenido);
     int bloques_necesarios = (tamanio_contenido + block_size-1)/block_size + 1;
     log_trace(logger,"bloques necesarios: %d",bloques_necesarios);
 
     if(cant_bloques_libres() < bloques_necesarios){
         log_error(logger,"No hay espacio suficiente en el filesystem");
-        return;
+        return false;
     }
 
 
@@ -268,5 +268,6 @@ void crear_archivo(int pid, int tid, int tamanio, char *contenido){
     fclose(archivoBloqueDeDatos);
     free(bloques_reservados);
     log_trace(logger,"## Fin de solicitud - Archivo: %s",nombre_archivo);
+    return true;
 }
 

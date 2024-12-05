@@ -199,9 +199,10 @@ void MUTEX_UNLOCK(char *recurso){
     sem_post(&sem_syscall_fin);
 }
 
-void DUMP_MEMORY(int pid, int tid){
-    enviar_dump_memory(fd_memoria,tid,pid);
+int DUMP_MEMORY(int pid, int tid){
+    int rta = enviar_dump_memory(fd_memoria,tid,pid);
     sem_post(&sem_syscall_fin);
+    return rta;
     // implementar logica
 }
 

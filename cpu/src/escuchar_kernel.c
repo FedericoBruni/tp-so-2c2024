@@ -78,6 +78,9 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case MEM_DUMPEADA:
 			sem_post(&sem_dump_mem);
 			break;	
+		case MEM_DUMP_ERROR:
+			// en realidad nunca llega creo, pq le llega FIN_PROCESO
+			break;
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");
 			cliente_fd_dispatch = -1;

@@ -5336,3 +5336,19 @@
 [TRACE] 23:15:40:917 FileSystem/(23609:24176): ## Bloque asignado: 3 - Archivo: 0-0-23:15:40:916 - Bloques Libres: 1024
 [TRACE] 23:15:40:918 FileSystem/(23609:24176): Cant de bloques libres: 1024
 [TRACE] 23:15:40:918 FileSystem/(23609:24176): ## Bloque asignado: 4 - Archivo: 0-0-23:15:40:916 - Bloques Libres: 1024
+[TRACE] 14:09:49:101 FileSystem/(5107:5107): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 14:09:49:101 FileSystem/(5107:5107): Por aceptar serv
+[TRACE] 14:09:49:648 FileSystem/(5107:5107): Ya acepte serv
+[INFO] 14:09:49:648 FileSystem/(5107:5107): Se conecto el cliente: Memoria
+
+[TRACE] 14:09:49:648 FileSystem/(5107:5107): Por aceptar serv
+[INFO] 14:09:49:649 FileSystem/(5107:5226): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 14:09:49:649 FileSystem/(5107:5226): TEST HANDSHAKE
+[TRACE] 14:10:07:987 FileSystem/(5607:5607): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 14:10:07:987 FileSystem/(5607:5607): Por aceptar serv
+[TRACE] 14:10:08:776 FileSystem/(5607:5607): Ya acepte serv
+[INFO] 14:10:08:776 FileSystem/(5607:5607): Se conecto el cliente: Memoria
+
+[TRACE] 14:10:08:777 FileSystem/(5607:5607): Por aceptar serv
+[INFO] 14:10:08:781 FileSystem/(5607:5703): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 14:10:08:784 FileSystem/(5607:5703): TEST HANDSHAKE

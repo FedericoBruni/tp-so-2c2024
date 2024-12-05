@@ -12,7 +12,7 @@ void THREAD_CANCEL(int tid, int pid);
 void MUTEX_CREATE(char* recurso);
 void MUTEX_LOCK(char* recurso);
 void MUTEX_UNLOCK(char* recurso);
-void DUMP_MEMORY(int pid, int tid);
+int DUMP_MEMORY(int pid, int tid);
 void IO(int tiempo);
 void ejecucion_io(int tiempo);
 

@@ -13,6 +13,9 @@ extern t_queue *cola_ready;
 extern t_queue *cola_blocked;
 extern pthread_mutex_t mutex_ready;
 extern pthread_mutex_t mutex_blocked;
+extern sem_t sem_finalizar_proceso;
+extern t_queue *cola_fin_pcb;
+extern pthread_mutex_t mutex_exit;
 
 int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
@@ -224,9 +227,14 @@ int esperar_respuesta(){
 
         case SYSCALL_DUMP_MEMORY:
             log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
-            deserializar_dump_memory();
+            int rta = deserializar_dump_memory();
             sem_wait(&sem_syscall_fin);
             int res_dump = MEM_DUMPEADA;
+            if (!rta) {
+                res_dump = FIN_PROCESO;
+                PROCESS_EXIT(tcb_en_ejecucion);
+                sem_wait(&sem_syscall_fin);
+            }
             send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
             break;
 
@@ -304,12 +312,12 @@ void deserializar_mutex_unlock(){
 //     //PROCESS_EXIT(pid);
 // }
 
-void deserializar_dump_memory() {
+int deserializar_dump_memory() {
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
     log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
-    DUMP_MEMORY(pid, tid);
+    return DUMP_MEMORY(pid, tid);
 }
 
 void deserializar_io() {
@@ -319,19 +327,23 @@ void deserializar_io() {
     
 }
 
-void enviar_dump_memory(int socket_memoria, int tid, int pid){
+int enviar_dump_memory(int socket_memoria, int tid, int pid){
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, socket_memoria);
     eliminar_paquete(paquete);
-    if (recibir_operacion(socket_memoria) == MEM_DUMPEADA)
+    int cod_op = recibir_operacion(socket_memoria);
+    if (cod_op == MEM_DUMPEADA)
     {
         return 1;
     }
-    else
+    else if (cod_op == MEM_DUMP_ERROR)
     {
+        log_trace(logger, "MEM DUMP ERROR");
         return 0;
+    } else {
+        return -1;
     }
 }

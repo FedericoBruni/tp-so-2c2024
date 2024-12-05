@@ -78,7 +78,8 @@ typedef enum
 	HILO_CANCEL,
 	IO_SOLICITADA,
 	MEM_DUMPEADA,
-	SOL_DUMP
+	SOL_DUMP,
+	MEM_DUMP_ERROR
 
 } op_code;
 
