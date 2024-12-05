@@ -690,7 +690,9 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
     int valor = extraer_int_del_buffer(buffer);
     int direccion = extraer_int_del_buffer(buffer);
-    log_info(logger,"## Escritura - (PID:TID) - (d:d) - Dir.Física: %d - Tamaño: %d",direccion,sizeof(valor));
+    int pid = extraer_int_del_buffer(buffer);
+    int tid = extraer_int_del_buffer(buffer);
+    log_info(logger,"## Escritura - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(valor));
     escribir_memoria(direccion, valor);
     //WRITE_MEM_RTA
     int rta = WRITE_MEM_RTA;
@@ -700,8 +702,10 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
 void deserializar_read_mem(cliente_fd_dispatch) {
     t_buffer* buffer = recibir_buffer_completo(cliente_fd_dispatch);
     int direccion = extraer_int_del_buffer(buffer);
+    int pid = extraer_int_del_buffer(buffer);
+    int tid = extraer_int_del_buffer(buffer);
     int dato = leer_memoria(direccion);
-    log_info(logger,"## Lecutra - (PID:TID) - (d:d) - Dir.Física: %d - Tamaño: %d",direccion,sizeof(dato));
+    log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
     enviar_lectura(dato);
 }
 

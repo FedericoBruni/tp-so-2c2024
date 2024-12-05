@@ -142,6 +142,8 @@ void enviar_write_mem(int valor, int direccion_fisica)
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, valor);
     cargar_int_al_buffer(buffer, direccion_fisica);
+    cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->pid);
+    cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->tid);
     t_paquete *paquete = crear_paquete(WRITE_MEM, buffer);
     pthread_mutex_lock(&mutex_conexion_memoria);
     enviar_paquete(paquete, fd_memoria);
@@ -153,6 +155,8 @@ void enviar_read_mem(int direccion_fisica)
 {
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, direccion_fisica);
+    cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->pid);
+    cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->tid);
     t_paquete *paquete = crear_paquete(READ_MEM, buffer);
     pthread_mutex_lock(&mutex_conexion_memoria);
     enviar_paquete(paquete, fd_memoria);
