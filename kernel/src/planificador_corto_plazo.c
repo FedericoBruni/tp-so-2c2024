@@ -104,19 +104,6 @@ void multinivel()
         log_info(logger, "cola elegidaasddasadsdsa:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
         TCB *tcb = desencolar_multinivel(cola);
         log_warning(logger,"TCB elegido tdi:%d pid %d",tcb->tid,tcb->pcb_pid);
-        if(tcb_anterior != NULL){
-            log_error(logger,"TCB anterior existe");
-            if(tcb->pcb_pid==tcb_anterior->pcb_pid && tcb->tid==tcb_anterior->tid){
-                TCB *tcb_aux = malloc(sizeof(TCB));
-                memcpy(tcb_aux,tcb,sizeof(TCB));
-                cola = obtener_cola_con_mayor_prioridad();
-                if (co)
-                log_info(logger, "cola elegida:%i", cola->prioridad);
-                tcb=desencolar_multinivel(cola);
-                encolar_multinivel(cola,tcb_aux);
-                sem_post(&sem_hay_ready);
-            }
-        }
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
