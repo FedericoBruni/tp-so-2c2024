@@ -15,6 +15,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 typedef enum
 {
@@ -79,7 +80,8 @@ typedef enum
 	IO_SOLICITADA,
 	MEM_DUMPEADA,
 	SOL_DUMP,
-	MEM_DUMP_ERROR
+	MEM_DUMP_ERROR,
+	OK
 
 } op_code;
 

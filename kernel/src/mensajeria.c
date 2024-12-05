@@ -14,6 +14,7 @@ extern t_queue *cola_blocked;
 extern pthread_mutex_t mutex_ready;
 extern pthread_mutex_t mutex_blocked;
 extern sem_t sem_finalizar_proceso;
+extern sem_t sem_exec_recibido;
 extern t_queue *cola_fin_pcb;
 extern pthread_mutex_t mutex_exit;
 
@@ -90,6 +91,7 @@ int notificar_finalizacion_hilo(int socket_memoria, int tid, int pid,op_code ope
 }
 
 int enviar_exec_a_cpu(int tid, int pid){
+    log_warning(logger,"mando exec");
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
@@ -97,22 +99,30 @@ int enviar_exec_a_cpu(int tid, int pid){
     enviar_paquete(paquete, fd_cpu_dispatch);
     
     eliminar_paquete(paquete);
+    log_warning(logger,"esperando exec");
     switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
         case EXEC_RECIBIDO:
             log_trace(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
             sem_post(&sem_cpu_ejecutando);
+            sem_post(&sem_exec_recibido);
             return 1;
+        case SYSCALL_THREAD_CREATE:
+            log_info(logger,"SYSCALL_THREAD_CREATE en enviar exec a cpu");
+            break;    
         default:
+            log_error(logger, "default");
             return 0;
     }
 }
 
 void enviar_fin_quantum(int tid, int pid){
+    log_warning(logger,"TID:%d PID:%d FINALIZO QUANTUM",tid,pid);
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(FIN_QUANTUM, buffer);
     enviar_paquete(paquete, fd_cpu_interrupt);
+    log_warning(logger,"ENIVE MENSAJE A CPU INTERRUPT TID:%d PD:%d ",tid,pid);
     eliminar_paquete(paquete);
     // habria q recibir un ok de que se recibió la interrupción?
     switch(recibir_operacion(fd_cpu_interrupt)){
@@ -127,12 +137,14 @@ void enviar_fin_quantum(int tid, int pid){
 }
 
 int esperar_respuesta(){
+    log_warning(logger,"Esperando Respuesta");
     int resultado = 0;
     int operacion;
     while(1){
     operacion = recibir_operacion(fd_cpu_dispatch);
     switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
+            log_error(logger, "replanificando tid:%d pid:%d ",tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
             replanificar(tcb_en_ejecucion);
             log_info(logger,"## (%d:%d) - Desalojado por fin de Quantum", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             return 1;
@@ -220,11 +232,9 @@ int esperar_respuesta(){
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SUSP_PROCESO:
-            //sleep(5);
             log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             sem_post(&sem_puede_ejecutar);
             return 1;
-
         case SYSCALL_DUMP_MEMORY:
             log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             int rta = deserializar_dump_memory();

@@ -15,6 +15,8 @@ extern t_list *colas_prioridades;
 extern int quantum;
 extern PCB *pcb_en_ejecucion;
 extern sem_t sem_puede_ejecutar;
+extern sem_t sem_exec_recibido;
+extern TCB *tcb_anterior;
 
 void planificador_corto_plazo()
 {
@@ -70,7 +72,8 @@ void prioridad()
     while (1)
     {
         sem_wait(&sem_hay_ready);
-        list_sort(cola_ready->elements, (void *)comparar_prioridades);
+        sem_wait(&sem_puede_ejecutar);
+        ordenar_cola(cola_ready,mutex_ready);
         TCB *tcb = desencolar(cola_ready, mutex_ready);
         if (tcb != NULL)
         {
@@ -84,43 +87,77 @@ void prioridad()
     }
 }
 
+
+
 void multinivel()
 {
 
     while (1)
     {
-
+        log_error(logger,"Antes de hay ready");
         sem_wait(&sem_hay_ready);
+        log_error(logger," hay ready");
+        sem_wait(&sem_puede_ejecutar);
+        log_error(logger,"puede exec");
         printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
-        log_info(logger, "cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
+        log_info(logger, "cola elegidaasddasadsdsa:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
         TCB *tcb = desencolar_multinivel(cola);
+        log_warning(logger,"TCB elegido tdi:%d pid %d",tcb->tid,tcb->pcb_pid);
+        if(tcb_anterior != NULL){
+            log_error(logger,"TCB anterior existe");
+            if(tcb->pcb_pid==tcb_anterior->pcb_pid && tcb->tid==tcb_anterior->tid){
+                TCB *tcb_aux = malloc(sizeof(TCB));
+                memcpy(tcb_aux,tcb,sizeof(TCB));
+                cola = obtener_cola_con_mayor_prioridad();
+                if (co)
+                log_info(logger, "cola elegida:%i", cola->prioridad);
+                tcb=desencolar_multinivel(cola);
+                encolar_multinivel(cola,tcb_aux);
+                sem_post(&sem_hay_ready);
+            }
+        }
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
             log_info(logger, "Planificando TID %d,PID %d con algoritmo MULTINIVEL\n", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
+
+            test* testStruct = malloc(sizeof(test));
+            testStruct->pid = tcb_en_ejecucion->pcb_pid;
+            testStruct->tid = tcb_en_ejecucion->tid;
+
+            
             pthread_t hilo_contador;
-            pthread_create(&hilo_contador, NULL, (void *)fin_de_quantum, cola->quantum);
+            pthread_create(&hilo_contador, NULL, (void *)fin_de_quantum, testStruct);
             pthread_detach(hilo_contador);
             enviar_exec_a_cpu(tcb->tid, tcb->pcb_pid);
+            sem_wait(&sem_exec_recibido);
             esperar_respuesta();
             pthread_cancel(hilo_contador);
         }
     }
 }
 
-void fin_de_quantum(int quantumCola)
-{
+
+
+void fin_de_quantum(test* str)
+{   
+    
+    int quantumCola = quantum;
+    int tid = str->tid;
+    int pid = str->pid;
+    log_error(logger,"empiezo hilo quantum de tid: %d pid: %d",tid,pid);
     // habria q esperar a que cpu empiece a ejecutar?
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     sem_wait(&sem_cpu_ejecutando);
-    sleep(quantumCola);
-    int pid = tcb_en_ejecucion->pcb_pid;
-    int tid = tcb_en_ejecucion->tid;
-    enviar_fin_quantum(tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+    usleep(quantumCola);
+    enviar_fin_quantum(tid, pid);
+    // free(aux->Registros);
+    // free(aux);
+
     // TODO mandar interrupt a cpu
 }
 

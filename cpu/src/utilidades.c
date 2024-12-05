@@ -22,10 +22,14 @@ sem_t sem_join_hilo;
 sem_t sem_hilo_cancel;
 sem_t sem_io_solicitada;
 sem_t sem_dump_mem;
+sem_t sem_fin_q;
+sem_t sem_interrupt_recibida;
+sem_t sem_ctx_actualizado;
 pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
 pthread_mutex_t mutex_interrupt;
 bool flag_interrupt = false;
+
 
 void iniciar_cpu(void)
 {
@@ -48,6 +52,9 @@ void iniciar_cpu(void)
     inicializar_semaforo(&sem_hilo_cancel,"Hilo creado",0);
     inicializar_semaforo(&sem_io_solicitada, "sem_io_solicitada", 0);
     inicializar_semaforo(&sem_dump_mem, "sem dump mem", 0);
+    inicializar_semaforo(&sem_fin_q,"fin q",0);
+    inicializar_semaforo(&sem_interrupt_recibida, "interrupt recibida", 0);
+    inicializar_semaforo(&sem_ctx_actualizado, "sem_ctx_actualizado", 0);
     inicializar_mutex(&mutex_conexion_dispatch,"mutex_dispatch");
     inicializar_mutex(&mutex_conexion_memoria, "mutex memoria");
     inicializar_mutex(&mutex_interrupt, "Mutex interrupt");
@@ -116,11 +123,15 @@ void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
     log_info(logger, "Recibida interrupcion de Fin de Quantum (%i y %i):",tid ,pid);
+    if(contexto_en_ejecucion->contexto_hilo->tid == tid && contexto_en_ejecucion->contexto_hilo->pid == pid){
+        pthread_mutex_lock(&mutex_interrupt);
+        flag_interrupt = true;
+        pthread_mutex_unlock(&mutex_interrupt);
+    }
+    sem_wait(&sem_fin_q);
     int resultado_interrupt = OK_FIN_QUANTUM;
     send(socket_cliente, &resultado_interrupt,sizeof(op_code),0);
-    if(contexto_en_ejecucion->contexto_hilo->tid == tid && contexto_en_ejecucion->contexto_hilo->pid == pid){
-        flag_interrupt = true;
-    }
+
     // Falta actualizar ctx ejecucion, y ver si la interrupcion es del tid pid en ejecucion, si no, descartarla
 }
 

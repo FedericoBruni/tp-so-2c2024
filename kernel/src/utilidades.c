@@ -36,10 +36,12 @@ sem_t memoria_libre;
 sem_t sem_puede_ejecutar;
 sem_t sem_syscall_fin;
 sem_t sem_io;
+sem_t sem_exec_recibido;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
 t_list* mutex_sistema;
+TCB *tcb_anterior;
 
 
 
@@ -87,6 +89,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_puede_ejecutar, "Puede ejecutar", 1);
     inicializar_semaforo(&sem_syscall_fin, "sem_syscall_fin", 0);
     inicializar_semaforo(&sem_io, "sem_io", 0);
+    inicializar_semaforo(&sem_exec_recibido,"sem exec",0);
     
 
 
@@ -235,6 +238,7 @@ COLA_PRIORIDAD* obtener_cola_con_mayor_prioridad() { // y q tenga elementos
 }
 
 void replanificar(TCB *tcb){
+    tcb_anterior = tcb;
     if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
         COLA_PRIORIDAD * cola = existe_cola_con_prioridad(tcb->prioridad);
         if(cola != NULL){
@@ -249,6 +253,7 @@ void replanificar(TCB *tcb){
         //imprimir_pcb(pcb); 
     }
     sem_post(&sem_hay_ready);
+    sem_post(&sem_puede_ejecutar);
 }
 
 MUTEX *existe_mutex(char* recurso){
@@ -348,4 +353,16 @@ bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
     }
     queue_destroy(cola_aux);
     return respuesta;
+}
+
+void ordenar_cola(t_queue *cola, pthread_mutex_t mutex) {
+    t_list *lista = list_create();
+    while (!queue_is_empty(cola)) {
+        list_add(lista, desencolar(cola, mutex));
+    }
+    list_sort(lista, (void *)comparar_prioridades);
+
+    for (int i = 0; i < list_size(lista); i++) {
+        encolar(cola, list_get(lista, i), mutex);
+    }
 }

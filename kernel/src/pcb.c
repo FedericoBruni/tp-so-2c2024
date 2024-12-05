@@ -22,8 +22,8 @@ void liberar_pcb(void *ptr_pcb)
     PCB *pcb = (PCB *)ptr_pcb;
     //liberar_registros(pcb->Registros); // libero registros
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
-    free(pcb->tids);
     list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
+    free(pcb->tids);
     free(pcb);
 }
 

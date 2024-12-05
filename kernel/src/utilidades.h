@@ -52,4 +52,5 @@ void desbloquear_hilo_mutex(MUTEX *mutex);
 void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb);
 void imprimir_cola(t_queue *cola, pthread_mutex_t mutex);
 bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid);
+void ordenar_cola(t_queue *cola, pthread_mutex_t mutex);
 #endif // UTILIDADES_H_

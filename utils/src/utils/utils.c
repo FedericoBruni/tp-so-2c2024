@@ -10,7 +10,7 @@ char *desc_code_op[] = {
 	"SYSCALL_THREAD_EXIT", "SYSCALL_PROCESS_EXIT", "SOLICITAR_INSTRUCCION", "PROXIMA_INSTRUCCION", "EOF_INSTRUCCION","CONTEXTO_ACTUALIZADO_OK",
 	"CONTEXTO_ACTUALIZADO_ERROR","FIN_DE_ARCHIVO", "PROCESO_CREADO","SUSP_PROCESO", "SYSCALL_DUMP_MEMORY", "SYSCALL_IO","MUTEX_CREADO", "MUTEX_LOCKEADO", "MUTEX_UNLOCKEADO",
 	"LOCKEAR_HILO","FIN_HILO","FIN_PROCESO", "WRITE_MEM", "WRITE_MEM_RTA", "READ_MEM", "READ_MEM_RTA","HILO_CREADO","HILO_JOINEADO",
-	"HILO_CANCEL", "IO_SOLICITADA","MEM_DUMPEADA","SOL_DUMP", "MEM_DUMP_ERROR"};
+	"HILO_CANCEL", "IO_SOLICITADA","MEM_DUMPEADA","SOL_DUMP", "MEM_DUMP_ERROR", "OK"};
 
 t_config *iniciar_config(char *ruta)
 {
@@ -114,12 +114,33 @@ int iniciar_servidor(t_log *logger, char *puerto)
 	return socket_servidor;
 }
 
+char *obtenerTimeStamp2() {
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+
+    setenv("TZ", "GMT+3", 1);
+    tzset(); // Actualiza la zona horaria en el programa
+    struct tm *timestamp_info = localtime(&ts.tv_sec);
+    static char timestamp[20];
+    // Generar el timestamp inicial (HH:MM:SS)
+    strftime(timestamp, 20, "%H:%M:%S", timestamp_info);
+
+    // Agregar milisegundos
+    size_t used_length = strlen(timestamp);
+    size_t remaining_length = 20 - used_length;
+
+    if (remaining_length > 0) {
+        snprintf(timestamp + used_length, remaining_length, ":%03d", ts.tv_nsec / 1000000);
+    }
+    return timestamp;
+}
+
 int recibir_operacion(int socket_cliente)
 {
 	int cod_op;
 
 	if (recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0){
-		printf("Cod_Op: %s\n", desc_code_op[cod_op]);
+		printf("Cod_Op: %s + timestamp: %s\n", desc_code_op[cod_op], obtenerTimeStamp2());
 		return cod_op;
 	}
 		

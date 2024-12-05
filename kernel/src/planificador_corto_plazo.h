@@ -3,10 +3,18 @@
 #include "utilidades.h"
 #include "utils/utils.h"
 
+typedef struct
+{
+
+	int pid;
+    int tid;
+
+} test;
+
 void planificador_corto_plazo();
 void fifo();
 void prioridad();
 int comparar_prioridades(TCB* tcb1, TCB* tcb2);
 void multinivel();
-void fin_de_quantum(int quantumCola);
+void fin_de_quantum(test* str);
 #endif

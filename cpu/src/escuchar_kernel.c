@@ -18,6 +18,8 @@ char* rta_mutex_lock;
 extern bool flag_interrupt;
 extern pthread_mutex_t mutex_interrupt;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
+extern sem_t sem_fin_q;
+extern sem_t sem_interrupt_recibida;
 
 void escuchar_mensajes_kernel_dispatch(void)
 {
@@ -105,11 +107,8 @@ void escuchar_mensajes_kernel_interrupt(void)
 			aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 			break;
 		case FIN_QUANTUM:
-		    pthread_mutex_lock(&mutex_interrupt);
 			procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
-			pthread_mutex_unlock(&mutex_interrupt);
 			break;
-
 		case -1:
 			log_error(logger, "Interrupt desconectado\n");
 			cliente_fd_interrupt = -1;
