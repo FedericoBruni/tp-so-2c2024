@@ -25,6 +25,7 @@ void ciclo_de_instruccion() {
         }else{
             printf("ENTRO A FIN DE ARCHIVO\n");
             enviar_fin_de_proceso();
+            continue;
         }
 
         //execute();

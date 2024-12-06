@@ -158,11 +158,12 @@ void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio
 }
 
 void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     crear_hilo(archivo_pseudocodigo, prioridad);
     sem_wait(&sem_hilo_creado);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+    
 }
 
 void THREAD_JOIN (int tid) {

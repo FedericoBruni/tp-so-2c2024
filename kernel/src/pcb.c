@@ -48,7 +48,7 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
 
 TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
 {
-    log_info(logger,"Creando TCB de prioridad: %i\n", prioridad);
+    log_info(logger,"Creando TCB de prioridad: %i", prioridad);
     TCB *tcb = malloc(sizeof(TCB));
     tcb->tid = pcb->autoincremental_tcb;
     pcb->autoincremental_tcb = pcb->autoincremental_tcb +1;

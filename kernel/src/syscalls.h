@@ -15,5 +15,6 @@ void MUTEX_UNLOCK(char* recurso);
 int DUMP_MEMORY(int pid, int tid);
 void IO(int tiempo);
 void ejecucion_io(int tiempo);
+void PROCESS_EXIT_ULTIMO_HILO(TCB *tcb);
 
 #endif

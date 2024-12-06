@@ -66,6 +66,21 @@ void PROCESS_EXIT(TCB *tcb)
     // singal final_proceso
 }
 
+void PROCESS_EXIT_ULTIMO_HILO(TCB *tcb)
+{
+
+    PCB *pcb = tcb->pcb;
+    mover_tcbs_exit(pcb);
+    //queue_push(cola_finalizacion, pcb);
+    encolar(cola_fin_pcb, pcb, mutex_exit); 
+    sem_post(&sem_finalizar_proceso);
+
+    //sem_post(&sem_);
+    // Faltaría avisarle a Memoria??
+    // Y sacar el pcb de la cola en la que está?
+    // singal final_proceso
+}
+
 void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
     
     TCB *tcb = crear_tcb(pcb, prioridad, archivo_pseudocodigo);

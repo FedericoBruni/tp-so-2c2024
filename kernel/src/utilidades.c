@@ -337,6 +337,15 @@ void imprimir_cola(t_queue *cola, pthread_mutex_t mutex){
     queue_destroy(cola_aux);
 }
 
+// void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb){
+//     encolar(cola->cola_prioridad, tcb, cola->mutex);
+
+// }
+
+bool buscar_en_cola_prioridad(COLA_PRIORIDAD *cola_prioridad, int pid){
+    return buscar_en_cola(cola_prioridad->cola_prioridad, cola_prioridad->mutex, pid);
+}
+
 // devuelve 1 si existe un tcb del proceso
 bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
     t_queue* cola_aux = queue_create();
@@ -345,13 +354,17 @@ bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
         void* elemento = desencolar(cola, mutex);
 
         TCB* tcb = (TCB*) elemento;
-        if (tcb->pcb_pid == pid) respuesta = 1;
+        if (tcb->pcb_pid == pid) {
+            respuesta = 1;
+            log_warning(logger, "Tcb encontrado en buscar_cola: %i", tcb->tid);
+        }
         queue_push(cola_aux,elemento);
     }
     while(!queue_is_empty(cola_aux)){
         queue_push(cola,queue_pop(cola_aux));
     }
     queue_destroy(cola_aux);
+    log_warning(logger, "Respuesta de buscar_en_cola: %i", respuesta);
     return respuesta;
 }
 

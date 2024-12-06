@@ -129,8 +129,8 @@ void finalizacion_de_hilos(void)
 {
     while (true)
     {
-        log_info(logger,"entro a fin_hilo");
         sem_wait(&sem_finalizar_hilo); 
+        log_info(logger,"entro a fin_hilo");
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
         // de test:
         

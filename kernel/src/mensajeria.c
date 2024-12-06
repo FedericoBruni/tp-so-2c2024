@@ -17,6 +17,8 @@ extern sem_t sem_finalizar_proceso;
 extern sem_t sem_exec_recibido;
 extern t_queue *cola_fin_pcb;
 extern pthread_mutex_t mutex_exit;
+extern char* algoritmo_planificacion;
+extern t_list *colas_prioridades;
 
 int solicitar_memoria(int socket_memoria, PCB *pcb, op_code cod_sol)
 {
@@ -91,7 +93,6 @@ int notificar_finalizacion_hilo(int socket_memoria, int tid, int pid,op_code ope
 }
 
 int enviar_exec_a_cpu(int tid, int pid){
-    log_warning(logger,"mando exec");
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
@@ -99,7 +100,6 @@ int enviar_exec_a_cpu(int tid, int pid){
     enviar_paquete(paquete, fd_cpu_dispatch);
     
     eliminar_paquete(paquete);
-    log_warning(logger,"esperando exec");
     switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
         case EXEC_RECIBIDO:
             log_trace(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
@@ -159,7 +159,6 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_CREATE:
-            log_info(logger,"## (%d:%d) - Se crea el Hilo - Estado: READY", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_create();
             sem_wait(&sem_syscall_fin);
             int hilo_creado = HILO_CREADO;
@@ -219,12 +218,13 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &process_exit, sizeof(op_code), 0);
             break;
         case FIN_DE_ARCHIVO:
-            sleep(5);
+            //sleep(5);
+            log_warning(logger, "Fin de archivo");
             if (debe_finalizar_proceso()){
                 log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
-            //if(tcb_en_ejecucion->tid == 0){
-                PROCESS_EXIT(tcb_en_ejecucion);
-                //THREAD_EXIT(tcb_en_ejecucion);
+                PROCESS_EXIT_ULTIMO_HILO(tcb_en_ejecucion); // x ahora, ver si queda o q
+                //PROCESS_EXIT(list_get(tcb_en_ejecucion->pcb->threads, 0));
+                
             }else{
                 log_info(logger, "## (%d:%d) Finaliza el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
                 THREAD_EXIT(tcb_en_ejecucion);
@@ -262,9 +262,15 @@ int esperar_respuesta(){
 }
 
 bool debe_finalizar_proceso() {
-    if (buscar_en_cola(cola_ready, mutex_ready, tcb_en_ejecucion->pcb_pid) || 
-    buscar_en_cola(cola_blocked, mutex_blocked, tcb_en_ejecucion->pcb_pid)) return 0;
+    if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+        return 0; // x ahora para testear, ver la logica dsp
+    } else {
+        if (buscar_en_cola(cola_ready, mutex_ready, tcb_en_ejecucion->pcb_pid) || 
+        buscar_en_cola(cola_blocked, mutex_blocked, tcb_en_ejecucion->pcb_pid)) return 0;
+    }
+    
     return 1;
+    
 }
 
 void deserializar_process_create(){

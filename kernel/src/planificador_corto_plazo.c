@@ -94,14 +94,11 @@ void multinivel()
 
     while (1)
     {
-        log_error(logger,"Antes de hay ready");
         sem_wait(&sem_hay_ready);
-        log_error(logger," hay ready");
         sem_wait(&sem_puede_ejecutar);
-        log_error(logger,"puede exec");
         printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
-        log_info(logger, "cola elegidaasddasadsdsa:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
+        log_info(logger, "cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
         TCB *tcb = desencolar_multinivel(cola);
         log_warning(logger,"TCB elegido tdi:%d pid %d",tcb->tid,tcb->pcb_pid);
         if (tcb != NULL)
