@@ -109,6 +109,8 @@ int enviar_exec_a_cpu(int tid, int pid){
         case SYSCALL_THREAD_CREATE:
             log_info(logger,"SYSCALL_THREAD_CREATE en enviar exec a cpu");
             break;    
+        case SUSP_PROCESO: // este case estaba en esperar_respuesta();
+            sem_post(&sem_puede_ejecutar);
         default:
             log_error(logger, "default");
             return 0;

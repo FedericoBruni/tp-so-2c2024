@@ -36881,3 +36881,1379 @@
 [ERROR] 18:57:57:807 Memoria/(20142:20239): Cpu desconectado
 
 [INFO] 18:57:57:807 Memoria/(20142:20142): Finalizando ejecución de MEMORIA
+[TRACE] 22:28:08:353 Memoria/(21574:21574): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:28:08:354 Memoria/(21574:21574): Conexión exitosa
+[INFO] 22:28:08:357 Memoria/(21574:21574): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:28:10:770 Memoria/(21574:21574): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:28:10:771 Memoria/(21574:21706): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:28:18:324 Memoria/(21574:21574): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:28:18:330 Memoria/(21574:21837): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:28:18:333 Memoria/(21574:21837): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:28:18:334 Memoria/(21574:21837): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:28:18:334 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:28:18:335 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:28:18:336 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:28:18:336 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:28:18:336 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:336 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:387 Memoria/(21574:21837): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:28:18:392 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:392 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:395 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:28:18:405 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:28:18:405 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:28:18:406 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:407 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:446 Memoria/(21574:21837): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:28:18:448 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:448 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:453 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:28:18:454 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:28:18:454 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:28:18:454 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:454 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:498 Memoria/(21574:21837): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:28:18:499 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:499 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:503 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:28:18:504 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:28:18:505 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:28:18:505 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:505 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:551 Memoria/(21574:21837): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:28:18:552 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:553 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:571 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:28:18:571 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:28:18:574 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:28:18:574 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:574 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:614 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:28:18:614 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET CX 5
+
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET BX 1
+
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:28:18:615 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:28:18:616 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:28:18:616 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:28:18:616 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:28:18:617 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:28:18:617 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:28:18:617 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:28:18:618 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:28:18:618 Memoria/(21574:21706): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: THREAD_EXIT
+[INFO] 19:28:18:619 Memoria/(21574:21706): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:28:18:619 Memoria/(21574:21706): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[ERROR] 19:28:43:625 Memoria/(21574:21837): Kernel desconectado
+
+[ERROR] 19:28:43:626 Memoria/(21574:21706): Cpu desconectado
+
+[INFO] 19:28:43:627 Memoria/(21574:21574): Finalizando ejecución de MEMORIA
+[TRACE] 22:29:03:050 Memoria/(22085:22085): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:29:03:057 Memoria/(22085:22085): Conexión exitosa
+[INFO] 22:29:03:065 Memoria/(22085:22085): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:29:03:772 Memoria/(22085:22085): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:29:03:776 Memoria/(22085:22182): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:29:04:617 Memoria/(22085:22085): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:29:04:619 Memoria/(22085:22278): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:29:04:623 Memoria/(22085:22278): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:29:04:623 Memoria/(22085:22278): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:29:04:627 Memoria/(22085:22182): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:29:04:628 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:29:04:629 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:29:04:630 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:29:04:631 Memoria/(22085:22182): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:29:04:631 Memoria/(22085:22182): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:29:04:679 Memoria/(22085:22278): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:29:04:680 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:29:04:680 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:29:04:680 Memoria/(22085:22182): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:29:04:681 Memoria/(22085:22182): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:29:04:681 Memoria/(22085:22278): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:29:04:682 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:29:04:682 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:29:04:683 Memoria/(22085:22182): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:29:04:683 Memoria/(22085:22182): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:29:04:683 Memoria/(22085:22278): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:29:04:683 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:29:04:684 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:29:04:684 Memoria/(22085:22182): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:29:04:684 Memoria/(22085:22182): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:29:04:684 Memoria/(22085:22278): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:29:04:684 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:29:04:685 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:29:04:695 Memoria/(22085:22182): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:29:04:695 Memoria/(22085:22182): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:29:04:708 Memoria/(22085:22182): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:29:04:709 Memoria/(22085:22182): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:29:04:800 Memoria/(22085:22182): Cpu desconectado
+
+[ERROR] 19:34:41:661 Memoria/(22085:22278): Kernel desconectado
+
+[INFO] 19:34:41:662 Memoria/(22085:22085): Finalizando ejecución de MEMORIA
+[TRACE] 22:34:45:026 Memoria/(22709:22709): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:34:45:027 Memoria/(22709:22709): Conexión exitosa
+[INFO] 22:34:45:027 Memoria/(22709:22709): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:34:45:954 Memoria/(22709:22709): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:34:45:964 Memoria/(22709:22815): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:34:46:695 Memoria/(22709:22709): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:34:46:696 Memoria/(22709:22911): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:34:46:705 Memoria/(22709:22911): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:34:46:706 Memoria/(22709:22911): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:34:46:708 Memoria/(22709:22815): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:34:46:710 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:34:46:710 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:34:46:711 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:34:46:711 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:711 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:750 Memoria/(22709:22911): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:34:46:751 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:34:46:752 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:34:46:752 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:753 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:754 Memoria/(22709:22911): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:34:46:754 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:34:46:755 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:34:46:755 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:755 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:756 Memoria/(22709:22911): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:34:46:757 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:34:46:757 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:34:46:758 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:758 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:758 Memoria/(22709:22911): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:34:46:759 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:34:46:759 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:34:46:759 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:759 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:771 Memoria/(22709:22815): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:34:46:771 Memoria/(22709:22815): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:34:46:771 Memoria/(22709:22815): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:34:46:783 Memoria/(22709:22815): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:34:59:759 Memoria/(22709:22911): Kernel desconectado
+
+[ERROR] 19:34:59:759 Memoria/(22709:22815): Cpu desconectado
+
+[INFO] 19:34:59:759 Memoria/(22709:22709): Finalizando ejecución de MEMORIA
+[TRACE] 22:35:02:319 Memoria/(23114:23114): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:35:02:319 Memoria/(23114:23114): Conexión exitosa
+[INFO] 22:35:02:320 Memoria/(23114:23114): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:35:02:915 Memoria/(23114:23114): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:35:02:917 Memoria/(23114:23211): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:35:03:452 Memoria/(23114:23114): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:35:03:454 Memoria/(23114:23307): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:35:03:466 Memoria/(23114:23307): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:35:03:466 Memoria/(23114:23307): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:35:03:469 Memoria/(23114:23211): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:35:03:470 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:35:03:470 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:35:03:470 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:03:471 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:471 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:519 Memoria/(23114:23307): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:35:03:523 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:03:523 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:03:523 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:523 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:531 Memoria/(23114:23307): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:35:03:540 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:03:541 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:03:543 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:543 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:543 Memoria/(23114:23307): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:35:03:545 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:03:547 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:03:548 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:549 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:549 Memoria/(23114:23307): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:35:03:552 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:03:552 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:35:03:552 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:552 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:552 Memoria/(23114:23211): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:35:03:552 Memoria/(23114:23211): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:03:552 Memoria/(23114:23211): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:03:553 Memoria/(23114:23211): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:35:05:670 Memoria/(23114:23307): Kernel desconectado
+
+[ERROR] 19:35:05:671 Memoria/(23114:23211): Cpu desconectado
+
+[INFO] 19:35:05:671 Memoria/(23114:23114): Finalizando ejecución de MEMORIA
+[TRACE] 22:35:09:464 Memoria/(23505:23505): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:35:09:465 Memoria/(23505:23505): Conexión exitosa
+[INFO] 22:35:09:466 Memoria/(23505:23505): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:35:10:055 Memoria/(23505:23505): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:35:10:057 Memoria/(23505:23602): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:35:10:599 Memoria/(23505:23505): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:35:10:601 Memoria/(23505:23698): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:35:10:605 Memoria/(23505:23698): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:35:10:606 Memoria/(23505:23698): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:35:10:607 Memoria/(23505:23602): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:35:10:608 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:35:10:609 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:35:10:609 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:10:610 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:610 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:650 Memoria/(23505:23698): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:35:10:651 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:10:652 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:10:652 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:652 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:666 Memoria/(23505:23698): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:35:10:673 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:10:675 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:10:675 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:675 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:676 Memoria/(23505:23698): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:35:10:677 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:10:678 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:10:678 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:678 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:679 Memoria/(23505:23698): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:35:10:681 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:10:681 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:35:10:681 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:681 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:682 Memoria/(23505:23602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:35:10:682 Memoria/(23505:23602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:10:682 Memoria/(23505:23602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:10:683 Memoria/(23505:23602): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:35:24:658 Memoria/(23505:23698): Kernel desconectado
+
+[ERROR] 19:35:24:659 Memoria/(23505:23602): Cpu desconectado
+
+[INFO] 19:35:24:659 Memoria/(23505:23505): Finalizando ejecución de MEMORIA
+[TRACE] 22:35:27:345 Memoria/(23898:23898): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:35:27:345 Memoria/(23898:23898): Conexión exitosa
+[INFO] 22:35:27:347 Memoria/(23898:23898): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:35:27:926 Memoria/(23898:23898): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:35:27:927 Memoria/(23898:23995): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:35:28:344 Memoria/(23898:23898): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:35:28:347 Memoria/(23898:24091): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:35:28:351 Memoria/(23898:24091): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:35:28:351 Memoria/(23898:24091): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:35:28:352 Memoria/(23898:23995): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:35:28:355 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:35:28:356 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:35:28:356 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:28:358 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:358 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:400 Memoria/(23898:24091): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:35:28:400 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:28:400 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:28:400 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:400 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:400 Memoria/(23898:24091): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:35:28:400 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:28:401 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:28:401 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:401 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:402 Memoria/(23898:24091): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:35:28:403 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:28:404 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:28:404 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:405 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:405 Memoria/(23898:24091): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:35:28:407 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:28:408 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:35:28:408 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:408 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:409 Memoria/(23898:23995): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:35:28:411 Memoria/(23898:23995): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:28:411 Memoria/(23898:23995): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:28:412 Memoria/(23898:23995): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:35:30:896 Memoria/(23898:24091): Kernel desconectado
+
+[ERROR] 19:35:30:897 Memoria/(23898:23995): Cpu desconectado
+
+[INFO] 19:35:30:897 Memoria/(23898:23898): Finalizando ejecución de MEMORIA
+[TRACE] 22:35:33:251 Memoria/(24289:24289): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:35:33:252 Memoria/(24289:24289): Conexión exitosa
+[INFO] 22:35:33:258 Memoria/(24289:24289): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:35:33:720 Memoria/(24289:24289): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:35:33:723 Memoria/(24289:24386): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:35:34:147 Memoria/(24289:24289): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:35:34:148 Memoria/(24289:24482): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:35:34:153 Memoria/(24289:24482): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:35:34:154 Memoria/(24289:24482): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:35:34:156 Memoria/(24289:24386): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:35:34:156 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:35:34:157 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:35:34:158 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:34:158 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:158 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:34:202 Memoria/(24289:24482): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:35:34:221 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:34:221 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:34:221 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:221 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:34:221 Memoria/(24289:24482): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:35:34:222 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:34:222 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:35:34:223 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:223 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:34:223 Memoria/(24289:24482): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:35:34:224 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:34:224 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:35:34:224 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:224 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:34:225 Memoria/(24289:24482): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:35:34:226 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:35:34:227 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:35:34:227 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:227 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:35:34:229 Memoria/(24289:24386): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:35:34:229 Memoria/(24289:24386): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:35:34:229 Memoria/(24289:24386): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:35:34:229 Memoria/(24289:24386): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 19:35:34:318 Memoria/(24289:24386): Cpu desconectado
+
+[ERROR] 19:36:15:273 Memoria/(24289:24482): Kernel desconectado
+
+[INFO] 19:36:15:273 Memoria/(24289:24289): Finalizando ejecución de MEMORIA
+[TRACE] 22:36:18:418 Memoria/(24710:24710): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:36:18:420 Memoria/(24710:24710): Conexión exitosa
+[INFO] 22:36:18:424 Memoria/(24710:24710): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:36:19:210 Memoria/(24710:24710): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:36:19:212 Memoria/(24710:24816): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:36:20:099 Memoria/(24710:24710): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:36:20:101 Memoria/(24710:24912): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:36:20:106 Memoria/(24710:24912): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:36:20:106 Memoria/(24710:24912): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:36:20:109 Memoria/(24710:24816): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:36:20:110 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:36:20:110 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:36:20:110 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:36:20:110 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:111 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:36:20:164 Memoria/(24710:24912): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:36:20:165 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:36:20:165 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:36:20:166 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:166 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:36:20:166 Memoria/(24710:24912): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:36:20:167 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:36:20:167 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:36:20:167 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:167 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:36:20:169 Memoria/(24710:24912): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:36:20:170 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:36:20:170 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:36:20:171 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:171 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:36:20:172 Memoria/(24710:24912): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:36:20:173 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:36:20:174 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:36:20:174 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:174 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:36:20:176 Memoria/(24710:24816): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:36:20:177 Memoria/(24710:24816): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:36:20:178 Memoria/(24710:24816): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:36:20:178 Memoria/(24710:24816): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 19:36:38:087 Memoria/(24710:24912): Kernel desconectado
+
+[ERROR] 19:36:38:088 Memoria/(24710:24816): Cpu desconectado
+
+[INFO] 19:36:38:088 Memoria/(24710:24710): Finalizando ejecución de MEMORIA
+[TRACE] 22:40:22:939 Memoria/(25232:25232): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:40:22:940 Memoria/(25232:25232): Conexión exitosa
+[INFO] 22:40:22:940 Memoria/(25232:25232): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:40:24:681 Memoria/(25232:25232): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:40:24:681 Memoria/(25232:25338): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:40:26:225 Memoria/(25232:25232): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:40:26:232 Memoria/(25232:25434): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:40:26:238 Memoria/(25232:25434): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:40:26:238 Memoria/(25232:25434): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:40:26:239 Memoria/(25232:25338): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:40:26:240 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:40:26:240 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:40:26:240 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:40:26:241 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:241 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:40:26:289 Memoria/(25232:25434): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:40:26:291 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:40:26:293 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:40:26:293 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:293 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:40:26:295 Memoria/(25232:25434): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:40:26:296 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:40:26:297 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:40:26:297 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:297 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:40:26:298 Memoria/(25232:25434): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:40:26:298 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:40:26:299 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:40:26:299 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:299 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:40:26:299 Memoria/(25232:25434): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:40:26:300 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:40:26:300 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:40:26:301 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:301 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:40:26:302 Memoria/(25232:25338): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:40:26:302 Memoria/(25232:25338): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:40:26:302 Memoria/(25232:25338): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 19:40:26:408 Memoria/(25232:25434): Kernel desconectado
+
+[ERROR] 19:40:26:408 Memoria/(25232:25338): Cpu desconectado
+
+[INFO] 19:40:26:408 Memoria/(25232:25232): Finalizando ejecución de MEMORIA
+[TRACE] 22:41:34:858 Memoria/(25667:25667): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:41:34:858 Memoria/(25667:25667): Conexión exitosa
+[INFO] 22:41:34:863 Memoria/(25667:25667): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:41:35:609 Memoria/(25667:25667): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:41:35:611 Memoria/(25667:25764): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:41:53:316 Memoria/(25667:25667): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:41:53:317 Memoria/(25667:26090): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:41:53:329 Memoria/(25667:26090): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:41:53:333 Memoria/(25667:26090): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:41:53:335 Memoria/(25667:25764): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:41:53:335 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:41:53:335 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:41:53:336 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:41:53:336 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:336 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:41:53:380 Memoria/(25667:26090): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:41:53:381 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:41:53:381 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:41:53:382 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:382 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:41:53:387 Memoria/(25667:26090): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:41:53:388 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:41:53:388 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:41:53:389 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:389 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:41:53:389 Memoria/(25667:26090): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:41:53:390 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:41:53:390 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:41:53:390 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:390 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:41:53:391 Memoria/(25667:26090): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:41:53:392 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:41:53:392 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:41:53:393 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:393 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:41:53:394 Memoria/(25667:25764): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:41:53:394 Memoria/(25667:25764): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:41:53:394 Memoria/(25667:25764): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 19:43:07:218 Memoria/(25667:25764): Cpu desconectado
+
+[ERROR] 19:43:07:218 Memoria/(25667:26090): Kernel desconectado
+
+[INFO] 19:43:07:219 Memoria/(25667:25667): Finalizando ejecución de MEMORIA
+[TRACE] 22:43:42:697 Memoria/(26472:26472): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:43:42:697 Memoria/(26472:26472): Conexión exitosa
+[INFO] 22:43:42:698 Memoria/(26472:26472): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:43:43:721 Memoria/(26472:26472): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:43:43:721 Memoria/(26472:26602): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:43:44:388 Memoria/(26472:26472): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:43:44:391 Memoria/(26472:26698): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:43:44:396 Memoria/(26472:26698): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:43:44:396 Memoria/(26472:26698): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:43:44:398 Memoria/(26472:26602): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:43:44:399 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:43:44:407 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:43:44:408 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:43:44:408 Memoria/(26472:26602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:43:44:408 Memoria/(26472:26602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:43:44:459 Memoria/(26472:26698): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:43:44:461 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:43:44:462 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:43:44:462 Memoria/(26472:26602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:43:44:462 Memoria/(26472:26602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:43:44:463 Memoria/(26472:26698): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:43:44:465 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:43:44:466 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:43:44:467 Memoria/(26472:26602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:43:44:467 Memoria/(26472:26602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:43:44:468 Memoria/(26472:26698): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:43:44:470 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:43:44:470 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:43:44:470 Memoria/(26472:26602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:43:44:471 Memoria/(26472:26602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:43:44:471 Memoria/(26472:26698): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:43:44:473 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:43:44:474 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:43:44:475 Memoria/(26472:26602): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:43:44:475 Memoria/(26472:26602): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:43:44:476 Memoria/(26472:26602): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:43:44:476 Memoria/(26472:26602): ## Contexto Solicitado - (PID:TID) - (0:1)
+[ERROR] 19:43:44:578 Memoria/(26472:26602): Cpu desconectado
+
+[ERROR] 19:44:27:133 Memoria/(26472:26698): Kernel desconectado
+
+[INFO] 19:44:27:133 Memoria/(26472:26472): Finalizando ejecución de MEMORIA
+[TRACE] 22:45:50:079 Memoria/(27071:27071): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:45:50:081 Memoria/(27071:27071): Conexión exitosa
+[INFO] 22:45:50:084 Memoria/(27071:27071): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:45:50:841 Memoria/(27071:27071): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:45:50:843 Memoria/(27071:27168): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:46:25:779 Memoria/(27071:27071): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:46:25:780 Memoria/(27071:27407): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:46:25:785 Memoria/(27071:27407): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:46:25:785 Memoria/(27071:27407): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:46:25:786 Memoria/(27071:27168): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:46:25:788 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:46:25:789 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:46:25:790 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:46:25:790 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:46:25:791 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:46:27:219 Memoria/(27071:27407): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:46:27:232 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:46:27:235 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:46:27:236 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:46:27:236 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:46:27:238 Memoria/(27071:27407): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:46:27:245 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:46:27:246 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:46:27:249 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:46:27:249 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:46:27:253 Memoria/(27071:27407): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:46:27:254 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:46:27:255 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:46:27:261 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:46:27:261 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:46:27:262 Memoria/(27071:27407): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:46:27:262 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:46:27:262 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:46:27:262 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:46:27:262 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:46:27:263 Memoria/(27071:27168): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:46:27:266 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET CX 5
+
+[INFO] 19:46:27:267 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 1
+
+[INFO] 19:46:27:268 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:268 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:270 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:270 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:273 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:273 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:279 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:280 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:280 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:280 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:280 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: THREAD_EXIT
+[INFO] 19:46:27:285 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:46:27:285 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:46:27:306 Memoria/(27071:27407): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 19:46:27:306 Memoria/(27071:27407): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 19:46:27:307 Memoria/(27071:27168): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:46:27:307 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET CX 5
+
+[INFO] 19:46:27:308 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET BX 1
+
+[INFO] 19:46:27:308 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:308 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:309 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:310 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:46:27:310 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:46:27:311 Memoria/(27071:27168): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: THREAD_EXIT
+[INFO] 19:46:27:312 Memoria/(27071:27168): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:46:27:312 Memoria/(27071:27168): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:46:27:353 Memoria/(27071:27407): ## Hilo Destruido - (PID:TID)- 2:0
+[INFO] 19:46:27:353 Memoria/(27071:27407): ## Hilo <Destruido> - (PID:TID) - (<0>:<2>)
+[TRACE] 22:52:17:040 Memoria/(27831:27831): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:52:17:040 Memoria/(27831:27831): Conexión exitosa
+[INFO] 22:52:17:041 Memoria/(27831:27831): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:52:17:947 Memoria/(27831:27831): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:52:17:947 Memoria/(27831:27937): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:52:18:679 Memoria/(27831:27831): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:52:18:682 Memoria/(27831:28033): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:52:18:685 Memoria/(27831:28033): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:52:18:685 Memoria/(27831:28033): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:52:18:688 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:52:18:690 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:52:18:693 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:52:18:694 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:52:18:694 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:694 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:18:735 Memoria/(27831:28033): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:52:18:736 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:52:18:736 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:52:18:736 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:736 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:18:740 Memoria/(27831:28033): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:52:18:753 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:52:18:754 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:52:18:754 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:755 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:18:755 Memoria/(27831:28033): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:52:18:756 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:52:18:756 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:52:18:756 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:756 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:18:757 Memoria/(27831:28033): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:52:18:757 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:52:18:758 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:52:18:759 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:759 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:18:761 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:52:18:762 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET CX 5
+
+[INFO] 19:52:18:762 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 1
+
+[INFO] 19:52:18:763 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:764 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:765 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:767 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:768 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:768 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:768 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:769 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:769 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:770 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:770 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: THREAD_EXIT
+[INFO] 19:52:18:771 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:52:18:771 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:52:18:807 Memoria/(27831:28033): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 19:52:18:807 Memoria/(27831:28033): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 19:52:18:809 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:52:18:810 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET CX 5
+
+[INFO] 19:52:18:811 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET BX 1
+
+[INFO] 19:52:18:811 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:813 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:814 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: THREAD_EXIT
+[INFO] 19:52:18:823 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:52:18:823 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:52:18:866 Memoria/(27831:28033): ## Hilo Destruido - (PID:TID)- 2:0
+[INFO] 19:52:18:866 Memoria/(27831:28033): ## Hilo <Destruido> - (PID:TID) - (<0>:<2>)
+[INFO] 19:52:18:868 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:52:18:868 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET CX 5
+
+[INFO] 19:52:18:869 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET BX 1
+
+[INFO] 19:52:18:870 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:871 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:871 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:872 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:873 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: THREAD_EXIT
+[INFO] 19:52:18:875 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:52:18:875 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:52:18:911 Memoria/(27831:28033): ## Hilo Destruido - (PID:TID)- 3:0
+[INFO] 19:52:18:911 Memoria/(27831:28033): ## Hilo <Destruido> - (PID:TID) - (<0>:<3>)
+[INFO] 19:52:18:912 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:52:18:912 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET CX 5
+
+[INFO] 19:52:18:912 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET BX 1
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:915 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:916 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:931 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:931 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:52:18:931 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:52:18:931 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: THREAD_EXIT
+[INFO] 19:52:18:931 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:52:18:931 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:52:18:959 Memoria/(27831:28033): ## Hilo Destruido - (PID:TID)- 4:0
+[INFO] 19:52:18:959 Memoria/(27831:28033): ## Hilo <Destruido> - (PID:TID) - (<0>:<4>)
+[INFO] 19:52:18:959 Memoria/(27831:27937): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:52:18:961 Memoria/(27831:27937): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:52:18:962 Memoria/(27831:27937): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:52:18:962 Memoria/(27831:27937): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:52:19:006 Memoria/(27831:28033): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 19:52:19:006 Memoria/(27831:28033): ## Proceso Destruido - PID: 0 - Tamaño: 32
+[INFO] 19:52:19:006 Memoria/(27831:28033): Finalizado proceso: 0
+[ERROR] 19:53:09:740 Memoria/(27831:28033): Kernel desconectado
+
+[ERROR] 19:53:09:740 Memoria/(27831:27937): Cpu desconectado
+
+[INFO] 19:53:09:744 Memoria/(27831:27831): Finalizando ejecución de MEMORIA
+[TRACE] 22:53:30:066 Memoria/(28263:28263): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:53:30:068 Memoria/(28263:28263): Conexión exitosa
+[INFO] 22:53:30:072 Memoria/(28263:28263): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:53:30:836 Memoria/(28263:28263): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:53:30:836 Memoria/(28263:28360): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:53:31:888 Memoria/(28263:28263): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:53:31:894 Memoria/(28263:28456): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:53:31:895 Memoria/(28263:28456): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:53:31:896 Memoria/(28263:28456): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:53:31:897 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:31:899 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:53:31:900 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:53:31:901 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:53:31:901 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:31:901 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:33:461 Memoria/(28263:28456): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:53:33:462 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:33:464 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:53:33:468 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:33:468 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:33:469 Memoria/(28263:28456): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:53:33:469 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:33:469 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:53:33:470 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:33:470 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:33:470 Memoria/(28263:28456): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:53:33:471 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:33:473 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:53:33:473 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:33:473 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:33:474 Memoria/(28263:28456): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:53:33:474 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:33:474 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:53:33:475 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:33:475 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:33:476 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:33:478 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET CX 5
+
+[INFO] 19:53:33:479 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET BX 1
+
+[INFO] 19:53:33:480 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:33:481 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:33:482 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:33:482 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:33:483 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:33:483 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:33:484 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:33:484 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:33:485 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:33:486 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:33:487 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: THREAD_EXIT
+[INFO] 19:53:33:488 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:33:488 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:34:217 Memoria/(28263:28456): ## Hilo Destruido - (PID:TID)- 2:0
+[INFO] 19:53:34:218 Memoria/(28263:28456): ## Hilo <Destruido> - (PID:TID) - (<0>:<2>)
+[INFO] 19:53:34:219 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:34:219 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET CX 5
+
+[INFO] 19:53:34:219 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET BX 1
+
+[INFO] 19:53:34:220 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:231 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:232 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:232 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:233 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:261 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:265 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:267 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:273 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:275 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:276 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: THREAD_EXIT
+[INFO] 19:53:34:284 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:34:284 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:34:311 Memoria/(28263:28456): ## Hilo Destruido - (PID:TID)- 3:0
+[INFO] 19:53:34:311 Memoria/(28263:28456): ## Hilo <Destruido> - (PID:TID) - (<0>:<3>)
+[INFO] 19:53:34:346 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:34:358 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET CX 5
+
+[INFO] 19:53:34:362 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 1
+
+[INFO] 19:53:34:366 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:367 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:368 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:370 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:370 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:370 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:372 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:372 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:373 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:373 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:373 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: THREAD_EXIT
+[INFO] 19:53:34:373 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:34:373 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:34:396 Memoria/(28263:28456): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 19:53:34:396 Memoria/(28263:28456): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 19:53:34:399 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:34:400 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET CX 5
+
+[INFO] 19:53:34:400 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET BX 1
+
+[INFO] 19:53:34:401 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:401 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:402 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:402 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:402 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:403 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:403 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:404 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:405 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:34:406 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:34:407 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: THREAD_EXIT
+[INFO] 19:53:34:407 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:34:407 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:34:442 Memoria/(28263:28456): ## Hilo Destruido - (PID:TID)- 4:0
+[INFO] 19:53:34:442 Memoria/(28263:28456): ## Hilo <Destruido> - (PID:TID) - (<0>:<4>)
+[INFO] 19:53:34:446 Memoria/(28263:28360): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:34:447 Memoria/(28263:28360): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:53:34:448 Memoria/(28263:28360): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:34:448 Memoria/(28263:28360): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:34:492 Memoria/(28263:28456): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 19:53:34:492 Memoria/(28263:28456): ## Proceso Destruido - PID: 0 - Tamaño: 32
+[INFO] 19:53:34:492 Memoria/(28263:28456): Finalizado proceso: 0
+[ERROR] 19:53:39:898 Memoria/(28263:28456): Kernel desconectado
+
+[ERROR] 19:53:39:899 Memoria/(28263:28360): Cpu desconectado
+
+[INFO] 19:53:39:899 Memoria/(28263:28263): Finalizando ejecución de MEMORIA
+[TRACE] 22:53:51:094 Memoria/(28679:28679): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:53:51:095 Memoria/(28679:28679): Conexión exitosa
+[INFO] 22:53:51:099 Memoria/(28679:28679): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:53:51:961 Memoria/(28679:28679): ## Kernel Conectado - FD del socket: 6
+[INFO] 19:53:51:961 Memoria/(28679:28776): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 19:53:52:842 Memoria/(28679:28679): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:53:52:845 Memoria/(28679:28872): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 19:53:52:851 Memoria/(28679:28872): ## Proceso Creado - PID: 0 - Tamaño: 32
+[INFO] 19:53:52:851 Memoria/(28679:28872): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 19:53:52:852 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:52:855 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 0
+
+[INFO] 19:53:52:855 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 1
+
+[INFO] 19:53:52:860 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:53:52:860 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:52:860 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:52:900 Memoria/(28679:28872): ## Hilo Creado - (PID:TID)- 0:1
+[INFO] 19:53:52:903 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:52:903 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:52:904 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:52:905 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:52:905 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:53:52:905 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:52:905 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:52:950 Memoria/(28679:28872): ## Hilo Creado - (PID:TID)- 0:2
+[INFO] 19:53:52:951 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:52:952 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:52:952 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:52:953 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:52:954 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+
+[INFO] 19:53:52:955 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:52:955 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:52:998 Memoria/(28679:28872): ## Hilo Creado - (PID:TID)- 0:3
+[INFO] 19:53:53:000 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:53:000 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:53:001 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:53:002 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:53:003 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+
+[INFO] 19:53:53:004 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:53:004 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:53:046 Memoria/(28679:28872): ## Hilo Creado - (PID:TID)- 0:4
+[INFO] 19:53:53:047 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:53:047 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:53:048 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:53:049 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUM DX AX
+
+[INFO] 19:53:53:049 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: THREAD_JOIN 4
+
+[INFO] 19:53:53:051 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:53:052 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:53:103 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:53:103 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET CX 5
+
+[INFO] 19:53:53:103 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:53:103 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:53:164 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:164 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET CX 5
+
+[INFO] 19:53:53:167 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:167 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:208 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:53:208 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SET BX 1
+
+[INFO] 19:53:53:213 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:53:216 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:53:251 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:253 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SET BX 1
+
+[INFO] 19:53:53:253 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:253 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:298 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:53:299 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:304 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:53:304 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:53:343 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:346 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:346 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:346 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:387 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:53:387 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:389 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:389 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:390 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:53:390 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:53:431 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:432 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:432 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:434 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:434 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:478 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:2)
+[INFO] 19:53:53:478 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:478 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:479 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:479 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:479 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:479 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:485 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:2) - Instrucción: THREAD_EXIT
+[INFO] 19:53:53:485 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:2)
+[INFO] 19:53:53:485 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 2 y PID: 0
+[INFO] 19:53:53:521 Memoria/(28679:28872): ## Hilo Destruido - (PID:TID)- 2:0
+[INFO] 19:53:53:521 Memoria/(28679:28872): ## Hilo <Destruido> - (PID:TID) - (<0>:<2>)
+[INFO] 19:53:53:523 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:524 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:524 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:524 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:571 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:571 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:572 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:572 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:619 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:620 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:621 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:621 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:670 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:671 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:671 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:671 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:716 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:716 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:717 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:717 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:760 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:760 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: SUB CX BX
+
+[INFO] 19:53:53:762 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:762 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:803 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:803 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:53:805 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:805 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:855 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:3)
+[INFO] 19:53:53:860 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:3) - Instrucción: THREAD_EXIT
+[INFO] 19:53:53:861 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:3)
+[INFO] 19:53:53:861 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 3 y PID: 0
+[INFO] 19:53:53:906 Memoria/(28679:28872): ## Hilo Destruido - (PID:TID)- 3:0
+[INFO] 19:53:53:908 Memoria/(28679:28872): ## Hilo <Destruido> - (PID:TID) - (<0>:<3>)
+[INFO] 19:53:53:923 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:53:923 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET CX 5
+
+[INFO] 19:53:53:923 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:53:923 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:53:987 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:53:989 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET CX 5
+
+[INFO] 19:53:53:991 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:53:991 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:041 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:54:041 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SET BX 1
+
+[INFO] 19:53:54:041 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:54:041 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:54:084 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:085 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SET BX 1
+
+[INFO] 19:53:54:085 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:085 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:144 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:54:145 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:146 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:54:146 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:54:209 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:219 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:233 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:233 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:258 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:54:259 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:259 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:260 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:260 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:260 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:54:261 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:54:303 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:303 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:303 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:304 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:305 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:305 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:305 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:347 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:54:348 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:351 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:351 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:54:351 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:54:393 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:395 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:414 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:414 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:438 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:1)
+[INFO] 19:53:54:440 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:440 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:440 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:443 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:1) - Instrucción: THREAD_EXIT
+[INFO] 19:53:54:443 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:1)
+[INFO] 19:53:54:443 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 1 y PID: 0
+[INFO] 19:53:54:484 Memoria/(28679:28872): ## Hilo Destruido - (PID:TID)- 1:0
+[INFO] 19:53:54:484 Memoria/(28679:28872): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 19:53:54:489 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:489 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:490 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:490 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:540 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:543 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:543 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:543 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:587 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:587 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: SUB CX BX
+
+[INFO] 19:53:54:587 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:587 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:631 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:631 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: JNZ CX 2
+
+[INFO] 19:53:54:631 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:631 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:682 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:4)
+[INFO] 19:53:54:694 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:4) - Instrucción: THREAD_EXIT
+[INFO] 19:53:54:695 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:4)
+[INFO] 19:53:54:695 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 4 y PID: 0
+[INFO] 19:53:54:739 Memoria/(28679:28872): ## Hilo Destruido - (PID:TID)- 4:0
+[INFO] 19:53:54:739 Memoria/(28679:28872): ## Hilo <Destruido> - (PID:TID) - (<0>:<4>)
+[INFO] 19:53:54:742 Memoria/(28679:28776): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 19:53:54:742 Memoria/(28679:28776): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 19:53:54:744 Memoria/(28679:28776): ## Contexto Actualizado - (PID:TID) - (0:0)
+[INFO] 19:53:54:744 Memoria/(28679:28776): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[INFO] 19:53:54:787 Memoria/(28679:28872): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 19:53:54:787 Memoria/(28679:28872): ## Proceso Destruido - PID: 0 - Tamaño: 32
+[INFO] 19:53:54:787 Memoria/(28679:28872): Finalizado proceso: 0
+[ERROR] 19:56:41:517 Memoria/(28679:28872): Kernel desconectado
+
+[ERROR] 19:56:41:517 Memoria/(28679:28776): Cpu desconectado
+
+[INFO] 19:56:41:517 Memoria/(28679:28679): Finalizando ejecución de MEMORIA

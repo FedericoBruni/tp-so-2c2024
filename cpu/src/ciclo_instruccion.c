@@ -21,6 +21,7 @@ void ciclo_de_instruccion() {
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
                 suspender_proceso();
+                continue;
             }
         }else{
             printf("ENTRO A FIN DE ARCHIVO\n");
@@ -61,7 +62,7 @@ void enviar_fin_de_proceso(){
 }
 void suspender_proceso(){
     log_warning(logger, "SUSPENDER PROCESO");
-    int cod_op = SUSP_PROCESO;
+    int cod_op = SUSP_PROCESO; //SUSP_PROCESO;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
 void desalojar_por_quantum(){
@@ -190,6 +191,7 @@ char* decode(char* instruccion) {
         int tid = atoi(lista[1]);
         THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);
         if(tid == contexto_en_ejecucion->contexto_hilo->tid){
+            log_error(logger, "IF");
             return "SUSPPROCESO";
         }
         return "OK";

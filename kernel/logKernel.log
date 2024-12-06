@@ -35959,3 +35959,1293 @@
 
 [ERROR] 18:56:19:927 Kernel/(20343:20360): empiezo hilo quantum de tid: 2 pid: 0
 [ERROR] 18:56:19:927 Kernel/(20343:20352): default
+[INFO] 22:28:18:324 Kernel/(21836:21836): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:28:18:324 Kernel/(21836:21836): Conexión exitosa
+[INFO] 22:28:18:325 Kernel/(21836:21836): Conexión exitosa
+[INFO] 22:28:18:330 Kernel/(21836:21836): Conexión exitosa
+[INFO] 22:28:18:331 Kernel/(21836:21836): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:28:18:331 Kernel/(21836:21836): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:28:18:332 Kernel/(21836:21836): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:28:18:332 Kernel/(21836:21841): Solicitando memoria para el proceso: 0
+
+[INFO] 19:28:18:333 Kernel/(21836:21841): Memoria reservada correctamente
+[INFO] 19:28:18:333 Kernel/(21836:21841): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:28:18:333 Kernel/(21836:21841): Creando TCB de prioridad: 0
+[ERROR] 19:28:18:333 Kernel/(21836:21841): PID del HILO creado: 0
+[INFO] 19:28:18:334 Kernel/(21836:21843): Se creo la cola multinivel de prioridad: 0
+[INFO] 19:28:18:334 Kernel/(21836:21843): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 19:28:18:334 Kernel/(21836:21845): cola elegida:0
+[WARNING] 19:28:18:334 Kernel/(21836:21845): TCB elegido tdi:0 pid 0
+[INFO] 19:28:18:334 Kernel/(21836:21845): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:28:18:334 Kernel/(21836:21846): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:28:18:335 Kernel/(21836:21845): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:28:18:336 Kernel/(21836:21845): Esperando Respuesta
+[WARNING] 19:28:18:339 Kernel/(21836:21846): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:28:18:344 Kernel/(21836:21846): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:28:18:344 Kernel/(21836:21846): finalizando por quantum
+[INFO] 19:28:18:384 Kernel/(21836:21845): Creando TCB de prioridad: 6
+[ERROR] 19:28:18:386 Kernel/(21836:21845): PID del HILO creado: 0
+[INFO] 19:28:18:388 Kernel/(21836:21843): Se creo la cola multinivel de prioridad: 6
+[INFO] 19:28:18:388 Kernel/(21836:21843): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[ERROR] 19:28:18:395 Kernel/(21836:21845): replanificando tid:0 pid:0 
+[INFO] 19:28:18:395 Kernel/(21836:21845): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:28:18:395 Kernel/(21836:21845): cola elegida:0
+[WARNING] 19:28:18:395 Kernel/(21836:21845): TCB elegido tdi:0 pid 0
+[INFO] 19:28:18:395 Kernel/(21836:21845): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:28:18:395 Kernel/(21836:21847): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:28:18:404 Kernel/(21836:21845): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:28:18:405 Kernel/(21836:21845): Esperando Respuesta
+[WARNING] 19:28:18:407 Kernel/(21836:21847): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:28:18:407 Kernel/(21836:21847): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:28:18:407 Kernel/(21836:21847): finalizando por quantum
+[INFO] 19:28:18:446 Kernel/(21836:21845): Creando TCB de prioridad: 5
+[ERROR] 19:28:18:446 Kernel/(21836:21845): PID del HILO creado: 0
+[INFO] 19:28:18:447 Kernel/(21836:21843): Se creo la cola multinivel de prioridad: 5
+[INFO] 19:28:18:447 Kernel/(21836:21843): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[ERROR] 19:28:18:448 Kernel/(21836:21845): replanificando tid:0 pid:0 
+[INFO] 19:28:18:448 Kernel/(21836:21845): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:28:18:448 Kernel/(21836:21845): cola elegida:0
+[WARNING] 19:28:18:448 Kernel/(21836:21845): TCB elegido tdi:0 pid 0
+[INFO] 19:28:18:448 Kernel/(21836:21845): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:28:18:451 Kernel/(21836:21848): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:28:18:454 Kernel/(21836:21845): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:28:18:454 Kernel/(21836:21845): Esperando Respuesta
+[WARNING] 19:28:18:460 Kernel/(21836:21848): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:28:18:469 Kernel/(21836:21848): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:28:18:469 Kernel/(21836:21848): finalizando por quantum
+[INFO] 19:28:18:498 Kernel/(21836:21845): Creando TCB de prioridad: 5
+[ERROR] 19:28:18:498 Kernel/(21836:21845): PID del HILO creado: 0
+[INFO] 19:28:18:499 Kernel/(21836:21843): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[ERROR] 19:28:18:500 Kernel/(21836:21845): replanificando tid:0 pid:0 
+[INFO] 19:28:18:500 Kernel/(21836:21845): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:28:18:500 Kernel/(21836:21845): cola elegida:0
+[WARNING] 19:28:18:500 Kernel/(21836:21845): TCB elegido tdi:0 pid 0
+[INFO] 19:28:18:500 Kernel/(21836:21845): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 19:28:18:504 Kernel/(21836:21845): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:28:18:504 Kernel/(21836:21845): Esperando Respuesta
+[ERROR] 19:28:18:504 Kernel/(21836:21849): empiezo hilo quantum de tid: 0 pid: 0
+[WARNING] 19:28:18:505 Kernel/(21836:21849): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:28:18:506 Kernel/(21836:21849): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:28:18:506 Kernel/(21836:21849): finalizando por quantum
+[INFO] 19:28:18:551 Kernel/(21836:21845): Creando TCB de prioridad: 6
+[ERROR] 19:28:18:551 Kernel/(21836:21845): PID del HILO creado: 0
+[INFO] 19:28:18:552 Kernel/(21836:21843): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[ERROR] 19:28:18:553 Kernel/(21836:21845): replanificando tid:0 pid:0 
+[INFO] 19:28:18:553 Kernel/(21836:21845): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:28:18:553 Kernel/(21836:21845): cola elegida:0
+[WARNING] 19:28:18:553 Kernel/(21836:21845): TCB elegido tdi:0 pid 0
+[INFO] 19:28:18:553 Kernel/(21836:21845): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:28:18:557 Kernel/(21836:21850): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:28:18:571 Kernel/(21836:21845): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:28:18:571 Kernel/(21836:21845): Esperando Respuesta
+[WARNING] 19:28:18:574 Kernel/(21836:21850): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:28:18:574 Kernel/(21836:21850): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:28:18:574 Kernel/(21836:21850): finalizando por quantum
+[INFO] 19:28:18:613 Kernel/(21836:21845): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:28:18:614 Kernel/(21836:21845): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:28:18:614 Kernel/(21836:21845): cola elegida:5
+[WARNING] 19:28:18:614 Kernel/(21836:21845): TCB elegido tdi:2 pid 0
+[INFO] 19:28:18:614 Kernel/(21836:21845): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:28:18:614 Kernel/(21836:21851): empiezo hilo quantum de tid: 2 pid: 0
+[ERROR] 19:28:18:615 Kernel/(21836:21845): default
+[INFO] 22:29:04:616 Kernel/(22277:22277): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:29:04:617 Kernel/(22277:22277): Conexión exitosa
+[INFO] 22:29:04:617 Kernel/(22277:22277): Conexión exitosa
+[INFO] 22:29:04:617 Kernel/(22277:22277): Conexión exitosa
+[INFO] 22:29:04:620 Kernel/(22277:22277): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:29:04:622 Kernel/(22277:22277): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:29:04:622 Kernel/(22277:22277): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:29:04:623 Kernel/(22277:22282): Solicitando memoria para el proceso: 0
+
+[INFO] 19:29:04:623 Kernel/(22277:22282): Memoria reservada correctamente
+[INFO] 19:29:04:623 Kernel/(22277:22282): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:29:04:623 Kernel/(22277:22282): Creando TCB de prioridad: 0
+[ERROR] 19:29:04:623 Kernel/(22277:22282): PID del HILO creado: 0
+[INFO] 19:29:04:626 Kernel/(22277:22284): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:29:04:626 Kernel/(22277:22286): Cola Ready:
+[TRACE] 19:29:04:626 Kernel/(22277:22286): Cola Blocked:
+[TRACE] 19:29:04:626 Kernel/(22277:22286): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:29:04:628 Kernel/(22277:22286): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:29:04:628 Kernel/(22277:22286): Esperando Respuesta
+[INFO] 19:29:04:676 Kernel/(22277:22286): Creando TCB de prioridad: 6
+[ERROR] 19:29:04:676 Kernel/(22277:22286): PID del HILO creado: 0
+[INFO] 19:29:04:679 Kernel/(22277:22284): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:29:04:681 Kernel/(22277:22286): Creando TCB de prioridad: 5
+[ERROR] 19:29:04:681 Kernel/(22277:22286): PID del HILO creado: 0
+[INFO] 19:29:04:681 Kernel/(22277:22284): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:29:04:683 Kernel/(22277:22286): Creando TCB de prioridad: 5
+[ERROR] 19:29:04:683 Kernel/(22277:22286): PID del HILO creado: 0
+[INFO] 19:29:04:683 Kernel/(22277:22284): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:29:04:684 Kernel/(22277:22286): Creando TCB de prioridad: 6
+[ERROR] 19:29:04:684 Kernel/(22277:22286): PID del HILO creado: 0
+[INFO] 19:29:04:684 Kernel/(22277:22284): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:29:04:702 Kernel/(22277:22286): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:29:04:708 Kernel/(22277:22286): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:29:04:708 Kernel/(22277:22286): Cola Ready:
+[TRACE] 19:29:04:708 Kernel/(22277:22286): Cola Blocked:
+[TRACE] 19:29:04:708 Kernel/(22277:22286): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:29:04:800 Kernel/(22277:22286): default
+[WARNING] 19:29:04:800 Kernel/(22277:22286): Esperando Respuesta
+[INFO] 22:34:46:695 Kernel/(22910:22910): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:34:46:695 Kernel/(22910:22910): Conexión exitosa
+[INFO] 22:34:46:695 Kernel/(22910:22910): Conexión exitosa
+[INFO] 22:34:46:695 Kernel/(22910:22910): Conexión exitosa
+[INFO] 22:34:46:697 Kernel/(22910:22910): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:34:46:697 Kernel/(22910:22910): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:34:46:703 Kernel/(22910:22910): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:34:46:703 Kernel/(22910:22915): Solicitando memoria para el proceso: 0
+
+[INFO] 19:34:46:706 Kernel/(22910:22915): Memoria reservada correctamente
+[INFO] 19:34:46:706 Kernel/(22910:22915): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:34:46:706 Kernel/(22910:22915): Creando TCB de prioridad: 0
+[ERROR] 19:34:46:706 Kernel/(22910:22915): PID del HILO creado: 0
+[INFO] 19:34:46:707 Kernel/(22910:22917): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:34:46:707 Kernel/(22910:22919): Cola Ready:
+[TRACE] 19:34:46:707 Kernel/(22910:22919): Cola Blocked:
+[TRACE] 19:34:46:707 Kernel/(22910:22919): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:34:46:709 Kernel/(22910:22919): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:34:46:709 Kernel/(22910:22919): Esperando Respuesta
+[INFO] 19:34:46:749 Kernel/(22910:22919): Creando TCB de prioridad: 6
+[ERROR] 19:34:46:749 Kernel/(22910:22919): PID del HILO creado: 0
+[INFO] 19:34:46:751 Kernel/(22910:22917): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:34:46:753 Kernel/(22910:22919): Creando TCB de prioridad: 5
+[ERROR] 19:34:46:753 Kernel/(22910:22919): PID del HILO creado: 0
+[INFO] 19:34:46:754 Kernel/(22910:22917): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:34:46:756 Kernel/(22910:22919): Creando TCB de prioridad: 5
+[ERROR] 19:34:46:756 Kernel/(22910:22919): PID del HILO creado: 0
+[INFO] 19:34:46:756 Kernel/(22910:22917): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:34:46:758 Kernel/(22910:22919): Creando TCB de prioridad: 6
+[ERROR] 19:34:46:758 Kernel/(22910:22919): PID del HILO creado: 0
+[INFO] 19:34:46:758 Kernel/(22910:22917): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:34:46:760 Kernel/(22910:22919): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:34:46:775 Kernel/(22910:22919): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:34:46:783 Kernel/(22910:22919): Cola Ready:
+[TRACE] 19:34:46:783 Kernel/(22910:22919): Cola Blocked:
+[TRACE] 19:34:46:783 Kernel/(22910:22919): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:34:46:783 Kernel/(22910:22919): default
+[WARNING] 19:34:46:783 Kernel/(22910:22919): Esperando Respuesta
+[INFO] 22:35:03:451 Kernel/(23306:23306): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:35:03:452 Kernel/(23306:23306): Conexión exitosa
+[INFO] 22:35:03:453 Kernel/(23306:23306): Conexión exitosa
+[INFO] 22:35:03:453 Kernel/(23306:23306): Conexión exitosa
+[INFO] 22:35:03:463 Kernel/(23306:23306): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:03:463 Kernel/(23306:23306): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:03:465 Kernel/(23306:23306): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:03:466 Kernel/(23306:23311): Solicitando memoria para el proceso: 0
+
+[INFO] 19:35:03:466 Kernel/(23306:23311): Memoria reservada correctamente
+[INFO] 19:35:03:466 Kernel/(23306:23311): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:35:03:466 Kernel/(23306:23311): Creando TCB de prioridad: 0
+[ERROR] 19:35:03:466 Kernel/(23306:23311): PID del HILO creado: 0
+[INFO] 19:35:03:467 Kernel/(23306:23313): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:35:03:468 Kernel/(23306:23315): Cola Ready:
+[TRACE] 19:35:03:468 Kernel/(23306:23315): Cola Blocked:
+[TRACE] 19:35:03:468 Kernel/(23306:23315): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:35:03:470 Kernel/(23306:23315): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:35:03:471 Kernel/(23306:23315): Esperando Respuesta
+[INFO] 19:35:03:516 Kernel/(23306:23315): Creando TCB de prioridad: 6
+[ERROR] 19:35:03:517 Kernel/(23306:23315): PID del HILO creado: 0
+[INFO] 19:35:03:520 Kernel/(23306:23313): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:03:523 Kernel/(23306:23315): Creando TCB de prioridad: 5
+[ERROR] 19:35:03:523 Kernel/(23306:23315): PID del HILO creado: 0
+[INFO] 19:35:03:539 Kernel/(23306:23313): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:03:543 Kernel/(23306:23315): Creando TCB de prioridad: 5
+[ERROR] 19:35:03:543 Kernel/(23306:23315): PID del HILO creado: 0
+[INFO] 19:35:03:543 Kernel/(23306:23313): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:03:549 Kernel/(23306:23315): Creando TCB de prioridad: 6
+[ERROR] 19:35:03:549 Kernel/(23306:23315): PID del HILO creado: 0
+[INFO] 19:35:03:549 Kernel/(23306:23313): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:03:552 Kernel/(23306:23315): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:35:03:552 Kernel/(23306:23315): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:35:03:552 Kernel/(23306:23315): Cola Ready:
+[TRACE] 19:35:03:553 Kernel/(23306:23315): Cola Blocked:
+[TRACE] 19:35:03:553 Kernel/(23306:23315): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:35:03:553 Kernel/(23306:23315): default
+[WARNING] 19:35:03:553 Kernel/(23306:23315): Esperando Respuesta
+[INFO] 22:35:10:587 Kernel/(23697:23697): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:35:10:596 Kernel/(23697:23697): Conexión exitosa
+[INFO] 22:35:10:599 Kernel/(23697:23697): Conexión exitosa
+[INFO] 22:35:10:601 Kernel/(23697:23697): Conexión exitosa
+[INFO] 22:35:10:602 Kernel/(23697:23697): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:10:603 Kernel/(23697:23697): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:10:604 Kernel/(23697:23697): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:10:605 Kernel/(23697:23703): Solicitando memoria para el proceso: 0
+
+[INFO] 19:35:10:605 Kernel/(23697:23703): Memoria reservada correctamente
+[INFO] 19:35:10:605 Kernel/(23697:23703): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:35:10:605 Kernel/(23697:23703): Creando TCB de prioridad: 0
+[ERROR] 19:35:10:605 Kernel/(23697:23703): PID del HILO creado: 0
+[INFO] 19:35:10:606 Kernel/(23697:23705): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:35:10:606 Kernel/(23697:23707): Cola Ready:
+[TRACE] 19:35:10:606 Kernel/(23697:23707): Cola Blocked:
+[TRACE] 19:35:10:606 Kernel/(23697:23707): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:35:10:607 Kernel/(23697:23707): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:35:10:607 Kernel/(23697:23707): Esperando Respuesta
+[INFO] 19:35:10:649 Kernel/(23697:23707): Creando TCB de prioridad: 6
+[ERROR] 19:35:10:650 Kernel/(23697:23707): PID del HILO creado: 0
+[INFO] 19:35:10:650 Kernel/(23697:23705): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:10:659 Kernel/(23697:23707): Creando TCB de prioridad: 5
+[ERROR] 19:35:10:659 Kernel/(23697:23707): PID del HILO creado: 0
+[INFO] 19:35:10:671 Kernel/(23697:23705): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:10:676 Kernel/(23697:23707): Creando TCB de prioridad: 5
+[ERROR] 19:35:10:676 Kernel/(23697:23707): PID del HILO creado: 0
+[INFO] 19:35:10:676 Kernel/(23697:23705): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:10:679 Kernel/(23697:23707): Creando TCB de prioridad: 6
+[ERROR] 19:35:10:679 Kernel/(23697:23707): PID del HILO creado: 0
+[INFO] 19:35:10:680 Kernel/(23697:23705): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:10:682 Kernel/(23697:23707): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:35:10:682 Kernel/(23697:23707): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:35:10:682 Kernel/(23697:23707): Cola Ready:
+[TRACE] 19:35:10:682 Kernel/(23697:23707): Cola Blocked:
+[TRACE] 19:35:10:682 Kernel/(23697:23707): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:35:10:683 Kernel/(23697:23707): default
+[WARNING] 19:35:10:683 Kernel/(23697:23707): Esperando Respuesta
+[INFO] 22:35:28:342 Kernel/(24090:24090): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:35:28:344 Kernel/(24090:24090): Conexión exitosa
+[INFO] 22:35:28:344 Kernel/(24090:24090): Conexión exitosa
+[INFO] 22:35:28:344 Kernel/(24090:24090): Conexión exitosa
+[INFO] 22:35:28:348 Kernel/(24090:24090): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:28:349 Kernel/(24090:24090): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:28:349 Kernel/(24090:24090): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:28:350 Kernel/(24090:24095): Solicitando memoria para el proceso: 0
+
+[INFO] 19:35:28:351 Kernel/(24090:24095): Memoria reservada correctamente
+[INFO] 19:35:28:351 Kernel/(24090:24095): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:35:28:351 Kernel/(24090:24095): Creando TCB de prioridad: 0
+[ERROR] 19:35:28:351 Kernel/(24090:24095): PID del HILO creado: 0
+[INFO] 19:35:28:352 Kernel/(24090:24097): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:35:28:352 Kernel/(24090:24099): Cola Ready:
+[TRACE] 19:35:28:352 Kernel/(24090:24099): Cola Blocked:
+[TRACE] 19:35:28:352 Kernel/(24090:24099): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:35:28:355 Kernel/(24090:24099): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:35:28:355 Kernel/(24090:24099): Esperando Respuesta
+[INFO] 19:35:28:399 Kernel/(24090:24099): Creando TCB de prioridad: 6
+[ERROR] 19:35:28:399 Kernel/(24090:24099): PID del HILO creado: 0
+[INFO] 19:35:28:400 Kernel/(24090:24097): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:28:400 Kernel/(24090:24099): Creando TCB de prioridad: 5
+[ERROR] 19:35:28:400 Kernel/(24090:24099): PID del HILO creado: 0
+[INFO] 19:35:28:400 Kernel/(24090:24097): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:28:401 Kernel/(24090:24099): Creando TCB de prioridad: 5
+[ERROR] 19:35:28:401 Kernel/(24090:24099): PID del HILO creado: 0
+[INFO] 19:35:28:402 Kernel/(24090:24097): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:28:405 Kernel/(24090:24099): Creando TCB de prioridad: 6
+[ERROR] 19:35:28:405 Kernel/(24090:24099): PID del HILO creado: 0
+[INFO] 19:35:28:406 Kernel/(24090:24097): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:28:409 Kernel/(24090:24099): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:35:28:410 Kernel/(24090:24099): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:35:28:411 Kernel/(24090:24099): Cola Ready:
+[TRACE] 19:35:28:411 Kernel/(24090:24099): Cola Blocked:
+[TRACE] 19:35:28:411 Kernel/(24090:24099): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:35:28:412 Kernel/(24090:24099): default
+[WARNING] 19:35:28:412 Kernel/(24090:24099): Esperando Respuesta
+[INFO] 22:35:34:145 Kernel/(24481:24481): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:35:34:147 Kernel/(24481:24481): Conexión exitosa
+[INFO] 22:35:34:147 Kernel/(24481:24481): Conexión exitosa
+[INFO] 22:35:34:147 Kernel/(24481:24481): Conexión exitosa
+[INFO] 22:35:34:148 Kernel/(24481:24481): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:35:34:150 Kernel/(24481:24481): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:35:34:152 Kernel/(24481:24481): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:35:34:153 Kernel/(24481:24486): Solicitando memoria para el proceso: 0
+
+[INFO] 19:35:34:154 Kernel/(24481:24486): Memoria reservada correctamente
+[INFO] 19:35:34:154 Kernel/(24481:24486): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:35:34:154 Kernel/(24481:24486): Creando TCB de prioridad: 0
+[ERROR] 19:35:34:154 Kernel/(24481:24486): PID del HILO creado: 0
+[INFO] 19:35:34:155 Kernel/(24481:24488): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:35:34:155 Kernel/(24481:24490): Cola Ready:
+[TRACE] 19:35:34:155 Kernel/(24481:24490): Cola Blocked:
+[TRACE] 19:35:34:155 Kernel/(24481:24490): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:35:34:156 Kernel/(24481:24490): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:35:34:156 Kernel/(24481:24490): Esperando Respuesta
+[INFO] 19:35:34:202 Kernel/(24481:24490): Creando TCB de prioridad: 6
+[ERROR] 19:35:34:202 Kernel/(24481:24490): PID del HILO creado: 0
+[INFO] 19:35:34:204 Kernel/(24481:24488): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:34:221 Kernel/(24481:24490): Creando TCB de prioridad: 5
+[ERROR] 19:35:34:221 Kernel/(24481:24490): PID del HILO creado: 0
+[INFO] 19:35:34:221 Kernel/(24481:24488): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:34:223 Kernel/(24481:24490): Creando TCB de prioridad: 5
+[ERROR] 19:35:34:223 Kernel/(24481:24490): PID del HILO creado: 0
+[INFO] 19:35:34:223 Kernel/(24481:24488): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:34:225 Kernel/(24481:24490): Creando TCB de prioridad: 6
+[ERROR] 19:35:34:225 Kernel/(24481:24490): PID del HILO creado: 0
+[INFO] 19:35:34:225 Kernel/(24481:24488): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:35:34:228 Kernel/(24481:24490): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:35:34:228 Kernel/(24481:24490): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:35:34:228 Kernel/(24481:24490): Cola Ready:
+[TRACE] 19:35:34:228 Kernel/(24481:24490): Cola Blocked:
+[TRACE] 19:35:34:228 Kernel/(24481:24490): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:35:34:317 Kernel/(24481:24490): default
+[WARNING] 19:35:34:318 Kernel/(24481:24490): Esperando Respuesta
+[INFO] 22:36:20:098 Kernel/(24911:24911): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:36:20:098 Kernel/(24911:24911): Conexión exitosa
+[INFO] 22:36:20:101 Kernel/(24911:24911): Conexión exitosa
+[INFO] 22:36:20:101 Kernel/(24911:24911): Conexión exitosa
+[INFO] 22:36:20:101 Kernel/(24911:24911): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:36:20:103 Kernel/(24911:24911): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:36:20:104 Kernel/(24911:24911): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:36:20:104 Kernel/(24911:24916): Solicitando memoria para el proceso: 0
+
+[INFO] 19:36:20:106 Kernel/(24911:24916): Memoria reservada correctamente
+[INFO] 19:36:20:106 Kernel/(24911:24916): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:36:20:106 Kernel/(24911:24916): Creando TCB de prioridad: 0
+[ERROR] 19:36:20:106 Kernel/(24911:24916): PID del HILO creado: 0
+[INFO] 19:36:20:106 Kernel/(24911:24918): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:36:20:108 Kernel/(24911:24920): Cola Ready:
+[TRACE] 19:36:20:108 Kernel/(24911:24920): Cola Blocked:
+[TRACE] 19:36:20:108 Kernel/(24911:24920): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:36:20:110 Kernel/(24911:24920): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:36:20:110 Kernel/(24911:24920): Esperando Respuesta
+[INFO] 19:36:20:152 Kernel/(24911:24920): Creando TCB de prioridad: 6
+[ERROR] 19:36:20:157 Kernel/(24911:24920): PID del HILO creado: 0
+[INFO] 19:36:20:164 Kernel/(24911:24918): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:36:20:166 Kernel/(24911:24920): Creando TCB de prioridad: 5
+[ERROR] 19:36:20:166 Kernel/(24911:24920): PID del HILO creado: 0
+[INFO] 19:36:20:166 Kernel/(24911:24918): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:36:20:168 Kernel/(24911:24920): Creando TCB de prioridad: 5
+[ERROR] 19:36:20:168 Kernel/(24911:24920): PID del HILO creado: 0
+[INFO] 19:36:20:169 Kernel/(24911:24918): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:36:20:171 Kernel/(24911:24920): Creando TCB de prioridad: 6
+[ERROR] 19:36:20:171 Kernel/(24911:24920): PID del HILO creado: 0
+[INFO] 19:36:20:172 Kernel/(24911:24918): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:36:20:175 Kernel/(24911:24920): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:36:20:176 Kernel/(24911:24920): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:36:20:176 Kernel/(24911:24920): Cola Ready:
+[TRACE] 19:36:20:176 Kernel/(24911:24920): Cola Blocked:
+[TRACE] 19:36:20:176 Kernel/(24911:24920): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[TRACE] 19:36:20:178 Kernel/(24911:24920): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:36:20:178 Kernel/(24911:24920): Esperando Respuesta
+[INFO] 19:36:20:227 Kernel/(24911:24920): ## Finaliza el proceso 0
+[WARNING] 19:36:20:227 Kernel/(24911:24920): Este hilo de tid: 1  con prioridad ; 6 no tiene los permisos para finalizar el proceso: 0
+[INFO] 22:40:26:225 Kernel/(25433:25433): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:40:26:225 Kernel/(25433:25433): Conexión exitosa
+[INFO] 22:40:26:226 Kernel/(25433:25433): Conexión exitosa
+[INFO] 22:40:26:231 Kernel/(25433:25433): Conexión exitosa
+[INFO] 22:40:26:234 Kernel/(25433:25433): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:40:26:236 Kernel/(25433:25433): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:40:26:237 Kernel/(25433:25433): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:40:26:238 Kernel/(25433:25438): Solicitando memoria para el proceso: 0
+
+[INFO] 19:40:26:238 Kernel/(25433:25438): Memoria reservada correctamente
+[INFO] 19:40:26:238 Kernel/(25433:25438): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:40:26:238 Kernel/(25433:25438): Creando TCB de prioridad: 0
+[ERROR] 19:40:26:238 Kernel/(25433:25438): PID del HILO creado: 0
+[INFO] 19:40:26:238 Kernel/(25433:25440): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:40:26:239 Kernel/(25433:25442): Cola Ready:
+[TRACE] 19:40:26:239 Kernel/(25433:25442): Cola Blocked:
+[TRACE] 19:40:26:239 Kernel/(25433:25442): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:40:26:239 Kernel/(25433:25442): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:40:26:239 Kernel/(25433:25442): Esperando Respuesta
+[INFO] 19:40:26:288 Kernel/(25433:25442): Creando TCB de prioridad: 6
+[ERROR] 19:40:26:288 Kernel/(25433:25442): PID del HILO creado: 0
+[INFO] 19:40:26:290 Kernel/(25433:25440): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:40:26:294 Kernel/(25433:25442): Creando TCB de prioridad: 5
+[ERROR] 19:40:26:294 Kernel/(25433:25442): PID del HILO creado: 0
+[INFO] 19:40:26:295 Kernel/(25433:25440): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:40:26:297 Kernel/(25433:25442): Creando TCB de prioridad: 5
+[ERROR] 19:40:26:297 Kernel/(25433:25442): PID del HILO creado: 0
+[INFO] 19:40:26:298 Kernel/(25433:25440): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:40:26:299 Kernel/(25433:25442): Creando TCB de prioridad: 6
+[ERROR] 19:40:26:299 Kernel/(25433:25442): PID del HILO creado: 0
+[INFO] 19:40:26:299 Kernel/(25433:25440): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:40:26:301 Kernel/(25433:25442): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 22:41:53:316 Kernel/(26072:26072): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:41:53:316 Kernel/(26072:26072): Conexión exitosa
+[INFO] 22:41:53:317 Kernel/(26072:26072): Conexión exitosa
+[INFO] 22:41:53:317 Kernel/(26072:26072): Conexión exitosa
+[INFO] 22:41:53:317 Kernel/(26072:26072): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:41:53:318 Kernel/(26072:26072): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:41:53:319 Kernel/(26072:26072): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:41:53:324 Kernel/(26072:26094): Solicitando memoria para el proceso: 0
+
+[INFO] 19:41:53:330 Kernel/(26072:26094): Memoria reservada correctamente
+[INFO] 19:41:53:330 Kernel/(26072:26094): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:41:53:331 Kernel/(26072:26094): Creando TCB de prioridad: 0
+[ERROR] 19:41:53:331 Kernel/(26072:26094): PID del HILO creado: 0
+[INFO] 19:41:53:334 Kernel/(26072:26096): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:41:53:334 Kernel/(26072:26098): Cola Ready:
+[TRACE] 19:41:53:335 Kernel/(26072:26098): Cola Blocked:
+[TRACE] 19:41:53:335 Kernel/(26072:26098): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:41:53:336 Kernel/(26072:26098): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:41:53:336 Kernel/(26072:26098): Esperando Respuesta
+[INFO] 19:41:53:380 Kernel/(26072:26098): Creando TCB de prioridad: 6
+[ERROR] 19:41:53:380 Kernel/(26072:26098): PID del HILO creado: 0
+[INFO] 19:41:53:380 Kernel/(26072:26096): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:41:53:385 Kernel/(26072:26098): Creando TCB de prioridad: 5
+[ERROR] 19:41:53:386 Kernel/(26072:26098): PID del HILO creado: 0
+[INFO] 19:41:53:387 Kernel/(26072:26096): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:41:53:389 Kernel/(26072:26098): Creando TCB de prioridad: 5
+[ERROR] 19:41:53:389 Kernel/(26072:26098): PID del HILO creado: 0
+[INFO] 19:41:53:389 Kernel/(26072:26096): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:41:53:391 Kernel/(26072:26098): Creando TCB de prioridad: 6
+[ERROR] 19:41:53:391 Kernel/(26072:26098): PID del HILO creado: 0
+[INFO] 19:41:53:391 Kernel/(26072:26096): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:41:53:393 Kernel/(26072:26098): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 22:43:44:387 Kernel/(26697:26697): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:43:44:388 Kernel/(26697:26697): Conexión exitosa
+[INFO] 22:43:44:388 Kernel/(26697:26697): Conexión exitosa
+[INFO] 22:43:44:388 Kernel/(26697:26697): Conexión exitosa
+[INFO] 22:43:44:392 Kernel/(26697:26697): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:43:44:395 Kernel/(26697:26697): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:43:44:396 Kernel/(26697:26697): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:43:44:396 Kernel/(26697:26702): Solicitando memoria para el proceso: 0
+
+[INFO] 19:43:44:396 Kernel/(26697:26702): Memoria reservada correctamente
+[INFO] 19:43:44:396 Kernel/(26697:26702): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:43:44:396 Kernel/(26697:26702): Creando TCB de prioridad: 0
+[ERROR] 19:43:44:396 Kernel/(26697:26702): PID del HILO creado: 0
+[INFO] 19:43:44:397 Kernel/(26697:26704): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:43:44:397 Kernel/(26697:26706): Cola Ready:
+[TRACE] 19:43:44:397 Kernel/(26697:26706): Cola Blocked:
+[TRACE] 19:43:44:397 Kernel/(26697:26706): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:43:44:398 Kernel/(26697:26706): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:43:44:398 Kernel/(26697:26706): Esperando Respuesta
+[INFO] 19:43:44:449 Kernel/(26697:26706): Creando TCB de prioridad: 6
+[ERROR] 19:43:44:455 Kernel/(26697:26706): PID del HILO creado: 0
+[INFO] 19:43:44:460 Kernel/(26697:26704): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:43:44:463 Kernel/(26697:26706): Creando TCB de prioridad: 5
+[ERROR] 19:43:44:463 Kernel/(26697:26706): PID del HILO creado: 0
+[INFO] 19:43:44:463 Kernel/(26697:26704): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:43:44:468 Kernel/(26697:26706): Creando TCB de prioridad: 5
+[ERROR] 19:43:44:468 Kernel/(26697:26706): PID del HILO creado: 0
+[INFO] 19:43:44:469 Kernel/(26697:26704): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:43:44:471 Kernel/(26697:26706): Creando TCB de prioridad: 6
+[ERROR] 19:43:44:471 Kernel/(26697:26706): PID del HILO creado: 0
+[INFO] 19:43:44:473 Kernel/(26697:26704): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:43:44:475 Kernel/(26697:26706): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:43:44:476 Kernel/(26697:26706): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:43:44:476 Kernel/(26697:26706): Cola Ready:
+[TRACE] 19:43:44:476 Kernel/(26697:26706): Cola Blocked:
+[TRACE] 19:43:44:476 Kernel/(26697:26706): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[ERROR] 19:43:44:578 Kernel/(26697:26706): default
+[WARNING] 19:43:44:578 Kernel/(26697:26706): Esperando Respuesta
+[INFO] 22:46:25:779 Kernel/(27406:27406): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:46:25:779 Kernel/(27406:27406): Conexión exitosa
+[INFO] 22:46:25:780 Kernel/(27406:27406): Conexión exitosa
+[INFO] 22:46:25:780 Kernel/(27406:27406): Conexión exitosa
+[INFO] 22:46:25:780 Kernel/(27406:27406): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:46:25:783 Kernel/(27406:27406): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:46:25:784 Kernel/(27406:27406): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:46:25:784 Kernel/(27406:27411): Solicitando memoria para el proceso: 0
+
+[INFO] 19:46:25:785 Kernel/(27406:27411): Memoria reservada correctamente
+[INFO] 19:46:25:785 Kernel/(27406:27411): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:46:25:785 Kernel/(27406:27411): Creando TCB de prioridad: 0
+[ERROR] 19:46:25:785 Kernel/(27406:27411): PID del HILO creado: 0
+[INFO] 19:46:25:785 Kernel/(27406:27413): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:46:25:785 Kernel/(27406:27415): Cola Ready:
+[TRACE] 19:46:25:785 Kernel/(27406:27415): Cola Blocked:
+[TRACE] 19:46:25:785 Kernel/(27406:27415): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:46:25:788 Kernel/(27406:27415): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:46:25:788 Kernel/(27406:27415): Esperando Respuesta
+[INFO] 19:46:27:211 Kernel/(27406:27415): Creando TCB de prioridad: 6
+[ERROR] 19:46:27:212 Kernel/(27406:27415): PID del HILO creado: 0
+[INFO] 19:46:27:223 Kernel/(27406:27413): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:46:27:238 Kernel/(27406:27415): Creando TCB de prioridad: 5
+[ERROR] 19:46:27:238 Kernel/(27406:27415): PID del HILO creado: 0
+[INFO] 19:46:27:238 Kernel/(27406:27413): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:46:27:249 Kernel/(27406:27415): Creando TCB de prioridad: 5
+[ERROR] 19:46:27:249 Kernel/(27406:27415): PID del HILO creado: 0
+[INFO] 19:46:27:253 Kernel/(27406:27413): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:46:27:261 Kernel/(27406:27415): Creando TCB de prioridad: 6
+[ERROR] 19:46:27:261 Kernel/(27406:27415): PID del HILO creado: 0
+[INFO] 19:46:27:262 Kernel/(27406:27413): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:46:27:263 Kernel/(27406:27415): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:46:27:263 Kernel/(27406:27415): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:46:27:263 Kernel/(27406:27415): Cola Ready:
+[TRACE] 19:46:27:263 Kernel/(27406:27415): Cola Blocked:
+[TRACE] 19:46:27:263 Kernel/(27406:27415): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[TRACE] 19:46:27:265 Kernel/(27406:27415): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:46:27:265 Kernel/(27406:27415): Esperando Respuesta
+[INFO] 19:46:27:306 Kernel/(27406:27415): ## (0:1) Finaliza el hilo
+[INFO] 19:46:27:306 Kernel/(27406:27415): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 19:46:27:306 Kernel/(27406:27414): entro a fin_hilo
+[INFO] 19:46:27:307 Kernel/(27406:27414): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 19:46:27:307 Kernel/(27406:27415): ## (0:-57933824) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:46:27:307 Kernel/(27406:27415): Cola Ready:
+[TRACE] 19:46:27:307 Kernel/(27406:27415): Cola Blocked:
+[TRACE] 19:46:27:307 Kernel/(27406:27415): Planificando TCB 2,PID 0 con algoritmo FIFO
+
+[TRACE] 19:46:27:307 Kernel/(27406:27415): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:46:27:307 Kernel/(27406:27415): Esperando Respuesta
+[INFO] 19:46:27:352 Kernel/(27406:27415): ## (0:2) Finaliza el hilo
+[INFO] 19:46:27:353 Kernel/(27406:27415): Finalizando hilo con TID: 2 del proceso con PID: 0
+[INFO] 19:46:27:353 Kernel/(27406:27414): entro a fin_hilo
+[INFO] 19:46:27:354 Kernel/(27406:27414): ## Finaliza el hilo <2> del proceso <0>
+[INFO] 19:46:27:355 Kernel/(27406:27415): ## (0:1015795456) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:46:27:356 Kernel/(27406:27415): Cola Ready:
+[TRACE] 19:46:27:356 Kernel/(27406:27415): Cola Blocked:
+[TRACE] 19:46:27:356 Kernel/(27406:27415): Planificando TCB 3,PID 0 con algoritmo FIFO
+
+[ERROR] 19:46:27:541 Kernel/(27406:27415): default
+[WARNING] 19:46:27:541 Kernel/(27406:27415): Esperando Respuesta
+[INFO] 22:52:18:679 Kernel/(28032:28032): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:52:18:679 Kernel/(28032:28032): Conexión exitosa
+[INFO] 22:52:18:679 Kernel/(28032:28032): Conexión exitosa
+[INFO] 22:52:18:679 Kernel/(28032:28032): Conexión exitosa
+[INFO] 22:52:18:682 Kernel/(28032:28032): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:52:18:683 Kernel/(28032:28032): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:52:18:684 Kernel/(28032:28032): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:52:18:684 Kernel/(28032:28037): Solicitando memoria para el proceso: 0
+
+[INFO] 19:52:18:685 Kernel/(28032:28037): Memoria reservada correctamente
+[INFO] 19:52:18:685 Kernel/(28032:28037): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:52:18:685 Kernel/(28032:28037): Creando TCB de prioridad: 0
+[ERROR] 19:52:18:685 Kernel/(28032:28037): PID del HILO creado: 0
+[INFO] 19:52:18:687 Kernel/(28032:28039): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[TRACE] 19:52:18:687 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:687 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:687 Kernel/(28032:28041): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:689 Kernel/(28032:28041): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:52:18:689 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:18:735 Kernel/(28032:28041): Creando TCB de prioridad: 6
+[ERROR] 19:52:18:735 Kernel/(28032:28041): PID del HILO creado: 0
+[INFO] 19:52:18:736 Kernel/(28032:28039): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:52:18:736 Kernel/(28032:28041): Creando TCB de prioridad: 5
+[ERROR] 19:52:18:736 Kernel/(28032:28041): PID del HILO creado: 0
+[INFO] 19:52:18:742 Kernel/(28032:28039): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:52:18:755 Kernel/(28032:28041): Creando TCB de prioridad: 5
+[ERROR] 19:52:18:755 Kernel/(28032:28041): PID del HILO creado: 0
+[INFO] 19:52:18:755 Kernel/(28032:28039): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:52:18:756 Kernel/(28032:28041): Creando TCB de prioridad: 6
+[ERROR] 19:52:18:757 Kernel/(28032:28041): PID del HILO creado: 0
+[INFO] 19:52:18:757 Kernel/(28032:28039): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:52:18:759 Kernel/(28032:28041): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:52:18:761 Kernel/(28032:28041): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:52:18:761 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:761 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:761 Kernel/(28032:28041): Planificando TCB 1,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:762 Kernel/(28032:28041): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:52:18:762 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:18:806 Kernel/(28032:28041): ## (0:1) Finaliza el hilo
+[INFO] 19:52:18:806 Kernel/(28032:28041): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 19:52:18:806 Kernel/(28032:28040): entro a fin_hilo
+[INFO] 19:52:18:807 Kernel/(28032:28040): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 19:52:18:809 Kernel/(28032:28041): ## (0:-237879296) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:52:18:809 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:809 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:809 Kernel/(28032:28041): Planificando TCB 2,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:810 Kernel/(28032:28041): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:52:18:810 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:18:863 Kernel/(28032:28041): ## (0:2) Finaliza el hilo
+[INFO] 19:52:18:863 Kernel/(28032:28041): Finalizando hilo con TID: 2 del proceso con PID: 0
+[INFO] 19:52:18:863 Kernel/(28032:28040): entro a fin_hilo
+[INFO] 19:52:18:866 Kernel/(28032:28040): ## Finaliza el hilo <2> del proceso <0>
+[INFO] 19:52:18:867 Kernel/(28032:28041): ## (0:-707653888) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:52:18:867 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:867 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:868 Kernel/(28032:28041): Planificando TCB 3,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:868 Kernel/(28032:28041): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:52:18:868 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:18:910 Kernel/(28032:28041): ## (0:3) Finaliza el hilo
+[INFO] 19:52:18:910 Kernel/(28032:28041): Finalizando hilo con TID: 3 del proceso con PID: 0
+[INFO] 19:52:18:911 Kernel/(28032:28040): entro a fin_hilo
+[INFO] 19:52:18:911 Kernel/(28032:28040): ## Finaliza el hilo <3> del proceso <0>
+[INFO] 19:52:18:912 Kernel/(28032:28041): ## (0:-774746576) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:52:18:912 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:912 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:912 Kernel/(28032:28041): Planificando TCB 4,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:916 Kernel/(28032:28041): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:52:18:916 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:18:958 Kernel/(28032:28041): ## (0:4) Finaliza el hilo
+[INFO] 19:52:18:958 Kernel/(28032:28041): Finalizando hilo con TID: 4 del proceso con PID: 0
+[INFO] 19:52:18:958 Kernel/(28032:28040): entro a fin_hilo
+[INFO] 19:52:18:959 Kernel/(28032:28040): ## Finaliza el hilo <4> del proceso <0>
+[INFO] 19:52:18:959 Kernel/(28032:28041): ## (0:-707638224) - Solicito syscall: SUSP_PROCESO
+[TRACE] 19:52:18:959 Kernel/(28032:28041): Cola Ready:
+[TRACE] 19:52:18:959 Kernel/(28032:28041): Cola Blocked:
+[TRACE] 19:52:18:959 Kernel/(28032:28041): Planificando TCB 0,PID 0 con algoritmo FIFO
+
+[TRACE] 19:52:18:960 Kernel/(28032:28041): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:52:18:961 Kernel/(28032:28041): Esperando Respuesta
+[INFO] 19:52:19:006 Kernel/(28032:28041): ## Finaliza el proceso 0
+[INFO] 19:52:19:006 Kernel/(28032:28038): intentando finalizar proceso con pid: 0
+[INFO] 19:52:19:007 Kernel/(28032:28038): ## Finaliza el proceso <0>
+[INFO] 19:52:19:007 Kernel/(28032:28041): ## (0:-640509887) - Solicito syscall: SUSP_PROCESO
+[INFO] 22:53:31:888 Kernel/(28455:28455): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:53:31:888 Kernel/(28455:28455): Conexión exitosa
+[INFO] 22:53:31:890 Kernel/(28455:28455): Conexión exitosa
+[INFO] 22:53:31:892 Kernel/(28455:28455): Conexión exitosa
+[INFO] 22:53:31:894 Kernel/(28455:28455): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:53:31:894 Kernel/(28455:28455): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:53:31:895 Kernel/(28455:28455): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:53:31:895 Kernel/(28455:28460): Solicitando memoria para el proceso: 0
+
+[INFO] 19:53:31:895 Kernel/(28455:28460): Memoria reservada correctamente
+[INFO] 19:53:31:895 Kernel/(28455:28460): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:53:31:895 Kernel/(28455:28460): Creando TCB de prioridad: 0
+[ERROR] 19:53:31:895 Kernel/(28455:28460): PID del HILO creado: 0
+[INFO] 19:53:31:896 Kernel/(28455:28462): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:31:896 Kernel/(28455:28464): Planificando TCB 0,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:31:898 Kernel/(28455:28464): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:31:899 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:33:460 Kernel/(28455:28464): Creando TCB de prioridad: 6
+[ERROR] 19:53:33:461 Kernel/(28455:28464): PID del HILO creado: 0
+[INFO] 19:53:33:461 Kernel/(28455:28462): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:33:468 Kernel/(28455:28464): Creando TCB de prioridad: 5
+[ERROR] 19:53:33:468 Kernel/(28455:28464): PID del HILO creado: 0
+[INFO] 19:53:33:469 Kernel/(28455:28462): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:33:470 Kernel/(28455:28464): Creando TCB de prioridad: 5
+[ERROR] 19:53:33:470 Kernel/(28455:28464): PID del HILO creado: 0
+[INFO] 19:53:33:470 Kernel/(28455:28462): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:33:473 Kernel/(28455:28464): Creando TCB de prioridad: 6
+[ERROR] 19:53:33:473 Kernel/(28455:28464): PID del HILO creado: 0
+[INFO] 19:53:33:474 Kernel/(28455:28462): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:33:475 Kernel/(28455:28464): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:53:33:476 Kernel/(28455:28464): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:33:476 Kernel/(28455:28464): Planificando TCB 2,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:33:477 Kernel/(28455:28464): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:33:477 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:34:211 Kernel/(28455:28464): ## (0:2) Finaliza el hilo
+[INFO] 19:53:34:211 Kernel/(28455:28464): Finalizando hilo con TID: 2 del proceso con PID: 0
+[INFO] 19:53:34:217 Kernel/(28455:28463): entro a fin_hilo
+[INFO] 19:53:34:218 Kernel/(28455:28463): ## Finaliza el hilo <2> del proceso <0>
+[INFO] 19:53:34:219 Kernel/(28455:28464): ## (0:-78692352) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:34:219 Kernel/(28455:28464): Planificando TCB 3,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:34:230 Kernel/(28455:28464): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:34:230 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:34:287 Kernel/(28455:28464): ## (0:3) Finaliza el hilo
+[INFO] 19:53:34:305 Kernel/(28455:28464): Finalizando hilo con TID: 3 del proceso con PID: 0
+[INFO] 19:53:34:310 Kernel/(28455:28463): entro a fin_hilo
+[INFO] 19:53:34:312 Kernel/(28455:28463): ## Finaliza el hilo <3> del proceso <0>
+[INFO] 19:53:34:339 Kernel/(28455:28464): ## (0:256855024) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:34:343 Kernel/(28455:28464): Planificando TCB 1,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:34:347 Kernel/(28455:28464): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:34:347 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:34:395 Kernel/(28455:28464): ## (0:1) Finaliza el hilo
+[INFO] 19:53:34:395 Kernel/(28455:28464): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 19:53:34:396 Kernel/(28455:28463): entro a fin_hilo
+[INFO] 19:53:34:396 Kernel/(28455:28463): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 19:53:34:398 Kernel/(28455:28464): ## (0:256854960) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:34:398 Kernel/(28455:28464): Planificando TCB 4,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:34:400 Kernel/(28455:28464): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:34:400 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:34:441 Kernel/(28455:28464): ## (0:4) Finaliza el hilo
+[INFO] 19:53:34:441 Kernel/(28455:28464): Finalizando hilo con TID: 4 del proceso con PID: 0
+[INFO] 19:53:34:442 Kernel/(28455:28463): entro a fin_hilo
+[INFO] 19:53:34:443 Kernel/(28455:28463): ## Finaliza el hilo <4> del proceso <0>
+[INFO] 19:53:34:444 Kernel/(28455:28464): ## (0:256855521) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:34:444 Kernel/(28455:28464): Planificando TCB 0,PID 0 con algoritmo PRIORIDADES
+
+[TRACE] 19:53:34:447 Kernel/(28455:28464): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:34:447 Kernel/(28455:28464): Esperando Respuesta
+[INFO] 19:53:34:491 Kernel/(28455:28464): ## Finaliza el proceso 0
+[INFO] 19:53:34:492 Kernel/(28455:28461): intentando finalizar proceso con pid: 0
+[INFO] 19:53:34:492 Kernel/(28455:28461): ## Finaliza el proceso <0>
+[INFO] 19:53:34:513 Kernel/(28455:28464): ## (0:-78643199) - Solicito syscall: SUSP_PROCESO
+[INFO] 22:53:52:842 Kernel/(28871:28871): ruta de archivo : PLANI_PROC ; tamanio_proceso : 32
+[INFO] 22:53:52:842 Kernel/(28871:28871): Conexión exitosa
+[INFO] 22:53:52:844 Kernel/(28871:28871): Conexión exitosa
+[INFO] 22:53:52:845 Kernel/(28871:28871): Conexión exitosa
+[INFO] 22:53:52:845 Kernel/(28871:28871): Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:53:52:846 Kernel/(28871:28871): Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:53:52:846 Kernel/(28871:28871): Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:53:52:847 Kernel/(28871:28876): Solicitando memoria para el proceso: 0
+
+[INFO] 19:53:52:851 Kernel/(28871:28876): Memoria reservada correctamente
+[INFO] 19:53:52:851 Kernel/(28871:28876): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 19:53:52:851 Kernel/(28871:28876): Creando TCB de prioridad: 0
+[ERROR] 19:53:52:851 Kernel/(28871:28876): PID del HILO creado: 0
+[INFO] 19:53:52:851 Kernel/(28871:28878): Se creo la cola multinivel de prioridad: 0
+[INFO] 19:53:52:852 Kernel/(28871:28878): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 19:53:52:852 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:52:852 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:52:852 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:52:852 Kernel/(28871:28881): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:52:855 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:52:855 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:52:858 Kernel/(28871:28881): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:52:859 Kernel/(28871:28881): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:52:860 Kernel/(28871:28881): finalizando por quantum
+[INFO] 19:53:52:899 Kernel/(28871:28880): Creando TCB de prioridad: 6
+[ERROR] 19:53:52:900 Kernel/(28871:28880): PID del HILO creado: 0
+[INFO] 19:53:52:900 Kernel/(28871:28878): Se creo la cola multinivel de prioridad: 6
+[INFO] 19:53:52:900 Kernel/(28871:28878): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[ERROR] 19:53:52:904 Kernel/(28871:28880): replanificando tid:0 pid:0 
+[INFO] 19:53:52:904 Kernel/(28871:28880): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:53:52:904 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:52:904 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:52:904 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:52:904 Kernel/(28871:28882): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:52:904 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:52:905 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:52:906 Kernel/(28871:28882): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:52:906 Kernel/(28871:28882): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:52:906 Kernel/(28871:28882): finalizando por quantum
+[INFO] 19:53:52:950 Kernel/(28871:28880): Creando TCB de prioridad: 5
+[ERROR] 19:53:52:950 Kernel/(28871:28880): PID del HILO creado: 0
+[INFO] 19:53:52:950 Kernel/(28871:28878): Se creo la cola multinivel de prioridad: 5
+[INFO] 19:53:52:950 Kernel/(28871:28878): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[ERROR] 19:53:52:952 Kernel/(28871:28880): replanificando tid:0 pid:0 
+[INFO] 19:53:52:952 Kernel/(28871:28880): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:53:52:952 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:52:952 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:52:952 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:52:952 Kernel/(28871:28883): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:52:952 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:52:952 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:52:955 Kernel/(28871:28883): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:52:955 Kernel/(28871:28883): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:52:956 Kernel/(28871:28883): finalizando por quantum
+[INFO] 19:53:52:998 Kernel/(28871:28880): Creando TCB de prioridad: 5
+[ERROR] 19:53:52:998 Kernel/(28871:28880): PID del HILO creado: 0
+[INFO] 19:53:52:998 Kernel/(28871:28878): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[ERROR] 19:53:53:000 Kernel/(28871:28880): replanificando tid:0 pid:0 
+[INFO] 19:53:53:000 Kernel/(28871:28880): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:53:53:000 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:53:000 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:53:001 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:001 Kernel/(28871:28884): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:53:002 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:53:002 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:003 Kernel/(28871:28884): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:004 Kernel/(28871:28884): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:53:004 Kernel/(28871:28884): finalizando por quantum
+[INFO] 19:53:53:045 Kernel/(28871:28880): Creando TCB de prioridad: 6
+[ERROR] 19:53:53:046 Kernel/(28871:28880): PID del HILO creado: 0
+[INFO] 19:53:53:046 Kernel/(28871:28878): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[ERROR] 19:53:53:047 Kernel/(28871:28880): replanificando tid:0 pid:0 
+[INFO] 19:53:53:048 Kernel/(28871:28880): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 19:53:53:048 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:53:048 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:53:048 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:048 Kernel/(28871:28885): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:53:049 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:53:049 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:050 Kernel/(28871:28885): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:052 Kernel/(28871:28885): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:53:052 Kernel/(28871:28885): finalizando por quantum
+[INFO] 19:53:53:091 Kernel/(28871:28880): ## (0:0) - Bloqueado por: <PTHREAD_JOIN>
+[INFO] 19:53:53:095 Kernel/(28871:28880): ## (0:0) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:53:095 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:095 Kernel/(28871:28880): TCB elegido tdi:2 pid 0
+[INFO] 19:53:53:095 Kernel/(28871:28880): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:100 Kernel/(28871:28886): empiezo hilo quantum de tid: 2 pid: 0
+[TRACE] 19:53:53:103 Kernel/(28871:28880): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:53:103 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:107 Kernel/(28871:28886): TID:2 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:112 Kernel/(28871:28886): ENIVE MENSAJE A CPU INTERRUPT TID:2 PD:0 
+[INFO] 19:53:53:114 Kernel/(28871:28886): finalizando por quantum
+[ERROR] 19:53:53:147 Kernel/(28871:28880): replanificando tid:2 pid:0 
+[INFO] 19:53:53:153 Kernel/(28871:28880): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 19:53:53:153 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:153 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:153 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:155 Kernel/(28871:28887): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:164 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:164 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:166 Kernel/(28871:28887): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:167 Kernel/(28871:28887): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:167 Kernel/(28871:28887): finalizando por quantum
+[ERROR] 19:53:53:205 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:205 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:205 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:205 Kernel/(28871:28880): TCB elegido tdi:2 pid 0
+[INFO] 19:53:53:205 Kernel/(28871:28880): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:206 Kernel/(28871:28888): empiezo hilo quantum de tid: 2 pid: 0
+[TRACE] 19:53:53:208 Kernel/(28871:28880): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:53:208 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:212 Kernel/(28871:28888): TID:2 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:216 Kernel/(28871:28888): ENIVE MENSAJE A CPU INTERRUPT TID:2 PD:0 
+[INFO] 19:53:53:217 Kernel/(28871:28888): finalizando por quantum
+[ERROR] 19:53:53:250 Kernel/(28871:28880): replanificando tid:2 pid:0 
+[INFO] 19:53:53:250 Kernel/(28871:28880): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 19:53:53:250 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:250 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:250 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:250 Kernel/(28871:28889): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:251 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:251 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:253 Kernel/(28871:28889): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:253 Kernel/(28871:28889): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:254 Kernel/(28871:28889): finalizando por quantum
+[ERROR] 19:53:53:297 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:297 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:297 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:297 Kernel/(28871:28880): TCB elegido tdi:2 pid 0
+[INFO] 19:53:53:297 Kernel/(28871:28880): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:298 Kernel/(28871:28890): empiezo hilo quantum de tid: 2 pid: 0
+[TRACE] 19:53:53:299 Kernel/(28871:28880): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:53:299 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:305 Kernel/(28871:28890): TID:2 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:307 Kernel/(28871:28890): ENIVE MENSAJE A CPU INTERRUPT TID:2 PD:0 
+[INFO] 19:53:53:315 Kernel/(28871:28890): finalizando por quantum
+[ERROR] 19:53:53:342 Kernel/(28871:28880): replanificando tid:2 pid:0 
+[INFO] 19:53:53:342 Kernel/(28871:28880): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 19:53:53:342 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:342 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:342 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:342 Kernel/(28871:28891): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:343 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:343 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:345 Kernel/(28871:28891): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:346 Kernel/(28871:28891): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:346 Kernel/(28871:28891): finalizando por quantum
+[ERROR] 19:53:53:386 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:386 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:386 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:386 Kernel/(28871:28880): TCB elegido tdi:2 pid 0
+[INFO] 19:53:53:386 Kernel/(28871:28880): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:386 Kernel/(28871:28892): empiezo hilo quantum de tid: 2 pid: 0
+[TRACE] 19:53:53:387 Kernel/(28871:28880): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:53:387 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:389 Kernel/(28871:28892): TID:2 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:389 Kernel/(28871:28892): ENIVE MENSAJE A CPU INTERRUPT TID:2 PD:0 
+[INFO] 19:53:53:390 Kernel/(28871:28892): finalizando por quantum
+[ERROR] 19:53:53:430 Kernel/(28871:28880): replanificando tid:2 pid:0 
+[INFO] 19:53:53:430 Kernel/(28871:28880): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 19:53:53:430 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:430 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:430 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:431 Kernel/(28871:28893): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:431 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:431 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:432 Kernel/(28871:28893): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:433 Kernel/(28871:28893): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:434 Kernel/(28871:28893): finalizando por quantum
+[ERROR] 19:53:53:474 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:475 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:475 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:475 Kernel/(28871:28880): TCB elegido tdi:2 pid 0
+[INFO] 19:53:53:475 Kernel/(28871:28880): Planificando TID 2,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:475 Kernel/(28871:28894): empiezo hilo quantum de tid: 2 pid: 0
+[TRACE] 19:53:53:485 Kernel/(28871:28880): CPU ejecutando el hilo: 2 del proceso: 0
+
+[WARNING] 19:53:53:485 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:491 Kernel/(28871:28894): TID:2 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:499 Kernel/(28871:28894): ENIVE MENSAJE A CPU INTERRUPT TID:2 PD:0 
+[INFO] 19:53:53:499 Kernel/(28871:28894): finalizando por quantum
+[INFO] 19:53:53:520 Kernel/(28871:28880): ## (0:2) Finaliza el hilo
+[INFO] 19:53:53:520 Kernel/(28871:28880): Finalizando hilo con TID: 2 del proceso con PID: 0
+[INFO] 19:53:53:520 Kernel/(28871:28879): entro a fin_hilo
+[INFO] 19:53:53:521 Kernel/(28871:28879): ## Finaliza el hilo <2> del proceso <0>
+[INFO] 19:53:53:522 Kernel/(28871:28880): ## (0:-24985599) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:53:522 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:522 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:523 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:523 Kernel/(28871:28895): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:523 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:523 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:528 Kernel/(28871:28895): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:532 Kernel/(28871:28895): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:543 Kernel/(28871:28895): finalizando por quantum
+[ERROR] 19:53:53:568 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:569 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:571 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:571 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:571 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:571 Kernel/(28871:28896): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:571 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:571 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:573 Kernel/(28871:28896): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:576 Kernel/(28871:28896): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:577 Kernel/(28871:28896): finalizando por quantum
+[ERROR] 19:53:53:618 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:618 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:618 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:618 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:618 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:618 Kernel/(28871:28897): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:620 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:620 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:621 Kernel/(28871:28897): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:622 Kernel/(28871:28897): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:622 Kernel/(28871:28897): finalizando por quantum
+[ERROR] 19:53:53:669 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:669 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:669 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:669 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:669 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:669 Kernel/(28871:28898): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:670 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:670 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:672 Kernel/(28871:28898): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:672 Kernel/(28871:28898): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:674 Kernel/(28871:28898): finalizando por quantum
+[ERROR] 19:53:53:715 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:716 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:716 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:716 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:716 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:716 Kernel/(28871:28899): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:717 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:717 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:718 Kernel/(28871:28899): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:719 Kernel/(28871:28899): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:719 Kernel/(28871:28899): finalizando por quantum
+[ERROR] 19:53:53:759 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:759 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:759 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:759 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:759 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[TRACE] 19:53:53:762 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:762 Kernel/(28871:28880): Esperando Respuesta
+[ERROR] 19:53:53:762 Kernel/(28871:28900): empiezo hilo quantum de tid: 3 pid: 0
+[WARNING] 19:53:53:764 Kernel/(28871:28900): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:764 Kernel/(28871:28900): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:766 Kernel/(28871:28900): finalizando por quantum
+[ERROR] 19:53:53:802 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:802 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:802 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:802 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:802 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:803 Kernel/(28871:28901): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:803 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:803 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:804 Kernel/(28871:28901): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:805 Kernel/(28871:28901): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:805 Kernel/(28871:28901): finalizando por quantum
+[ERROR] 19:53:53:853 Kernel/(28871:28880): replanificando tid:3 pid:0 
+[INFO] 19:53:53:855 Kernel/(28871:28880): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 19:53:53:855 Kernel/(28871:28880): cola elegida:5
+[WARNING] 19:53:53:855 Kernel/(28871:28880): TCB elegido tdi:3 pid 0
+[INFO] 19:53:53:855 Kernel/(28871:28880): Planificando TID 3,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:855 Kernel/(28871:28902): empiezo hilo quantum de tid: 3 pid: 0
+[TRACE] 19:53:53:860 Kernel/(28871:28880): CPU ejecutando el hilo: 3 del proceso: 0
+
+[WARNING] 19:53:53:860 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:861 Kernel/(28871:28902): TID:3 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:862 Kernel/(28871:28902): ENIVE MENSAJE A CPU INTERRUPT TID:3 PD:0 
+[INFO] 19:53:53:862 Kernel/(28871:28902): finalizando por quantum
+[INFO] 19:53:53:906 Kernel/(28871:28880): ## (0:3) Finaliza el hilo
+[INFO] 19:53:53:906 Kernel/(28871:28880): Finalizando hilo con TID: 3 del proceso con PID: 0
+[INFO] 19:53:53:906 Kernel/(28871:28879): entro a fin_hilo
+[INFO] 19:53:53:908 Kernel/(28871:28879): ## Finaliza el hilo <3> del proceso <0>
+[INFO] 19:53:53:911 Kernel/(28871:28880): ## (0:-763176911) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:53:911 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:53:911 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:53:911 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:911 Kernel/(28871:28903): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:53:927 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:53:927 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:929 Kernel/(28871:28903): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:929 Kernel/(28871:28903): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:53:930 Kernel/(28871:28903): finalizando por quantum
+[ERROR] 19:53:53:974 Kernel/(28871:28880): replanificando tid:1 pid:0 
+[INFO] 19:53:53:981 Kernel/(28871:28880): ## (0:1) - Desalojado por fin de Quantum
+[INFO] 19:53:53:983 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:53:983 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:53:983 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:53:985 Kernel/(28871:28904): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:53:989 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:53:989 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:53:991 Kernel/(28871:28904): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:53:991 Kernel/(28871:28904): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:53:991 Kernel/(28871:28904): finalizando por quantum
+[ERROR] 19:53:54:038 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:038 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:039 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:039 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:54:039 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:040 Kernel/(28871:28905): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:54:041 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:54:041 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:046 Kernel/(28871:28905): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:055 Kernel/(28871:28905): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:54:055 Kernel/(28871:28905): finalizando por quantum
+[ERROR] 19:53:54:082 Kernel/(28871:28880): replanificando tid:1 pid:0 
+[INFO] 19:53:54:083 Kernel/(28871:28880): ## (0:1) - Desalojado por fin de Quantum
+[INFO] 19:53:54:083 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:083 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:083 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:083 Kernel/(28871:28906): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:084 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:085 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:087 Kernel/(28871:28906): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:087 Kernel/(28871:28906): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:087 Kernel/(28871:28906): finalizando por quantum
+[ERROR] 19:53:54:134 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:139 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:144 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:144 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:54:144 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:144 Kernel/(28871:28907): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:54:145 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:54:145 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:146 Kernel/(28871:28907): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:146 Kernel/(28871:28907): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:54:146 Kernel/(28871:28907): finalizando por quantum
+[ERROR] 19:53:54:208 Kernel/(28871:28880): replanificando tid:1 pid:0 
+[INFO] 19:53:54:208 Kernel/(28871:28880): ## (0:1) - Desalojado por fin de Quantum
+[INFO] 19:53:54:208 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:208 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:208 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:209 Kernel/(28871:28908): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:210 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:210 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:213 Kernel/(28871:28908): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:213 Kernel/(28871:28908): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:213 Kernel/(28871:28908): finalizando por quantum
+[ERROR] 19:53:54:255 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:256 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:256 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:256 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:54:256 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:257 Kernel/(28871:28909): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:54:259 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:54:259 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:260 Kernel/(28871:28909): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:260 Kernel/(28871:28909): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:54:260 Kernel/(28871:28909): finalizando por quantum
+[ERROR] 19:53:54:302 Kernel/(28871:28880): replanificando tid:1 pid:0 
+[INFO] 19:53:54:302 Kernel/(28871:28880): ## (0:1) - Desalojado por fin de Quantum
+[INFO] 19:53:54:302 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:302 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:302 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:302 Kernel/(28871:28910): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:303 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:303 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:304 Kernel/(28871:28910): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:304 Kernel/(28871:28910): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:305 Kernel/(28871:28910): finalizando por quantum
+[ERROR] 19:53:54:346 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:346 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:346 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:346 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:54:346 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:346 Kernel/(28871:28911): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:54:348 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:54:348 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:350 Kernel/(28871:28911): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:351 Kernel/(28871:28911): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:54:351 Kernel/(28871:28911): finalizando por quantum
+[ERROR] 19:53:54:391 Kernel/(28871:28880): replanificando tid:1 pid:0 
+[INFO] 19:53:54:391 Kernel/(28871:28880): ## (0:1) - Desalojado por fin de Quantum
+[INFO] 19:53:54:391 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:393 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:393 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:393 Kernel/(28871:28912): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:394 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:398 Kernel/(28871:28912): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:399 Kernel/(28871:28912): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:399 Kernel/(28871:28912): finalizando por quantum
+[WARNING] 19:53:54:407 Kernel/(28871:28880): Esperando Respuesta
+[ERROR] 19:53:54:437 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:437 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:437 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:437 Kernel/(28871:28880): TCB elegido tdi:1 pid 0
+[INFO] 19:53:54:437 Kernel/(28871:28880): Planificando TID 1,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:437 Kernel/(28871:28913): empiezo hilo quantum de tid: 1 pid: 0
+[TRACE] 19:53:54:439 Kernel/(28871:28880): CPU ejecutando el hilo: 1 del proceso: 0
+
+[WARNING] 19:53:54:439 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:442 Kernel/(28871:28913): TID:1 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:443 Kernel/(28871:28913): ENIVE MENSAJE A CPU INTERRUPT TID:1 PD:0 
+[INFO] 19:53:54:443 Kernel/(28871:28913): finalizando por quantum
+[INFO] 19:53:54:483 Kernel/(28871:28880): ## (0:1) Finaliza el hilo
+[INFO] 19:53:54:483 Kernel/(28871:28880): Finalizando hilo con TID: 1 del proceso con PID: 0
+[INFO] 19:53:54:483 Kernel/(28871:28879): entro a fin_hilo
+[INFO] 19:53:54:484 Kernel/(28871:28879): ## Finaliza el hilo <1> del proceso <0>
+[INFO] 19:53:54:486 Kernel/(28871:28880): ## (0:-763176095) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:54:486 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:487 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:487 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:487 Kernel/(28871:28914): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:489 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:489 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:493 Kernel/(28871:28914): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:493 Kernel/(28871:28914): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:495 Kernel/(28871:28914): finalizando por quantum
+[ERROR] 19:53:54:539 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:539 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:539 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:539 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:539 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:539 Kernel/(28871:28915): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:541 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:543 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:552 Kernel/(28871:28915): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:552 Kernel/(28871:28915): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:552 Kernel/(28871:28915): finalizando por quantum
+[ERROR] 19:53:54:586 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:586 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:586 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:586 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:586 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:586 Kernel/(28871:28916): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:587 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:587 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:589 Kernel/(28871:28916): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:589 Kernel/(28871:28916): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:589 Kernel/(28871:28916): finalizando por quantum
+[ERROR] 19:53:54:630 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:630 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:630 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:630 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:630 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:630 Kernel/(28871:28917): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:631 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:631 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:632 Kernel/(28871:28917): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:632 Kernel/(28871:28917): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:633 Kernel/(28871:28917): finalizando por quantum
+[ERROR] 19:53:54:674 Kernel/(28871:28880): replanificando tid:4 pid:0 
+[INFO] 19:53:54:674 Kernel/(28871:28880): ## (0:4) - Desalojado por fin de Quantum
+[INFO] 19:53:54:674 Kernel/(28871:28880): cola elegida:6
+[WARNING] 19:53:54:674 Kernel/(28871:28880): TCB elegido tdi:4 pid 0
+[INFO] 19:53:54:674 Kernel/(28871:28880): Planificando TID 4,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:675 Kernel/(28871:28918): empiezo hilo quantum de tid: 4 pid: 0
+[TRACE] 19:53:54:694 Kernel/(28871:28880): CPU ejecutando el hilo: 4 del proceso: 0
+
+[WARNING] 19:53:54:694 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:696 Kernel/(28871:28918): TID:4 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:696 Kernel/(28871:28918): ENIVE MENSAJE A CPU INTERRUPT TID:4 PD:0 
+[INFO] 19:53:54:697 Kernel/(28871:28918): finalizando por quantum
+[INFO] 19:53:54:738 Kernel/(28871:28880): ## (0:4) Finaliza el hilo
+[INFO] 19:53:54:738 Kernel/(28871:28880): Finalizando hilo con TID: 4 del proceso con PID: 0
+[INFO] 19:53:54:739 Kernel/(28871:28879): entro a fin_hilo
+[INFO] 19:53:54:739 Kernel/(28871:28879): ## Finaliza el hilo <4> del proceso <0>
+[INFO] 19:53:54:739 Kernel/(28871:28880): ## (0:-763178847) - Solicito syscall: SUSP_PROCESO
+[INFO] 19:53:54:739 Kernel/(28871:28880): cola elegida:0
+[WARNING] 19:53:54:739 Kernel/(28871:28880): TCB elegido tdi:0 pid 0
+[INFO] 19:53:54:739 Kernel/(28871:28880): Planificando TID 0,PID 0 con algoritmo MULTINIVEL
+
+[ERROR] 19:53:54:739 Kernel/(28871:28919): empiezo hilo quantum de tid: 0 pid: 0
+[TRACE] 19:53:54:742 Kernel/(28871:28880): CPU ejecutando el hilo: 0 del proceso: 0
+
+[WARNING] 19:53:54:742 Kernel/(28871:28880): Esperando Respuesta
+[WARNING] 19:53:54:746 Kernel/(28871:28919): TID:0 PID:0 FINALIZO QUANTUM
+[WARNING] 19:53:54:746 Kernel/(28871:28919): ENIVE MENSAJE A CPU INTERRUPT TID:0 PD:0 
+[INFO] 19:53:54:746 Kernel/(28871:28919): finalizando por quantum
+[INFO] 19:53:54:786 Kernel/(28871:28880): ## Finaliza el proceso 0
+[INFO] 19:53:54:787 Kernel/(28871:28877): intentando finalizar proceso con pid: 0
+[INFO] 19:53:54:787 Kernel/(28871:28877): ## Finaliza el proceso <0>
+[INFO] 19:53:54:788 Kernel/(28871:28880): ## (0:-24936447) - Solicito syscall: SUSP_PROCESO
