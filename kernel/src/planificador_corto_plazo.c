@@ -98,13 +98,14 @@ void multinivel()
         sem_wait(&sem_puede_ejecutar);
         printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
-        log_info(logger, "cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
+        log_info(logger, "Cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
+        imprimir_cola(cola->cola_prioridad, cola->mutex);
         TCB *tcb = desencolar_multinivel(cola);
-        log_warning(logger,"TCB elegido tdi:%d pid %d",tcb->tid,tcb->pcb_pid);
+        log_warning(logger,"TCB elegido <TID:%i>,<PID:%i>",tcb->tid,tcb->pcb_pid);
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "Planificando TID %d,PID %d con algoritmo MULTINIVEL\n", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+            log_warning(logger, "Planificando <TID:%i>,<PID:%i>, <ALGORITMO: MULTINIVEL>", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
 

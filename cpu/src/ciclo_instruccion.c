@@ -16,7 +16,7 @@ void ciclo_de_instruccion() {
     while (true) {
         sem_wait(&sem_ejecucion);
         char* instruccion = fetch();
-        log_trace(logger, "instr: %s, PC: %i",instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
+        log_warning(logger, "<TID:%i>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid, instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
         if(instruccion){
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
@@ -47,7 +47,7 @@ bool check_interrupt() {
     if(flag_interrupt){
         log_error(logger,"Hay flag");
         flag_interrupt = false;
-		log_info(logger, "## Llega interrupción al puerto Interrupt");
+		//log_info(logger, "## Llega interrupción al puerto Interrupt");
         pthread_mutex_unlock(&mutex_interrupt);
         return true;
     }

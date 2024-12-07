@@ -54,4 +54,5 @@ void imprimir_cola(t_queue *cola, pthread_mutex_t mutex);
 bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid);
 bool buscar_en_cola_prioridad(COLA_PRIORIDAD *cola_prioridad, int pid);
 void ordenar_cola(t_queue *cola, pthread_mutex_t mutex);
+void vaciar_colas_prioridades();
 #endif // UTILIDADES_H_

@@ -126,7 +126,7 @@ void actualizar_contexto(int fd_memoria)
     switch (recibir_operacion(fd_memoria))
     {
     case CONTEXTO_ACTUALIZADO_OK:
-        log_info(logger, "## (%d:%d) - Actualizo Contexto Ejecucion", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
+        //log_info(logger, "## (%d:%d) - Actualizo Contexto Ejecucion - PC: %i", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid, contexto_en_ejecucion->contexto_hilo->Registros->PC);
         sem_post(&sem_ctx_actualizado);
         break;
     case CONTEXTO_ACTUALIZADO_ERROR:

@@ -227,6 +227,7 @@ void THREAD_EXIT() {
     thread_exit();
     sem_wait(&sem_thread_exit);
     
+    
 }
 
 void PROCESS_EXIT() {

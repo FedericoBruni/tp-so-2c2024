@@ -379,3 +379,15 @@ void ordenar_cola(t_queue *cola, pthread_mutex_t mutex) {
         encolar(cola, list_get(lista, i), mutex);
     }
 }
+
+void vaciar_colas_prioridades() {
+    for (int i = 0; i < list_size(colas_prioridades); i++) {
+        COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
+        if (queue_is_empty(cola_prioridad->cola_prioridad)) continue;
+        TCB *tcb = desencolar_multinivel(cola_prioridad);
+        while (tcb && tcb->tid != 0) {
+            liberar_tcb(tcb);
+            tcb = desencolar_multinivel(cola_prioridad);
+        }
+    }
+}

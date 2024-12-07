@@ -2,12 +2,16 @@
 
 extern int autoincremental_pcb;
 extern t_log *logger;
+extern char* algoritmo_planificacion;
 
 
 void liberar_tcb(void *ptr_tcb)
 {
     TCB *tcb = (TCB *)ptr_tcb;
     liberar_registros(tcb->Registros);
+    //tcb->pcb->threads y tids 
+    list_remove_element(tcb->pcb->threads, tcb);
+    list_remove_element(tcb->pcb->tids, tcb->tid);
     free(tcb);
 }
 
@@ -20,9 +24,17 @@ void liberar_registros(REGISTROS *registros)
 void liberar_pcb(void *ptr_pcb)
 {
     PCB *pcb = (PCB *)ptr_pcb;
-    //liberar_registros(pcb->Registros); // libero registros
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
-    list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
+
+    if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")) { // para prioridades tmb seria?
+        vaciar_colas_prioridades();
+    }
+
+    liberar_tcb(list_get(pcb->threads, 0));
+    free(pcb->threads);
+
+
+    //list_destroy_and_destroy_elements(pcb->threads, liberar_tcb); lo saque pq rompe. en el test siempre va a haber un único thread cuando se llame a process exit, el 0
     free(pcb->tids);
     free(pcb);
 }

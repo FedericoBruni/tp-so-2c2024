@@ -142,7 +142,7 @@ void finalizacion_de_hilos(void)
         switch (resultado)
         {
         case 1:
-            log_info(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid);
+            log_error(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid); // dsp de esto ya no existe el tcb.
             liberar_tcb(tcb);
             desbloquear_bloqueados_por_hilo(tidBloqueante);
             sem_post(&sem_syscall_fin);

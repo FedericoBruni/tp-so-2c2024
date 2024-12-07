@@ -97,12 +97,11 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
 	t_buffer* buffer = recibir_buffer_completo(socket_cliente);
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
-    log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
+    //log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
-    log_info(logger,"Solicitando contexto de: %d hilo: %d",pid,tid);
+    //log_info(logger,"Solicitando contexto de: %d hilo: %d",pid,tid);
     contexto_en_ejecucion = solicitar_contexto_ejecucion(tid, pid); // esto es contexto_cpu pero la funcion devuelve contexto_hilo, ver
-    printf("CTX DX En cpu dsps de pedir:%i\n", contexto_en_ejecucion->contexto_hilo->Registros->DX);
     //ejecutar();
     
     int recibido = EXEC_RECIBIDO;
@@ -122,7 +121,7 @@ void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     t_buffer* buffer = recibir_buffer_completo(socket_cliente);
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
-    log_info(logger, "Recibida interrupcion de Fin de Quantum (%i y %i):",tid ,pid);
+    //log_info(logger, "Recibida interrupcion de Fin de Quantum (%i y %i):",tid ,pid);
     if(contexto_en_ejecucion->contexto_hilo->tid == tid && contexto_en_ejecucion->contexto_hilo->pid == pid){
         pthread_mutex_lock(&mutex_interrupt);
         flag_interrupt = true;
@@ -146,14 +145,14 @@ CONTEXTO_CPU* solicitar_contexto_ejecucion(int tid, int pid){
     
     eliminar_paquete(paquete);
     int cod_op = recibir_operacion(fd_memoria);
-    printf("cod op en cpu: %d\n",cod_op);
+    //printf("cod op en cpu: %d\n",cod_op);
     switch(cod_op){ 
         case CONTEXTO_ENVIADO:
             CONTEXTO_CPU *contexto_cpu = recibir_contexto(fd_memoria);
-            log_info(logger,"Contexto del proceso: %d, hilo %d recibido",contexto_cpu->contexto_proceso->pid,contexto_cpu->contexto_hilo->tid);
+            //log_info(logger,"Contexto del proceso: %d, hilo %d recibido",contexto_cpu->contexto_proceso->pid,contexto_cpu->contexto_hilo->tid);
             return contexto_cpu;
         default:
-            printf("default?\n");
+            printf("default?, cod_op=%i\n", cod_op);
             return 0;
     }
 }
