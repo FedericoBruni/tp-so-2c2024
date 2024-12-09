@@ -17,6 +17,7 @@ t_queue *cola_exit;
 t_queue *cola_finalizacion;
 t_queue *cola_new_hilo;
 t_queue *cola_fin_pcb;
+t_queue *cola_io;
 TCB *tcb_en_ejecucion;
 int autoincremental_pcb = 0;
 pthread_mutex_t mutex_new;
@@ -25,6 +26,7 @@ pthread_mutex_t mutex_exec;
 pthread_mutex_t mutex_exit;
 pthread_mutex_t mutex_blocked;
 pthread_mutex_t mutex_fd_memoria;
+pthread_mutex_t mutex_io;
 sem_t sem_hay_memoria;
 sem_t sem_crear_hilo;
 sem_t sem_finalizar_proceso;
@@ -37,11 +39,13 @@ sem_t sem_puede_ejecutar;
 sem_t sem_syscall_fin;
 sem_t sem_io;
 sem_t sem_exec_recibido;
+sem_t sem_io_iniciado;
 PCB *pcb_en_ejecucion;
 TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
 t_list* mutex_sistema;
 TCB *tcb_anterior;
+extern char* estado_lock;
 
 
 
@@ -64,6 +68,7 @@ void iniciar_kernel(void)
     cola_blocked = queue_create();
     cola_exit = queue_create();
     cola_fin_pcb=queue_create();
+    cola_io = queue_create();
     cola_finalizacion = queue_create();
     colas_prioridades = list_create();
     mutex_sistema = list_create();
@@ -77,6 +82,7 @@ void iniciar_semaforos(void){
     inicializar_mutex(&mutex_exec, "Execute");
     inicializar_mutex(&mutex_exit, "Exit");
     inicializar_mutex(&mutex_fd_memoria, "Mutex FD Memoria");
+    inicializar_mutex(&mutex_io, "Mutex IO");
 
     inicializar_semaforo(&sem_hay_memoria, "Hay memoria", 0);
     inicializar_semaforo(&sem_crear_hilo, "Crear hilo", 0);
@@ -90,6 +96,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_syscall_fin, "sem_syscall_fin", 0);
     inicializar_semaforo(&sem_io, "sem_io", 0);
     inicializar_semaforo(&sem_exec_recibido,"sem exec",0);
+    inicializar_semaforo(&sem_io_iniciado, "sem_io_iniciado", 0);
     
 
 
@@ -168,7 +175,9 @@ void mover_tcbs_exit(PCB *pcb)
     {
         TCB *tcb = list_get(pcb->threads, i);
         cambiar_estado_hilo(tcb, EXIT);
-        queue_push(cola_exit, tcb);
+        //queue_push(cola_exit, tcb);
+        encolar(cola_finalizacion, tcb, mutex_exit);
+        sem_post(&sem_finalizar_hilo);
     }
 }
 	// * t_person* find_by_name_contains(t_list* people, char* substring) {
@@ -221,6 +230,7 @@ COLA_PRIORIDAD *existe_cola_con_prioridad(int prioridad) {
 
 void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb){
     encolar(cola->cola_prioridad, tcb, cola->mutex);
+    log_trace(logger, "Encolando multinivel Prioridad: %i, Cola prioridad size: %i", cola->prioridad, queue_size(cola->cola_prioridad));
 
 }
 
@@ -271,15 +281,33 @@ void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb){
 }
 
 void desbloquear_hilo_mutex(MUTEX *mutex){
-    if (queue_is_empty(mutex->cola_bloqueados)) return;
-    TCB *tcb = queue_pop(mutex->cola_bloqueados);
-    if(tcb != NULL){
-        mutex->asignadoA = tcb->tid;
-        cambiar_estado_hilo(tcb, READY);
-        replanificar(tcb);
-    }else{
+    if (queue_is_empty(mutex->cola_bloqueados)){
+        log_error(logger,"TCB es NULL en desbloquear");
         mutex->asignadoA = NULL;
         mutex->binario = 1;
+        estado_lock = "LIBRE";
+    }else{
+        TCB *tcb = queue_pop(mutex->cola_bloqueados);
+        if(tcb != NULL){
+            log_error(logger,"TCB NO ES NULL EN DESBLOQUEAR MUTEX");
+            if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+            COLA_PRIORIDAD *cola = existe_cola_con_prioridad(tcb->prioridad);
+                if(cola != NULL){
+                    encolar_multinivel(cola, tcb);
+                    log_error(logger, "Encolar en desbloquear_hilo_mutex()");
+                } else{
+                    COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
+                    log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+                    encolar_multinivel(cola_nueva, tcb);
+                }         
+            }else{
+            encolar(cola_ready, tcb,mutex_ready);     // los hilos van en la cola de ready o los procesos? o ambos por separado
+            //imprimir_pcb(pcb); 
+            }
+            sem_post(&sem_hay_ready);
+            mutex->asignadoA = tcb->tid;
+            mutex->binario = 0;
+        }
     }
 }
 void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb){
@@ -287,22 +315,35 @@ void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb){
     mutex->binario = 0;
 }
 
-void bloquear_hilo_syscall(TCB *tcb,int tid){
+int bloquear_hilo_syscall(TCB *tcb,int tid){
+    bool hayHilo= false;
+    log_warning(logger, "SIZE de tids: %i", list_size(pcb_en_ejecucion->tids));
+    for (int i = 0; i < list_size(pcb_en_ejecucion->tids); i++) {
+        int tid_actual = list_get(pcb_en_ejecucion->tids, i);
+        if (tid_actual == tid) hayHilo = true;
+            
+    }
+    
+    if(!hayHilo){
+        log_error(logger,"EL TID PASADO NO EXISTE O YA FINALIZÓ, NO SE BLOQUEA");
+        return 0;
+    }
+    
     cambiar_estado_hilo(tcb,BLOCKED);
     tcb->bloqueadoPor = tid;
     encolar(cola_blocked,tcb,mutex_blocked);
     //sem_post(&sem_hay_ready);
+    return 1;
 }
 
 
 
-void desbloquear_bloqueados_por_hilo(int tidBloqueante){
+void desbloquear_bloqueados_por_hilo(int tidBloqueante,int pidhilo){
     t_queue* cola_aux = queue_create();
     while(!queue_is_empty(cola_blocked)){
         void* elemento = desencolar(cola_blocked,mutex_blocked);
-
         TCB* tcb = (TCB*) elemento;
-        if(tcb->bloqueadoPor==tidBloqueante){
+        if(tcb->bloqueadoPor==tidBloqueante && tcb->pcb_pid == pidhilo){
             desbloquear_hilo(tcb);
         }else{
             queue_push(cola_aux,elemento);
@@ -380,14 +421,31 @@ void ordenar_cola(t_queue *cola, pthread_mutex_t mutex) {
     }
 }
 
-void vaciar_colas_prioridades() {
+void vaciar_colas_prioridades(int pid) {
     for (int i = 0; i < list_size(colas_prioridades); i++) {
+
         COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
+        t_queue *cola_aux = queue_create();
         if (queue_is_empty(cola_prioridad->cola_prioridad)) continue;
+
         TCB *tcb = desencolar_multinivel(cola_prioridad);
+        
+        if (tcb->tid == 0) encolar_multinivel(cola_prioridad,tcb);
+
         while (tcb && tcb->tid != 0) {
-            liberar_tcb(tcb);
+            if(tcb->pcb_pid != pid){
+                queue_push(cola_aux,tcb);
+                log_error(logger,"PID: %d TID:%d NO SE VACIA",tcb->pcb_pid,tcb->tid);
+            }else{
+                liberar_tcb(tcb);
+            }
+            if (queue_is_empty(cola_prioridad->cola_prioridad)) break;
+
             tcb = desencolar_multinivel(cola_prioridad);
         }
+        while(!queue_is_empty(cola_aux)){
+            encolar_multinivel(cola_prioridad,queue_pop(cola_aux));
+        }
+        queue_destroy(cola_aux);
     }
 }

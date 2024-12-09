@@ -16,6 +16,7 @@ extern sem_t sem_io_solicitada;
 extern sem_t sem_dump_mem;
 extern sem_t sem_dump_mem;
 extern char* rta_mutex_lock;
+extern char* rta_hilo_join;
 extern sem_t sem_ctx_actualizado;
 
 
@@ -132,12 +133,13 @@ void DUMP_MEMORY(int pid, int tid) {
 }
 
 void io(int tiempo) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     enviar_io(tiempo);
     // esperar rta?
-    sem_wait(&sem_io_solicitada);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+        
 }
 
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo){
@@ -166,13 +168,13 @@ void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad) {
     
 }
 
-void THREAD_JOIN (int tid) {
+char* THREAD_JOIN (int tid) {
     contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     thread_join(tid);
     sem_wait(&sem_join_hilo);
-    log_warning(logger, "sem_wait(&sem_join_hilo)");
+    return rta_hilo_join;
     
     
     
@@ -187,12 +189,13 @@ void THREAD_CANCEL (int tid, int pid) {
 }
 
 void MUTEX_CREATE (char *recurso) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     mutex_create(recurso);
     //sleep(5);
     sem_wait(&sem_mutex_creado);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+    
     // switch(recibir_operacion(cliente_fd_dispatch)){
     //     case MUTEX_CREADO:
     //         log_error(logger, "Mutex creado correctamente");
@@ -203,21 +206,25 @@ void MUTEX_CREATE (char *recurso) {
     // }
 }
 
+
+    
+
 char* MUTEX_LOCK (char* recurso) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     mutex_lock(recurso);
     sem_wait(&sem_mutex_lockeado);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     return rta_mutex_lock;
 }
 
+
 void MUTEX_UNLOCK (char* recurso) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     mutex_unlock(recurso);
-    sem_wait(&sem_mutex_unlockeado);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+        
 }
 
 void THREAD_EXIT() {

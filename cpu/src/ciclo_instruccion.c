@@ -16,7 +16,7 @@ void ciclo_de_instruccion() {
     while (true) {
         sem_wait(&sem_ejecucion);
         char* instruccion = fetch();
-        log_warning(logger, "<TID:%i>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid, instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
+        log_warning(logger, "<TID:%i> <PID: %d>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid,contexto_en_ejecucion->contexto_hilo->pid ,instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
         if(instruccion){
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
@@ -185,8 +185,8 @@ char* decode(char* instruccion) {
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_JOIN")){
         int tid = atoi(lista[1]);
-        THREAD_JOIN(tid);
-        return "SUSPPROCESO";
+        char *rta = THREAD_JOIN(tid);
+        return rta;
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_CANCEL")){
         int tid = atoi(lista[1]);
         THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);

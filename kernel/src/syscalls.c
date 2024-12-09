@@ -7,6 +7,7 @@ extern t_queue *cola_exit;
 extern t_queue *cola_blocked;
 extern t_queue *cola_finalizacion;
 extern t_queue *cola_fin_pcb;
+extern t_queue *cola_io;
 extern t_log *logger;
 extern t_list *procesos;
 extern pthread_mutex_t mutex_new;
@@ -25,6 +26,10 @@ extern t_list *mutex_sistema;
 extern sem_t sem_syscall_fin;
 char* estado_lock;
 extern sem_t sem_io;
+extern pthread_mutex_t mutex_io;
+extern sem_t sem_io_iniciado;
+extern char* algoritmo_planificacion;
+
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
 deberá ejecutar el proceso, el segundo parámetro es el tamaño del proceso en Memoria y el tercer parámetro es la prioridad
@@ -55,7 +60,7 @@ void PROCESS_EXIT(TCB *tcb)
         return;
     }
     PCB *pcb = tcb->pcb;
-    mover_tcbs_exit(pcb);
+    //mover_tcbs_exit(pcb);
     //queue_push(cola_finalizacion, pcb);
     encolar(cola_fin_pcb, pcb, mutex_exit); 
     sem_post(&sem_finalizar_proceso);
@@ -97,9 +102,11 @@ void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
 
 // Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
 // tener una variable tcb_en_ejecucion?
-void THREAD_JOIN(int tid){
-    bloquear_hilo_syscall(tcb_en_ejecucion,tid);
+int THREAD_JOIN(int tid){
+    int rta;
+    rta = bloquear_hilo_syscall(tcb_en_ejecucion,tid);
     sem_post(&sem_syscall_fin);
+    return rta;
 }
 
 
@@ -188,6 +195,7 @@ void MUTEX_LOCK(char* recurso)
 
     if(mutex->binario == 1){
         asignar_a_hilo_mutex(mutex, tcb_en_ejecucion);
+        log_info(logger, "MUTEX LIBRE, PROCESO PUEDE USARLO");
         estado_lock = "LIBRE";
     }else{
         bloquear_hilo_mutex(mutex->cola_bloqueados, tcb_en_ejecucion);
@@ -206,6 +214,7 @@ void MUTEX_UNLOCK(char *recurso){
     }
     
     if(mutex->binario == 0 && mutex->asignadoA == tcb_en_ejecucion->tid) {
+        log_warning(logger, "Desbloquear hilo mutex");
         desbloquear_hilo_mutex(mutex);
     }else{
         log_error(logger,"El hilo que desbloqueo el mutex no lo tiene");
@@ -221,15 +230,55 @@ int DUMP_MEMORY(int pid, int tid){
     // implementar logica
 }
 
+
+
+
+
+
+
+
+
 void IO(int tiempo){
-    pthread_t hilo_io;
-    pthread_create(&hilo_io,NULL,(void*) ejecucion_io, tiempo);
-    pthread_detach(hilo_io);
-    sem_wait(&sem_io);
-    log_trace(logger, "B");
+    TCB *tcb_copia = malloc(sizeof(TCB));
+    memcpy(tcb_copia,tcb_en_ejecucion,sizeof(TCB));
+    IOStruct *io = malloc(sizeof(IOStruct));
+    io->tiempo = tiempo;
+    io->tcb=tcb_copia;
+    encolar(cola_io,io,mutex_io);
+    sem_post(&sem_io);
+    sem_wait(&sem_io_iniciado);
+    log_trace(logger,"IO Iniciado");
 }
 
-void ejecucion_io(int tiempo) {
+
+
+
+
+void ejecucion_io(){
+    while (true) {
+        sem_wait(&sem_io); 
+        IOStruct *io = desencolar(cola_io,mutex_io);
+        log_info(logger,"entro a ejecucion_io");
+        log_trace(logger,"Tiempo: %d, TCB: %d",io->tiempo,io->tcb->tid);
+        sem_post(&sem_io_iniciado);
+        usleep(io->tiempo);
+        log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", io->tcb->pcb_pid, io->tcb->tid);
+        if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+            COLA_PRIORIDAD * cola = existe_cola_con_prioridad(io->tcb->prioridad);
+            if(cola != NULL){
+                encolar_multinivel(cola, io->tcb);
+            } else{
+                COLA_PRIORIDAD *cola_nueva = crear_multinivel(io->tcb);
+                encolar_multinivel(cola_nueva, io->tcb);
+            }         
+        }else{
+            encolar(cola_ready, io->tcb,mutex_ready);
+        }
+        sem_post(&sem_hay_ready);
+    }
+}
+
+void ejecucion_io2(int tiempo) {
     log_trace(logger, "A1");
     
     // bloquear el tcb en ejec

@@ -6977,3 +6977,635 @@
 [TRACE] 16:23:52:783 FileSystem/(27358:27358): Por aceptar serv
 [INFO] 13:23:52:783 FileSystem/(27358:27454): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
 [TRACE] 13:23:52:783 FileSystem/(27358:27454): TEST HANDSHAKE
+[TRACE] 18:21:19:050 FileSystem/(28101:28101): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:21:19:050 FileSystem/(28101:28101): Por aceptar serv
+[TRACE] 18:21:20:853 FileSystem/(28101:28101): Ya acepte serv
+[INFO] 18:21:20:854 FileSystem/(28101:28101): Se conecto el cliente: Memoria
+
+[TRACE] 18:21:20:854 FileSystem/(28101:28101): Por aceptar serv
+[INFO] 15:21:20:854 FileSystem/(28101:28214): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:21:20:856 FileSystem/(28101:28214): TEST HANDSHAKE
+[TRACE] 18:23:51:398 FileSystem/(29061:29061): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:23:51:398 FileSystem/(29061:29061): Por aceptar serv
+[TRACE] 18:23:52:746 FileSystem/(29061:29061): Ya acepte serv
+[INFO] 18:23:52:747 FileSystem/(29061:29061): Se conecto el cliente: Memoria
+
+[TRACE] 18:23:52:747 FileSystem/(29061:29061): Por aceptar serv
+[INFO] 15:23:52:748 FileSystem/(29061:29174): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:23:52:749 FileSystem/(29061:29174): TEST HANDSHAKE
+[TRACE] 18:25:52:374 FileSystem/(29605:29605): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:25:52:374 FileSystem/(29605:29605): Por aceptar serv
+[TRACE] 18:25:53:322 FileSystem/(29605:29605): Ya acepte serv
+[INFO] 18:25:53:322 FileSystem/(29605:29605): Se conecto el cliente: Memoria
+
+[TRACE] 18:25:53:322 FileSystem/(29605:29605): Por aceptar serv
+[INFO] 15:25:53:328 FileSystem/(29605:29701): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:25:53:330 FileSystem/(29605:29701): TEST HANDSHAKE
+[TRACE] 18:26:41:983 FileSystem/(30080:30080): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:26:41:983 FileSystem/(30080:30080): Por aceptar serv
+[TRACE] 18:26:42:969 FileSystem/(30080:30080): Ya acepte serv
+[INFO] 18:26:42:969 FileSystem/(30080:30080): Se conecto el cliente: Memoria
+
+[TRACE] 18:26:42:970 FileSystem/(30080:30080): Por aceptar serv
+[INFO] 15:26:42:970 FileSystem/(30080:30176): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:26:42:970 FileSystem/(30080:30176): TEST HANDSHAKE
+[TRACE] 18:28:37:704 FileSystem/(30585:30585): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:28:37:708 FileSystem/(30585:30585): Por aceptar serv
+[TRACE] 18:28:38:502 FileSystem/(30585:30585): Ya acepte serv
+[INFO] 18:28:38:502 FileSystem/(30585:30585): Se conecto el cliente: Memoria
+
+[TRACE] 18:28:38:502 FileSystem/(30585:30585): Por aceptar serv
+[INFO] 15:28:38:502 FileSystem/(30585:30681): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:28:38:503 FileSystem/(30585:30681): TEST HANDSHAKE
+[TRACE] 18:32:13:336 FileSystem/(31195:31195): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:32:13:337 FileSystem/(31195:31195): Por aceptar serv
+[TRACE] 18:32:14:027 FileSystem/(31195:31195): Ya acepte serv
+[INFO] 18:32:14:027 FileSystem/(31195:31195): Se conecto el cliente: Memoria
+
+[TRACE] 18:32:14:027 FileSystem/(31195:31195): Por aceptar serv
+[INFO] 15:32:14:027 FileSystem/(31195:31291): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:32:14:027 FileSystem/(31195:31291): TEST HANDSHAKE
+[TRACE] 18:36:20:286 FileSystem/(31732:31732): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:36:20:286 FileSystem/(31732:31732): Por aceptar serv
+[TRACE] 18:36:21:240 FileSystem/(31732:31732): Ya acepte serv
+[INFO] 18:36:21:240 FileSystem/(31732:31732): Se conecto el cliente: Memoria
+
+[TRACE] 18:36:21:242 FileSystem/(31732:31732): Por aceptar serv
+[INFO] 15:36:21:242 FileSystem/(31732:31828): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:36:21:242 FileSystem/(31732:31828): TEST HANDSHAKE
+[TRACE] 18:41:02:522 FileSystem/(32357:32357): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:41:02:522 FileSystem/(32357:32357): Por aceptar serv
+[TRACE] 18:41:03:316 FileSystem/(32357:32357): Ya acepte serv
+[INFO] 18:41:03:316 FileSystem/(32357:32357): Se conecto el cliente: Memoria
+
+[TRACE] 18:41:03:316 FileSystem/(32357:32357): Por aceptar serv
+[INFO] 15:41:03:316 FileSystem/(32357:32453): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:41:03:316 FileSystem/(32357:32453): TEST HANDSHAKE
+[TRACE] 18:43:08:280 FileSystem/(32908:32908): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:43:08:286 FileSystem/(32908:32908): Por aceptar serv
+[TRACE] 18:43:08:978 FileSystem/(32908:32908): Ya acepte serv
+[INFO] 18:43:08:978 FileSystem/(32908:32908): Se conecto el cliente: Memoria
+
+[TRACE] 18:43:08:978 FileSystem/(32908:32908): Por aceptar serv
+[INFO] 15:43:08:978 FileSystem/(32908:33004): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:43:08:979 FileSystem/(32908:33004): TEST HANDSHAKE
+[TRACE] 18:45:39:453 FileSystem/(33450:33450): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:45:39:453 FileSystem/(33450:33450): Por aceptar serv
+[TRACE] 18:45:40:169 FileSystem/(33450:33450): Ya acepte serv
+[INFO] 18:45:40:169 FileSystem/(33450:33450): Se conecto el cliente: Memoria
+
+[TRACE] 15:45:40:171 FileSystem/(33450:33450): Por aceptar serv
+[INFO] 15:45:40:171 FileSystem/(33450:33546): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:45:40:177 FileSystem/(33450:33546): TEST HANDSHAKE
+[TRACE] 18:48:03:784 FileSystem/(33983:33983): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:48:03:787 FileSystem/(33983:33983): Por aceptar serv
+[TRACE] 18:48:04:580 FileSystem/(33983:33983): Ya acepte serv
+[INFO] 18:48:04:584 FileSystem/(33983:33983): Se conecto el cliente: Memoria
+
+[TRACE] 15:48:04:586 FileSystem/(33983:33983): Por aceptar serv
+[INFO] 15:48:04:586 FileSystem/(33983:34079): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:48:04:586 FileSystem/(33983:34079): TEST HANDSHAKE
+[TRACE] 18:49:59:653 FileSystem/(34556:34556): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 18:49:59:653 FileSystem/(34556:34556): Por aceptar serv
+[TRACE] 18:50:00:535 FileSystem/(34556:34556): Ya acepte serv
+[INFO] 18:50:00:535 FileSystem/(34556:34556): Se conecto el cliente: Memoria
+
+[TRACE] 18:50:00:536 FileSystem/(34556:34556): Por aceptar serv
+[INFO] 15:50:00:538 FileSystem/(34556:34652): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 15:50:00:541 FileSystem/(34556:34652): TEST HANDSHAKE
+[TRACE] 19:01:21:975 FileSystem/(35775:35775): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:01:21:980 FileSystem/(35775:35775): Por aceptar serv
+[TRACE] 19:01:22:707 FileSystem/(35775:35775): Ya acepte serv
+[INFO] 19:01:22:707 FileSystem/(35775:35775): Se conecto el cliente: Memoria
+
+[TRACE] 19:01:22:707 FileSystem/(35775:35775): Por aceptar serv
+[INFO] 16:01:22:707 FileSystem/(35775:35871): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:01:22:707 FileSystem/(35775:35871): TEST HANDSHAKE
+[TRACE] 19:01:56:830 FileSystem/(36229:36229): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:01:56:830 FileSystem/(36229:36229): Por aceptar serv
+[TRACE] 19:01:57:428 FileSystem/(36229:36229): Ya acepte serv
+[INFO] 19:01:57:428 FileSystem/(36229:36229): Se conecto el cliente: Memoria
+
+[TRACE] 19:01:57:430 FileSystem/(36229:36229): Por aceptar serv
+[INFO] 16:01:57:432 FileSystem/(36229:36325): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:01:57:432 FileSystem/(36229:36325): TEST HANDSHAKE
+[TRACE] 19:03:40:862 FileSystem/(36771:36771): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:03:40:867 FileSystem/(36771:36771): Por aceptar serv
+[TRACE] 19:03:41:490 FileSystem/(36771:36771): Ya acepte serv
+[INFO] 19:03:41:491 FileSystem/(36771:36771): Se conecto el cliente: Memoria
+
+[TRACE] 19:03:41:491 FileSystem/(36771:36771): Por aceptar serv
+[INFO] 16:03:41:491 FileSystem/(36771:36867): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:03:41:495 FileSystem/(36771:36867): TEST HANDSHAKE
+[TRACE] 19:10:00:461 FileSystem/(37263:37263): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:10:00:461 FileSystem/(37263:37263): Por aceptar serv
+[TRACE] 19:10:01:106 FileSystem/(37263:37263): Ya acepte serv
+[INFO] 19:10:01:106 FileSystem/(37263:37263): Se conecto el cliente: Memoria
+
+[TRACE] 19:10:01:107 FileSystem/(37263:37263): Por aceptar serv
+[INFO] 16:10:01:108 FileSystem/(37263:37359): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:10:01:108 FileSystem/(37263:37359): TEST HANDSHAKE
+[TRACE] 19:10:23:492 FileSystem/(37698:37698): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:10:23:492 FileSystem/(37698:37698): Por aceptar serv
+[TRACE] 19:10:24:182 FileSystem/(37698:37698): Ya acepte serv
+[INFO] 19:10:24:182 FileSystem/(37698:37698): Se conecto el cliente: Memoria
+
+[TRACE] 19:10:24:184 FileSystem/(37698:37698): Por aceptar serv
+[INFO] 16:10:24:184 FileSystem/(37698:37794): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:10:24:188 FileSystem/(37698:37794): TEST HANDSHAKE
+[TRACE] 19:13:12:163 FileSystem/(38189:38189): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:13:12:163 FileSystem/(38189:38189): Por aceptar serv
+[TRACE] 19:13:12:828 FileSystem/(38189:38189): Ya acepte serv
+[INFO] 19:13:12:828 FileSystem/(38189:38189): Se conecto el cliente: Memoria
+
+[TRACE] 19:13:12:828 FileSystem/(38189:38189): Por aceptar serv
+[INFO] 16:13:12:828 FileSystem/(38189:38285): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:13:12:830 FileSystem/(38189:38285): TEST HANDSHAKE
+[TRACE] 19:16:29:112 FileSystem/(38754:38754): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:16:29:112 FileSystem/(38754:38754): Por aceptar serv
+[TRACE] 19:16:29:825 FileSystem/(38754:38754): Ya acepte serv
+[INFO] 19:16:29:825 FileSystem/(38754:38754): Se conecto el cliente: Memoria
+
+[TRACE] 19:16:29:825 FileSystem/(38754:38754): Por aceptar serv
+[INFO] 16:16:29:825 FileSystem/(38754:38850): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:16:29:825 FileSystem/(38754:38850): TEST HANDSHAKE
+[TRACE] 19:16:53:570 FileSystem/(39178:39178): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:16:53:570 FileSystem/(39178:39178): Por aceptar serv
+[TRACE] 19:16:54:230 FileSystem/(39178:39178): Ya acepte serv
+[INFO] 19:16:54:231 FileSystem/(39178:39178): Se conecto el cliente: Memoria
+
+[TRACE] 19:16:54:234 FileSystem/(39178:39178): Por aceptar serv
+[INFO] 16:16:54:235 FileSystem/(39178:39274): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:16:54:235 FileSystem/(39178:39274): TEST HANDSHAKE
+[TRACE] 19:16:59:856 FileSystem/(39585:39585): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:16:59:856 FileSystem/(39585:39585): Por aceptar serv
+[TRACE] 19:17:00:597 FileSystem/(39585:39585): Ya acepte serv
+[INFO] 19:17:00:597 FileSystem/(39585:39585): Se conecto el cliente: Memoria
+
+[TRACE] 19:17:00:598 FileSystem/(39585:39585): Por aceptar serv
+[INFO] 16:17:00:602 FileSystem/(39585:39681): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:17:00:602 FileSystem/(39585:39681): TEST HANDSHAKE
+[TRACE] 19:17:06:223 FileSystem/(39997:39997): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:17:06:224 FileSystem/(39997:39997): Por aceptar serv
+[TRACE] 19:17:06:877 FileSystem/(39997:39997): Ya acepte serv
+[INFO] 19:17:06:877 FileSystem/(39997:39997): Se conecto el cliente: Memoria
+
+[TRACE] 19:17:06:877 FileSystem/(39997:39997): Por aceptar serv
+[INFO] 16:17:06:877 FileSystem/(39997:40093): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:17:06:878 FileSystem/(39997:40093): TEST HANDSHAKE
+[TRACE] 19:17:11:622 FileSystem/(40405:40405): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:17:11:622 FileSystem/(40405:40405): Por aceptar serv
+[TRACE] 19:17:12:796 FileSystem/(40405:40405): Ya acepte serv
+[INFO] 19:17:12:796 FileSystem/(40405:40405): Se conecto el cliente: Memoria
+
+[TRACE] 19:17:12:798 FileSystem/(40405:40405): Por aceptar serv
+[INFO] 16:17:12:798 FileSystem/(40405:40501): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:17:12:800 FileSystem/(40405:40501): TEST HANDSHAKE
+[TRACE] 19:17:19:420 FileSystem/(40812:40812): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:17:19:421 FileSystem/(40812:40812): Por aceptar serv
+[TRACE] 19:17:20:370 FileSystem/(40812:40812): Ya acepte serv
+[INFO] 19:17:20:370 FileSystem/(40812:40812): Se conecto el cliente: Memoria
+
+[TRACE] 19:17:20:370 FileSystem/(40812:40812): Por aceptar serv
+[INFO] 16:17:20:371 FileSystem/(40812:40908): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:17:20:371 FileSystem/(40812:40908): TEST HANDSHAKE
+[TRACE] 19:20:43:218 FileSystem/(41863:41863): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:20:43:219 FileSystem/(41863:41863): Por aceptar serv
+[TRACE] 19:20:44:143 FileSystem/(41863:41863): Ya acepte serv
+[INFO] 19:20:44:143 FileSystem/(41863:41863): Se conecto el cliente: Memoria
+
+[TRACE] 19:20:44:143 FileSystem/(41863:41863): Por aceptar serv
+[INFO] 16:20:44:144 FileSystem/(41863:41976): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:20:44:148 FileSystem/(41863:41976): TEST HANDSHAKE
+[TRACE] 19:23:45:700 FileSystem/(42672:42672): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:23:45:700 FileSystem/(42672:42672): Por aceptar serv
+[TRACE] 19:23:46:588 FileSystem/(42672:42672): Ya acepte serv
+[INFO] 19:23:46:588 FileSystem/(42672:42672): Se conecto el cliente: Memoria
+
+[TRACE] 19:23:46:588 FileSystem/(42672:42672): Por aceptar serv
+[INFO] 16:23:46:588 FileSystem/(42672:42785): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:23:46:588 FileSystem/(42672:42785): TEST HANDSHAKE
+[TRACE] 19:25:27:184 FileSystem/(43209:43209): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:25:27:186 FileSystem/(43209:43209): Por aceptar serv
+[TRACE] 19:25:28:023 FileSystem/(43209:43209): Ya acepte serv
+[INFO] 19:25:28:023 FileSystem/(43209:43209): Se conecto el cliente: Memoria
+
+[TRACE] 19:25:28:023 FileSystem/(43209:43209): Por aceptar serv
+[INFO] 16:25:28:023 FileSystem/(43209:43305): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:25:28:025 FileSystem/(43209:43305): TEST HANDSHAKE
+[TRACE] 19:30:28:707 FileSystem/(43923:43923): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:30:28:707 FileSystem/(43923:43923): Por aceptar serv
+[TRACE] 19:30:29:419 FileSystem/(43923:43923): Ya acepte serv
+[INFO] 19:30:29:422 FileSystem/(43923:43923): Se conecto el cliente: Memoria
+
+[TRACE] 19:30:29:423 FileSystem/(43923:43923): Por aceptar serv
+[INFO] 16:30:29:423 FileSystem/(43923:44019): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:30:29:423 FileSystem/(43923:44019): TEST HANDSHAKE
+[TRACE] 19:33:55:583 FileSystem/(44468:44468): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:33:55:583 FileSystem/(44468:44468): Por aceptar serv
+[TRACE] 19:33:56:300 FileSystem/(44468:44468): Ya acepte serv
+[INFO] 19:33:56:300 FileSystem/(44468:44468): Se conecto el cliente: Memoria
+
+[TRACE] 19:33:56:300 FileSystem/(44468:44468): Por aceptar serv
+[INFO] 16:33:56:300 FileSystem/(44468:44564): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:33:56:301 FileSystem/(44468:44564): TEST HANDSHAKE
+[TRACE] 19:36:24:674 FileSystem/(45005:45005): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:36:24:675 FileSystem/(45005:45005): Por aceptar serv
+[TRACE] 19:36:25:350 FileSystem/(45005:45005): Ya acepte serv
+[INFO] 19:36:25:350 FileSystem/(45005:45005): Se conecto el cliente: Memoria
+
+[TRACE] 19:36:25:350 FileSystem/(45005:45005): Por aceptar serv
+[INFO] 16:36:25:351 FileSystem/(45005:45101): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:36:25:351 FileSystem/(45005:45101): TEST HANDSHAKE
+[TRACE] 19:41:33:914 FileSystem/(45762:45762): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:41:33:914 FileSystem/(45762:45762): Por aceptar serv
+[TRACE] 19:41:34:654 FileSystem/(45762:45762): Ya acepte serv
+[INFO] 19:41:34:665 FileSystem/(45762:45762): Se conecto el cliente: Memoria
+
+[TRACE] 19:41:34:666 FileSystem/(45762:45762): Por aceptar serv
+[INFO] 16:41:34:666 FileSystem/(45762:45858): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:41:34:667 FileSystem/(45762:45858): TEST HANDSHAKE
+[TRACE] 19:42:25:038 FileSystem/(46225:46225): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:42:25:038 FileSystem/(46225:46225): Por aceptar serv
+[TRACE] 19:42:26:399 FileSystem/(46225:46225): Ya acepte serv
+[INFO] 19:42:26:403 FileSystem/(46225:46225): Se conecto el cliente: Memoria
+
+[TRACE] 19:42:26:403 FileSystem/(46225:46225): Por aceptar serv
+[INFO] 16:42:26:406 FileSystem/(46225:46321): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:42:26:406 FileSystem/(46225:46321): TEST HANDSHAKE
+[TRACE] 19:43:49:131 FileSystem/(46701:46701): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:43:49:136 FileSystem/(46701:46701): Por aceptar serv
+[TRACE] 19:43:49:841 FileSystem/(46701:46701): Ya acepte serv
+[INFO] 19:43:49:841 FileSystem/(46701:46701): Se conecto el cliente: Memoria
+
+[TRACE] 19:43:49:841 FileSystem/(46701:46701): Por aceptar serv
+[INFO] 16:43:49:841 FileSystem/(46701:46797): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:43:49:841 FileSystem/(46701:46797): TEST HANDSHAKE
+[TRACE] 19:46:03:978 FileSystem/(47382:47382): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:46:03:978 FileSystem/(47382:47382): Por aceptar serv
+[TRACE] 19:46:04:623 FileSystem/(47382:47382): Ya acepte serv
+[INFO] 19:46:04:623 FileSystem/(47382:47382): Se conecto el cliente: Memoria
+
+[TRACE] 19:46:04:623 FileSystem/(47382:47382): Por aceptar serv
+[INFO] 16:46:04:623 FileSystem/(47382:47478): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:46:04:624 FileSystem/(47382:47478): TEST HANDSHAKE
+[TRACE] 19:49:57:628 FileSystem/(47959:47959): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:49:57:630 FileSystem/(47959:47959): Por aceptar serv
+[TRACE] 19:49:58:297 FileSystem/(47959:47959): Ya acepte serv
+[INFO] 19:49:58:297 FileSystem/(47959:47959): Se conecto el cliente: Memoria
+
+[TRACE] 19:49:58:297 FileSystem/(47959:47959): Por aceptar serv
+[INFO] 16:49:58:297 FileSystem/(47959:48055): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:49:58:297 FileSystem/(47959:48055): TEST HANDSHAKE
+[TRACE] 19:51:18:936 FileSystem/(48473:48473): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:51:18:936 FileSystem/(48473:48473): Por aceptar serv
+[TRACE] 19:51:19:562 FileSystem/(48473:48473): Ya acepte serv
+[INFO] 19:51:19:562 FileSystem/(48473:48473): Se conecto el cliente: Memoria
+
+[TRACE] 19:51:19:562 FileSystem/(48473:48473): Por aceptar serv
+[INFO] 16:51:19:562 FileSystem/(48473:48569): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:51:19:564 FileSystem/(48473:48569): TEST HANDSHAKE
+[TRACE] 19:55:35:370 FileSystem/(49311:49311): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:55:35:370 FileSystem/(49311:49311): Por aceptar serv
+[TRACE] 19:55:36:311 FileSystem/(49311:49311): Ya acepte serv
+[INFO] 19:55:36:311 FileSystem/(49311:49311): Se conecto el cliente: Memoria
+
+[TRACE] 19:55:36:311 FileSystem/(49311:49311): Por aceptar serv
+[INFO] 16:55:36:311 FileSystem/(49311:49407): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:55:36:311 FileSystem/(49311:49407): TEST HANDSHAKE
+[TRACE] 19:56:56:897 FileSystem/(49861:49861): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:56:56:898 FileSystem/(49861:49861): Por aceptar serv
+[TRACE] 19:56:57:531 FileSystem/(49861:49861): Ya acepte serv
+[INFO] 19:56:57:531 FileSystem/(49861:49861): Se conecto el cliente: Memoria
+
+[TRACE] 19:56:57:532 FileSystem/(49861:49861): Por aceptar serv
+[INFO] 16:56:57:532 FileSystem/(49861:49957): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:56:57:536 FileSystem/(49861:49957): TEST HANDSHAKE
+[TRACE] 19:59:29:132 FileSystem/(50411:50411): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:59:29:134 FileSystem/(50411:50411): Por aceptar serv
+[TRACE] 19:59:29:906 FileSystem/(50411:50411): Ya acepte serv
+[INFO] 19:59:29:906 FileSystem/(50411:50411): Se conecto el cliente: Memoria
+
+[TRACE] 19:59:29:906 FileSystem/(50411:50411): Por aceptar serv
+[INFO] 16:59:29:907 FileSystem/(50411:50507): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:59:29:907 FileSystem/(50411:50507): TEST HANDSHAKE
+[TRACE] 20:00:31:595 FileSystem/(50858:50858): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:00:31:595 FileSystem/(50858:50858): Por aceptar serv
+[TRACE] 20:00:32:310 FileSystem/(50858:50858): Ya acepte serv
+[INFO] 20:00:32:310 FileSystem/(50858:50858): Se conecto el cliente: Memoria
+
+[TRACE] 20:00:32:312 FileSystem/(50858:50858): Por aceptar serv
+[INFO] 17:00:32:312 FileSystem/(50858:50954): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:00:32:314 FileSystem/(50858:50954): TEST HANDSHAKE
+[TRACE] 20:00:50:293 FileSystem/(51280:51280): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:00:50:295 FileSystem/(51280:51280): Por aceptar serv
+[TRACE] 20:00:50:909 FileSystem/(51280:51280): Ya acepte serv
+[INFO] 20:00:50:909 FileSystem/(51280:51280): Se conecto el cliente: Memoria
+
+[TRACE] 20:00:50:909 FileSystem/(51280:51280): Por aceptar serv
+[INFO] 17:00:50:910 FileSystem/(51280:51376): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:00:50:910 FileSystem/(51280:51376): TEST HANDSHAKE
+[TRACE] 20:03:02:683 FileSystem/(51698:51698): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:03:02:691 FileSystem/(51698:51698): Por aceptar serv
+[TRACE] 20:03:03:381 FileSystem/(51698:51698): Ya acepte serv
+[INFO] 20:03:03:381 FileSystem/(51698:51698): Se conecto el cliente: Memoria
+
+[TRACE] 20:03:03:383 FileSystem/(51698:51698): Por aceptar serv
+[INFO] 17:03:03:384 FileSystem/(51698:51794): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:03:03:384 FileSystem/(51698:51794): TEST HANDSHAKE
+[TRACE] 20:05:22:683 FileSystem/(52420:52420): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:05:22:683 FileSystem/(52420:52420): Por aceptar serv
+[TRACE] 20:05:23:375 FileSystem/(52420:52420): Ya acepte serv
+[INFO] 20:05:23:375 FileSystem/(52420:52420): Se conecto el cliente: Memoria
+
+[TRACE] 20:05:23:376 FileSystem/(52420:52420): Por aceptar serv
+[INFO] 17:05:23:376 FileSystem/(52420:52516): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:05:23:378 FileSystem/(52420:52516): TEST HANDSHAKE
+[TRACE] 20:05:50:058 FileSystem/(52823:52823): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:05:50:058 FileSystem/(52823:52823): Por aceptar serv
+[TRACE] 20:05:50:588 FileSystem/(52823:52823): Ya acepte serv
+[INFO] 20:05:50:589 FileSystem/(52823:52823): Se conecto el cliente: Memoria
+
+[TRACE] 20:05:50:589 FileSystem/(52823:52823): Por aceptar serv
+[INFO] 17:05:50:589 FileSystem/(52823:52919): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:05:50:589 FileSystem/(52823:52919): TEST HANDSHAKE
+[TRACE] 20:06:32:511 FileSystem/(53544:53544): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:06:32:511 FileSystem/(53544:53544): Por aceptar serv
+[TRACE] 20:06:34:019 FileSystem/(53544:53544): Ya acepte serv
+[INFO] 20:06:34:019 FileSystem/(53544:53544): Se conecto el cliente: Memoria
+
+[TRACE] 20:06:34:019 FileSystem/(53544:53544): Por aceptar serv
+[INFO] 17:06:34:019 FileSystem/(53544:53657): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:06:34:022 FileSystem/(53544:53657): TEST HANDSHAKE
+[TRACE] 20:08:38:714 FileSystem/(54063:54063): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:08:38:714 FileSystem/(54063:54063): Por aceptar serv
+[TRACE] 20:08:39:415 FileSystem/(54063:54063): Ya acepte serv
+[INFO] 20:08:39:415 FileSystem/(54063:54063): Se conecto el cliente: Memoria
+
+[TRACE] 20:08:39:415 FileSystem/(54063:54063): Por aceptar serv
+[INFO] 17:08:39:416 FileSystem/(54063:54159): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:08:39:416 FileSystem/(54063:54159): TEST HANDSHAKE
+[TRACE] 20:19:03:099 FileSystem/(54688:54688): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:19:03:100 FileSystem/(54688:54688): Por aceptar serv
+[TRACE] 20:19:03:768 FileSystem/(54688:54688): Ya acepte serv
+[INFO] 20:19:03:770 FileSystem/(54688:54688): Se conecto el cliente: Memoria
+
+[TRACE] 20:19:03:772 FileSystem/(54688:54688): Por aceptar serv
+[INFO] 17:19:03:775 FileSystem/(54688:54784): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:19:03:775 FileSystem/(54688:54784): TEST HANDSHAKE
+[TRACE] 20:19:17:158 FileSystem/(55100:55100): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:19:17:158 FileSystem/(55100:55100): Por aceptar serv
+[TRACE] 20:19:17:772 FileSystem/(55100:55100): Ya acepte serv
+[INFO] 20:19:17:772 FileSystem/(55100:55100): Se conecto el cliente: Memoria
+
+[TRACE] 20:19:17:772 FileSystem/(55100:55100): Por aceptar serv
+[INFO] 17:19:17:774 FileSystem/(55100:55196): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:19:17:775 FileSystem/(55100:55196): TEST HANDSHAKE
+[TRACE] 20:19:24:442 FileSystem/(55502:55502): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:19:24:442 FileSystem/(55502:55502): Por aceptar serv
+[TRACE] 20:19:25:124 FileSystem/(55502:55502): Ya acepte serv
+[INFO] 20:19:25:124 FileSystem/(55502:55502): Se conecto el cliente: Memoria
+
+[TRACE] 20:19:25:124 FileSystem/(55502:55502): Por aceptar serv
+[INFO] 17:19:25:124 FileSystem/(55502:55598): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:19:25:128 FileSystem/(55502:55598): TEST HANDSHAKE
+[TRACE] 20:23:16:375 FileSystem/(56297:56297): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:23:16:375 FileSystem/(56297:56297): Por aceptar serv
+[TRACE] 20:23:17:462 FileSystem/(56297:56297): Ya acepte serv
+[INFO] 20:23:17:463 FileSystem/(56297:56297): Se conecto el cliente: Memoria
+
+[TRACE] 20:23:17:463 FileSystem/(56297:56297): Por aceptar serv
+[INFO] 17:23:17:464 FileSystem/(56297:56410): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:23:17:466 FileSystem/(56297:56410): TEST HANDSHAKE
+[TRACE] 20:24:05:788 FileSystem/(56795:56795): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:24:05:788 FileSystem/(56795:56795): Por aceptar serv
+[TRACE] 20:24:06:419 FileSystem/(56795:56795): Ya acepte serv
+[INFO] 20:24:06:419 FileSystem/(56795:56795): Se conecto el cliente: Memoria
+
+[TRACE] 20:24:06:422 FileSystem/(56795:56795): Por aceptar serv
+[INFO] 17:24:06:423 FileSystem/(56795:56891): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:24:06:424 FileSystem/(56795:56891): TEST HANDSHAKE
+[TRACE] 20:25:33:000 FileSystem/(57263:57263): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:25:33:000 FileSystem/(57263:57263): Por aceptar serv
+[TRACE] 20:25:34:007 FileSystem/(57263:57263): Ya acepte serv
+[INFO] 20:25:34:007 FileSystem/(57263:57263): Se conecto el cliente: Memoria
+
+[TRACE] 20:25:34:008 FileSystem/(57263:57263): Por aceptar serv
+[INFO] 17:25:34:008 FileSystem/(57263:57359): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:25:34:008 FileSystem/(57263:57359): TEST HANDSHAKE
+[TRACE] 20:26:39:138 FileSystem/(57759:57759): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:26:39:138 FileSystem/(57759:57759): Por aceptar serv
+[TRACE] 20:26:39:970 FileSystem/(57759:57759): Ya acepte serv
+[INFO] 20:26:39:970 FileSystem/(57759:57759): Se conecto el cliente: Memoria
+
+[TRACE] 20:26:39:970 FileSystem/(57759:57759): Por aceptar serv
+[INFO] 17:26:39:970 FileSystem/(57759:57855): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:26:39:970 FileSystem/(57759:57855): TEST HANDSHAKE
+[TRACE] 20:31:20:487 FileSystem/(58426:58426): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:31:20:487 FileSystem/(58426:58426): Por aceptar serv
+[TRACE] 20:31:21:434 FileSystem/(58426:58426): Ya acepte serv
+[INFO] 20:31:21:436 FileSystem/(58426:58426): Se conecto el cliente: Memoria
+
+[INFO] 17:31:21:437 FileSystem/(58426:58522): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:31:21:437 FileSystem/(58426:58522): TEST HANDSHAKE
+[TRACE] 17:31:21:437 FileSystem/(58426:58426): Por aceptar serv
+[TRACE] 20:33:14:034 FileSystem/(58959:58959): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:33:14:036 FileSystem/(58959:58959): Por aceptar serv
+[TRACE] 20:33:14:905 FileSystem/(58959:58959): Ya acepte serv
+[INFO] 20:33:14:905 FileSystem/(58959:58959): Se conecto el cliente: Memoria
+
+[TRACE] 20:33:14:905 FileSystem/(58959:58959): Por aceptar serv
+[INFO] 17:33:14:906 FileSystem/(58959:59055): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:33:14:907 FileSystem/(58959:59055): TEST HANDSHAKE
+[TRACE] 20:33:33:106 FileSystem/(59382:59382): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:33:33:106 FileSystem/(59382:59382): Por aceptar serv
+[TRACE] 20:33:33:839 FileSystem/(59382:59382): Ya acepte serv
+[INFO] 20:33:33:839 FileSystem/(59382:59382): Se conecto el cliente: Memoria
+
+[TRACE] 20:33:33:839 FileSystem/(59382:59382): Por aceptar serv
+[INFO] 17:33:33:839 FileSystem/(59382:59478): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:33:33:839 FileSystem/(59382:59478): TEST HANDSHAKE
+[TRACE] 20:37:27:052 FileSystem/(60154:60154): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:37:27:052 FileSystem/(60154:60154): Por aceptar serv
+[TRACE] 20:37:27:775 FileSystem/(60154:60154): Ya acepte serv
+[INFO] 20:37:27:775 FileSystem/(60154:60154): Se conecto el cliente: Memoria
+
+[TRACE] 20:37:27:775 FileSystem/(60154:60154): Por aceptar serv
+[INFO] 17:37:27:775 FileSystem/(60154:60250): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:37:27:776 FileSystem/(60154:60250): TEST HANDSHAKE
+[TRACE] 20:47:35:358 FileSystem/(60790:60790): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:47:35:358 FileSystem/(60790:60790): Por aceptar serv
+[TRACE] 20:47:36:106 FileSystem/(60790:60790): Ya acepte serv
+[INFO] 20:47:36:107 FileSystem/(60790:60790): Se conecto el cliente: Memoria
+
+[TRACE] 20:47:36:107 FileSystem/(60790:60790): Por aceptar serv
+[INFO] 17:47:36:107 FileSystem/(60790:60886): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:47:36:107 FileSystem/(60790:60886): TEST HANDSHAKE
+[TRACE] 20:49:07:522 FileSystem/(61288:61288): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:49:07:522 FileSystem/(61288:61288): Por aceptar serv
+[TRACE] 20:49:08:345 FileSystem/(61288:61288): Ya acepte serv
+[INFO] 20:49:08:346 FileSystem/(61288:61288): Se conecto el cliente: Memoria
+
+[TRACE] 20:49:08:348 FileSystem/(61288:61288): Por aceptar serv
+[INFO] 17:49:08:348 FileSystem/(61288:61384): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:49:08:351 FileSystem/(61288:61384): TEST HANDSHAKE
+[TRACE] 20:50:24:859 FileSystem/(61741:61741): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:50:24:859 FileSystem/(61741:61741): Por aceptar serv
+[TRACE] 20:50:25:745 FileSystem/(61741:61741): Ya acepte serv
+[INFO] 20:50:25:745 FileSystem/(61741:61741): Se conecto el cliente: Memoria
+
+[TRACE] 20:50:25:746 FileSystem/(61741:61741): Por aceptar serv
+[INFO] 17:50:25:746 FileSystem/(61741:61837): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:50:25:746 FileSystem/(61741:61837): TEST HANDSHAKE
+[TRACE] 20:52:04:218 FileSystem/(62189:62189): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:52:04:218 FileSystem/(62189:62189): Por aceptar serv
+[TRACE] 20:52:07:105 FileSystem/(62189:62189): Ya acepte serv
+[INFO] 20:52:07:105 FileSystem/(62189:62189): Se conecto el cliente: Memoria
+
+[TRACE] 20:52:07:106 FileSystem/(62189:62189): Por aceptar serv
+[INFO] 17:52:07:107 FileSystem/(62189:62285): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:52:07:108 FileSystem/(62189:62285): TEST HANDSHAKE
+[TRACE] 20:53:17:291 FileSystem/(62680:62680): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 20:53:17:291 FileSystem/(62680:62680): Por aceptar serv
+[TRACE] 20:53:18:297 FileSystem/(62680:62680): Ya acepte serv
+[INFO] 20:53:18:297 FileSystem/(62680:62680): Se conecto el cliente: Memoria
+
+[TRACE] 20:53:18:298 FileSystem/(62680:62680): Por aceptar serv
+[INFO] 17:53:18:298 FileSystem/(62680:62776): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 17:53:18:298 FileSystem/(62680:62776): TEST HANDSHAKE
+[TRACE] 21:07:19:410 FileSystem/(63556:63556): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:07:19:410 FileSystem/(63556:63556): Por aceptar serv
+[TRACE] 21:07:20:186 FileSystem/(63556:63556): Ya acepte serv
+[INFO] 21:07:20:186 FileSystem/(63556:63556): Se conecto el cliente: Memoria
+
+[TRACE] 21:07:20:187 FileSystem/(63556:63556): Por aceptar serv
+[INFO] 18:07:20:187 FileSystem/(63556:63652): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:07:20:190 FileSystem/(63556:63652): TEST HANDSHAKE
+[TRACE] 21:10:21:888 FileSystem/(64155:64155): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:10:21:889 FileSystem/(64155:64155): Por aceptar serv
+[TRACE] 21:10:22:552 FileSystem/(64155:64155): Ya acepte serv
+[INFO] 21:10:22:552 FileSystem/(64155:64155): Se conecto el cliente: Memoria
+
+[TRACE] 21:10:22:552 FileSystem/(64155:64155): Por aceptar serv
+[INFO] 18:10:22:552 FileSystem/(64155:64251): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:10:22:553 FileSystem/(64155:64251): TEST HANDSHAKE
+[TRACE] 21:16:06:802 FileSystem/(64845:64845): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:16:06:802 FileSystem/(64845:64845): Por aceptar serv
+[TRACE] 21:16:07:607 FileSystem/(64845:64845): Ya acepte serv
+[INFO] 21:16:07:608 FileSystem/(64845:64845): Se conecto el cliente: Memoria
+
+[TRACE] 21:16:07:611 FileSystem/(64845:64845): Por aceptar serv
+[INFO] 18:16:07:611 FileSystem/(64845:64941): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:16:07:618 FileSystem/(64845:64941): TEST HANDSHAKE
+[TRACE] 21:17:04:776 FileSystem/(65299:65299): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:17:04:778 FileSystem/(65299:65299): Por aceptar serv
+[TRACE] 21:17:05:534 FileSystem/(65299:65299): Ya acepte serv
+[INFO] 21:17:05:534 FileSystem/(65299:65299): Se conecto el cliente: Memoria
+
+[TRACE] 21:17:05:535 FileSystem/(65299:65299): Por aceptar serv
+[INFO] 18:17:05:535 FileSystem/(65299:65395): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:17:05:535 FileSystem/(65299:65395): TEST HANDSHAKE
+[TRACE] 21:17:20:641 FileSystem/(65712:65712): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:17:20:641 FileSystem/(65712:65712): Por aceptar serv
+[TRACE] 21:17:21:466 FileSystem/(65712:65712): Ya acepte serv
+[INFO] 21:17:21:466 FileSystem/(65712:65712): Se conecto el cliente: Memoria
+
+[TRACE] 21:17:21:467 FileSystem/(65712:65712): Por aceptar serv
+[INFO] 18:17:21:467 FileSystem/(65712:65808): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:17:21:469 FileSystem/(65712:65808): TEST HANDSHAKE
+[TRACE] 21:18:49:027 FileSystem/(66609:66609): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:18:49:027 FileSystem/(66609:66609): Por aceptar serv
+[TRACE] 21:18:50:503 FileSystem/(66609:66609): Ya acepte serv
+[INFO] 21:18:50:503 FileSystem/(66609:66609): Se conecto el cliente: Memoria
+
+[TRACE] 21:18:50:503 FileSystem/(66609:66609): Por aceptar serv
+[INFO] 18:18:50:503 FileSystem/(66609:66722): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:18:50:504 FileSystem/(66609:66722): TEST HANDSHAKE
+[TRACE] 21:19:56:069 FileSystem/(67167:67167): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:19:56:069 FileSystem/(67167:67167): Por aceptar serv
+[TRACE] 21:19:57:048 FileSystem/(67167:67167): Ya acepte serv
+[INFO] 21:19:57:048 FileSystem/(67167:67167): Se conecto el cliente: Memoria
+
+[TRACE] 21:19:57:048 FileSystem/(67167:67167): Por aceptar serv
+[INFO] 18:19:57:049 FileSystem/(67167:67263): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:19:57:049 FileSystem/(67167:67263): TEST HANDSHAKE
+[TRACE] 21:21:49:402 FileSystem/(67682:67682): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:21:49:402 FileSystem/(67682:67682): Por aceptar serv
+[TRACE] 21:21:50:588 FileSystem/(67682:67682): Ya acepte serv
+[INFO] 21:21:50:588 FileSystem/(67682:67682): Se conecto el cliente: Memoria
+
+[TRACE] 21:21:50:588 FileSystem/(67682:67682): Por aceptar serv
+[INFO] 18:21:50:588 FileSystem/(67682:67787): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:21:50:588 FileSystem/(67682:67787): TEST HANDSHAKE
+[TRACE] 21:26:02:755 FileSystem/(68192:68192): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:26:02:756 FileSystem/(68192:68192): Por aceptar serv
+[TRACE] 21:26:03:802 FileSystem/(68192:68192): Ya acepte serv
+[INFO] 21:26:03:802 FileSystem/(68192:68192): Se conecto el cliente: Memoria
+
+[TRACE] 21:26:03:802 FileSystem/(68192:68192): Por aceptar serv
+[INFO] 18:26:03:802 FileSystem/(68192:68288): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:26:03:802 FileSystem/(68192:68288): TEST HANDSHAKE
+[TRACE] 21:27:49:569 FileSystem/(68659:68659): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:27:49:572 FileSystem/(68659:68659): Por aceptar serv
+[TRACE] 21:27:50:328 FileSystem/(68659:68659): Ya acepte serv
+[INFO] 21:27:50:328 FileSystem/(68659:68659): Se conecto el cliente: Memoria
+
+[TRACE] 21:27:50:328 FileSystem/(68659:68659): Por aceptar serv
+[INFO] 18:27:50:328 FileSystem/(68659:68755): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:27:50:329 FileSystem/(68659:68755): TEST HANDSHAKE
+[TRACE] 21:41:36:869 FileSystem/(69810:69810): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:41:36:870 FileSystem/(69810:69810): Por aceptar serv
+[TRACE] 21:41:37:782 FileSystem/(69810:69810): Ya acepte serv
+[INFO] 21:41:37:782 FileSystem/(69810:69810): Se conecto el cliente: Memoria
+
+[TRACE] 21:41:37:783 FileSystem/(69810:69810): Por aceptar serv
+[INFO] 18:41:37:783 FileSystem/(69810:69906): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:41:37:783 FileSystem/(69810:69906): TEST HANDSHAKE
+[TRACE] 21:43:23:548 FileSystem/(70314:70314): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:43:23:548 FileSystem/(70314:70314): Por aceptar serv
+[TRACE] 21:43:24:293 FileSystem/(70314:70314): Ya acepte serv
+[INFO] 21:43:24:293 FileSystem/(70314:70314): Se conecto el cliente: Memoria
+
+[TRACE] 21:43:24:293 FileSystem/(70314:70314): Por aceptar serv
+[INFO] 18:43:24:294 FileSystem/(70314:70410): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:43:24:298 FileSystem/(70314:70410): TEST HANDSHAKE
+[TRACE] 21:48:05:176 FileSystem/(70916:70916): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:48:05:178 FileSystem/(70916:70916): Por aceptar serv
+[TRACE] 21:48:05:919 FileSystem/(70916:70916): Ya acepte serv
+[INFO] 21:48:05:919 FileSystem/(70916:70916): Se conecto el cliente: Memoria
+
+[TRACE] 21:48:05:919 FileSystem/(70916:70916): Por aceptar serv
+[INFO] 18:48:05:919 FileSystem/(70916:71012): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:48:05:923 FileSystem/(70916:71012): TEST HANDSHAKE
+[TRACE] 21:53:00:250 FileSystem/(71640:71640): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:53:00:251 FileSystem/(71640:71640): Por aceptar serv
+[TRACE] 21:53:00:934 FileSystem/(71640:71640): Ya acepte serv
+[INFO] 21:53:00:934 FileSystem/(71640:71640): Se conecto el cliente: Memoria
+
+[TRACE] 21:53:00:935 FileSystem/(71640:71640): Por aceptar serv
+[INFO] 18:53:00:939 FileSystem/(71640:71736): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:53:00:940 FileSystem/(71640:71736): TEST HANDSHAKE
+[TRACE] 22:02:08:530 FileSystem/(72951:72951): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:02:08:531 FileSystem/(72951:72951): Por aceptar serv
+[TRACE] 22:02:10:068 FileSystem/(72951:72951): Ya acepte serv
+[INFO] 22:02:10:071 FileSystem/(72951:72951): Se conecto el cliente: Memoria
+
+[INFO] 19:02:10:074 FileSystem/(72951:73064): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 19:02:10:074 FileSystem/(72951:73064): TEST HANDSHAKE
+[TRACE] 19:02:10:074 FileSystem/(72951:72951): Por aceptar serv
+[TRACE] 22:03:09:182 FileSystem/(73736:73736): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:03:09:182 FileSystem/(73736:73736): Por aceptar serv
+[TRACE] 22:03:09:923 FileSystem/(73736:73736): Ya acepte serv
+[INFO] 22:03:09:923 FileSystem/(73736:73736): Se conecto el cliente: Memoria
+
+[TRACE] 22:03:09:923 FileSystem/(73736:73736): Por aceptar serv
+[INFO] 19:03:09:923 FileSystem/(73736:73832): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 19:03:09:923 FileSystem/(73736:73832): TEST HANDSHAKE
+[TRACE] 22:05:24:487 FileSystem/(74223:74223): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 22:05:24:487 FileSystem/(74223:74223): Por aceptar serv
+[TRACE] 22:05:25:273 FileSystem/(74223:74223): Ya acepte serv
+[INFO] 22:05:25:273 FileSystem/(74223:74223): Se conecto el cliente: Memoria
+
+[TRACE] 22:05:25:273 FileSystem/(74223:74223): Por aceptar serv
+[INFO] 19:05:25:274 FileSystem/(74223:74319): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 19:05:25:276 FileSystem/(74223:74319): TEST HANDSHAKE

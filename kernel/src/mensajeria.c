@@ -168,9 +168,11 @@ int esperar_respuesta(){
             break;
         case SYSCALL_THREAD_JOIN:
             log_info(logger,"## (%d:%d) - Bloqueado por: <PTHREAD_JOIN>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
-            deserializar_thread_join();
+            int rta_join = deserializar_thread_join();
             sem_wait(&sem_syscall_fin);
             int hilo_join = HILO_JOINEADO;
+            if(!rta_join)
+                hilo_join = HILO_NO_JOINEADO;
             send(fd_cpu_dispatch,&hilo_join,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_CANCEL:
@@ -292,10 +294,10 @@ void deserializar_thread_create(){
     THREAD_CREATE(pcb_en_ejecucion,archivo_pseudocodigo,prio_hilo);
 }
 
-void deserializar_thread_join(){
+int deserializar_thread_join(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int tid = extraer_int_del_buffer(buffer);
-    THREAD_JOIN(tid);
+    return THREAD_JOIN(tid);
 }
 
 void deserializar_thread_cancel(){

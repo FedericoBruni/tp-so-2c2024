@@ -8,10 +8,11 @@ extern char* algoritmo_planificacion;
 void liberar_tcb(void *ptr_tcb)
 {
     TCB *tcb = (TCB *)ptr_tcb;
+    log_warning(logger, "Liberando <PID:%i>, <TID: %i>", tcb->pcb_pid, tcb->tid);
     liberar_registros(tcb->Registros);
     //tcb->pcb->threads y tids 
-    list_remove_element(tcb->pcb->threads, tcb);
-    list_remove_element(tcb->pcb->tids, tcb->tid);
+    //list_remove_element(tcb->pcb->threads, tcb);
+    //list_remove_element(tcb->pcb->tids, tcb->tid);
     free(tcb);
 }
 
@@ -27,10 +28,10 @@ void liberar_pcb(void *ptr_pcb)
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
 
     if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")) { // para prioridades tmb seria?
-        vaciar_colas_prioridades();
+        //vaciar_colas_prioridades(pcb->pid);
     }
 
-    liberar_tcb(list_get(pcb->threads, 0));
+    //liberar_tcb(list_get(pcb->threads, 0));
     free(pcb->threads);
 
 

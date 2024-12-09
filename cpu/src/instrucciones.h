@@ -15,7 +15,7 @@ void DUMP_MEMORY(int pid, int tid);
 void io(int tiempo);
 void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio_hilo);
 void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad);
-void THREAD_JOIN (int tid);
+char* THREAD_JOIN (int tid);
 void THREAD_CANCEL (int tid, int pid);
 void MUTEX_CREATE (char *recurso);
 char* MUTEX_LOCK (char* recurso);

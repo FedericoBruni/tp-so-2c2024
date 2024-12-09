@@ -94,8 +94,11 @@ void multinivel()
 
     while (1)
     {
+        log_error(logger,"ANTES DE READY");
         sem_wait(&sem_hay_ready);
+        log_error(logger,"DESPUES DE READY");
         sem_wait(&sem_puede_ejecutar);
+        log_error(logger,"PUEDE EJECUTAR");
         printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
         log_info(logger, "Cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
@@ -138,7 +141,7 @@ void fin_de_quantum(test* str)
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     sem_wait(&sem_cpu_ejecutando);
-    usleep(quantumCola);
+    usleep(quantumCola*1000);
     enviar_fin_quantum(tid, pid);
     // free(aux->Registros);
     // free(aux);
@@ -151,6 +154,7 @@ void printear_colas_y_prioridades()
     for (unsigned int i = 0; i < list_size(colas_prioridades); i++)
     {
         COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
+        log_trace(logger, "Cola prioridad: %i, Cola size: %i", cola_prioridad->prioridad, queue_size(cola_prioridad->cola_prioridad));
     }
 }
 

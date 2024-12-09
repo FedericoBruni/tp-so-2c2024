@@ -75,7 +75,11 @@ int main(int argc, char *argv[])
 
     pthread_t hilo_planificador_corto_plazo;
     pthread_create(&hilo_planificador_corto_plazo, NULL, (void *)planificador_corto_plazo, NULL);
-    pthread_join(hilo_planificador_corto_plazo,NULL);
+    pthread_detach(hilo_planificador_corto_plazo);
+
+    pthread_t hilo_io;
+    pthread_create(&hilo_io, NULL, (void *)ejecucion_io, NULL);
+    pthread_join(hilo_io, NULL);
 
     terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
 

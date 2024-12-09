@@ -81,7 +81,8 @@ typedef enum
 	MEM_DUMPEADA,
 	SOL_DUMP,
 	MEM_DUMP_ERROR,
-	OK
+	OK,
+	HILO_NO_JOINEADO
 
 } op_code;
 
@@ -191,6 +192,11 @@ typedef struct{
 	int tamanio;
 	bool estaOcupado; //0 no 1 si
 }Particion;
+
+typedef struct{
+	int tiempo;
+	TCB *tcb;
+}IOStruct;
 
 
 

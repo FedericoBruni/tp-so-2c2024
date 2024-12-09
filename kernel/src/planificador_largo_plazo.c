@@ -57,7 +57,7 @@ void creacion_de_procesos(void)
     }
 }
 
-
+extern sem_t sem_puede_ejecutar;
 void finalizacion_de_procesos(void)
 {
     hilo_fin_proc_muerto = false;
@@ -74,7 +74,10 @@ void finalizacion_de_procesos(void)
         {
         case 1:
             log_info(logger, "## Finaliza el proceso <%i>", pcb->pid);
+            printear_colas_y_prioridades();
             liberar_pcb(pcb);
+            printf("dsp\n");
+            printear_colas_y_prioridades();
             sem_post(&sem_hay_memoria);
             sem_post(&sem_syscall_fin);
             break;
@@ -115,6 +118,7 @@ void creacion_de_hilos(void){
                     encolar(cola_ready, tcb,mutex_ready);
                     log_info(logger,"## (<%i>:<%i>) Se crea el Hilo - Estado: READY", tcb->pcb_pid,tcb->tid);
                 }
+                log_error(logger,"POSTEO READY");
                 sem_post(&sem_hay_ready);
                 sem_post(&sem_syscall_fin);
                 break;
@@ -136,6 +140,7 @@ void finalizacion_de_hilos(void)
         
 
         int tidBloqueante = tcb->tid;
+        int pidhilo = tcb->pcb_pid;
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, tcb->pcb_pid,FINAL_HILO);
         pthread_mutex_unlock(&mutex_fd_memoria);
@@ -143,8 +148,11 @@ void finalizacion_de_hilos(void)
         {
         case 1:
             log_error(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid); // dsp de esto ya no existe el tcb.
+            log_trace(logger,"LISTA TIDS ANTES DE REMOVER: %d",list_size(tcb->pcb->tids));
+            list_remove_element(tcb->pcb->tids, tcb->tid);
+            log_trace(logger,"LISTA TIDS DESPUES DE REMOVER: %d",list_size(tcb->pcb->tids));
             liberar_tcb(tcb);
-            desbloquear_bloqueados_por_hilo(tidBloqueante);
+            desbloquear_bloqueados_por_hilo(tidBloqueante,pidhilo);
             sem_post(&sem_syscall_fin);
             break;
         case 0:

@@ -15,6 +15,7 @@ extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
 extern sem_t sem_dump_mem;
 char* rta_mutex_lock;
+char *rta_hilo_join;
 extern bool flag_interrupt;
 extern pthread_mutex_t mutex_interrupt;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
@@ -49,6 +50,11 @@ void escuchar_mensajes_kernel_dispatch(void)
 			sem_post(&sem_hilo_creado);
 			break;	
 		case HILO_JOINEADO:
+			rta_hilo_join = "SUSPPROCESO";
+			sem_post(&sem_join_hilo);
+			break;
+		case HILO_NO_JOINEADO:
+			rta_hilo_join = "OK";
 			sem_post(&sem_join_hilo);
 			break;
 		case HILO_CANCEL:
