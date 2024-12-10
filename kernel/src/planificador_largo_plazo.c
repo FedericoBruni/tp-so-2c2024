@@ -23,15 +23,19 @@ extern sem_t sem_hay_ready;
 extern sem_t sem_hay_new;
 extern sem_t memoria_libre;
 extern sem_t sem_syscall_fin;
+extern sem_t sem_puede_ejecutar;
 extern char *algoritmo_planificacion;
 extern pthread_mutex_t mutex_fd_memoria;
+bool hay_mem = true;
 
 void creacion_de_procesos(void)
 {
     hilo_creacion_muerto = false;
     while (true)
     {
+        log_error(logger,"ANTES DE HAY NEW EN LARGO PLAZO CREAR");
         sem_wait(&sem_hay_new);
+        log_error(logger,"DSPS DE HAY NEW EN LARGO PLAZO CREAR");
         PCB* pcb = desencolar(cola_new,mutex_new);
         log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
         pthread_mutex_lock(&mutex_fd_memoria);
@@ -42,14 +46,16 @@ void creacion_de_procesos(void)
         case 1:
             log_info(logger, "Memoria reservada correctamente");
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
+            sem_post(&sem_hay_memoria);
             THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
             break;
 
         case 0:
             log_warning(logger, "No hay espacio en memoria");
+            log_trace(logger,"ENCOLANDO PID: %d A NEW PORQUE NO HAY MEMORIA",pcb->pid);
             encolar(cola_new, pcb,mutex_new);
-            sem_wait(&sem_hay_memoria);
-            sem_post(&sem_hay_new);
+            hay_mem=false;
+            sem_post(&sem_syscall_fin);
             break;
         }
         //break; // por ahora, q lo haga una sola vez pq no tenemos el semaforo
@@ -57,13 +63,15 @@ void creacion_de_procesos(void)
     }
 }
 
-extern sem_t sem_puede_ejecutar;
+
 void finalizacion_de_procesos(void)
 {
     hilo_fin_proc_muerto = false;
     while (true)
     {
+        log_error(logger,"ANTES DE FINALIZAR PROC");
         sem_wait(&sem_finalizar_proceso);
+        log_error(logger,"dsps DE FINALIZAR PROC");
         //pthread_mutex_lock(&mutex_exit);
         PCB *pcb = desencolar(cola_fin_pcb,mutex_exit);
         log_info(logger, "intentando finalizar proceso con pid: %i", pcb->pid);
@@ -78,7 +86,10 @@ void finalizacion_de_procesos(void)
             liberar_pcb(pcb);
             printf("dsp\n");
             printear_colas_y_prioridades();
-            sem_post(&sem_hay_memoria);
+            imprimir_cola_new(cola_new,mutex_new);
+            if(queue_size(cola_new)>1){
+                sem_post(&sem_hay_new);
+            }
             sem_post(&sem_syscall_fin);
             break;
         case 0:
@@ -86,7 +97,6 @@ void finalizacion_de_procesos(void)
             queue_push(cola_finalizacion, pcb);
             break;
         }
-        break;
     }
     hilo_fin_proc_muerto = true;
 }
@@ -151,6 +161,7 @@ void finalizacion_de_hilos(void)
             log_trace(logger,"LISTA TIDS ANTES DE REMOVER: %d",list_size(tcb->pcb->tids));
             list_remove_element(tcb->pcb->tids, tcb->tid);
             log_trace(logger,"LISTA TIDS DESPUES DE REMOVER: %d",list_size(tcb->pcb->tids));
+            printear_colas_y_prioridades();
             liberar_tcb(tcb);
             desbloquear_bloqueados_por_hilo(tidBloqueante,pidhilo);
             sem_post(&sem_syscall_fin);

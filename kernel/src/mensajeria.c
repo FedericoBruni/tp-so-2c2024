@@ -143,7 +143,9 @@ int esperar_respuesta(){
     int resultado = 0;
     int operacion;
     while(1){
+    log_error(logger,"ANTES DE RECIBIR LA OPERACION");
     operacion = recibir_operacion(fd_cpu_dispatch);
+    log_error(logger,"OPERACION RECIBIDA");
     switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
             log_error(logger, "replanificando tid:%d pid:%d ",tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
@@ -154,9 +156,11 @@ int esperar_respuesta(){
             log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             break;
         case SYSCALL_PROCESS_CREATE:
-            log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
+            //log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
+            log_trace(logger,"PROCESS CREATE RECIBIDO");
             deserializar_process_create();
             sem_wait(&sem_syscall_fin);
+            log_error(logger,"MANDO RTA");
             int proceso_creado = PROCESO_CREADO;
             send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
@@ -215,11 +219,14 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &thread_exit, sizeof(op_code), 0);
             break;
         case SYSCALL_PROCESS_EXIT:
-            log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
+            //log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
             PROCESS_EXIT(tcb_en_ejecucion);
+            log_trace(logger,"ANTES DE SEM_SYS_FIN");
             sem_wait(&sem_syscall_fin);
+            log_trace(logger,"DSPS DE SEM_SYS_FIN");
             int process_exit = FIN_PROCESO;
             send(fd_cpu_dispatch, &process_exit, sizeof(op_code), 0);
+            log_trace(logger,"MANDO RTA PROC EXIT");
             break;
         case FIN_DE_ARCHIVO:
             //sleep(5);

@@ -39,11 +39,10 @@ void escuchar_mensajes_kernel_dispatch(void)
 
 		case ENVIAR_EXEC:
 			recibir_exec(logger,cliente_fd_dispatch,cod_op);
-			
 			//log_info(logger, "## (%d:%d) - Solicito Contexto Ejecucion", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
 			break;
-
 		case PROCESO_CREADO:
+			log_error(logger,"PROCESO CREADO");
 			sem_post(&sem_proceso_creado);
 			break;
 		case HILO_CREADO:

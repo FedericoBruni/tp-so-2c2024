@@ -134,7 +134,7 @@ void DUMP_MEMORY(int pid, int tid) {
 
 void io(int tiempo) {
     contexto_en_ejecucion->contexto_hilo->Registros->PC++;
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+    //contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     enviar_io(tiempo);

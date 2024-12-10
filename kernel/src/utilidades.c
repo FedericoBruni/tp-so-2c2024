@@ -84,7 +84,7 @@ void iniciar_semaforos(void){
     inicializar_mutex(&mutex_fd_memoria, "Mutex FD Memoria");
     inicializar_mutex(&mutex_io, "Mutex IO");
 
-    inicializar_semaforo(&sem_hay_memoria, "Hay memoria", 0);
+    inicializar_semaforo(&sem_hay_memoria, "Hay memoria", 1);
     inicializar_semaforo(&sem_crear_hilo, "Crear hilo", 0);
     inicializar_semaforo(&sem_finalizar_proceso, "Finalizar proceso", 0);
     inicializar_semaforo(&sem_finalizar_hilo, "Finalizar hilo", 0);
@@ -230,7 +230,7 @@ COLA_PRIORIDAD *existe_cola_con_prioridad(int prioridad) {
 
 void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb){
     encolar(cola->cola_prioridad, tcb, cola->mutex);
-    log_trace(logger, "Encolando multinivel Prioridad: %i, Cola prioridad size: %i", cola->prioridad, queue_size(cola->cola_prioridad));
+    //log_trace(logger, "Encolando multinivel Prioridad: %i, Cola prioridad size: %i", cola->prioridad, queue_size(cola->cola_prioridad));
 
 }
 
@@ -368,7 +368,24 @@ void imprimir_cola(t_queue *cola, pthread_mutex_t mutex){
         void* elemento = desencolar(cola, mutex);
 
         TCB* tcb = (TCB*) elemento;
-        printf("%i; ", tcb->tid);
+        log_trace(logger,"COLA NEW TID: %i; ", tcb->tid);
+        queue_push(cola_aux,elemento);
+    }
+    while(!queue_is_empty(cola_aux)){
+        queue_push(cola,queue_pop(cola_aux));
+    }
+    printf("\n");
+    queue_destroy(cola_aux);
+}
+
+void imprimir_cola_new(t_queue *cola, pthread_mutex_t mutex){
+    t_queue* cola_aux = queue_create();
+    printf("Cola: ");
+    while(!queue_is_empty(cola)){
+        void* elemento = desencolar(cola, mutex);
+
+        PCB* pcb = (PCB*) elemento;
+        log_trace(logger,"COLA NEW PID: %i; ", pcb->pid);
         queue_push(cola_aux,elemento);
     }
     while(!queue_is_empty(cola_aux)){

@@ -45,6 +45,7 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
     PCB *pcb = malloc(sizeof(PCB));
     pcb->pid = autoincremental_pcb;
     autoincremental_pcb++;
+    log_error(logger,"AUTOINCREMENTAL PCB: %d",autoincremental_pcb);
     pcb->status = NEW;
     pcb->tids = list_create();
     pcb->autoincremental_tcb = 0;

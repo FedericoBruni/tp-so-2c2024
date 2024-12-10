@@ -41,6 +41,7 @@ El Kernel c: 12
 void SYS_PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
 {
     PCB *pcb = crear_pcb(archivo, tamanio_memoria, prioridad);
+    log_trace(logger,"PCB CREADO");
     encolar(cola_new, pcb, mutex_new);
     sem_post(&sem_hay_new);
     
@@ -239,6 +240,9 @@ int DUMP_MEMORY(int pid, int tid){
 
 
 void IO(int tiempo){
+    log_trace(logger,"TID: %d PID %d ENTRA A IO",tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+    imprimir_cola(cola_new,mutex_new);
+    printear_colas_y_prioridades();
     TCB *tcb_copia = malloc(sizeof(TCB));
     memcpy(tcb_copia,tcb_en_ejecucion,sizeof(TCB));
     IOStruct *io = malloc(sizeof(IOStruct));
@@ -246,7 +250,8 @@ void IO(int tiempo){
     io->tcb=tcb_copia;
     encolar(cola_io,io,mutex_io);
     sem_post(&sem_io);
-    sem_wait(&sem_io_iniciado);
+    //sem_wait(&sem_io_iniciado);
+    log_trace(logger,"TID: %d PID %d INICIO IO",tcb_copia->tid, tcb_copia->pcb_pid);
     log_trace(logger,"IO Iniciado");
 }
 
@@ -263,6 +268,7 @@ void ejecucion_io(){
         sem_post(&sem_io_iniciado);
         usleep(io->tiempo);
         log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", io->tcb->pcb_pid, io->tcb->tid);
+        //printear_colas_y_prioridades();
         if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
             COLA_PRIORIDAD * cola = existe_cola_con_prioridad(io->tcb->prioridad);
             if(cola != NULL){

@@ -95,4 +95,4 @@ $(sort $(dir $(OUT) $(OBJS))):
 
 kernel:
 	make
-	./bin/kernel PLANI_PROC 32
+	./bin/kernel MEM_FIJA_BASE 12

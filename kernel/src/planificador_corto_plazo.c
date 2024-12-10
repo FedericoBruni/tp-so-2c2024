@@ -142,6 +142,7 @@ void fin_de_quantum(test* str)
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     sem_wait(&sem_cpu_ejecutando);
     usleep(quantumCola*1000);
+    log_error(logger,"FIN DE QUANTUM");
     enviar_fin_quantum(tid, pid);
     // free(aux->Registros);
     // free(aux);
