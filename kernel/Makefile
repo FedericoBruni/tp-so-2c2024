@@ -101,4 +101,4 @@ kernel:
 memcheck:
 	rm -f logKernel.log
 	make
-	valgrind --leak-check=full --track-origins=yes ./bin/kernel archivo1 8
+	valgrind --leak-check=full --track-origins=yes ./bin/kernel PRUEBA_FS 8

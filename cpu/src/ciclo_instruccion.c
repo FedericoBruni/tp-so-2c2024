@@ -88,7 +88,10 @@ char* recibir_prox_instruccion(){
     switch(cod_op){
         case PROXIMA_INSTRUCCION:
             t_buffer* buffer = recibir_buffer_completo(fd_memoria);
-            return extraer_string_del_buffer(buffer);
+            char* rta = extraer_string_del_buffer(buffer);
+            free(buffer->stream);
+            free(buffer);
+            return rta;
             break;
         case EOF_INSTRUCCION:
             log_info(logger,"Fin del archivo");

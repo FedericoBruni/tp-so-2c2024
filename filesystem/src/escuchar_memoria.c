@@ -22,6 +22,8 @@ void escuchar_mensajes_memoria(int cliente_fd)
             if (!crear_archivo(pid,tid,tamanio,contenido)) result_dump = MEM_DUMP_ERROR;
             
 	        send(cliente_fd, &result_dump, sizeof(int), 0);
+            free(buffer_dump->stream);
+            free(buffer_dump);
             break;
         case -1:
             log_error(logger, "Memoria desconectado\n");

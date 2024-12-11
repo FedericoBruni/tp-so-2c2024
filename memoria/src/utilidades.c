@@ -85,7 +85,7 @@ void enviar_contexto(int cliente_fd_dispatch){
 
     log_info(logger, "## Contexto Solicitado - (PID:TID) - (%d:%d)",pid,tid);
 
-    CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
+    CONTEXTO_CPU *contexto_cpu;
     contexto_cpu = buscar_contextos(tid,pid);
 
 
@@ -98,6 +98,14 @@ void enviar_contexto(int cliente_fd_dispatch){
     t_paquete *paquete = crear_paquete(cod_rta,bufferRta);
     enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
+
+    free(buffer->stream);
+    free(buffer);
+    free(contexto_cpu->contexto_hilo->archivo_pseudocodigo);
+    free(contexto_cpu->contexto_hilo->Registros);
+    free(contexto_cpu->contexto_hilo);
+    free(contexto_cpu->contexto_proceso);
+    free(contexto_cpu);
 
     //enviar_contexto(cliente_fd_dispatch,contexto_cpu);
     //int rta_sol_mem = CONTEXTO_ENVIADO;
@@ -130,7 +138,8 @@ void enviar_instruccion(int cliente_fd_dispatch) {
         
     }
     
-    
+    free(buffer->stream);
+    free(buffer);
 
 }
 
@@ -197,7 +206,6 @@ void actualizar_contexto(int cliente_fd_dispatch){
     }
 
     bool _es_proceso(void *ptr) {
-        log_error(logger,"asdasds");
         CONTEXTO_PROCESO *ctx_proceso_en_memoria = (CONTEXTO_PROCESO *)ptr;
         return ctx_proceso_en_memoria->pid == ctx_proceso->pid;
     }
@@ -221,6 +229,13 @@ void actualizar_contexto(int cliente_fd_dispatch){
         log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
     log_error(logger, "z");
+
+    free(ctx_hilo->archivo_pseudocodigo);
+    free(ctx_hilo->Registros);
+    free(ctx_hilo);
+    free(ctx_proceso);
+    free(buffer->stream);
+    free(buffer);
     int cod_op = CONTEXTO_ACTUALIZADO_OK;
     send(cliente_fd_dispatch, &cod_op, sizeof(cod_op), 0);
 }
@@ -429,8 +444,8 @@ Particion *buscar_best_dinamicas(int tamanio){
             tam_menor = particionAux->tamanio - tamanio;
             menor_particion = particionAux;
         }
-            
     }
+    //
     if (menor_particion){
         Particion *particionSiguiente = malloc(sizeof(Particion));
         particionSiguiente->estaOcupado = 0;
@@ -440,9 +455,11 @@ Particion *buscar_best_dinamicas(int tamanio){
         menor_particion->tamanio = tamanio;
         if(particionSiguiente->tamanio == 0){
             free(particionSiguiente);
+            list_destroy(lista_filtrada);
             return menor_particion;
         }
         list_add_in_index(memoria_usuario->particiones, buscar_indice(menor_particion)+1, particionSiguiente);
+        list_destroy(lista_filtrada);
        return menor_particion;
     }
 }
@@ -631,6 +648,8 @@ void finalizacion_de_proceso(int pid){
     if (string_equals_ignore_case(esquema, "DINAMICAS")) {
         agrupar_particiones(particion);
     }
+
+    list_destroy(lista_a_borrar);
 }
 
 /*
@@ -723,6 +742,8 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     //WRITE_MEM_RTA
     int rta = WRITE_MEM_RTA;
     send(cliente_fd_dispatch, &rta, sizeof(op_code), 0);
+    free(buffer->stream);
+    free(buffer);
 }
 
 void deserializar_read_mem(cliente_fd_dispatch) {
@@ -733,6 +754,8 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     int dato = leer_memoria(direccion);
     log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
     enviar_lectura(dato);
+    free(buffer->stream);
+    free(buffer);
 }
 
 void enviar_lectura(int dato) {
@@ -744,31 +767,41 @@ void enviar_lectura(int dato) {
 }
 
 
-
 int dump_memory(int tid,  int pid){
     CONTEXTO_CPU *contexto_a_dumpear = buscar_contextos(tid,pid);
-    char *contenido = parse_contexto_cpu(contexto_a_dumpear);
+
+
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
+    char *contenido = malloc(tamanio);
+    memcpy(contenido,memoria_usuario->memoria_usuario + contexto_a_dumpear->contexto_proceso->BASE,tamanio);
+    contenido[tamanio] = '\0';
+    
     int fd_filesystem = conectarse_a_filesystem();
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer,tid);
     cargar_int_al_buffer(buffer,pid);
     cargar_int_al_buffer(buffer,tamanio);
     cargar_string_al_buffer(buffer,contenido);
-
     log_info(logger,"## Memory Dump solicitado - (PID:TID) - (%d:%d)",pid,tid);
-
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, fd_filesystem);
     eliminar_paquete(paquete);
+    free(contexto_a_dumpear->contexto_hilo->archivo_pseudocodigo);
+    free(contexto_a_dumpear->contexto_hilo->Registros);
+    free(contexto_a_dumpear->contexto_hilo);
+    free(contexto_a_dumpear->contexto_proceso);
+    free(contexto_a_dumpear);
+    free(contenido);
     int cod_op = recibir_operacion(fd_filesystem);
     if (cod_op == MEM_DUMPEADA)
     {
+        close(fd_filesystem);
         return 1;
     }
     else if (cod_op == MEM_DUMP_ERROR)
     {
         log_trace(logger, "MEM DUMP ERROR");
+        close(fd_filesystem);
         return 0;
     } else {
         return -1;

@@ -59,7 +59,10 @@ int write_mem(char* registroDireccion, char* registroDatos){
 
 int deserializar_rta_read_mem(int fd_memoria) {
     t_buffer* buffer = recibir_buffer_completo(fd_memoria);
-    return extraer_int_del_buffer(buffer);
+    int rta = extraer_int_del_buffer(buffer);
+    free(buffer->stream);
+    free(buffer);
+    return rta;
 
 }
 

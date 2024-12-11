@@ -300,7 +300,8 @@ void deserializar_process_create(){
     int tam_archivo = extraer_int_del_buffer(buffer);
     int prio_hilo = extraer_int_del_buffer(buffer);
     SYS_PROCESS_CREATE(archivo_pseudocodigo,tam_archivo,prio_hilo);
-
+    free(buffer->stream);
+    free(buffer);
 }
 
 void deserializar_thread_create(){
@@ -308,12 +309,16 @@ void deserializar_thread_create(){
     char* archivo_pseudocodigo = extraer_string_del_buffer(buffer);
     int prio_hilo = extraer_int_del_buffer(buffer);
     THREAD_CREATE(pcb_en_ejecucion,archivo_pseudocodigo,prio_hilo);
+    free(buffer->stream);
+    free(buffer);
 }
 
 int deserializar_thread_join(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int tid = extraer_int_del_buffer(buffer);
     return THREAD_JOIN(tid);
+    free(buffer->stream);
+    free(buffer);
 }
 
 void deserializar_thread_cancel(){
@@ -322,21 +327,29 @@ void deserializar_thread_cancel(){
     int pid = extraer_int_del_buffer(buffer);
     
     THREAD_CANCEL(tid,pid);
+    free(buffer->stream);
+    free(buffer);
 }
 void deserializar_mutex_create(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     char *recurso = extraer_string_del_buffer(buffer);
     MUTEX_CREATE(recurso);
+    free(buffer->stream);
+    free(buffer);
 }
 void deserializar_mutex_lock(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     char *recurso = extraer_string_del_buffer(buffer);
     MUTEX_LOCK(recurso);
+    free(buffer->stream);
+    free(buffer);
 }
 void deserializar_mutex_unlock(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     char *recurso = extraer_string_del_buffer(buffer);
     MUTEX_UNLOCK(recurso);
+    free(buffer->stream);
+    free(buffer);
 }
 // void deserializar_thread_exit(){
 
@@ -354,12 +367,16 @@ int deserializar_dump_memory() {
     int tid = extraer_int_del_buffer(buffer);
     log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
     return DUMP_MEMORY(pid, tid);
+    free(buffer->stream);
+    free(buffer);
 }
 
 void deserializar_io() {
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int tiempo = extraer_int_del_buffer(buffer);
     IO(tiempo);
+    free(buffer->stream);
+    free(buffer);
     
 }
 

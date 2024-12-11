@@ -107,7 +107,8 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     int recibido = EXEC_RECIBIDO;
     send(socket_cliente, &recibido,sizeof(op_code),0);
     sem_post(&sem_ejecucion);
-    
+    free(buffer->stream);
+    free(buffer);
     
     
 
@@ -130,7 +131,8 @@ void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     sem_wait(&sem_fin_q);
     int resultado_interrupt = OK_FIN_QUANTUM;
     send(socket_cliente, &resultado_interrupt,sizeof(op_code),0);
-
+    free(buffer->stream);
+    free(buffer);
     // Falta actualizar ctx ejecucion, y ver si la interrupcion es del tid pid en ejecucion, si no, descartarla
 }
 
@@ -164,6 +166,8 @@ CONTEXTO_CPU *recibir_contexto(int socket_cliente){
     CONTEXTO_CPU *contexto_cpu = malloc(sizeof(CONTEXTO_CPU));
     contexto_cpu->contexto_hilo = extraer_contexto_hilo(buffer);
     contexto_cpu->contexto_proceso = extraer_contexto_proceso(buffer);
+    free(buffer->stream);
+    free(buffer);
     return contexto_cpu;
 }
 

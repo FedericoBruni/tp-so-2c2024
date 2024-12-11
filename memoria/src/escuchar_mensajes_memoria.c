@@ -69,12 +69,14 @@ void escuchar_mensajes_kernel(void)
 
             int rta_fin_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
+            free(buffer_fin->stream);
+            free(buffer_fin);
 
             break;
         case CANCELAR_HILO:
             t_buffer *buffer_cancel = recibir_buffer_completo(cliente_fd_kernel);
-            int tid_a_cancelar = extraer_int_del_buffer(buffer);
-            int pid_del_hilo_cancel = extraer_int_del_buffer(buffer);
+            int tid_a_cancelar = extraer_int_del_buffer(buffer_cancel);
+            int pid_del_hilo_cancel = extraer_int_del_buffer(buffer_cancel);
 
             log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_cancelar, pid_del_hilo_cancel);
 
@@ -82,6 +84,8 @@ void escuchar_mensajes_kernel(void)
 
             int rta_cancel_hilo = OK_FINAL_HILO;
             send(cliente_fd_kernel, &rta_fin_hilo, sizeof(op_code), 0);
+            free(buffer_cancel->stream);
+            free(buffer_cancel);
 
             break;
         case SOL_DUMP:
@@ -92,6 +96,8 @@ void escuchar_mensajes_kernel(void)
             if (!dump_memory(tid_dump,pid_dump)) res_dump = MEM_DUMP_ERROR;
             
 	        send(cliente_fd_kernel, &res_dump, sizeof(int), 0);
+            free(buffer_dump->stream);
+            free(buffer_dump);
             break;
         case -1:
             log_error(logger, "Kernel desconectado\n");
@@ -101,6 +107,10 @@ void escuchar_mensajes_kernel(void)
             log_warning(logger, "Codigo de operacion invalido Kernel");
             break;
         }
+        if(buffer){
+        free(buffer->stream);  // Liberar el stream de datos
+        free(buffer);}
+        
     }
 }
 
