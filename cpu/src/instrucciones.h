@@ -5,8 +5,8 @@
 #include "main.h"
 
 void SET(char *registro, uint32_t valor);
-void read_mem(char* registroDatos, char* registroDireccion);
-void write_mem(char* registroDatos, char* registroDireccion);
+int read_mem(char* registroDatos, char* registroDireccion);
+int write_mem(char* registroDatos, char* registroDireccion);
 void SUM(char *registro_destino, char *registro_origen);
 void SUB(char *registro_destino, char *registro_origen);
 void JNZ(char *registro, uint32_t instruccion);

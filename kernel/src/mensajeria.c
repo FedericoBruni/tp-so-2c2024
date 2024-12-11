@@ -265,6 +265,15 @@ int esperar_respuesta(){
             int io_solicitada = IO_SOLICITADA;
             send(fd_cpu_dispatch,&io_solicitada,sizeof(op_code),0);
             break;
+
+        case SEGMENTATION_FAULT:
+            log_info(logger, "Segmentation Fault");
+            PROCESS_EXIT(tcb_en_ejecucion);
+            sem_wait(&sem_syscall_fin);
+            int segmentation_fault = FIN_PROCESO;
+            send(fd_cpu_dispatch, &segmentation_fault, sizeof(op_code), 0);
+            break;
+            
         default:
             return 0;
         }

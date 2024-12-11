@@ -94,5 +94,11 @@ $(sort $(dir $(OUT) $(OBJS))):
 	mkdir -pv $@
 
 cpu:
+	rm -f logCpu.log
 	make
 	./bin/cpu
+
+memcheck:
+	rm -f logCpu.log
+	make
+	valgrind --leak-check=full --track-origins=yes ./bin/cpu

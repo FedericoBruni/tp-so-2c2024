@@ -137,8 +137,8 @@ char* decode(char* instruccion) {
     } else if (string_equals_ignore_case(corregir_linea(instr), "WRITE_MEM")){
         char* registroDatos = lista[1];
         char* registroDireccion = corregir_linea(lista[2]);
-        write_mem(registroDatos, registroDireccion);
-        return "OK";
+        if (write_mem(registroDatos, registroDireccion)) return "OK";
+        return "SUSPPROCESO";
         
     } else if (string_equals_ignore_case(corregir_linea(instr), "SUM")){
         char* registroDestino = lista[1];

@@ -94,5 +94,11 @@ $(sort $(dir $(OUT) $(OBJS))):
 	mkdir -pv $@
 
 memoria:
+	rm -f memoria.log
 	make
 	./bin/memoria
+
+memcheck:
+	rm -f memoria.log
+	make
+	valgrind --leak-check=full --track-origins=yes ./bin/memoria

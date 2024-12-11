@@ -4,6 +4,7 @@ extern int cliente_fd_kernel;
 extern int cliente_fd_dispatch;
 extern t_list *contextos_procesos;
 extern t_list *contextos_hilos;
+extern int retardo_respuesta;
 
 void escuchar_mensajes_kernel(void)
 {
@@ -24,11 +25,15 @@ void escuchar_mensajes_kernel(void)
             int tamanio = extraer_int_del_buffer(buffer);
             Particion* particion = buscar_particion(tamanio);
             if(particion != NULL){
+                
                 CONTEXTO_PROCESO* contexto_proceso = malloc(sizeof(CONTEXTO_PROCESO));
                 contexto_proceso->pid = pid;
                 contexto_proceso->BASE = particion->inicio;
                 contexto_proceso->LIMITE = particion->inicio + particion->tamanio;
                 list_add(contextos_procesos, contexto_proceso);
+                log_trace(logger, "<PID:%i>, <TAMAÑO PROC:%i>, <BASE:%i>, <LIMITE:%i>", pid, tamanio, contexto_proceso->BASE, contexto_proceso->LIMITE);
+                log_warning(logger, "Despues de asignar");
+                imprimir_memoria_usuario();
                 int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
                 send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0);
                 log_info(logger, "## Proceso Creado - PID: %d - Tamaño: %d",pid,particion->tamanio);
@@ -134,5 +139,6 @@ void escuchar_mensajes_cpu(void)
             log_warning(logger, "Codigo de operacion invalido Cpu");
             break;
         }
+        usleep(retardo_respuesta * 1000);
     }
 }

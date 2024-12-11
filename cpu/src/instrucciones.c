@@ -14,10 +14,10 @@ extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
 extern sem_t sem_dump_mem;
-extern sem_t sem_dump_mem;
 extern char* rta_mutex_lock;
 extern char* rta_hilo_join;
 extern sem_t sem_ctx_actualizado;
+
 
 
 void SET(char *registro, uint32_t valor){
@@ -28,12 +28,16 @@ void SET(char *registro, uint32_t valor){
 
 // Lee el valor de memoria correspondiente a la dirección física obtenida a partir de la Dirección Lógica 
 // que se encuentra en el Registro Dirección y lo almacena en el Registro Datos.
-void write_mem(char* registroDireccion, char* registroDatos){
+int write_mem(char* registroDireccion, char* registroDatos){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
     log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
-        log_error(logger, "ERROR");
-        return; // en realidad hay q hacer lo del segmentation fault
+        log_error(logger, "ERROR asd");
+        actualizar_contexto(fd_memoria);
+        sem_wait(&sem_ctx_actualizado);
+        segmentation_fault();
+        sem_wait(&sem_process_exit);
+        return 0; // en realidad hay q hacer lo del segmentation fault
     }
 
     log_info(logger,"## TID: %d - Acción: ESCRIBIR - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
@@ -49,15 +53,7 @@ void write_mem(char* registroDireccion, char* registroDatos){
             log_error(logger,"Error, codigo de operacion desconocido");
             break;
     }
-
-    // contenido = leer_dir_fisica(DF)
-    // obtener_registro(registroDatos) = contenido
-    // las direcciones lógicas son el desplazamiento dentro de la partición en la que se encuentra el proceso.
-    // las direcciones físicas se generarán como: [Base + desplazamiento]
-    // Se debe validar que las solicitudes se encuentren dentro de la partición asignada,  es decir que sea menor al límite de la 
-    // partición. De fallar dicha validación, ocurrirá un “Segmentation Fault”, en cuyo caso, se deberá actualizar el contexto 
-    // de ejecución en Memoria y devolver el Tid al Kernel con motivo de Segmentation Fault.
-
+    return 1;
 }
 
 
@@ -67,12 +63,16 @@ int deserializar_rta_read_mem(int fd_memoria) {
 
 }
 
-void read_mem(char* registroDatos, char* registroDireccion){
+int read_mem(char* registroDatos, char* registroDireccion){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
     log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
         log_error(logger, "ERROR");
-        return; // en realidad hay q hacer lo del segmentation fault
+        actualizar_contexto(fd_memoria);
+        sem_wait(&sem_ctx_actualizado);
+        segmentation_fault();
+        sem_wait(&sem_process_exit);
+        return 0; // en realidad hay q hacer lo del segmentation fault
     }
 
     log_info(logger,"## TID: %d - Acción: LEER - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
@@ -89,6 +89,7 @@ void read_mem(char* registroDatos, char* registroDireccion){
             log_error(logger,"Error, codigo de operacion desconocido");
             break;
     }
+    return 1;
 }
 
 void SUM(char *registro_destino, char *registro_origen){

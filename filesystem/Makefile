@@ -94,5 +94,11 @@ $(sort $(dir $(OUT) $(OBJS))):
 	mkdir -pv $@
 
 filesystem:
+	rm -f logFS.log
 	make
 	./bin/filesystem
+
+memcheck:
+	rm -f logFS.log
+	make
+	valgrind --leak-check=full --track-origins=yes ./bin/filesystem

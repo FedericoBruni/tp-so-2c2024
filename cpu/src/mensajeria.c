@@ -88,6 +88,11 @@ void process_exit()
     send(cliente_fd_dispatch, &process_exit, sizeof(op_code), 0);
 }
 
+void segmentation_fault(){
+    int seg_fault = SEGMENTATION_FAULT;
+    send(cliente_fd_dispatch, &seg_fault, sizeof(op_code), 0);
+}
+
 void enviar_dump_memory(int pid, int tid)
 {
     t_buffer *buffer = crear_buffer();
@@ -130,10 +135,10 @@ void actualizar_contexto(int fd_memoria)
         sem_post(&sem_ctx_actualizado);
         break;
     case CONTEXTO_ACTUALIZADO_ERROR:
-        printf("Ok\n");
+        log_error(logger, "Error actualizando el contexto");
         break;
     default:
-        log_error(logger, "Error actualizando el contexto");
+        log_error(logger,"DEFAULT");
         break;
     }
 }

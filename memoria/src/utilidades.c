@@ -7,7 +7,7 @@ char *ip_filesystem;
 char *puerto_filesystem;
 int *tam_memoria;
 char *path_instrucciones;
-int *retardo_respuesta;
+int retardo_respuesta;
 char *esquema;
 char *algoritmo_busqueda;
 char **particiones;
@@ -172,12 +172,20 @@ CONTEXTO_HILO *buscar_contexto_hilo(int pid,int tid){
 }
 
 
+void imprimir_contextos_procesos() {
+    log_error(logger,"TAM LISTA %i",list_size(contextos_procesos));
+    if (list_get(contextos_procesos, 0) == NULL) log_error(logger, "null ctx prcs");
+    for (int i = 0; i < list_size(contextos_procesos); i++) {
+        CONTEXTO_PROCESO *ctx_proceso = list_get(contextos_procesos, i);
+        log_trace(logger, "CTX_PROCESO: <PID:%i>, <BASE:%i>, <LIMITE:%i>", ctx_proceso->pid, ctx_proceso->BASE, ctx_proceso->LIMITE);
+    }
+}
 
 void actualizar_contexto(int cliente_fd_dispatch){
     
     t_buffer *buffer = recibir_buffer_completo(cliente_fd_dispatch);
-    CONTEXTO_HILO *ctx_hilo = malloc(sizeof(CONTEXTO_HILO));
-    CONTEXTO_PROCESO *ctx_proceso = malloc(sizeof(CONTEXTO_PROCESO));
+    CONTEXTO_HILO *ctx_hilo;// = malloc(sizeof(CONTEXTO_HILO));
+    CONTEXTO_PROCESO *ctx_proceso;// = malloc(sizeof(CONTEXTO_PROCESO));
     ctx_hilo = extraer_contexto_hilo(buffer);
     ctx_proceso = extraer_contexto_proceso(buffer);
     
@@ -189,20 +197,30 @@ void actualizar_contexto(int cliente_fd_dispatch){
     }
 
     bool _es_proceso(void *ptr) {
+        log_error(logger,"asdasds");
         CONTEXTO_PROCESO *ctx_proceso_en_memoria = (CONTEXTO_PROCESO *)ptr;
         return ctx_proceso_en_memoria->pid == ctx_proceso->pid;
     }
 
     CONTEXTO_HILO *hilo_actual = list_find(contextos_hilos, _es_hilo);
+    log_error(logger, "a");
+    
+    log_trace(logger,"CONTEXTOS PROCESO EN MEMORIA");
+    if(contextos_procesos == NULL) log_error(logger,"NULL");
+    imprimir_contextos_procesos();
+    
     CONTEXTO_PROCESO *proceso_actual = list_find(contextos_procesos, _es_proceso);
+    log_error(logger, "b");
 
     if (hilo_actual && proceso_actual) {
         memcpy(hilo_actual->Registros, ctx_hilo->Registros, sizeof(REGISTROS));
+        log_error(logger, "c");
         log_info(logger, "Contexto de hilo y proceso actualizado para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     } else {
+        log_error(logger, "d");
         log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
-
+    log_error(logger, "z");
     int cod_op = CONTEXTO_ACTUALIZADO_OK;
     send(cliente_fd_dispatch, &cod_op, sizeof(cod_op), 0);
 }
@@ -303,10 +321,7 @@ void cargar_memoria_usuario() {
 void imprimir_memoria_usuario() {
     for(int i = 0; i < list_size(memoria_usuario->particiones); i++) {
         Particion* particion = list_get(memoria_usuario->particiones, i);
-        printf("Esta ocupado: %i\n", particion->estaOcupado);
-        printf("Inicio: %i\n", particion->inicio);
-        printf("Tamanio: %i\n", particion->tamanio);
-        printf("------------\n");
+        log_trace(logger, "<OCUPADO: %i>, <INICIO:%i>, <TAMAÑO:%i>", particion->estaOcupado, particion->inicio, particion->tamanio);
     }
 }
 
@@ -549,11 +564,15 @@ void agrupar_particiones(Particion* particion) {
         Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice + 1);
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice - 1);
         if(particionSiguiente->estaOcupado == 0){
+            log_error(logger, "Antes de compactar siguiente");
+            imprimir_memoria_usuario();
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
         }
         if(particionAnterior->estaOcupado == 0){
+            log_error(logger, "Antes de compactar anterior");
+            imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
@@ -562,6 +581,8 @@ void agrupar_particiones(Particion* particion) {
     } else if(indice == 0){
         Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
         if(particionSiguiente->estaOcupado == 0){
+            log_error(logger, "Antes de compactar siguiente");
+            imprimir_memoria_usuario();
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
@@ -569,12 +590,16 @@ void agrupar_particiones(Particion* particion) {
     }else if(indice == list_size(memoria_usuario->particiones) - 1 ){
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
         if(particionAnterior->estaOcupado == 0){
+            log_error(logger, "Antes de compactar anterior");
+            imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
             free(particionAnterior);
         }
     }
+    log_error(logger, "Después de compactar");
+    imprimir_memoria_usuario();
     //if(particionSiguiente)
     
 }
@@ -665,6 +690,7 @@ int leer_memoria(int direccion){
 }
 
 void escribir_memoria(int direccion, int valor){
+    log_warning(logger, "Direccion: %i, valor: %i", direccion, valor);
     *((int*)memoria_usuario->memoria_usuario + direccion) = valor;
 }
 

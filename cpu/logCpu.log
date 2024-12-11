@@ -1,492 +1,168 @@
-[TRACE] 23:17:14:076 Cpu/(17743:17743): Servidor levantado y listo para escuchar en el puerto: 8006
-[TRACE] 23:17:14:076 Cpu/(17743:17743): Servidor levantado y listo para escuchar en el puerto: 8007
-[ERROR] 23:17:14:076 Cpu/(17743:17743): Error conectando al Servidor, apagado o invalido
-[WARNING] 23:17:14:078 Cpu/(17743:17743): Handshake enviado - Servidor apagado
-[TRACE] 23:17:18:427 Cpu/(18029:18029): Servidor levantado y listo para escuchar en el puerto: 8006
-[TRACE] 23:17:18:428 Cpu/(18029:18029): Servidor levantado y listo para escuchar en el puerto: 8007
-[INFO] 23:17:18:429 Cpu/(18029:18029): Conexión exitosa
-[INFO] 23:17:18:430 Cpu/(18029:18029): Handshake OK HANDSHAKE CPU - MEMORIA
-[INFO] 23:17:18:824 Cpu/(18029:18029): ## Kernel Conectado - FD del socket: 7
-[INFO] 23:17:18:824 Cpu/(18029:18029): ## Kernel Conectado - FD del socket: 8
-[INFO] 20:17:18:830 Cpu/(18029:18127): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
-[INFO] 20:17:18:830 Cpu/(18029:18129): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
-[INFO] 20:17:18:842 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:18:842 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 8 0
+[TRACE] 19:24:21:862 Cpu/(50983:50983): Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 19:24:21:862 Cpu/(50983:50983): Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 19:24:21:863 Cpu/(50983:50983): Conexión exitosa
+[INFO] 19:24:21:867 Cpu/(50983:50983): Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 19:24:22:592 Cpu/(50983:50983): ## Kernel Conectado - FD del socket: 7
+[INFO] 19:24:22:592 Cpu/(50983:50983): ## Kernel Conectado - FD del socket: 8
+[INFO] 16:24:22:594 Cpu/(50983:51082): Recibido handshake: HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 16:24:22:595 Cpu/(50983:51084): Recibido handshake: HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 16:24:22:600 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <0>
+[INFO] 16:24:22:611 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET AX 10
 >
-[WARNING] 20:17:18:842 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 8 0
+[WARNING] 16:24:22:611 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET AX 10
 >, <PC: 0>
-[ERROR] 20:17:18:886 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:887 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:887 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:887 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:18:887 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 48 0
+[ERROR] 16:24:22:612 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:612 Cpu/(50983:51083): No Hay flag
+[INFO] 16:24:22:612 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <1>
+[INFO] 16:24:22:622 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET BX 20
 >
-[WARNING] 20:17:18:887 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 48 0
+[WARNING] 16:24:22:622 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET BX 20
 >, <PC: 1>
-[ERROR] 20:17:18:888 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:888 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:888 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:888 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:18:888 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 96 0
+[ERROR] 16:24:22:622 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:622 Cpu/(50983:51083): No Hay flag
+[INFO] 16:24:22:622 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <2>
+[INFO] 16:24:22:633 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <IO 100
 >
-[WARNING] 20:17:18:888 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 96 0
+[WARNING] 16:24:22:634 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: IO 100
 >, <PC: 2>
-[ERROR] 20:17:18:892 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:892 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:892 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:892 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:18:892 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 12 0
+[WARNING] 16:24:22:647 Cpu/(50983:51083): SUSPENDER PROCESO
+[INFO] 16:24:22:695 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <3>
+[INFO] 16:24:22:705 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET CX 30
 >
-[WARNING] 20:17:18:892 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 12 0
+[WARNING] 16:24:22:705 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET CX 30
 >, <PC: 3>
-[ERROR] 20:17:18:897 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:897 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:897 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:897 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:18:898 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 8 0
+[ERROR] 16:24:22:705 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:705 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:22:747 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <4>
+[INFO] 16:24:22:759 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET AX 1
 >
-[WARNING] 20:17:18:898 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 8 0
+[WARNING] 16:24:22:759 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET AX 1
 >, <PC: 4>
-[ERROR] 20:17:18:899 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:900 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:900 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:900 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:18:900 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 8 0
+[ERROR] 16:24:22:759 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:759 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:22:795 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <5>
+[INFO] 16:24:22:813 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET BX 1
 >
-[WARNING] 20:17:18:900 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 8 0
+[WARNING] 16:24:22:813 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET BX 1
 >, <PC: 5>
-[ERROR] 20:17:18:901 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:901 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:901 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:901 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:18:901 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 8 0
+[ERROR] 16:24:22:814 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:814 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:22:866 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <6>
+[INFO] 16:24:22:877 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET CX 1
 >
-[WARNING] 20:17:18:901 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 8 0
+[WARNING] 16:24:22:877 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET CX 1
 >, <PC: 6>
-[ERROR] 20:17:18:902 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:902 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:902 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:902 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <7>
-[INFO] 20:17:18:902 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_CREATE MEM_FIJAS 8 0
+[ERROR] 16:24:22:877 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:878 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:22:916 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <7>
+[INFO] 16:24:22:928 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET DX 1
 >
-[WARNING] 20:17:18:903 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_CREATE MEM_FIJAS 8 0
+[WARNING] 16:24:22:928 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET DX 1
 >, <PC: 7>
-[ERROR] 20:17:18:903 Cpu/(18029:18127): PROCESO CREADO
-[ERROR] 20:17:18:903 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:903 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:903 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <8>
-[INFO] 20:17:18:904 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
+[ERROR] 16:24:22:928 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:928 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:22:961 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <8>
+[INFO] 16:24:22:980 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET EX 1
 >
-[WARNING] 20:17:18:904 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET DX 0
+[WARNING] 16:24:22:980 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET EX 1
 >, <PC: 8>
-[ERROR] 20:17:18:904 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:904 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:904 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <9>
-[INFO] 20:17:18:904 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
+[ERROR] 16:24:22:980 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:22:980 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:027 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <9>
+[INFO] 16:24:23:062 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <SET FX 1
 >
-[WARNING] 20:17:18:904 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET AX 64
+[WARNING] 16:24:23:062 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: SET FX 1
 >, <PC: 9>
-[ERROR] 20:17:18:905 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:905 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:905 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <10>
-[INFO] 20:17:18:905 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
+[ERROR] 16:24:23:063 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:063 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:108 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <10>
+[INFO] 16:24:23:109 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:905 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: WRITE_MEM DX AX
+[WARNING] 16:24:23:109 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
 >, <PC: 10>
-[TRACE] 20:17:18:905 Cpu/(18029:18128): Dir física: 0
-[INFO] 20:17:18:905 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 0
-[TRACE] 20:17:18:906 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:18:906 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:906 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:906 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <11>
-[INFO] 20:17:18:906 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
+[ERROR] 16:24:23:109 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:206 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:206 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:237 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <11>
+[INFO] 16:24:23:249 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:906 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: READ_MEM BX DX
+[WARNING] 16:24:23:250 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
 >, <PC: 11>
-[TRACE] 20:17:18:906 Cpu/(18029:18128): Dir física: 0
-[INFO] 20:17:18:906 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 0
-[TRACE] 20:17:18:907 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:18:907 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:907 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:907 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <12>
-[INFO] 20:17:18:907 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
+[ERROR] 16:24:23:250 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:334 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:334 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:347 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <12>
+[INFO] 16:24:23:363 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:907 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: LOG BX
+[WARNING] 16:24:23:363 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
 >, <PC: 12>
-[INFO] 20:17:18:907 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:18:908 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:908 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:908 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <13>
-[INFO] 20:17:18:908 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
+[ERROR] 16:24:23:363 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:465 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:465 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:477 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <13>
+[INFO] 16:24:23:495 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:908 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: IO 120000
+[WARNING] 16:24:23:495 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
 >, <PC: 13>
-[WARNING] 20:17:18:910 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:18:912 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:18:913 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
+[ERROR] 16:24:23:495 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:602 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:603 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:615 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <14>
+[INFO] 16:24:23:626 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:913 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:18:913 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:913 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:917 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:18:917 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
+[WARNING] 16:24:23:627 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 14>
+[ERROR] 16:24:23:627 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:713 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:713 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:730 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <15>
+[INFO] 16:24:23:742 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:917 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:18:917 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:918 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:918 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:18:918 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
+[WARNING] 16:24:23:742 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 15>
+[ERROR] 16:24:23:742 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:830 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:830 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:843 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <16>
+[INFO] 16:24:23:868 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:918 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:18:918 Cpu/(18029:18128): Dir física: 32
-[INFO] 20:17:18:918 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 32
-[TRACE] 20:17:18:918 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:18:918 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:919 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:919 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:18:921 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
+[WARNING] 16:24:23:869 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 16>
+[ERROR] 16:24:23:869 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:23:958 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:23:958 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:23:988 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <17>
+[INFO] 16:24:24:007 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:921 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:18:921 Cpu/(18029:18128): Dir física: 32
-[INFO] 20:17:18:921 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 32
-[TRACE] 20:17:18:922 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:18:922 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:922 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:922 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:18:922 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
+[WARNING] 16:24:24:007 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 17>
+[ERROR] 16:24:24:007 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:24:118 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:24:118 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:24:140 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <18>
+[INFO] 16:24:24:147 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:922 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:18:923 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:18:923 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:18:923 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:18:923 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:18:923 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
+[WARNING] 16:24:24:147 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 18>
+[ERROR] 16:24:24:147 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:24:270 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:24:270 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:24:288 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <19>
+[INFO] 16:24:24:303 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:18:923 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:18:923 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:000 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:000 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
+[WARNING] 16:24:24:303 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 19>
+[ERROR] 16:24:24:303 Cpu/(50983:51083): entro a dump
+[ERROR] 16:24:24:406 Cpu/(50983:51083): Entro a interrupt
+[ERROR] 16:24:24:406 Cpu/(50983:51083): Hay flag
+[INFO] 16:24:24:422 Cpu/(50983:51083): ## TID: <0> - FETCH - Program Counter: <20>
+[INFO] 16:24:24:436 Cpu/(50983:51083): “## TID: <0> - Ejecutando: <DUMP_MEMORY
 >
-[WARNING] 20:17:19:000 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:000 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:000 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:000 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:000 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:001 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:001 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:001 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:001 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:001 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:001 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:001 Cpu/(18029:18128): Dir física: 48
-[INFO] 20:17:19:001 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 48
-[TRACE] 20:17:19:002 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:002 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:002 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:002 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:002 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:002 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:002 Cpu/(18029:18128): Dir física: 48
-[INFO] 20:17:19:002 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 48
-[TRACE] 20:17:19:003 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:003 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:003 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:003 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:003 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:003 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:003 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:003 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:003 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:003 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:004 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:004 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:004 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:086 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:086 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
->
-[WARNING] 20:17:19:087 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:087 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:087 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:087 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:087 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:087 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:087 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:087 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:087 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:087 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:088 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:088 Cpu/(18029:18128): Dir física: 112
-[INFO] 20:17:19:088 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 112
-[TRACE] 20:17:19:088 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:088 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:088 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:088 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:088 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:089 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:089 Cpu/(18029:18128): Dir física: 112
-[INFO] 20:17:19:089 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 112
-[TRACE] 20:17:19:089 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:089 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:089 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:089 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:089 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:089 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:089 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:090 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:090 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:090 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:090 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:090 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:090 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:173 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:174 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
->
-[WARNING] 20:17:19:174 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:174 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:174 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:174 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:174 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:174 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:174 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:174 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:175 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:175 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:175 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:176 Cpu/(18029:18128): Dir física: 240
-[INFO] 20:17:19:177 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 240
-[TRACE] 20:17:19:177 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:178 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:178 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:178 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:178 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:178 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:178 Cpu/(18029:18128): Dir física: 240
-[INFO] 20:17:19:178 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 240
-[TRACE] 20:17:19:178 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:178 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:178 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:178 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:178 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:178 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:179 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:179 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:179 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:179 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:179 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:179 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:180 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:262 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <14>
-[INFO] 20:17:19:262 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:262 Cpu/(18029:18128): <TID:0> <PID: 0>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 14>
-[WARNING] 20:17:19:307 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:308 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:308 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:308 Cpu/(18029:18128): <TID:0> <PID: 1>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:352 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:356 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:357 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:357 Cpu/(18029:18128): <TID:0> <PID: 2>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:397 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:399 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:399 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
->
-[WARNING] 20:17:19:400 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:400 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:400 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:400 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:400 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:401 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:401 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:401 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:401 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:401 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:401 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:401 Cpu/(18029:18128): Dir física: 0
-[INFO] 20:17:19:401 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 0
-[TRACE] 20:17:19:401 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:401 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:402 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:403 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:404 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:404 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:404 Cpu/(18029:18128): Dir física: 0
-[INFO] 20:17:19:404 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 0
-[TRACE] 20:17:19:404 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:404 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:404 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:404 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:404 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:404 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:404 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:404 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:405 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:405 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:405 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:405 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:405 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:485 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:486 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
->
-[WARNING] 20:17:19:486 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:486 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:486 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:486 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:486 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:486 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:486 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:486 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:487 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:487 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:487 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:487 Cpu/(18029:18128): Dir física: 32
-[INFO] 20:17:19:487 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 32
-[TRACE] 20:17:19:487 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:487 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:487 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:487 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:488 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:488 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:488 Cpu/(18029:18128): Dir física: 32
-[INFO] 20:17:19:488 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 32
-[TRACE] 20:17:19:488 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:488 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:488 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:488 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:489 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:489 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:489 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:489 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:489 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:489 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:489 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:489 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:490 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:575 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:575 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:575 Cpu/(18029:18128): <TID:0> <PID: 3>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:618 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:619 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 20:17:19:620 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET DX 0
->
-[WARNING] 20:17:19:620 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: SET DX 0
->, <PC: 0>
-[ERROR] 20:17:19:620 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:620 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:620 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 20:17:19:620 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <SET AX 64
->
-[WARNING] 20:17:19:620 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: SET AX 64
->, <PC: 1>
-[ERROR] 20:17:19:620 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:621 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:621 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 20:17:19:621 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <WRITE_MEM DX AX
->
-[WARNING] 20:17:19:621 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: WRITE_MEM DX AX
->, <PC: 2>
-[TRACE] 20:17:19:621 Cpu/(18029:18128): Dir física: 48
-[INFO] 20:17:19:621 Cpu/(18029:18128): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 48
-[TRACE] 20:17:19:621 Cpu/(18029:18128): Dato escrito
-[ERROR] 20:17:19:621 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:621 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:621 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 20:17:19:622 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <READ_MEM BX DX
->
-[WARNING] 20:17:19:622 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: READ_MEM BX DX
->, <PC: 3>
-[TRACE] 20:17:19:622 Cpu/(18029:18128): Dir física: 48
-[INFO] 20:17:19:622 Cpu/(18029:18128): ## TID: 0 - Acción: LEER - Dirección Física: 48
-[TRACE] 20:17:19:622 Cpu/(18029:18128): Dato leido: 64
-[ERROR] 20:17:19:622 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:622 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:623 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 20:17:19:623 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <LOG BX
->
-[WARNING] 20:17:19:623 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: LOG BX
->, <PC: 4>
-[INFO] 20:17:19:623 Cpu/(18029:18128): El valor del registro BX es: 64
-[ERROR] 20:17:19:623 Cpu/(18029:18128): Entro a interrupt
-[ERROR] 20:17:19:623 Cpu/(18029:18128): No Hay flag
-[INFO] 20:17:19:623 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 20:17:19:624 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <IO 120000
->
-[WARNING] 20:17:19:624 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: IO 120000
->, <PC: 5>
-[WARNING] 20:17:19:624 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:705 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:706 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:706 Cpu/(18029:18128): <TID:0> <PID: 4>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:750 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:753 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:754 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:754 Cpu/(18029:18128): <TID:0> <PID: 7>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:800 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:802 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:802 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:802 Cpu/(18029:18128): <TID:0> <PID: 6>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:846 Cpu/(18029:18128): SUSPENDER PROCESO
-[INFO] 20:17:19:880 Cpu/(18029:18128): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 20:17:19:880 Cpu/(18029:18128): “## TID: <0> - Ejecutando: <PROCESS_EXIT>
-[WARNING] 20:17:19:880 Cpu/(18029:18128): <TID:0> <PID: 8>, <INSTRUCCIÓN: PROCESS_EXIT>, <PC: 6>
-[WARNING] 20:17:19:921 Cpu/(18029:18128): SUSPENDER PROCESO
+[WARNING] 16:24:24:436 Cpu/(50983:51083): <TID:0> <PID: 0>, <INSTRUCCIÓN: DUMP_MEMORY
+>, <PC: 20>
+[ERROR] 16:24:24:436 Cpu/(50983:51083): entro a dump
+[ERROR] 16:28:23:021 Cpu/(50983:51084): Interrupt desconectado
+
+[ERROR] 16:28:23:021 Cpu/(50983:51082): Dispatch desconectado
+
+[INFO] 16:28:23:022 Cpu/(50983:50983): Finalizando ejecución de CPU

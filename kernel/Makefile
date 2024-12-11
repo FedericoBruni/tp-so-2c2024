@@ -94,5 +94,11 @@ $(sort $(dir $(OUT) $(OBJS))):
 	mkdir -pv $@
 
 kernel:
+	rm -f logKernel.log
 	make
-	./bin/kernel MEM_FIJA_BASE 12
+	./bin/kernel archivo1 8
+
+memcheck:
+	rm -f logKernel.log
+	make
+	valgrind --leak-check=full --track-origins=yes ./bin/kernel archivo1 8

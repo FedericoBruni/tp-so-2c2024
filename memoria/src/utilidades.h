@@ -40,5 +40,6 @@ void deserializar_read_mem(int cliente_fd_dispatch);
 void enviar_lectura(int dato);
 int dump_memory(int tid,  int pid);
 char *parse_contexto_cpu(CONTEXTO_CPU *contexto);
+void imprimir_memoria_usuario();
 
 #endif // UTILIDADES_H_

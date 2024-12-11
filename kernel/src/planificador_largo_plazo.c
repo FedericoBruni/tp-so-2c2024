@@ -33,9 +33,11 @@ void creacion_de_procesos(void)
     hilo_creacion_muerto = false;
     while (true)
     {
-        log_error(logger,"ANTES DE HAY NEW EN LARGO PLAZO CREAR");
+        
         sem_wait(&sem_hay_new);
-        log_error(logger,"DSPS DE HAY NEW EN LARGO PLAZO CREAR");
+        log_warning(logger, "Cola new");
+        imprimir_cola_new(cola_new, mutex_new);
+        
         PCB* pcb = desencolar(cola_new,mutex_new);
         log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
         pthread_mutex_lock(&mutex_fd_memoria);
@@ -51,10 +53,10 @@ void creacion_de_procesos(void)
             break;
 
         case 0:
-            log_warning(logger, "No hay espacio en memoria");
-            log_trace(logger,"ENCOLANDO PID: %d A NEW PORQUE NO HAY MEMORIA",pcb->pid);
             encolar(cola_new, pcb,mutex_new);
-            hay_mem=false;
+            log_warning(logger, "Encolé a new porque no había memoria para el proceso: %i, Cola new: ", pcb->pid);
+            
+            
             sem_post(&sem_syscall_fin);
             break;
         }
@@ -87,7 +89,7 @@ void finalizacion_de_procesos(void)
             printf("dsp\n");
             printear_colas_y_prioridades();
             imprimir_cola_new(cola_new,mutex_new);
-            if(queue_size(cola_new)>1){
+            if(queue_size(cola_new)>=1){
                 sem_post(&sem_hay_new);
             }
             sem_post(&sem_syscall_fin);

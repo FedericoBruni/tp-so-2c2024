@@ -151,14 +151,14 @@ int *reservar_bloques(int cantidad, char* nombre_archivo){
                 fseek(archivoBitmap,i,SEEK_SET);
                 fwrite(&byte,sizeof(char),1,archivoBitmap);
                 bloques[bloques_reservados] = i*8+j;
-                log_trace(logger, "## Bloque asignado: %d - Archivo: %s - Bloques Libres: %d",bloques[bloques_reservados],nombre_archivo,cant_bloques_libres());
+                log_trace(logger, "## Bloque asignado: %d - Archivo: %s",bloques[bloques_reservados],nombre_archivo);
                 bloques_reservados++;
                 bloques_restantes--;
             }
         }
     }
     fclose(archivoBitmap);
-    log_trace(logger,"Bloques reservados: %d",bloques_reservados);
+    log_trace(logger,"Bloques reservados: %d - Bloques libres: %d",bloques_reservados,cant_bloques_libres());
     return bloques;
 }
 
@@ -203,7 +203,7 @@ char *obtenerTimeStamp() {
 
 bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
     int tamanio_contenido = strlen(contenido);
-    int bloques_necesarios = (tamanio_contenido + block_size-1)/block_size + 1;
+    int bloques_necesarios = (tamanio + block_size-1)/block_size + 1;
     log_trace(logger,"bloques necesarios: %d",bloques_necesarios);
 
     if(cant_bloques_libres() < bloques_necesarios){
@@ -247,6 +247,7 @@ bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
     for(int i = 0;i<bloques_necesarios - 1;i++){
         fwrite(&bloques_datos[i],sizeof(int),1,archivoBloqueDeDatos);
         log_info(logger,"## Acceso Bloque - Archivo: %s - Tipo Bloque: INDICE - Bloque File System: %d",nombre_archivo,bloque_indice);
+        usleep(retardo_acceso_bloque * 1000);
     }
 
     //escribir datos en los bloques de datos
@@ -263,6 +264,7 @@ bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
         fseek(archivoBloqueDeDatos,bloques_datos[i]*block_size,SEEK_SET);
         fwrite(contenido + bytes_escritos, sizeof(char),bytes_a_escribir,archivoBloqueDeDatos);
         log_info(logger,"## Acceso Bloque - Archivo: %s - Tipo Bloque: DATOS - Bloque File System: %d",nombre_archivo,bloques_datos[i]);
+        usleep(retardo_acceso_bloque*1000);
         bytes_escritos += bytes_a_escribir;
     }
     fclose(archivoBloqueDeDatos);
