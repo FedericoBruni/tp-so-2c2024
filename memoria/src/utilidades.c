@@ -784,12 +784,12 @@ CONTEXTO_ARCHIVO *buscar_archivo(int pid, int tid){
 }
 
 int leer_memoria(int direccion){
-    return *((int*)memoria_usuario->memoria_usuario + direccion);
+    return *((int*)((char*)memoria_usuario->memoria_usuario + direccion));
 }
 
 void escribir_memoria(int direccion, int valor){
     log_warning(logger, "Direccion: %i, valor: %i", direccion, valor);
-    *((int*)memoria_usuario->memoria_usuario + direccion) = valor;
+    *((int*)((char*)memoria_usuario->memoria_usuario + direccion)) = valor;
 }
 
 /*

@@ -1,242 +1,106 @@
-[TRACE] 21:54:21:717 Memoria/(32731:32731): Servidor levantado y listo para escuchar en el puerto: 8002
-[INFO] 21:54:21:817 Memoria/(32731:32731): Conexión exitosa
-[INFO] 21:54:21:823 Memoria/(32731:32731): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
-[INFO] 21:54:22:641 Memoria/(32731:32731): ## Kernel Conectado - FD del socket: 6
-[INFO] 18:54:22:842 Memoria/(32731:32829): Recibido handshake: HANDSHAKE CPU - MEMORIA
-[INFO] 18:54:25:206 Memoria/(32731:32731): ## Kernel Conectado - FD del socket: 7
-[INFO] 18:54:25:351 Memoria/(32731:32929): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
-[TRACE] 18:54:25:380 Memoria/(32731:32929): <PID:0>, <TAMAÑO PROC:128>, <BASE:0>, <LIMITE:128>
-[WARNING] 18:54:25:385 Memoria/(32731:32929): Despues de asignar
-[TRACE] 18:54:25:391 Memoria/(32731:32929): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:392 Memoria/(32731:32929): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
-[INFO] 18:54:25:397 Memoria/(32731:32929): ## Proceso Creado - PID: 0 - Tamaño: 128
-[INFO] 18:54:25:436 Memoria/(32731:32929): ## Hilo Creado - (PID:TID)- 0:0
-[INFO] 18:54:25:447 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:25:485 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 31
+[TRACE] 23:51:21:143 Memoria/(18378:18378): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 23:51:21:146 Memoria/(18378:18378): Conexión exitosa
+[INFO] 23:51:21:146 Memoria/(18378:18378): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 23:51:21:806 Memoria/(18378:18378): ## Kernel Conectado - FD del socket: 6
+[INFO] 20:51:21:806 Memoria/(18378:18476): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 20:51:22:461 Memoria/(18378:18378): ## Kernel Conectado - FD del socket: 7
+[INFO] 20:51:22:463 Memoria/(18378:18573): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[TRACE] 20:51:22:472 Memoria/(18378:18573): <PID:0>, <TAMAÑO PROC:128>, <BASE:0>, <LIMITE:128>
+[WARNING] 20:51:22:473 Memoria/(18378:18573): Despues de asignar
+[TRACE] 20:51:22:473 Memoria/(18378:18573): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:473 Memoria/(18378:18573): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[INFO] 20:51:22:473 Memoria/(18378:18573): ## Proceso Creado - PID: 0 - Tamaño: 128
+[INFO] 20:51:22:475 Memoria/(18378:18573): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 20:51:22:479 Memoria/(18378:18476): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 20:51:22:489 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 31
 
-[INFO] 18:54:25:512 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:25:516 Memoria/(32731:32829): a
-[TRACE] 18:54:25:525 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:529 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:25:534 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:535 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:537 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:538 Memoria/(32731:32829): b
-[ERROR] 18:54:25:540 Memoria/(32731:32829): c
-[INFO] 18:54:25:541 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:25:548 Memoria/(32731:32829): z
-[INFO] 18:54:25:564 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:25:575 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET BX 70
+[INFO] 20:51:22:501 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET BX 70
 
-[INFO] 18:54:25:589 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET CX 1
+[INFO] 20:51:22:511 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET CX 1
 
-[INFO] 18:54:25:614 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:25:622 Memoria/(32731:32829): a
-[TRACE] 18:54:25:627 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:630 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:25:637 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:638 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:639 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:640 Memoria/(32731:32829): b
-[ERROR] 18:54:25:641 Memoria/(32731:32829): c
-[INFO] 18:54:25:641 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:25:647 Memoria/(32731:32829): z
-[INFO] 18:54:25:665 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:25:678 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE archivo2 896 0
+[INFO] 20:51:22:521 Memoria/(18378:18476): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 20:51:22:521 Memoria/(18378:18476): a
+[TRACE] 20:51:22:521 Memoria/(18378:18476): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 20:51:22:521 Memoria/(18378:18476): TAM LISTA 1
+[TRACE] 20:51:22:521 Memoria/(18378:18476): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
+[TRACE] 20:51:22:521 Memoria/(18378:18476): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:521 Memoria/(18378:18476): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:521 Memoria/(18378:18476): b
+[ERROR] 20:51:22:521 Memoria/(18378:18476): c
+[INFO] 20:51:22:521 Memoria/(18378:18476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 20:51:22:521 Memoria/(18378:18476): z
+[INFO] 20:51:22:532 Memoria/(18378:18476): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 20:51:22:542 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: WRITE_MEM AX BX
 
-[INFO] 18:54:25:689 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:25:690 Memoria/(32731:32829): a
-[TRACE] 18:54:25:705 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:711 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:25:711 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:714 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:723 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:733 Memoria/(32731:32829): b
-[ERROR] 18:54:25:738 Memoria/(32731:32829): c
-[INFO] 18:54:25:742 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:25:751 Memoria/(32731:32829): z
-[TRACE] 18:54:25:761 Memoria/(32731:32929): <PID:1>, <TAMAÑO PROC:896>, <BASE:128>, <LIMITE:1024>
-[WARNING] 18:54:25:761 Memoria/(32731:32929): Despues de asignar
-[TRACE] 18:54:25:761 Memoria/(32731:32929): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:762 Memoria/(32731:32929): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[INFO] 18:54:25:762 Memoria/(32731:32929): ## Proceso Creado - PID: 1 - Tamaño: 896
-[INFO] 18:54:25:764 Memoria/(32731:32929): ## Hilo Creado - (PID:TID)- 1:0
-[INFO] 18:54:25:775 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:25:775 Memoria/(32731:32829): a
-[TRACE] 18:54:25:782 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:783 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:25:784 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:784 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:25:787 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:797 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:797 Memoria/(32731:32829): b
-[ERROR] 18:54:25:800 Memoria/(32731:32829): c
-[INFO] 18:54:25:804 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:25:809 Memoria/(32731:32829): z
-[INFO] 18:54:25:827 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:25:847 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 890
+[INFO] 20:51:22:552 Memoria/(18378:18476): ## Escritura - (PID:TID) - (0:0) - Dir.Física: 31 - Tamaño: 4
+[WARNING] 20:51:22:552 Memoria/(18378:18476): Direccion: 31, valor: 70
+[INFO] 20:51:22:563 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET EX 35
 
-[INFO] 18:54:25:878 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET BX 65
+[INFO] 20:51:22:573 Memoria/(18378:18476): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 20:51:22:573 Memoria/(18378:18476): a
+[TRACE] 20:51:22:573 Memoria/(18378:18476): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 20:51:22:573 Memoria/(18378:18476): TAM LISTA 1
+[TRACE] 20:51:22:573 Memoria/(18378:18476): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
+[TRACE] 20:51:22:573 Memoria/(18378:18476): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:573 Memoria/(18378:18476): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:573 Memoria/(18378:18476): b
+[ERROR] 20:51:22:573 Memoria/(18378:18476): c
+[INFO] 20:51:22:573 Memoria/(18378:18476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 20:51:22:573 Memoria/(18378:18476): z
+[INFO] 20:51:22:583 Memoria/(18378:18476): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 20:51:22:594 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET DX 10
 
-[INFO] 18:54:25:893 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:25:894 Memoria/(32731:32829): a
-[TRACE] 18:54:25:894 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:896 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:25:897 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:899 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:25:899 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:901 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:905 Memoria/(32731:32829): b
-[ERROR] 18:54:25:905 Memoria/(32731:32829): c
-[INFO] 18:54:25:906 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:25:907 Memoria/(32731:32829): z
-[INFO] 18:54:25:925 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:25:943 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: WRITE_MEM AX BX
+[INFO] 20:51:22:604 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: WRITE_MEM EX DX
 
-[INFO] 18:54:25:959 Memoria/(32731:32829): ## Escritura - (PID:TID) - (0:0) - Dir.Física: 31 - Tamaño: 4
-[WARNING] 18:54:25:961 Memoria/(32731:32829): Direccion: 31, valor: 70
-[INFO] 18:54:25:981 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:25:982 Memoria/(32731:32829): a
-[TRACE] 18:54:25:989 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:25:989 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:25:989 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:25:990 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:25:990 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:25:991 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:25:999 Memoria/(32731:32829): b
-[ERROR] 18:54:26:000 Memoria/(32731:32829): c
-[INFO] 18:54:26:006 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:26:007 Memoria/(32731:32829): z
-[INFO] 18:54:26:019 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:26:033 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM AX BX
+[INFO] 20:51:22:615 Memoria/(18378:18476): ## Escritura - (PID:TID) - (0:0) - Dir.Física: 35 - Tamaño: 4
+[WARNING] 20:51:22:615 Memoria/(18378:18476): Direccion: 35, valor: 10
+[INFO] 20:51:22:626 Memoria/(18378:18476): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 20:51:22:626 Memoria/(18378:18476): a
+[TRACE] 20:51:22:626 Memoria/(18378:18476): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 20:51:22:626 Memoria/(18378:18476): TAM LISTA 1
+[TRACE] 20:51:22:626 Memoria/(18378:18476): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
+[TRACE] 20:51:22:626 Memoria/(18378:18476): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:626 Memoria/(18378:18476): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:626 Memoria/(18378:18476): b
+[ERROR] 20:51:22:626 Memoria/(18378:18476): c
+[INFO] 20:51:22:626 Memoria/(18378:18476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 20:51:22:626 Memoria/(18378:18476): z
+[INFO] 20:51:22:636 Memoria/(18378:18476): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 20:51:22:646 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: READ_MEM DX EX
 
-[INFO] 18:54:26:053 Memoria/(32731:32829): ## Escritura - (PID:TID) - (1:0) - Dir.Física: 1018 - Tamaño: 4
-[WARNING] 18:54:26:053 Memoria/(32731:32829): Direccion: 1018, valor: 65
-[INFO] 18:54:26:070 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:26:071 Memoria/(32731:32829): a
-[TRACE] 18:54:26:072 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:073 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:26:073 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:26:085 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:090 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:091 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:099 Memoria/(32731:32829): b
-[ERROR] 18:54:26:101 Memoria/(32731:32829): c
-[INFO] 18:54:26:101 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:26:102 Memoria/(32731:32829): z
-[INFO] 18:54:26:121 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:26:137 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: DUMP_MEMORY
+[INFO] 20:51:22:657 Memoria/(18378:18476): ## Lecutra - (PID:TID) - (0:0) - Dir.Física: 35 - Tamaño: 4
+[INFO] 20:51:22:667 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: READ_MEM BX AX
 
-[INFO] 18:54:26:150 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:26:151 Memoria/(32731:32829): a
-[TRACE] 18:54:26:152 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:161 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:26:162 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:26:163 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:166 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:169 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:171 Memoria/(32731:32829): b
-[ERROR] 18:54:26:181 Memoria/(32731:32829): c
-[INFO] 18:54:26:182 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:26:182 Memoria/(32731:32829): z
-[TRACE] 18:54:26:188 Memoria/(32731:32929): BASE DEL PROCESO: 0
-[TRACE] 18:54:26:189 Memoria/(32731:32929): LIMITE DEL PROCESO: 128
-[ERROR] 18:54:26:217 Memoria/(32731:32929): CONTENIDO EN MEMORIA: F
-[INFO] 18:54:26:221 Memoria/(32731:32929): Conexión exitosa
-[INFO] 18:54:26:229 Memoria/(32731:32929): ## Memory Dump solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:26:503 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:26:503 Memoria/(32731:32829): a
-[TRACE] 18:54:26:503 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:504 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:26:504 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:26:504 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:505 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:505 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:506 Memoria/(32731:32829): b
-[ERROR] 18:54:26:506 Memoria/(32731:32829): c
-[INFO] 18:54:26:506 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:26:507 Memoria/(32731:32829): z
-[INFO] 18:54:26:525 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:26:537 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: READ_MEM BX AX
-
-[INFO] 18:54:26:549 Memoria/(32731:32829): ## Lecutra - (PID:TID) - (1:0) - Dir.Física: 1018 - Tamaño: 4
-[INFO] 18:54:26:569 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:26:570 Memoria/(32731:32829): a
-[TRACE] 18:54:26:570 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:570 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:26:571 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:26:571 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:572 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:572 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:573 Memoria/(32731:32829): b
-[ERROR] 18:54:26:573 Memoria/(32731:32829): c
-[INFO] 18:54:26:574 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:26:574 Memoria/(32731:32829): z
-[INFO] 18:54:26:588 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 18:54:26:599 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
-[INFO] 18:54:26:615 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 18:54:26:616 Memoria/(32731:32829): a
-[TRACE] 18:54:26:617 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:621 Memoria/(32731:32829): TAM LISTA 2
-[TRACE] 18:54:26:621 Memoria/(32731:32829): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
-[TRACE] 18:54:26:622 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:622 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:623 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:623 Memoria/(32731:32829): b
-[ERROR] 18:54:26:624 Memoria/(32731:32829): c
-[INFO] 18:54:26:626 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 18:54:26:627 Memoria/(32731:32829): z
-[INFO] 18:54:26:649 Memoria/(32731:32929): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
-[INFO] 18:54:26:650 Memoria/(32731:32929): ## Proceso Destruido - PID: 0 - Tamaño: 128
-[INFO] 18:54:26:651 Memoria/(32731:32929): Finalizado proceso: 0
-[ERROR] 18:54:26:655 Memoria/(32731:32929): Después de compactar
-[TRACE] 18:54:26:656 Memoria/(32731:32929): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:656 Memoria/(32731:32929): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[INFO] 18:54:26:666 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:26:681 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: DUMP_MEMORY
-
-[INFO] 18:54:26:692 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:26:693 Memoria/(32731:32829): a
-[TRACE] 18:54:26:693 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:26:693 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:26:694 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:26:695 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:26:696 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:26:696 Memoria/(32731:32829): b
-[ERROR] 18:54:26:697 Memoria/(32731:32829): c
-[INFO] 18:54:26:697 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:26:698 Memoria/(32731:32829): z
-[TRACE] 18:54:26:713 Memoria/(32731:32929): BASE DEL PROCESO: 128
-[TRACE] 18:54:26:714 Memoria/(32731:32929): LIMITE DEL PROCESO: 1024
-[ERROR] 18:54:26:716 Memoria/(32731:32929): CONTENIDO EN MEMORIA: @@mA 564ma2:2 IDPE 4iorI0P UMRXco9
-@P�PP�PP��P�`�PP�Si ad taec euo0��Si ad taec euo0�P24:PPPP7PP7PP//amP �Bp������ @T2CTU
-0A
-[INFO] 18:54:26:720 Memoria/(32731:32929): Conexión exitosa
-[INFO] 18:54:26:722 Memoria/(32731:32929): ## Memory Dump solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:28:210 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:28:210 Memoria/(32731:32829): a
-[TRACE] 18:54:28:211 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:28:211 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:28:211 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:28:212 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:28:212 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:28:212 Memoria/(32731:32829): b
-[ERROR] 18:54:28:212 Memoria/(32731:32829): c
-[INFO] 18:54:28:215 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:28:218 Memoria/(32731:32829): z
-[INFO] 18:54:28:233 Memoria/(32731:32829): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 18:54:28:245 Memoria/(32731:32829): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: PROCESS_EXIT
-[INFO] 18:54:28:256 Memoria/(32731:32829): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 18:54:28:257 Memoria/(32731:32829): a
-[TRACE] 18:54:28:257 Memoria/(32731:32829): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 18:54:28:257 Memoria/(32731:32829): TAM LISTA 1
-[TRACE] 18:54:28:258 Memoria/(32731:32829): CTX_PROCESO: <PID:1>, <BASE:128>, <LIMITE:1024>
-[TRACE] 18:54:28:258 Memoria/(32731:32829): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:128>
-[TRACE] 18:54:28:258 Memoria/(32731:32829): <OCUPADO: 1>, <INICIO:128>, <TAMAÑO:896>
-[ERROR] 18:54:28:259 Memoria/(32731:32829): b
-[ERROR] 18:54:28:264 Memoria/(32731:32829): c
-[INFO] 18:54:28:265 Memoria/(32731:32829): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 18:54:28:267 Memoria/(32731:32829): z
-[INFO] 18:54:28:278 Memoria/(32731:32929): ## Hilo <Destruido> - (PID:TID) - (<1>:<0>)
-[INFO] 18:54:28:279 Memoria/(32731:32929): ## Proceso Destruido - PID: 1 - Tamaño: 896
-[INFO] 18:54:28:281 Memoria/(32731:32929): Finalizado proceso: 1
+[INFO] 20:51:22:677 Memoria/(18378:18476): ## Lecutra - (PID:TID) - (0:0) - Dir.Física: 31 - Tamaño: 4
+[INFO] 20:51:22:687 Memoria/(18378:18476): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 20:51:22:687 Memoria/(18378:18476): a
+[TRACE] 20:51:22:688 Memoria/(18378:18476): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 20:51:22:688 Memoria/(18378:18476): TAM LISTA 1
+[TRACE] 20:51:22:688 Memoria/(18378:18476): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
+[TRACE] 20:51:22:688 Memoria/(18378:18476): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:688 Memoria/(18378:18476): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:688 Memoria/(18378:18476): b
+[ERROR] 20:51:22:688 Memoria/(18378:18476): c
+[INFO] 20:51:22:688 Memoria/(18378:18476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 20:51:22:688 Memoria/(18378:18476): z
+[INFO] 20:51:22:698 Memoria/(18378:18476): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 20:51:22:708 Memoria/(18378:18476): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 20:51:22:724 Memoria/(18378:18476): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 20:51:22:724 Memoria/(18378:18476): a
+[TRACE] 20:51:22:724 Memoria/(18378:18476): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 20:51:22:724 Memoria/(18378:18476): TAM LISTA 1
+[TRACE] 20:51:22:724 Memoria/(18378:18476): CTX_PROCESO: <PID:0>, <BASE:0>, <LIMITE:128>
+[TRACE] 20:51:22:724 Memoria/(18378:18476): <OCUPADO: 1>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:724 Memoria/(18378:18476): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:724 Memoria/(18378:18476): b
+[ERROR] 20:51:22:724 Memoria/(18378:18476): c
+[INFO] 20:51:22:724 Memoria/(18378:18476): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 20:51:22:724 Memoria/(18378:18476): z
+[INFO] 20:51:22:741 Memoria/(18378:18573): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 20:51:22:741 Memoria/(18378:18573): ## Proceso Destruido - PID: 0 - Tamaño: 128
+[INFO] 20:51:22:741 Memoria/(18378:18573): Finalizado proceso: 0
+[ERROR] 20:51:22:741 Memoria/(18378:18573): Antes de compactar siguiente
+[TRACE] 20:51:22:741 Memoria/(18378:18573): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:128>
+[TRACE] 20:51:22:741 Memoria/(18378:18573): <OCUPADO: 0>, <INICIO:128>, <TAMAÑO:896>
+[ERROR] 20:51:22:741 Memoria/(18378:18573): Después de compactar
+[TRACE] 20:51:22:741 Memoria/(18378:18573): <OCUPADO: 0>, <INICIO:0>, <TAMAÑO:1024>
