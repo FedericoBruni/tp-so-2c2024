@@ -5,7 +5,7 @@ t_config *config;
 char *puerto_escucha;
 char *ip_filesystem;
 char *puerto_filesystem;
-int *tam_memoria;
+int tam_memoria;
 char *path_instrucciones;
 int retardo_respuesta;
 char *esquema;
@@ -18,6 +18,7 @@ t_list *archivos;
 MEMORIA_USUARIO* memoria_usuario;
 extern int cliente_fd_kernel;
 extern int cliente_fd_dispatch;
+
 
 void test();
 
@@ -55,6 +56,23 @@ void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int soc
     close(socket_servidor_cpu);
     log_destroy(logger);
     config_destroy(config);
+
+
+    free(memoria_usuario->memoria_usuario);
+    list_destroy_and_destroy_elements(memoria_usuario->particiones, free);
+    free(memoria_usuario);
+    //list_destroy_and_destroy_elements(contextos_hilos, eliminar_hilo_y_contexto); ?
+    printf("size ctxs_prcs: %i\n", list_size(contextos_procesos));
+    if (list_size(contextos_procesos) > 0) list_destroy_and_destroy_elements(contextos_procesos, free);
+    else list_destroy(contextos_procesos);
+    if (list_size(contextos_hilos) > 0) list_destroy_and_destroy_elements(contextos_hilos, liberar_contexto_hilo);
+    else list_destroy(contextos_hilos);
+    printf("size archivos: %i\n", list_size(archivos));
+    if (list_size(archivos) > 0) list_destroy_and_destroy_elements(archivos, liberar_archivo);
+    else list_destroy(archivos);
+
+    string_array_destroy(particiones);
+
     exit(EXIT_SUCCESS);
 }
 
@@ -99,12 +117,13 @@ void enviar_contexto(int cliente_fd_dispatch){
     enviar_paquete(paquete, cliente_fd_dispatch);
     eliminar_paquete(paquete);
 
+
+    //free(contexto_cpu->contexto_hilo->archivo_pseudocodigo);
+    //free(contexto_cpu->contexto_hilo->Registros);
+    //free(contexto_cpu->contexto_hilo);
+    //free(contexto_cpu->contexto_proceso);
     free(buffer->stream);
     free(buffer);
-    free(contexto_cpu->contexto_hilo->archivo_pseudocodigo);
-    free(contexto_cpu->contexto_hilo->Registros);
-    free(contexto_cpu->contexto_hilo);
-    free(contexto_cpu->contexto_proceso);
     free(contexto_cpu);
 
     //enviar_contexto(cliente_fd_dispatch,contexto_cpu);
@@ -221,6 +240,7 @@ void actualizar_contexto(int cliente_fd_dispatch){
     log_error(logger, "b");
 
     if (hilo_actual && proceso_actual) {
+        //free(hilo_actual->Registros);
         memcpy(hilo_actual->Registros, ctx_hilo->Registros, sizeof(REGISTROS));
         log_error(logger, "c");
         log_info(logger, "Contexto de hilo y proceso actualizado para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
@@ -271,6 +291,8 @@ void cargar_archivo(char* nombre_archivo, int tid,int pid) {
     while (fgets(linea, sizeof(linea), archivo) != NULL) {
         snprintf(clave, 256, "%d", i);
         char* key = clave;
+        if (dictionary_has_key(diccionario, key))
+            free(dictionary_get(diccionario, key));
         dictionary_put(diccionario, key, strdup(linea));
         i++;
         //printf("%s", linea);
@@ -304,7 +326,7 @@ int obtener_tamano(char** lista) {
 
 void cargar_memoria_usuario() {
     memoria_usuario = malloc(sizeof(MEMORIA_USUARIO));
-    memoria_usuario->memoria_usuario = malloc(tam_memoria);
+    memoria_usuario->memoria_usuario = malloc(4*tam_memoria);
     memoria_usuario->particiones = list_create();
     if (string_equals_ignore_case(esquema, "FIJAS")) {
         
@@ -426,6 +448,7 @@ Particion *buscar_best_fijas(int tamanio){
     }
     if (menor_particion)
         menor_particion->estaOcupado = 1;
+    list_destroy(lista_filtrada);
     return menor_particion;
 }
 
@@ -445,7 +468,8 @@ Particion *buscar_best_dinamicas(int tamanio){
             menor_particion = particionAux;
         }
     }
-    //
+    //log_warning(logger, "tam lista_filtrada = %i", list_size(lista_filtrada));
+    //list_destroy(lista_filtrada);
     if (menor_particion){
         Particion *particionSiguiente = malloc(sizeof(Particion));
         particionSiguiente->estaOcupado = 0;
@@ -455,13 +479,16 @@ Particion *buscar_best_dinamicas(int tamanio){
         menor_particion->tamanio = tamanio;
         if(particionSiguiente->tamanio == 0){
             free(particionSiguiente);
-            list_destroy(lista_filtrada);
-            return menor_particion;
-        }
+            //list_destroy(lista_filtrada);
+            //return menor_particion;
+        } else 
         list_add_in_index(memoria_usuario->particiones, buscar_indice(menor_particion)+1, particionSiguiente);
-        list_destroy(lista_filtrada);
-       return menor_particion;
+        //list_destroy(lista_filtrada);
+       //return menor_particion;
     }
+    list_destroy(lista_filtrada);
+    return menor_particion;
+
 }
 
 Particion *buscar_best(int tamanio) {
@@ -496,6 +523,7 @@ Particion *buscar_worst_fijas(int tamanio) {
     }
     if (mayor_particion)
         mayor_particion->estaOcupado = 1;
+    list_destroy(lista_filtrada);
     return mayor_particion;
 }
 
@@ -525,11 +553,13 @@ Particion *buscar_worst_dinamicas(int tamanio) {
         mayor_particion->tamanio = tamanio;
         if(particionSiguiente->tamanio == 0){
             free(particionSiguiente);
-            return mayor_particion;
-        }
-        list_add_in_index(memoria_usuario->particiones, buscar_indice(mayor_particion)+1, particionSiguiente);
-       return mayor_particion;
+            //return mayor_particion;
+        } else 
+            list_add_in_index(memoria_usuario->particiones, buscar_indice(mayor_particion)+1, particionSiguiente);
+       
     }
+    list_destroy(lista_filtrada);
+    return mayor_particion;
 }
 
 Particion *buscar_worst(int tamanio) {
@@ -649,6 +679,8 @@ void finalizacion_de_proceso(int pid){
         agrupar_particiones(particion);
     }
 
+    list_remove_element(contextos_procesos, contexto_proceso);
+    free(contexto_proceso);
     list_destroy(lista_a_borrar);
 }
 
@@ -660,7 +692,9 @@ typedef struct{
 }CONTEXTO_ARCHIVO;
 */
 void liberar_contexto_hilo(CONTEXTO_HILO *contexto_hilo) {
+    //log_warning(logger, "libere ctx_hilo de: <TID:%i>, <PID: %i>", contexto_hilo->tid, contexto_hilo->pid);
     free(contexto_hilo->Registros);
+    free(contexto_hilo->archivo_pseudocodigo);
     free(contexto_hilo);
 }
 
@@ -772,7 +806,7 @@ int dump_memory(int tid,  int pid){
 
 
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
-    char *contenido = malloc(tamanio);
+    char *contenido = malloc(tamanio+1);
     memcpy(contenido,memoria_usuario->memoria_usuario + contexto_a_dumpear->contexto_proceso->BASE,tamanio);
     contenido[tamanio] = '\0';
     
@@ -786,10 +820,11 @@ int dump_memory(int tid,  int pid){
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, fd_filesystem);
     eliminar_paquete(paquete);
-    free(contexto_a_dumpear->contexto_hilo->archivo_pseudocodigo);
-    free(contexto_a_dumpear->contexto_hilo->Registros);
-    free(contexto_a_dumpear->contexto_hilo);
-    free(contexto_a_dumpear->contexto_proceso);
+    //free(contexto_a_dumpear->contexto_hilo->archivo_pseudocodigo);
+    //free(contexto_a_dumpear->contexto_hilo->Registros);
+    //free(contexto_a_dumpear->contexto_hilo);
+    //liberar_contexto_hilo(contexto_a_dumpear->contexto_hilo);
+    //free(contexto_a_dumpear->contexto_proceso);
     free(contexto_a_dumpear);
     free(contenido);
     int cod_op = recibir_operacion(fd_filesystem);

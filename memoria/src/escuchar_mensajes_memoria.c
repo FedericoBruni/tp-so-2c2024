@@ -41,6 +41,8 @@ void escuchar_mensajes_kernel(void)
                 int rta_sol_mem_err = ERROR_CREACION_HILO;
                 send(cliente_fd_kernel, &rta_sol_mem_err, sizeof(op_code), 0); 
             }
+            free(buffer->stream);
+            free(buffer);
             break;
         case FINAL_PROCESO:
             buffer = recibir_buffer_completo(cliente_fd_kernel);
@@ -48,6 +50,8 @@ void escuchar_mensajes_kernel(void)
             finalizacion_de_proceso(pid);
             int rta_fin_proc = OK_FINAL_PROCESO;
             send(cliente_fd_kernel, &rta_fin_proc, sizeof(op_code), 0);
+            free(buffer->stream);
+            free(buffer);
             break;
         case SOLICITAR_CREACION_HILO:
             buffer = recibir_buffer_completo(cliente_fd_kernel);
@@ -57,6 +61,8 @@ void escuchar_mensajes_kernel(void)
             log_info(logger, "## Hilo Creado - (PID:TID)- %d:%d",contexto_hilo->pid,contexto_hilo->tid);
             int rta_crear_hilo = OK_CREACION_HILO;
             send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
+            free(buffer->stream);
+            free(buffer);
             break;
         case FINAL_HILO: 
             t_buffer *buffer_fin = recibir_buffer_completo(cliente_fd_kernel);
@@ -107,9 +113,9 @@ void escuchar_mensajes_kernel(void)
             log_warning(logger, "Codigo de operacion invalido Kernel");
             break;
         }
-        if(buffer){
-        free(buffer->stream);  // Liberar el stream de datos
-        free(buffer);}
+        //if(buffer){
+        //free(buffer->stream);  // Liberar el stream de datos
+        //free(buffer);}
         
     }
 }

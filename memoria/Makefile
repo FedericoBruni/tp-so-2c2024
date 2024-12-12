@@ -101,4 +101,4 @@ memoria:
 memcheck:
 	rm -f memoria.log
 	make
-	valgrind --leak-check=full --track-origins=yes ./bin/memoria
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/memoria

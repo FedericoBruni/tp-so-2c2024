@@ -41,5 +41,7 @@ void enviar_lectura(int dato);
 int dump_memory(int tid,  int pid);
 char *parse_contexto_cpu(CONTEXTO_CPU *contexto);
 void imprimir_memoria_usuario();
+void liberar_archivo(CONTEXTO_ARCHIVO *archivo);
+void liberar_contexto_hilo(CONTEXTO_HILO *contexto_hilo);
 
 #endif // UTILIDADES_H_
