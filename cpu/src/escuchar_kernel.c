@@ -14,6 +14,7 @@ extern sem_t sem_join_hilo;
 extern sem_t sem_hilo_cancel;
 extern sem_t sem_io_solicitada;
 extern sem_t sem_dump_mem;
+extern sem_t sem_ejecucion;
 char* rta_mutex_lock;
 char *rta_hilo_join;
 extern bool flag_interrupt;
@@ -21,6 +22,7 @@ extern pthread_mutex_t mutex_interrupt;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
 extern sem_t sem_fin_q;
 extern sem_t sem_interrupt_recibida;
+extern bool fin_ciclo;
 
 void escuchar_mensajes_kernel_dispatch(void)
 {
@@ -91,6 +93,9 @@ void escuchar_mensajes_kernel_dispatch(void)
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");
 			cliente_fd_dispatch = -1;
+			fin_ciclo = true;
+			sem_post(&sem_ejecucion);
+			log_trace(logger,"FIN CICLO TRUE");
 			return;
 		
 		default:

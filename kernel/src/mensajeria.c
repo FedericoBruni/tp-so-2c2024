@@ -254,7 +254,9 @@ int esperar_respuesta(){
             if (!rta) {
                 res_dump = FIN_PROCESO;
                 PROCESS_EXIT(tcb_en_ejecucion);
+                log_trace(logger, "Dump memory error -> Process exit");
                 sem_wait(&sem_syscall_fin);
+                log_trace(logger, "Dump memory error -> Process exit (dsp sem_wait)");
             }
             send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
             break;
@@ -273,7 +275,7 @@ int esperar_respuesta(){
             int segmentation_fault = FIN_PROCESO;
             send(fd_cpu_dispatch, &segmentation_fault, sizeof(op_code), 0);
             break;
-            
+        
         default:
             return 0;
         }
@@ -366,9 +368,10 @@ int deserializar_dump_memory() {
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
     log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
-    return DUMP_MEMORY(pid, tid);
     free(buffer->stream);
     free(buffer);
+    return DUMP_MEMORY(pid, tid);
+    
 }
 
 void deserializar_io() {

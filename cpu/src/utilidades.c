@@ -29,6 +29,7 @@ pthread_mutex_t mutex_conexion_dispatch;
 pthread_mutex_t mutex_conexion_memoria;
 pthread_mutex_t mutex_interrupt;
 bool flag_interrupt = false;
+bool fin_ciclo = false;
 
 
 void iniciar_cpu(void)
@@ -80,6 +81,14 @@ int conectarse_a_memoria(void)
     return crear_conexion(ip_memoria, puerto_memoria, logger);
 }
 
+void liberar_contexto_proceso(CONTEXTO_CPU *contexto_proceso) {
+    free(contexto_proceso->contexto_proceso);
+    free(contexto_proceso->contexto_hilo->Registros);
+    free(contexto_proceso->contexto_hilo->archivo_pseudocodigo);
+    free(contexto_proceso->contexto_hilo);
+    free(contexto_proceso);
+}
+
 void terminar_ejecucion(int servidor_dispatch, int servidor_interrupt, int socket_memoria)
 {
     log_info(logger, "Finalizando ejecución de CPU");
@@ -88,8 +97,13 @@ void terminar_ejecucion(int servidor_dispatch, int servidor_interrupt, int socke
     close(socket_memoria);
     config_destroy(config);
     log_destroy(logger);
+    liberar_contexto_proceso(contexto_en_ejecucion);
+    
+    
+
     exit(EXIT_SUCCESS);
 }
+
 
 void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
 {
@@ -101,6 +115,9 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
     //log_info(logger,"Solicitando contexto de: %d hilo: %d",pid,tid);
+    if(contexto_en_ejecucion){
+        liberar_contexto_proceso(contexto_en_ejecucion);
+    }
     contexto_en_ejecucion = solicitar_contexto_ejecucion(tid, pid); // esto es contexto_cpu pero la funcion devuelve contexto_hilo, ver
     //ejecutar();
     
@@ -109,9 +126,6 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     sem_post(&sem_ejecucion);
     free(buffer->stream);
     free(buffer);
-    
-    
-
     // sleep(1);
     // int resultado_ejecucion = OK_EJECUCION;
     // send(socket_cliente, &resultado_ejecucion,sizeof(op_code),0);

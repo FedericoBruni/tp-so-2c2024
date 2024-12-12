@@ -1,850 +1,140 @@
-[TRACE] 02:01:05:780 FileSystem/(55533:55533): Servidor levantado y listo para escuchar en el puerto: 8003
-[TRACE] 02:01:05:781 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 02:01:07:615 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 02:01:07:615 FileSystem/(55533:55533): Se conecto el cliente: Memoria
+[TRACE] 21:54:19:485 FileSystem/(32635:32635): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 21:54:19:485 FileSystem/(32635:32635): Por aceptar serv
+[TRACE] 21:54:21:813 FileSystem/(32635:32635): Ya acepte serv
+[INFO] 21:54:21:813 FileSystem/(32635:32635): Se conecto el cliente: Memoria
 
-[TRACE] 02:01:07:615 FileSystem/(55533:55533): Por aceptar serv
-[INFO] 23:01:07:623 FileSystem/(55533:55630): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
-[TRACE] 23:01:07:624 FileSystem/(55533:55630): TEST HANDSHAKE
-[TRACE] 23:01:15:928 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:01:15:929 FileSystem/(55533:55533): Se conecto el cliente: Memoria
+[TRACE] 21:54:21:813 FileSystem/(32635:32635): Por aceptar serv
+[INFO] 18:54:21:822 FileSystem/(32635:32732): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 18:54:21:822 FileSystem/(32635:32732): TEST HANDSHAKE
+[TRACE] 18:54:26:218 FileSystem/(32635:32635): Ya acepte serv
+[INFO] 18:54:26:221 FileSystem/(32635:32635): Se conecto el cliente: Memoria
 
-[TRACE] 23:01:15:929 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): bloques necesarios: 5
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): Cant de bloques libres: 200
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ts: 23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): timestamp: 23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ## Bloque asignado: 0 - Archivo: 1-0-23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ## Bloque asignado: 1 - Archivo: 1-0-23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ## Bloque asignado: 2 - Archivo: 1-0-23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ## Bloque asignado: 3 - Archivo: 1-0-23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): ## Bloque asignado: 4 - Archivo: 1-0-23:01:15:931
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): Cant de bloques libres: 195
-[TRACE] 23:01:15:931 FileSystem/(55533:55898): Bloques reservados: 5 - Bloques libres: 195
-[INFO] 23:01:15:931 FileSystem/(55533:55898): ## Archivo Creado: 1-0-23:01:15:931 - Tama√±o: 97
-[INFO] 23:01:15:931 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 23:01:15:957 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 23:01:15:991 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 23:01:16:025 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 23:01:16:051 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: DATOS - Bloque File System: 1
-[INFO] 23:01:16:076 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: DATOS - Bloque File System: 2
-[INFO] 23:01:16:104 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: DATOS - Bloque File System: 3
-[INFO] 23:01:16:130 FileSystem/(55533:55898): ## Acceso Bloque - Archivo: 1-0-23:01:15:931 - Tipo Bloque: DATOS - Bloque File System: 4
-[TRACE] 23:01:16:160 FileSystem/(55533:55898): ## Fin de solicitud - Archivo: 1-0-23:01:15:931
-[TRACE] 23:02:00:637 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:00:637 FileSystem/(55533:55533): Se conecto el cliente: Memoria
+[TRACE] 18:54:26:221 FileSystem/(32635:32635): Por aceptar serv
+[ERROR] 18:54:26:236 FileSystem/(32635:32943): CONTENIDO RECIBIDO: F
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): bloques necesarios: 6
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): Cant de bloques libres: 200
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ts: 18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): timestamp: 18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ## Bloque asignado: 0 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ## Bloque asignado: 1 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ## Bloque asignado: 2 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ## Bloque asignado: 3 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:242 FileSystem/(32635:32943): ## Bloque asignado: 4 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:243 FileSystem/(32635:32943): ## Bloque asignado: 5 - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:243 FileSystem/(32635:32943): Cant de bloques libres: 194
+[TRACE] 18:54:26:243 FileSystem/(32635:32943): Bloques reservados: 6 - Bloques libres: 194
+[INFO] 18:54:26:243 FileSystem/(32635:32943): ## Archivo Creado: 0-0-18:54:26:242 - Tama√±o: 129
+[INFO] 18:54:26:243 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 18:54:26:272 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 18:54:26:297 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 18:54:26:323 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 18:54:26:348 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 18:54:26:374 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: DATOS - Bloque File System: 1
+[INFO] 18:54:26:399 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: DATOS - Bloque File System: 2
+[INFO] 18:54:26:425 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: DATOS - Bloque File System: 3
+[INFO] 18:54:26:450 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: DATOS - Bloque File System: 4
+[INFO] 18:54:26:475 FileSystem/(32635:32943): ## Acceso Bloque - Archivo: 0-0-18:54:26:242 - Tipo Bloque: DATOS - Bloque File System: 5
+[TRACE] 18:54:26:500 FileSystem/(32635:32943): ## Fin de solicitud - Archivo: 0-0-18:54:26:242
+[TRACE] 18:54:26:719 FileSystem/(32635:32635): Ya acepte serv
+[INFO] 18:54:26:720 FileSystem/(32635:32635): Se conecto el cliente: Memoria
 
-[TRACE] 23:02:00:637 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): bloques necesarios: 4
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): Cant de bloques libres: 195
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): ts: 23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): timestamp: 23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): ## Bloque asignado: 5 - Archivo: 2-0-23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): ## Bloque asignado: 6 - Archivo: 2-0-23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): ## Bloque asignado: 7 - Archivo: 2-0-23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): ## Bloque asignado: 8 - Archivo: 2-0-23:02:00:643
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): Cant de bloques libres: 191
-[TRACE] 23:02:00:643 FileSystem/(55533:56174): Bloques reservados: 4 - Bloques libres: 191
-[INFO] 23:02:00:643 FileSystem/(55533:56174): ## Archivo Creado: 2-0-23:02:00:643 - Tama√±o: 65
-[INFO] 23:02:00:643 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: INDICE - Bloque File System: 5
-[INFO] 23:02:00:669 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: INDICE - Bloque File System: 5
-[INFO] 23:02:00:696 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: INDICE - Bloque File System: 5
-[INFO] 23:02:00:722 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: DATOS - Bloque File System: 6
-[INFO] 23:02:00:747 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: DATOS - Bloque File System: 7
-[INFO] 23:02:00:774 FileSystem/(55533:56174): ## Acceso Bloque - Archivo: 2-0-23:02:00:643 - Tipo Bloque: DATOS - Bloque File System: 8
-[TRACE] 23:02:00:802 FileSystem/(55533:56174): ## Fin de solicitud - Archivo: 2-0-23:02:00:643
-[TRACE] 23:02:01:212 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:01:212 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:01:212 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:01:212 FileSystem/(55533:56180): bloques necesarios: 4
-[TRACE] 23:02:01:212 FileSystem/(55533:56180): Cant de bloques libres: 191
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): ts: 23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): timestamp: 23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): ## Bloque asignado: 9 - Archivo: 7-0-23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): ## Bloque asignado: 10 - Archivo: 7-0-23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): ## Bloque asignado: 11 - Archivo: 7-0-23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): ## Bloque asignado: 12 - Archivo: 7-0-23:02:01:213
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): Cant de bloques libres: 187
-[TRACE] 23:02:01:213 FileSystem/(55533:56180): Bloques reservados: 4 - Bloques libres: 187
-[INFO] 23:02:01:213 FileSystem/(55533:56180): ## Archivo Creado: 7-0-23:02:01:213 - Tama√±o: 65
-[INFO] 23:02:01:213 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: INDICE - Bloque File System: 9
-[INFO] 23:02:01:240 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: INDICE - Bloque File System: 9
-[INFO] 23:02:01:267 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: INDICE - Bloque File System: 9
-[INFO] 23:02:01:293 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: DATOS - Bloque File System: 10
-[INFO] 23:02:01:327 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: DATOS - Bloque File System: 11
-[INFO] 23:02:01:362 FileSystem/(55533:56180): ## Acceso Bloque - Archivo: 7-0-23:02:01:213 - Tipo Bloque: DATOS - Bloque File System: 12
-[TRACE] 23:02:01:387 FileSystem/(55533:56180): ## Fin de solicitud - Archivo: 7-0-23:02:01:213
-[TRACE] 23:02:03:524 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:03:527 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:03:527 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): bloques necesarios: 4
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): Cant de bloques libres: 187
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): ts: 23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): timestamp: 23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): ## Bloque asignado: 13 - Archivo: 12-0-23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): ## Bloque asignado: 14 - Archivo: 12-0-23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): ## Bloque asignado: 15 - Archivo: 12-0-23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): ## Bloque asignado: 16 - Archivo: 12-0-23:02:03:527
-[TRACE] 23:02:03:527 FileSystem/(55533:56215): Cant de bloques libres: 183
-[TRACE] 23:02:03:529 FileSystem/(55533:56215): Bloques reservados: 4 - Bloques libres: 183
-[INFO] 23:02:03:529 FileSystem/(55533:56215): ## Archivo Creado: 12-0-23:02:03:527 - Tama√±o: 65
-[INFO] 23:02:03:532 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: INDICE - Bloque File System: 13
-[INFO] 23:02:03:566 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: INDICE - Bloque File System: 13
-[INFO] 23:02:03:595 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: INDICE - Bloque File System: 13
-[INFO] 23:02:03:627 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: DATOS - Bloque File System: 14
-[INFO] 23:02:03:659 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: DATOS - Bloque File System: 15
-[INFO] 23:02:03:685 FileSystem/(55533:56215): ## Acceso Bloque - Archivo: 12-0-23:02:03:527 - Tipo Bloque: DATOS - Bloque File System: 16
-[TRACE] 23:02:03:711 FileSystem/(55533:56215): ## Fin de solicitud - Archivo: 12-0-23:02:03:527
-[TRACE] 23:02:14:101 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:14:101 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:14:101 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:14:103 FileSystem/(55533:56342): bloques necesarios: 6
-[TRACE] 23:02:14:103 FileSystem/(55533:56342): Cant de bloques libres: 183
-[TRACE] 23:02:14:103 FileSystem/(55533:56342): ts: 23:02:14:103
-[TRACE] 23:02:14:103 FileSystem/(55533:56342): timestamp: 23:02:14:103
-[TRACE] 23:02:14:105 FileSystem/(55533:56342): ## Bloque asignado: 17 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): ## Bloque asignado: 18 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): ## Bloque asignado: 19 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): ## Bloque asignado: 20 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): ## Bloque asignado: 21 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): ## Bloque asignado: 22 - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): Cant de bloques libres: 177
-[TRACE] 23:02:14:108 FileSystem/(55533:56342): Bloques reservados: 6 - Bloques libres: 177
-[INFO] 23:02:14:108 FileSystem/(55533:56342): ## Archivo Creado: 8-0-23:02:14:103 - Tama√±o: 129
-[INFO] 23:02:14:108 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: INDICE - Bloque File System: 17
-[INFO] 23:02:14:133 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: INDICE - Bloque File System: 17
-[INFO] 23:02:14:161 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: INDICE - Bloque File System: 17
-[INFO] 23:02:14:187 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: INDICE - Bloque File System: 17
-[INFO] 23:02:14:218 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: INDICE - Bloque File System: 17
-[INFO] 23:02:14:243 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: DATOS - Bloque File System: 18
-[INFO] 23:02:14:270 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: DATOS - Bloque File System: 19
-[INFO] 23:02:14:296 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: DATOS - Bloque File System: 20
-[INFO] 23:02:14:326 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: DATOS - Bloque File System: 21
-[INFO] 23:02:14:354 FileSystem/(55533:56342): ## Acceso Bloque - Archivo: 8-0-23:02:14:103 - Tipo Bloque: DATOS - Bloque File System: 22
-[TRACE] 23:02:14:381 FileSystem/(55533:56342): ## Fin de solicitud - Archivo: 8-0-23:02:14:103
-[TRACE] 23:02:16:500 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:16:500 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:16:500 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): bloques necesarios: 6
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): Cant de bloques libres: 177
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ts: 23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): timestamp: 23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 23 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 24 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 25 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 26 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 27 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): ## Bloque asignado: 28 - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): Cant de bloques libres: 171
-[TRACE] 23:02:16:500 FileSystem/(55533:56371): Bloques reservados: 6 - Bloques libres: 171
-[INFO] 23:02:16:500 FileSystem/(55533:56371): ## Archivo Creado: 3-0-23:02:16:500 - Tama√±o: 129
-[INFO] 23:02:16:501 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: INDICE - Bloque File System: 23
-[INFO] 23:02:16:526 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: INDICE - Bloque File System: 23
-[INFO] 23:02:16:552 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: INDICE - Bloque File System: 23
-[INFO] 23:02:16:580 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: INDICE - Bloque File System: 23
-[INFO] 23:02:16:609 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: INDICE - Bloque File System: 23
-[INFO] 23:02:16:639 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: DATOS - Bloque File System: 24
-[INFO] 23:02:16:665 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: DATOS - Bloque File System: 25
-[INFO] 23:02:16:691 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: DATOS - Bloque File System: 26
-[INFO] 23:02:16:716 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: DATOS - Bloque File System: 27
-[INFO] 23:02:16:742 FileSystem/(55533:56371): ## Acceso Bloque - Archivo: 3-0-23:02:16:500 - Tipo Bloque: DATOS - Bloque File System: 28
-[TRACE] 23:02:16:769 FileSystem/(55533:56371): ## Fin de solicitud - Archivo: 3-0-23:02:16:500
-[TRACE] 23:02:29:137 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:29:138 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:29:138 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:29:139 FileSystem/(55533:56561): bloques necesarios: 4
-[TRACE] 23:02:29:139 FileSystem/(55533:56561): Cant de bloques libres: 171
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): ts: 23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): timestamp: 23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): ## Bloque asignado: 29 - Archivo: 22-0-23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): ## Bloque asignado: 30 - Archivo: 22-0-23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): ## Bloque asignado: 31 - Archivo: 22-0-23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): ## Bloque asignado: 32 - Archivo: 22-0-23:02:29:140
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): Cant de bloques libres: 167
-[TRACE] 23:02:29:140 FileSystem/(55533:56561): Bloques reservados: 4 - Bloques libres: 167
-[INFO] 23:02:29:140 FileSystem/(55533:56561): ## Archivo Creado: 22-0-23:02:29:140 - Tama√±o: 65
-[INFO] 23:02:29:140 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: INDICE - Bloque File System: 29
-[INFO] 23:02:29:165 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: INDICE - Bloque File System: 29
-[INFO] 23:02:29:191 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: INDICE - Bloque File System: 29
-[INFO] 23:02:29:225 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: DATOS - Bloque File System: 30
-[INFO] 23:02:29:251 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: DATOS - Bloque File System: 31
-[INFO] 23:02:29:278 FileSystem/(55533:56561): ## Acceso Bloque - Archivo: 22-0-23:02:29:140 - Tipo Bloque: DATOS - Bloque File System: 32
-[TRACE] 23:02:29:303 FileSystem/(55533:56561): ## Fin de solicitud - Archivo: 22-0-23:02:29:140
-[TRACE] 23:02:29:665 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:29:665 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:29:665 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:29:667 FileSystem/(55533:56567): bloques necesarios: 10
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): Cant de bloques libres: 167
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ts: 23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): timestamp: 23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 33 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 34 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 35 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 36 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 37 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 38 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:668 FileSystem/(55533:56567): ## Bloque asignado: 39 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:670 FileSystem/(55533:56567): ## Bloque asignado: 40 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:674 FileSystem/(55533:56567): ## Bloque asignado: 41 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:674 FileSystem/(55533:56567): ## Bloque asignado: 42 - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:29:674 FileSystem/(55533:56567): Cant de bloques libres: 157
-[TRACE] 23:02:29:674 FileSystem/(55533:56567): Bloques reservados: 10 - Bloques libres: 157
-[INFO] 23:02:29:674 FileSystem/(55533:56567): ## Archivo Creado: 4-0-23:02:29:668 - Tama√±o: 257
-[INFO] 23:02:29:674 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:700 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:730 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:756 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:784 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:811 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:838 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:863 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:890 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: INDICE - Bloque File System: 33
-[INFO] 23:02:29:915 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 34
-[INFO] 23:02:29:942 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 35
-[INFO] 23:02:29:967 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 36
-[INFO] 23:02:29:993 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 37
-[INFO] 23:02:30:018 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 38
-[INFO] 23:02:30:044 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 39
-[INFO] 23:02:30:070 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 40
-[INFO] 23:02:30:097 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 41
-[INFO] 23:02:30:124 FileSystem/(55533:56567): ## Acceso Bloque - Archivo: 4-0-23:02:29:668 - Tipo Bloque: DATOS - Bloque File System: 42
-[TRACE] 23:02:30:154 FileSystem/(55533:56567): ## Fin de solicitud - Archivo: 4-0-23:02:29:668
-[TRACE] 23:02:32:359 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:32:359 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:32:359 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): bloques necesarios: 10
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): Cant de bloques libres: 157
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ts: 23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): timestamp: 23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 43 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 44 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 45 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 46 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 47 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 48 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 49 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 50 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 51 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): ## Bloque asignado: 52 - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): Cant de bloques libres: 147
-[TRACE] 23:02:32:360 FileSystem/(55533:56612): Bloques reservados: 10 - Bloques libres: 147
-[INFO] 23:02:32:360 FileSystem/(55533:56612): ## Archivo Creado: 9-0-23:02:32:360 - Tama√±o: 257
-[INFO] 23:02:32:360 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:390 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:424 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:452 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:480 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:506 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:532 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:557 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:585 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: INDICE - Bloque File System: 43
-[INFO] 23:02:32:611 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 44
-[INFO] 23:02:32:639 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 45
-[INFO] 23:02:32:667 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 46
-[INFO] 23:02:32:693 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 47
-[INFO] 23:02:32:721 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 48
-[INFO] 23:02:32:752 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 49
-[INFO] 23:02:32:783 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 50
-[INFO] 23:02:32:809 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 51
-[INFO] 23:02:32:834 FileSystem/(55533:56612): ## Acceso Bloque - Archivo: 9-0-23:02:32:360 - Tipo Bloque: DATOS - Bloque File System: 52
-[TRACE] 23:02:32:863 FileSystem/(55533:56612): ## Fin de solicitud - Archivo: 9-0-23:02:32:360
-[TRACE] 23:02:33:949 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:33:949 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:33:949 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:33:950 FileSystem/(55533:56632): bloques necesarios: 4
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): Cant de bloques libres: 147
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): ts: 23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): timestamp: 23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): ## Bloque asignado: 53 - Archivo: 17-0-23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): ## Bloque asignado: 54 - Archivo: 17-0-23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): ## Bloque asignado: 55 - Archivo: 17-0-23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): ## Bloque asignado: 56 - Archivo: 17-0-23:02:33:951
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): Cant de bloques libres: 143
-[TRACE] 23:02:33:951 FileSystem/(55533:56632): Bloques reservados: 4 - Bloques libres: 143
-[INFO] 23:02:33:951 FileSystem/(55533:56632): ## Archivo Creado: 17-0-23:02:33:951 - Tama√±o: 65
-[INFO] 23:02:33:951 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: INDICE - Bloque File System: 53
-[INFO] 23:02:33:978 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: INDICE - Bloque File System: 53
-[INFO] 23:02:34:004 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: INDICE - Bloque File System: 53
-[INFO] 23:02:34:030 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: DATOS - Bloque File System: 54
-[INFO] 23:02:34:057 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: DATOS - Bloque File System: 55
-[INFO] 23:02:34:087 FileSystem/(55533:56632): ## Acceso Bloque - Archivo: 17-0-23:02:33:951 - Tipo Bloque: DATOS - Bloque File System: 56
-[TRACE] 23:02:34:117 FileSystem/(55533:56632): ## Fin de solicitud - Archivo: 17-0-23:02:33:951
-[TRACE] 23:02:45:438 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:45:438 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:45:438 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): bloques necesarios: 10
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): Cant de bloques libres: 143
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ts: 23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): timestamp: 23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 57 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 58 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 59 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 60 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 61 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 62 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 63 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 64 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 65 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): ## Bloque asignado: 66 - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): Cant de bloques libres: 133
-[TRACE] 23:02:45:439 FileSystem/(55533:56795): Bloques reservados: 10 - Bloques libres: 133
-[INFO] 23:02:45:439 FileSystem/(55533:56795): ## Archivo Creado: 5-0-23:02:45:439 - Tama√±o: 257
-[INFO] 23:02:45:439 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:466 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:491 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:524 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:557 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:587 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:621 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:649 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:674 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: INDICE - Bloque File System: 57
-[INFO] 23:02:45:700 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 58
-[INFO] 23:02:45:729 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 59
-[INFO] 23:02:45:757 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 60
-[INFO] 23:02:45:795 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 61
-[INFO] 23:02:45:826 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 62
-[INFO] 23:02:45:858 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 63
-[INFO] 23:02:45:884 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 64
-[INFO] 23:02:45:909 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 65
-[INFO] 23:02:45:935 FileSystem/(55533:56795): ## Acceso Bloque - Archivo: 5-0-23:02:45:439 - Tipo Bloque: DATOS - Bloque File System: 66
-[TRACE] 23:02:45:960 FileSystem/(55533:56795): ## Fin de solicitud - Archivo: 5-0-23:02:45:439
-[TRACE] 23:02:46:265 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:46:265 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:46:265 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:46:267 FileSystem/(55533:56800): bloques necesarios: 10
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): Cant de bloques libres: 133
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ts: 23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): timestamp: 23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 67 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 68 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 69 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 70 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 71 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 72 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 73 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 74 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 75 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): ## Bloque asignado: 76 - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): Cant de bloques libres: 123
-[TRACE] 23:02:46:268 FileSystem/(55533:56800): Bloques reservados: 10 - Bloques libres: 123
-[INFO] 23:02:46:268 FileSystem/(55533:56800): ## Archivo Creado: 10-0-23:02:46:268 - Tama√±o: 257
-[INFO] 23:02:46:268 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:294 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:322 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:350 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:376 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:402 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:427 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:458 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:485 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: INDICE - Bloque File System: 67
-[INFO] 23:02:46:514 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 68
-[INFO] 23:02:46:540 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 69
-[INFO] 23:02:46:566 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 70
-[INFO] 23:02:46:592 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 71
-[INFO] 23:02:46:618 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 72
-[INFO] 23:02:46:643 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 73
-[INFO] 23:02:46:671 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 74
-[INFO] 23:02:46:702 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 75
-[INFO] 23:02:46:739 FileSystem/(55533:56800): ## Acceso Bloque - Archivo: 10-0-23:02:46:268 - Tipo Bloque: DATOS - Bloque File System: 76
-[TRACE] 23:02:46:771 FileSystem/(55533:56800): ## Fin de solicitud - Archivo: 10-0-23:02:46:268
-[TRACE] 23:02:55:508 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:02:55:508 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:02:55:508 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): bloques necesarios: 10
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): Cant de bloques libres: 123
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ts: 23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): timestamp: 23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 77 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 78 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 79 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 80 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 81 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 82 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 83 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 84 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 85 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): ## Bloque asignado: 86 - Archivo: 11-0-23:02:55:509
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): Cant de bloques libres: 113
-[TRACE] 23:02:55:509 FileSystem/(55533:56914): Bloques reservados: 10 - Bloques libres: 113
-[INFO] 23:02:55:509 FileSystem/(55533:56914): ## Archivo Creado: 11-0-23:02:55:509 - Tama√±o: 257
-[INFO] 23:02:55:510 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:535 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:561 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:587 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:624 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:653 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:683 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:708 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:734 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: INDICE - Bloque File System: 77
-[INFO] 23:02:55:759 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 78
-[INFO] 23:02:55:787 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 79
-[INFO] 23:02:55:821 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 80
-[INFO] 23:02:55:847 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 81
-[INFO] 23:02:55:873 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 82
-[INFO] 23:02:55:900 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 83
-[INFO] 23:02:55:926 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 84
-[INFO] 23:02:55:951 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 85
-[INFO] 23:02:55:976 FileSystem/(55533:56914): ## Acceso Bloque - Archivo: 11-0-23:02:55:509 - Tipo Bloque: DATOS - Bloque File System: 86
-[TRACE] 23:02:56:003 FileSystem/(55533:56914): ## Fin de solicitud - Archivo: 11-0-23:02:55:509
-[TRACE] 23:03:00:453 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:00:455 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:00:455 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): bloques necesarios: 10
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): Cant de bloques libres: 113
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ts: 23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): timestamp: 23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 87 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 88 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 89 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 90 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 91 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 92 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 93 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 94 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 95 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): ## Bloque asignado: 96 - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): Cant de bloques libres: 103
-[TRACE] 23:03:00:456 FileSystem/(55533:56983): Bloques reservados: 10 - Bloques libres: 103
-[INFO] 23:03:00:456 FileSystem/(55533:56983): ## Archivo Creado: 6-0-23:03:00:456 - Tama√±o: 257
-[INFO] 23:03:00:457 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:482 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:511 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:542 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:568 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:594 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:622 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:653 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:683 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: INDICE - Bloque File System: 87
-[INFO] 23:03:00:709 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 88
-[INFO] 23:03:00:736 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 89
-[INFO] 23:03:00:765 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 90
-[INFO] 23:03:00:791 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 91
-[INFO] 23:03:00:818 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 92
-[INFO] 23:03:00:844 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 93
-[INFO] 23:03:00:870 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 94
-[INFO] 23:03:00:896 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 95
-[INFO] 23:03:00:922 FileSystem/(55533:56983): ## Acceso Bloque - Archivo: 6-0-23:03:00:456 - Tipo Bloque: DATOS - Bloque File System: 96
-[TRACE] 23:03:00:947 FileSystem/(55533:56983): ## Fin de solicitud - Archivo: 6-0-23:03:00:456
-[TRACE] 23:03:05:459 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:05:460 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:05:460 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:05:460 FileSystem/(55533:57038): bloques necesarios: 6
-[TRACE] 23:03:05:460 FileSystem/(55533:57038): Cant de bloques libres: 103
-[TRACE] 23:03:05:460 FileSystem/(55533:57038): ts: 23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): timestamp: 23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 97 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 98 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 99 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 100 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 101 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): ## Bloque asignado: 102 - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): Cant de bloques libres: 97
-[TRACE] 23:03:05:461 FileSystem/(55533:57038): Bloques reservados: 6 - Bloques libres: 97
-[INFO] 23:03:05:461 FileSystem/(55533:57038): ## Archivo Creado: 13-0-23:03:05:460 - Tama√±o: 129
-[INFO] 23:03:05:461 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: INDICE - Bloque File System: 97
-[INFO] 23:03:05:486 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: INDICE - Bloque File System: 97
-[INFO] 23:03:05:513 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: INDICE - Bloque File System: 97
-[INFO] 23:03:05:542 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: INDICE - Bloque File System: 97
-[INFO] 23:03:05:573 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: INDICE - Bloque File System: 97
-[INFO] 23:03:05:612 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: DATOS - Bloque File System: 98
-[INFO] 23:03:05:639 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: DATOS - Bloque File System: 99
-[INFO] 23:03:05:675 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: DATOS - Bloque File System: 100
-[INFO] 23:03:05:702 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: DATOS - Bloque File System: 101
-[INFO] 23:03:05:730 FileSystem/(55533:57038): ## Acceso Bloque - Archivo: 13-0-23:03:05:460 - Tipo Bloque: DATOS - Bloque File System: 102
-[TRACE] 23:03:05:757 FileSystem/(55533:57038): ## Fin de solicitud - Archivo: 13-0-23:03:05:460
-[TRACE] 23:03:06:574 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:06:574 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:06:574 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:06:581 FileSystem/(55533:57050): bloques necesarios: 6
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): Cant de bloques libres: 97
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ts: 23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): timestamp: 23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 103 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 104 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 105 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 106 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 107 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): ## Bloque asignado: 108 - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): Cant de bloques libres: 91
-[TRACE] 23:03:06:583 FileSystem/(55533:57050): Bloques reservados: 6 - Bloques libres: 91
-[INFO] 23:03:06:583 FileSystem/(55533:57050): ## Archivo Creado: 23-0-23:03:06:583 - Tama√±o: 129
-[INFO] 23:03:06:583 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: INDICE - Bloque File System: 103
-[INFO] 23:03:06:621 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: INDICE - Bloque File System: 103
-[INFO] 23:03:06:646 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: INDICE - Bloque File System: 103
-[INFO] 23:03:06:673 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: INDICE - Bloque File System: 103
-[INFO] 23:03:06:702 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: INDICE - Bloque File System: 103
-[INFO] 23:03:06:727 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: DATOS - Bloque File System: 104
-[INFO] 23:03:06:759 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: DATOS - Bloque File System: 105
-[INFO] 23:03:06:793 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: DATOS - Bloque File System: 106
-[INFO] 23:03:06:819 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: DATOS - Bloque File System: 107
-[INFO] 23:03:06:844 FileSystem/(55533:57050): ## Acceso Bloque - Archivo: 23-0-23:03:06:583 - Tipo Bloque: DATOS - Bloque File System: 108
-[TRACE] 23:03:06:870 FileSystem/(55533:57050): ## Fin de solicitud - Archivo: 23-0-23:03:06:583
-[TRACE] 23:03:10:380 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:10:380 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:10:380 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:10:381 FileSystem/(55533:57098): bloques necesarios: 6
-[TRACE] 23:03:10:381 FileSystem/(55533:57098): Cant de bloques libres: 91
-[TRACE] 23:03:10:381 FileSystem/(55533:57098): ts: 23:03:10:381
-[TRACE] 23:03:10:381 FileSystem/(55533:57098): timestamp: 23:03:10:381
-[TRACE] 23:03:10:381 FileSystem/(55533:57098): ## Bloque asignado: 109 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:383 FileSystem/(55533:57098): ## Bloque asignado: 110 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:383 FileSystem/(55533:57098): ## Bloque asignado: 111 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:384 FileSystem/(55533:57098): ## Bloque asignado: 112 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:384 FileSystem/(55533:57098): ## Bloque asignado: 113 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:384 FileSystem/(55533:57098): ## Bloque asignado: 114 - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:10:384 FileSystem/(55533:57098): Cant de bloques libres: 85
-[TRACE] 23:03:10:384 FileSystem/(55533:57098): Bloques reservados: 6 - Bloques libres: 85
-[INFO] 23:03:10:384 FileSystem/(55533:57098): ## Archivo Creado: 18-0-23:03:10:381 - Tama√±o: 129
-[INFO] 23:03:10:384 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: INDICE - Bloque File System: 109
-[INFO] 23:03:10:411 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: INDICE - Bloque File System: 109
-[INFO] 23:03:10:439 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: INDICE - Bloque File System: 109
-[INFO] 23:03:10:466 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: INDICE - Bloque File System: 109
-[INFO] 23:03:10:491 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: INDICE - Bloque File System: 109
-[INFO] 23:03:10:520 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: DATOS - Bloque File System: 110
-[INFO] 23:03:10:547 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: DATOS - Bloque File System: 111
-[INFO] 23:03:10:573 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: DATOS - Bloque File System: 112
-[INFO] 23:03:10:600 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: DATOS - Bloque File System: 113
-[INFO] 23:03:10:627 FileSystem/(55533:57098): ## Acceso Bloque - Archivo: 18-0-23:03:10:381 - Tipo Bloque: DATOS - Bloque File System: 114
-[TRACE] 23:03:10:655 FileSystem/(55533:57098): ## Fin de solicitud - Archivo: 18-0-23:03:10:381
-[TRACE] 23:03:18:888 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:18:888 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:18:888 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): bloques necesarios: 10
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): Cant de bloques libres: 85
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ts: 23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): timestamp: 23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 115 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 116 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 117 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 118 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 119 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 120 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 121 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 122 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 123 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): ## Bloque asignado: 124 - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): Cant de bloques libres: 75
-[TRACE] 23:03:18:889 FileSystem/(55533:57208): Bloques reservados: 10 - Bloques libres: 75
-[INFO] 23:03:18:889 FileSystem/(55533:57208): ## Archivo Creado: 24-0-23:03:18:889 - Tama√±o: 257
-[INFO] 23:03:18:889 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:18:915 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:18:942 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:18:972 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:000 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:026 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:052 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:080 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:106 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: INDICE - Bloque File System: 115
-[INFO] 23:03:19:133 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 116
-[INFO] 23:03:19:158 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 117
-[INFO] 23:03:19:188 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 118
-[INFO] 23:03:19:215 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 119
-[INFO] 23:03:19:241 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 120
-[INFO] 23:03:19:271 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 121
-[INFO] 23:03:19:306 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 122
-[INFO] 23:03:19:337 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 123
-[INFO] 23:03:19:364 FileSystem/(55533:57208): ## Acceso Bloque - Archivo: 24-0-23:03:18:889 - Tipo Bloque: DATOS - Bloque File System: 124
-[TRACE] 23:03:19:391 FileSystem/(55533:57208): ## Fin de solicitud - Archivo: 24-0-23:03:18:889
-[TRACE] 23:03:40:133 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:40:133 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:40:134 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): bloques necesarios: 10
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): Cant de bloques libres: 75
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ts: 23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): timestamp: 23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 125 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 126 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 127 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 128 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 129 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 130 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 131 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 132 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 133 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): ## Bloque asignado: 134 - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): Cant de bloques libres: 65
-[TRACE] 23:03:40:135 FileSystem/(55533:57470): Bloques reservados: 10 - Bloques libres: 65
-[INFO] 23:03:40:135 FileSystem/(55533:57470): ## Archivo Creado: 19-0-23:03:40:135 - Tama√±o: 257
-[INFO] 23:03:40:135 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:161 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:190 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:226 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:254 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:284 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:311 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:343 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:370 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: INDICE - Bloque File System: 125
-[INFO] 23:03:40:405 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 126
-[INFO] 23:03:40:436 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 127
-[INFO] 23:03:40:469 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 128
-[INFO] 23:03:40:506 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 129
-[INFO] 23:03:40:562 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 130
-[INFO] 23:03:40:589 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 131
-[INFO] 23:03:40:620 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 132
-[INFO] 23:03:40:697 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 133
-[INFO] 23:03:40:726 FileSystem/(55533:57470): ## Acceso Bloque - Archivo: 19-0-23:03:40:135 - Tipo Bloque: DATOS - Bloque File System: 134
-[TRACE] 23:03:40:753 FileSystem/(55533:57470): ## Fin de solicitud - Archivo: 19-0-23:03:40:135
-[TRACE] 23:03:47:224 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:47:224 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:47:224 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:47:225 FileSystem/(55533:57555): bloques necesarios: 10
-[TRACE] 23:03:47:225 FileSystem/(55533:57555): Cant de bloques libres: 65
-[TRACE] 23:03:47:225 FileSystem/(55533:57555): ts: 23:03:47:225
-[TRACE] 23:03:47:225 FileSystem/(55533:57555): timestamp: 23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 135 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 136 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 137 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 138 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 139 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 140 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 141 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 142 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 143 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): ## Bloque asignado: 144 - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): Cant de bloques libres: 55
-[TRACE] 23:03:47:226 FileSystem/(55533:57555): Bloques reservados: 10 - Bloques libres: 55
-[INFO] 23:03:47:226 FileSystem/(55533:57555): ## Archivo Creado: 25-0-23:03:47:225 - Tama√±o: 257
-[INFO] 23:03:47:226 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:252 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:277 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:305 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:334 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:364 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:390 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:420 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:445 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: INDICE - Bloque File System: 135
-[INFO] 23:03:47:472 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 136
-[INFO] 23:03:47:498 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 137
-[INFO] 23:03:47:523 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 138
-[INFO] 23:03:47:549 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 139
-[INFO] 23:03:47:575 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 140
-[INFO] 23:03:47:604 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 141
-[INFO] 23:03:47:636 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 142
-[INFO] 23:03:47:666 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 143
-[INFO] 23:03:47:703 FileSystem/(55533:57555): ## Acceso Bloque - Archivo: 25-0-23:03:47:225 - Tipo Bloque: DATOS - Bloque File System: 144
-[TRACE] 23:03:47:740 FileSystem/(55533:57555): ## Fin de solicitud - Archivo: 25-0-23:03:47:225
-[TRACE] 23:03:49:221 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:49:221 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): bloques necesarios: 10
-[TRACE] 23:03:49:222 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): Cant de bloques libres: 55
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ts: 23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): timestamp: 23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 145 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 146 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 147 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 148 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 149 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 150 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:222 FileSystem/(55533:57578): ## Bloque asignado: 151 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:223 FileSystem/(55533:57578): ## Bloque asignado: 152 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:223 FileSystem/(55533:57578): ## Bloque asignado: 153 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:223 FileSystem/(55533:57578): ## Bloque asignado: 154 - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:49:223 FileSystem/(55533:57578): Cant de bloques libres: 45
-[TRACE] 23:03:49:225 FileSystem/(55533:57578): Bloques reservados: 10 - Bloques libres: 45
-[INFO] 23:03:49:225 FileSystem/(55533:57578): ## Archivo Creado: 15-0-23:03:49:222 - Tama√±o: 257
-[INFO] 23:03:49:225 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:256 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:287 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:313 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:339 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:364 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:392 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:420 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:453 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: INDICE - Bloque File System: 145
-[INFO] 23:03:49:480 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 146
-[INFO] 23:03:49:509 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 147
-[INFO] 23:03:49:538 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 148
-[INFO] 23:03:49:570 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 149
-[INFO] 23:03:49:601 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 150
-[INFO] 23:03:49:631 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 151
-[INFO] 23:03:49:662 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 152
-[INFO] 23:03:49:690 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 153
-[INFO] 23:03:49:716 FileSystem/(55533:57578): ## Acceso Bloque - Archivo: 15-0-23:03:49:222 - Tipo Bloque: DATOS - Bloque File System: 154
-[TRACE] 23:03:49:743 FileSystem/(55533:57578): ## Fin de solicitud - Archivo: 15-0-23:03:49:222
-[TRACE] 23:03:57:868 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:57:868 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:57:868 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:57:869 FileSystem/(55533:57683): bloques necesarios: 10
-[TRACE] 23:03:57:869 FileSystem/(55533:57683): Cant de bloques libres: 45
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ts: 23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): timestamp: 23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 155 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 156 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 157 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 158 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 159 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 160 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 161 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 162 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 163 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): ## Bloque asignado: 164 - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): Cant de bloques libres: 35
-[TRACE] 23:03:57:870 FileSystem/(55533:57683): Bloques reservados: 10 - Bloques libres: 35
-[INFO] 23:03:57:870 FileSystem/(55533:57683): ## Archivo Creado: 20-0-23:03:57:870 - Tama√±o: 257
-[INFO] 23:03:57:870 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:57:897 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:57:924 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:57:949 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:57:977 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:58:002 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:58:028 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:58:053 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:58:079 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: INDICE - Bloque File System: 155
-[INFO] 23:03:58:106 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 156
-[INFO] 23:03:58:131 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 157
-[INFO] 23:03:58:187 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 158
-[INFO] 23:03:58:212 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 159
-[INFO] 23:03:58:239 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 160
-[INFO] 23:03:58:265 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 161
-[INFO] 23:03:58:292 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 162
-[INFO] 23:03:58:322 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 163
-[INFO] 23:03:58:347 FileSystem/(55533:57683): ## Acceso Bloque - Archivo: 20-0-23:03:57:870 - Tipo Bloque: DATOS - Bloque File System: 164
-[TRACE] 23:03:58:373 FileSystem/(55533:57683): ## Fin de solicitud - Archivo: 20-0-23:03:57:870
-[TRACE] 23:03:58:888 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:03:58:888 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:03:58:889 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): bloques necesarios: 10
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): Cant de bloques libres: 35
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ts: 23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): timestamp: 23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 165 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 166 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 167 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 168 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 169 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 170 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:890 FileSystem/(55533:57691): ## Bloque asignado: 171 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:891 FileSystem/(55533:57691): ## Bloque asignado: 172 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:891 FileSystem/(55533:57691): ## Bloque asignado: 173 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:891 FileSystem/(55533:57691): ## Bloque asignado: 174 - Archivo: 14-0-23:03:58:890
-[TRACE] 23:03:58:891 FileSystem/(55533:57691): Cant de bloques libres: 25
-[TRACE] 23:03:58:891 FileSystem/(55533:57691): Bloques reservados: 10 - Bloques libres: 25
-[INFO] 23:03:58:891 FileSystem/(55533:57691): ## Archivo Creado: 14-0-23:03:58:890 - Tama√±o: 257
-[INFO] 23:03:58:891 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:58:920 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:58:947 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:58:973 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:58:998 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:59:026 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:59:052 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:59:078 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:59:105 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: INDICE - Bloque File System: 165
-[INFO] 23:03:59:136 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 166
-[INFO] 23:03:59:169 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 167
-[INFO] 23:03:59:198 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 168
-[INFO] 23:03:59:225 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 169
-[INFO] 23:03:59:253 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 170
-[INFO] 23:03:59:283 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 171
-[INFO] 23:03:59:308 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 172
-[INFO] 23:03:59:337 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 173
-[INFO] 23:03:59:369 FileSystem/(55533:57691): ## Acceso Bloque - Archivo: 14-0-23:03:58:890 - Tipo Bloque: DATOS - Bloque File System: 174
-[TRACE] 23:03:59:404 FileSystem/(55533:57691): ## Fin de solicitud - Archivo: 14-0-23:03:58:890
-[TRACE] 23:04:02:387 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:04:02:387 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:04:02:387 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:04:02:387 FileSystem/(55533:57729): bloques necesarios: 10
-[TRACE] 23:04:02:388 FileSystem/(55533:57729): Cant de bloques libres: 25
-[TRACE] 23:04:02:388 FileSystem/(55533:57729): ts: 23:04:02:388
-[TRACE] 23:04:02:388 FileSystem/(55533:57729): timestamp: 23:04:02:388
-[TRACE] 23:04:02:388 FileSystem/(55533:57729): ## Bloque asignado: 175 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:388 FileSystem/(55533:57729): ## Bloque asignado: 176 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 177 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 178 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 179 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 180 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 181 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 182 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 183 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): ## Bloque asignado: 184 - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): Cant de bloques libres: 15
-[TRACE] 23:04:02:389 FileSystem/(55533:57729): Bloques reservados: 10 - Bloques libres: 15
-[INFO] 23:04:02:389 FileSystem/(55533:57729): ## Archivo Creado: 26-0-23:04:02:388 - Tama√±o: 257
-[INFO] 23:04:02:389 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:416 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:445 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:475 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:501 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:526 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:555 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:581 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:609 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: INDICE - Bloque File System: 175
-[INFO] 23:04:02:635 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 176
-[INFO] 23:04:02:661 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 177
-[INFO] 23:04:02:694 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 178
-[INFO] 23:04:02:722 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 179
-[INFO] 23:04:02:747 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 180
-[INFO] 23:04:02:781 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 181
-[INFO] 23:04:02:809 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 182
-[INFO] 23:04:02:836 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 183
-[INFO] 23:04:02:864 FileSystem/(55533:57729): ## Acceso Bloque - Archivo: 26-0-23:04:02:388 - Tipo Bloque: DATOS - Bloque File System: 184
-[TRACE] 23:04:02:893 FileSystem/(55533:57729): ## Fin de solicitud - Archivo: 26-0-23:04:02:388
-[TRACE] 23:04:05:104 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:04:05:104 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:04:05:104 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:04:05:105 FileSystem/(55533:57761): bloques necesarios: 10
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): Cant de bloques libres: 15
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ts: 23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): timestamp: 23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 185 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 186 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 187 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 188 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 189 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 190 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 191 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 192 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 193 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): ## Bloque asignado: 194 - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): Cant de bloques libres: 5
-[TRACE] 23:04:05:106 FileSystem/(55533:57761): Bloques reservados: 10 - Bloques libres: 5
-[INFO] 23:04:05:106 FileSystem/(55533:57761): ## Archivo Creado: 21-0-23:04:05:106 - Tama√±o: 257
-[INFO] 23:04:05:106 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:132 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:160 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:191 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:218 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:245 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:271 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:297 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:346 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: INDICE - Bloque File System: 185
-[INFO] 23:04:05:374 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 186
-[INFO] 23:04:05:401 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 187
-[INFO] 23:04:05:431 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 188
-[INFO] 23:04:05:459 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 189
-[INFO] 23:04:05:488 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 190
-[INFO] 23:04:05:515 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 191
-[INFO] 23:04:05:540 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 192
-[INFO] 23:04:05:570 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 193
-[INFO] 23:04:05:599 FileSystem/(55533:57761): ## Acceso Bloque - Archivo: 21-0-23:04:05:106 - Tipo Bloque: DATOS - Bloque File System: 194
-[TRACE] 23:04:05:638 FileSystem/(55533:57761): ## Fin de solicitud - Archivo: 21-0-23:04:05:106
-[TRACE] 23:04:09:667 FileSystem/(55533:55533): Ya acepte serv
-[INFO] 23:04:09:669 FileSystem/(55533:55533): Se conecto el cliente: Memoria
-
-[TRACE] 23:04:09:669 FileSystem/(55533:55533): Por aceptar serv
-[TRACE] 23:04:09:669 FileSystem/(55533:57815): bloques necesarios: 10
-[TRACE] 23:04:09:669 FileSystem/(55533:57815): Cant de bloques libres: 5
-[ERROR] 23:04:09:669 FileSystem/(55533:57815): No hay espacio suficiente en el filesystem
+[TRACE] 18:54:26:720 FileSystem/(32635:32635): Por aceptar serv
+[ERROR] 18:54:26:723 FileSystem/(32635:32947): CONTENIDO RECIBIDO: @@mA 564ma2:2 IDPE 4iorI0P UMRXco9
+@P‡PPÄPPêÄPÄ`ÄPPÄSi ad taec euo0ÄÄSi ad taec euo0ÄP24:PPPP7PP7PP//amP ˇBpˇˇÄˇˇ¿ @T2CTU
+0A
+[TRACE] 18:54:26:723 FileSystem/(32635:32947): bloques necesarios: 30
+[TRACE] 18:54:26:723 FileSystem/(32635:32947): Cant de bloques libres: 194
+[TRACE] 18:54:26:725 FileSystem/(32635:32947): ts: 18:54:26:725
+[TRACE] 18:54:26:725 FileSystem/(32635:32947): timestamp: 18:54:26:725
+[TRACE] 18:54:26:725 FileSystem/(32635:32947): ## Bloque asignado: 6 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:727 FileSystem/(32635:32947): ## Bloque asignado: 7 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:727 FileSystem/(32635:32947): ## Bloque asignado: 8 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:727 FileSystem/(32635:32947): ## Bloque asignado: 9 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:727 FileSystem/(32635:32947): ## Bloque asignado: 10 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:728 FileSystem/(32635:32947): ## Bloque asignado: 11 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:728 FileSystem/(32635:32947): ## Bloque asignado: 12 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:728 FileSystem/(32635:32947): ## Bloque asignado: 13 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:728 FileSystem/(32635:32947): ## Bloque asignado: 14 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 15 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 16 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 17 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 18 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 19 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 20 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:729 FileSystem/(32635:32947): ## Bloque asignado: 21 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 22 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 23 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 24 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 25 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 26 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 27 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:730 FileSystem/(32635:32947): ## Bloque asignado: 28 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 29 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 30 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 31 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 32 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 33 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 34 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:731 FileSystem/(32635:32947): ## Bloque asignado: 35 - Archivo: 1-0-18:54:26:725
+[TRACE] 18:54:26:732 FileSystem/(32635:32947): Cant de bloques libres: 164
+[TRACE] 18:54:26:732 FileSystem/(32635:32947): Bloques reservados: 30 - Bloques libres: 164
+[INFO] 18:54:26:732 FileSystem/(32635:32947): ## Archivo Creado: 1-0-18:54:26:725 - Tama√±o: 897
+[INFO] 18:54:26:734 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:759 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:784 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:810 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:836 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:861 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:887 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:912 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:937 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:962 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:26:988 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:013 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:038 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:063 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:088 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:114 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:140 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:165 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:190 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:215 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:241 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:266 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:291 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:317 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:342 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:368 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:393 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:419 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:444 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: INDICE - Bloque File System: 6
+[INFO] 18:54:27:469 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 7
+[INFO] 18:54:27:494 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 8
+[INFO] 18:54:27:520 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 9
+[INFO] 18:54:27:545 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 10
+[INFO] 18:54:27:570 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 11
+[INFO] 18:54:27:595 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 12
+[INFO] 18:54:27:621 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 13
+[INFO] 18:54:27:646 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 14
+[INFO] 18:54:27:672 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 15
+[INFO] 18:54:27:699 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 16
+[INFO] 18:54:27:724 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 17
+[INFO] 18:54:27:750 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 18
+[INFO] 18:54:27:775 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 19
+[INFO] 18:54:27:802 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 20
+[INFO] 18:54:27:830 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 21
+[INFO] 18:54:27:856 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 22
+[INFO] 18:54:27:881 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 23
+[INFO] 18:54:27:906 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 24
+[INFO] 18:54:27:931 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 25
+[INFO] 18:54:27:957 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 26
+[INFO] 18:54:27:982 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 27
+[INFO] 18:54:28:007 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 28
+[INFO] 18:54:28:032 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 29
+[INFO] 18:54:28:058 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 30
+[INFO] 18:54:28:083 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 31
+[INFO] 18:54:28:108 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 32
+[INFO] 18:54:28:133 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 33
+[INFO] 18:54:28:159 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 34
+[INFO] 18:54:28:184 FileSystem/(32635:32947): ## Acceso Bloque - Archivo: 1-0-18:54:26:725 - Tipo Bloque: DATOS - Bloque File System: 35
+[TRACE] 18:54:28:209 FileSystem/(32635:32947): ## Fin de solicitud - Archivo: 1-0-18:54:26:725

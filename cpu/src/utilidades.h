@@ -15,7 +15,8 @@
 
 void iniciar_cpu(void);
 int conectarse_a_memoria(void);
-void terminar_ejecucion_a_memoria(void);
+void terminar_ejecucion(int servidor_dispatch, int servidor_interrupt, int socket_memoria);
+void liberar_contexto_proceso(CONTEXTO_CPU *contexto_proceso);
 void recibir_exec(t_log *logger, int socket_cliente, op_code handshake);
 void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake);
 CONTEXTO_CPU* solicitar_contexto_ejecucion(int tid, int pid);

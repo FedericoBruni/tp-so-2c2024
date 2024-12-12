@@ -11,16 +11,25 @@ extern TCB* pcb_en_ejecucion;
 extern sem_t sem_fin_q;
 extern sem_t sem_interrupt_recibida;
 extern sem_t sem_ctx_actualizado;
+char* instruccion;
+extern bool fin_ciclo;
+
+extern int cliente_fd_interrupt;
 
 void ciclo_de_instruccion() {
     while (true) {
+        if(instruccion){
+            free(instruccion);
+        }
         sem_wait(&sem_ejecucion);
-        char* instruccion = fetch();
+        if(fin_ciclo) return;
+        instruccion = fetch();
         log_warning(logger, "<TID:%i> <PID: %d>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid,contexto_en_ejecucion->contexto_hilo->pid ,instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
         if(instruccion){
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
                 suspender_proceso();
+                //free(instruccion);
                 continue;
             }
         }else{
@@ -31,10 +40,18 @@ void ciclo_de_instruccion() {
 
         //execute();
    
-        if (check_interrupt()) desalojar_por_quantum();
+        if (check_interrupt()){ 
+            //free(instruccion);
+            desalojar_por_quantum();
+        }
         else sem_post(&sem_ejecucion);
+        log_error(logger,"SALGO DE SEM POST EJEC");
+
+        //free(instruccion);
+
         
     }
+    
 }
 
 // En este momento, se deberá chequear si el Kernel nos envió una interrupción al TID 
@@ -92,7 +109,6 @@ char* recibir_prox_instruccion(){
             free(buffer->stream);
             free(buffer);
             return rta;
-            break;
         case EOF_INSTRUCCION:
             log_info(logger,"Fin del archivo");
             return NULL;
@@ -130,17 +146,23 @@ char* decode(char* instruccion) {
         char* registro = lista[1];
         int valor = atoi(corregir_linea(lista[2]));
         SET(registro,valor);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "READ_MEM")){
         char* registroDatos = lista[1];
         char* registroDireccion = corregir_linea(lista[2]);
         read_mem(registroDatos, registroDireccion);
+        string_array_destroy(lista);
         return "OK";
         
     } else if (string_equals_ignore_case(corregir_linea(instr), "WRITE_MEM")){
         char* registroDatos = lista[1];
         char* registroDireccion = corregir_linea(lista[2]);
-        if (write_mem(registroDatos, registroDireccion)) return "OK";
+        if (write_mem(registroDatos, registroDireccion)) {
+            string_array_destroy(lista);
+            return "OK";
+        }
+        string_array_destroy(lista);
         return "SUSPPROCESO";
         
     } else if (string_equals_ignore_case(corregir_linea(instr), "SUM")){
@@ -151,71 +173,86 @@ char* decode(char* instruccion) {
         //registroOrigen[strlen(registroOrigen)-1] = '\0';
         printf("origen: %s\n",registroOrigen);
         SUM(registroDestino,registroOrigen);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "SUB")){
         char* registroDestino = lista[1];
         char* registroOrigen = corregir_linea(lista[2]);
         SUB(registroDestino,registroOrigen);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "JNZ")){
         char* registro = lista[1];
         int valor = atoi(corregir_linea(lista[2]));
         JNZ(registro,valor);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "LOG")){
         char* registro = corregir_linea(lista[1]);
         LOG(registro);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "DUMP_MEMORY")){
-        log_error(logger,"entro a dump");
         DUMP_MEMORY(contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
+        string_array_destroy(lista);
         return "OK";
         
     } else if (string_equals_ignore_case(corregir_linea(instr), "IO")){
         int milisegundos = atoi(lista[1]);
         io(milisegundos);
+        string_array_destroy(lista);
         return "SUSPPROCESO";
     } else if (string_equals_ignore_case(corregir_linea(instr), "PROCESS_CREATE")){
         char* archivo = lista[1];
         int tam = atoi(lista[2]);
         int prio = atoi(lista[3]);
         PROCESS_CREATE(archivo,tam,prio);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_CREATE")){
         char* archivo = lista[1];
         int prio = atoi(lista[2]);
         THREAD_CREATE(archivo,prio);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_JOIN")){
         int tid = atoi(lista[1]);
         char *rta = THREAD_JOIN(tid);
+        string_array_destroy(lista);
         return rta;
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_CANCEL")){
         int tid = atoi(lista[1]);
         THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);
         if(tid == contexto_en_ejecucion->contexto_hilo->tid){
             log_error(logger, "IF");
+            string_array_destroy(lista);
             return "SUSPPROCESO";
         }
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "MUTEX_CREATE")){
         char* recurso = corregir_linea(lista[1]);
         MUTEX_CREATE(recurso);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "MUTEX_LOCK")){
         char* recurso = corregir_linea(lista[1]);
         char* rta = MUTEX_LOCK(recurso);
+        string_array_destroy(lista);
         return rta;
     } else if (string_equals_ignore_case(corregir_linea(instr), "MUTEX_UNLOCK")){
         char* recurso = corregir_linea(lista[1]);
         MUTEX_UNLOCK(recurso);
+        string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_EXIT")){
         log_trace(logger, "THEXIT");
+        string_array_destroy(lista);
         THREAD_EXIT();
         return "SUSPPROCESO";
     } else if (string_equals_ignore_case(corregir_linea(instr), "PROCESS_EXIT")){
         PROCESS_EXIT();
+        string_array_destroy(lista);
         return "SUSPPROCESO";
     }
     imprimir_ctx_cpu(contexto_en_ejecucion);

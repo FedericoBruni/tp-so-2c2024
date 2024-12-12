@@ -101,4 +101,4 @@ cpu:
 memcheck:
 	rm -f logCpu.log
 	make
-	valgrind --leak-check=full --track-origins=yes ./bin/cpu
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/cpu

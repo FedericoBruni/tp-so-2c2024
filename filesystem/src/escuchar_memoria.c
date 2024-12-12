@@ -18,6 +18,7 @@ void escuchar_mensajes_memoria(int cliente_fd)
             int pid = extraer_int_del_buffer(buffer_dump);
             int tamanio = extraer_int_del_buffer(buffer_dump);
             char *contenido = extraer_string_del_buffer(buffer_dump);
+            log_error(logger,"CONTENIDO RECIBIDO: %s",contenido);
             int result_dump = MEM_DUMPEADA;
             if (!crear_archivo(pid,tid,tamanio,contenido)) result_dump = MEM_DUMP_ERROR;
             

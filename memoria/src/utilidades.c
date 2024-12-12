@@ -235,6 +235,7 @@ void actualizar_contexto(int cliente_fd_dispatch){
     log_trace(logger,"CONTEXTOS PROCESO EN MEMORIA");
     if(contextos_procesos == NULL) log_error(logger,"NULL");
     imprimir_contextos_procesos();
+    imprimir_memoria_usuario();
     
     CONTEXTO_PROCESO *proceso_actual = list_find(contextos_procesos, _es_proceso);
     log_error(logger, "b");
@@ -326,7 +327,46 @@ int obtener_tamano(char** lista) {
 
 void cargar_memoria_usuario() {
     memoria_usuario = malloc(sizeof(MEMORIA_USUARIO));
-    memoria_usuario->memoria_usuario = malloc(4*tam_memoria);
+    memoria_usuario->memoria_usuario = calloc(tam_memoria,1);
+
+
+
+    int error = 0;
+    for (size_t i = 0; i < tam_memoria; i++) {
+        if (((unsigned char*)memoria_usuario->memoria_usuario)[i] != 0) {
+            error = 1;
+            break;
+        }
+    }
+
+    if (error) {
+        log_error(logger, "Error al inicializar la memoria con calloc\n");
+    } else {
+        printf("Memoria correctamente inicializada\n");
+    }
+
+    // int *memoria = (int*)memoria_usuario->memoria_usuario;
+
+    // void* mem = memoria_usuario->memoria_usuario;
+    // char *contenido = malloc(tam_memoria);
+    // contenido[0]= '\0';
+    // //printf("caracteres: \n");
+    // for(int i = 0; i< tam_memoria;i++){
+    //     int valor = memoria[i];
+    //     char caracter = (char)valor;
+    //     if (valor != 0) {
+    //         //log_trace(logger,"asd\n");
+    //         memoria[i] = 0;
+    //         caracter = (char)0;
+    //     }
+    //     strncat(contenido,&caracter,1);
+    //     //log_trace(logger,"<Valor: %i>, <Caracter:%c> - ", valor, caracter);
+    // }
+    // //printf("\n");
+
+    // log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
+
+
     memoria_usuario->particiones = list_create();
     if (string_equals_ignore_case(esquema, "FIJAS")) {
         
@@ -626,13 +666,18 @@ void agrupar_particiones(Particion* particion) {
             free(particionAnterior);
         }
     } else if(indice == 0){
-        Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
-        if(particionSiguiente->estaOcupado == 0){
-            log_error(logger, "Antes de compactar siguiente");
-            imprimir_memoria_usuario();
-            particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
-            list_remove_element(memoria_usuario->particiones, particionSiguiente);
-            free(particionSiguiente);
+        if(list_size(memoria_usuario->particiones)==1){
+            Particion *p = list_get(memoria_usuario->particiones,0);
+            p->estaOcupado = 0;
+        }else{
+            Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
+            if(particionSiguiente->estaOcupado == 0){
+                log_error(logger, "Antes de compactar siguiente");
+                imprimir_memoria_usuario();
+                particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
+                list_remove_element(memoria_usuario->particiones, particionSiguiente);
+                free(particionSiguiente);
+            }
         }
     }else if(indice == list_size(memoria_usuario->particiones) - 1 ){
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
@@ -803,12 +848,27 @@ void enviar_lectura(int dato) {
 
 int dump_memory(int tid,  int pid){
     CONTEXTO_CPU *contexto_a_dumpear = buscar_contextos(tid,pid);
+    int *memoria = (int*)memoria_usuario->memoria_usuario;
 
-
+   //------------------------ESCRIBIR EQUIVALENTE HEXAS DE MEMORIA A FS--------------------
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
-    char *contenido = malloc(tamanio+1);
-    memcpy(contenido,memoria_usuario->memoria_usuario + contexto_a_dumpear->contexto_proceso->BASE,tamanio);
-    contenido[tamanio] = '\0';
+    int base = contexto_a_dumpear->contexto_proceso->BASE;
+    int limite =contexto_a_dumpear->contexto_proceso->LIMITE;
+    log_trace(logger,"BASE DEL PROCESO: %d",base);
+    log_trace(logger,"LIMITE DEL PROCESO: %d",limite);
+    char *contenido = malloc(limite-base+1);
+    contenido[0]= '\0';
+    for(int i = base; i<limite;i++){
+        int valor = memoria[i];
+        char caracter = (char)valor;
+        strncat(contenido,&caracter,1);
+    }
+
+
+    log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
+
+
+
     
     int fd_filesystem = conectarse_a_filesystem();
     t_buffer *buffer = crear_buffer();
@@ -946,3 +1006,31 @@ void test(){
 
 
 
+       //------------ESCRIBIR DE INT A HEXA Y DE HEXA A CHAR------------------ TODO
+    // int *memoria = (int*)memoria_usuario->memoria_usuario;
+    // int base = contexto_a_dumpear->contexto_proceso->BASE;
+    // int limite =contexto_a_dumpear->contexto_proceso->LIMITE;
+    // char *contenido = malloc((limite-base +1)*2+1);
+    // contenido[0]= '\0';
+    // for(int i = base; i<=limite;i++){
+    //     int valor = memoria[i];
+
+    //     char hex_buff[5];
+    //     snprintf(hex_buff,sizeof(hex_buff),"%02X",valor);
+
+    //     strncat(contenido,hex_buff,4);
+
+    // }
+
+
+    
+    //-------------------------------ESCRIBIR TAL CUAL EL NUM-----------------------------------------
+    // int* datos = (int*)(memoria_usuario->memoria_usuario + contexto_a_dumpear->contexto_proceso->BASE);
+    // char *contenido = malloc(tamanio * 12);
+    // char buffertxt[12];
+    // contenido[0] = '\0';
+
+    // for(int i = 0; i<tamanio/sizeof(int);i++){
+    //     sprintf(buffertxt,"%08X",datos[i]);
+    //     strcat(contenido,buffertxt);
+    // }
