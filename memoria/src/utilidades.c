@@ -234,8 +234,8 @@ void actualizar_contexto(int cliente_fd_dispatch){
     
     log_trace(logger,"CONTEXTOS PROCESO EN MEMORIA");
     if(contextos_procesos == NULL) log_error(logger,"NULL");
-    imprimir_contextos_procesos();
-    imprimir_memoria_usuario();
+    //imprimir_contextos_procesos();
+    //imprimir_memoria_usuario();
     
     CONTEXTO_PROCESO *proceso_actual = list_find(contextos_procesos, _es_proceso);
     log_error(logger, "b");
@@ -652,14 +652,14 @@ void agrupar_particiones(Particion* particion) {
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice - 1);
         if(particionSiguiente->estaOcupado == 0){
             log_error(logger, "Antes de compactar siguiente");
-            imprimir_memoria_usuario();
+            //imprimir_memoria_usuario();
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
         }
         if(particionAnterior->estaOcupado == 0){
             log_error(logger, "Antes de compactar anterior");
-            imprimir_memoria_usuario();
+            //imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
@@ -673,7 +673,7 @@ void agrupar_particiones(Particion* particion) {
             Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
             if(particionSiguiente->estaOcupado == 0){
                 log_error(logger, "Antes de compactar siguiente");
-                imprimir_memoria_usuario();
+                //imprimir_memoria_usuario();
                 particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
                 list_remove_element(memoria_usuario->particiones, particionSiguiente);
                 free(particionSiguiente);
@@ -683,7 +683,7 @@ void agrupar_particiones(Particion* particion) {
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
         if(particionAnterior->estaOcupado == 0){
             log_error(logger, "Antes de compactar anterior");
-            imprimir_memoria_usuario();
+            //imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
             list_remove_element(memoria_usuario->particiones, particionAnterior);
@@ -691,7 +691,7 @@ void agrupar_particiones(Particion* particion) {
         }
     }
     log_error(logger, "Después de compactar");
-    imprimir_memoria_usuario();
+    //imprimir_memoria_usuario();
     //if(particionSiguiente)
     
 }
@@ -871,6 +871,10 @@ void enviar_lectura(int dato) {
 int dump_memory(int tid,  int pid){
     CONTEXTO_CPU *contexto_a_dumpear = buscar_contextos(tid,pid);
     int *memoria = (int*)memoria_usuario->memoria_usuario;
+    t_buffer *buffer = crear_buffer();
+    cargar_int_al_buffer(buffer,tid);
+    cargar_int_al_buffer(buffer,pid);
+    
 
    //------------------------ESCRIBIR EQUIVALENTE HEXAS DE MEMORIA A FS--------------------
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
@@ -878,26 +882,33 @@ int dump_memory(int tid,  int pid){
     int limite =contexto_a_dumpear->contexto_proceso->LIMITE;
     log_trace(logger,"BASE DEL PROCESO: %d",base);
     log_trace(logger,"LIMITE DEL PROCESO: %d",limite);
-    char *contenido = malloc(limite-base);
+    char *contenido = malloc(limite-base+1);
     contenido[0]= '\0';
-    for(int i = base; i<=limite;i++){
-        int valor = leer_memoria(i);
-        char caracter = (char)valor;
-        strncat(contenido,&caracter,1);
+    //int arrayValores[tamanio];
+    cargar_int_al_buffer(buffer,tamanio);
+    //int valor = leer_memoria(base);
+     for(int i = base; i<=limite;i+=4){
+        cargar_int_al_buffer(buffer,leer_memoria(i));
     }
+    
+    // for(int i = base; i<=limite;i += 4 ){
+    //     int valor = leer_memoria(i);
+        
+
+    //     char caracter = (char)valor;
+        
+
+    //     strncat(contenido,&caracter,1);
+    // }
 
 
-    log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
+    //log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
 
 
 
     
     int fd_filesystem = conectarse_a_filesystem();
-    t_buffer *buffer = crear_buffer();
-    cargar_int_al_buffer(buffer,tid);
-    cargar_int_al_buffer(buffer,pid);
-    cargar_int_al_buffer(buffer,tamanio);
-    cargar_string_al_buffer(buffer,contenido);
+    //cargar_int_al_buffer(buffer,valor);
     log_info(logger,"## Memory Dump solicitado - (PID:TID) - (%d:%d)",pid,tid);
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, fd_filesystem);

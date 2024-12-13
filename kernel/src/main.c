@@ -1,4 +1,5 @@
 #include "utilidades.h"
+#include <signal.h>
 
 extern t_log *logger;
 int fd_memoria;
@@ -10,10 +11,14 @@ bool hilo_fin_proc_muerto;
 int fd_cpu_dispatch;
 int fd_cpu_interrupt;
 extern sem_t sem_syscall_fin;
+pthread_t hilo_io;
+
+
 int main(int argc, char *argv[])
 {
 
     iniciar_kernel();
+    signal(SIGINT, terminar_ejecucion);
 
     if (argc < 3)
     {
@@ -73,15 +78,19 @@ int main(int argc, char *argv[])
     // PROCESS_CREATE("archivo4", 50, 6);
     // PROCESS_CREATE("archivo4", 50, 6);
 
+
+
+    //pthread_t hilo_io;
+    pthread_create(&hilo_io, NULL, (void *)ejecucion_io, NULL);
+    pthread_detach(hilo_io);
+
     pthread_t hilo_planificador_corto_plazo;
     pthread_create(&hilo_planificador_corto_plazo, NULL, (void *)planificador_corto_plazo, NULL);
-    pthread_detach(hilo_planificador_corto_plazo);
+    pthread_join(hilo_planificador_corto_plazo,NULL);
 
-    pthread_t hilo_io;
-    pthread_create(&hilo_io, NULL, (void *)ejecucion_io, NULL);
-    pthread_join(hilo_io, NULL);
 
-    terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
+
+    //terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
 
     return 0;
 }

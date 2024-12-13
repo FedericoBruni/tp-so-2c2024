@@ -15,7 +15,6 @@ extern pthread_mutex_t mutex_new;
 extern pthread_mutex_t mutex_exit;
 extern pthread_mutex_t mutex_ready;
 extern sem_t sem_hay_memoria;
-extern TCB* tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
@@ -27,6 +26,7 @@ extern sem_t sem_puede_ejecutar;
 extern char *algoritmo_planificacion;
 extern pthread_mutex_t mutex_fd_memoria;
 bool hay_mem = true;
+extern bool fin_ciclo;
 
 void creacion_de_procesos(void)
 {
@@ -35,6 +35,7 @@ void creacion_de_procesos(void)
     {
         
         sem_wait(&sem_hay_new);
+        if(fin_ciclo) return;
         log_warning(logger, "Cola new");
         imprimir_cola_new(cola_new, mutex_new);
         
@@ -73,6 +74,7 @@ void finalizacion_de_procesos(void)
     {
         log_error(logger,"ANTES DE FINALIZAR PROC");
         sem_wait(&sem_finalizar_proceso);
+        if(fin_ciclo) return;
         log_error(logger,"dsps DE FINALIZAR PROC");
         //pthread_mutex_lock(&mutex_exit);
         PCB *pcb = desencolar(cola_fin_pcb,mutex_exit);
@@ -107,6 +109,7 @@ void creacion_de_hilos(void){
     while(true){
         
         sem_wait(&sem_crear_hilo);
+        if(fin_ciclo) return;
         TCB* tcb = desencolar(cola_new_hilo,mutex_new);
         //mandar por buffer a memoria
         pthread_mutex_lock(&mutex_fd_memoria);
@@ -145,6 +148,7 @@ void finalizacion_de_hilos(void)
     while (true)
     {
         sem_wait(&sem_finalizar_hilo); 
+        if(fin_ciclo) return;
         log_info(logger,"entro a fin_hilo");
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
         // de test:

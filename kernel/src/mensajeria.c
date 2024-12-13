@@ -100,7 +100,8 @@ int enviar_exec_a_cpu(int tid, int pid){
     enviar_paquete(paquete, fd_cpu_dispatch);
     
     eliminar_paquete(paquete);
-    switch(recibir_operacion(fd_cpu_dispatch)){ // se recibe con un Motivo por el q fue desalojado
+    int cod_op = recibir_operacion(fd_cpu_dispatch);
+    switch(cod_op){ // se recibe con un Motivo por el q fue desalojado
         case EXEC_RECIBIDO:
             log_trace(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
             sem_post(&sem_cpu_ejecutando);
@@ -111,8 +112,9 @@ int enviar_exec_a_cpu(int tid, int pid){
             break;    
         case SUSP_PROCESO: // este case estaba en esperar_respuesta();
             sem_post(&sem_puede_ejecutar);
+            break;
         default:
-            log_error(logger, "default");
+            log_error(logger, "default, cod_op: %i", cod_op);
             return 0;
     }
 }
@@ -252,11 +254,14 @@ int esperar_respuesta(){
             sem_wait(&sem_syscall_fin);
             int res_dump = MEM_DUMPEADA;
             if (!rta) {
-                res_dump = FIN_PROCESO;
+                res_dump = MEM_DUMP_ERROR;
                 PROCESS_EXIT(tcb_en_ejecucion);
                 log_trace(logger, "Dump memory error -> Process exit");
                 sem_wait(&sem_syscall_fin);
                 log_trace(logger, "Dump memory error -> Process exit (dsp sem_wait)");
+                send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
+                sem_post(&sem_puede_ejecutar);
+                return;
             }
             send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
             break;

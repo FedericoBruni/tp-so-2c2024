@@ -15,9 +15,9 @@ t_queue *cola_ready;
 t_queue *cola_blocked;
 t_queue *cola_exit;
 t_queue *cola_finalizacion;
-t_queue *cola_new_hilo;
 t_queue *cola_fin_pcb;
 t_queue *cola_io;
+t_queue *cola_new_hilo;
 TCB *tcb_en_ejecucion;
 int autoincremental_pcb = 0;
 pthread_mutex_t mutex_new;
@@ -41,13 +41,15 @@ sem_t sem_io;
 sem_t sem_exec_recibido;
 sem_t sem_io_iniciado;
 PCB *pcb_en_ejecucion;
-TCB *tcb_a_crear = NULL;
 t_list* colas_prioridades;
 t_list* mutex_sistema;
 TCB *tcb_anterior;
 extern char* estado_lock;
-
-
+extern int fd_cpu_dispatch;
+extern int fd_memoria;
+extern int fd_cpu_interrupt;
+extern pthread_t hilo_io;
+bool fin_ciclo=false;
 
 
 void iniciar_kernel(void)
@@ -63,7 +65,6 @@ void iniciar_kernel(void)
     log_level = config_get_string_value(config, "LOG_LEVEL");
     logger = iniciar_logger("logKernel.log", "Kernel", log_level_from_string(log_level));
     cola_new = queue_create();
-    cola_new_hilo = queue_create();
     cola_ready = queue_create();
     cola_blocked = queue_create();
     cola_exit = queue_create();
@@ -71,6 +72,7 @@ void iniciar_kernel(void)
     cola_io = queue_create();
     cola_finalizacion = queue_create();
     colas_prioridades = list_create();
+    cola_new_hilo = queue_create();
     mutex_sistema = list_create();
     iniciar_semaforos();
 }
@@ -131,30 +133,51 @@ int conectarse_a_memoria(void)
     return crear_conexion(ip_memoria, puerto_memoria, logger);
 }
 
-void terminar_ejecucion(int dispatch, int memoria, int interrupt)
+void terminar_ejecucion()
 {
-    close(dispatch);
-    close(memoria);
-    close(interrupt);
+    close(fd_cpu_dispatch);
+    close(fd_memoria);
+    close(fd_cpu_interrupt);
+
     queue_destroy_and_destroy_elements(cola_new, liberar_pcb);
-    // if(cola_new != NULL){
-    //     log_error(logger,"Cola NEW no se borro correctamente");
-    // }
     queue_destroy_and_destroy_elements(cola_ready, liberar_tcb);
-    // if(cola_ready != NULL){
-    //     log_error(logger,"Cola READY no se borro correctamente");
-    // }
     queue_destroy_and_destroy_elements(cola_blocked, liberar_tcb);
-    // if(cola_blocked != NULL){
-    //     log_error(logger,"Cola BLOCKED no se borro correctamente");
-    // }
     queue_destroy_and_destroy_elements(cola_exit, liberar_tcb);
-    // if(cola_exit != NULL){
-    //     log_error(logger,"Cola EXIT no se borro correctamente");
-    // } HAY Q ARREGLAR LAS FUNCIONES DE DESTRUCCION
+    queue_destroy_and_destroy_elements(cola_finalizacion, liberar_tcb);
+    queue_destroy_and_destroy_elements(cola_fin_pcb, liberar_pcb);
+    queue_destroy_and_destroy_elements(cola_new_hilo,liberar_tcb);
+
+    if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
+        for(int i = 0; i < list_size(colas_prioridades);i++){
+            COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
+            queue_destroy_and_destroy_elements(cola_prioridad->cola_prioridad,liberar_tcb);
+            free(cola_prioridad);
+            
+        }
+        list_destroy(colas_prioridades);
+    }
+    for (int i = 0; i < list_size(mutex_sistema); i++) {
+        MUTEX *mutex = list_get(mutex_sistema, i);
+        queue_destroy_and_destroy_elements(mutex->cola_bloqueados, liberar_tcb);
+        free(mutex->recurso);
+        free(mutex);
+    }
+    list_destroy(mutex_sistema);
+
+    while (!queue_is_empty(cola_io)) {
+        IOStruct *structIo = queue_pop(cola_io);
+        liberar_tcb(structIo->tcb);
+        free(structIo);
+    }
+    queue_destroy(cola_io);
+    if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
+    //if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
+    
     log_info(logger, "Finalizando ejecucion de KERNEL");
-    log_destroy(logger);
     config_destroy(config);
+    //pthread_cancel(hilo_io);
+    sleep(1);
+    log_destroy(logger);
     exit(EXIT_SUCCESS);
 }
 

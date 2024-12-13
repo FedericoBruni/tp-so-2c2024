@@ -30,7 +30,7 @@ void iniciar_kernel(void);
 int conectarse_a_cpu_interrupt(void);
 int conectarse_a_cpu_dispatch(void);
 int conectarse_a_memoria(void);
-void terminar_ejecucion(int dispatch, int memoria, int interrupt);
+void terminar_ejecucion();
 void mover_tcbs_exit(PCB *pcb);
 void encolar(t_queue* cola, void* elemento, pthread_mutex_t mutex);
 void* desencolar(t_queue* cola, pthread_mutex_t mutex);

@@ -17,6 +17,7 @@ extern sem_t sem_dump_mem;
 extern char* rta_mutex_lock;
 extern char* rta_hilo_join;
 extern sem_t sem_ctx_actualizado;
+extern char* rta_mem_dump;
 
 
 
@@ -127,12 +128,14 @@ void LOG(char *registro){
     contexto_en_ejecucion->contexto_hilo->Registros->PC++;
 }
 
-void DUMP_MEMORY(int pid, int tid) {
+char *DUMP_MEMORY(int pid, int tid) {
+    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     enviar_dump_memory(pid, tid);
     sem_wait(&sem_dump_mem);
-    contexto_en_ejecucion->contexto_hilo->Registros->PC++;
+    return rta_mem_dump;
+    
     // esperar rta?extern sem_t sem_mutex_lockeado;
 }
 

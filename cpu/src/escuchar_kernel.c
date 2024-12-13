@@ -17,6 +17,7 @@ extern sem_t sem_dump_mem;
 extern sem_t sem_ejecucion;
 char* rta_mutex_lock;
 char *rta_hilo_join;
+char *rta_mem_dump;
 extern bool flag_interrupt;
 extern pthread_mutex_t mutex_interrupt;
 extern CONTEXTO_CPU *contexto_en_ejecucion;
@@ -85,10 +86,13 @@ void escuchar_mensajes_kernel_dispatch(void)
 			sem_post(&sem_io_solicitada);
 			break;
 		case MEM_DUMPEADA:
+			rta_mem_dump = "OK";
 			sem_post(&sem_dump_mem);
 			break;	
 		case MEM_DUMP_ERROR:
 			// en realidad nunca llega creo, pq le llega FIN_PROCESO
+			rta_mem_dump = "DUMP_ERROR";
+			sem_post(&sem_dump_mem);
 			break;
 		case -1:
 			log_error(logger, "Dispatch desconectado\n");

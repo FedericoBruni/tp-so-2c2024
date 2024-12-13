@@ -16,7 +16,6 @@ extern pthread_mutex_t mutex_ready;
 extern pthread_mutex_t mutex_blocked;
 extern sem_t sem_hay_ready;
 extern PCB *pcb_en_ejecucion;
-extern TCB *tcb_a_crear;
 extern sem_t sem_crear_hilo;
 extern sem_t sem_finalizar_proceso;
 extern sem_t sem_finalizar_hilo;
@@ -29,6 +28,7 @@ extern sem_t sem_io;
 extern pthread_mutex_t mutex_io;
 extern sem_t sem_io_iniciado;
 extern char* algoritmo_planificacion;
+extern bool fin_ciclo;
 
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
@@ -260,8 +260,12 @@ void IO(int tiempo){
 
 
 void ejecucion_io(){
-    while (true) {
+    while (!fin_ciclo) {
         sem_wait(&sem_io); 
+        if(fin_ciclo){
+            log_trace(logger,"entro a fin ciclo");
+            return;
+        }
         IOStruct *io = desencolar(cola_io,mutex_io);
         log_info(logger,"entro a ejecucion_io");
         log_trace(logger,"Tiempo: %d, TCB: %d",io->tiempo,io->tcb->tid);

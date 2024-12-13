@@ -5,6 +5,7 @@ extern int cliente_fd_dispatch;
 extern t_list *contextos_procesos;
 extern t_list *contextos_hilos;
 extern int retardo_respuesta;
+extern MEMORIA_USUARIO* memoria_usuario;
 
 void escuchar_mensajes_kernel(void)
 {
@@ -30,10 +31,11 @@ void escuchar_mensajes_kernel(void)
                 contexto_proceso->pid = pid;
                 contexto_proceso->BASE = particion->inicio;
                 contexto_proceso->LIMITE = particion->inicio + particion->tamanio - 1;
+                memset(memoria_usuario->memoria_usuario + contexto_proceso->BASE,0,contexto_proceso->LIMITE- contexto_proceso->BASE+1);
                 list_add(contextos_procesos, contexto_proceso);
-                log_trace(logger, "<PID:%i>, <TAMAÑO PROC:%i>, <BASE:%i>, <LIMITE:%i>", pid, tamanio, contexto_proceso->BASE, contexto_proceso->LIMITE);
-                log_warning(logger, "Despues de asignar");
-                imprimir_memoria_usuario();
+                //log_trace(logger, "<PID:%i>, <TAMAÑO PROC:%i>, <BASE:%i>, <LIMITE:%i>", pid, tamanio, contexto_proceso->BASE, contexto_proceso->LIMITE);
+                //log_warning(logger, "Despues de asignar");
+                //imprimir_memoria_usuario();
                 int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
                 send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0);
                 log_info(logger, "## Proceso Creado - PID: %d - Tamaño: %d",pid,particion->tamanio);

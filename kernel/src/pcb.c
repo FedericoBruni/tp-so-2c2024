@@ -27,16 +27,12 @@ void liberar_pcb(void *ptr_pcb)
     PCB *pcb = (PCB *)ptr_pcb;
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
 
-    if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")) { // para prioridades tmb seria?
-        //vaciar_colas_prioridades(pcb->pid);
-    }
-
     //liberar_tcb(list_get(pcb->threads, 0));
-    free(pcb->threads);
+    list_destroy(pcb->threads);
 
 
     //list_destroy_and_destroy_elements(pcb->threads, liberar_tcb); lo saque pq rompe. en el test siempre va a haber un único thread cuando se llame a process exit, el 0
-    free(pcb->tids);
+    list_destroy(pcb->tids);
     free(pcb);
 }
 

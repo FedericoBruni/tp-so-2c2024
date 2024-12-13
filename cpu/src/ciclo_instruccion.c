@@ -32,6 +32,9 @@ void ciclo_de_instruccion() {
                 //free(instruccion);
                 continue;
             }
+            if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar, "DUMP_ERROR")){
+                continue;
+            }
         }else{
             printf("ENTRO A FIN DE ARCHIVO\n");
             enviar_fin_de_proceso();
@@ -77,11 +80,13 @@ void enviar_fin_de_proceso(){
     int cod_op = FIN_DE_ARCHIVO;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
+
 void suspender_proceso(){
     log_warning(logger, "SUSPENDER PROCESO");
     int cod_op = SUSP_PROCESO; //SUSP_PROCESO;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
+
 void desalojar_por_quantum(){
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
@@ -193,9 +198,10 @@ char* decode(char* instruccion) {
         string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "DUMP_MEMORY")){
-        DUMP_MEMORY(contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
+        char *rta =DUMP_MEMORY(contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
         string_array_destroy(lista);
-        return "OK";
+        
+        return rta;
         
     } else if (string_equals_ignore_case(corregir_linea(instr), "IO")){
         int milisegundos = atoi(lista[1]);

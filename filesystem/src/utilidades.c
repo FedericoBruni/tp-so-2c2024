@@ -201,8 +201,8 @@ char *obtenerTimeStamp() {
     return timestamp;
 }
 
-bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
-    int tamanio_contenido = strlen(contenido);
+bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
+    int total_ints = list_size(arrayValores);
     int bloques_necesarios = (tamanio + block_size-1)/block_size + 1;
     log_trace(logger,"bloques necesarios: %d",bloques_necesarios);
 
@@ -251,21 +251,28 @@ bool crear_archivo(int pid, int tid, int tamanio, char *contenido){
     }
 
     //escribir datos en los bloques de datos
-    int bytes_escritos = 0;
+    int ints_escritos = 0;
     
     for(int i = 0;i<bloques_necesarios-1;i++){
-        int bytes_a_escribir;
-        if(tamanio_contenido-bytes_escritos > block_size){
-            bytes_a_escribir = block_size;
+        int ints_a_escribir;
+        if(total_ints-ints_escritos > block_size/sizeof(int)){
+            ints_a_escribir = block_size/sizeof(int);
         }else{
-            bytes_a_escribir = tamanio_contenido - bytes_escritos;
+            ints_a_escribir = total_ints - ints_escritos;
             //log_trace();
         }
         fseek(archivoBloqueDeDatos,bloques_datos[i]*block_size,SEEK_SET);
-        fwrite(contenido + bytes_escritos, sizeof(char),bytes_a_escribir,archivoBloqueDeDatos);
+        for(int j = 0; j<ints_a_escribir;j++){
+            int val = list_get(arrayValores, ints_escritos+j);
+            fwrite(&val, sizeof(int),1,archivoBloqueDeDatos);
+
+        }
+
+        
+        
         log_info(logger,"## Acceso Bloque - Archivo: %s - Tipo Bloque: DATOS - Bloque File System: %d",nombre_archivo,bloques_datos[i]);
         usleep(retardo_acceso_bloque*1000);
-        bytes_escritos += bytes_a_escribir;
+        ints_escritos += ints_a_escribir;
     }
     fclose(archivoBloqueDeDatos);
     free(bloques_reservados);
