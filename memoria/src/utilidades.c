@@ -701,7 +701,7 @@ void finalizacion_de_proceso(int pid){
     
     bool _esLaParticion(void *ptr){
     Particion *particion = (Particion*) ptr;
-    return (particion->inicio == contexto_proceso->BASE && contexto_proceso->LIMITE == particion->inicio + particion->tamanio);
+    return (particion->inicio == contexto_proceso->BASE && contexto_proceso->LIMITE == particion->inicio + particion->tamanio-1);
     }
 
     
@@ -788,7 +788,7 @@ int leer_memoria(int direccion){
 }
 
 void escribir_memoria(int direccion, int valor){
-    log_warning(logger, "Direccion: %i, valor: %i", direccion, valor);
+    //log_warning(logger, "Direccion: %i, valor: %i", direccion, valor);
     *((int*)((char*)memoria_usuario->memoria_usuario + direccion)) = valor;
 }
 
@@ -816,8 +816,28 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     int direccion = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
-    log_info(logger,"## Escritura - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(valor));
+    //log_info(logger,"## Escritura - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(valor));
+    CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
+    log_warning(logger, "Escribiendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, valor);
     escribir_memoria(direccion, valor);
+
+    //int *memoria = (int*)memoria_usuario->memoria_usuario;
+
+    int *memoria=(int*)((char*)memoria_usuario->memoria_usuario);
+
+    char *contenido = malloc(ctx->LIMITE-ctx->BASE);
+    contenido[0]= '\0';
+    for(int i = ctx->BASE; i<=ctx->LIMITE;i++){
+        int valor = leer_memoria(i);
+        char caracter = (char)valor;
+        strncat(contenido,&caracter,1);
+    }
+
+
+    log_warning(logger,"CONTENIDO EN MEMORIA AL ESCRIBIR: %s",contenido);
+    free(contenido);
+
+
     //WRITE_MEM_RTA
     int rta = WRITE_MEM_RTA;
     send(cliente_fd_dispatch, &rta, sizeof(op_code), 0);
@@ -831,7 +851,9 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
     int dato = leer_memoria(direccion);
-    log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
+    //log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
+    CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
+    log_warning(logger, "Leyendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, dato);
     enviar_lectura(dato);
     free(buffer->stream);
     free(buffer);
@@ -856,10 +878,10 @@ int dump_memory(int tid,  int pid){
     int limite =contexto_a_dumpear->contexto_proceso->LIMITE;
     log_trace(logger,"BASE DEL PROCESO: %d",base);
     log_trace(logger,"LIMITE DEL PROCESO: %d",limite);
-    char *contenido = malloc(limite-base+1);
+    char *contenido = malloc(limite-base);
     contenido[0]= '\0';
-    for(int i = base; i<limite;i++){
-        int valor = memoria[i];
+    for(int i = base; i<=limite;i++){
+        int valor = leer_memoria(i);
         char caracter = (char)valor;
         strncat(contenido,&caracter,1);
     }
@@ -896,7 +918,7 @@ int dump_memory(int tid,  int pid){
     else if (cod_op == MEM_DUMP_ERROR)
     {
         log_trace(logger, "MEM DUMP ERROR");
-        close(fd_filesystem);
+        close(fd_filesystem); // esto es asi?
         return 0;
     } else {
         return -1;

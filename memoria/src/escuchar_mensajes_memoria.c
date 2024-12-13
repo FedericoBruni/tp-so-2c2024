@@ -29,7 +29,7 @@ void escuchar_mensajes_kernel(void)
                 CONTEXTO_PROCESO* contexto_proceso = malloc(sizeof(CONTEXTO_PROCESO));
                 contexto_proceso->pid = pid;
                 contexto_proceso->BASE = particion->inicio;
-                contexto_proceso->LIMITE = particion->inicio + particion->tamanio;
+                contexto_proceso->LIMITE = particion->inicio + particion->tamanio - 1;
                 list_add(contextos_procesos, contexto_proceso);
                 log_trace(logger, "<PID:%i>, <TAMAÑO PROC:%i>, <BASE:%i>, <LIMITE:%i>", pid, tamanio, contexto_proceso->BASE, contexto_proceso->LIMITE);
                 log_warning(logger, "Despues de asignar");

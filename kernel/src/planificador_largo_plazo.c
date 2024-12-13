@@ -86,7 +86,6 @@ void finalizacion_de_procesos(void)
             log_info(logger, "## Finaliza el proceso <%i>", pcb->pid);
             printear_colas_y_prioridades();
             liberar_pcb(pcb);
-            printf("dsp\n");
             printear_colas_y_prioridades();
             imprimir_cola_new(cola_new,mutex_new);
             if(queue_size(cola_new)>=1){

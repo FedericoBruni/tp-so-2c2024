@@ -96,7 +96,7 @@ $(sort $(dir $(OUT) $(OBJS))):
 kernel:
 	rm -f logKernel.log
 	make
-	./bin/kernel archivo1 128
+	./bin/kernel PRUEBA_FS 8
 
 memcheck:
 	rm -f logKernel.log

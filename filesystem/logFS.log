@@ -1,8 +1,39 @@
-[TRACE] 23:51:20:534 FileSystem/(18282:18282): Servidor levantado y listo para escuchar en el puerto: 8003
-[TRACE] 23:51:20:535 FileSystem/(18282:18282): Por aceptar serv
-[TRACE] 23:51:21:145 FileSystem/(18282:18282): Ya acepte serv
-[INFO] 23:51:21:145 FileSystem/(18282:18282): Se conecto el cliente: Memoria
+[TRACE] 15:56:54:307 FileSystem/(36923:36923): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 15:56:54:307 FileSystem/(36923:36923): Por aceptar serv
+[TRACE] 15:56:58:484 FileSystem/(36923:36923): Ya acepte serv
+[INFO] 15:56:58:484 FileSystem/(36923:36923): Se conecto el cliente: Memoria
 
-[TRACE] 23:51:21:146 FileSystem/(18282:18282): Por aceptar serv
-[INFO] 20:51:21:146 FileSystem/(18282:18379): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
-[TRACE] 20:51:21:147 FileSystem/(18282:18379): TEST HANDSHAKE
+[TRACE] 15:56:58:484 FileSystem/(36923:36923): Por aceptar serv
+[INFO] 12:56:58:488 FileSystem/(36923:37032): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 12:56:58:488 FileSystem/(36923:37032): TEST HANDSHAKE
+[TRACE] 12:57:08:722 FileSystem/(36923:36923): Ya acepte serv
+[INFO] 12:57:08:725 FileSystem/(36923:36923): Se conecto el cliente: Memoria
+
+[TRACE] 12:57:08:725 FileSystem/(36923:36923): Por aceptar serv
+[ERROR] 12:57:08:736 FileSystem/(36923:37305): CONTENIDO RECIBIDO: HEAVY IS THE CROWN!
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): bloques necesarios: 4
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): Cant de bloques libres: 4
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): ts: 12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): timestamp: 12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): ## Bloque asignado: 0 - Archivo: 1-0-12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): ## Bloque asignado: 1 - Archivo: 1-0-12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): ## Bloque asignado: 2 - Archivo: 1-0-12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): ## Bloque asignado: 3 - Archivo: 1-0-12:57:08:736
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): Cant de bloques libres: 0
+[TRACE] 12:57:08:736 FileSystem/(36923:37305): Bloques reservados: 4 - Bloques libres: 0
+[INFO] 12:57:08:736 FileSystem/(36923:37305): ## Archivo Creado: 1-0-12:57:08:736 - Tamaño: 96
+[INFO] 12:57:08:736 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 12:57:08:761 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 12:57:08:793 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 12:57:08:830 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: DATOS - Bloque File System: 1
+[INFO] 12:57:08:857 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: DATOS - Bloque File System: 2
+[INFO] 12:57:08:888 FileSystem/(36923:37305): ## Acceso Bloque - Archivo: 1-0-12:57:08:736 - Tipo Bloque: DATOS - Bloque File System: 3
+[TRACE] 12:57:08:916 FileSystem/(36923:37305): ## Fin de solicitud - Archivo: 1-0-12:57:08:736
+[TRACE] 12:57:34:004 FileSystem/(36923:36923): Ya acepte serv
+[INFO] 12:57:34:005 FileSystem/(36923:36923): Se conecto el cliente: Memoria
+
+[TRACE] 12:57:34:005 FileSystem/(36923:36923): Por aceptar serv
+[ERROR] 12:57:34:006 FileSystem/(36923:37620): CONTENIDO RECIBIDO: "
+[TRACE] 12:57:34:006 FileSystem/(36923:37620): bloques necesarios: 3
+[TRACE] 12:57:34:006 FileSystem/(36923:37620): Cant de bloques libres: 0
+[ERROR] 12:57:34:006 FileSystem/(36923:37620): No hay espacio suficiente en el filesystem
