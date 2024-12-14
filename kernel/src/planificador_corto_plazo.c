@@ -136,13 +136,13 @@ void fin_de_quantum(test *str)
     int quantumCola = quantum;
     int tid = str->tid;
     int pid = str->pid;
-    log_error(logger, "empiezo hilo quantum de tid: %d pid: %d", tid, pid);
+    //log_error(logger, "empiezo hilo quantum de tid: %d pid: %d", tid, pid);
     // habria q esperar a que cpu empiece a ejecutar?
     pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, NULL);
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     sem_wait(&sem_cpu_ejecutando);
     usleep(quantumCola * 1000);
-    log_error(logger, "FIN DE QUANTUM");
+    //log_error(logger, "FIN DE QUANTUM");
     enviar_fin_quantum(tid, pid);
     //free(str);
     // free(aux->Registros);

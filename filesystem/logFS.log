@@ -1,31 +1,89 @@
-[TRACE] 19:03:53:650 FileSystem/(53869:53869): Servidor levantado y listo para escuchar en el puerto: 8003
-[TRACE] 19:03:53:684 FileSystem/(53869:53869): Por aceptar serv
-[TRACE] 19:03:54:232 FileSystem/(53869:53869): Ya acepte serv
-[INFO] 19:03:54:233 FileSystem/(53869:53869): Se conecto el cliente: Memoria
+[TRACE] 19:41:19:062 FileSystem/(17306:17306): Servidor levantado y listo para escuchar en el puerto: 8003
+[TRACE] 19:41:19:144 FileSystem/(17306:17306): Por aceptar serv
+[TRACE] 19:41:24:285 FileSystem/(17306:17306): Ya acepte serv
+[INFO] 19:41:24:286 FileSystem/(17306:17306): Se conecto el cliente: Memoria
 
-[TRACE] 19:03:54:283 FileSystem/(53869:53869): Por aceptar serv
-[INFO] 16:03:54:311 FileSystem/(53869:53983): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
-[TRACE] 16:03:54:314 FileSystem/(53869:53983): TEST HANDSHAKE
-[TRACE] 16:03:59:773 FileSystem/(53869:53869): Ya acepte serv
-[INFO] 16:03:59:774 FileSystem/(53869:53869): Se conecto el cliente: Memoria
+[TRACE] 19:41:24:420 FileSystem/(17306:17306): Por aceptar serv
+[TRACE] 16:41:24:466 FileSystem/(17306:17621): bloques necesarios: 5
+[TRACE] 16:41:24:470 FileSystem/(17306:17621): Cant de bloques libres: 200
+[TRACE] 16:41:24:473 FileSystem/(17306:17621): ts: 16:41:24:471
+[TRACE] 16:41:24:473 FileSystem/(17306:17621): timestamp: 16:41:24:471
+[TRACE] 16:41:24:486 FileSystem/(17306:17621): ## Bloque asignado: 0 - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:24:490 FileSystem/(17306:17621): ## Bloque asignado: 1 - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:24:490 FileSystem/(17306:17621): ## Bloque asignado: 2 - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:24:491 FileSystem/(17306:17621): ## Bloque asignado: 3 - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:24:491 FileSystem/(17306:17621): ## Bloque asignado: 4 - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:24:493 FileSystem/(17306:17621): Cant de bloques libres: 195
+[TRACE] 16:41:24:494 FileSystem/(17306:17621): Bloques reservados: 5 - Bloques libres: 195
+[INFO] 16:41:24:495 FileSystem/(17306:17621): ## Archivo Creado: 0-0-16:41:24:471 - Tamaño: 128
+[INFO] 16:41:24:499 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 16:41:24:527 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 16:41:24:553 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 16:41:24:579 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: INDICE - Bloque File System: 0
+[INFO] 16:41:24:610 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: DATOS - Bloque File System: 1
+[INFO] 16:41:24:639 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: DATOS - Bloque File System: 2
+[INFO] 16:41:24:666 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: DATOS - Bloque File System: 3
+[INFO] 16:41:24:696 FileSystem/(17306:17621): ## Acceso Bloque - Archivo: 0-0-16:41:24:471 - Tipo Bloque: DATOS - Bloque File System: 4
+[TRACE] 16:41:24:722 FileSystem/(17306:17621): ## Fin de solicitud - Archivo: 0-0-16:41:24:471
+[TRACE] 16:41:52:724 FileSystem/(17306:17306): Ya acepte serv
+[INFO] 16:41:52:724 FileSystem/(17306:17306): Se conecto el cliente: Memoria
 
-[TRACE] 16:03:59:792 FileSystem/(53869:53869): Por aceptar serv
-[TRACE] 16:03:59:799 FileSystem/(53869:54241): bloques necesarios: 4
-[TRACE] 16:03:59:802 FileSystem/(53869:54241): Cant de bloques libres: 200
-[TRACE] 16:03:59:803 FileSystem/(53869:54241): ts: 16:03:59:803
-[TRACE] 16:03:59:805 FileSystem/(53869:54241): timestamp: 16:03:59:803
-[TRACE] 16:03:59:809 FileSystem/(53869:54241): ## Bloque asignado: 0 - Archivo: 1-0-16:03:59:803
-[TRACE] 16:03:59:823 FileSystem/(53869:54241): ## Bloque asignado: 1 - Archivo: 1-0-16:03:59:803
-[TRACE] 16:03:59:823 FileSystem/(53869:54241): ## Bloque asignado: 2 - Archivo: 1-0-16:03:59:803
-[TRACE] 16:03:59:823 FileSystem/(53869:54241): ## Bloque asignado: 3 - Archivo: 1-0-16:03:59:803
-[TRACE] 16:03:59:826 FileSystem/(53869:54241): Cant de bloques libres: 196
-[TRACE] 16:03:59:828 FileSystem/(53869:54241): Bloques reservados: 4 - Bloques libres: 196
-[INFO] 16:03:59:828 FileSystem/(53869:54241): ## Archivo Creado: 1-0-16:03:59:803 - Tamaño: 96
-[INFO] 16:03:59:832 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 16:03:59:858 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 16:03:59:885 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: INDICE - Bloque File System: 0
-[INFO] 16:03:59:913 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: DATOS - Bloque File System: 1
-[INFO] 16:03:59:940 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: DATOS - Bloque File System: 2
-[INFO] 16:03:59:967 FileSystem/(53869:54241): ## Acceso Bloque - Archivo: 1-0-16:03:59:803 - Tipo Bloque: DATOS - Bloque File System: 3
-[TRACE] 16:03:59:995 FileSystem/(53869:54241): ## Fin de solicitud - Archivo: 1-0-16:03:59:803
-[INFO] 16:04:28:327 FileSystem/(53869:53869): Finalizando ejecución de FILESYSTEM
+[TRACE] 16:41:52:729 FileSystem/(17306:17306): Por aceptar serv
+[INFO] 16:41:52:731 FileSystem/(17306:17739): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:41:52:734 FileSystem/(17306:17739): TEST HANDSHAKE
+[TRACE] 16:41:58:339 FileSystem/(17306:17306): Ya acepte serv
+[INFO] 16:41:58:339 FileSystem/(17306:17306): Se conecto el cliente: Memoria
+
+[TRACE] 16:41:58:340 FileSystem/(17306:17306): Por aceptar serv
+[TRACE] 16:41:58:342 FileSystem/(17306:17955): bloques necesarios: 5
+[TRACE] 16:41:58:344 FileSystem/(17306:17955): Cant de bloques libres: 195
+[TRACE] 16:41:58:344 FileSystem/(17306:17955): ts: 16:41:58:344
+[TRACE] 16:41:58:347 FileSystem/(17306:17955): timestamp: 16:41:58:344
+[TRACE] 16:41:58:348 FileSystem/(17306:17955): ## Bloque asignado: 5 - Archivo: 0-0-16:41:58:344
+[TRACE] 16:41:58:349 FileSystem/(17306:17955): ## Bloque asignado: 6 - Archivo: 0-0-16:41:58:344
+[TRACE] 16:41:58:349 FileSystem/(17306:17955): ## Bloque asignado: 7 - Archivo: 0-0-16:41:58:344
+[TRACE] 16:41:58:350 FileSystem/(17306:17955): ## Bloque asignado: 8 - Archivo: 0-0-16:41:58:344
+[TRACE] 16:41:58:351 FileSystem/(17306:17955): ## Bloque asignado: 9 - Archivo: 0-0-16:41:58:344
+[TRACE] 16:41:58:351 FileSystem/(17306:17955): Cant de bloques libres: 190
+[TRACE] 16:41:58:352 FileSystem/(17306:17955): Bloques reservados: 5 - Bloques libres: 190
+[INFO] 16:41:58:352 FileSystem/(17306:17955): ## Archivo Creado: 0-0-16:41:58:344 - Tamaño: 128
+[INFO] 16:41:58:353 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: INDICE - Bloque File System: 5
+[INFO] 16:41:58:379 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: INDICE - Bloque File System: 5
+[INFO] 16:41:58:405 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: INDICE - Bloque File System: 5
+[INFO] 16:41:58:430 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: INDICE - Bloque File System: 5
+[INFO] 16:41:58:457 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: DATOS - Bloque File System: 6
+[INFO] 16:41:58:482 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: DATOS - Bloque File System: 7
+[INFO] 16:41:58:508 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: DATOS - Bloque File System: 8
+[INFO] 16:41:58:534 FileSystem/(17306:17955): ## Acceso Bloque - Archivo: 0-0-16:41:58:344 - Tipo Bloque: DATOS - Bloque File System: 9
+[TRACE] 16:41:58:560 FileSystem/(17306:17955): ## Fin de solicitud - Archivo: 0-0-16:41:58:344
+[TRACE] 16:42:16:857 FileSystem/(17306:17306): Ya acepte serv
+[INFO] 16:42:16:858 FileSystem/(17306:17306): Se conecto el cliente: Memoria
+
+[TRACE] 16:42:16:859 FileSystem/(17306:17306): Por aceptar serv
+[INFO] 16:42:16:861 FileSystem/(17306:18077): Recibido handshake: HANDSHAKE MEMORIA - FILESYSTEM
+[TRACE] 16:42:16:862 FileSystem/(17306:18077): TEST HANDSHAKE
+[TRACE] 16:42:22:532 FileSystem/(17306:17306): Ya acepte serv
+[INFO] 16:42:22:532 FileSystem/(17306:17306): Se conecto el cliente: Memoria
+
+[TRACE] 16:42:22:534 FileSystem/(17306:17306): Por aceptar serv
+[TRACE] 16:42:22:537 FileSystem/(17306:18293): bloques necesarios: 5
+[TRACE] 16:42:22:539 FileSystem/(17306:18293): Cant de bloques libres: 190
+[TRACE] 16:42:22:540 FileSystem/(17306:18293): ts: 16:42:22:539
+[TRACE] 16:42:22:540 FileSystem/(17306:18293): timestamp: 16:42:22:539
+[TRACE] 16:42:22:541 FileSystem/(17306:18293): ## Bloque asignado: 10 - Archivo: 0-0-16:42:22:539
+[TRACE] 16:42:22:541 FileSystem/(17306:18293): ## Bloque asignado: 11 - Archivo: 0-0-16:42:22:539
+[TRACE] 16:42:22:542 FileSystem/(17306:18293): ## Bloque asignado: 12 - Archivo: 0-0-16:42:22:539
+[TRACE] 16:42:22:542 FileSystem/(17306:18293): ## Bloque asignado: 13 - Archivo: 0-0-16:42:22:539
+[TRACE] 16:42:22:543 FileSystem/(17306:18293): ## Bloque asignado: 14 - Archivo: 0-0-16:42:22:539
+[TRACE] 16:42:22:543 FileSystem/(17306:18293): Cant de bloques libres: 185
+[TRACE] 16:42:22:544 FileSystem/(17306:18293): Bloques reservados: 5 - Bloques libres: 185
+[INFO] 16:42:22:544 FileSystem/(17306:18293): ## Archivo Creado: 0-0-16:42:22:539 - Tamaño: 128
+[INFO] 16:42:22:545 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: INDICE - Bloque File System: 10
+[INFO] 16:42:22:571 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: INDICE - Bloque File System: 10
+[INFO] 16:42:22:596 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: INDICE - Bloque File System: 10
+[INFO] 16:42:22:622 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: INDICE - Bloque File System: 10
+[INFO] 16:42:22:648 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: DATOS - Bloque File System: 11
+[INFO] 16:42:22:673 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: DATOS - Bloque File System: 12
+[INFO] 16:42:22:700 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: DATOS - Bloque File System: 13
+[INFO] 16:42:22:725 FileSystem/(17306:18293): ## Acceso Bloque - Archivo: 0-0-16:42:22:539 - Tipo Bloque: DATOS - Bloque File System: 14
+[TRACE] 16:42:22:751 FileSystem/(17306:18293): ## Fin de solicitud - Archivo: 0-0-16:42:22:539

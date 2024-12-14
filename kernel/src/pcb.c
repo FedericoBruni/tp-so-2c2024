@@ -4,6 +4,7 @@ extern int autoincremental_pcb;
 extern t_log *logger;
 extern char* algoritmo_planificacion;
 extern PCB *pcb_en_ejecucion;
+extern TCB *tcb_en_ejecucion;
 
 
 void liberar_tcb(void *ptr_tcb)
@@ -12,12 +13,10 @@ void liberar_tcb(void *ptr_tcb)
     if(!tcb) log_error(logger,"LIBERANDO TCB NULL");
     log_warning(logger, "Liberando <TID: %i>", tcb->tid);
     liberar_registros(tcb->Registros);
-    //tcb->pcb->threads y tids 
-    //list_remove_element(tcb->pcb->threads, tcb);
-    //list_remove_element(tcb->pcb->tids, tcb->tid);
-    
-    //if(pcb_en_ejecucion && string_equals_ignore_case(pcb_en_ejecucion->archivo_pseudocodigo,tcb->archivo_pseudocodigo)) free(tcb->archivo_pseudocodigo);
-    //else free(tcb->archivo_pseudocodigo);
+    if(tcb->tid == tcb_en_ejecucion->tid && tcb->pcb_pid == tcb_en_ejecucion->pcb_pid){
+        tcb_en_ejecucion = NULL;  // NO TOCAR ROMPE TODO
+    }
+    if(tcb->archivo_pseudocodigo) free(tcb->archivo_pseudocodigo);
     free(tcb);
 }
 
@@ -34,20 +33,13 @@ void liberar_pcb(void *ptr_pcb)
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
     log_warning(logger, "Liberando <PID:%i>, con <%i THREADS>", pcb->pid, list_size(pcb->threads));
     
-    //liberar_tcb(list_get(pcb->threads, 0));
-    //list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
-    if (pcb->threads != NULL) {
-    for (int i = 0; i < list_size(pcb->threads); i++) {
-        TCB *tcb = list_get(pcb->threads, i);
-        if (tcb) {
-            //log_debug(logger, "Liberando TCB en índice %d", i);
-            liberar_tcb(tcb);
-        }
+    if(pcb->pid == pcb_en_ejecucion->pid){
+        pcb_en_ejecucion =NULL;
     }
-    list_destroy(pcb->threads);
-} else {
-    //log_warning(logger, "La lista de threads ya es NULL.");
-}
+
+    //liberar_tcb(list_get(pcb->threads, 0));
+    list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
+    //list_destroy(pcb->threads);
     
 
 

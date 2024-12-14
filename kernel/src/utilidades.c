@@ -171,7 +171,7 @@ void terminar_ejecucion()
         free(structIo);
     }
     queue_destroy(cola_io);
-    //if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
+    if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
     //if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
     
     log_info(logger, "Finalizando ejecucion de KERNEL");

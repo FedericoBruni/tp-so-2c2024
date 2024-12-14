@@ -13,7 +13,7 @@ void MUTEX_CREATE(char* recurso);
 void MUTEX_LOCK(char* recurso);
 void MUTEX_UNLOCK(char* recurso);
 int DUMP_MEMORY(int pid, int tid);
-void IO(int tiempo);
+void IO(int tiempo, TCB *tcb);
 void ejecucion_io2(int tiempo);
 void ejecucion_io();
 void PROCESS_EXIT_ULTIMO_HILO(TCB *tcb);

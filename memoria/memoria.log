@@ -1,416 +1,77 @@
-[TRACE] 19:03:54:231 Memoria/(53982:53982): Servidor levantado y listo para escuchar en el puerto: 8002
-[INFO] 19:03:54:231 Memoria/(53982:53982): Conexión exitosa
-[INFO] 19:03:54:314 Memoria/(53982:53982): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
-[INFO] 19:03:56:047 Memoria/(53982:53982): ## Kernel Conectado - FD del socket: 6
-[INFO] 16:03:56:048 Memoria/(53982:54114): Recibido handshake: HANDSHAKE CPU - MEMORIA
-[INFO] 16:03:57:568 Memoria/(53982:53982): ## Kernel Conectado - FD del socket: 7
-[INFO] 16:03:57:576 Memoria/(53982:54211): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
-[INFO] 16:03:57:583 Memoria/(53982:54211): ## Proceso Creado - PID: 0 - Tamaño: 8
-[INFO] 16:03:57:585 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 0:0
-[INFO] 16:03:57:594 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:57:605 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 5
-
-[INFO] 16:03:57:616 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET BX 1
-
-[INFO] 16:03:57:636 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_CROWN 96 0
-
-[INFO] 16:03:57:649 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:649 Memoria/(53982:54114): a
-[TRACE] 16:03:57:649 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:649 Memoria/(53982:54114): b
-[ERROR] 16:03:57:649 Memoria/(53982:54114): c
-[INFO] 16:03:57:649 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:649 Memoria/(53982:54114): z
-[INFO] 16:03:57:656 Memoria/(53982:54211): ## Proceso Creado - PID: 1 - Tamaño: 96
-[INFO] 16:03:57:657 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 1:0
-[INFO] 16:03:57:660 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:660 Memoria/(53982:54114): a
-[TRACE] 16:03:57:660 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:660 Memoria/(53982:54114): b
-[ERROR] 16:03:57:660 Memoria/(53982:54114): c
-[INFO] 16:03:57:660 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:661 Memoria/(53982:54114): z
-[INFO] 16:03:57:671 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:57:686 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET CX 0
-
-[INFO] 16:03:57:698 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET EX 4
-
-[INFO] 16:03:57:713 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 72
-
-[INFO] 16:03:57:730 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:57:730 Memoria/(53982:54114): a
-[TRACE] 16:03:57:730 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:730 Memoria/(53982:54114): b
-[ERROR] 16:03:57:730 Memoria/(53982:54114): c
-[INFO] 16:03:57:730 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:57:730 Memoria/(53982:54114): z
-[INFO] 16:03:57:744 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:57:764 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_10 64 1
-
-[INFO] 16:03:57:776 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:792 Memoria/(53982:54114): a
-[TRACE] 16:03:57:792 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:792 Memoria/(53982:54114): b
-[ERROR] 16:03:57:792 Memoria/(53982:54114): c
-[INFO] 16:03:57:792 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:792 Memoria/(53982:54114): z
-[INFO] 16:03:57:802 Memoria/(53982:54211): ## Proceso Creado - PID: 2 - Tamaño: 64
-[INFO] 16:03:57:803 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 2:0
-[INFO] 16:03:57:805 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:805 Memoria/(53982:54114): a
-[TRACE] 16:03:57:805 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:805 Memoria/(53982:54114): b
-[ERROR] 16:03:57:805 Memoria/(53982:54114): c
-[INFO] 16:03:57:805 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:805 Memoria/(53982:54114): z
-[INFO] 16:03:57:824 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:57:835 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:57:848 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:8>, <VALOR:72>
-[WARNING] 16:03:57:848 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: H
-[INFO] 16:03:57:872 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:57:886 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:57:886 Memoria/(53982:54114): a
-[TRACE] 16:03:57:886 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:886 Memoria/(53982:54114): b
-[ERROR] 16:03:57:886 Memoria/(53982:54114): c
-[INFO] 16:03:57:886 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:57:886 Memoria/(53982:54114): z
-[INFO] 16:03:57:901 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:57:915 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_20 128 1
-
-[INFO] 16:03:57:925 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:926 Memoria/(53982:54114): a
-[TRACE] 16:03:57:926 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:926 Memoria/(53982:54114): b
-[ERROR] 16:03:57:926 Memoria/(53982:54114): c
-[INFO] 16:03:57:926 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:926 Memoria/(53982:54114): z
-[INFO] 16:03:57:962 Memoria/(53982:54211): ## Proceso Creado - PID: 3 - Tamaño: 128
-[INFO] 16:03:57:970 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 3:0
-[INFO] 16:03:57:971 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:57:971 Memoria/(53982:54114): a
-[TRACE] 16:03:57:971 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:57:971 Memoria/(53982:54114): b
-[ERROR] 16:03:57:971 Memoria/(53982:54114): c
-[INFO] 16:03:57:971 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:57:971 Memoria/(53982:54114): z
-[INFO] 16:03:57:987 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:002 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 69
-
-[INFO] 16:03:58:014 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:58:024 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:12>, <VALOR:69>
-[WARNING] 16:03:58:024 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HE
-[INFO] 16:03:58:041 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:043 Memoria/(53982:54114): a
-[TRACE] 16:03:58:043 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:043 Memoria/(53982:54114): b
-[ERROR] 16:03:58:043 Memoria/(53982:54114): c
-[INFO] 16:03:58:043 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:043 Memoria/(53982:54114): z
-[INFO] 16:03:58:055 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:58:083 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_30 256 1
-
-[INFO] 16:03:58:100 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:100 Memoria/(53982:54114): a
-[TRACE] 16:03:58:100 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:100 Memoria/(53982:54114): b
-[ERROR] 16:03:58:100 Memoria/(53982:54114): c
-[INFO] 16:03:58:100 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:100 Memoria/(53982:54114): z
-[INFO] 16:03:58:112 Memoria/(53982:54211): ## Proceso Creado - PID: 4 - Tamaño: 256
-[INFO] 16:03:58:113 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 4:0
-[INFO] 16:03:58:117 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:117 Memoria/(53982:54114): a
-[TRACE] 16:03:58:117 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:117 Memoria/(53982:54114): b
-[ERROR] 16:03:58:117 Memoria/(53982:54114): c
-[INFO] 16:03:58:117 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:117 Memoria/(53982:54114): z
-[INFO] 16:03:58:132 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:146 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:58:159 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 65
-
-[INFO] 16:03:58:180 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:58:200 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:16>, <VALOR:65>
-[WARNING] 16:03:58:200 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEA
-[INFO] 16:03:58:212 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:217 Memoria/(53982:54114): a
-[TRACE] 16:03:58:217 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:217 Memoria/(53982:54114): b
-[ERROR] 16:03:58:217 Memoria/(53982:54114): c
-[INFO] 16:03:58:217 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:217 Memoria/(53982:54114): z
-[INFO] 16:03:58:229 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:58:240 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_40 256 1
-
-[INFO] 16:03:58:263 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:263 Memoria/(53982:54114): a
-[TRACE] 16:03:58:263 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:263 Memoria/(53982:54114): b
-[ERROR] 16:03:58:263 Memoria/(53982:54114): c
-[INFO] 16:03:58:263 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:263 Memoria/(53982:54114): z
-[INFO] 16:03:58:303 Memoria/(53982:54211): ## Proceso Creado - PID: 5 - Tamaño: 256
-[INFO] 16:03:58:303 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 5:0
-[INFO] 16:03:58:305 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:310 Memoria/(53982:54114): a
-[TRACE] 16:03:58:312 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:312 Memoria/(53982:54114): b
-[ERROR] 16:03:58:312 Memoria/(53982:54114): c
-[INFO] 16:03:58:312 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:316 Memoria/(53982:54114): z
-[INFO] 16:03:58:327 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:341 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:58:354 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 86
-
-[INFO] 16:03:58:366 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:58:392 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:20>, <VALOR:86>
-[WARNING] 16:03:58:393 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAV
-[INFO] 16:03:58:404 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:404 Memoria/(53982:54114): a
-[TRACE] 16:03:58:404 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:405 Memoria/(53982:54114): b
-[ERROR] 16:03:58:405 Memoria/(53982:54114): c
-[INFO] 16:03:58:405 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:405 Memoria/(53982:54114): z
-[INFO] 16:03:58:417 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:58:428 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_CREATE FIBO_47 256 1
-
-[INFO] 16:03:58:440 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:440 Memoria/(53982:54114): a
-[TRACE] 16:03:58:442 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:442 Memoria/(53982:54114): b
-[ERROR] 16:03:58:442 Memoria/(53982:54114): c
-[INFO] 16:03:58:442 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:442 Memoria/(53982:54114): z
-[INFO] 16:03:58:480 Memoria/(53982:54211): ## Proceso Creado - PID: 6 - Tamaño: 256
-[INFO] 16:03:58:480 Memoria/(53982:54211): ## Hilo Creado - (PID:TID)- 6:0
-[INFO] 16:03:58:481 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:485 Memoria/(53982:54114): a
-[TRACE] 16:03:58:485 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:485 Memoria/(53982:54114): b
-[ERROR] 16:03:58:485 Memoria/(53982:54114): c
-[INFO] 16:03:58:485 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:485 Memoria/(53982:54114): z
-[INFO] 16:03:58:497 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:509 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:58:523 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 89
-
-[INFO] 16:03:58:538 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:58:552 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:24>, <VALOR:89>
-[WARNING] 16:03:58:559 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY
-[INFO] 16:03:58:571 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:571 Memoria/(53982:54114): a
-[TRACE] 16:03:58:571 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:571 Memoria/(53982:54114): b
-[ERROR] 16:03:58:571 Memoria/(53982:54114): c
-[INFO] 16:03:58:571 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:571 Memoria/(53982:54114): z
-[INFO] 16:03:58:582 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (0:0)
-[INFO] 16:03:58:596 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SUB AX BX
-
-[INFO] 16:03:58:607 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: IO 10000
-
-[INFO] 16:03:58:621 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (0:0)
-[ERROR] 16:03:58:621 Memoria/(53982:54114): a
-[TRACE] 16:03:58:621 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:621 Memoria/(53982:54114): b
-[ERROR] 16:03:58:621 Memoria/(53982:54114): c
-[INFO] 16:03:58:621 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
-[ERROR] 16:03:58:621 Memoria/(53982:54114): z
-[INFO] 16:03:58:671 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:686 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:58:700 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:702 Memoria/(53982:54114): a
-[TRACE] 16:03:58:702 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:702 Memoria/(53982:54114): b
-[ERROR] 16:03:58:702 Memoria/(53982:54114): c
-[INFO] 16:03:58:702 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:702 Memoria/(53982:54114): z
-[INFO] 16:03:58:734 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:748 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 32
-
-[INFO] 16:03:58:761 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:761 Memoria/(53982:54114): a
-[TRACE] 16:03:58:761 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:761 Memoria/(53982:54114): b
-[ERROR] 16:03:58:761 Memoria/(53982:54114): c
-[INFO] 16:03:58:761 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:761 Memoria/(53982:54114): z
-[INFO] 16:03:58:796 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:807 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:58:821 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:28>, <VALOR:32>
-[WARNING] 16:03:58:821 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY 
-[INFO] 16:03:58:834 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:834 Memoria/(53982:54114): a
-[TRACE] 16:03:58:834 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:834 Memoria/(53982:54114): b
-[ERROR] 16:03:58:834 Memoria/(53982:54114): c
-[INFO] 16:03:58:834 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:834 Memoria/(53982:54114): z
-[INFO] 16:03:58:860 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:884 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:58:894 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:894 Memoria/(53982:54114): a
-[TRACE] 16:03:58:894 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:894 Memoria/(53982:54114): b
-[ERROR] 16:03:58:894 Memoria/(53982:54114): c
-[INFO] 16:03:58:894 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:894 Memoria/(53982:54114): z
-[INFO] 16:03:58:920 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:930 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 73
-
-[INFO] 16:03:58:941 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:58:945 Memoria/(53982:54114): a
-[TRACE] 16:03:58:949 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:58:952 Memoria/(53982:54114): b
-[ERROR] 16:03:58:952 Memoria/(53982:54114): c
-[INFO] 16:03:58:952 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:58:952 Memoria/(53982:54114): z
-[INFO] 16:03:58:978 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:58:996 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:010 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:32>, <VALOR:73>
-[WARNING] 16:03:59:010 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY I
-[INFO] 16:03:59:026 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:59:026 Memoria/(53982:54114): a
-[TRACE] 16:03:59:027 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:59:027 Memoria/(53982:54114): b
-[ERROR] 16:03:59:027 Memoria/(53982:54114): c
-[INFO] 16:03:59:027 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:59:028 Memoria/(53982:54114): z
-[INFO] 16:03:59:049 Memoria/(53982:54114): ## Contexto Solicitado - (PID:TID) - (1:0)
-[INFO] 16:03:59:063 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:073 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 83
-
-[INFO] 16:03:59:092 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:114 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:36>, <VALOR:83>
-[WARNING] 16:03:59:119 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS
-[INFO] 16:03:59:130 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:144 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 32
-
-[INFO] 16:03:59:157 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:172 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:40>, <VALOR:32>
-[WARNING] 16:03:59:173 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS 
-[INFO] 16:03:59:190 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:203 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 84
-
-[INFO] 16:03:59:214 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:230 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:44>, <VALOR:84>
-[WARNING] 16:03:59:235 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS T
-[INFO] 16:03:59:249 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:264 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 72
-
-[INFO] 16:03:59:277 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:287 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:48>, <VALOR:72>
-[WARNING] 16:03:59:288 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS TH
-[INFO] 16:03:59:299 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:318 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 69
-
-[INFO] 16:03:59:331 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:343 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:52>, <VALOR:69>
-[WARNING] 16:03:59:344 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE
-[INFO] 16:03:59:354 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:365 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 32
-
-[INFO] 16:03:59:377 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:389 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:56>, <VALOR:32>
-[WARNING] 16:03:59:396 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE 
-[INFO] 16:03:59:410 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:421 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 67
-
-[INFO] 16:03:59:433 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:443 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:60>, <VALOR:67>
-[WARNING] 16:03:59:444 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE C
-[INFO] 16:03:59:456 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:467 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 82
-
-[INFO] 16:03:59:480 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:493 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:64>, <VALOR:82>
-[WARNING] 16:03:59:500 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE CR
-[INFO] 16:03:59:510 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:521 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 79
-
-[INFO] 16:03:59:538 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:553 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:68>, <VALOR:79>
-[WARNING] 16:03:59:555 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE CRO
-[INFO] 16:03:59:567 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:579 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 87
-
-[INFO] 16:03:59:601 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:614 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:72>, <VALOR:87>
-[WARNING] 16:03:59:614 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE CROW
-[INFO] 16:03:59:631 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:646 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 78
-
-[INFO] 16:03:59:666 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:684 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:76>, <VALOR:78>
-[WARNING] 16:03:59:684 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE CROWN
-[INFO] 16:03:59:696 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SUM CX EX
-
-[INFO] 16:03:59:717 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: SET AX 33
-
-[INFO] 16:03:59:728 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: WRITE_MEM CX AX
-
-[WARNING] 16:03:59:739 Memoria/(53982:54114): Escribiendo en memoria: <PID:1>, <TID:0>, <TAM_PROCESO:95>, <DIRECCION:80>, <VALOR:33>
-[WARNING] 16:03:59:741 Memoria/(53982:54114): CONTENIDO EN MEMORIA AL ESCRIBIR: HEAVY IS THE CROWN!
-[INFO] 16:03:59:753 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: DUMP_MEMORY
-
-[INFO] 16:03:59:769 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:03:59:769 Memoria/(53982:54114): a
-[TRACE] 16:03:59:769 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:03:59:770 Memoria/(53982:54114): b
-[ERROR] 16:03:59:770 Memoria/(53982:54114): c
-[INFO] 16:03:59:770 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:03:59:770 Memoria/(53982:54114): z
-[TRACE] 16:03:59:772 Memoria/(53982:54211): BASE DEL PROCESO: 8
-[TRACE] 16:03:59:772 Memoria/(53982:54211): LIMITE DEL PROCESO: 103
-[INFO] 16:03:59:773 Memoria/(53982:54211): Conexión exitosa
-[INFO] 16:03:59:773 Memoria/(53982:54211): ## Memory Dump solicitado - (PID:TID) - (1:0)
-[INFO] 16:04:00:001 Memoria/(53982:54114): ## Obtener instrucción - (PID:TID) - (1:0) - Instrucción: PROCESS_EXIT
-[INFO] 16:04:00:016 Memoria/(53982:54114): ## Contexto Actualizado - (PID:TID) - (1:0)
-[ERROR] 16:04:00:016 Memoria/(53982:54114): a
-[TRACE] 16:04:00:016 Memoria/(53982:54114): CONTEXTOS PROCESO EN MEMORIA
-[ERROR] 16:04:00:016 Memoria/(53982:54114): b
-[ERROR] 16:04:00:016 Memoria/(53982:54114): c
-[INFO] 16:04:00:016 Memoria/(53982:54114): Contexto de hilo y proceso actualizado para TID: 0 y PID: 1
-[ERROR] 16:04:00:016 Memoria/(53982:54114): z
-[ERROR] 16:04:21:351 Memoria/(53982:54211): Kernel desconectado
-
-[ERROR] 16:04:26:526 Memoria/(53982:54114): Cpu desconectado
-
-[INFO] 16:04:26:526 Memoria/(53982:53982): Finalizando ejecución de MEMORIA
+[TRACE] 19:42:16:857 Memoria/(18076:18076): Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 19:42:16:860 Memoria/(18076:18076): Conexión exitosa
+[INFO] 19:42:16:861 Memoria/(18076:18076): Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 19:42:17:745 Memoria/(18076:18076): ## Kernel Conectado - FD del socket: 6
+[INFO] 16:42:17:746 Memoria/(18076:18174): Recibido handshake: HANDSHAKE CPU - MEMORIA
+[INFO] 16:42:19:893 Memoria/(18076:18076): ## Kernel Conectado - FD del socket: 7
+[INFO] 16:42:19:950 Memoria/(18076:18280): Recibido handshake: HANDSHAKE KERNEL - MEMORIA
+[INFO] 16:42:20:650 Memoria/(18076:18280): ## Proceso Creado - PID: 0 - Tamaño: 128
+[INFO] 16:42:20:717 Memoria/(18076:18280): ## Hilo Creado - (PID:TID)- 0:0
+[INFO] 16:42:21:121 Memoria/(18076:18174): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 16:42:21:135 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET AX 31
+
+[INFO] 16:42:21:146 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET BX 70
+
+[INFO] 16:42:21:161 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: SET CX 1
+
+[INFO] 16:42:21:172 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: IO 1200
+
+[INFO] 16:42:21:183 Memoria/(18076:18174): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 16:42:21:183 Memoria/(18076:18174): a
+[TRACE] 16:42:21:183 Memoria/(18076:18174): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 16:42:21:183 Memoria/(18076:18174): b
+[ERROR] 16:42:21:183 Memoria/(18076:18174): c
+[INFO] 16:42:21:183 Memoria/(18076:18174): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 16:42:21:183 Memoria/(18076:18174): z
+[INFO] 16:42:22:439 Memoria/(18076:18174): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 16:42:22:449 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: WRITE_MEM AX BX
+
+[WARNING] 16:42:22:461 Memoria/(18076:18174): Escribiendo en memoria: <PID:0>, <TID:0>, <TAM_PROCESO:127>, <DIRECCION:31>, <VALOR:70>
+[WARNING] 16:42:22:461 Memoria/(18076:18174): CONTENIDO EN MEMORIA AL ESCRIBIR: F
+[INFO] 16:42:22:471 Memoria/(18076:18174): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 16:42:22:471 Memoria/(18076:18174): a
+[TRACE] 16:42:22:471 Memoria/(18076:18174): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 16:42:22:471 Memoria/(18076:18174): b
+[ERROR] 16:42:22:471 Memoria/(18076:18174): c
+[INFO] 16:42:22:471 Memoria/(18076:18174): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 16:42:22:471 Memoria/(18076:18174): z
+[INFO] 16:42:22:481 Memoria/(18076:18174): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 16:42:22:494 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: DUMP_MEMORY
+
+[INFO] 16:42:22:504 Memoria/(18076:18174): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 16:42:22:504 Memoria/(18076:18174): a
+[TRACE] 16:42:22:504 Memoria/(18076:18174): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 16:42:22:504 Memoria/(18076:18174): b
+[ERROR] 16:42:22:504 Memoria/(18076:18174): c
+[INFO] 16:42:22:504 Memoria/(18076:18174): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 16:42:22:504 Memoria/(18076:18174): z
+[TRACE] 16:42:22:531 Memoria/(18076:18280): BASE DEL PROCESO: 0
+[TRACE] 16:42:22:531 Memoria/(18076:18280): LIMITE DEL PROCESO: 127
+[INFO] 16:42:22:532 Memoria/(18076:18280): Conexión exitosa
+[INFO] 16:42:22:532 Memoria/(18076:18280): ## Memory Dump solicitado - (PID:TID) - (0:0)
+[INFO] 16:42:22:753 Memoria/(18076:18174): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 16:42:22:753 Memoria/(18076:18174): a
+[TRACE] 16:42:22:753 Memoria/(18076:18174): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 16:42:22:753 Memoria/(18076:18174): b
+[ERROR] 16:42:22:753 Memoria/(18076:18174): c
+[INFO] 16:42:22:753 Memoria/(18076:18174): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 16:42:22:753 Memoria/(18076:18174): z
+[INFO] 16:42:22:764 Memoria/(18076:18174): ## Contexto Solicitado - (PID:TID) - (0:0)
+[INFO] 16:42:22:777 Memoria/(18076:18174): ## Obtener instrucción - (PID:TID) - (0:0) - Instrucción: PROCESS_EXIT
+[INFO] 16:42:22:787 Memoria/(18076:18174): ## Contexto Actualizado - (PID:TID) - (0:0)
+[ERROR] 16:42:22:787 Memoria/(18076:18174): a
+[TRACE] 16:42:22:787 Memoria/(18076:18174): CONTEXTOS PROCESO EN MEMORIA
+[ERROR] 16:42:22:787 Memoria/(18076:18174): b
+[ERROR] 16:42:22:787 Memoria/(18076:18174): c
+[INFO] 16:42:22:787 Memoria/(18076:18174): Contexto de hilo y proceso actualizado para TID: 0 y PID: 0
+[ERROR] 16:42:22:787 Memoria/(18076:18174): z
+[INFO] 16:42:22:813 Memoria/(18076:18280): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 16:42:22:813 Memoria/(18076:18280): ## Proceso Destruido - PID: 0 - Tamaño: 128
+[INFO] 16:42:22:813 Memoria/(18076:18280): Finalizado proceso: 0
+[ERROR] 16:42:22:813 Memoria/(18076:18280): Antes de compactar siguiente
+[ERROR] 16:42:22:814 Memoria/(18076:18280): Después de compactar
+[ERROR] 16:42:25:102 Memoria/(18076:18280): Kernel desconectado
+
+[ERROR] 16:42:25:133 Memoria/(18076:18174): Cpu desconectado
+
+[INFO] 16:42:25:137 Memoria/(18076:18076): Finalizando ejecución de MEMORIA

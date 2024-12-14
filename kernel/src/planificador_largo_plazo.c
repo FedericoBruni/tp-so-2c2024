@@ -165,7 +165,7 @@ void finalizacion_de_hilos(void)
             log_error(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid); // dsp de esto ya no existe el tcb.
             log_trace(logger,"LISTA TIDS ANTES DE REMOVER: %d",list_size(tcb->pcb->tids));
             list_remove_element(tcb->pcb->tids, tcb->tid);
-            //list_remove_element(tcb->pcb->threads, tcb);
+            list_remove_element(tcb->pcb->threads, tcb);
             log_trace(logger,"LISTA TIDS DESPUES DE REMOVER: %d",list_size(tcb->pcb->tids));
             printear_colas_y_prioridades();
             liberar_tcb(tcb);

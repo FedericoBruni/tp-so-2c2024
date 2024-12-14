@@ -239,19 +239,17 @@ int DUMP_MEMORY(int pid, int tid){
 
 
 
-void IO(int tiempo){
+void IO(int tiempo, TCB *tcb){
     log_trace(logger,"TID: %d PID %d ENTRA A IO",tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
     imprimir_cola(cola_new,mutex_new);
     printear_colas_y_prioridades();
-    TCB *tcb_copia = malloc(sizeof(TCB));
-    memcpy(tcb_copia,tcb_en_ejecucion,sizeof(TCB));
     IOStruct *io = malloc(sizeof(IOStruct));
     io->tiempo = tiempo;
-    io->tcb=tcb_copia;
+    io->tcb=tcb;
     encolar(cola_io,io,mutex_io);
     sem_post(&sem_io);
     //sem_wait(&sem_io_iniciado);
-    log_trace(logger,"TID: %d PID %d INICIO IO",tcb_copia->tid, tcb_copia->pcb_pid);
+    log_trace(logger,"TID: %d PID %d INICIO IO",tcb->tid, tcb->pcb_pid);
     log_trace(logger,"IO Iniciado");
 }
 
