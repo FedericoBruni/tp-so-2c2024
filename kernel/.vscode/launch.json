@@ -7,7 +7,7 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/${workspaceFolderBasename}",
-      "args": ["archivo1", "128"],
+      "args": ["PRUEBA_FS", "8"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],

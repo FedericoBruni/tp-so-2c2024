@@ -270,7 +270,7 @@ void ejecucion_io(){
         log_info(logger,"entro a ejecucion_io");
         log_trace(logger,"Tiempo: %d, TCB: %d",io->tiempo,io->tcb->tid);
         sem_post(&sem_io_iniciado);
-        usleep(io->tiempo);
+        usleep(io->tiempo * 1000);
         log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", io->tcb->pcb_pid, io->tcb->tid);
         //printear_colas_y_prioridades();
         if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
@@ -285,6 +285,7 @@ void ejecucion_io(){
             encolar(cola_ready, io->tcb,mutex_ready);
         }
         sem_post(&sem_hay_ready);
+        free(io);
     }
 }
 

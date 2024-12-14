@@ -1,4 +1,5 @@
 #include "utilidades.h"
+#include <signal.h>
 
 extern t_log *logger;
 extern char *puerto;
@@ -6,14 +7,12 @@ int cliente_fd;
 
 int main(int argc, char *argv[])
 {
-
+    
     iniciar_filesystem();
+    signal(SIGINT, terminar_ejecucion);
     int server_fd = iniciar_servidor(logger, puerto);
-    // cliente_fd = esperar_cliente(server_fd, logger, "Memoria");
 
-    // pthread_t hilo_fs_memoria;
-    // pthread_create(&hilo_fs_memoria, NULL, (void *)escuchar_mensajes_memoria, NULL);
-    // pthread_join(hilo_fs_memoria, NULL);
+    
 
     while(1){
         log_trace(logger,"Por aceptar serv");
@@ -32,7 +31,7 @@ int main(int argc, char *argv[])
     }
 
 
-    terminar_ejecucion(server_fd);
+    //terminar_ejecucion(server_fd);
 
     return 0;
 }

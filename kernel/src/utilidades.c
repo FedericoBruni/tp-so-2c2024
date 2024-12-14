@@ -154,8 +154,9 @@ void terminar_ejecucion()
             free(cola_prioridad);
             
         }
-        list_destroy(colas_prioridades);
+        
     }
+    list_destroy(colas_prioridades);
     for (int i = 0; i < list_size(mutex_sistema); i++) {
         MUTEX *mutex = list_get(mutex_sistema, i);
         queue_destroy_and_destroy_elements(mutex->cola_bloqueados, liberar_tcb);
@@ -170,15 +171,23 @@ void terminar_ejecucion()
         free(structIo);
     }
     queue_destroy(cola_io);
-    if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
+    //if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
     //if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
     
     log_info(logger, "Finalizando ejecucion de KERNEL");
-    config_destroy(config);
-    //pthread_cancel(hilo_io);
+    
+
+    fin_ciclo=true;
+    sem_post(&sem_hay_new);
+    sem_post(&sem_finalizar_proceso);
+    sem_post(&sem_crear_hilo);
+    sem_post(&sem_finalizar_hilo); 
+    sem_post(&sem_io);
+    sem_post(&sem_hay_ready);
     sleep(1);
+    config_destroy(config);
     log_destroy(logger);
-    exit(EXIT_SUCCESS);
+    //exit(EXIT_SUCCESS);
 }
 
 /* Ejemplo
@@ -459,6 +468,7 @@ void ordenar_cola(t_queue *cola, pthread_mutex_t mutex) {
     for (int i = 0; i < list_size(lista); i++) {
         encolar(cola, list_get(lista, i), mutex);
     }
+    list_destroy(lista);
 }
 
 void vaciar_colas_prioridades(int pid) {

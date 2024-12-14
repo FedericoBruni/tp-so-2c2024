@@ -245,7 +245,7 @@ int esperar_respuesta(){
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SUSP_PROCESO:
-            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
+            //log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SYSCALL_DUMP_MEMORY:
@@ -323,9 +323,9 @@ void deserializar_thread_create(){
 int deserializar_thread_join(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int tid = extraer_int_del_buffer(buffer);
-    return THREAD_JOIN(tid);
     free(buffer->stream);
     free(buffer);
+    return THREAD_JOIN(tid);
 }
 
 void deserializar_thread_cancel(){
