@@ -5,6 +5,11 @@ extern t_log *logger;
 extern char* algoritmo_planificacion;
 extern PCB *pcb_en_ejecucion;
 extern TCB *tcb_en_ejecucion;
+extern t_queue *cola_new;
+extern t_queue *cola_ready;
+extern t_queue *cola_finalizacion;
+extern t_queue *cola_new_hilo;
+extern t_queue *cola_fin_pcb;
 
 
 void liberar_tcb(void *ptr_tcb)
@@ -16,7 +21,8 @@ void liberar_tcb(void *ptr_tcb)
     if(tcb->tid == tcb_en_ejecucion->tid && tcb->pcb_pid == tcb_en_ejecucion->pcb_pid){
         tcb_en_ejecucion = NULL;  // NO TOCAR ROMPE TODO
     }
-    if(tcb->archivo_pseudocodigo) free(tcb->archivo_pseudocodigo);
+    log_trace(logger,"ARCHIVO PS ANTES DE FREE: %s",tcb->archivo_pseudocodigo);
+    if(tcb->archivo_pseudocodigo && tcb->pcb_pid != 0) free(tcb->archivo_pseudocodigo);
     free(tcb);
 }
 

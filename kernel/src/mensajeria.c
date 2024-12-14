@@ -120,20 +120,15 @@ int enviar_exec_a_cpu(int tid, int pid){
 }
 
 void enviar_fin_quantum(int tid, int pid){
-    //log_warning(logger,"TID:%d PID:%d FINALIZO QUANTUM",tid,pid);
     t_buffer *buffer = crear_buffer();
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(FIN_QUANTUM, buffer);
     enviar_paquete(paquete, fd_cpu_interrupt);
-    //log_warning(logger,"ENIVE MENSAJE A CPU INTERRUPT TID:%d PD:%d ",tid,pid);
     eliminar_paquete(paquete);
-    // habria q recibir un ok de que se recibió la interrupción?
     switch(recibir_operacion(fd_cpu_interrupt)){
         case OK_FIN_QUANTUM:
-            //log_info(logger,"finalizando por quantum");
             return 1;
-
         default:
             return 0;
     }
