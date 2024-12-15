@@ -6,7 +6,6 @@ extern t_queue *cola_new_hilo;
 extern t_queue *cola_fin_pcb;
 extern t_log *logger;
 extern PCB *pcb_en_ejecucion;
-extern int fd_memoria;
 extern char *archivo_pseudocodigo;
 extern int tamanio_proceso;
 extern bool hilo_creacion_muerto;
@@ -36,18 +35,19 @@ void creacion_de_procesos(void)
         
         sem_wait(&sem_hay_new);
         if(fin_ciclo) return;
-        log_warning(logger, "Cola new");
-        imprimir_cola_new(cola_new, mutex_new);
+        //log_warning(logger, "Cola new");
+        //imprimir_cola_new(cola_new, mutex_new);
         
         PCB* pcb = desencolar(cola_new,mutex_new);
-        log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
+        //log_info(logger, "Solicitando memoria para el proceso: %d\n",pcb->pid);
+        int fd_memoria = conectarse_a_memoria();
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_memoria(fd_memoria, pcb, SOLICITAR_MEMORIA_PROCESO);
         pthread_mutex_unlock(&mutex_fd_memoria);
         switch (resultado)
         {
         case 1:
-            log_info(logger, "Memoria reservada correctamente");
+            //log_info(logger, "Memoria reservada correctamente");
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
             sem_post(&sem_hay_memoria);
             THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
@@ -55,7 +55,7 @@ void creacion_de_procesos(void)
 
         case 0:
             encolar(cola_new, pcb,mutex_new);
-            log_warning(logger, "Encolé a new porque no había memoria para el proceso: %i, Cola new: ", pcb->pid);
+            //log_warning(logger, "Encolé a new porque no había memoria para el proceso: %i, Cola new: ", pcb->pid);
             
             
             sem_post(&sem_syscall_fin);
@@ -72,13 +72,14 @@ void finalizacion_de_procesos(void)
     hilo_fin_proc_muerto = false;
     while (true)
     {
-        log_error(logger,"ANTES DE FINALIZAR PROC");
+        //log_error(logger,"ANTES DE FINALIZAR PROC");
         sem_wait(&sem_finalizar_proceso);
         if(fin_ciclo) return;
-        log_error(logger,"dsps DE FINALIZAR PROC");
+        //log_error(logger,"dsps DE FINALIZAR PROC");
         //pthread_mutex_lock(&mutex_exit);
         PCB *pcb = desencolar(cola_fin_pcb,mutex_exit);
-        log_info(logger, "intentando finalizar proceso con pid: %i", pcb->pid);
+        //log_info(logger, "intentando finalizar proceso con pid: %i", pcb->pid);
+        int fd_memoria = conectarse_a_memoria();
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_proceso(fd_memoria, pcb->pid, FINAL_PROCESO);
         pthread_mutex_unlock(&mutex_fd_memoria);
@@ -112,6 +113,7 @@ void creacion_de_hilos(void){
         if(fin_ciclo) return;
         TCB* tcb = desencolar(cola_new_hilo,mutex_new);
         //mandar por buffer a memoria
+        int fd_memoria = conectarse_a_memoria();
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_creacion_hilo(fd_memoria, tcb, SOLICITAR_CREACION_HILO);
         pthread_mutex_unlock(&mutex_fd_memoria);
@@ -156,6 +158,7 @@ void finalizacion_de_hilos(void)
 
         int tidBloqueante = tcb->tid;
         int pidhilo = tcb->pcb_pid;
+        int fd_memoria = conectarse_a_memoria();
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, tcb->pcb_pid,FINAL_HILO);
         pthread_mutex_unlock(&mutex_fd_memoria);

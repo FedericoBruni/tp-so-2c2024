@@ -46,7 +46,7 @@ t_list* mutex_sistema;
 TCB *tcb_anterior;
 extern char* estado_lock;
 extern int fd_cpu_dispatch;
-extern int fd_memoria;
+//extern int fd_memoria;
 extern int fd_cpu_interrupt;
 extern pthread_t hilo_io;
 bool fin_ciclo=false;
@@ -136,7 +136,7 @@ int conectarse_a_memoria(void)
 void terminar_ejecucion()
 {
     close(fd_cpu_dispatch);
-    close(fd_memoria);
+    //close(fd_memoria);
     close(fd_cpu_interrupt);
 
     queue_destroy_and_destroy_elements(cola_new, liberar_pcb);
@@ -150,7 +150,8 @@ void terminar_ejecucion()
     if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
         for(int i = 0; i < list_size(colas_prioridades);i++){
             COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
-            queue_destroy_and_destroy_elements(cola_prioridad->cola_prioridad,liberar_tcb);
+            if (!queue_is_empty(cola_prioridad->cola_prioridad)) queue_destroy_and_destroy_elements(cola_prioridad->cola_prioridad,liberar_tcb);
+            else queue_destroy(cola_prioridad->cola_prioridad);
             free(cola_prioridad);
             
         }
@@ -172,7 +173,7 @@ void terminar_ejecucion()
     }
     queue_destroy(cola_io);
     if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
-    //if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
+    if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
     
     log_info(logger, "Finalizando ejecucion de KERNEL");
     

@@ -2,7 +2,6 @@
 #include <signal.h>
 
 extern t_log *logger;
-int fd_memoria;
 char *archivo_pseudocodigo;
 int tamanio_proceso;
 extern t_list *cola_new;
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
     log_info(logger, "ruta de archivo : %s ; tamanio_proceso : %i", archivo_pseudocodigo, tamanio_proceso);
 
     // Conectarse a memoria
-    fd_memoria = conectarse_a_memoria();
+    int fd_memoria = conectarse_a_memoria();
     // Conectarse a cpu dispatch
     fd_cpu_dispatch = conectarse_a_cpu_dispatch();
     // Conectarse a cpu interrupt

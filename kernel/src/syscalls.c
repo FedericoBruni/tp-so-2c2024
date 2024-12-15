@@ -1,5 +1,5 @@
 #include "syscalls.h"
-extern int fd_memoria;
+//extern int fd_memoria;
 extern t_queue *cola_new;
 extern t_queue *cola_new_hilo;
 extern t_queue* cola_ready;
@@ -225,6 +225,7 @@ void MUTEX_UNLOCK(char *recurso){
 }
 
 int DUMP_MEMORY(int pid, int tid){
+    int fd_memoria = conectarse_a_memoria();
     int rta = enviar_dump_memory(fd_memoria,tid,pid);
     sem_post(&sem_syscall_fin);
     return rta;

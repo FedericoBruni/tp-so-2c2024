@@ -3,6 +3,6 @@
 #include "utilidades.h"
 #include "utils/utils.h"
 
-void escuchar_mensajes_memoria();
+void escuchar_mensajes_memoria(int cliente_fd);
 
 #endif

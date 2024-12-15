@@ -96,9 +96,9 @@ $(sort $(dir $(OUT) $(OBJS))):
 kernel:
 	rm -f logKernel.log
 	make
-	./bin/kernel PLANI_PROC 8
+	./bin/kernel THE_EMPTINESS_MACHINE 16
 
 memcheck:
 	rm -f logKernel.log
 	make
-	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/kernel PRUEBA_FS 8
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/kernel THE_EMPTINESS_MACHINE 16

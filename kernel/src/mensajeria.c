@@ -136,16 +136,16 @@ void enviar_fin_quantum(int tid, int pid){
 }
 
 int esperar_respuesta(){
-    log_warning(logger,"Esperando Respuesta");
+    //log_warning(logger,"Esperando Respuesta");
     int resultado = 0;
     int operacion;
     while(1){
-    log_error(logger,"ANTES DE RECIBIR LA OPERACION");
+    //log_error(logger,"ANTES DE RECIBIR LA OPERACION");
     operacion = recibir_operacion(fd_cpu_dispatch);
-    log_error(logger,"OPERACION RECIBIDA");
+    //log_error(logger,"OPERACION RECIBIDA");
     switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
-            log_error(logger, "replanificando tid:%d pid:%d ",tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
+            //log_error(logger, "replanificando tid:%d pid:%d ",tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
             replanificar(tcb_en_ejecucion);
             log_info(logger,"## (%d:%d) - Desalojado por fin de Quantum", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             return 1;
@@ -153,11 +153,11 @@ int esperar_respuesta(){
             log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             break;
         case SYSCALL_PROCESS_CREATE:
-            //log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
-            log_trace(logger,"PROCESS CREATE RECIBIDO");
+            log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
+            //log_trace(logger,"PROCESS CREATE RECIBIDO");
             deserializar_process_create();
             sem_wait(&sem_syscall_fin);
-            log_error(logger,"MANDO RTA");
+            //log_error(logger,"MANDO RTA");
             int proceso_creado = PROCESO_CREADO;
             send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
