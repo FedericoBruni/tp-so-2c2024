@@ -10,7 +10,6 @@ void escuchar_mensajes_memoria(int cliente_fd)
         {
         case HANDSHAKE_MEMORIA_FS:
             aceptar_handshake(logger, cliente_fd, HANDSHAKE_MEMORIA_FS);
-            log_trace(logger,"TEST HANDSHAKE");
             break;
         case SOL_DUMP:
             t_buffer *buffer_dump = recibir_buffer_completo(cliente_fd);

@@ -20,6 +20,8 @@ extern int cliente_fd_kernel;
 extern int cliente_fd_dispatch;
 
 
+
+
 void test();
 
 void iniciar_memoria()
@@ -201,8 +203,6 @@ CONTEXTO_HILO *buscar_contexto_hilo(int pid,int tid){
 
 
 void imprimir_contextos_procesos() {
-    log_error(logger,"TAM LISTA %i",list_size(contextos_procesos));
-    if (list_get(contextos_procesos, 0) == NULL) log_error(logger, "null ctx prcs");
     for (int i = 0; i < list_size(contextos_procesos); i++) {
         CONTEXTO_PROCESO *ctx_proceso = list_get(contextos_procesos, i);
         log_trace(logger, "CTX_PROCESO: <PID:%i>, <BASE:%i>, <LIMITE:%i>", ctx_proceso->pid, ctx_proceso->BASE, ctx_proceso->LIMITE);
@@ -230,26 +230,19 @@ void actualizar_contexto(int cliente_fd_dispatch){
     }
 
     CONTEXTO_HILO *hilo_actual = list_find(contextos_hilos, _es_hilo);
-    log_error(logger, "a");
     
-    log_trace(logger,"CONTEXTOS PROCESO EN MEMORIA");
-    if(contextos_procesos == NULL) log_error(logger,"NULL");
     //imprimir_contextos_procesos();
     //imprimir_memoria_usuario();
     
     CONTEXTO_PROCESO *proceso_actual = list_find(contextos_procesos, _es_proceso);
-    log_error(logger, "b");
 
     if (hilo_actual && proceso_actual) {
         //free(hilo_actual->Registros);
         memcpy(hilo_actual->Registros, ctx_hilo->Registros, sizeof(REGISTROS));
-        log_error(logger, "c");
         log_info(logger, "Contexto de hilo y proceso actualizado para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     } else {
-        log_error(logger, "d");
         log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
-    log_error(logger, "z");
 
     free(ctx_hilo->archivo_pseudocodigo);
     free(ctx_hilo->Registros);
@@ -328,44 +321,6 @@ int obtener_tamano(char** lista) {
 void cargar_memoria_usuario() {
     memoria_usuario = malloc(sizeof(MEMORIA_USUARIO));
     memoria_usuario->memoria_usuario = calloc(tam_memoria,1);
-
-
-
-    int error = 0;
-    for (size_t i = 0; i < tam_memoria; i++) {
-        if (((unsigned char*)memoria_usuario->memoria_usuario)[i] != 0) {
-            error = 1;
-            break;
-        }
-    }
-
-    if (error) {
-        log_error(logger, "Error al inicializar la memoria con calloc\n");
-    } else {
-        printf("Memoria correctamente inicializada\n");
-    }
-
-    // int *memoria = (int*)memoria_usuario->memoria_usuario;
-
-    // void* mem = memoria_usuario->memoria_usuario;
-    // char *contenido = malloc(tam_memoria);
-    // contenido[0]= '\0';
-    // //printf("caracteres: \n");
-    // for(int i = 0; i< tam_memoria;i++){
-    //     int valor = memoria[i];
-    //     char caracter = (char)valor;
-    //     if (valor != 0) {
-    //         //log_trace(logger,"asd\n");
-    //         memoria[i] = 0;
-    //         caracter = (char)0;
-    //     }
-    //     strncat(contenido,&caracter,1);
-    //     //log_trace(logger,"<Valor: %i>, <Caracter:%c> - ", valor, caracter);
-    // }
-    // //printf("\n");
-
-    // log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
-
 
     memoria_usuario->particiones = list_create();
     if (string_equals_ignore_case(esquema, "FIJAS")) {
@@ -651,14 +606,12 @@ void agrupar_particiones(Particion* particion) {
         Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice + 1);
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice - 1);
         if(particionSiguiente->estaOcupado == 0){
-            log_error(logger, "Antes de compactar siguiente");
             //imprimir_memoria_usuario();
             particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
             list_remove_element(memoria_usuario->particiones, particionSiguiente);
             free(particionSiguiente);
         }
         if(particionAnterior->estaOcupado == 0){
-            log_error(logger, "Antes de compactar anterior");
             //imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
@@ -672,7 +625,6 @@ void agrupar_particiones(Particion* particion) {
         }else{
             Particion *particionSiguiente = list_get(memoria_usuario->particiones,indice+1);
             if(particionSiguiente->estaOcupado == 0){
-                log_error(logger, "Antes de compactar siguiente");
                 //imprimir_memoria_usuario();
                 particion->tamanio = particion->tamanio + particionSiguiente->tamanio;
                 list_remove_element(memoria_usuario->particiones, particionSiguiente);
@@ -682,7 +634,6 @@ void agrupar_particiones(Particion* particion) {
     }else if(indice == list_size(memoria_usuario->particiones) - 1 ){
         Particion *particionAnterior = list_get(memoria_usuario->particiones, indice + 1);
         if(particionAnterior->estaOcupado == 0){
-            log_error(logger, "Antes de compactar anterior");
             //imprimir_memoria_usuario();
             particion->inicio = particionAnterior->inicio;
             particion->tamanio = particion->tamanio + particionAnterior->tamanio;
@@ -690,9 +641,6 @@ void agrupar_particiones(Particion* particion) {
             free(particionAnterior);
         }
     }
-    log_error(logger, "Después de compactar");
-    //imprimir_memoria_usuario();
-    //if(particionSiguiente)
     
 }
 
@@ -818,7 +766,7 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     int tid = extraer_int_del_buffer(buffer);
     //log_info(logger,"## Escritura - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(valor));
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
-    log_warning(logger, "Escribiendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, valor);
+    log_info(logger, "Escribiendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, valor);
     escribir_memoria(direccion, valor);
 
     //int *memoria = (int*)memoria_usuario->memoria_usuario;
@@ -834,7 +782,6 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     }
 
 
-    log_warning(logger,"CONTENIDO EN MEMORIA AL ESCRIBIR: %s",contenido);
     free(contenido);
 
 
@@ -853,7 +800,7 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     int dato = leer_memoria(direccion);
     //log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
-    log_warning(logger, "Leyendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, dato);
+    log_info(logger, "Leyendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, dato);
     enviar_lectura(dato);
     free(buffer->stream);
     free(buffer);
@@ -880,8 +827,6 @@ int dump_memory(int tid,  int pid){
     int tamanio = contexto_a_dumpear->contexto_proceso->LIMITE - contexto_a_dumpear->contexto_proceso->BASE + 1;
     int base = contexto_a_dumpear->contexto_proceso->BASE;
     int limite =contexto_a_dumpear->contexto_proceso->LIMITE;
-    log_trace(logger,"BASE DEL PROCESO: %d",base);
-    log_trace(logger,"LIMITE DEL PROCESO: %d",limite);
     char *contenido = malloc(limite-base+1);
     contenido[0]= '\0';
     //int arrayValores[tamanio];
@@ -928,7 +873,7 @@ int dump_memory(int tid,  int pid){
     }
     else if (cod_op == MEM_DUMP_ERROR)
     {
-        log_trace(logger, "MEM DUMP ERROR");
+        log_error(logger, "MEM DUMP ERROR");
         close(fd_filesystem); // esto es asi?
         return 0;
     } else {

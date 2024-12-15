@@ -101,4 +101,4 @@ kernel:
 memcheck:
 	rm -f logKernel.log
 	make
-	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/kernel THE_EMPTINESS_MACHINE 16
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./bin/kernel THE_EMPTINESS_MACHINE 16

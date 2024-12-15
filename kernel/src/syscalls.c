@@ -41,7 +41,6 @@ El Kernel c: 12
 void SYS_PROCESS_CREATE(char *archivo, int tamanio_memoria, int prioridad)
 {
     PCB *pcb = crear_pcb(archivo, tamanio_memoria, prioridad);
-    log_trace(logger,"PCB CREADO");
     encolar(cola_new, pcb, mutex_new);
     sem_post(&sem_hay_new);
     
@@ -57,7 +56,7 @@ void PROCESS_EXIT(TCB *tcb)
 {
     if (tcb->tid != 0)
     {
-        log_warning(logger, "Este hilo de tid: %i  con prioridad ; %i no tiene los permisos para finalizar el proceso: %i",tcb->tid ,tcb->prioridad,tcb->pcb_pid);
+        //log_warning(logger, "Este hilo de tid: %i  con prioridad ; %i no tiene los permisos para finalizar el proceso: %i",tcb->tid ,tcb->prioridad,tcb->pcb_pid);
         return;
     }
     PCB *pcb = tcb->pcb;
@@ -90,7 +89,7 @@ void PROCESS_EXIT_ULTIMO_HILO(TCB *tcb)
 void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
     
     TCB *tcb = crear_tcb(pcb, prioridad, archivo_pseudocodigo);
-    log_error(logger,"PID del HILO creado: %i",tcb->pcb->pid);
+    //log_error(logger,"PID del HILO creado: %i",tcb->pcb->pid);
     encolar(cola_new_hilo,tcb,mutex_new);
     sem_post(&sem_crear_hilo);
     //señal d creacion
@@ -161,7 +160,7 @@ void THREAD_CANCEL(int tid, int pid) {
     log_info(logger, "Cancelando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
     encolar(cola_finalizacion, tcb->pcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);
-    liberar_tcb(tcb);
+    liberar_tcb(tcb); // creo q no va
     sem_post(&sem_finalizar_hilo);
 }
 
@@ -176,7 +175,7 @@ void MUTEX_CREATE(char* recurso){
     list_add(pcb->mutex, mutex);
     list_add(mutex_sistema, mutex);
 
-    log_error(logger,"MUTEX:%s CREADO",recurso);
+    //log_error(logger,"MUTEX:%s CREADO",recurso);
     sem_post(&sem_syscall_fin);
     
 }
@@ -188,9 +187,10 @@ void MUTEX_CREATE(char* recurso){
 void MUTEX_LOCK(char* recurso)
 {
     MUTEX *mutex = existe_mutex(recurso);
+    free(recurso);
 
     if(mutex == NULL){
-        log_error(logger, "MUTEX LOCK NULL");
+        //log_error(logger, "MUTEX LOCK NULL");
         return;
     }
 
@@ -204,18 +204,20 @@ void MUTEX_LOCK(char* recurso)
         log_info(logger,"## (%d:%d) - Bloqueado por: <MUTEX>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
     }
     sem_post(&sem_syscall_fin);
+    
 }
 
 void MUTEX_UNLOCK(char *recurso){
     MUTEX *mutex = existe_mutex(recurso);
+    free(recurso);
 
     if(mutex == NULL){
-        log_error(logger, "MUTEX UNLOCK NULL");
+        //log_error(logger, "MUTEX UNLOCK NULL");
+        
         return;
     }
     
     if(mutex->binario == 0 && mutex->asignadoA == tcb_en_ejecucion->tid) {
-        log_warning(logger, "Desbloquear hilo mutex");
         desbloquear_hilo_mutex(mutex);
     }else{
         log_error(logger,"El hilo que desbloqueo el mutex no lo tiene");
@@ -227,6 +229,7 @@ void MUTEX_UNLOCK(char *recurso){
 int DUMP_MEMORY(int pid, int tid){
     int fd_memoria = conectarse_a_memoria();
     int rta = enviar_dump_memory(fd_memoria,tid,pid);
+    close(fd_memoria);
     sem_post(&sem_syscall_fin);
     return rta;
     // implementar logica
@@ -241,17 +244,14 @@ int DUMP_MEMORY(int pid, int tid){
 
 
 void IO(int tiempo, TCB *tcb){
-    log_trace(logger,"TID: %d PID %d ENTRA A IO",tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
-    imprimir_cola(cola_new,mutex_new);
-    printear_colas_y_prioridades();
+    //imprimir_cola(cola_new,mutex_new);
+    //printear_colas_y_prioridades();
     IOStruct *io = malloc(sizeof(IOStruct));
     io->tiempo = tiempo;
     io->tcb=tcb;
     encolar(cola_io,io,mutex_io);
     sem_post(&sem_io);
     //sem_wait(&sem_io_iniciado);
-    log_trace(logger,"TID: %d PID %d INICIO IO",tcb->tid, tcb->pcb_pid);
-    log_trace(logger,"IO Iniciado");
 }
 
 
@@ -259,17 +259,16 @@ void IO(int tiempo, TCB *tcb){
 
 
 void ejecucion_io(){
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+
     while (!fin_ciclo) {
         sem_wait(&sem_io); 
         if(fin_ciclo){
-            log_trace(logger,"entro a fin ciclo");
             return;
         }
         IOStruct *io = desencolar(cola_io,mutex_io);
-        log_info(logger,"entro a ejecucion_io");
-        log_trace(logger,"Tiempo: %d, TCB: %d",io->tiempo,io->tcb->tid);
         sem_post(&sem_io_iniciado);
-        usleep(io->tiempo * 1000);
+        usleep(io->tiempo); // * 1000
         log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", io->tcb->pcb_pid, io->tcb->tid);
         //printear_colas_y_prioridades();
         if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
@@ -286,22 +285,4 @@ void ejecucion_io(){
         sem_post(&sem_hay_ready);
         free(io);
     }
-}
-
-void ejecucion_io2(int tiempo) {
-    log_trace(logger, "A1");
-    
-    // bloquear el tcb en ejec
-    encolar(cola_blocked, tcb_en_ejecucion, mutex_blocked);
-    imprimir_cola(cola_ready, mutex_ready);
-    imprimir_cola(cola_blocked, mutex_blocked);
-    cambiar_estado_hilo(tcb_en_ejecucion, BLOCKED);
-    sem_post(&sem_io);
-    sleep(tiempo);
-    log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
-    // pasar a ready el tcb en ejec
-    TCB *tcb = desencolar(cola_blocked, mutex_blocked);
-    encolar(cola_ready, tcb, mutex_ready);
-    sem_post(&sem_hay_ready);
-    log_trace(logger, "A2");
 }

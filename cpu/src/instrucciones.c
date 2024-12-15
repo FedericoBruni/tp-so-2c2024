@@ -31,9 +31,7 @@ void SET(char *registro, uint32_t valor){
 // que se encuentra en el Registro Dirección y lo almacena en el Registro Datos.
 int write_mem(char* registroDireccion, char* registroDatos){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
-    log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
-        log_error(logger, "ERROR asd");
         actualizar_contexto(fd_memoria);
         sem_wait(&sem_ctx_actualizado);
         segmentation_fault();
@@ -47,7 +45,6 @@ int write_mem(char* registroDireccion, char* registroDatos){
     enviar_write_mem(valor, dir_fisica);
     switch(recibir_operacion(fd_memoria)){
         case WRITE_MEM_RTA:
-            log_trace(logger, "Dato escrito");
             contexto_en_ejecucion->contexto_hilo->Registros->PC++;
             break;
         default:
@@ -69,9 +66,7 @@ int deserializar_rta_read_mem(int fd_memoria) {
 
 int read_mem(char* registroDatos, char* registroDireccion){
     int dir_fisica = calcular_direccion_fisica(contexto_en_ejecucion->contexto_proceso, registroDireccion);
-    log_trace(logger, "Dir física: %i", dir_fisica);
     if (dir_fisica == -1) {
-        log_error(logger, "ERROR");
         actualizar_contexto(fd_memoria);
         sem_wait(&sem_ctx_actualizado);
         segmentation_fault();

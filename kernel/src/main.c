@@ -10,26 +10,42 @@ bool hilo_fin_proc_muerto;
 int fd_cpu_dispatch;
 int fd_cpu_interrupt;
 extern sem_t sem_syscall_fin;
+extern sem_t sem_fin_ejecucion;
 pthread_t hilo_io;
+pthread_t hilo_creacion_de_procesos;
+pthread_t hilo_finalizacion_de_procesos;
+pthread_t hilo_creacion_de_hilos;
+pthread_t hilo_finalizacion_hilos;
+pthread_t hilo_planificador_corto_plazo;
+pthread_t hilo_terminar;
+
+void *handler_señal(int signal){
+    sigset_t set;
+    sigemptyset(&set);
+    sigaddset(&set, SIGINT);  // Bloquea SIGINT
+    pthread_sigmask(SIG_BLOCK, &set, NULL);
+    pthread_create(&hilo_terminar,NULL,terminar_ejecucion,NULL);
+    pthread_join(hilo_terminar,NULL);
+    sigemptyset(&set);
+    sigaddset(&set, SIGINT);  // Desbloquea SIGINT
+    pthread_sigmask(SIG_UNBLOCK, &set, NULL);
+    exit(EXIT_SUCCESS);
+}
+
 
 
 int main(int argc, char *argv[])
 {
 
     iniciar_kernel();
-    signal(SIGINT, terminar_ejecucion);
+    signal(SIGINT,handler_señal);
 
     if (argc < 3)
     {
-        log_error(logger, "Cantidad de argumentos insuficientes");
         exit(EXIT_FAILURE);
     }
     archivo_pseudocodigo = argv[1];
     tamanio_proceso = atoi(argv[2]);
-
-    
-
-    log_info(logger, "ruta de archivo : %s ; tamanio_proceso : %i", archivo_pseudocodigo, tamanio_proceso);
 
     // Conectarse a memoria
     int fd_memoria = conectarse_a_memoria();
@@ -43,6 +59,7 @@ int main(int argc, char *argv[])
     {
         exit(EXIT_FAILURE);
     }
+    close(fd_memoria);
     if (realizar_handshake(logger, fd_cpu_dispatch, HANDSHAKE_KERNEL_CPU_DISPATCH) == -1)
     {
         exit(EXIT_FAILURE);
@@ -52,19 +69,19 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }    
 
-    pthread_t hilo_creacion_de_procesos;
+    
     pthread_create(&hilo_creacion_de_procesos, NULL, (void *)creacion_de_procesos, NULL); // Crea el hilo y le pasa la funcion a ejecutarse
     pthread_detach(hilo_creacion_de_procesos);
 
-    pthread_t hilo_finalizacion_de_procesos;
+    
     pthread_create(&hilo_finalizacion_de_procesos, NULL, (void *)finalizacion_de_procesos, NULL);
     pthread_detach(hilo_finalizacion_de_procesos);
 
-    pthread_t hilo_creacion_de_hilos;
+    
     pthread_create(&hilo_creacion_de_hilos, NULL, (void *)creacion_de_hilos, NULL);
     pthread_detach(hilo_creacion_de_hilos);
 
-    pthread_t hilo_finalizacion_hilos;
+    
     pthread_create(&hilo_finalizacion_hilos,NULL,(void*) finalizacion_de_hilos,NULL);
     pthread_detach(hilo_finalizacion_hilos);
 
@@ -83,13 +100,13 @@ int main(int argc, char *argv[])
     pthread_create(&hilo_io, NULL, (void *)ejecucion_io, NULL);
     pthread_detach(hilo_io);
 
-    pthread_t hilo_planificador_corto_plazo;
+    
     pthread_create(&hilo_planificador_corto_plazo, NULL, (void *)planificador_corto_plazo, NULL);
     pthread_join(hilo_planificador_corto_plazo,NULL);
 
 
 
     //terminar_ejecucion(fd_cpu_dispatch, fd_memoria, fd_cpu_interrupt);
-
+    sem_wait(&sem_fin_ejecucion);
     return 0;
 }

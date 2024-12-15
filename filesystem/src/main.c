@@ -15,9 +15,7 @@ int main(int argc, char *argv[])
     
 
     while(1){
-        log_trace(logger,"Por aceptar serv");
         int cliente_fd = accept(server_fd,NULL,NULL);
-        log_trace(logger,"Ya acepte serv");
         if (cliente_fd == -1)
 	    {
 		    log_error(logger, "Error al aceptar cliente: %s\n", "Memoria");

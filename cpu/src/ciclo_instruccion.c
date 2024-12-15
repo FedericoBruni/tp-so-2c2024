@@ -24,7 +24,7 @@ void ciclo_de_instruccion() {
         sem_wait(&sem_ejecucion);
         if(fin_ciclo) return;
         instruccion = fetch();
-        log_warning(logger, "<TID:%i> <PID: %d>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid,contexto_en_ejecucion->contexto_hilo->pid ,instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
+        log_info(logger, "<TID:%i> <PID: %d>, <INSTRUCCIÓN: %s>, <PC: %i>", contexto_en_ejecucion->contexto_hilo->tid,contexto_en_ejecucion->contexto_hilo->pid ,instruccion, contexto_en_ejecucion->contexto_hilo->Registros->PC);
         if(instruccion){
             char* instruccion_a_ejecutar = decode(instruccion);
             if(instruccion_a_ejecutar != NULL && string_equals_ignore_case(instruccion_a_ejecutar,"SUSPPROCESO")){
@@ -48,7 +48,7 @@ void ciclo_de_instruccion() {
             desalojar_por_quantum();
         }
         else sem_post(&sem_ejecucion);
-        log_error(logger,"SALGO DE SEM POST EJEC");
+        //log_error(logger,"SALGO DE SEM POST EJEC");
 
         //free(instruccion);
 
@@ -62,16 +62,16 @@ void ciclo_de_instruccion() {
 // la Memoria y se devuelve el TID al Kernel con motivo de la interrupción. 
 // Caso contrario, se descarta la interrupción.
 bool check_interrupt() {
-    log_error(logger,"Entro a interrupt");
+    //log_error(logger,"Entro a interrupt");
     pthread_mutex_lock(&mutex_interrupt);
     if(flag_interrupt){
-        log_error(logger,"Hay flag");
+        //log_error(logger,"Hay flag");
         flag_interrupt = false;
 		//log_info(logger, "## Llega interrupción al puerto Interrupt");
         pthread_mutex_unlock(&mutex_interrupt);
         return true;
     }
-    log_error(logger,"No Hay flag");
+    //log_error(logger,"No Hay flag");
     pthread_mutex_unlock(&mutex_interrupt);
     return false;
 }
@@ -82,7 +82,7 @@ void enviar_fin_de_proceso(){
 }
 
 void suspender_proceso(){
-    log_warning(logger, "SUSPENDER PROCESO");
+    //log_warning(logger, "SUSPENDER PROCESO");
     int cod_op = SUSP_PROCESO; //SUSP_PROCESO;
     send(cliente_fd_dispatch, &cod_op,sizeof(cod_op),0);
 }
@@ -230,7 +230,7 @@ char* decode(char* instruccion) {
         int tid = atoi(lista[1]);
         THREAD_CANCEL(tid, contexto_en_ejecucion->contexto_hilo->pid);
         if(tid == contexto_en_ejecucion->contexto_hilo->tid){
-            log_error(logger, "IF");
+            //log_error(logger, "IF");
             string_array_destroy(lista);
             return "SUSPPROCESO";
         }
@@ -252,7 +252,6 @@ char* decode(char* instruccion) {
         string_array_destroy(lista);
         return "OK";
     } else if (string_equals_ignore_case(corregir_linea(instr), "THREAD_EXIT")){
-        log_trace(logger, "THEXIT");
         string_array_destroy(lista);
         THREAD_EXIT();
         return "SUSPPROCESO";

@@ -26,10 +26,12 @@ extern char *algoritmo_planificacion;
 extern pthread_mutex_t mutex_fd_memoria;
 bool hay_mem = true;
 extern bool fin_ciclo;
+extern t_list *pcbs_aceptados;
 
 void creacion_de_procesos(void)
 {
     hilo_creacion_muerto = false;
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     while (true)
     {
         
@@ -44,10 +46,12 @@ void creacion_de_procesos(void)
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_memoria(fd_memoria, pcb, SOLICITAR_MEMORIA_PROCESO);
         pthread_mutex_unlock(&mutex_fd_memoria);
+        close(fd_memoria);
         switch (resultado)
         {
         case 1:
             //log_info(logger, "Memoria reservada correctamente");
+            list_add(pcbs_aceptados, pcb);
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
             sem_post(&sem_hay_memoria);
             THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
@@ -70,6 +74,8 @@ void creacion_de_procesos(void)
 void finalizacion_de_procesos(void)
 {
     hilo_fin_proc_muerto = false;
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+
     while (true)
     {
         //log_error(logger,"ANTES DE FINALIZAR PROC");
@@ -83,14 +89,16 @@ void finalizacion_de_procesos(void)
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_proceso(fd_memoria, pcb->pid, FINAL_PROCESO);
         pthread_mutex_unlock(&mutex_fd_memoria);
+        close(fd_memoria);
         switch (resultado)
         {
         case 1:
+            list_remove_element(pcbs_aceptados, pcb);
             log_info(logger, "## Finaliza el proceso <%i>", pcb->pid);
             //printear_colas_y_prioridades();
             liberar_pcb(pcb);
             //printear_colas_y_prioridades();
-            imprimir_cola_new(cola_new,mutex_new);
+            //imprimir_cola_new(cola_new,mutex_new);
             if(queue_size(cola_new)>=1){
                 sem_post(&sem_hay_new);
             }
@@ -106,7 +114,8 @@ void finalizacion_de_procesos(void)
 }
 
 void creacion_de_hilos(void){
-    
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+
     while(true){
         
         sem_wait(&sem_crear_hilo);
@@ -117,6 +126,7 @@ void creacion_de_hilos(void){
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = solicitar_creacion_hilo(fd_memoria, tcb, SOLICITAR_CREACION_HILO);
         pthread_mutex_unlock(&mutex_fd_memoria);
+        close(fd_memoria);
         switch (resultado){
             case 1:
                 if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
@@ -147,6 +157,8 @@ void creacion_de_hilos(void){
 
 void finalizacion_de_hilos(void)
 {
+    pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
+
     while (true)
     {
         sem_wait(&sem_finalizar_hilo); 
@@ -162,15 +174,16 @@ void finalizacion_de_hilos(void)
         pthread_mutex_lock(&mutex_fd_memoria);
         int resultado = notificar_finalizacion_hilo(fd_memoria, tcb->tid, tcb->pcb_pid,FINAL_HILO);
         pthread_mutex_unlock(&mutex_fd_memoria);
+        close(fd_memoria);
         switch (resultado)
         {
         case 1:
-            log_error(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid); // dsp de esto ya no existe el tcb.
-            log_trace(logger,"LISTA TIDS ANTES DE REMOVER: %d",list_size(tcb->pcb->tids));
+            log_info(logger, "## Finaliza el hilo <%i> del proceso <%i>", tcb->tid, tcb->pcb_pid); // dsp de esto ya no existe el tcb.
+            //log_trace(logger,"LISTA TIDS ANTES DE REMOVER: %d",list_size(tcb->pcb->tids));
             list_remove_element(tcb->pcb->tids, tcb->tid);
             list_remove_element(tcb->pcb->threads, tcb);
-            log_trace(logger,"LISTA TIDS DESPUES DE REMOVER: %d",list_size(tcb->pcb->tids));
-            printear_colas_y_prioridades();
+            //log_trace(logger,"LISTA TIDS DESPUES DE REMOVER: %d",list_size(tcb->pcb->tids));
+            //printear_colas_y_prioridades();
             liberar_tcb(tcb);
             desbloquear_bloqueados_por_hilo(tidBloqueante,pidhilo);
             sem_post(&sem_syscall_fin);

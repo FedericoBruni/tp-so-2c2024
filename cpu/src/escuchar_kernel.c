@@ -45,7 +45,6 @@ void escuchar_mensajes_kernel_dispatch(void)
 			//log_info(logger, "## (%d:%d) - Solicito Contexto Ejecucion", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid);
 			break;
 		case PROCESO_CREADO:
-			log_error(logger,"PROCESO CREADO");
 			sem_post(&sem_proceso_creado);
 			break;
 		case HILO_CREADO:
@@ -99,7 +98,6 @@ void escuchar_mensajes_kernel_dispatch(void)
 			cliente_fd_dispatch = -1;
 			fin_ciclo = true;
 			sem_post(&sem_ejecucion);
-			log_trace(logger,"FIN CICLO TRUE");
 			return;
 		
 		default:

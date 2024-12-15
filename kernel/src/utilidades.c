@@ -18,7 +18,7 @@ t_queue *cola_finalizacion;
 t_queue *cola_fin_pcb;
 t_queue *cola_io;
 t_queue *cola_new_hilo;
-TCB *tcb_en_ejecucion;
+TCB *tcb_en_ejecucion = NULL;
 int autoincremental_pcb = 0;
 pthread_mutex_t mutex_new;
 pthread_mutex_t mutex_ready;
@@ -40,16 +40,24 @@ sem_t sem_syscall_fin;
 sem_t sem_io;
 sem_t sem_exec_recibido;
 sem_t sem_io_iniciado;
-PCB *pcb_en_ejecucion;
+sem_t sem_fin_ejecucion;
+PCB *pcb_en_ejecucion = NULL;
 t_list* colas_prioridades;
 t_list* mutex_sistema;
-TCB *tcb_anterior;
+t_list* pcbs_aceptados;
+TCB *tcb_anterior = NULL;
 extern char* estado_lock;
 extern int fd_cpu_dispatch;
 //extern int fd_memoria;
 extern int fd_cpu_interrupt;
 extern pthread_t hilo_io;
+extern pthread_t hilo_creacion_de_procesos;
+extern pthread_t hilo_finalizacion_de_procesos;
+extern pthread_t hilo_creacion_de_hilos;
+extern pthread_t hilo_finalizacion_hilos;
+extern pthread_t hilo_planificador_corto_plazo;
 bool fin_ciclo=false;
+
 
 
 void iniciar_kernel(void)
@@ -74,6 +82,7 @@ void iniciar_kernel(void)
     colas_prioridades = list_create();
     cola_new_hilo = queue_create();
     mutex_sistema = list_create();
+    pcbs_aceptados = list_create();
     iniciar_semaforos();
 }
 
@@ -99,6 +108,7 @@ void iniciar_semaforos(void){
     inicializar_semaforo(&sem_io, "sem_io", 0);
     inicializar_semaforo(&sem_exec_recibido,"sem exec",0);
     inicializar_semaforo(&sem_io_iniciado, "sem_io_iniciado", 0);
+    inicializar_semaforo(&sem_fin_ejecucion, "sem_fin_ejecucion", 0);
     
 
 
@@ -135,10 +145,20 @@ int conectarse_a_memoria(void)
 
 void terminar_ejecucion()
 {
-    close(fd_cpu_dispatch);
-    //close(fd_memoria);
-    close(fd_cpu_interrupt);
+    log_info(logger, "Finalizando ejecucion de KERNEL");
+    // pthread_cancel(hilo_io);
+    // pthread_cancel(hilo_creacion_de_procesos);
+    // pthread_cancel(hilo_finalizacion_de_procesos);
+    // pthread_cancel(hilo_creacion_de_hilos);
+    // pthread_cancel(hilo_finalizacion_hilos);
+    // pthread_cancel(hilo_planificador_corto_plazo);
 
+    for(int i = 0; i < list_size(pcbs_aceptados);i++){
+            liberar_pcb(list_get(pcbs_aceptados,i));
+    }
+    list_destroy(pcbs_aceptados);
+    close(fd_cpu_dispatch);
+    close(fd_cpu_interrupt);
     queue_destroy_and_destroy_elements(cola_new, liberar_pcb);
     queue_destroy_and_destroy_elements(cola_ready, liberar_tcb);
     queue_destroy_and_destroy_elements(cola_blocked, liberar_tcb);
@@ -147,6 +167,9 @@ void terminar_ejecucion()
     queue_destroy_and_destroy_elements(cola_fin_pcb, liberar_pcb);
     queue_destroy_and_destroy_elements(cola_new_hilo,liberar_tcb);
 
+
+    
+    
     if (string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
         for(int i = 0; i < list_size(colas_prioridades);i++){
             COLA_PRIORIDAD *cola_prioridad = list_get(colas_prioridades, i);
@@ -173,11 +196,11 @@ void terminar_ejecucion()
     }
     queue_destroy(cola_io);
     if (tcb_en_ejecucion) liberar_tcb(tcb_en_ejecucion);
-    if (pcb_en_ejecucion) liberar_pcb(pcb_en_ejecucion);
-    
-    log_info(logger, "Finalizando ejecucion de KERNEL");
-    
+    if (pcb_en_ejecucion){
+        liberar_pcb(pcb_en_ejecucion);
+    }
 
+    
     fin_ciclo=true;
     sem_post(&sem_hay_new);
     sem_post(&sem_finalizar_proceso);
@@ -188,6 +211,7 @@ void terminar_ejecucion()
     sleep(1);
     config_destroy(config);
     log_destroy(logger);
+    sem_post(&sem_fin_ejecucion);
     //exit(EXIT_SUCCESS);
 }
 
@@ -315,22 +339,22 @@ void bloquear_hilo_mutex(t_list* cola_bloqueados, TCB* tcb){
 
 void desbloquear_hilo_mutex(MUTEX *mutex){
     if (queue_is_empty(mutex->cola_bloqueados)){
-        log_error(logger,"TCB es NULL en desbloquear");
+        //log_error(logger,"TCB es NULL en desbloquear");
         mutex->asignadoA = NULL;
         mutex->binario = 1;
         estado_lock = "LIBRE";
     }else{
         TCB *tcb = queue_pop(mutex->cola_bloqueados);
         if(tcb != NULL){
-            log_error(logger,"TCB NO ES NULL EN DESBLOQUEAR MUTEX");
+            //log_error(logger,"TCB NO ES NULL EN DESBLOQUEAR MUTEX");
             if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
             COLA_PRIORIDAD *cola = existe_cola_con_prioridad(tcb->prioridad);
                 if(cola != NULL){
                     encolar_multinivel(cola, tcb);
-                    log_error(logger, "Encolar en desbloquear_hilo_mutex()");
+                    //log_error(logger, "Encolar en desbloquear_hilo_mutex()");
                 } else{
                     COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-                    log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+                    //log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
                     encolar_multinivel(cola_nueva, tcb);
                 }         
             }else{
@@ -350,7 +374,6 @@ void asignar_a_hilo_mutex(MUTEX *mutex, TCB *tcb){
 
 int bloquear_hilo_syscall(TCB *tcb,int tid){
     bool hayHilo= false;
-    log_warning(logger, "SIZE de tids: %i", list_size(pcb_en_ejecucion->tids));
     for (int i = 0; i < list_size(pcb_en_ejecucion->tids); i++) {
         int tid_actual = list_get(pcb_en_ejecucion->tids, i);
         if (tid_actual == tid) hayHilo = true;
@@ -358,7 +381,7 @@ int bloquear_hilo_syscall(TCB *tcb,int tid){
     }
     
     if(!hayHilo){
-        log_error(logger,"EL TID PASADO NO EXISTE O YA FINALIZÓ, NO SE BLOQUEA");
+        //log_error(logger,"EL TID PASADO NO EXISTE O YA FINALIZÓ, NO SE BLOQUEA");
         return 0;
     }
     
@@ -447,7 +470,6 @@ bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
         TCB* tcb = (TCB*) elemento;
         if (tcb->pcb_pid == pid) {
             respuesta = 1;
-            log_warning(logger, "Tcb encontrado en buscar_cola: %i", tcb->tid);
         }
         queue_push(cola_aux,elemento);
     }
@@ -455,7 +477,6 @@ bool buscar_en_cola(t_queue *cola, pthread_mutex_t mutex, int pid){
         queue_push(cola,queue_pop(cola_aux));
     }
     queue_destroy(cola_aux);
-    log_warning(logger, "Respuesta de buscar_en_cola: %i", respuesta);
     return respuesta;
 }
 
@@ -486,7 +507,7 @@ void vaciar_colas_prioridades(int pid) {
         while (tcb && tcb->tid != 0) {
             if(tcb->pcb_pid != pid){
                 queue_push(cola_aux,tcb);
-                log_error(logger,"PID: %d TID:%d NO SE VACIA",tcb->pcb_pid,tcb->tid);
+                //log_error(logger,"PID: %d TID:%d NO SE VACIA",tcb->pcb_pid,tcb->tid);
             }else{
                 liberar_tcb(tcb);
             }

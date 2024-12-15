@@ -15,14 +15,14 @@ extern t_queue *cola_fin_pcb;
 void liberar_tcb(void *ptr_tcb)
 {
     TCB *tcb = (TCB *)ptr_tcb;
-    if(!tcb) log_error(logger,"LIBERANDO TCB NULL");
-    log_warning(logger, "Liberando <TID: %i>", tcb->tid);
+    //log_warning(logger, "Liberando <TID: %i>", tcb->tid);
     liberar_registros(tcb->Registros);
     if(tcb->tid == tcb_en_ejecucion->tid && tcb->pcb_pid == tcb_en_ejecucion->pcb_pid){
         tcb_en_ejecucion = NULL;  // NO TOCAR ROMPE TODO
     }
-    log_trace(logger,"ARCHIVO PS ANTES DE FREE: %s",tcb->archivo_pseudocodigo);
-    if(tcb->archivo_pseudocodigo && tcb->pcb_pid != 0) free(tcb->archivo_pseudocodigo);
+    if((tcb->archivo_pseudocodigo && tcb->pcb_pid != 0) || tcb->tid != 0  ){
+     free(tcb->archivo_pseudocodigo);
+    }
     free(tcb);
 }
 
@@ -37,7 +37,7 @@ void liberar_pcb(void *ptr_pcb)
 {
     PCB *pcb = (PCB *)ptr_pcb;
     list_destroy(pcb->mutex); // and destroy elements? cada elemento es un mutex con memoria dinamica??
-    log_warning(logger, "Liberando <PID:%i>, con <%i THREADS>", pcb->pid, list_size(pcb->threads));
+    //log_warning(logger, "Liberando <PID:%i>, con <%i THREADS>", pcb->pid, list_size(pcb->threads));
     
     if(pcb->pid == pcb_en_ejecucion->pid){
         pcb_en_ejecucion =NULL;
@@ -59,7 +59,7 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
     PCB *pcb = malloc(sizeof(PCB));
     pcb->pid = autoincremental_pcb;
     autoincremental_pcb++;
-    log_error(logger,"AUTOINCREMENTAL PCB: %d",autoincremental_pcb);
+    //log_error(logger,"AUTOINCREMENTAL PCB: %d",autoincremental_pcb);
     pcb->status = NEW;
     pcb->tids = list_create();
     pcb->autoincremental_tcb = 0;

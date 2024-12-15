@@ -35,11 +35,7 @@ int main(int argc, char *argv[])
     // pthread_detach(hilo_kernel_memoria);
 
     while(1){
-        log_trace(logger,"Por aceptar serv");
         cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
-
-        
-        log_trace(logger,"Ya acepte serv");
         if (cliente_fd_kernel == -1)
 	    {
 		    log_error(logger, "Error al aceptar cliente: %s\n", "Kernel");

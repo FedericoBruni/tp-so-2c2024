@@ -103,7 +103,6 @@ int enviar_exec_a_cpu(int tid, int pid){
     int cod_op = recibir_operacion(fd_cpu_dispatch);
     switch(cod_op){ // se recibe con un Motivo por el q fue desalojado
         case EXEC_RECIBIDO:
-            log_trace(logger,"CPU ejecutando el hilo: %d del proceso: %d\n",tid,pid);
             sem_post(&sem_cpu_ejecutando);
             sem_post(&sem_exec_recibido);
             return 1;
@@ -154,7 +153,6 @@ int esperar_respuesta(){
             break;
         case SYSCALL_PROCESS_CREATE:
             log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
-            //log_trace(logger,"PROCESS CREATE RECIBIDO");
             deserializar_process_create();
             sem_wait(&sem_syscall_fin);
             //log_error(logger,"MANDO RTA");
@@ -218,16 +216,11 @@ int esperar_respuesta(){
         case SYSCALL_PROCESS_EXIT:
             //log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
             PROCESS_EXIT(tcb_en_ejecucion);
-            log_trace(logger,"ANTES DE SEM_SYS_FIN");
             sem_wait(&sem_syscall_fin);
-            log_trace(logger,"DSPS DE SEM_SYS_FIN");
             int process_exit = FIN_PROCESO;
             send(fd_cpu_dispatch, &process_exit, sizeof(op_code), 0);
-            log_trace(logger,"MANDO RTA PROC EXIT");
             break;
         case FIN_DE_ARCHIVO:
-            //sleep(5);
-            log_warning(logger, "Fin de archivo");
             if (debe_finalizar_proceso()){
                 log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
                 PROCESS_EXIT_ULTIMO_HILO(tcb_en_ejecucion); // x ahora, ver si queda o q
@@ -251,9 +244,7 @@ int esperar_respuesta(){
             if (!rta) {
                 res_dump = MEM_DUMP_ERROR;
                 PROCESS_EXIT(tcb_en_ejecucion);
-                log_trace(logger, "Dump memory error -> Process exit");
                 sem_wait(&sem_syscall_fin);
-                log_trace(logger, "Dump memory error -> Process exit (dsp sem_wait)");
                 send(fd_cpu_dispatch, &res_dump, sizeof(op_code), 0);
                 sem_post(&sem_puede_ejecutar);
                 return;
@@ -304,6 +295,7 @@ void deserializar_process_create(){
     SYS_PROCESS_CREATE(archivo_pseudocodigo,tam_archivo,prio_hilo);
     free(buffer->stream);
     free(buffer);
+    
 }
 
 void deserializar_thread_create(){
@@ -397,7 +389,7 @@ int enviar_dump_memory(int socket_memoria, int tid, int pid){
     }
     else if (cod_op == MEM_DUMP_ERROR)
     {
-        log_trace(logger, "MEM DUMP ERROR");
+        log_error(logger, "MEM DUMP ERROR");
         return 0;
     } else {
         return -1;
