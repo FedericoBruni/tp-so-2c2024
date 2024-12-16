@@ -38,10 +38,11 @@ int main(int argc, char *argv[])
         cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
         if (cliente_fd_kernel == -1)
 	    {
-		    log_error(logger, "Error al aceptar cliente: %s\n", "Kernel");
+		    log_error(logger, "Error al aceptar Kernel");
 		    exit(EXIT_FAILURE);
 	    }
-        log_info(logger, "Se conecto el cliente: %s\n", "Kernel");
+        
+        log_info(logger, "## Kernel Conectado - FD del socket: %d", cliente_fd_kernel);
 
         pthread_t hilo_kernel_memoria;
         pthread_create(&hilo_kernel_memoria, NULL, (void *)escuchar_mensajes_kernel, NULL);

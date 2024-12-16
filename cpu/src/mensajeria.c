@@ -127,6 +127,7 @@ void actualizar_contexto(int fd_memoria)
     enviar_paquete(paquete, fd_memoria);
     pthread_mutex_unlock(&mutex_conexion_memoria);
     eliminar_paquete(paquete);
+    log_info(logger, "## (%d:%d) - Actualizo Contexto Ejecucion", contexto_en_ejecucion->contexto_hilo->pid, contexto_en_ejecucion->contexto_hilo->tid, contexto_en_ejecucion->contexto_hilo->Registros->PC);
 
     switch (recibir_operacion(fd_memoria))
     {
@@ -138,7 +139,7 @@ void actualizar_contexto(int fd_memoria)
         log_error(logger, "Error actualizando el contexto");
         break;
     default:
-        log_error(logger,"DEFAULT");
+        log_error(logger,"Error desconocido actualizando el contexto");
         break;
     }
 }
@@ -150,6 +151,7 @@ void enviar_write_mem(int valor, int direccion_fisica)
     cargar_int_al_buffer(buffer, direccion_fisica);
     cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->pid);
     cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->tid);
+    log_info(logger, "## TID: <%d> - Acción: <ESCRIBIR> - Dirección Física: <%d>", contexto_en_ejecucion->contexto_hilo->tid, direccion_fisica);
     t_paquete *paquete = crear_paquete(WRITE_MEM, buffer);
     pthread_mutex_lock(&mutex_conexion_memoria);
     enviar_paquete(paquete, fd_memoria);
@@ -163,6 +165,7 @@ void enviar_read_mem(int direccion_fisica)
     cargar_int_al_buffer(buffer, direccion_fisica);
     cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->pid);
     cargar_int_al_buffer(buffer, contexto_en_ejecucion->contexto_hilo->tid);
+    log_info(logger, "## TID: <%d> - Acción: <LEER> - Dirección Física: <%d>", contexto_en_ejecucion->contexto_hilo->tid, direccion_fisica);
     t_paquete *paquete = crear_paquete(READ_MEM, buffer);
     pthread_mutex_lock(&mutex_conexion_memoria);
     enviar_paquete(paquete, fd_memoria);

@@ -50,15 +50,11 @@ void fifo()
         sem_wait(&sem_hay_ready);
         if(fin_ciclo) return;
         sem_wait(&sem_puede_ejecutar);
-        //log_trace(logger, "Cola Ready:");
-        //imprimir_cola(cola_ready, mutex_ready);
-        //log_trace(logger, "Cola Blocked:");
-        //imprimir_cola(cola_blocked, mutex_blocked);
         TCB *tcb = desencolar(cola_ready, mutex_ready);
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_trace(logger, "Planificando TCB %d,PID %d con algoritmo FIFO\n", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <FIFO>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
             enviar_exec_a_cpu(tcb->tid, tcb->pcb_pid);
@@ -82,7 +78,7 @@ void prioridad()
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "Planificando TCB %d,PID %d con algoritmo PRIORIDADES\n", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <PRIORIDADES>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
             enviar_exec_a_cpu(tcb->tid, tcb->pcb_pid);
@@ -96,22 +92,15 @@ void multinivel()
 
     while (1)
     {
-        //log_error(logger, "ANTES DE READY");
         sem_wait(&sem_hay_ready);
         if(fin_ciclo) return;
-        //log_error(logger, "DESPUES DE READY");
         sem_wait(&sem_puede_ejecutar);
-        //log_error(logger, "PUEDE EJECUTAR");
-        //printear_colas_y_prioridades();
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
-        //log_info(logger, "Cola elegida:%i", cola->prioridad); // rompe pq cola es NULL por alguna razon
-        //imprimir_cola(cola->cola_prioridad, cola->mutex);
         TCB *tcb = desencolar_multinivel(cola);
-        //log_warning(logger, "TCB elegido <TID:%i>,<PID:%i>", tcb->tid, tcb->pcb_pid);
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "Planificando <TID:%i>,<PID:%i>, <ALGORITMO: MULTINIVEL>", tcb_en_ejecucion->tid, tcb_en_ejecucion->pcb_pid);
+            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <MULTINIVEL>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
 

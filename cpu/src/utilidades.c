@@ -10,6 +10,7 @@ char *log_level;
 CONTEXTO_CPU *contexto_en_ejecucion;
 extern int fd_memoria;
 extern int cliente_fd_dispatch;
+extern int cliente_fd_interrupt;
 sem_t sem_ejecucion;
 sem_t sem_proceso_creado;
 sem_t sem_mutex_creado;
@@ -89,12 +90,12 @@ void liberar_contexto_proceso(CONTEXTO_CPU *contexto_proceso) {
     free(contexto_proceso);
 }
 
-void terminar_ejecucion(int servidor_dispatch, int servidor_interrupt, int socket_memoria)
+void terminar_ejecucion()
 {
-    log_info(logger, "Finalizando ejecución de CPU");
-    close(servidor_dispatch);
-    close(servidor_interrupt);
-    close(socket_memoria);
+    log_info(logger, "## Finalizando ejecución de CPU");
+    close(cliente_fd_dispatch);
+    close(cliente_fd_interrupt);
+    close(fd_memoria);
     config_destroy(config);
     log_destroy(logger);
     liberar_contexto_proceso(contexto_en_ejecucion);
@@ -111,10 +112,8 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
 	t_buffer* buffer = recibir_buffer_completo(socket_cliente);
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
-    //log_info(logger, "Recibido EXEC (%i y %i):",tid ,pid);
 
     //solicitar_contexto_ejecucion(fd_memoria, tid, pid);
-    //log_info(logger,"Solicitando contexto de: %d hilo: %d",pid,tid);
     if(contexto_en_ejecucion){
         liberar_contexto_proceso(contexto_en_ejecucion);
     }
@@ -129,14 +128,12 @@ void recibir_exec(t_log *logger, int socket_cliente, op_code handshake)
     // sleep(1);
     // int resultado_ejecucion = OK_EJECUCION;
     // send(socket_cliente, &resultado_ejecucion,sizeof(op_code),0);
-    // log_info(logger,"Ejecucion finalizada");
 }
 
 void procesar_fin_quantum(t_log *logger, int socket_cliente, op_code handshake){
     t_buffer* buffer = recibir_buffer_completo(socket_cliente);
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
-    //log_info(logger, "Recibida interrupcion de Fin de Quantum (%i y %i):",tid ,pid);
     if(contexto_en_ejecucion->contexto_hilo->tid == tid && contexto_en_ejecucion->contexto_hilo->pid == pid){
         pthread_mutex_lock(&mutex_interrupt);
         flag_interrupt = true;
@@ -157,6 +154,7 @@ CONTEXTO_CPU* solicitar_contexto_ejecucion(int tid, int pid){
     cargar_int_al_buffer(buffer, tid);
     cargar_int_al_buffer(buffer, pid);
     t_paquete *paquete = crear_paquete(SOLICITAR_CONTEXTO, buffer);
+    log_info(logger,"## TID: <%d> - Solicito Contexto Ejecución",tid);
     enviar_paquete(paquete, fd_memoria);
     
     eliminar_paquete(paquete);
@@ -165,10 +163,9 @@ CONTEXTO_CPU* solicitar_contexto_ejecucion(int tid, int pid){
     switch(cod_op){ 
         case CONTEXTO_ENVIADO:
             CONTEXTO_CPU *contexto_cpu = recibir_contexto(fd_memoria);
-            //log_info(logger,"Contexto del proceso: %d, hilo %d recibido",contexto_cpu->contexto_proceso->pid,contexto_cpu->contexto_hilo->tid);
             return contexto_cpu;
         default:
-            printf("default?, cod_op=%i\n", cod_op);
+            log_error(logger, "Error solicitando el contexto de ejecucion");
             return 0;
     }
 }

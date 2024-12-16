@@ -1,4 +1,5 @@
 #include "main.h"
+#include "signal.h"
 
 extern char *puerto_escucha_dispatch;
 extern char *puerto_escucha_interrupt;
@@ -7,9 +8,11 @@ int cliente_fd_dispatch;
 int cliente_fd_interrupt;
 int fd_memoria;
 
+
 int main(int argc, char *argv[])
 {
     iniciar_cpu();
+    signal(SIGINT, terminar_ejecucion);
 
     // Iniciar servidores
     int server_fd_dispatch = iniciar_servidor(logger, puerto_escucha_dispatch);
@@ -42,11 +45,11 @@ int main(int argc, char *argv[])
     
     
 
-    while (1)
-    { // faltaria algun otro hilo en join que bloquee a terminar_ejecucion
-        if (cliente_fd_interrupt == -1 && cliente_fd_dispatch == -1)
-            terminar_ejecucion(server_fd_dispatch, server_fd_interrupt, fd_memoria);
-    }
+    // while (1)
+    // { // faltaria algun otro hilo en join que bloquee a terminar_ejecucion
+    //     if (cliente_fd_interrupt == -1 && cliente_fd_dispatch == -1)
+    //         terminar_ejecucion(server_fd_dispatch, server_fd_interrupt, fd_memoria);
+    // }
 
     return 0;
 }

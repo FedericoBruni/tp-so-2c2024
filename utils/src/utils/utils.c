@@ -44,8 +44,6 @@ int esperar_cliente(int socket_servidor, t_log *logger, char *cliente)
 		log_error(logger, "Error al aceptar cliente: %s\n", cliente);
 		exit(EXIT_FAILURE);
 	}
-	log_info(logger, "## Kernel Conectado - FD del socket: %d", socket_cliente);
-
 	return socket_cliente;
 }
 
@@ -76,8 +74,6 @@ int crear_conexion(char *ip, char *puerto, t_log *logger)
 	}
 
 	freeaddrinfo(server_info);
-	if (socket_cliente != -1)
-		log_info(logger, "Conexión exitosa");
 	return socket_cliente;
 }
 
@@ -110,7 +106,7 @@ int iniciar_servidor(t_log *logger, char *puerto)
 	listen(socket_servidor, SOMAXCONN);
 
 	freeaddrinfo(server_info);
-	log_trace(logger, "Servidor levantado y listo para escuchar en el puerto: %s", puerto);
+	log_trace(logger, "## Servidor levantado y listo para escuchar en el puerto: %s", puerto);
 	return socket_servidor;
 }
 
@@ -140,7 +136,7 @@ int recibir_operacion(int socket_cliente)
 	int cod_op;
 
 	if (recv(socket_cliente, &cod_op, sizeof(int), MSG_WAITALL) > 0){
-		printf("Cod_Op: %s + timestamp: %s\n", desc_code_op[cod_op], obtenerTimeStamp2());
+		//printf("Cod_Op: %s + timestamp: %s\n", desc_code_op[cod_op], obtenerTimeStamp2());
 		return cod_op;
 	}
 		
@@ -154,7 +150,7 @@ int recibir_operacion(int socket_cliente)
 void aceptar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 {
 	int result_ok = 0;
-	log_info(logger, "Recibido handshake: %s", desc_code_op[handshake]);
+	log_info(logger, "## Recibido Handshake: <%s>", desc_code_op[handshake]);
 	send(socket_cliente, &result_ok, sizeof(int), 0);
 }
 
@@ -183,15 +179,15 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	recv(socket_cliente, &resultado, sizeof(int), MSG_WAITALL);
 	if (socket_cliente == -1)
 	{
-		log_warning(logger, "Handshake enviado - Servidor apagado");
+		log_warning(logger, "## Handshake enviado - Servidor apagado");
 	}
 	else if (resultado != -1)
 	{
-		log_info(logger, "Handshake OK %s", desc_code_op[handshake]);
+		log_info(logger, "## Handshake OK %s", desc_code_op[handshake]);
 	}
 	else
 	{
-		log_error(logger, "Handshake rechazado");
+		log_error(logger, "## Handshake rechazado");
 	}
 
 	return resultado;
@@ -294,7 +290,6 @@ void recibir_mensaje(t_log *logger, int socket_cliente)
 {
 	int size;
 	char *buffer = recibir_buffer(&size, socket_cliente);
-	log_info(logger, "Me llego el mensaje %s", buffer);
 	free(buffer);
 }
 

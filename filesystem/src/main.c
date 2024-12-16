@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		    log_error(logger, "Error al aceptar cliente: %s\n", "Memoria");
 		    exit(EXIT_FAILURE);
 	    }
-        log_info(logger, "Se conecto el cliente: %s\n", "Memoria");
+        log_info(logger, "## Memoria Conectado - FD del socket: %d", cliente_fd);
 
         pthread_t hilo_fs_memoria;
         pthread_create(&hilo_fs_memoria, NULL, (void *)escuchar_mensajes_memoria, cliente_fd);

@@ -52,7 +52,7 @@ int conectarse_a_filesystem(void)
 
 void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int socket_servidor_cpu)
 {
-    log_info(logger, "Finalizando ejecución de MEMORIA");
+    log_info(logger, "## Finalizando ejecución de MEMORIA");
     close(socket_conexion);
     close(socket_servidor_kernel);
     close(socket_servidor_cpu);
@@ -103,7 +103,7 @@ void enviar_contexto(int cliente_fd_dispatch){
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
 
-    log_info(logger, "## Contexto Solicitado - (PID:TID) - (%d:%d)",pid,tid);
+    log_info(logger, "## Contexto <Solicitado> - (PID:TID) - (<%d>:<%d>)",pid,tid);
 
     CONTEXTO_CPU *contexto_cpu;
     contexto_cpu = buscar_contextos(tid,pid);
@@ -142,7 +142,7 @@ void enviar_instruccion(int cliente_fd_dispatch) {
 
     char* instruccion = obtener_instruccion(pc, pid, tid);
 
-    log_info(logger,"## Obtener instrucción - (PID:TID) - (%d:%d) - Instrucción: %s",pid,tid,instruccion);
+    log_info(logger,"## Obtener instrucción - (PID:TID) - (<%d>:<%d>) - Instrucción: %s",pid,tid,instruccion);
 
     t_buffer *bufferRta = crear_buffer();
     t_paquete *paquete;
@@ -217,7 +217,7 @@ void actualizar_contexto(int cliente_fd_dispatch){
     ctx_hilo = extraer_contexto_hilo(buffer);
     ctx_proceso = extraer_contexto_proceso(buffer);
     
-    log_info(logger, "## Contexto Actualizado - (PID:TID) - (%d:%d)",ctx_hilo->pid,ctx_hilo->tid);
+    log_info(logger, "## Contexto <Actualizado> - (PID:TID) - (<%d>:<%d>)",ctx_hilo->pid,ctx_hilo->tid);
 
     bool _es_hilo(void *ptr) {
         CONTEXTO_HILO *ctx_hilo_en_memoria = (CONTEXTO_HILO *)ptr;
@@ -239,7 +239,6 @@ void actualizar_contexto(int cliente_fd_dispatch){
     if (hilo_actual && proceso_actual) {
         //free(hilo_actual->Registros);
         memcpy(hilo_actual->Registros, ctx_hilo->Registros, sizeof(REGISTROS));
-        log_info(logger, "Contexto de hilo y proceso actualizado para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     } else {
         log_error(logger, "No se encontro el contexto para TID: %d y PID: %d", ctx_hilo->tid, ctx_hilo->pid);
     }
@@ -663,9 +662,7 @@ void finalizacion_de_proceso(int pid){
     }
 
     Particion* particion = list_find(memoria_usuario->particiones,_esLaParticion);
-    log_info(logger, "## Proceso Destruido - PID: %d - Tamaño: %d",pid,particion->tamanio);
     particion->estaOcupado=0;
-    log_info(logger, "Finalizado proceso: %d",pid);
     // marcar la partición del proceso como libre
     // chequear si hay que agruppar particiones libres
     if (string_equals_ignore_case(esquema, "DINAMICAS")) {
@@ -675,6 +672,7 @@ void finalizacion_de_proceso(int pid){
     list_remove_element(contextos_procesos, contexto_proceso);
     free(contexto_proceso);
     list_destroy(lista_a_borrar);
+    log_info(logger, "## Proceso <Destruido> - PID: <%d> - Tamaño: >%d>",pid,particion->tamanio);
 }
 
 /*
@@ -764,28 +762,10 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     int direccion = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
-    //log_info(logger,"## Escritura - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(valor));
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
-    log_info(logger, "Escribiendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, valor);
     escribir_memoria(direccion, valor);
-
-    //int *memoria = (int*)memoria_usuario->memoria_usuario;
-
-    int *memoria=(int*)((char*)memoria_usuario->memoria_usuario);
-
-    char *contenido = malloc(ctx->LIMITE-ctx->BASE);
-    contenido[0]= '\0';
-    for(int i = ctx->BASE; i<=ctx->LIMITE;i++){
-        int valor = leer_memoria(i);
-        char caracter = (char)valor;
-        strncat(contenido,&caracter,1);
-    }
-
-
-    free(contenido);
-
-
-    //WRITE_MEM_RTA
+    log_info(logger, "## <Escritura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,ctx->LIMITE - ctx->BASE+1);
+    
     int rta = WRITE_MEM_RTA;
     send(cliente_fd_dispatch, &rta, sizeof(op_code), 0);
     free(buffer->stream);
@@ -800,7 +780,7 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     int dato = leer_memoria(direccion);
     //log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
-    log_info(logger, "Leyendo en memoria: <PID:%i>, <TID:%i>, <TAM_PROCESO:%i>, <DIRECCION:%i>, <VALOR:%i>", pid, tid, ctx->LIMITE - ctx->BASE, direccion, dato);
+    log_info(logger, "## <Lectura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,ctx->LIMITE - ctx->BASE+1);
     enviar_lectura(dato);
     free(buffer->stream);
     free(buffer);
@@ -835,23 +815,7 @@ int dump_memory(int tid,  int pid){
      for(int i = base; i<=limite;i+=4){
         cargar_int_al_buffer(buffer,leer_memoria(i));
     }
-    
-    // for(int i = base; i<=limite;i += 4 ){
-    //     int valor = leer_memoria(i);
         
-
-    //     char caracter = (char)valor;
-        
-
-    //     strncat(contenido,&caracter,1);
-    // }
-
-
-    //log_error(logger,"CONTENIDO EN MEMORIA: %s",contenido);
-
-
-
-    
     int fd_filesystem = conectarse_a_filesystem();
     //cargar_int_al_buffer(buffer,valor);
     log_info(logger,"## Memory Dump solicitado - (PID:TID) - (%d:%d)",pid,tid);

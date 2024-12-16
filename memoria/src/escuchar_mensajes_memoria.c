@@ -32,12 +32,9 @@ void escuchar_mensajes_kernel(void)
             contexto_proceso->LIMITE = particion->inicio + particion->tamanio - 1;
             memset(memoria_usuario->memoria_usuario + contexto_proceso->BASE,0,contexto_proceso->LIMITE- contexto_proceso->BASE+1);
             list_add(contextos_procesos, contexto_proceso);
-            //log_trace(logger, "<PID:%i>, <TAMAÑO PROC:%i>, <BASE:%i>, <LIMITE:%i>", pid, tamanio, contexto_proceso->BASE, contexto_proceso->LIMITE);
-            //log_warning(logger, "Despues de asignar");
-            //imprimir_memoria_usuario();
             int rta_sol_mem = OK_SOLICITUD_MEMORIA_PROCESO;
             send(cliente_fd_kernel, &rta_sol_mem, sizeof(op_code), 0);
-            log_info(logger, "## Proceso Creado - PID: %d - Tamaño: %d",pid,particion->tamanio);
+            log_info(logger, "## Proceso <Creado> - PID: <%d> - Tamaño: <%d>",pid,particion->tamanio);
         } else {
             int rta_sol_mem_err = ERROR_CREACION_HILO;
             send(cliente_fd_kernel, &rta_sol_mem_err, sizeof(op_code), 0); 
@@ -59,7 +56,7 @@ void escuchar_mensajes_kernel(void)
         CONTEXTO_HILO *contexto_hilo = extraer_tcb_del_buffer(buffer);
         list_add(contextos_hilos,contexto_hilo);
         cargar_archivo(contexto_hilo->archivo_pseudocodigo, contexto_hilo->tid,contexto_hilo->pid);
-        log_info(logger, "## Hilo Creado - (PID:TID)- %d:%d",contexto_hilo->pid,contexto_hilo->tid);
+        log_info(logger, "## Hilo <Creado> - (PID:TID)- (<%d>:<%d>)",contexto_hilo->pid,contexto_hilo->tid);
         int rta_crear_hilo = OK_CREACION_HILO;
         send(cliente_fd_kernel, &rta_crear_hilo,sizeof(op_code),0);
         free(buffer->stream);
@@ -70,7 +67,7 @@ void escuchar_mensajes_kernel(void)
         int tid_a_finalizar = extraer_int_del_buffer(buffer_fin);
         int pid_del_hilo_fin = extraer_int_del_buffer(buffer_fin);
 
-        log_info(logger, "## Hilo Destruido - (PID:TID)- %d:%d", tid_a_finalizar, pid_del_hilo_fin);
+        log_info(logger, "## Hilo <Destruido - (PID:TID)- %d:%d", pid_del_hilo_fin, tid_a_finalizar);
 
         eliminar_hilo_y_contexto(tid_a_finalizar, pid_del_hilo_fin);
 
@@ -85,8 +82,6 @@ void escuchar_mensajes_kernel(void)
         int tid_a_cancelar = extraer_int_del_buffer(buffer_cancel);
         int pid_del_hilo_cancel = extraer_int_del_buffer(buffer_cancel);
 
-        log_info(logger, "Finalizando hilo con TID: %i y PID: %i", tid_a_cancelar, pid_del_hilo_cancel);
-
         //eliminar_hilo_y_contexto(tid_a_cancelar, pid_del_hilo_cancel);
 
         int rta_cancel_hilo = OK_FINAL_HILO;
@@ -99,6 +94,7 @@ void escuchar_mensajes_kernel(void)
         t_buffer *buffer_dump = recibir_buffer_completo(cliente_fd_kernel);
         int tid_dump = extraer_int_del_buffer(buffer_dump);
         int pid_dump = extraer_int_del_buffer(buffer_dump);
+        log_info("## Memory Dump solicitado - (PID:TID) - (<%d>:<%d>)", pid_dump, tid_dump);
         int res_dump = MEM_DUMPEADA;
         if (!dump_memory(tid_dump,pid_dump)) res_dump = MEM_DUMP_ERROR;
         

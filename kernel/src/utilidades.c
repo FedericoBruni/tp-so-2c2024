@@ -145,7 +145,7 @@ int conectarse_a_memoria(void)
 
 void terminar_ejecucion()
 {
-    log_info(logger, "Finalizando ejecucion de KERNEL");
+    log_info(logger, "## Finalizando ejecucion de KERNEL");
     // pthread_cancel(hilo_io);
     // pthread_cancel(hilo_creacion_de_procesos);
     // pthread_cancel(hilo_finalizacion_de_procesos);
@@ -287,8 +287,6 @@ COLA_PRIORIDAD *existe_cola_con_prioridad(int prioridad) {
 
 void encolar_multinivel(COLA_PRIORIDAD *cola, TCB *tcb){
     encolar(cola->cola_prioridad, tcb, cola->mutex);
-    //log_trace(logger, "Encolando multinivel Prioridad: %i, Cola prioridad size: %i", cola->prioridad, queue_size(cola->cola_prioridad));
-
 }
 
 void* desencolar_multinivel(COLA_PRIORIDAD *cola){
@@ -312,7 +310,7 @@ void replanificar(TCB *tcb){
             encolar_multinivel(cola, tcb);
         } else{
             COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-            log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+            log_info(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
             encolar_multinivel(cola_nueva, tcb);
         }         
     }else{
@@ -351,10 +349,9 @@ void desbloquear_hilo_mutex(MUTEX *mutex){
             COLA_PRIORIDAD *cola = existe_cola_con_prioridad(tcb->prioridad);
                 if(cola != NULL){
                     encolar_multinivel(cola, tcb);
-                    //log_error(logger, "Encolar en desbloquear_hilo_mutex()");
                 } else{
                     COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-                    //log_info(logger,"Se creo la cola multinivel de prioridad: %i",cola_nueva->prioridad);
+                    log_info(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
                     encolar_multinivel(cola_nueva, tcb);
                 }         
             }else{
@@ -381,12 +378,12 @@ int bloquear_hilo_syscall(TCB *tcb,int tid){
     }
     
     if(!hayHilo){
-        //log_error(logger,"EL TID PASADO NO EXISTE O YA FINALIZÓ, NO SE BLOQUEA");
         return 0;
     }
     
     cambiar_estado_hilo(tcb,BLOCKED);
     tcb->bloqueadoPor = tid;
+    log_info("## (<PID>:<TID>) - Bloqueado por: <PTHREAD_JOIN>", tcb->pcb_pid, tcb->tid);
     encolar(cola_blocked,tcb,mutex_blocked);
     //sem_post(&sem_hay_ready);
     return 1;

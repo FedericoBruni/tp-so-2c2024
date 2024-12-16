@@ -48,7 +48,7 @@ int write_mem(char* registroDireccion, char* registroDatos){
             contexto_en_ejecucion->contexto_hilo->Registros->PC++;
             break;
         default:
-            log_error(logger,"Error, codigo de operacion desconocido");
+            log_error(logger,"Error desconocido escribiendo memoria");
             break;
     }
     return 1;
@@ -81,11 +81,11 @@ int read_mem(char* registroDatos, char* registroDireccion){
         case READ_MEM_RTA:
             int dato = deserializar_rta_read_mem(fd_memoria);
             *obtenerRegistro(registroDatos) = dato;
-            log_trace(logger, "Dato leido: %i", dato);
+            log_info(logger, "## (<PID:TID>) - (<%d>:<%d>) - Dato Leido: <%i> - Direccion Fisica: <%d>",contexto_en_ejecucion->contexto_hilo->pid,contexto_en_ejecucion->contexto_hilo->tid,dato, dir_fisica);
             contexto_en_ejecucion->contexto_hilo->Registros->PC++;
             break;
         default:
-            log_error(logger,"Error, codigo de operacion desconocido");
+            log_error(logger,"Error desconocido leyendo memoria");
             break;
     }
     return 1;
@@ -119,7 +119,7 @@ void JNZ(char *registro, uint32_t instruccion){
 
 void LOG(char *registro){
     uint32_t *reg = obtenerRegistro(registro);
-    log_info(logger, "El valor del registro %s es: %u",registro,*reg);
+    log_info(logger, "## LOG - Registro <%s> - Valor <%u>",registro,*reg);
     contexto_en_ejecucion->contexto_hilo->Registros->PC++;
 }
 
@@ -150,15 +150,6 @@ void PROCESS_CREATE(char *archivo_de_instrucciones,int tamanio_proceso, int prio
     crear_proceso(archivo_de_instrucciones,tamanio_proceso,prio_hilo);
     sem_wait(&sem_proceso_creado);
     contexto_en_ejecucion->contexto_hilo->Registros->PC++;
-    // switch(recibir_operacion(cliente_fd_dispatch)){
-    //     case PROCESO_CREADO:
-    //         break;
-    //     default:
-    //         log_error(logger,"Error, codigo de operacion desconocido");
-    //         break;
-    // }
-
-    
 }
 
 void THREAD_CREATE (char* archivo_pseudocodigo, int prioridad) {
@@ -195,17 +186,7 @@ void MUTEX_CREATE (char *recurso) {
     actualizar_contexto(fd_memoria);
     sem_wait(&sem_ctx_actualizado);
     mutex_create(recurso);
-    //sleep(5);
     sem_wait(&sem_mutex_creado);
-    
-    // switch(recibir_operacion(cliente_fd_dispatch)){
-    //     case MUTEX_CREADO:
-    //         log_error(logger, "Mutex creado correctamente");
-    //         break;
-    //     default:
-    //         log_error(logger,"Error, codigo de operacion desconocido");
-    //         break;
-    // }
 }
 
 

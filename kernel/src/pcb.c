@@ -76,7 +76,6 @@ PCB *crear_pcb(char *archivo_pseudocodigo, int tamanio_memoria, int prioridad_ma
 
 TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
 {
-    log_info(logger,"Creando TCB de prioridad: %i", prioridad);
     TCB *tcb = malloc(sizeof(TCB));
     tcb->tid = pcb->autoincremental_tcb;
     pcb->autoincremental_tcb = pcb->autoincremental_tcb +1;
@@ -88,6 +87,7 @@ TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
     tcb->archivo_pseudocodigo = archivo_pseudocodigo;
     tcb->bloqueadoPor = NULL;
     agregar_hilo(tcb,pcb);
+    log_info(logger,"## (PID) - (<%d>) - Creando Hilo <%d> - Prioridad: <%d>", pcb->pid, tcb->tid, prioridad);
     return tcb;
 }
 

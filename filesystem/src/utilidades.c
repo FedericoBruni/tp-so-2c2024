@@ -117,9 +117,36 @@ int cant_bloques_libres(){
         }
     }
     fclose(archivoBitmap);
-    log_trace(logger,"Cant de bloques libres: %i",bloques_libres);
     return bloques_libres;
 }
+
+int cant_bloques_libres2(){
+    int tam_bitmap = (block_count +7)/8;
+
+    int bloques_libres=0;
+    char byte;
+    int bits_restantes = block_count % 8;
+
+    for(int i = 0; i < tam_bitmap;i++){
+        fread(&byte,sizeof(char),1,archivoBitmap);
+
+        if(i == tam_bitmap-1 && bits_restantes > 0){
+            byte &= (0xFF>>(8-bits_restantes));;
+        }
+
+        for(int j = 0;j<8;j++){
+            if(i==tam_bitmap-1 && j>=bits_restantes && bits_restantes!=0){
+                break;
+            }
+            if (((byte >> j) & 1) == 0) {
+                bloques_libres++;
+            }
+            
+        }
+    }
+    return bloques_libres;
+}
+
 
 int *reservar_bloques(int cantidad, char* nombre_archivo){
     int tam_bitmap = (block_count +7)/8;
@@ -151,14 +178,14 @@ int *reservar_bloques(int cantidad, char* nombre_archivo){
                 fseek(archivoBitmap,i,SEEK_SET);
                 fwrite(&byte,sizeof(char),1,archivoBitmap);
                 bloques[bloques_reservados] = i*8+j;
-                log_trace(logger, "## Bloque asignado: %d - Archivo: %s",bloques[bloques_reservados],nombre_archivo);
                 bloques_reservados++;
                 bloques_restantes--;
+                //log_info(logger, "## Bloque asignado: <%d> - Archivo: <%s> - Bloques Libres: <asd>",bloques[bloques_reservados],nombre_archivo);
+                log_info(logger, "## Bloque asignado: <%d> - Archivo: <%s> - Bloques Libres: <%d>",bloques[bloques_reservados],nombre_archivo,cant_bloques_libres2()-bloques_reservados);
             }
         }
     }
     fclose(archivoBitmap);
-    log_trace(logger,"Bloques reservados: %d - Bloques libres: %d",bloques_reservados,cant_bloques_libres());
     return bloques;
 }
 
@@ -197,14 +224,12 @@ char *obtenerTimeStamp() {
     if (remaining_length > 0) {
         snprintf(timestamp + used_length, remaining_length, ":%03d", ts.tv_nsec / 1000000);
     }
-    log_trace(logger, "ts: %s", timestamp);
     return timestamp;
 }
 
 bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
     int total_ints = list_size(arrayValores);
     int bloques_necesarios = (tamanio + block_size-1)/block_size + 1;
-    log_trace(logger,"bloques necesarios: %d",bloques_necesarios);
 
     if(cant_bloques_libres() < bloques_necesarios){
         log_error(logger,"No hay espacio suficiente en el filesystem");
@@ -214,7 +239,6 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
 
 
     char *timestamp = obtenerTimeStamp();
-    log_trace(logger,"timestamp: %s",timestamp);
     char nombre_archivo[50];
     snprintf(nombre_archivo,sizeof(nombre_archivo),"%d-%d-%s",pid,tid,timestamp);
 
@@ -223,7 +247,7 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
     int bloque_indice = bloques_reservados[0];
     int *bloques_datos = &bloques_reservados[1];
 
-    log_info(logger,"## Archivo Creado: %s - Tamaño: %d",nombre_archivo,tamanio);
+    log_info(logger,"## Archivo Creado: <%s> - Tamaño: <%d>",nombre_archivo,tamanio);
 
     int tam_ruta_metadata = strlen(mount_dir) + strlen("/files/") + strlen(nombre_archivo+strlen(".dmp")) + 1;  // /files/ + nombre del archivo
     char ruta_metadata[tam_ruta_metadata];
@@ -246,7 +270,7 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
     fseek(archivoBloqueDeDatos,bloque_indice*block_size, SEEK_SET);
     for(int i = 0;i<bloques_necesarios - 1;i++){
         fwrite(&bloques_datos[i],sizeof(int),1,archivoBloqueDeDatos);
-        log_info(logger,"## Acceso Bloque - Archivo: %s - Tipo Bloque: INDICE - Bloque File System: %d",nombre_archivo,bloque_indice);
+        log_info(logger,"## Acceso Bloque - Archivo: <%s> - Tipo Bloque: <INDICE> - Bloque File System: <%d>",nombre_archivo,bloque_indice);
         usleep(retardo_acceso_bloque * 1000);
     }
 
@@ -270,13 +294,12 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
 
         
         
-        log_info(logger,"## Acceso Bloque - Archivo: %s - Tipo Bloque: DATOS - Bloque File System: %d",nombre_archivo,bloques_datos[i]);
+        log_info(logger,"## Acceso Bloque - Archivo: <%s> - Tipo Bloque: <DATOS> - Bloque File System: <%d>",nombre_archivo,bloques_datos[i]);
         usleep(retardo_acceso_bloque*1000);
         ints_escritos += ints_a_escribir;
     }
     fclose(archivoBloqueDeDatos);
     free(bloques_reservados);
-    log_trace(logger,"## Fin de solicitud - Archivo: %s",nombre_archivo);
+    log_info(logger,"## Fin de solicitud - Archivo: <%s>", nombre_archivo);
     return true;
 }
-

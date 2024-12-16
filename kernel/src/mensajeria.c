@@ -107,13 +107,12 @@ int enviar_exec_a_cpu(int tid, int pid){
             sem_post(&sem_exec_recibido);
             return 1;
         case SYSCALL_THREAD_CREATE:
-            log_info(logger,"SYSCALL_THREAD_CREATE en enviar exec a cpu");
             break;    
         case SUSP_PROCESO: // este case estaba en esperar_respuesta();
             sem_post(&sem_puede_ejecutar);
             break;
         default:
-            log_error(logger, "default, cod_op: %i", cod_op);
+            log_error(logger, "Error desconocido al enviar exec - Codigo recibido: <%i>", cod_op);
             return 0;
     }
 }
@@ -144,15 +143,13 @@ int esperar_respuesta(){
     //log_error(logger,"OPERACION RECIBIDA");
     switch(operacion){ // se recibe con un Motivo por el q fue desalojado
         case DESALOJO_POR_QUANTUM:
-            //log_error(logger, "replanificando tid:%d pid:%d ",tcb_en_ejecucion->tid,tcb_en_ejecucion->pcb_pid);
-            replanificar(tcb_en_ejecucion);
             log_info(logger,"## (%d:%d) - Desalojado por fin de Quantum", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            replanificar(tcb_en_ejecucion);
             return 1;
         case OK_EJECUCION:
-            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             break;
         case SYSCALL_PROCESS_CREATE:
-            log_info(logger,"## (%d:%d) - Se crea el proceso - Estado: NEW", tcb_en_ejecucion->pcb_pid, 0);
+            log_info(logger,"## (<%d>:<%d>) - Solicitó syscall: <PROCESS_CREATE>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_process_create();
             sem_wait(&sem_syscall_fin);
             //log_error(logger,"MANDO RTA");
@@ -160,13 +157,14 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch, &proceso_creado, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_CREATE:
+            log_info(logger,"## (<%d>:<%d>) - Solicitó syscall: <THREAD_CREATE>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_create();
             sem_wait(&sem_syscall_fin);
             int hilo_creado = HILO_CREADO;
             send(fd_cpu_dispatch,&hilo_creado,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_JOIN:
-            log_info(logger,"## (%d:%d) - Bloqueado por: <PTHREAD_JOIN>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_info(logger, "## (<%d>:<%d>) - Solicitó syscall: <THREAD_JOIN>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             int rta_join = deserializar_thread_join();
             sem_wait(&sem_syscall_fin);
             int hilo_join = HILO_JOINEADO;
@@ -175,19 +173,21 @@ int esperar_respuesta(){
             send(fd_cpu_dispatch,&hilo_join,sizeof(op_code),0);
             break;
         case SYSCALL_THREAD_CANCEL:
-            log_info(logger, "## (%d:%d) Se cancela el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <THREAD_CANCEL>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_thread_cancel();
             sem_wait(&sem_syscall_fin);
             int hilo_cancel = HILO_CANCEL;
             send(fd_cpu_dispatch,&hilo_cancel,sizeof(op_code),0);
             break;
         case SYSCALL_MUTEX_CREATE:
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <MUTEX_CREATE>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_mutex_create();
             sem_wait(&sem_syscall_fin);
             int mutex_creado = MUTEX_CREADO;
             send(fd_cpu_dispatch, &mutex_creado, sizeof(op_code), 0);
             break;
         case SYSCALL_MUTEX_LOCK:
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <MUTEX_LOCK>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_mutex_lock();
             sem_wait(&sem_syscall_fin);
             int mutex_lock;
@@ -200,21 +200,21 @@ int esperar_respuesta(){
             
             break;
         case SYSCALL_MUTEX_UNLOCK:
-            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <MUTEX_UNLOCK>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_mutex_unlock();
             sem_wait(&sem_syscall_fin);
             int mutex_unlock = MUTEX_UNLOCKEADO;
             send(fd_cpu_dispatch, &mutex_unlock, sizeof(op_code), 0);
             break;
         case SYSCALL_THREAD_EXIT:
-            log_info(logger, "## (%d:%d) Finaliza el hilo", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <THREAD_EXIT>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             THREAD_EXIT(tcb_en_ejecucion);
             sem_wait(&sem_syscall_fin);
             int thread_exit = FIN_HILO;
             send(fd_cpu_dispatch, &thread_exit, sizeof(op_code), 0);
             break;
         case SYSCALL_PROCESS_EXIT:
-            //log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
+            log_info(logger,"## (<%d>:<%d>) - Solicito syscall: <PROCESS_EXIT>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             PROCESS_EXIT(tcb_en_ejecucion);
             sem_wait(&sem_syscall_fin);
             int process_exit = FIN_PROCESO;
@@ -233,11 +233,10 @@ int esperar_respuesta(){
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SUSP_PROCESO:
-            //log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
             sem_post(&sem_puede_ejecutar);
             return 1;
         case SYSCALL_DUMP_MEMORY:
-            log_info(logger,"## (%d:%d) - Solicito syscall: %s", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid, desc_code_op[operacion]);
+            log_info(logger, "## (<%d>:<%d>) - Solicitó syscall: <DUMP_MEMORY>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             int rta = deserializar_dump_memory();
             sem_wait(&sem_syscall_fin);
             int res_dump = MEM_DUMPEADA;
@@ -253,14 +252,12 @@ int esperar_respuesta(){
             break;
 
         case SYSCALL_IO:
-            log_info(logger,"## (%d:%d) - Bloqueado por: <PTHREAD_JOIN / MUTEX / IO>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             deserializar_io();
             int io_solicitada = IO_SOLICITADA;
             send(fd_cpu_dispatch,&io_solicitada,sizeof(op_code),0);
             break;
 
         case SEGMENTATION_FAULT:
-            log_info(logger, "Segmentation Fault");
             PROCESS_EXIT(tcb_en_ejecucion);
             sem_wait(&sem_syscall_fin);
             int segmentation_fault = FIN_PROCESO;
@@ -270,6 +267,7 @@ int esperar_respuesta(){
         default:
             return 0;
         }
+        
 
     }
 }
@@ -359,7 +357,6 @@ int deserializar_dump_memory() {
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int pid = extraer_int_del_buffer(buffer);
     int tid = extraer_int_del_buffer(buffer);
-    log_info(logger, "DUMP MEMORY de <PID:%i>,<TID:%i>", pid, tid);
     free(buffer->stream);
     free(buffer);
     return DUMP_MEMORY(pid, tid);
@@ -389,7 +386,7 @@ int enviar_dump_memory(int socket_memoria, int tid, int pid){
     }
     else if (cod_op == MEM_DUMP_ERROR)
     {
-        log_error(logger, "MEM DUMP ERROR");
+        log_error(logger, "## (PID:TID) - (<%d>:<%d>) - FileSystem Lleno", pid, tid);
         return 0;
     } else {
         return -1;

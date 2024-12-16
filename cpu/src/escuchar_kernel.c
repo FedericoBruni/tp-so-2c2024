@@ -94,7 +94,7 @@ void escuchar_mensajes_kernel_dispatch(void)
 			sem_post(&sem_dump_mem);
 			break;
 		case -1:
-			log_error(logger, "Dispatch desconectado\n");
+			log_error(logger, "Dispatch desconectado");
 			cliente_fd_dispatch = -1;
 			fin_ciclo = true;
 			sem_post(&sem_ejecucion);
@@ -115,6 +115,7 @@ void escuchar_mensajes_kernel_interrupt(void)
 		int cod_op = recibir_operacion(cliente_fd_interrupt); // recv() es bloqueante por ende no queda loopeando infinitamente
 		switch (cod_op)
 		{
+		log_info(logger, "## Llega interrupción al puerto Interrupt");
 		case HANDSHAKE_KERNEL_CPU_INTERRUPT:
 			aceptar_handshake(logger, cliente_fd_interrupt, HANDSHAKE_KERNEL_CPU_INTERRUPT);
 			break;
@@ -122,7 +123,7 @@ void escuchar_mensajes_kernel_interrupt(void)
 			procesar_fin_quantum(logger, cliente_fd_interrupt,cod_op);
 			break;
 		case -1:
-			log_error(logger, "Interrupt desconectado\n");
+			log_error(logger, "Interrupt desconectado");
 			cliente_fd_interrupt = -1;
 			return;
 

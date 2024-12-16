@@ -89,19 +89,10 @@ void PROCESS_EXIT_ULTIMO_HILO(TCB *tcb)
 void THREAD_CREATE(PCB *pcb,char* archivo_pseudocodigo, int prioridad){
     
     TCB *tcb = crear_tcb(pcb, prioridad, archivo_pseudocodigo);
-    //log_error(logger,"PID del HILO creado: %i",tcb->pcb->pid);
     encolar(cola_new_hilo,tcb,mutex_new);
     sem_post(&sem_crear_hilo);
-    //señal d creacion
-    // para mi se pone acá en ready y listo, por como dice el enunciado
-    // Al momento de crear el nuevo hilo, deberá generar el nuevo TCB con un TID autoincremental y 
-    // poner al mismo en el estado READY.
-    //Dejo todo comentado pq no existe "pcb_en_ejecucion" y rompe
 }
 
-
-// Vamos a tener un pcb_en_ejecucion, y cada pcb tiene una ref al hilo que esta ejecutando en ese momento? o también 
-// tener una variable tcb_en_ejecucion?
 int THREAD_JOIN(int tid){
     int rta;
     rta = bloquear_hilo_syscall(tcb_en_ejecucion,tid);
@@ -112,36 +103,10 @@ int THREAD_JOIN(int tid){
 
 
 void THREAD_EXIT(TCB *tcb) {
-    // if (tcb->tid != 0) {
-    //     log_warning(logger, "El hilo TID 0 debe invocar a THREAD_EXIT para finalizar el hilo.");
-    //     return;
-    // }
-
-    log_info(logger, "Finalizando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
-
     encolar(cola_finalizacion, tcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);
-    //liberar_tcb(tcb);
-
     sem_post(&sem_finalizar_hilo);
 }
-
-
-// void THREAD_CANCEL(TCB *tcb) {
-//     if (tcb->tid != 0) {
-//         log_warning(logger, "El hilo TID 0 debe invocar a THREAD_CANCEL para cancelar el hilo.");
-//         return;
-//     }
-
-//     log_info(logger, "Cancelando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
-//     encolar(cola_exit, tcb->pcb, mutex_exit);
-
-//     cambiar_estado_hilo(tcb, EXIT);
-
-//     liberar_tcb(tcb);
-
-//     sem_post(&sem_finalizar_hilo);
-// }
 
 void THREAD_CANCEL(int tid, int pid) {
     TCB* tcb = buscar_tcb_en_cola(cola_ready,mutex_ready,tid,pid);
@@ -151,13 +116,11 @@ void THREAD_CANCEL(int tid, int pid) {
             if(tcb_en_ejecucion->tid == tid && tcb_en_ejecucion->pcb_pid==pid){
                 tcb=tcb_en_ejecucion;
             }else{
-            log_info(logger,"No se encontro el hilo <TID:%i>;<PID:%i>", tid, pid);
+            log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", pid, pid);
             return;
             }
         }   
     }
-    
-    log_info(logger, "Cancelando hilo con TID: %i del proceso con PID: %i", tcb->tid, tcb->pcb_pid);
     encolar(cola_finalizacion, tcb->pcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);
     liberar_tcb(tcb); // creo q no va
@@ -170,20 +133,13 @@ void MUTEX_CREATE(char* recurso){
     mutex->binario = 1;
     mutex->asignadoA = NULL;
     PCB* pcb = pcb_en_ejecucion;
-    //imprimir_pcb(pcb);
     mutex->cola_bloqueados = queue_create();
     list_add(pcb->mutex, mutex);
     list_add(mutex_sistema, mutex);
-
-    //log_error(logger,"MUTEX:%s CREADO",recurso);
     sem_post(&sem_syscall_fin);
     
 }
-/*
- se deberá verificar primero que exista el mutex solicitado y en caso de que exista y el mismo no se encuentre tomado 
- se deberá asignar dicho mutex al hilo correspondiente. En caso de que el mutex se encuentre tomado, el hilo que 
- realizó MUTEX_LOCK se bloqueará en la cola de bloqueados correspondiente a dicho mutex.
-*/
+
 void MUTEX_LOCK(char* recurso)
 {
     MUTEX *mutex = existe_mutex(recurso);
@@ -196,7 +152,6 @@ void MUTEX_LOCK(char* recurso)
 
     if(mutex->binario == 1){
         asignar_a_hilo_mutex(mutex, tcb_en_ejecucion);
-        log_info(logger, "MUTEX LIBRE, PROCESO PUEDE USARLO");
         estado_lock = "LIBRE";
     }else{
         bloquear_hilo_mutex(mutex->cola_bloqueados, tcb_en_ejecucion);
@@ -220,7 +175,7 @@ void MUTEX_UNLOCK(char *recurso){
     if(mutex->binario == 0 && mutex->asignadoA == tcb_en_ejecucion->tid) {
         desbloquear_hilo_mutex(mutex);
     }else{
-        log_error(logger,"El hilo que desbloqueo el mutex no lo tiene");
+        log_error(logger,"## El hilo que desbloqueo el mutex no lo tiene");
     }
 
     sem_post(&sem_syscall_fin);
@@ -244,11 +199,10 @@ int DUMP_MEMORY(int pid, int tid){
 
 
 void IO(int tiempo, TCB *tcb){
-    //imprimir_cola(cola_new,mutex_new);
-    //printear_colas_y_prioridades();
     IOStruct *io = malloc(sizeof(IOStruct));
     io->tiempo = tiempo;
     io->tcb=tcb;
+    log_info(logger,"## (<%d>:<%d>) - Bloqueado por: <IO>",tcb->pcb_pid,tcb->tid);
     encolar(cola_io,io,mutex_io);
     sem_post(&sem_io);
     //sem_wait(&sem_io_iniciado);
