@@ -1,4 +1,30 @@
-[TRACE] 21:14:45:276 FileSystem/(27646:27646): ## Servidor levantado y listo para escuchar en el puerto: 8003
-[INFO] 21:14:46:616 FileSystem/(27646:27646): ## Memoria Conectado - FD del socket: 5
-[INFO] 21:14:46:619 FileSystem/(27646:27743): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
-[INFO] 21:14:55:048 FileSystem/(27646:27646): Finalizando ejecución de FILESYSTEM
+[TRACE] 21:37:01:491 FileSystem/(11481:11481): ## Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 21:37:02:017 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 5
+[INFO] 21:37:02:017 FileSystem/(11481:11578): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:39:08:956 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 6
+[INFO] 21:39:08:956 FileSystem/(11481:12352): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:42:34:365 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 7
+[INFO] 21:42:34:365 FileSystem/(11481:13076): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:44:00:277 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 8
+[INFO] 21:44:00:281 FileSystem/(11481:13375): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:45:20:006 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 9
+[INFO] 21:45:20:007 FileSystem/(11481:14153): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:51:43:156 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 10
+[INFO] 21:51:43:156 FileSystem/(11481:15119): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:52:13:774 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 11
+[INFO] 21:52:13:774 FileSystem/(11481:15423): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:53:20:312 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 12
+[INFO] 21:53:20:314 FileSystem/(11481:16233): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:54:03:100 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 13
+[INFO] 21:54:03:100 FileSystem/(11481:16444): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:54:55:904 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 14
+[INFO] 21:54:55:904 FileSystem/(11481:17125): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:55:19:012 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 15
+[INFO] 21:55:19:013 FileSystem/(11481:17472): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 21:55:31:483 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 16
+[INFO] 21:55:31:483 FileSystem/(11481:17705): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 22:00:46:141 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 17
+[INFO] 22:00:46:141 FileSystem/(11481:18824): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 22:01:24:813 FileSystem/(11481:11481): ## Memoria Conectado - FD del socket: 18
+[INFO] 22:01:24:813 FileSystem/(11481:19121): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 22:02:30:838 FileSystem/(11481:11481): Finalizando ejecución de FILESYSTEM

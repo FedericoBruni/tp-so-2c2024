@@ -27,6 +27,7 @@ pthread_mutex_t mutex_exit;
 pthread_mutex_t mutex_blocked;
 pthread_mutex_t mutex_fd_memoria;
 pthread_mutex_t mutex_io;
+pthread_mutex_t mutex_liberar_tcb;
 sem_t sem_hay_memoria;
 sem_t sem_crear_hilo;
 sem_t sem_finalizar_proceso;
@@ -94,6 +95,7 @@ void iniciar_semaforos(void){
     inicializar_mutex(&mutex_exit, "Exit");
     inicializar_mutex(&mutex_fd_memoria, "Mutex FD Memoria");
     inicializar_mutex(&mutex_io, "Mutex IO");
+    inicializar_mutex(&mutex_liberar_tcb, "Mutex Liberar TCB");
 
     inicializar_semaforo(&sem_hay_memoria, "Hay memoria", 1);
     inicializar_semaforo(&sem_crear_hilo, "Crear hilo", 0);

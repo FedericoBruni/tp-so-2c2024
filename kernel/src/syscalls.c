@@ -29,6 +29,7 @@ extern pthread_mutex_t mutex_io;
 extern sem_t sem_io_iniciado;
 extern char* algoritmo_planificacion;
 extern bool fin_ciclo;
+extern char *algoritmo_planificacion;
 
 /*
 PROCESS_CREATE, esta syscall recibirá 3 parámetros de la CPU, el primero será el nombre del archivo de pseudocódigo que
@@ -109,21 +110,27 @@ void THREAD_EXIT(TCB *tcb) {
 }
 
 void THREAD_CANCEL(int tid, int pid) {
-    TCB* tcb = buscar_tcb_en_cola(cola_ready,mutex_ready,tid,pid);
+    TCB *tcb;
+    if(string_equals_ignore_case(algoritmo_planificacion,"MULTINIVEL")){
+        log_trace(logger,"multinivel");
+        tcb = buscar_tcb_en_multinivel(tid,pid);
+    }else{
+        tcb = buscar_tcb_en_cola(cola_ready,mutex_ready,tid,pid);
+    }
     if(tcb == NULL){
         tcb = buscar_tcb_en_cola(cola_blocked,mutex_blocked,tid,pid);
         if(tcb == NULL){
             if(tcb_en_ejecucion->tid == tid && tcb_en_ejecucion->pcb_pid==pid){
                 tcb=tcb_en_ejecucion;
             }else{
-            log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", pid, pid);
+            log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", pid, tid);
             return;
             }
         }   
     }
-    encolar(cola_finalizacion, tcb->pcb, mutex_exit);
+
+    encolar(cola_finalizacion, tcb, mutex_exit);
     cambiar_estado_hilo(tcb, EXIT);
-    liberar_tcb(tcb); // creo q no va
     sem_post(&sem_finalizar_hilo);
 }
 

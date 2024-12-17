@@ -10,6 +10,11 @@ extern t_queue *cola_ready;
 extern t_queue *cola_finalizacion;
 extern t_queue *cola_new_hilo;
 extern t_queue *cola_fin_pcb;
+extern t_queue *cola_blocked;
+extern t_list* colas_prioridades;
+extern pthread_mutex_t mutex_liberar_tcb;
+extern pthread_mutex_t mutex_ready;
+extern pthread_mutex_t mutex_blocked;
 
 
 void liberar_tcb(void *ptr_tcb)
@@ -17,13 +22,42 @@ void liberar_tcb(void *ptr_tcb)
     TCB *tcb = (TCB *)ptr_tcb;
     //log_warning(logger, "Liberando <TID: %i>", tcb->tid);
     liberar_registros(tcb->Registros);
+    log_error(logger,"PCB TID EN LIBERAR TCB %d %d",tcb->pcb_pid,tcb->tid);
+    if(tcb_en_ejecucion != NULL){
     if(tcb->tid == tcb_en_ejecucion->tid && tcb->pcb_pid == tcb_en_ejecucion->pcb_pid){
         tcb_en_ejecucion = NULL;  // NO TOCAR ROMPE TODO
-    }
+    }}
+
     if((tcb->archivo_pseudocodigo && tcb->pcb_pid != 0) || tcb->tid != 0  ){
      free(tcb->archivo_pseudocodigo);
     }
+
+    if(tcb->status != EXIT){
+        TCB *tcb_encolado;
+    if(string_equals_ignore_case(algoritmo_planificacion,"MULTINIVEL")){
+        log_trace(logger,"multinivel");
+        tcb_encolado = buscar_tcb_en_multinivel(tcb->tid,tcb->pcb_pid);
+    }else{
+        tcb_encolado = buscar_tcb_en_cola(cola_ready,mutex_ready,tcb->tid,tcb->pcb_pid);
+    }
+    if(tcb_encolado == NULL){
+        tcb_encolado = buscar_tcb_en_cola(cola_blocked,mutex_blocked,tcb->tid,tcb->pcb_pid);
+        if(tcb_encolado == NULL){
+            if(tcb_en_ejecucion != NULL){
+            if(tcb_en_ejecucion->tid == tcb->tid && tcb_en_ejecucion->pcb_pid==tcb->pcb_pid){
+                tcb_encolado=tcb_en_ejecucion;
+            }else{
+            log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", tcb->pcb_pid, tcb->tid);
+            return;
+            }}
+        }   
+    }
+        //free(tcb_encolado);
+    }
+
+
     free(tcb);
+    
 }
 
 
@@ -44,7 +78,9 @@ void liberar_pcb(void *ptr_pcb)
     }
 
     //liberar_tcb(list_get(pcb->threads, 0));
+    pthread_mutex_lock(&mutex_liberar_tcb);
     list_destroy_and_destroy_elements(pcb->threads, liberar_tcb);
+    pthread_mutex_unlock(&mutex_liberar_tcb);
     //list_destroy(pcb->threads);
     
 
@@ -199,6 +235,31 @@ TCB* buscar_tcb_en_cola(t_queue* cola, pthread_mutex_t mutex,int tid, int pid){
     }
     while(!queue_is_empty(cola_aux)){
         encolar(cola,queue_pop(cola_aux),mutex);
+    }
+    queue_destroy(cola_aux);
+    return rta;
+}
+
+TCB *buscar_tcb_en_multinivel( int tid, int pid){
+    t_queue *cola_aux = queue_create();
+    TCB* rta = NULL;
+    for(int i = 0; i<list_size(colas_prioridades);i++){
+        COLA_PRIORIDAD *cola_prio = list_get(colas_prioridades,i);
+        while(!queue_is_empty(cola_prio->cola_prioridad)){
+            void *elemento = desencolar_multinivel(cola_prio);
+            TCB *tcb = (TCB*) elemento;
+            log_warning(logger,"PID Y TID BUSCADO: %d %d", tcb->pcb_pid, tcb->tid);
+            if(tcb->tid == tid && tcb->pcb_pid == pid){
+                rta=tcb;
+                log_trace(logger,"encontrado");
+            }else{
+                queue_push(cola_aux,elemento);
+            }
+        }
+
+        while(!queue_is_empty(cola_aux)){
+            encolar_multinivel(cola_prio,queue_pop(cola_aux));
+        }
     }
     queue_destroy(cola_aux);
     return rta;

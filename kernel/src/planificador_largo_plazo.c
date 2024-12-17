@@ -27,6 +27,7 @@ extern pthread_mutex_t mutex_fd_memoria;
 bool hay_mem = true;
 extern bool fin_ciclo;
 extern t_list *pcbs_aceptados;
+extern pthread_mutex_t mutex_liberar_tcb;
 
 void creacion_de_procesos(void)
 {
@@ -159,9 +160,7 @@ void finalizacion_de_hilos(void)
         sem_wait(&sem_finalizar_hilo); 
         if(fin_ciclo) return;
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
-        // de test:
-        
-
+        log_trace(logger,"HILO DESENCOLADO PID TID %d %d",tcb->pcb_pid,tcb->tid);
         int tidBloqueante = tcb->tid;
         int pidhilo = tcb->pcb_pid;
         int fd_memoria = conectarse_a_memoria();
@@ -175,7 +174,9 @@ void finalizacion_de_hilos(void)
             log_info(logger, "## (<%d> : <%d>) Finaliza el hilo", tcb->pcb_pid,tcb->tid);
             list_remove_element(tcb->pcb->tids, tcb->tid);
             list_remove_element(tcb->pcb->threads, tcb);
+            pthread_mutex_lock(&mutex_liberar_tcb);
             liberar_tcb(tcb);
+            pthread_mutex_unlock(&mutex_liberar_tcb);
             desbloquear_bloqueados_por_hilo(tidBloqueante,pidhilo);
             sem_post(&sem_syscall_fin);
             break;

@@ -96,6 +96,14 @@ void multinivel()
         if(fin_ciclo) return;
         sem_wait(&sem_puede_ejecutar);
         COLA_PRIORIDAD *cola = obtener_cola_con_mayor_prioridad();
+        int cant_empty = 0;
+        for(int i = 0; i<list_size(colas_prioridades);i++){
+            COLA_PRIORIDAD *cola_prio = list_get(colas_prioridades,i);
+            if(queue_is_empty(cola_prio->cola_prioridad)){
+                cant_empty++;
+            }
+        }
+        if(cant_empty == list_size(colas_prioridades)) continue;
         TCB *tcb = desencolar_multinivel(cola);
         if (tcb != NULL)
         {

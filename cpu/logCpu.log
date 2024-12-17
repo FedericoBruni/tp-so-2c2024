@@ -1,165 +1,123 @@
-[TRACE] 21:14:49:058 Cpu/(27872:27872): ## Servidor levantado y listo para escuchar en el puerto: 8006
-[TRACE] 21:14:49:092 Cpu/(27872:27872): ## Servidor levantado y listo para escuchar en el puerto: 8007
-[INFO] 21:14:49:098 Cpu/(27872:27872): ## Handshake OK HANDSHAKE CPU - MEMORIA
-[INFO] 21:14:50:196 Cpu/(27872:27971): ## Recibido Handshake: <HANDSHAKE KERNEL - CPU DISPATCH>
-[INFO] 21:14:50:199 Cpu/(27872:27972): ## Recibido Handshake: <HANDSHAKE KERNEL - CPU INTERRUPT>
-[INFO] 21:14:50:211 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:50:217 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:50:269 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 10>
-[INFO] 21:14:50:273 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:50:316 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <BX 1>
-[INFO] 21:14:50:317 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:50:370 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <PLANI_PROC 16 0>
-[INFO] 21:14:50:373 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:50:437 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:50:480 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:50:526 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:50:586 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <DX 0>
-[INFO] 21:14:50:587 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:50:644 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 1>
-[INFO] 21:14:50:645 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:50:695 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 6>
-[INFO] 21:14:50:697 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:50:761 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:50:813 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:50:861 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 21:14:50:919 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <RECURSOS_MUTEX_PROC 16 0>
-[INFO] 21:14:50:920 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:50:984 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 21:14:51:029 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_FIJA_BASE 12 0>
-[INFO] 21:14:51:029 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:096 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:137 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:51:188 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 21:14:51:244 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
-[INFO] 21:14:51:246 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <4>
-[INFO] 21:14:51:300 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 5>
-[INFO] 21:14:51:301 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:353 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:402 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:51:454 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:51:510 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <DX 0>
-[INFO] 21:14:51:510 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:51:564 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 14>
-[INFO] 21:14:51:564 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:51:618 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <WRITE_MEM> - <AX DX>
-[ERROR] 21:14:51:619 Cpu/(27872:27973): ## Direccion inválida: DIRECCIÓN: <49> - LIMITE DEL PROCESO: <47>
-[INFO] 21:14:51:620 Cpu/(27872:27973): ## (2:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:670 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:51:717 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:51:767 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_FIJAS 8 0>
-[INFO] 21:14:51:768 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:826 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:51:870 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:51:920 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 21:14:51:970 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_DINAMICA_BASE 128 0>
-[INFO] 21:14:51:971 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:028 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:078 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:52:140 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <5>
-[INFO] 21:14:52:187 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
-[INFO] 21:14:52:187 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:238 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:52:289 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:52:345 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <DX 0>
-[INFO] 21:14:52:346 Cpu/(27872:27973): ## (4:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:398 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:52:447 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:52:498 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_FIJAS 48 0>
-[INFO] 21:14:52:501 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:558 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:604 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:52:655 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:52:706 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_DINAMICA_PROC_FIN 64 0>
-[INFO] 21:14:52:709 Cpu/(27872:27973): ## (5:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:779 Cpu/(27872:27973): ## (5:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:811 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:52:861 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 21:14:52:914 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <PRUEBA_FS 32 0>
-[INFO] 21:14:52:915 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:52:971 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:019 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:53:069 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <6>
-[INFO] 21:14:53:119 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 5>
-[INFO] 21:14:53:120 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:179 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:224 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:53:278 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:53:329 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 64>
-[INFO] 21:14:53:331 Cpu/(27872:27973): ## (4:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:392 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:53:463 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:53:513 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <DX 0>
-[INFO] 21:14:53:515 Cpu/(27872:27973): ## (6:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:565 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:53:615 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:53:667 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_FIJAS 96 0>
-[INFO] 21:14:53:668 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:744 Cpu/(27872:27973): ## (3:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:53:791 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:53:839 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:53:899 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <DX 0>
-[INFO] 21:14:53:900 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:53:951 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 64>
-[INFO] 21:14:53:951 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:54:002 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <WRITE_MEM> - <DX AX>
-[INFO] 21:14:54:003 Cpu/(27872:27973): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 236
-[INFO] 21:14:54:004 Cpu/(27872:27973): ## TID: <0> - Acción: <ESCRIBIR> - Dirección Física: <236>
-[INFO] 21:14:54:054 Cpu/(27872:27973): ## (7:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:105 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:54:156 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:54:205 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_DINAMICA_PROC_FIN 128 0>
-[INFO] 21:14:54:206 Cpu/(27872:27973): ## (5:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:270 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:54:313 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <MEM_DINAMICA_PROC_FIN 64 0>
-[INFO] 21:14:54:315 Cpu/(27872:27973): ## (5:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:370 Cpu/(27872:27973): ## (5:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:419 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:54:469 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <0>
-[INFO] 21:14:54:520 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 5>
-[INFO] 21:14:54:520 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:54:571 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <BX 1>
-[INFO] 21:14:54:571 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:54:622 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <FIBO_CROWN 96 0>
-[INFO] 21:14:54:624 Cpu/(27872:27973): ## (8:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:715 Cpu/(27872:27973): ## (8:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:54:740 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:54:793 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <7>
-[INFO] 21:14:54:842 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SUB> - <AX BX>
-[INFO] 21:14:54:843 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <8>
-[INFO] 21:14:54:899 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <JNZ> - <AX 2>
-[INFO] 21:14:54:901 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:54:951 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <PROCESS_CREATE> - <PLANI_PROC 16 0>
-[INFO] 21:14:54:952 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:55:007 Cpu/(27872:27973): ## (0:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:55:060 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:55:117 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <7>
-[INFO] 21:14:55:179 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
-[INFO] 21:14:55:179 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <8>
-[INFO] 21:14:55:229 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 6>
-[INFO] 21:14:55:229 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:55:284 Cpu/(27872:27973): ## (1:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:55:337 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:55:387 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:55:437 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <WRITE_MEM> - <DX AX>
-[INFO] 21:14:55:438 Cpu/(27872:27973): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 32
-[INFO] 21:14:55:438 Cpu/(27872:27973): ## TID: <0> - Acción: <ESCRIBIR> - Dirección Física: <32>
-[INFO] 21:14:55:496 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <3>
-[INFO] 21:14:55:552 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <READ_MEM> - <BX DX>
-[INFO] 21:14:55:553 Cpu/(27872:27973): ## TID: 0 - Acción: LEER - Dirección Física: 32
-[INFO] 21:14:55:554 Cpu/(27872:27973): ## TID: <0> - Acción: <LEER> - Dirección Física: <32>
-[INFO] 21:14:55:614 Cpu/(27872:27973): ## (<PID:TID>) - (<4>:<0>) - Dato Leido: <64> - Direccion Fisica: <32>
-[INFO] 21:14:55:617 Cpu/(27872:27973): ## (4:0) - Actualizo Contexto Ejecucion
-[INFO] 21:14:55:661 Cpu/(27872:27971): ## TID: <0> - Solicito Contexto Ejecución
-[INFO] 21:14:55:711 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <1>
-[INFO] 21:14:55:762 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <SET> - <AX 64>
-[INFO] 21:14:55:763 Cpu/(27872:27973): ## TID: <0> - FETCH - Program Counter: <2>
-[INFO] 21:14:55:813 Cpu/(27872:27973): ## TID: <0> - Ejecutando: <WRITE_MEM> - <DX AX>
-[INFO] 21:14:55:814 Cpu/(27872:27973): ## TID: 0 - Acción: ESCRIBIR - Dirección Física: 188
-[INFO] 21:14:55:814 Cpu/(27872:27973): ## TID: <0> - Acción: <ESCRIBIR> - Dirección Física: <188>
-[ERROR] 21:14:55:837 Cpu/(27872:27973): Error desconocido escribiendo memoria
-[INFO] 21:14:55:838 Cpu/(27872:27973): ## (6:0) - Actualizo Contexto Ejecucion
-[ERROR] 21:14:55:839 Cpu/(27872:27973): Error desconocido actualizando el contexto
-[ERROR] 21:14:58:600 Cpu/(27872:27972): Interrupt desconectado
-[ERROR] 21:14:58:601 Cpu/(27872:27971): Dispatch desconectado
-[INFO] 21:14:59:783 Cpu/(27872:27872): ## Finalizando ejecución de CPU
+[TRACE] 22:01:26:320 Cpu/(19217:19217): ## Servidor levantado y listo para escuchar en el puerto: 8006
+[TRACE] 22:01:26:321 Cpu/(19217:19217): ## Servidor levantado y listo para escuchar en el puerto: 8007
+[INFO] 22:01:26:321 Cpu/(19217:19217): ## Handshake OK HANDSHAKE CPU - MEMORIA
+[INFO] 22:01:37:711 Cpu/(19217:19223): ## Recibido Handshake: <HANDSHAKE KERNEL - CPU DISPATCH>
+[INFO] 22:01:37:714 Cpu/(19217:19224): ## Recibido Handshake: <HANDSHAKE KERNEL - CPU INTERRUPT>
+[INFO] 22:01:38:162 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:38:162 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <0>
+[INFO] 22:01:38:213 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SET> - <DX 0>
+[INFO] 22:01:38:213 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <1>
+[INFO] 22:01:38:263 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SET> - <AX 1>
+[INFO] 22:01:38:263 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <2>
+[INFO] 22:01:38:315 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 6>
+[INFO] 22:01:38:315 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:376 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:420 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:38:466 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <3>
+[INFO] 22:01:38:516 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
+[INFO] 22:01:38:516 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <4>
+[INFO] 22:01:38:567 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 5>
+[INFO] 22:01:38:567 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:623 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:670 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:38:718 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <5>
+[INFO] 22:01:38:768 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
+[INFO] 22:01:38:768 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <6>
+[INFO] 22:01:38:818 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 4>
+[INFO] 22:01:38:818 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:874 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:38:920 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:38:970 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <7>
+[INFO] 22:01:39:020 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
+[INFO] 22:01:39:020 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <8>
+[INFO] 22:01:39:070 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_CREATE> - <PLANI_THREAD 3>
+[INFO] 22:01:39:070 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:126 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:172 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:39:221 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <9>
+[INFO] 22:01:39:272 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <SUM> - <DX AX>
+[INFO] 22:01:39:272 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <10>
+[INFO] 22:01:39:321 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_CANCEL> - <4>
+[INFO] 22:01:39:321 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:393 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:423 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:39:472 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <11>
+[INFO] 22:01:39:522 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <THREAD_JOIN> - <2>
+[INFO] 22:01:39:522 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:640 Cpu/(19217:19223): ## TID: <3> - Solicito Contexto Ejecución
+[INFO] 22:01:39:640 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <0>
+[INFO] 22:01:39:691 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SET> - <CX 5>
+[INFO] 22:01:39:691 Cpu/(19217:19225): ## (0:3) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:743 Cpu/(19217:19223): ## TID: <3> - Solicito Contexto Ejecución
+[INFO] 22:01:39:792 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <1>
+[INFO] 22:01:39:842 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SET> - <BX 1>
+[INFO] 22:01:39:842 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <2>
+[INFO] 22:01:39:892 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:39:892 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <3>
+[INFO] 22:01:39:943 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:39:943 Cpu/(19217:19225): ## (0:3) - Actualizo Contexto Ejecucion
+[INFO] 22:01:39:996 Cpu/(19217:19223): ## TID: <3> - Solicito Contexto Ejecución
+[INFO] 22:01:40:044 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <2>
+[INFO] 22:01:40:094 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:40:094 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <3>
+[INFO] 22:01:40:144 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:40:144 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <2>
+[INFO] 22:01:40:194 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:40:194 Cpu/(19217:19225): ## (0:3) - Actualizo Contexto Ejecucion
+[INFO] 22:01:40:246 Cpu/(19217:19223): ## TID: <3> - Solicito Contexto Ejecución
+[INFO] 22:01:40:295 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <3>
+[INFO] 22:01:40:345 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:40:345 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <2>
+[INFO] 22:01:40:395 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:40:395 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <3>
+[INFO] 22:01:40:445 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:40:445 Cpu/(19217:19225): ## (0:3) - Actualizo Contexto Ejecucion
+[INFO] 22:01:40:497 Cpu/(19217:19223): ## TID: <3> - Solicito Contexto Ejecución
+[INFO] 22:01:40:546 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <2>
+[INFO] 22:01:40:596 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:40:596 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <3>
+[INFO] 22:01:40:647 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:40:647 Cpu/(19217:19225): ## TID: <3> - FETCH - Program Counter: <4>
+[INFO] 22:01:40:697 Cpu/(19217:19225): ## TID: <3> - Ejecutando: <THREAD_EXIT>
+[INFO] 22:01:40:697 Cpu/(19217:19225): ## (0:3) - Actualizo Contexto Ejecucion
+[INFO] 22:01:40:752 Cpu/(19217:19223): ## TID: <2> - Solicito Contexto Ejecución
+[INFO] 22:01:40:798 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <0>
+[INFO] 22:01:40:848 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SET> - <CX 5>
+[INFO] 22:01:40:848 Cpu/(19217:19225): ## (0:2) - Actualizo Contexto Ejecucion
+[INFO] 22:01:40:899 Cpu/(19217:19223): ## TID: <2> - Solicito Contexto Ejecución
+[INFO] 22:01:40:948 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <1>
+[INFO] 22:01:40:998 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SET> - <BX 1>
+[INFO] 22:01:40:998 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <2>
+[INFO] 22:01:41:048 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:41:048 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <3>
+[INFO] 22:01:41:099 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:41:099 Cpu/(19217:19225): ## (0:2) - Actualizo Contexto Ejecucion
+[INFO] 22:01:41:150 Cpu/(19217:19223): ## TID: <2> - Solicito Contexto Ejecución
+[INFO] 22:01:41:199 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <2>
+[INFO] 22:01:41:249 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:41:249 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <3>
+[INFO] 22:01:41:300 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:41:300 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <2>
+[INFO] 22:01:41:350 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:41:350 Cpu/(19217:19225): ## (0:2) - Actualizo Contexto Ejecucion
+[INFO] 22:01:41:403 Cpu/(19217:19223): ## TID: <2> - Solicito Contexto Ejecución
+[INFO] 22:01:41:451 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <3>
+[INFO] 22:01:41:501 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:41:501 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <2>
+[INFO] 22:01:41:551 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:41:551 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <3>
+[INFO] 22:01:41:601 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:41:601 Cpu/(19217:19225): ## (0:2) - Actualizo Contexto Ejecucion
+[INFO] 22:01:41:653 Cpu/(19217:19223): ## TID: <2> - Solicito Contexto Ejecución
+[INFO] 22:01:41:702 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <2>
+[INFO] 22:01:41:752 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <SUB> - <CX BX>
+[INFO] 22:01:41:752 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <3>
+[INFO] 22:01:41:804 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <JNZ> - <CX 2>
+[INFO] 22:01:41:804 Cpu/(19217:19225): ## TID: <2> - FETCH - Program Counter: <4>
+[INFO] 22:01:41:854 Cpu/(19217:19225): ## TID: <2> - Ejecutando: <THREAD_EXIT>
+[INFO] 22:01:41:854 Cpu/(19217:19225): ## (0:2) - Actualizo Contexto Ejecucion
+[INFO] 22:01:41:911 Cpu/(19217:19223): ## TID: <0> - Solicito Contexto Ejecución
+[INFO] 22:01:41:954 Cpu/(19217:19225): ## TID: <0> - FETCH - Program Counter: <12>
+[INFO] 22:01:42:005 Cpu/(19217:19225): ## TID: <0> - Ejecutando: <PROCESS_EXIT>
+[INFO] 22:01:42:005 Cpu/(19217:19225): ## (0:0) - Actualizo Contexto Ejecucion
+[ERROR] 22:01:53:106 Cpu/(19217:19223): Dispatch desconectado

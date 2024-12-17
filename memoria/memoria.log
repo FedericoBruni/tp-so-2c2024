@@ -1,220 +1,147 @@
-[TRACE] 21:14:46:610 Memoria/(27742:27742): ## Servidor levantado y listo para escuchar en el puerto: 8002
-[INFO] 21:14:46:619 Memoria/(27742:27742): ## Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
-[INFO] 21:14:49:097 Memoria/(27742:27873): ## Recibido Handshake: <HANDSHAKE CPU - MEMORIA>
-[INFO] 21:14:50:046 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 7
-[INFO] 21:14:50:052 Memoria/(27742:27970): ## Recibido Handshake: <HANDSHAKE KERNEL - MEMORIA>
-[INFO] 21:14:50:200 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 8
-[INFO] 21:14:50:201 Memoria/(27742:27978): ## Proceso <Creado> - PID: <0> - Tamaño: <16>
-[INFO] 21:14:50:201 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 9
-[INFO] 21:14:50:204 Memoria/(27742:27979): ## Hilo <Creado> - (PID:TID)- (<0>:<0>)
-[INFO] 21:14:50:212 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:50:264 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SET AX 10
+[TRACE] 22:01:24:811 Memoria/(19120:19120): ## Servidor levantado y listo para escuchar en el puerto: 8002
+[INFO] 22:01:24:813 Memoria/(19120:19120): ## Handshake OK HANDSHAKE MEMORIA - FILESYSTEM
+[INFO] 22:01:26:321 Memoria/(19120:19218): ## Recibido Handshake: <HANDSHAKE CPU - MEMORIA>
+[INFO] 22:01:37:644 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 7
+[INFO] 22:01:37:646 Memoria/(19120:19222): ## Recibido Handshake: <HANDSHAKE KERNEL - MEMORIA>
+[INFO] 22:01:37:957 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 8
+[INFO] 22:01:37:961 Memoria/(19120:19230): ## Proceso <Creado> - PID: <0> - Tamaño: <32>
+[INFO] 22:01:37:972 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 9
+[INFO] 22:01:37:973 Memoria/(19120:19231): ## Hilo <Creado> - (PID:TID)- (<0>:<0>)
+[INFO] 22:01:38:162 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:212 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SET DX 0
 
-[INFO] 21:14:50:316 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SET BX 1
+[INFO] 22:01:38:262 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SET AX 1
 
-[INFO] 21:14:50:367 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE PLANI_PROC 16 0
+[INFO] 22:01:38:313 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 6
 
-[INFO] 21:14:50:417 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:50:420 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 10
-[INFO] 21:14:50:422 Memoria/(27742:27983): ## Proceso <Creado> - PID: <1> - Tamaño: <16>
-[INFO] 21:14:50:424 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 11
-[INFO] 21:14:50:428 Memoria/(27742:27984): ## Hilo <Creado> - (PID:TID)- (<1>:<0>)
-[INFO] 21:14:50:472 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:50:525 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:50:580 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: SET DX 0
+[INFO] 22:01:38:365 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:373 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 10
+[INFO] 22:01:38:374 Memoria/(19120:19235): ## Hilo <Creado> - (PID:TID)- (<0>:<1>)
+[INFO] 22:01:38:415 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:466 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:516 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SUM DX AX
 
-[INFO] 21:14:50:644 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: SET AX 1
+[INFO] 22:01:38:566 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 5
 
-[INFO] 21:14:50:694 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+[INFO] 22:01:38:617 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:618 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 11
+[INFO] 22:01:38:620 Memoria/(19120:19237): ## Hilo <Creado> - (PID:TID)- (<0>:<2>)
+[INFO] 22:01:38:667 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:717 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:768 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SUM DX AX
 
-[INFO] 21:14:50:746 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:50:757 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 12
-[INFO] 21:14:50:757 Memoria/(27742:27986): ## Hilo <Creado> - (PID:TID)- (<1>:<1>)
-[INFO] 21:14:50:806 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:50:861 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:50:914 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE RECURSOS_MUTEX_PROC 16 0
+[INFO] 22:01:38:818 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 4
 
-[INFO] 21:14:50:970 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:50:973 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 13
-[INFO] 21:14:50:977 Memoria/(27742:27988): ## Proceso <Creado> - PID: <2> - Tamaño: <16>
-[INFO] 21:14:50:982 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 14
-[INFO] 21:14:50:983 Memoria/(27742:27989): ## Hilo <Creado> - (PID:TID)- (<2>:<0>)
-[INFO] 21:14:51:027 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE MEM_FIJA_BASE 12 0
+[INFO] 22:01:38:869 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:870 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 12
+[INFO] 22:01:38:872 Memoria/(19120:19239): ## Hilo <Creado> - (PID:TID)- (<0>:<3>)
+[INFO] 22:01:38:919 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:38:969 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:020 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SUM DX AX
 
-[INFO] 21:14:51:084 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:51:085 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 15
-[INFO] 21:14:51:086 Memoria/(27742:27990): ## Proceso <Creado> - PID: <3> - Tamaño: <12>
-[INFO] 21:14:51:089 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 16
-[INFO] 21:14:51:091 Memoria/(27742:27991): ## Hilo <Creado> - (PID:TID)- (<3>:<0>)
-[INFO] 21:14:51:135 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:51:188 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:51:241 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: SUM DX AX
+[INFO] 22:01:39:070 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 3
 
-[INFO] 21:14:51:293 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+[INFO] 22:01:39:120 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:122 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 13
+[INFO] 22:01:39:124 Memoria/(19120:19241): ## Hilo <Creado> - (PID:TID)- (<0>:<4>)
+[INFO] 22:01:39:171 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:221 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:271 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SUM DX AX
 
-[INFO] 21:14:51:350 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:51:351 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 17
-[INFO] 21:14:51:352 Memoria/(27742:27993): ## Hilo <Creado> - (PID:TID)- (<1>:<2>)
-[INFO] 21:14:51:401 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:51:452 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<2>:<0>)
-[INFO] 21:14:51:505 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<2>:<0>) - Instrucción: SET DX 0
+[INFO] 22:01:39:321 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_CANCEL 4
 
-[INFO] 21:14:51:561 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<2>:<0>) - Instrucción: SET AX 14
+[INFO] 22:01:39:371 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:386 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 14
+[INFO] 22:01:39:387 Memoria/(19120:19243): ## Hilo <Destruido - (PID:TID)- 0:4
+[INFO] 22:01:39:387 Memoria/(19120:19243): ## Hilo <Destruido> - (PID:TID) - (<0>:<4>)
+[INFO] 22:01:39:421 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:472 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:522 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: THREAD_JOIN 2
 
-[INFO] 21:14:51:614 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<2>:<0>) - Instrucción: WRITE_MEM AX DX
+[INFO] 22:01:39:572 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:39:640 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:39:691 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SET CX 5
 
-[INFO] 21:14:51:665 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<2>:<0>)
-[INFO] 21:14:51:667 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 18
-[INFO] 21:14:51:667 Memoria/(27742:27995): ## Hilo <Destruido> - (PID:TID) - (<2>:<0>)
-[INFO] 21:14:51:667 Memoria/(27742:27995): ## Proceso <Destruido> - PID: <2> - Tamaño: >16>
-[INFO] 21:14:51:716 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:51:767 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<3>:<0>) - Instrucción: PROCESS_CREATE MEM_FIJAS 8 0
+[INFO] 22:01:39:741 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:39:792 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:39:842 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SET BX 1
 
-[INFO] 21:14:51:817 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:51:821 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 19
-[INFO] 21:14:51:823 Memoria/(27742:27997): ## Proceso <Creado> - PID: <4> - Tamaño: <8>
-[INFO] 21:14:51:824 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 20
-[INFO] 21:14:51:824 Memoria/(27742:27998): ## Hilo <Creado> - (PID:TID)- (<4>:<0>)
-[INFO] 21:14:51:868 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:51:919 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:51:970 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE MEM_DINAMICA_BASE 128 0
+[INFO] 22:01:39:892 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:52:023 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:52:024 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 21
-[INFO] 21:14:52:025 Memoria/(27742:28000): ## Proceso <Creado> - PID: <5> - Tamaño: <128>
-[INFO] 21:14:52:025 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 22
-[INFO] 21:14:52:027 Memoria/(27742:28001): ## Hilo <Creado> - (PID:TID)- (<5>:<0>)
-[INFO] 21:14:52:075 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:52:127 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:52:186 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: SUM DX AX
+[INFO] 22:01:39:943 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:52:237 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:52:288 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:52:339 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<4>:<0>) - Instrucción: SET DX 0
+[INFO] 22:01:39:993 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:043 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:094 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:52:395 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:52:446 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:52:498 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<3>:<0>) - Instrucción: PROCESS_CREATE MEM_FIJAS 48 0
+[INFO] 22:01:40:144 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:52:549 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:52:550 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 23
-[INFO] 21:14:52:552 Memoria/(27742:28005): ## Proceso <Creado> - PID: <6> - Tamaño: <48>
-[INFO] 21:14:52:555 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 24
-[INFO] 21:14:52:556 Memoria/(27742:28006): ## Hilo <Creado> - (PID:TID)- (<6>:<0>)
-[INFO] 21:14:52:601 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:52:653 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:52:705 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<5>:<0>) - Instrucción: PROCESS_CREATE MEM_DINAMICA_PROC_FIN 64 0
+[INFO] 22:01:40:194 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:52:758 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:52:776 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 25
-[INFO] 21:14:52:776 Memoria/(27742:28008): ## Proceso <Creado> - PID: <7> - Tamaño: <64>
-[INFO] 21:14:52:776 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 26
-[INFO] 21:14:52:777 Memoria/(27742:28009): ## Hilo <Creado> - (PID:TID)- (<7>:<0>)
-[INFO] 21:14:52:810 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:52:860 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:52:913 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE PRUEBA_FS 32 0
+[INFO] 22:01:40:244 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:294 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:345 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:52:965 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:52:966 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 27
-[INFO] 21:14:52:967 Memoria/(27742:28011): ## Proceso <Creado> - PID: <8> - Tamaño: <32>
-[INFO] 21:14:52:967 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 28
-[INFO] 21:14:52:968 Memoria/(27742:28012): ## Hilo <Creado> - (PID:TID)- (<8>:<0>)
-[INFO] 21:14:53:017 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:53:068 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:53:119 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 5
+[INFO] 22:01:40:395 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:53:170 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:53:173 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 29
-[INFO] 21:14:53:176 Memoria/(27742:28014): ## Hilo <Creado> - (PID:TID)- (<1>:<3>)
-[INFO] 21:14:53:221 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:53:277 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:53:328 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<4>:<0>) - Instrucción: SET AX 64
+[INFO] 22:01:40:445 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:53:380 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:53:441 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<6>:<0>)
-[INFO] 21:14:53:511 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<6>:<0>) - Instrucción: SET DX 0
+[INFO] 22:01:40:495 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:546 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:596 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:53:563 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<6>:<0>)
-[INFO] 21:14:53:614 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:53:665 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<3>:<0>) - Instrucción: PROCESS_CREATE MEM_FIJAS 96 0
+[INFO] 22:01:40:646 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:53:719 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:53:720 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 30
-[INFO] 21:14:53:723 Memoria/(27742:28018): ## Proceso <Creado> - PID: <9> - Tamaño: <96>
-[INFO] 21:14:53:739 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 31
-[INFO] 21:14:53:742 Memoria/(27742:28019): ## Hilo <Creado> - (PID:TID)- (<9>:<0>)
-[INFO] 21:14:53:778 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<3>:<0>)
-[INFO] 21:14:53:838 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<7>:<0>)
-[INFO] 21:14:53:891 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<7>:<0>) - Instrucción: SET DX 0
+[INFO] 22:01:40:697 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<3>) - Instrucción: THREAD_EXIT
+[INFO] 22:01:40:747 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:749 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 15
+[INFO] 22:01:40:749 Memoria/(19120:19250): ## Hilo <Destruido - (PID:TID)- 0:3
+[INFO] 22:01:40:749 Memoria/(19120:19250): ## Hilo <Destruido> - (PID:TID) - (<0>:<3>)
+[INFO] 22:01:40:797 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:40:848 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SET CX 5
 
-[INFO] 21:14:53:950 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<7>:<0>) - Instrucción: SET AX 64
+[INFO] 22:01:40:898 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:40:948 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:40:998 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SET BX 1
 
-[INFO] 21:14:54:001 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<7>:<0>) - Instrucción: WRITE_MEM DX AX
+[INFO] 22:01:41:048 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:54:053 Memoria/(27742:27873): ## <Escritura> - (PID:TID) - (<7>:<0>) - Dir. Física: <236> - Tamaño: <64>
-[INFO] 21:14:54:103 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<7>:<0>)
-[INFO] 21:14:54:154 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:54:205 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<5>:<0>) - Instrucción: PROCESS_CREATE MEM_DINAMICA_PROC_FIN 128 0
+[INFO] 22:01:41:099 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:54:259 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:54:266 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 32
-[INFO] 21:14:54:268 Memoria/(27742:28022): ## Proceso <Creado> - PID: <10> - Tamaño: <128>
-[INFO] 21:14:54:269 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 33
-[INFO] 21:14:54:269 Memoria/(27742:28023): ## Hilo <Creado> - (PID:TID)- (<10>:<0>)
-[INFO] 21:14:54:312 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<5>:<0>) - Instrucción: PROCESS_CREATE MEM_DINAMICA_PROC_FIN 64 0
+[INFO] 22:01:41:149 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:199 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:249 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:54:364 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:54:366 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 34
-[INFO] 21:14:54:366 Memoria/(27742:28024): ## Proceso <Creado> - PID: <11> - Tamaño: <64>
-[INFO] 21:14:54:367 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 35
-[INFO] 21:14:54:369 Memoria/(27742:28025): ## Hilo <Creado> - (PID:TID)- (<11>:<0>)
-[INFO] 21:14:54:417 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<5>:<0>)
-[INFO] 21:14:54:468 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<8>:<0>)
-[INFO] 21:14:54:519 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<8>:<0>) - Instrucción: SET AX 5
+[INFO] 22:01:41:299 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:54:570 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<8>:<0>) - Instrucción: SET BX 1
+[INFO] 22:01:41:350 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:54:622 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<8>:<0>) - Instrucción: PROCESS_CREATE FIBO_CROWN 96 0
+[INFO] 22:01:41:400 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:450 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:501 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:54:673 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<8>:<0>)
-[INFO] 21:14:54:700 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 36
-[INFO] 21:14:54:705 Memoria/(27742:28027): ## Proceso <Creado> - PID: <12> - Tamaño: <96>
-[INFO] 21:14:54:707 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 37
-[INFO] 21:14:54:707 Memoria/(27742:28028): ## Hilo <Creado> - (PID:TID)- (<12>:<0>)
-[INFO] 21:14:54:739 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<8>:<0>)
-[INFO] 21:14:54:790 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:54:842 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: SUB AX BX
+[INFO] 22:01:41:551 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:54:896 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: JNZ AX 2
+[INFO] 22:01:41:601 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:54:951 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_CREATE PLANI_PROC 16 0
+[INFO] 22:01:41:651 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:702 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:752 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: SUB CX BX
 
-[INFO] 21:14:55:002 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:55:003 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 38
-[INFO] 21:14:55:003 Memoria/(27742:28030): ## Proceso <Creado> - PID: <13> - Tamaño: <16>
-[INFO] 21:14:55:004 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 39
-[INFO] 21:14:55:004 Memoria/(27742:28031): ## Hilo <Creado> - (PID:TID)- (<13>:<0>)
-[INFO] 21:14:55:055 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
-[INFO] 21:14:55:107 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:55:162 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: SUM DX AX
+[INFO] 22:01:41:803 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: JNZ CX 2
 
-[INFO] 21:14:55:228 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<1>:<0>) - Instrucción: THREAD_CREATE PLANI_THREAD 6
+[INFO] 22:01:41:854 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<2>) - Instrucción: THREAD_EXIT
+[INFO] 22:01:41:904 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:906 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 16
+[INFO] 22:01:41:908 Memoria/(19120:19256): ## Hilo <Destruido - (PID:TID)- 0:2
+[INFO] 22:01:41:909 Memoria/(19120:19256): ## Hilo <Destruido> - (PID:TID) - (<0>:<2>)
+[INFO] 22:01:41:954 Memoria/(19120:19218): ## Contexto <Solicitado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:42:005 Memoria/(19120:19218): ## Obtener instrucción - (PID:TID) - (<0>:<0>) - Instrucción: PROCESS_EXIT
+[INFO] 22:01:42:055 Memoria/(19120:19218): ## Contexto <Actualizado> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:42:059 Memoria/(19120:19120): ## Kernel Conectado - FD del socket: 17
+[INFO] 22:01:42:060 Memoria/(19120:19258): ## Hilo <Destruido> - (PID:TID) - (<0>:<0>)
+[INFO] 22:01:42:060 Memoria/(19120:19258): ## Hilo <Destruido> - (PID:TID) - (<0>:<1>)
+[INFO] 22:01:42:060 Memoria/(19120:19258): ## Proceso <Destruido> - PID: <0> - Tamaño: >8192>
+[ERROR] 22:01:53:107 Memoria/(19120:19218): Cpu desconectado
 
-[INFO] 21:14:55:279 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:55:281 Memoria/(27742:27742): ## Kernel Conectado - FD del socket: 40
-[INFO] 21:14:55:281 Memoria/(27742:28033): ## Hilo <Creado> - (PID:TID)- (<1>:<4>)
-[INFO] 21:14:55:331 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<1>:<0>)
-[INFO] 21:14:55:385 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:55:436 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<4>:<0>) - Instrucción: WRITE_MEM DX AX
-
-[INFO] 21:14:55:488 Memoria/(27742:27873): ## <Escritura> - (PID:TID) - (<4>:<0>) - Dir. Física: <32> - Tamaño: <8>
-[INFO] 21:14:55:545 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<4>:<0>) - Instrucción: READ_MEM BX DX
-
-[INFO] 21:14:55:605 Memoria/(27742:27873): ## <Lectura> - (PID:TID) - (<4>:<0>) - Dir. Física: <32> - Tamaño: <8>
-[INFO] 21:14:55:660 Memoria/(27742:27873): ## Contexto <Actualizado> - (PID:TID) - (<4>:<0>)
-[INFO] 21:14:55:711 Memoria/(27742:27873): ## Contexto <Solicitado> - (PID:TID) - (<6>:<0>)
-[INFO] 21:14:55:762 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<6>:<0>) - Instrucción: SET AX 64
-
-[INFO] 21:14:55:812 Memoria/(27742:27873): ## Obtener instrucción - (PID:TID) - (<6>:<0>) - Instrucción: WRITE_MEM DX AX
-
-[INFO] 21:14:55:835 Memoria/(27742:27742): ## Finalizando ejecución de MEMORIA
+[INFO] 22:02:31:832 Memoria/(19120:19120): ## Finalizando ejecución de MEMORIA

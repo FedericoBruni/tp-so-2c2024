@@ -117,3 +117,1662 @@
 [INFO] 21:14:55:661 Kernel/(27969:27981): ## (4:0) - Desalojado por fin de Quantum
 [INFO] 21:14:55:661 Kernel/(27969:27981): ## Planificando (PID:TID) - (<6>:<0>)- Algoritmo <MULTINIVEL>
 [INFO] 21:14:58:509 Kernel/(27969:28037): ## Finalizando ejecucion de KERNEL
+[INFO] 21:06:36:430 Kernel/(4262:4262): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:06:36:431 Kernel/(4262:4262): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:06:36:431 Kernel/(4262:4262): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:06:36:432 Kernel/(4262:4267): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:06:36:432 Kernel/(4262:4267): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:06:36:432 Kernel/(4262:4269): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:06:36:432 Kernel/(4262:4269): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:06:36:433 Kernel/(4262:4274): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:06:36:634 Kernel/(4262:4274): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:06:36:634 Kernel/(4262:4274): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:06:36:648 Kernel/(4262:4269): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:06:36:648 Kernel/(4262:4269): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:06:36:685 Kernel/(4262:4274): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:06:36:685 Kernel/(4262:4274): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:06:36:886 Kernel/(4262:4274): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:06:36:886 Kernel/(4262:4274): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:06:36:886 Kernel/(4262:4269): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:06:36:886 Kernel/(4262:4269): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:06:36:936 Kernel/(4262:4274): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:06:36:936 Kernel/(4262:4274): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:06:37:138 Kernel/(4262:4274): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:06:37:138 Kernel/(4262:4274): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:06:37:140 Kernel/(4262:4269): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:06:37:140 Kernel/(4262:4269): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:06:37:189 Kernel/(4262:4274): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:06:37:189 Kernel/(4262:4274): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:06:37:390 Kernel/(4262:4274): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:06:37:390 Kernel/(4262:4274): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:06:37:390 Kernel/(4262:4269): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:06:37:390 Kernel/(4262:4269): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:06:37:440 Kernel/(4262:4274): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:06:37:440 Kernel/(4262:4274): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:06:37:642 Kernel/(4262:4274): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:06:37:642 Kernel/(4262:4274): No se encontro el hilo (PID:TID) - (<0>:<0>)
+[INFO] 21:09:24:869 Kernel/(4262:4458): ## Finalizando ejecucion de KERNEL
+[INFO] 21:09:30:464 Kernel/(4756:4756): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:09:30:464 Kernel/(4756:4756): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:09:30:465 Kernel/(4756:4756): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:09:30:469 Kernel/(4756:4761): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:09:30:469 Kernel/(4756:4761): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:09:30:480 Kernel/(4756:4763): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:09:30:480 Kernel/(4756:4763): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:09:30:481 Kernel/(4756:4768): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:09:30:683 Kernel/(4756:4768): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:09:30:683 Kernel/(4756:4768): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:09:30:683 Kernel/(4756:4763): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:09:30:683 Kernel/(4756:4763): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:09:30:733 Kernel/(4756:4768): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:09:30:733 Kernel/(4756:4768): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:09:30:934 Kernel/(4756:4768): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:09:30:934 Kernel/(4756:4768): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:09:30:934 Kernel/(4756:4763): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:09:30:934 Kernel/(4756:4763): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:09:30:984 Kernel/(4756:4768): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:09:30:984 Kernel/(4756:4768): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:09:31:194 Kernel/(4756:4768): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:09:31:194 Kernel/(4756:4768): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:09:31:195 Kernel/(4756:4763): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:09:31:195 Kernel/(4756:4763): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:09:31:244 Kernel/(4756:4768): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:09:31:244 Kernel/(4756:4768): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:09:31:445 Kernel/(4756:4768): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:09:31:445 Kernel/(4756:4768): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:09:31:446 Kernel/(4756:4763): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:09:31:446 Kernel/(4756:4763): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:09:31:495 Kernel/(4756:4768): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:09:31:495 Kernel/(4756:4768): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:09:31:704 Kernel/(4756:4768): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:09:31:704 Kernel/(4756:4768): No se encontro el hilo (PID:TID) - (<0>:<0>)
+[INFO] 21:11:09:527 Kernel/(4756:4851): ## Finalizando ejecucion de KERNEL
+[INFO] 21:24:20:374 Kernel/(6437:6437): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:24:20:374 Kernel/(6437:6437): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:24:20:375 Kernel/(6437:6437): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:24:20:375 Kernel/(6437:6442): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:24:20:375 Kernel/(6437:6442): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:24:20:376 Kernel/(6437:6444): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:24:20:376 Kernel/(6437:6444): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:24:20:376 Kernel/(6437:6449): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:24:20:578 Kernel/(6437:6449): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:24:20:578 Kernel/(6437:6449): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:24:20:579 Kernel/(6437:6444): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:24:20:579 Kernel/(6437:6444): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:24:20:628 Kernel/(6437:6449): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:24:20:628 Kernel/(6437:6449): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:24:20:830 Kernel/(6437:6449): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:24:20:830 Kernel/(6437:6449): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:24:20:831 Kernel/(6437:6444): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:24:20:831 Kernel/(6437:6444): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:24:20:880 Kernel/(6437:6449): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:24:20:880 Kernel/(6437:6449): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:24:21:087 Kernel/(6437:6449): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:24:21:087 Kernel/(6437:6449): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:24:21:089 Kernel/(6437:6444): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:24:21:089 Kernel/(6437:6444): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:24:21:137 Kernel/(6437:6449): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:24:21:137 Kernel/(6437:6449): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:24:21:339 Kernel/(6437:6449): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:24:21:339 Kernel/(6437:6449): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:24:21:341 Kernel/(6437:6444): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:24:21:341 Kernel/(6437:6444): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:24:21:390 Kernel/(6437:6449): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:24:21:390 Kernel/(6437:6449): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:24:21:591 Kernel/(6437:6449): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:24:21:591 Kernel/(6437:6449): No se encontro el hilo (PID:TID) - (<0>:<0>)
+[INFO] 21:24:34:836 Kernel/(6437:6473): ## Finalizando ejecucion de KERNEL
+[INFO] 21:25:16:905 Kernel/(6885:6885): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:25:16:906 Kernel/(6885:6885): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:25:16:906 Kernel/(6885:6885): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:25:16:907 Kernel/(6885:6890): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:25:16:907 Kernel/(6885:6890): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:25:16:908 Kernel/(6885:6892): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:25:16:908 Kernel/(6885:6892): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:16:908 Kernel/(6885:6897): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:17:109 Kernel/(6885:6897): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:17:109 Kernel/(6885:6897): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:25:17:110 Kernel/(6885:6892): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:25:17:110 Kernel/(6885:6892): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:17:160 Kernel/(6885:6897): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:17:160 Kernel/(6885:6897): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:17:361 Kernel/(6885:6897): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:17:361 Kernel/(6885:6897): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:25:17:363 Kernel/(6885:6892): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:25:17:363 Kernel/(6885:6892): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:17:411 Kernel/(6885:6897): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:17:411 Kernel/(6885:6897): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:17:612 Kernel/(6885:6897): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:17:612 Kernel/(6885:6897): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:25:17:612 Kernel/(6885:6892): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:25:17:612 Kernel/(6885:6892): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:17:662 Kernel/(6885:6897): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:17:662 Kernel/(6885:6897): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:17:863 Kernel/(6885:6897): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:17:863 Kernel/(6885:6897): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:25:17:865 Kernel/(6885:6892): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:25:17:865 Kernel/(6885:6892): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:17:913 Kernel/(6885:6897): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:17:913 Kernel/(6885:6897): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:18:115 Kernel/(6885:6897): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:25:18:115 Kernel/(6885:6897): TID:4 PID: 0
+[ERROR] 21:25:18:115 Kernel/(6885:6897): No se encontro el hilo (PID:TID) - (<0>:<4>)
+[INFO] 21:25:46:689 Kernel/(6885:6939): ## Finalizando ejecucion de KERNEL
+[INFO] 21:25:54:089 Kernel/(7197:7197): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:25:54:089 Kernel/(7197:7197): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:25:54:089 Kernel/(7197:7197): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:25:54:090 Kernel/(7197:7202): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:25:54:090 Kernel/(7197:7202): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:25:54:091 Kernel/(7197:7204): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:25:54:091 Kernel/(7197:7204): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:54:091 Kernel/(7197:7209): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:54:293 Kernel/(7197:7209): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:54:293 Kernel/(7197:7209): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:25:54:293 Kernel/(7197:7204): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:25:54:293 Kernel/(7197:7204): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:54:343 Kernel/(7197:7209): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:54:343 Kernel/(7197:7209): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:54:544 Kernel/(7197:7209): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:54:544 Kernel/(7197:7209): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:25:54:545 Kernel/(7197:7204): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:25:54:545 Kernel/(7197:7204): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:54:595 Kernel/(7197:7209): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:54:595 Kernel/(7197:7209): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:54:797 Kernel/(7197:7209): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:54:797 Kernel/(7197:7209): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:25:54:799 Kernel/(7197:7204): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:25:54:799 Kernel/(7197:7204): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:54:847 Kernel/(7197:7209): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:54:847 Kernel/(7197:7209): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:55:049 Kernel/(7197:7209): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:25:55:049 Kernel/(7197:7209): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:25:55:050 Kernel/(7197:7204): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:25:55:051 Kernel/(7197:7204): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:25:55:099 Kernel/(7197:7209): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:25:55:099 Kernel/(7197:7209): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:25:55:302 Kernel/(7197:7209): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:25:55:302 Kernel/(7197:7209): TID:4 PID: 0
+[TRACE] 21:25:55:303 Kernel/(7197:7209): multinivel
+[ERROR] 21:25:55:303 Kernel/(7197:7209): No se encontro el hilo (PID:TID) - (<0>:<4>)
+[INFO] 21:26:07:806 Kernel/(7197:7248): ## Finalizando ejecucion de KERNEL
+[INFO] 21:28:08:908 Kernel/(7761:7761): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:28:08:908 Kernel/(7761:7761): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:28:08:909 Kernel/(7761:7761): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:28:08:909 Kernel/(7761:7766): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:28:08:909 Kernel/(7761:7766): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:28:08:910 Kernel/(7761:7768): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:28:08:910 Kernel/(7761:7768): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:08:910 Kernel/(7761:7773): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:09:112 Kernel/(7761:7773): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:09:112 Kernel/(7761:7773): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:28:09:113 Kernel/(7761:7768): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:28:09:113 Kernel/(7761:7768): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:09:162 Kernel/(7761:7773): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:09:162 Kernel/(7761:7773): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:09:364 Kernel/(7761:7773): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:09:364 Kernel/(7761:7773): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:28:09:364 Kernel/(7761:7768): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:28:09:364 Kernel/(7761:7768): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:09:414 Kernel/(7761:7773): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:09:414 Kernel/(7761:7773): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:09:616 Kernel/(7761:7773): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:09:616 Kernel/(7761:7773): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:28:09:618 Kernel/(7761:7768): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:28:09:618 Kernel/(7761:7768): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:09:665 Kernel/(7761:7773): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:09:665 Kernel/(7761:7773): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:09:868 Kernel/(7761:7773): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:09:868 Kernel/(7761:7773): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:28:09:870 Kernel/(7761:7768): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:28:09:870 Kernel/(7761:7768): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:09:918 Kernel/(7761:7773): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:09:918 Kernel/(7761:7773): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:10:119 Kernel/(7761:7773): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:28:10:119 Kernel/(7761:7773): TID:4 PID: 0
+[TRACE] 21:28:10:119 Kernel/(7761:7773): multinivel
+[WARNING] 21:28:10:119 Kernel/(7761:7773): PID Y TID BUSCADO: 0 4
+[WARNING] 21:28:10:119 Kernel/(7761:7773): PID Y TID BUSCADO: 0 3
+[WARNING] 21:28:10:119 Kernel/(7761:7773): PID Y TID BUSCADO: 0 2
+[WARNING] 21:28:10:119 Kernel/(7761:7773): PID Y TID BUSCADO: 0 1
+[ERROR] 21:28:10:119 Kernel/(7761:7773): No se encontro el hilo (PID:TID) - (<0>:<4>)
+[INFO] 21:28:49:059 Kernel/(7761:7814): ## Finalizando ejecucion de KERNEL
+[INFO] 21:28:55:601 Kernel/(8072:8072): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:28:55:601 Kernel/(8072:8072): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:28:55:602 Kernel/(8072:8072): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:28:55:602 Kernel/(8072:8077): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:28:55:603 Kernel/(8072:8077): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:28:55:603 Kernel/(8072:8079): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:28:55:603 Kernel/(8072:8079): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:55:604 Kernel/(8072:8084): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:55:812 Kernel/(8072:8084): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:55:812 Kernel/(8072:8084): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:28:55:818 Kernel/(8072:8079): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:28:55:818 Kernel/(8072:8079): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:55:862 Kernel/(8072:8084): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:55:862 Kernel/(8072:8084): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:56:063 Kernel/(8072:8084): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:56:063 Kernel/(8072:8084): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:28:56:064 Kernel/(8072:8079): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:28:56:064 Kernel/(8072:8079): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:56:114 Kernel/(8072:8084): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:56:114 Kernel/(8072:8084): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:56:317 Kernel/(8072:8084): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:56:317 Kernel/(8072:8084): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:28:56:318 Kernel/(8072:8079): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:28:56:318 Kernel/(8072:8079): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:56:367 Kernel/(8072:8084): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:56:367 Kernel/(8072:8084): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:56:569 Kernel/(8072:8084): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:28:56:569 Kernel/(8072:8084): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:28:56:570 Kernel/(8072:8079): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:28:56:570 Kernel/(8072:8079): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:28:56:620 Kernel/(8072:8084): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:28:56:620 Kernel/(8072:8084): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:28:56:821 Kernel/(8072:8084): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:28:56:821 Kernel/(8072:8084): TID:4 PID: 0
+[TRACE] 21:28:56:821 Kernel/(8072:8084): multinivel
+[WARNING] 21:28:56:821 Kernel/(8072:8084): PID Y TID BUSCADO: 0 4
+[TRACE] 21:28:56:821 Kernel/(8072:8084): encontrado
+[WARNING] 21:28:56:821 Kernel/(8072:8084): PID Y TID BUSCADO: 0 3
+[WARNING] 21:28:56:821 Kernel/(8072:8084): PID Y TID BUSCADO: 0 2
+[WARNING] 21:28:56:821 Kernel/(8072:8084): PID Y TID BUSCADO: 0 1
+[INFO] 21:28:56:823 Kernel/(8072:8080): ## (<0> : <0>) Finaliza el hilo
+[INFO] 21:29:35:405 Kernel/(8724:8724): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:29:35:409 Kernel/(8724:8724): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:29:35:411 Kernel/(8724:8724): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:29:35:428 Kernel/(8724:8742): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:29:35:429 Kernel/(8724:8742): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:29:35:433 Kernel/(8724:8744): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:29:35:435 Kernel/(8724:8744): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:29:35:447 Kernel/(8724:8749): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:29:35:660 Kernel/(8724:8749): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:29:35:660 Kernel/(8724:8749): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:29:35:664 Kernel/(8724:8744): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:29:35:665 Kernel/(8724:8744): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:29:35:710 Kernel/(8724:8749): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:29:35:711 Kernel/(8724:8749): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:29:35:915 Kernel/(8724:8749): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:29:35:916 Kernel/(8724:8749): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:29:35:924 Kernel/(8724:8744): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:29:35:924 Kernel/(8724:8744): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:29:35:966 Kernel/(8724:8749): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:29:35:968 Kernel/(8724:8749): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:29:36:171 Kernel/(8724:8749): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:29:36:172 Kernel/(8724:8749): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:29:36:174 Kernel/(8724:8744): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:29:36:175 Kernel/(8724:8744): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:29:36:221 Kernel/(8724:8749): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:29:36:222 Kernel/(8724:8749): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:29:36:425 Kernel/(8724:8749): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:29:36:426 Kernel/(8724:8749): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:29:36:429 Kernel/(8724:8744): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:29:36:429 Kernel/(8724:8744): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:29:36:475 Kernel/(8724:8749): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:29:36:477 Kernel/(8724:8749): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:29:36:680 Kernel/(8724:8749): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:29:36:684 Kernel/(8724:8749): TID:4 PID: 0
+[TRACE] 21:29:36:685 Kernel/(8724:8749): multinivel
+[WARNING] 21:29:36:685 Kernel/(8724:8749): PID Y TID BUSCADO: 0 4
+[TRACE] 21:29:36:685 Kernel/(8724:8749): encontrado
+[WARNING] 21:29:36:685 Kernel/(8724:8749): PID Y TID BUSCADO: 0 3
+[WARNING] 21:29:36:685 Kernel/(8724:8749): PID Y TID BUSCADO: 0 2
+[WARNING] 21:29:36:686 Kernel/(8724:8749): PID Y TID BUSCADO: 0 1
+[INFO] 21:29:36:692 Kernel/(8724:8745): ## (<0> : <0>) Finaliza el hilo
+[INFO] 21:30:53:083 Kernel/(9344:9344): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:30:53:084 Kernel/(9344:9344): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:30:53:084 Kernel/(9344:9344): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:30:53:085 Kernel/(9344:9349): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:30:53:085 Kernel/(9344:9349): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:30:53:086 Kernel/(9344:9351): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:30:53:086 Kernel/(9344:9351): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:30:53:086 Kernel/(9344:9356): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:30:53:288 Kernel/(9344:9356): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:30:53:288 Kernel/(9344:9356): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:30:53:288 Kernel/(9344:9351): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:30:53:288 Kernel/(9344:9351): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:30:53:338 Kernel/(9344:9356): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:30:53:338 Kernel/(9344:9356): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:30:53:541 Kernel/(9344:9356): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:30:53:541 Kernel/(9344:9356): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:30:53:542 Kernel/(9344:9351): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:30:53:542 Kernel/(9344:9351): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:30:53:590 Kernel/(9344:9356): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:30:53:590 Kernel/(9344:9356): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:30:53:793 Kernel/(9344:9356): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:30:53:794 Kernel/(9344:9356): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:30:53:794 Kernel/(9344:9351): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:30:53:794 Kernel/(9344:9351): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:30:53:844 Kernel/(9344:9356): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:30:53:844 Kernel/(9344:9356): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:30:54:045 Kernel/(9344:9356): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:30:54:045 Kernel/(9344:9356): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:30:54:045 Kernel/(9344:9351): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:30:54:045 Kernel/(9344:9351): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:30:54:095 Kernel/(9344:9356): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:30:54:095 Kernel/(9344:9356): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:30:54:296 Kernel/(9344:9356): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:30:54:296 Kernel/(9344:9356): TID:4 PID: 0
+[TRACE] 21:30:54:296 Kernel/(9344:9356): multinivel
+[WARNING] 21:30:54:296 Kernel/(9344:9356): PID Y TID BUSCADO: 0 4
+[TRACE] 21:30:54:296 Kernel/(9344:9356): encontrado
+[WARNING] 21:30:54:296 Kernel/(9344:9356): PID Y TID BUSCADO: 0 3
+[WARNING] 21:30:54:296 Kernel/(9344:9356): PID Y TID BUSCADO: 0 2
+[WARNING] 21:30:54:296 Kernel/(9344:9356): PID Y TID BUSCADO: 0 1
+[INFO] 21:30:54:298 Kernel/(9344:9352): ## (<0> : <-1588257951>) Finaliza el hilo
+[INFO] 21:32:56:055 Kernel/(10000:10000): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:32:56:063 Kernel/(10000:10000): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:32:56:064 Kernel/(10000:10000): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:32:56:089 Kernel/(10000:10009): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:32:56:091 Kernel/(10000:10009): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:32:56:093 Kernel/(10000:10012): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:32:56:095 Kernel/(10000:10012): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:32:56:100 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:56:307 Kernel/(10000:10018): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:32:56:308 Kernel/(10000:10018): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:32:56:310 Kernel/(10000:10012): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:32:56:311 Kernel/(10000:10012): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:32:56:358 Kernel/(10000:10018): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:32:56:359 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:56:563 Kernel/(10000:10018): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:32:56:564 Kernel/(10000:10018): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:32:56:569 Kernel/(10000:10012): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:32:56:569 Kernel/(10000:10012): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:32:56:614 Kernel/(10000:10018): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:32:56:615 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:56:818 Kernel/(10000:10018): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:32:56:819 Kernel/(10000:10018): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:32:56:822 Kernel/(10000:10012): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:32:56:822 Kernel/(10000:10012): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:32:56:869 Kernel/(10000:10018): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:32:56:870 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:57:073 Kernel/(10000:10018): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:32:57:074 Kernel/(10000:10018): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:32:57:077 Kernel/(10000:10012): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:32:57:078 Kernel/(10000:10012): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:32:57:125 Kernel/(10000:10018): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:32:57:126 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:57:329 Kernel/(10000:10018): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:32:57:330 Kernel/(10000:10018): TID:4 PID: 0
+[TRACE] 21:32:57:330 Kernel/(10000:10018): multinivel
+[WARNING] 21:32:57:330 Kernel/(10000:10018): PID Y TID BUSCADO: 0 4
+[TRACE] 21:32:57:330 Kernel/(10000:10018): encontrado
+[WARNING] 21:32:57:330 Kernel/(10000:10018): PID Y TID BUSCADO: 0 3
+[WARNING] 21:32:57:330 Kernel/(10000:10018): PID Y TID BUSCADO: 0 2
+[WARNING] 21:32:57:330 Kernel/(10000:10018): PID Y TID BUSCADO: 0 1
+[INFO] 21:32:57:334 Kernel/(10000:10013): ## (<0> : <335469681>) Finaliza el hilo
+[INFO] 21:32:57:379 Kernel/(10000:10018): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:32:57:380 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:57:534 Kernel/(10000:10018): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:32:57:535 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:57:790 Kernel/(10000:10018): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:32:57:791 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:58:045 Kernel/(10000:10018): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:32:58:046 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:58:302 Kernel/(10000:10018): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:32:58:303 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:58:562 Kernel/(10000:10018): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:32:58:563 Kernel/(10000:10018): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:32:58:718 Kernel/(10000:10018): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[INFO] 21:34:57:972 Kernel/(10495:10495): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:34:57:973 Kernel/(10495:10495): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:34:57:973 Kernel/(10495:10495): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:34:57:974 Kernel/(10495:10500): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:34:57:974 Kernel/(10495:10500): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:34:57:975 Kernel/(10495:10502): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:34:57:975 Kernel/(10495:10502): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:34:57:975 Kernel/(10495:10507): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:34:58:179 Kernel/(10495:10507): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:34:58:179 Kernel/(10495:10507): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:34:58:181 Kernel/(10495:10502): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:34:58:181 Kernel/(10495:10502): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:34:58:228 Kernel/(10495:10507): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:34:58:228 Kernel/(10495:10507): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:34:58:432 Kernel/(10495:10507): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:34:58:433 Kernel/(10495:10507): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:34:58:434 Kernel/(10495:10502): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:34:58:434 Kernel/(10495:10502): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:34:58:482 Kernel/(10495:10507): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:34:58:482 Kernel/(10495:10507): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:34:58:683 Kernel/(10495:10507): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:34:58:683 Kernel/(10495:10507): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:34:58:684 Kernel/(10495:10502): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:34:58:684 Kernel/(10495:10502): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:34:58:734 Kernel/(10495:10507): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:34:58:734 Kernel/(10495:10507): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:34:58:935 Kernel/(10495:10507): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:34:58:935 Kernel/(10495:10507): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:34:58:936 Kernel/(10495:10502): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:34:58:936 Kernel/(10495:10502): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:34:58:985 Kernel/(10495:10507): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:34:58:985 Kernel/(10495:10507): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:34:59:187 Kernel/(10495:10507): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:34:59:187 Kernel/(10495:10507): TID:4 PID: 0
+[TRACE] 21:34:59:187 Kernel/(10495:10507): multinivel
+[WARNING] 21:34:59:187 Kernel/(10495:10507): PID Y TID BUSCADO: 0 4
+[TRACE] 21:34:59:187 Kernel/(10495:10507): encontrado
+[WARNING] 21:34:59:187 Kernel/(10495:10507): PID Y TID BUSCADO: 0 3
+[WARNING] 21:34:59:187 Kernel/(10495:10507): PID Y TID BUSCADO: 0 2
+[WARNING] 21:34:59:187 Kernel/(10495:10507): PID Y TID BUSCADO: 0 1
+[TRACE] 21:34:59:187 Kernel/(10495:10507): ENCOLANDO CANCEL PID TID 0 4
+[INFO] 21:34:59:187 Kernel/(10495:10503): ## (<0> : <1778982001>) Finaliza el hilo
+[INFO] 21:35:49:427 Kernel/(10871:10871): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:35:49:428 Kernel/(10871:10871): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:35:49:428 Kernel/(10871:10871): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:35:49:428 Kernel/(10871:10876): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:35:49:429 Kernel/(10871:10876): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:35:49:429 Kernel/(10871:10878): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:35:49:430 Kernel/(10871:10878): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:35:49:430 Kernel/(10871:10883): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:35:49:631 Kernel/(10871:10883): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:35:49:631 Kernel/(10871:10883): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:35:49:632 Kernel/(10871:10878): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:35:49:632 Kernel/(10871:10878): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:35:49:681 Kernel/(10871:10883): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:35:49:681 Kernel/(10871:10883): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:35:49:883 Kernel/(10871:10883): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:35:49:883 Kernel/(10871:10883): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:35:49:885 Kernel/(10871:10878): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:35:49:885 Kernel/(10871:10878): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:35:49:933 Kernel/(10871:10883): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:35:49:933 Kernel/(10871:10883): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:35:50:134 Kernel/(10871:10883): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:35:50:134 Kernel/(10871:10883): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:35:50:137 Kernel/(10871:10878): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:35:50:139 Kernel/(10871:10878): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:35:50:185 Kernel/(10871:10883): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:35:50:185 Kernel/(10871:10883): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:35:50:386 Kernel/(10871:10883): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:35:50:386 Kernel/(10871:10883): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:35:50:386 Kernel/(10871:10878): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:35:50:386 Kernel/(10871:10878): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:35:50:436 Kernel/(10871:10883): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:35:50:436 Kernel/(10871:10883): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:35:50:637 Kernel/(10871:10883): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:35:50:637 Kernel/(10871:10883): TID:4 PID: 0
+[TRACE] 21:35:50:637 Kernel/(10871:10883): multinivel
+[WARNING] 21:35:50:637 Kernel/(10871:10883): PID Y TID BUSCADO: 0 4
+[TRACE] 21:35:50:637 Kernel/(10871:10883): encontrado
+[WARNING] 21:35:50:638 Kernel/(10871:10883): PID Y TID BUSCADO: 0 3
+[WARNING] 21:35:50:638 Kernel/(10871:10883): PID Y TID BUSCADO: 0 2
+[WARNING] 21:35:50:638 Kernel/(10871:10883): PID Y TID BUSCADO: 0 1
+[TRACE] 21:35:50:638 Kernel/(10871:10879): HILO DESENCOLADO PID TID 0 1416273009
+[INFO] 21:35:50:639 Kernel/(10871:10879): ## (<0> : <1416273009>) Finaliza el hilo
+[INFO] 21:36:42:444 Kernel/(11345:11345): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:36:42:445 Kernel/(11345:11345): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:36:42:445 Kernel/(11345:11345): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:36:42:445 Kernel/(11345:11350): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:36:42:446 Kernel/(11345:11350): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:36:42:446 Kernel/(11345:11352): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:36:42:446 Kernel/(11345:11352): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:36:42:447 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:42:649 Kernel/(11345:11357): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:36:42:649 Kernel/(11345:11357): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:36:42:650 Kernel/(11345:11352): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:36:42:650 Kernel/(11345:11352): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:36:42:699 Kernel/(11345:11357): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:36:42:699 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:42:902 Kernel/(11345:11357): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:36:42:902 Kernel/(11345:11357): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:36:42:903 Kernel/(11345:11352): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:36:42:903 Kernel/(11345:11352): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:36:42:952 Kernel/(11345:11357): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:36:42:952 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:43:154 Kernel/(11345:11357): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:36:43:154 Kernel/(11345:11357): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:36:43:154 Kernel/(11345:11352): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:36:43:154 Kernel/(11345:11352): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:36:43:204 Kernel/(11345:11357): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:36:43:204 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:43:406 Kernel/(11345:11357): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:36:43:406 Kernel/(11345:11357): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:36:43:424 Kernel/(11345:11352): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:36:43:424 Kernel/(11345:11352): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:36:43:456 Kernel/(11345:11357): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:36:43:456 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:43:658 Kernel/(11345:11357): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:36:43:658 Kernel/(11345:11357): TID:4 PID: 0
+[TRACE] 21:36:43:658 Kernel/(11345:11357): multinivel
+[WARNING] 21:36:43:659 Kernel/(11345:11357): PID Y TID BUSCADO: 0 4
+[TRACE] 21:36:43:659 Kernel/(11345:11357): encontrado
+[WARNING] 21:36:43:659 Kernel/(11345:11357): PID Y TID BUSCADO: 0 3
+[WARNING] 21:36:43:659 Kernel/(11345:11357): PID Y TID BUSCADO: 0 2
+[WARNING] 21:36:43:659 Kernel/(11345:11357): PID Y TID BUSCADO: 0 1
+[TRACE] 21:36:43:659 Kernel/(11345:11353): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:36:43:661 Kernel/(11345:11353): ## (<0> : <4>) Finaliza el hilo
+[INFO] 21:36:43:709 Kernel/(11345:11357): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:36:43:709 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:43:860 Kernel/(11345:11357): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:36:43:860 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:44:112 Kernel/(11345:11357): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:36:44:112 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:44:364 Kernel/(11345:11357): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:36:44:364 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:44:616 Kernel/(11345:11357): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:36:44:617 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:44:868 Kernel/(11345:11357): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:36:44:868 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:45:019 Kernel/(11345:11357): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:36:45:019 Kernel/(11345:11353): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:36:45:020 Kernel/(11345:11353): ## (<0> : <3>) Finaliza el hilo
+[INFO] 21:36:45:020 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:45:270 Kernel/(11345:11357): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:36:45:270 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:45:521 Kernel/(11345:11357): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:36:45:521 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:45:776 Kernel/(11345:11357): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:36:45:776 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:46:027 Kernel/(11345:11357): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:36:46:027 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:46:178 Kernel/(11345:11357): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:36:46:178 Kernel/(11345:11353): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:36:46:178 Kernel/(11345:11353): ## (<0> : <2>) Finaliza el hilo
+[INFO] 21:36:46:178 Kernel/(11345:11357): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:36:46:329 Kernel/(11345:11357): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:36:46:331 Kernel/(11345:11351): ## Finaliza el proceso <0>
+[INFO] 21:37:18:482 Kernel/(11967:11967): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:37:18:488 Kernel/(11967:11967): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:37:18:489 Kernel/(11967:11967): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:37:18:505 Kernel/(11967:11976): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:37:18:512 Kernel/(11967:11976): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:37:18:525 Kernel/(11967:11978): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:37:18:527 Kernel/(11967:11978): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:37:18:534 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:18:748 Kernel/(11967:11983): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:37:18:749 Kernel/(11967:11983): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:37:18:751 Kernel/(11967:11978): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:37:18:751 Kernel/(11967:11978): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:37:18:799 Kernel/(11967:11983): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:37:18:800 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:19:003 Kernel/(11967:11983): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:37:19:004 Kernel/(11967:11983): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:37:19:008 Kernel/(11967:11978): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:37:19:009 Kernel/(11967:11978): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:37:19:054 Kernel/(11967:11983): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:37:19:055 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:19:260 Kernel/(11967:11983): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:37:19:261 Kernel/(11967:11983): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:37:19:264 Kernel/(11967:11978): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:37:19:264 Kernel/(11967:11978): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:37:19:310 Kernel/(11967:11983): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:37:19:311 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:19:515 Kernel/(11967:11983): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:37:19:515 Kernel/(11967:11983): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:37:19:517 Kernel/(11967:11978): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:37:19:518 Kernel/(11967:11978): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:37:19:570 Kernel/(11967:11983): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:37:19:571 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:19:776 Kernel/(11967:11983): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:37:19:777 Kernel/(11967:11983): TID:4 PID: 0
+[TRACE] 21:37:19:777 Kernel/(11967:11983): multinivel
+[WARNING] 21:37:19:777 Kernel/(11967:11983): PID Y TID BUSCADO: 0 4
+[TRACE] 21:37:19:777 Kernel/(11967:11983): encontrado
+[WARNING] 21:37:19:777 Kernel/(11967:11983): PID Y TID BUSCADO: 0 3
+[WARNING] 21:37:19:778 Kernel/(11967:11983): PID Y TID BUSCADO: 0 2
+[WARNING] 21:37:19:778 Kernel/(11967:11983): PID Y TID BUSCADO: 0 1
+[TRACE] 21:37:19:778 Kernel/(11967:11979): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:37:19:781 Kernel/(11967:11979): ## (<0> : <4>) Finaliza el hilo
+[INFO] 21:37:19:827 Kernel/(11967:11983): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:37:19:828 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:19:980 Kernel/(11967:11983): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:37:19:981 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:20:240 Kernel/(11967:11983): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:37:20:241 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:20:497 Kernel/(11967:11983): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:37:20:498 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:20:753 Kernel/(11967:11983): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:37:20:754 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:21:012 Kernel/(11967:11983): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:37:21:013 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:21:173 Kernel/(11967:11983): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:37:21:174 Kernel/(11967:11979): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:37:21:180 Kernel/(11967:11979): ## (<0> : <3>) Finaliza el hilo
+[INFO] 21:37:21:180 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:21:433 Kernel/(11967:11983): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:37:21:434 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:21:690 Kernel/(11967:11983): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:37:21:691 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:21:945 Kernel/(11967:11983): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:37:21:946 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:22:202 Kernel/(11967:11983): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:37:22:202 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:22:356 Kernel/(11967:11983): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:37:22:357 Kernel/(11967:11979): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:37:22:360 Kernel/(11967:11979): ## (<0> : <2>) Finaliza el hilo
+[INFO] 21:37:22:361 Kernel/(11967:11983): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:37:22:513 Kernel/(11967:11983): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:37:22:517 Kernel/(11967:11977): ## Finaliza el proceso <0>
+[INFO] 21:39:10:627 Kernel/(12481:12481): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:39:10:627 Kernel/(12481:12481): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:39:10:628 Kernel/(12481:12481): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:39:10:628 Kernel/(12481:12486): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:39:10:628 Kernel/(12481:12486): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:39:10:629 Kernel/(12481:12488): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:39:10:629 Kernel/(12481:12488): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:39:10:629 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:10:833 Kernel/(12481:12493): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:39:10:833 Kernel/(12481:12493): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:39:10:837 Kernel/(12481:12488): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:39:10:837 Kernel/(12481:12488): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:39:10:884 Kernel/(12481:12493): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:39:10:884 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:11:086 Kernel/(12481:12493): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:39:11:086 Kernel/(12481:12493): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:39:11:105 Kernel/(12481:12488): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:39:11:105 Kernel/(12481:12488): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:39:11:137 Kernel/(12481:12493): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:39:11:137 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:11:337 Kernel/(12481:12493): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:39:11:337 Kernel/(12481:12493): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:39:11:340 Kernel/(12481:12488): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:39:11:340 Kernel/(12481:12488): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:39:11:388 Kernel/(12481:12493): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:39:11:388 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:11:591 Kernel/(12481:12493): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:39:11:591 Kernel/(12481:12493): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:39:11:591 Kernel/(12481:12488): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:39:11:591 Kernel/(12481:12488): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:39:11:641 Kernel/(12481:12493): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:39:11:641 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:11:842 Kernel/(12481:12493): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:39:11:842 Kernel/(12481:12493): TID:4 PID: 0
+[TRACE] 21:39:11:842 Kernel/(12481:12493): multinivel
+[WARNING] 21:39:11:842 Kernel/(12481:12493): PID Y TID BUSCADO: 0 4
+[TRACE] 21:39:11:842 Kernel/(12481:12493): encontrado
+[WARNING] 21:39:11:842 Kernel/(12481:12493): PID Y TID BUSCADO: 0 3
+[WARNING] 21:39:11:842 Kernel/(12481:12493): PID Y TID BUSCADO: 0 2
+[WARNING] 21:39:11:842 Kernel/(12481:12493): PID Y TID BUSCADO: 0 1
+[TRACE] 21:39:11:842 Kernel/(12481:12489): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:39:11:844 Kernel/(12481:12489): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:39:11:844 Kernel/(12481:12489): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:39:11:892 Kernel/(12481:12493): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:39:11:892 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:12:044 Kernel/(12481:12493): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:39:12:045 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:12:296 Kernel/(12481:12493): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:39:12:296 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:12:547 Kernel/(12481:12493): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:39:12:547 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:12:798 Kernel/(12481:12493): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:39:12:798 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:13:050 Kernel/(12481:12493): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:39:13:050 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:13:202 Kernel/(12481:12493): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:39:13:202 Kernel/(12481:12489): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:39:13:204 Kernel/(12481:12489): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:39:13:204 Kernel/(12481:12489): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:39:13:204 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:13:453 Kernel/(12481:12493): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:39:13:453 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:13:704 Kernel/(12481:12493): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:39:13:704 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:13:956 Kernel/(12481:12493): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:39:13:956 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:14:207 Kernel/(12481:12493): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:39:14:207 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:14:358 Kernel/(12481:12493): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:39:14:358 Kernel/(12481:12489): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:39:14:360 Kernel/(12481:12489): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:39:14:360 Kernel/(12481:12489): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:39:14:361 Kernel/(12481:12493): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:39:14:509 Kernel/(12481:12493): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:39:14:509 Kernel/(12481:12487): ## Finaliza el proceso <0>
+[ERROR] 21:39:14:509 Kernel/(12481:12487): PCB TID EN LIBERAR TCB 0 0
+[ERROR] 21:39:14:509 Kernel/(12481:12487): PCB TID EN LIBERAR TCB 0 1
+[INFO] 21:42:38:209 Kernel/(13238:13238): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:42:38:210 Kernel/(13238:13238): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:42:38:210 Kernel/(13238:13238): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:42:38:211 Kernel/(13238:13243): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:42:38:211 Kernel/(13238:13243): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:42:38:212 Kernel/(13238:13245): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:42:38:212 Kernel/(13238:13245): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:42:38:212 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:38:413 Kernel/(13238:13250): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:42:38:413 Kernel/(13238:13250): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:42:38:414 Kernel/(13238:13245): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:42:38:414 Kernel/(13238:13245): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:42:38:464 Kernel/(13238:13250): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:42:38:464 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:38:665 Kernel/(13238:13250): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:42:38:665 Kernel/(13238:13250): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:42:38:665 Kernel/(13238:13245): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:42:38:665 Kernel/(13238:13245): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:42:38:715 Kernel/(13238:13250): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:42:38:715 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:38:916 Kernel/(13238:13250): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:42:38:916 Kernel/(13238:13250): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:42:38:917 Kernel/(13238:13245): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:42:38:917 Kernel/(13238:13245): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:42:38:967 Kernel/(13238:13250): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:42:38:967 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:39:168 Kernel/(13238:13250): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:42:39:168 Kernel/(13238:13250): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:42:39:169 Kernel/(13238:13245): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:42:39:169 Kernel/(13238:13245): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:42:39:219 Kernel/(13238:13250): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:42:39:219 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:39:421 Kernel/(13238:13250): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:42:39:421 Kernel/(13238:13250): TID:4 PID: 0
+[TRACE] 21:42:39:421 Kernel/(13238:13250): multinivel
+[WARNING] 21:42:39:421 Kernel/(13238:13250): PID Y TID BUSCADO: 0 4
+[TRACE] 21:42:39:421 Kernel/(13238:13250): encontrado
+[WARNING] 21:42:39:421 Kernel/(13238:13250): PID Y TID BUSCADO: 0 3
+[WARNING] 21:42:39:421 Kernel/(13238:13250): PID Y TID BUSCADO: 0 2
+[WARNING] 21:42:39:421 Kernel/(13238:13250): PID Y TID BUSCADO: 0 1
+[TRACE] 21:42:39:421 Kernel/(13238:13246): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:42:39:421 Kernel/(13238:13246): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:42:39:421 Kernel/(13238:13246): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:42:39:471 Kernel/(13238:13250): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:42:39:471 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:39:622 Kernel/(13238:13250): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:42:39:624 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:39:873 Kernel/(13238:13250): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:42:39:873 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:40:126 Kernel/(13238:13250): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:42:40:126 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:40:379 Kernel/(13238:13250): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:42:40:379 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:40:630 Kernel/(13238:13250): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:42:40:630 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:40:782 Kernel/(13238:13250): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:42:40:783 Kernel/(13238:13246): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:42:40:784 Kernel/(13238:13246): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:42:40:784 Kernel/(13238:13246): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:42:40:784 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:41:033 Kernel/(13238:13250): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:42:41:033 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:41:284 Kernel/(13238:13250): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:42:41:284 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:41:537 Kernel/(13238:13250): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:42:41:538 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:41:789 Kernel/(13238:13250): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:42:41:789 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:41:940 Kernel/(13238:13250): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:42:41:940 Kernel/(13238:13246): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:42:41:942 Kernel/(13238:13246): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:42:41:942 Kernel/(13238:13246): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:42:41:942 Kernel/(13238:13250): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:42:42:091 Kernel/(13238:13250): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:42:42:094 Kernel/(13238:13244): ## Finaliza el proceso <0>
+[ERROR] 21:42:42:094 Kernel/(13238:13244): PCB TID EN LIBERAR TCB 0 0
+[ERROR] 21:42:42:094 Kernel/(13238:13244): PCB TID EN LIBERAR TCB 0 1
+[INFO] 21:44:16:564 Kernel/(13780:13780): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:44:16:566 Kernel/(13780:13780): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:44:16:571 Kernel/(13780:13780): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:44:16:599 Kernel/(13780:13788): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:44:16:600 Kernel/(13780:13788): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:44:16:602 Kernel/(13780:13790): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:44:16:604 Kernel/(13780:13790): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:44:16:608 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:16:817 Kernel/(13780:13797): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:44:16:818 Kernel/(13780:13797): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:44:16:821 Kernel/(13780:13790): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:44:16:821 Kernel/(13780:13790): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:44:16:868 Kernel/(13780:13797): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:44:16:869 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:17:074 Kernel/(13780:13797): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:44:17:074 Kernel/(13780:13797): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:44:17:077 Kernel/(13780:13790): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:44:17:078 Kernel/(13780:13790): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:44:17:125 Kernel/(13780:13797): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:44:17:126 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:17:332 Kernel/(13780:13797): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:44:17:333 Kernel/(13780:13797): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:44:17:350 Kernel/(13780:13790): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:44:17:350 Kernel/(13780:13790): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:44:17:388 Kernel/(13780:13797): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:44:17:389 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:17:594 Kernel/(13780:13797): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:44:17:594 Kernel/(13780:13797): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:44:17:600 Kernel/(13780:13790): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:44:17:601 Kernel/(13780:13790): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:44:17:644 Kernel/(13780:13797): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:44:17:646 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:17:848 Kernel/(13780:13797): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:44:17:849 Kernel/(13780:13797): TID:4 PID: 0
+[TRACE] 21:44:17:849 Kernel/(13780:13797): multinivel
+[WARNING] 21:44:17:849 Kernel/(13780:13797): PID Y TID BUSCADO: 0 4
+[TRACE] 21:44:17:849 Kernel/(13780:13797): encontrado
+[WARNING] 21:44:17:849 Kernel/(13780:13797): PID Y TID BUSCADO: 0 3
+[WARNING] 21:44:17:849 Kernel/(13780:13797): PID Y TID BUSCADO: 0 2
+[WARNING] 21:44:17:849 Kernel/(13780:13797): PID Y TID BUSCADO: 0 1
+[TRACE] 21:44:17:849 Kernel/(13780:13791): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:44:17:857 Kernel/(13780:13791): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:44:17:857 Kernel/(13780:13791): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:44:17:899 Kernel/(13780:13797): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:44:17:900 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:18:051 Kernel/(13780:13797): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:44:18:052 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:18:206 Kernel/(13780:13797): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:44:18:207 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:18:461 Kernel/(13780:13797): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:44:18:462 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:18:720 Kernel/(13780:13797): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:44:18:720 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:18:979 Kernel/(13780:13797): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:44:18:980 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:19:234 Kernel/(13780:13797): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:44:19:235 Kernel/(13780:13791): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:44:19:243 Kernel/(13780:13791): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:44:19:243 Kernel/(13780:13791): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:44:19:243 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:19:390 Kernel/(13780:13797): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:44:19:391 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:19:543 Kernel/(13780:13797): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:44:19:544 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:19:800 Kernel/(13780:13797): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:44:19:800 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:20:058 Kernel/(13780:13797): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:44:20:058 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:20:317 Kernel/(13780:13797): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:44:20:318 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:20:529 Kernel/(13780:13797): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:44:20:529 Kernel/(13780:13791): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:44:20:533 Kernel/(13780:13791): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:44:20:534 Kernel/(13780:13791): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:44:20:534 Kernel/(13780:13797): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:44:20:682 Kernel/(13780:13797): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:44:20:686 Kernel/(13780:13789): ## Finaliza el proceso <0>
+[ERROR] 21:44:20:687 Kernel/(13780:13789): PCB TID EN LIBERAR TCB 0 0
+[ERROR] 21:44:20:687 Kernel/(13780:13789): PCB TID EN LIBERAR TCB 0 1
+[INFO] 21:45:21:243 Kernel/(14252:14252): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:45:21:243 Kernel/(14252:14252): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:45:21:244 Kernel/(14252:14252): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:45:21:245 Kernel/(14252:14257): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:45:21:245 Kernel/(14252:14257): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:45:21:246 Kernel/(14252:14259): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:45:21:246 Kernel/(14252:14259): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:45:21:246 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:21:449 Kernel/(14252:14264): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:45:21:449 Kernel/(14252:14264): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:45:21:451 Kernel/(14252:14259): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:45:21:451 Kernel/(14252:14259): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:45:21:499 Kernel/(14252:14264): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:45:21:499 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:21:703 Kernel/(14252:14264): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:45:21:703 Kernel/(14252:14264): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:45:21:707 Kernel/(14252:14259): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:45:21:707 Kernel/(14252:14259): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:45:21:753 Kernel/(14252:14264): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:45:21:753 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:21:955 Kernel/(14252:14264): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:45:21:957 Kernel/(14252:14264): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:45:21:959 Kernel/(14252:14259): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:45:21:959 Kernel/(14252:14259): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:45:22:005 Kernel/(14252:14264): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:45:22:005 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:22:207 Kernel/(14252:14264): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:45:22:207 Kernel/(14252:14264): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:45:22:209 Kernel/(14252:14259): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:45:22:209 Kernel/(14252:14259): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:45:22:257 Kernel/(14252:14264): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:45:22:257 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:22:460 Kernel/(14252:14264): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:45:22:460 Kernel/(14252:14264): TID:4 PID: 0
+[TRACE] 21:45:22:460 Kernel/(14252:14264): multinivel
+[WARNING] 21:45:22:460 Kernel/(14252:14264): PID Y TID BUSCADO: 0 4
+[TRACE] 21:45:22:460 Kernel/(14252:14264): encontrado
+[WARNING] 21:45:22:460 Kernel/(14252:14264): PID Y TID BUSCADO: 0 3
+[WARNING] 21:45:22:460 Kernel/(14252:14264): PID Y TID BUSCADO: 0 2
+[WARNING] 21:45:22:460 Kernel/(14252:14264): PID Y TID BUSCADO: 0 1
+[TRACE] 21:45:22:460 Kernel/(14252:14260): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:45:22:460 Kernel/(14252:14260): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:45:22:460 Kernel/(14252:14260): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:45:22:510 Kernel/(14252:14264): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:45:22:510 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:22:661 Kernel/(14252:14264): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:45:22:663 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:22:913 Kernel/(14252:14264): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:45:22:913 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:23:165 Kernel/(14252:14264): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:45:23:165 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:23:416 Kernel/(14252:14264): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:45:23:416 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:23:668 Kernel/(14252:14264): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:45:23:669 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:23:819 Kernel/(14252:14264): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:45:23:820 Kernel/(14252:14260): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:45:23:820 Kernel/(14252:14260): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:45:23:820 Kernel/(14252:14260): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:45:23:820 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:24:074 Kernel/(14252:14264): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:45:24:074 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:24:326 Kernel/(14252:14264): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:45:24:326 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:24:577 Kernel/(14252:14264): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:45:24:577 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:24:829 Kernel/(14252:14264): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:45:24:829 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:24:980 Kernel/(14252:14264): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:45:24:980 Kernel/(14252:14260): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:45:24:980 Kernel/(14252:14260): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:45:24:980 Kernel/(14252:14260): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:45:24:980 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:45:25:131 Kernel/(14252:14264): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:45:25:131 Kernel/(14252:14258): ## Finaliza el proceso <0>
+[ERROR] 21:45:25:131 Kernel/(14252:14258): PCB TID EN LIBERAR TCB 0 0
+[ERROR] 21:45:25:131 Kernel/(14252:14258): PCB TID EN LIBERAR TCB 0 1
+[INFO] 21:45:25:131 Kernel/(14252:14264): ## Planificando (PID:TID) - (<0>:<449988128>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:46:839 Kernel/(15273:15273): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:51:46:840 Kernel/(15273:15273): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:51:46:840 Kernel/(15273:15273): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:51:46:841 Kernel/(15273:15278): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:51:46:841 Kernel/(15273:15278): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:51:46:842 Kernel/(15273:15280): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:51:46:842 Kernel/(15273:15280): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:51:46:842 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:47:044 Kernel/(15273:15285): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:51:47:044 Kernel/(15273:15285): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:51:47:045 Kernel/(15273:15280): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:51:47:045 Kernel/(15273:15280): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:51:47:094 Kernel/(15273:15285): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:51:47:094 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:47:299 Kernel/(15273:15285): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:51:47:301 Kernel/(15273:15285): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:51:47:301 Kernel/(15273:15280): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:51:47:303 Kernel/(15273:15280): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:51:47:350 Kernel/(15273:15285): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:51:47:350 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:47:551 Kernel/(15273:15285): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:51:47:551 Kernel/(15273:15285): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:51:47:553 Kernel/(15273:15280): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:51:47:553 Kernel/(15273:15280): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:51:47:602 Kernel/(15273:15285): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:51:47:602 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:47:804 Kernel/(15273:15285): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:51:47:804 Kernel/(15273:15285): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:51:47:804 Kernel/(15273:15280): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:51:47:804 Kernel/(15273:15280): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:51:47:854 Kernel/(15273:15285): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:51:47:854 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:48:055 Kernel/(15273:15285): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:51:48:055 Kernel/(15273:15285): TID:4 PID: 0
+[TRACE] 21:51:48:055 Kernel/(15273:15285): multinivel
+[WARNING] 21:51:48:055 Kernel/(15273:15285): PID Y TID BUSCADO: 0 4
+[TRACE] 21:51:48:055 Kernel/(15273:15285): encontrado
+[WARNING] 21:51:48:055 Kernel/(15273:15285): PID Y TID BUSCADO: 0 3
+[WARNING] 21:51:48:055 Kernel/(15273:15285): PID Y TID BUSCADO: 0 2
+[WARNING] 21:51:48:055 Kernel/(15273:15285): PID Y TID BUSCADO: 0 1
+[TRACE] 21:51:48:055 Kernel/(15273:15281): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:51:48:055 Kernel/(15273:15281): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:51:48:055 Kernel/(15273:15281): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:51:48:105 Kernel/(15273:15285): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:51:48:105 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:48:256 Kernel/(15273:15285): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:51:48:259 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:48:508 Kernel/(15273:15285): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:51:48:508 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:48:760 Kernel/(15273:15285): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:51:48:760 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:49:012 Kernel/(15273:15285): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:51:49:012 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:49:263 Kernel/(15273:15285): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:51:49:263 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:49:414 Kernel/(15273:15285): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:51:49:414 Kernel/(15273:15281): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:51:49:415 Kernel/(15273:15281): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:51:49:415 Kernel/(15273:15281): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:51:49:415 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:49:667 Kernel/(15273:15285): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:51:49:667 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:49:920 Kernel/(15273:15285): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:51:49:920 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:50:171 Kernel/(15273:15285): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:51:50:171 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:50:422 Kernel/(15273:15285): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:51:50:422 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:50:573 Kernel/(15273:15285): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:51:50:573 Kernel/(15273:15281): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:51:50:575 Kernel/(15273:15281): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:51:50:575 Kernel/(15273:15281): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:51:50:575 Kernel/(15273:15285): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:51:50:723 Kernel/(15273:15285): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:51:50:724 Kernel/(15273:15279): ## Finaliza el proceso <0>
+[ERROR] 21:51:50:724 Kernel/(15273:15279): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:51:50:724 Kernel/(15273:15279): multinivel
+[WARNING] 21:51:50:724 Kernel/(15273:15279): PID Y TID BUSCADO: 0 1
+[INFO] 21:52:28:728 Kernel/(15818:15818): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:52:28:734 Kernel/(15818:15818): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:52:28:735 Kernel/(15818:15818): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:52:28:755 Kernel/(15818:15826): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:52:28:756 Kernel/(15818:15826): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:52:28:760 Kernel/(15818:15828): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:52:28:762 Kernel/(15818:15828): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:52:28:783 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:28:999 Kernel/(15818:15833): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:52:29:000 Kernel/(15818:15833): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:52:29:003 Kernel/(15818:15828): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:52:29:004 Kernel/(15818:15828): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:52:29:050 Kernel/(15818:15833): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:52:29:051 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:29:253 Kernel/(15818:15833): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:52:29:254 Kernel/(15818:15833): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:52:29:257 Kernel/(15818:15828): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:52:29:257 Kernel/(15818:15828): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:52:29:303 Kernel/(15818:15833): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:52:29:305 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:29:507 Kernel/(15818:15833): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:52:29:508 Kernel/(15818:15833): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:52:29:510 Kernel/(15818:15828): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:52:29:511 Kernel/(15818:15828): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:52:29:557 Kernel/(15818:15833): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:52:29:558 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:29:761 Kernel/(15818:15833): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:52:29:762 Kernel/(15818:15833): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:52:29:766 Kernel/(15818:15828): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:52:29:767 Kernel/(15818:15828): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:52:29:811 Kernel/(15818:15833): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:52:29:812 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:30:023 Kernel/(15818:15833): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:52:30:025 Kernel/(15818:15833): TID:4 PID: 0
+[TRACE] 21:52:30:025 Kernel/(15818:15833): multinivel
+[WARNING] 21:52:30:025 Kernel/(15818:15833): PID Y TID BUSCADO: 0 4
+[TRACE] 21:52:30:025 Kernel/(15818:15833): encontrado
+[WARNING] 21:52:30:025 Kernel/(15818:15833): PID Y TID BUSCADO: 0 3
+[WARNING] 21:52:30:025 Kernel/(15818:15833): PID Y TID BUSCADO: 0 2
+[WARNING] 21:52:30:025 Kernel/(15818:15833): PID Y TID BUSCADO: 0 1
+[TRACE] 21:52:30:025 Kernel/(15818:15829): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:52:30:028 Kernel/(15818:15829): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:52:30:029 Kernel/(15818:15829): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:52:30:075 Kernel/(15818:15833): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:52:30:076 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:30:228 Kernel/(15818:15833): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:52:30:229 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:30:484 Kernel/(15818:15833): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:52:30:485 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:30:739 Kernel/(15818:15833): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:52:30:739 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:30:993 Kernel/(15818:15833): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:52:30:994 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:31:249 Kernel/(15818:15833): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:52:31:250 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:31:404 Kernel/(15818:15833): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:52:31:405 Kernel/(15818:15829): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:52:31:412 Kernel/(15818:15829): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:52:31:412 Kernel/(15818:15829): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:52:31:412 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:31:661 Kernel/(15818:15833): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:52:31:662 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:31:917 Kernel/(15818:15833): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:52:31:918 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:32:172 Kernel/(15818:15833): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:52:32:173 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:32:427 Kernel/(15818:15833): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:52:32:428 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:32:579 Kernel/(15818:15833): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:52:32:580 Kernel/(15818:15829): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:52:32:583 Kernel/(15818:15829): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:52:32:584 Kernel/(15818:15829): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:52:32:584 Kernel/(15818:15833): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:52:32:732 Kernel/(15818:15833): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:52:32:737 Kernel/(15818:15827): ## Finaliza el proceso <0>
+[ERROR] 21:52:32:738 Kernel/(15818:15827): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:52:32:738 Kernel/(15818:15827): multinivel
+[WARNING] 21:52:32:738 Kernel/(15818:15827): PID Y TID BUSCADO: 0 1
+[INFO] 21:53:21:619 Kernel/(16294:16294): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:53:21:619 Kernel/(16294:16294): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:53:21:620 Kernel/(16294:16294): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:53:21:620 Kernel/(16294:16299): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:53:21:621 Kernel/(16294:16299): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:53:21:621 Kernel/(16294:16301): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:53:21:621 Kernel/(16294:16301): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:53:21:622 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:21:826 Kernel/(16294:16306): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:53:21:826 Kernel/(16294:16306): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:53:21:828 Kernel/(16294:16301): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:53:21:828 Kernel/(16294:16301): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:53:21:876 Kernel/(16294:16306): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:53:21:876 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:22:080 Kernel/(16294:16306): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:53:22:080 Kernel/(16294:16306): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:53:22:082 Kernel/(16294:16301): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:53:22:082 Kernel/(16294:16301): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:53:22:130 Kernel/(16294:16306): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:53:22:130 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:22:334 Kernel/(16294:16306): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:53:22:334 Kernel/(16294:16306): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:53:22:335 Kernel/(16294:16301): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:53:22:335 Kernel/(16294:16301): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:53:22:384 Kernel/(16294:16306): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:53:22:384 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:22:586 Kernel/(16294:16306): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:53:22:586 Kernel/(16294:16306): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:53:22:597 Kernel/(16294:16301): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:53:22:597 Kernel/(16294:16301): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:53:22:636 Kernel/(16294:16306): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:53:22:637 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:22:837 Kernel/(16294:16306): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:53:22:838 Kernel/(16294:16306): TID:4 PID: 0
+[TRACE] 21:53:22:838 Kernel/(16294:16306): multinivel
+[WARNING] 21:53:22:838 Kernel/(16294:16306): PID Y TID BUSCADO: 0 4
+[TRACE] 21:53:22:838 Kernel/(16294:16306): encontrado
+[WARNING] 21:53:22:838 Kernel/(16294:16306): PID Y TID BUSCADO: 0 3
+[WARNING] 21:53:22:838 Kernel/(16294:16306): PID Y TID BUSCADO: 0 2
+[WARNING] 21:53:22:838 Kernel/(16294:16306): PID Y TID BUSCADO: 0 1
+[TRACE] 21:53:22:838 Kernel/(16294:16302): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:53:22:840 Kernel/(16294:16302): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:53:22:840 Kernel/(16294:16302): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:53:22:888 Kernel/(16294:16306): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:53:22:888 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:23:039 Kernel/(16294:16306): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:53:23:039 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:23:290 Kernel/(16294:16306): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:53:23:290 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:23:541 Kernel/(16294:16306): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:53:23:541 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:23:792 Kernel/(16294:16306): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:53:23:792 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:24:043 Kernel/(16294:16306): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:53:24:043 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:24:194 Kernel/(16294:16306): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:53:24:194 Kernel/(16294:16302): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:53:24:195 Kernel/(16294:16302): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:53:24:195 Kernel/(16294:16302): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:53:24:195 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:24:446 Kernel/(16294:16306): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:53:24:446 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:24:698 Kernel/(16294:16306): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:53:24:698 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:24:949 Kernel/(16294:16306): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:53:24:949 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:25:201 Kernel/(16294:16306): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:53:25:201 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:25:352 Kernel/(16294:16306): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:53:25:352 Kernel/(16294:16302): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:53:25:352 Kernel/(16294:16302): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:53:25:352 Kernel/(16294:16302): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:53:25:352 Kernel/(16294:16306): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:53:25:503 Kernel/(16294:16306): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:53:25:503 Kernel/(16294:16300): ## Finaliza el proceso <0>
+[ERROR] 21:53:25:503 Kernel/(16294:16300): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:53:25:503 Kernel/(16294:16300): multinivel
+[WARNING] 21:53:25:503 Kernel/(16294:16300): PID Y TID BUSCADO: 0 1
+[INFO] 21:54:17:027 Kernel/(16814:16814): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:54:17:033 Kernel/(16814:16814): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:54:17:035 Kernel/(16814:16814): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:54:17:052 Kernel/(16814:16823): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:54:17:059 Kernel/(16814:16823): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:54:17:062 Kernel/(16814:16825): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:54:17:064 Kernel/(16814:16825): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:17:089 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:17:301 Kernel/(16814:16830): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:54:17:302 Kernel/(16814:16830): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:54:17:311 Kernel/(16814:16825): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:54:17:312 Kernel/(16814:16825): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:17:352 Kernel/(16814:16830): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:54:17:353 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:17:556 Kernel/(16814:16830): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:54:17:557 Kernel/(16814:16830): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:54:17:561 Kernel/(16814:16825): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:54:17:562 Kernel/(16814:16825): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:17:607 Kernel/(16814:16830): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:54:17:608 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:17:811 Kernel/(16814:16830): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:54:17:812 Kernel/(16814:16830): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:54:17:815 Kernel/(16814:16825): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:54:17:816 Kernel/(16814:16825): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:17:867 Kernel/(16814:16830): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:54:17:868 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:18:074 Kernel/(16814:16830): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:54:18:075 Kernel/(16814:16830): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:54:18:078 Kernel/(16814:16825): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:54:18:078 Kernel/(16814:16825): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:18:126 Kernel/(16814:16830): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:54:18:127 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:18:331 Kernel/(16814:16830): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:54:18:332 Kernel/(16814:16830): TID:4 PID: 0
+[TRACE] 21:54:18:332 Kernel/(16814:16830): multinivel
+[WARNING] 21:54:18:333 Kernel/(16814:16830): PID Y TID BUSCADO: 0 4
+[TRACE] 21:54:18:333 Kernel/(16814:16830): encontrado
+[WARNING] 21:54:18:333 Kernel/(16814:16830): PID Y TID BUSCADO: 0 3
+[WARNING] 21:54:18:333 Kernel/(16814:16830): PID Y TID BUSCADO: 0 2
+[WARNING] 21:54:18:333 Kernel/(16814:16830): PID Y TID BUSCADO: 0 1
+[TRACE] 21:54:18:333 Kernel/(16814:16826): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:54:18:339 Kernel/(16814:16826): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:54:18:340 Kernel/(16814:16826): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:54:18:382 Kernel/(16814:16830): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:54:18:383 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:18:536 Kernel/(16814:16830): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:54:18:537 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:18:794 Kernel/(16814:16830): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:54:18:795 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:19:052 Kernel/(16814:16830): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:54:19:053 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:19:307 Kernel/(16814:16830): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:54:19:308 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:19:564 Kernel/(16814:16830): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:54:19:564 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:19:716 Kernel/(16814:16830): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:54:19:717 Kernel/(16814:16826): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:54:19:721 Kernel/(16814:16826): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:54:19:721 Kernel/(16814:16826): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:54:19:721 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:19:973 Kernel/(16814:16830): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:54:19:974 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:20:228 Kernel/(16814:16830): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:54:20:229 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:20:484 Kernel/(16814:16830): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:54:20:485 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:20:743 Kernel/(16814:16830): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:54:20:744 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:20:896 Kernel/(16814:16830): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:54:20:897 Kernel/(16814:16826): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:54:20:904 Kernel/(16814:16826): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:54:20:905 Kernel/(16814:16826): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:54:20:905 Kernel/(16814:16830): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:54:21:051 Kernel/(16814:16830): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:54:21:057 Kernel/(16814:16824): ## Finaliza el proceso <0>
+[ERROR] 21:54:21:057 Kernel/(16814:16824): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:54:21:057 Kernel/(16814:16824): multinivel
+[WARNING] 21:54:21:057 Kernel/(16814:16824): PID Y TID BUSCADO: 0 1
+[INFO] 21:54:59:808 Kernel/(17259:17259): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:54:59:809 Kernel/(17259:17259): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:54:59:809 Kernel/(17259:17259): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:54:59:809 Kernel/(17259:17264): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:54:59:810 Kernel/(17259:17264): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:54:59:810 Kernel/(17259:17266): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:54:59:810 Kernel/(17259:17266): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:54:59:811 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:00:013 Kernel/(17259:17271): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:00:013 Kernel/(17259:17271): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:55:00:013 Kernel/(17259:17266): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:55:00:013 Kernel/(17259:17266): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:00:063 Kernel/(17259:17271): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:00:063 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:00:264 Kernel/(17259:17271): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:00:264 Kernel/(17259:17271): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:55:00:265 Kernel/(17259:17266): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:55:00:265 Kernel/(17259:17266): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:00:315 Kernel/(17259:17271): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:00:315 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:00:516 Kernel/(17259:17271): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:00:516 Kernel/(17259:17271): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:55:00:519 Kernel/(17259:17266): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:55:00:519 Kernel/(17259:17266): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:00:567 Kernel/(17259:17271): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:00:567 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:00:767 Kernel/(17259:17271): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:00:767 Kernel/(17259:17271): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:55:00:768 Kernel/(17259:17266): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:55:00:768 Kernel/(17259:17266): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:00:818 Kernel/(17259:17271): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:00:818 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:01:019 Kernel/(17259:17271): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:55:01:019 Kernel/(17259:17271): TID:4 PID: 0
+[TRACE] 21:55:01:019 Kernel/(17259:17271): multinivel
+[WARNING] 21:55:01:019 Kernel/(17259:17271): PID Y TID BUSCADO: 0 4
+[TRACE] 21:55:01:019 Kernel/(17259:17271): encontrado
+[WARNING] 21:55:01:019 Kernel/(17259:17271): PID Y TID BUSCADO: 0 3
+[WARNING] 21:55:01:019 Kernel/(17259:17271): PID Y TID BUSCADO: 0 2
+[WARNING] 21:55:01:019 Kernel/(17259:17271): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:01:019 Kernel/(17259:17267): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:55:01:021 Kernel/(17259:17267): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:55:01:021 Kernel/(17259:17267): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:55:01:069 Kernel/(17259:17271): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:01:069 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:01:220 Kernel/(17259:17271): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:55:01:223 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:01:472 Kernel/(17259:17271): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:01:472 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:01:724 Kernel/(17259:17271): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:01:724 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:01:974 Kernel/(17259:17271): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:01:974 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:02:226 Kernel/(17259:17271): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:02:226 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:02:378 Kernel/(17259:17271): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:02:378 Kernel/(17259:17267): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:55:02:381 Kernel/(17259:17267): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:55:02:382 Kernel/(17259:17267): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:55:02:382 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:02:629 Kernel/(17259:17271): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:02:629 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:02:880 Kernel/(17259:17271): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:02:881 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:03:133 Kernel/(17259:17271): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:03:133 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:03:385 Kernel/(17259:17271): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:03:386 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:03:536 Kernel/(17259:17271): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:03:536 Kernel/(17259:17267): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:55:03:537 Kernel/(17259:17267): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:55:03:537 Kernel/(17259:17267): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:55:03:537 Kernel/(17259:17271): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:03:687 Kernel/(17259:17271): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:55:03:688 Kernel/(17259:17265): ## Finaliza el proceso <0>
+[ERROR] 21:55:03:688 Kernel/(17259:17265): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:55:03:688 Kernel/(17259:17265): multinivel
+[WARNING] 21:55:03:688 Kernel/(17259:17265): PID Y TID BUSCADO: 0 1
+[ERROR] 21:55:03:688 Kernel/(17259:17265): PCB TID EN LIBERAR TCB 0 1
+[TRACE] 21:55:03:688 Kernel/(17259:17265): multinivel
+[WARNING] 21:55:03:688 Kernel/(17259:17265): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:03:688 Kernel/(17259:17265): encontrado
+[INFO] 21:55:21:214 Kernel/(17570:17570): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:55:21:215 Kernel/(17570:17570): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:55:21:215 Kernel/(17570:17570): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:55:21:215 Kernel/(17570:17575): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:55:21:216 Kernel/(17570:17575): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:55:21:216 Kernel/(17570:17577): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:55:21:216 Kernel/(17570:17577): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:21:217 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:21:419 Kernel/(17570:17582): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:21:419 Kernel/(17570:17582): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:55:21:420 Kernel/(17570:17577): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:55:21:420 Kernel/(17570:17577): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:21:469 Kernel/(17570:17582): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:21:469 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:21:671 Kernel/(17570:17582): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:21:671 Kernel/(17570:17582): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:55:21:675 Kernel/(17570:17577): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:55:21:675 Kernel/(17570:17577): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:21:721 Kernel/(17570:17582): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:21:721 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:21:923 Kernel/(17570:17582): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:21:923 Kernel/(17570:17582): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:55:21:923 Kernel/(17570:17577): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:55:21:923 Kernel/(17570:17577): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:21:973 Kernel/(17570:17582): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:21:973 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:22:175 Kernel/(17570:17582): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:22:175 Kernel/(17570:17582): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:55:22:178 Kernel/(17570:17577): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:55:22:179 Kernel/(17570:17577): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:22:225 Kernel/(17570:17582): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:22:225 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:22:427 Kernel/(17570:17582): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:55:22:427 Kernel/(17570:17582): TID:4 PID: 0
+[TRACE] 21:55:22:427 Kernel/(17570:17582): multinivel
+[WARNING] 21:55:22:427 Kernel/(17570:17582): PID Y TID BUSCADO: 0 4
+[TRACE] 21:55:22:427 Kernel/(17570:17582): encontrado
+[WARNING] 21:55:22:427 Kernel/(17570:17582): PID Y TID BUSCADO: 0 3
+[WARNING] 21:55:22:427 Kernel/(17570:17582): PID Y TID BUSCADO: 0 2
+[WARNING] 21:55:22:427 Kernel/(17570:17582): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:22:427 Kernel/(17570:17578): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:55:22:427 Kernel/(17570:17578): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:55:22:427 Kernel/(17570:17578): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:55:22:477 Kernel/(17570:17582): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:22:477 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:22:628 Kernel/(17570:17582): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:55:22:628 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:22:880 Kernel/(17570:17582): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:22:880 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:23:131 Kernel/(17570:17582): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:23:131 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:23:382 Kernel/(17570:17582): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:23:382 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:23:634 Kernel/(17570:17582): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:23:634 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:23:785 Kernel/(17570:17582): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:23:785 Kernel/(17570:17578): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:55:23:787 Kernel/(17570:17578): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:55:23:787 Kernel/(17570:17578): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:55:23:788 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:24:037 Kernel/(17570:17582): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:24:037 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:24:288 Kernel/(17570:17582): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:24:288 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:24:540 Kernel/(17570:17582): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:24:540 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:24:792 Kernel/(17570:17582): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:24:792 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:24:944 Kernel/(17570:17582): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:24:944 Kernel/(17570:17578): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:55:24:947 Kernel/(17570:17578): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:55:24:947 Kernel/(17570:17578): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:55:24:947 Kernel/(17570:17582): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:25:095 Kernel/(17570:17582): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:55:25:095 Kernel/(17570:17576): ## Finaliza el proceso <0>
+[ERROR] 21:55:25:095 Kernel/(17570:17576): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:55:25:095 Kernel/(17570:17576): multinivel
+[WARNING] 21:55:25:095 Kernel/(17570:17576): PID Y TID BUSCADO: 0 1
+[ERROR] 21:55:25:095 Kernel/(17570:17576): PCB TID EN LIBERAR TCB 0 1
+[TRACE] 21:55:25:095 Kernel/(17570:17576): multinivel
+[WARNING] 21:55:25:095 Kernel/(17570:17576): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:25:095 Kernel/(17570:17576): encontrado
+[INFO] 21:55:48:105 Kernel/(18094:18094): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 21:55:48:111 Kernel/(18094:18094): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 21:55:48:119 Kernel/(18094:18094): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 21:55:48:150 Kernel/(18094:18111): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 21:55:48:151 Kernel/(18094:18111): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 21:55:48:158 Kernel/(18094:18113): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 21:55:48:159 Kernel/(18094:18113): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:48:169 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:48:382 Kernel/(18094:18118): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:48:382 Kernel/(18094:18118): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 21:55:48:385 Kernel/(18094:18113): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 21:55:48:385 Kernel/(18094:18113): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:48:432 Kernel/(18094:18118): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:48:433 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:48:637 Kernel/(18094:18118): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:48:638 Kernel/(18094:18118): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 21:55:48:640 Kernel/(18094:18113): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 21:55:48:641 Kernel/(18094:18113): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:48:687 Kernel/(18094:18118): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:48:688 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:48:891 Kernel/(18094:18118): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:48:891 Kernel/(18094:18118): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 21:55:48:894 Kernel/(18094:18113): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 21:55:48:895 Kernel/(18094:18113): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:48:941 Kernel/(18094:18118): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:48:942 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:49:146 Kernel/(18094:18118): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 21:55:49:147 Kernel/(18094:18118): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 21:55:49:152 Kernel/(18094:18113): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 21:55:49:154 Kernel/(18094:18113): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 21:55:49:196 Kernel/(18094:18118): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:49:197 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:49:407 Kernel/(18094:18118): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 21:55:49:408 Kernel/(18094:18118): TID:4 PID: 0
+[TRACE] 21:55:49:408 Kernel/(18094:18118): multinivel
+[WARNING] 21:55:49:408 Kernel/(18094:18118): PID Y TID BUSCADO: 0 4
+[TRACE] 21:55:49:408 Kernel/(18094:18118): encontrado
+[WARNING] 21:55:49:408 Kernel/(18094:18118): PID Y TID BUSCADO: 0 3
+[WARNING] 21:55:49:408 Kernel/(18094:18118): PID Y TID BUSCADO: 0 2
+[WARNING] 21:55:49:408 Kernel/(18094:18118): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:49:408 Kernel/(18094:18114): HILO DESENCOLADO PID TID 0 4
+[INFO] 21:55:49:412 Kernel/(18094:18114): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 21:55:49:412 Kernel/(18094:18114): PCB TID EN LIBERAR TCB 0 4
+[INFO] 21:55:49:457 Kernel/(18094:18118): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 21:55:49:458 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:49:610 Kernel/(18094:18118): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 21:55:49:611 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:49:867 Kernel/(18094:18118): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:49:868 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:50:125 Kernel/(18094:18118): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:50:126 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:50:381 Kernel/(18094:18118): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:50:382 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:50:640 Kernel/(18094:18118): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 21:55:50:640 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:50:796 Kernel/(18094:18118): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:50:796 Kernel/(18094:18114): HILO DESENCOLADO PID TID 0 3
+[INFO] 21:55:50:810 Kernel/(18094:18114): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 21:55:50:810 Kernel/(18094:18114): PCB TID EN LIBERAR TCB 0 3
+[INFO] 21:55:50:810 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:51:051 Kernel/(18094:18118): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:51:052 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:51:307 Kernel/(18094:18118): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:51:308 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:51:563 Kernel/(18094:18118): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:51:564 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:51:818 Kernel/(18094:18118): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 21:55:51:818 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:51:974 Kernel/(18094:18118): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 21:55:51:976 Kernel/(18094:18114): HILO DESENCOLADO PID TID 0 2
+[INFO] 21:55:51:995 Kernel/(18094:18114): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 21:55:51:996 Kernel/(18094:18114): PCB TID EN LIBERAR TCB 0 2
+[INFO] 21:55:51:996 Kernel/(18094:18118): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 21:55:52:129 Kernel/(18094:18118): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 21:55:52:146 Kernel/(18094:18112): ## Finaliza el proceso <0>
+[ERROR] 21:55:52:146 Kernel/(18094:18112): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 21:55:52:146 Kernel/(18094:18112): multinivel
+[WARNING] 21:55:52:146 Kernel/(18094:18112): PID Y TID BUSCADO: 0 1
+[ERROR] 21:55:52:146 Kernel/(18094:18112): PCB TID EN LIBERAR TCB 0 1
+[TRACE] 21:55:52:146 Kernel/(18094:18112): multinivel
+[WARNING] 21:55:52:146 Kernel/(18094:18112): PID Y TID BUSCADO: 0 1
+[TRACE] 21:55:52:146 Kernel/(18094:18112): encontrado
+[INFO] 22:00:50:891 Kernel/(18956:18956): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:00:50:892 Kernel/(18956:18956): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:00:50:892 Kernel/(18956:18956): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:00:50:893 Kernel/(18956:18961): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:00:50:893 Kernel/(18956:18961): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 22:00:50:894 Kernel/(18956:18963): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 22:00:50:894 Kernel/(18956:18963): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:00:50:894 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:51:096 Kernel/(18956:18968): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:00:51:096 Kernel/(18956:18968): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 22:00:51:098 Kernel/(18956:18963): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 22:00:51:099 Kernel/(18956:18963): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 22:00:51:147 Kernel/(18956:18968): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:00:51:147 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:51:348 Kernel/(18956:18968): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:00:51:348 Kernel/(18956:18968): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 22:00:51:350 Kernel/(18956:18963): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 22:00:51:352 Kernel/(18956:18963): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 22:00:51:398 Kernel/(18956:18968): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:00:51:398 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:51:599 Kernel/(18956:18968): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:00:51:599 Kernel/(18956:18968): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 22:00:51:599 Kernel/(18956:18963): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 22:00:51:599 Kernel/(18956:18963): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 22:00:51:649 Kernel/(18956:18968): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:00:51:649 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:51:851 Kernel/(18956:18968): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:00:51:851 Kernel/(18956:18968): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 22:00:51:852 Kernel/(18956:18963): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 22:00:51:852 Kernel/(18956:18963): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 22:00:51:901 Kernel/(18956:18968): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:00:51:901 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:52:102 Kernel/(18956:18968): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 22:00:52:102 Kernel/(18956:18968): TID:4 PID: 0
+[TRACE] 22:00:52:102 Kernel/(18956:18968): multinivel
+[WARNING] 22:00:52:102 Kernel/(18956:18968): PID Y TID BUSCADO: 0 4
+[TRACE] 22:00:52:102 Kernel/(18956:18968): encontrado
+[WARNING] 22:00:52:102 Kernel/(18956:18968): PID Y TID BUSCADO: 0 3
+[WARNING] 22:00:52:102 Kernel/(18956:18968): PID Y TID BUSCADO: 0 2
+[WARNING] 22:00:52:102 Kernel/(18956:18968): PID Y TID BUSCADO: 0 1
+[TRACE] 22:00:52:102 Kernel/(18956:18964): HILO DESENCOLADO PID TID 0 4
+[INFO] 22:00:52:104 Kernel/(18956:18964): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 22:00:52:104 Kernel/(18956:18964): PCB TID EN LIBERAR TCB 0 4
+[INFO] 22:00:52:152 Kernel/(18956:18968): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:00:52:152 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:52:304 Kernel/(18956:18968): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 22:00:52:304 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:52:556 Kernel/(18956:18968): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:00:52:556 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:52:809 Kernel/(18956:18968): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:00:52:809 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:53:061 Kernel/(18956:18968): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:00:53:061 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:53:312 Kernel/(18956:18968): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:00:53:312 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:53:463 Kernel/(18956:18968): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 22:00:53:463 Kernel/(18956:18964): HILO DESENCOLADO PID TID 0 3
+[INFO] 22:00:53:469 Kernel/(18956:18964): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 22:00:53:469 Kernel/(18956:18964): PCB TID EN LIBERAR TCB 0 3
+[INFO] 22:00:53:469 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:53:716 Kernel/(18956:18968): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:00:53:716 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:53:967 Kernel/(18956:18968): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:00:53:967 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:54:218 Kernel/(18956:18968): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:00:54:218 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:54:470 Kernel/(18956:18968): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:00:54:470 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:54:621 Kernel/(18956:18968): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 22:00:54:621 Kernel/(18956:18964): HILO DESENCOLADO PID TID 0 2
+[INFO] 22:00:54:621 Kernel/(18956:18964): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 22:00:54:621 Kernel/(18956:18964): PCB TID EN LIBERAR TCB 0 2
+[INFO] 22:00:54:621 Kernel/(18956:18968): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:00:54:772 Kernel/(18956:18968): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 22:00:54:772 Kernel/(18956:18962): ## Finaliza el proceso <0>
+[ERROR] 22:00:54:772 Kernel/(18956:18962): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 22:00:54:772 Kernel/(18956:18962): multinivel
+[WARNING] 22:00:54:772 Kernel/(18956:18962): PID Y TID BUSCADO: 0 1
+[ERROR] 22:00:54:772 Kernel/(18956:18962): PCB TID EN LIBERAR TCB 0 1
+[TRACE] 22:00:54:772 Kernel/(18956:18962): multinivel
+[WARNING] 22:00:54:772 Kernel/(18956:18962): PID Y TID BUSCADO: 0 1
+[TRACE] 22:00:54:772 Kernel/(18956:18962): encontrado
+[INFO] 22:01:11:493 Kernel/(18956:18994): ## Finalizando ejecucion de KERNEL
+[INFO] 22:01:37:658 Kernel/(19221:19221): ## Handshake OK HANDSHAKE KERNEL - MEMORIA
+[INFO] 22:01:37:711 Kernel/(19221:19221): ## Handshake OK HANDSHAKE KERNEL - CPU DISPATCH
+[INFO] 22:01:37:714 Kernel/(19221:19221): ## Handshake OK HANDSHAKE KERNEL - CPU INTERRUPT
+[INFO] 22:01:37:964 Kernel/(19221:19226): ## (<PID>: 0) Se crea el proceso - Estado: NEW
+[INFO] 22:01:37:967 Kernel/(19221:19226): ## (PID) - (<0>) - Creando Hilo <0> - Prioridad: <0>
+[INFO] 22:01:37:976 Kernel/(19221:19228): ## Creando Cola Multinivel - Prioridad: <0>
+[INFO] 22:01:37:977 Kernel/(19221:19228): ## (<0>:<0>) Se crea el Hilo - Estado: READY
+[INFO] 22:01:38:101 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:38:366 Kernel/(19221:19233): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:01:38:372 Kernel/(19221:19233): ## (PID) - (<0>) - Creando Hilo <1> - Prioridad: <6>
+[INFO] 22:01:38:375 Kernel/(19221:19228): ## Creando Cola Multinivel - Prioridad: <6>
+[INFO] 22:01:38:376 Kernel/(19221:19228): ## (<0>:<1>) Se crea el Hilo - Estado: READY
+[INFO] 22:01:38:416 Kernel/(19221:19233): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:01:38:418 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:38:617 Kernel/(19221:19233): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:01:38:617 Kernel/(19221:19233): ## (PID) - (<0>) - Creando Hilo <2> - Prioridad: <5>
+[INFO] 22:01:38:621 Kernel/(19221:19228): ## Creando Cola Multinivel - Prioridad: <5>
+[INFO] 22:01:38:623 Kernel/(19221:19228): ## (<0>:<2>) Se crea el Hilo - Estado: READY
+[INFO] 22:01:38:667 Kernel/(19221:19233): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:01:38:668 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:38:869 Kernel/(19221:19233): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:01:38:870 Kernel/(19221:19233): ## (PID) - (<0>) - Creando Hilo <3> - Prioridad: <4>
+[INFO] 22:01:38:873 Kernel/(19221:19228): ## Creando Cola Multinivel - Prioridad: <4>
+[INFO] 22:01:38:874 Kernel/(19221:19228): ## (<0>:<3>) Se crea el Hilo - Estado: READY
+[INFO] 22:01:38:919 Kernel/(19221:19233): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:01:38:920 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:39:121 Kernel/(19221:19233): ## (<0>:<0>) - Solicitó syscall: <THREAD_CREATE>
+[INFO] 22:01:39:121 Kernel/(19221:19233): ## (PID) - (<0>) - Creando Hilo <4> - Prioridad: <3>
+[INFO] 22:01:39:125 Kernel/(19221:19228): ## Creando Cola Multinivel - Prioridad: <3>
+[INFO] 22:01:39:126 Kernel/(19221:19228): ## (<0>:<4>) Se crea el Hilo - Estado: READY
+[INFO] 22:01:39:171 Kernel/(19221:19233): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:01:39:171 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:39:372 Kernel/(19221:19233): ## (<0>:<0>) - Solicito syscall: <THREAD_CANCEL>
+[ERROR] 22:01:39:375 Kernel/(19221:19233): TID:4 PID: 0
+[TRACE] 22:01:39:376 Kernel/(19221:19233): multinivel
+[WARNING] 22:01:39:379 Kernel/(19221:19233): PID Y TID BUSCADO: 0 4
+[TRACE] 22:01:39:380 Kernel/(19221:19233): encontrado
+[WARNING] 22:01:39:380 Kernel/(19221:19233): PID Y TID BUSCADO: 0 3
+[WARNING] 22:01:39:381 Kernel/(19221:19233): PID Y TID BUSCADO: 0 2
+[WARNING] 22:01:39:382 Kernel/(19221:19233): PID Y TID BUSCADO: 0 1
+[TRACE] 22:01:39:384 Kernel/(19221:19229): HILO DESENCOLADO PID TID 0 4
+[INFO] 22:01:39:388 Kernel/(19221:19229): ## (<0> : <4>) Finaliza el hilo
+[ERROR] 22:01:39:391 Kernel/(19221:19229): PCB TID EN LIBERAR TCB 0 4
+[INFO] 22:01:39:422 Kernel/(19221:19233): ## (0:0) - Desalojado por fin de Quantum
+[INFO] 22:01:39:422 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:39:573 Kernel/(19221:19233): ## (<0>:<0>) - Solicitó syscall: <THREAD_JOIN>
+[INFO] 22:01:39:576 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:39:741 Kernel/(19221:19233): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:01:39:742 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:39:994 Kernel/(19221:19233): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:01:39:995 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:40:245 Kernel/(19221:19233): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:01:40:245 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:40:496 Kernel/(19221:19233): ## (0:3) - Desalojado por fin de Quantum
+[INFO] 22:01:40:496 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<3>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:40:747 Kernel/(19221:19233): ## (<0>:<3>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 22:01:40:748 Kernel/(19221:19229): HILO DESENCOLADO PID TID 0 3
+[INFO] 22:01:40:750 Kernel/(19221:19229): ## (<0> : <3>) Finaliza el hilo
+[ERROR] 22:01:40:750 Kernel/(19221:19229): PCB TID EN LIBERAR TCB 0 3
+[INFO] 22:01:40:751 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:40:898 Kernel/(19221:19233): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:01:40:899 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:41:149 Kernel/(19221:19233): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:01:41:149 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:41:400 Kernel/(19221:19233): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:01:41:401 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:41:652 Kernel/(19221:19233): ## (0:2) - Desalojado por fin de Quantum
+[INFO] 22:01:41:652 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<2>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:41:904 Kernel/(19221:19233): ## (<0>:<2>) - Solicito syscall: <THREAD_EXIT>
+[TRACE] 22:01:41:905 Kernel/(19221:19229): HILO DESENCOLADO PID TID 0 2
+[INFO] 22:01:41:909 Kernel/(19221:19229): ## (<0> : <2>) Finaliza el hilo
+[ERROR] 22:01:41:909 Kernel/(19221:19229): PCB TID EN LIBERAR TCB 0 2
+[INFO] 22:01:41:911 Kernel/(19221:19233): ## Planificando (PID:TID) - (<0>:<0>)- Algoritmo <MULTINIVEL>
+[INFO] 22:01:42:056 Kernel/(19221:19233): ## (<0>:<0>) - Solicito syscall: <PROCESS_EXIT>
+[INFO] 22:01:42:061 Kernel/(19221:19227): ## Finaliza el proceso <0>
+[ERROR] 22:01:42:062 Kernel/(19221:19227): PCB TID EN LIBERAR TCB 0 0
+[TRACE] 22:01:42:063 Kernel/(19221:19227): multinivel
+[WARNING] 22:01:42:064 Kernel/(19221:19227): PID Y TID BUSCADO: 0 1
+[ERROR] 22:01:42:065 Kernel/(19221:19227): PCB TID EN LIBERAR TCB 0 1
+[TRACE] 22:01:42:067 Kernel/(19221:19227): multinivel
+[WARNING] 22:01:42:068 Kernel/(19221:19227): PID Y TID BUSCADO: 0 1
+[TRACE] 22:01:42:068 Kernel/(19221:19227): encontrado
+[INFO] 22:01:53:105 Kernel/(19221:19259): ## Finalizando ejecucion de KERNEL
