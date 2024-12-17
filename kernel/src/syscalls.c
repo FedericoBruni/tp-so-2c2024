@@ -124,6 +124,7 @@ void THREAD_CANCEL(int tid, int pid) {
                 tcb=tcb_en_ejecucion;
             }else{
             log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", pid, tid);
+            sem_post(&sem_syscall_fin);
             return;
             }
         }   
