@@ -229,7 +229,7 @@ void ejecucion_io(){
         }
         IOStruct *io = desencolar(cola_io,mutex_io);
         sem_post(&sem_io_iniciado);
-        usleep(io->tiempo); // * 1000
+        usleep(io->tiempo * 1000);
         log_info(logger, "## (%d:%d) finalizó IO y pasa a READY", io->tcb->pcb_pid, io->tcb->tid);
         //printear_colas_y_prioridades();
         if(string_equals_ignore_case(algoritmo_planificacion, "MULTINIVEL")){
