@@ -1,5 +1,8 @@
 include settings.mk
 
+CFG_IP_CPU = 127.0.0.1
+CFG_IP_MEMORIA = 127.0.0.1
+
 ################################################################################
 
 outname = bin/$(1)
@@ -102,3 +105,65 @@ memcheck:
 	rm -f logKernel.log
 	make
 	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./bin/kernel archivo1 16
+
+
+CONFIG_KERNEL_PLANIC = ALGORITMO_PLANIFICACION=FIFO\nQUANTUM=875\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+planic: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_PLANIC)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done
+
+CONFIG_KERNEL_RACE = ALGORITMO_PLANIFICACION=MULTINIVEL\nQUANTUM=750\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+race: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_RACE)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done
+
+
+CONFIG_KERNEL_FIJAS = ALGORITMO_PLANIFICACION=MULTINIVEL\nQUANTUM=500\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+fijas: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_FIJAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done
+
+CONFIG_KERNEL_DINAMICAS = ALGORITMO_PLANIFICACION=MULTINIVEL\nQUANTUM=500\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+dinamicas: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_DINAMICAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done
+
+CONFIG_KERNEL_FS = ALGORITMO_PLANIFICACION=MULTINIVEL\nQUANTUM=25\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+fs: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_FS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done
+
+CONFIG_KERNEL_STRESS = ALGORITMO_PLANIFICACION=MULTINIVEL\nQUANTUM=125\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=TRACE
+
+stress: kernel.config
+	> kernel.config
+	@echo "$(CONFIG_KERNEL_STRESS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "kernel.config"; \
+		echo "$$linea" >> "kernel.config"; \
+	done

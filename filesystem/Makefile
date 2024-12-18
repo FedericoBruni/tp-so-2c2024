@@ -1,5 +1,7 @@
 include settings.mk
 
+CFG_MOUNT_DIR = /home/utnso/mount_dir
+
 ################################################################################
 
 outname = bin/$(1)
@@ -102,3 +104,63 @@ memcheck:
 	rm -f logFS.log
 	make
 	valgrind --leak-check=full --track-origins=yes ./bin/filesystem
+
+CONFIG_FILESYSTEM_PLANIC = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=16\nBLOCK_COUNT=1024\nRETARDO_ACCESO_BLOQUE=2500\nLOG_LEVEL=TRACE
+
+planic: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_PLANIC)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done
+
+CONFIG_FILESYSTEM_RACE = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=16\nBLOCK_COUNT=1024\nRETARDO_ACCESO_BLOQUE=2500\nLOG_LEVEL=TRACE
+
+race: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_RACE)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done
+
+CONFIG_FILESYSTEM_FIJAS = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=16\nBLOCK_COUNT=1024\nRETARDO_ACCESO_BLOQUE=2500\nLOG_LEVEL=TRACE
+
+fijas: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_FIJAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done
+
+CONFIG_FILESYSTEM_DINAMICAS = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=32\nBLOCK_COUNT=4096\nRETARDO_ACCESO_BLOQUE=2500\nLOG_LEVEL=TRACE
+
+dinamicas: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_DINAMICAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done
+
+CONFIG_FILESYSTEM_FS = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=32\nBLOCK_COUNT=200\nRETARDO_ACCESO_BLOQUE=25\nLOG_LEVEL=TRACE
+
+fs: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_FS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done
+
+CONFIG_FILESYSTEM_STRESS = PUERTO_ESCUCHA=8003\nMOUNT_DIR=$(CFG_MOUNT_DIR)\nBLOCK_SIZE=64\nBLOCK_COUNT=1024\nRETARDO_ACCESO_BLOQUE=100\nLOG_LEVEL=TRACE
+
+stress: filesystem.config
+	> filesystem.config
+	@echo "$(CONFIG_FILESYSTEM_STRESS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "filesystem.config"; \
+		echo "$$linea" >> "filesystem.config"; \
+	done

@@ -1,5 +1,8 @@
 include settings.mk
 
+CFG_IP_FILESYSTEM = 127.0.0.1
+CFG_PATH_INSTRUCCIONES = /home/utnso/Desktop/asd/the-last-of-c-pruebas
+
 ################################################################################
 
 outname = bin/$(1)
@@ -102,3 +105,63 @@ memcheck:
 	rm -f memoria.log
 	make
 	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all -s ./bin/memoria
+
+CONFIG_MEMORIA_PLANIC = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=8192\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=500\nESQUEMA=FIJAS\nALGORITMO_BUSQUEDA=FIRST\nPARTICIONES=[32,32,32,32,32,32,32,32]\nLOG_LEVEL=TRACE
+
+planic: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_PLANIC)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
+
+CONFIG_MEMORIA_RACE = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=1024\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=200\nESQUEMA=FIJAS\nALGORITMO_BUSQUEDA=FIRST\nPARTICIONES=[32,32,32,32,32,32,32,32]\nLOG_LEVEL=TRACE
+
+race: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_RACE)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
+
+CONFIG_MEMORIA_FIJAS = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=256\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=200\nESQUEMA=FIJAS\nALGORITMO_BUSQUEDA=FIRST\nPARTICIONES=[32,16,64,128,16]\nLOG_LEVEL=TRACE
+
+fijas: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_FIJAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
+
+CONFIG_MEMORIA_DINAMICAS = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=1024\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=200\nESQUEMA=DINAMICAS\nALGORITMO_BUSQUEDA=BEST\nPARTICIONES=[32,16,64,128,16]\nLOG_LEVEL=TRACE
+
+dinamicas: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_DINAMICAS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
+
+CONFIG_MEMORIA_FS = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=2048\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=10\nESQUEMA=DINAMICAS\nALGORITMO_BUSQUEDA=BEST\nPARTICIONES=[32,16,64,128,16]\nLOG_LEVEL=TRACE
+
+fs: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_FS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
+
+CONFIG_MEMORIA_STRESS = PUERTO_ESCUCHA=8002\nIP_FILESYSTEM=$(CFG_IP_FILESYSTEM)\nPUERTO_FILESYSTEM=8003\nTAM_MEMORIA=8192\nPATH_INSTRUCCIONES=$(CFG_PATH_INSTRUCCIONES)\nRETARDO_RESPUESTA=50\nESQUEMA=DINAMICAS\nALGORITMO_BUSQUEDA=BEST\nPARTICIONES=[32,16,64,128,16]\nLOG_LEVEL=TRACE
+
+stress: memoria.config
+	> memoria.config
+	@echo "$(CONFIG_MEMORIA_STRESS)" | while IFS= read -r linea; do \
+		clave=$${linea%%=*}; \
+		sed -i "/^$${clave}=.*/d" "memoria.config"; \
+		echo "$$linea" >> "memoria.config"; \
+	done
