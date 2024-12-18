@@ -22,7 +22,6 @@ void liberar_tcb(void *ptr_tcb)
     TCB *tcb = (TCB *)ptr_tcb;
     //log_warning(logger, "Liberando <TID: %i>", tcb->tid);
     liberar_registros(tcb->Registros);
-    log_error(logger,"PCB TID EN LIBERAR TCB %d %d",tcb->pcb_pid,tcb->tid);
     if(tcb_en_ejecucion != NULL){
     if(tcb->tid == tcb_en_ejecucion->tid && tcb->pcb_pid == tcb_en_ejecucion->pcb_pid){
         tcb_en_ejecucion = NULL;  // NO TOCAR ROMPE TODO
@@ -35,7 +34,6 @@ void liberar_tcb(void *ptr_tcb)
     if(tcb->status != EXIT){
         TCB *tcb_encolado;
     if(string_equals_ignore_case(algoritmo_planificacion,"MULTINIVEL")){
-        log_trace(logger,"multinivel");
         tcb_encolado = buscar_tcb_en_multinivel(tcb->tid,tcb->pcb_pid);
     }else{
         tcb_encolado = buscar_tcb_en_cola(cola_ready,mutex_ready,tcb->tid,tcb->pcb_pid);
@@ -248,10 +246,8 @@ TCB *buscar_tcb_en_multinivel( int tid, int pid){
         while(!queue_is_empty(cola_prio->cola_prioridad)){
             void *elemento = desencolar_multinivel(cola_prio);
             TCB *tcb = (TCB*) elemento;
-            log_warning(logger,"PID Y TID BUSCADO: %d %d", tcb->pcb_pid, tcb->tid);
             if(tcb->tid == tid && tcb->pcb_pid == pid){
                 rta=tcb;
-                log_trace(logger,"encontrado");
             }else{
                 queue_push(cola_aux,elemento);
             }

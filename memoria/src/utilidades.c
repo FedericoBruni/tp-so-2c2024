@@ -672,7 +672,7 @@ void finalizacion_de_proceso(int pid){
     list_remove_element(contextos_procesos, contexto_proceso);
     free(contexto_proceso);
     list_destroy(lista_a_borrar);
-    log_info(logger, "## Proceso <Destruido> - PID: <%d> - Tamaño: >%d>",pid,particion->tamanio);
+    log_info(logger, "## Proceso <Destruido> - PID: <%d> - Tamaño: <%d>",pid,particion->tamanio);
 }
 
 /*

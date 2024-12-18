@@ -112,7 +112,6 @@ void THREAD_EXIT(TCB *tcb) {
 void THREAD_CANCEL(int tid, int pid) {
     TCB *tcb;
     if(string_equals_ignore_case(algoritmo_planificacion,"MULTINIVEL")){
-        log_trace(logger,"multinivel");
         tcb = buscar_tcb_en_multinivel(tid,pid);
     }else{
         tcb = buscar_tcb_en_cola(cola_ready,mutex_ready,tid,pid);

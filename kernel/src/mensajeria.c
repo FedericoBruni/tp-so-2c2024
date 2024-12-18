@@ -317,7 +317,6 @@ void deserializar_thread_cancel(){
     t_buffer* buffer = recibir_buffer_completo(fd_cpu_dispatch);
     int tid = extraer_int_del_buffer(buffer);
     int pid = extraer_int_del_buffer(buffer);
-    log_error(logger,"TID:%d PID: %d",tid,pid);
     THREAD_CANCEL(tid,pid);
     free(buffer->stream);
     free(buffer);

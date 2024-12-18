@@ -160,7 +160,6 @@ void finalizacion_de_hilos(void)
         sem_wait(&sem_finalizar_hilo); 
         if(fin_ciclo) return;
         TCB *tcb = desencolar(cola_finalizacion, mutex_exit);
-        log_trace(logger,"HILO DESENCOLADO PID TID %d %d",tcb->pcb_pid,tcb->tid);
         int tidBloqueante = tcb->tid;
         int pidhilo = tcb->pcb_pid;
         int fd_memoria = conectarse_a_memoria();

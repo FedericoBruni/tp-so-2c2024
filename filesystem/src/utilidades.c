@@ -283,7 +283,6 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
             ints_a_escribir = block_size/sizeof(int);
         }else{
             ints_a_escribir = total_ints - ints_escritos;
-            //log_trace();
         }
         fseek(archivoBloqueDeDatos,bloques_datos[i]*block_size,SEEK_SET);
         for(int j = 0; j<ints_a_escribir;j++){
