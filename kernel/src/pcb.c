@@ -121,7 +121,7 @@ TCB *crear_tcb(PCB *pcb, int prioridad, char* archivo_pseudocodigo)
     tcb->archivo_pseudocodigo = archivo_pseudocodigo;
     tcb->bloqueadoPor = NULL;
     agregar_hilo(tcb,pcb);
-    log_info(logger,"## (PID) - (<%d>) - Creando Hilo <%d> - Prioridad: <%d>", pcb->pid, tcb->tid, prioridad);
+    log_trace(logger,"## (PID) - (<%d>) - Creando Hilo <%d> - Prioridad: <%d>", pcb->pid, tcb->tid, prioridad);
     return tcb;
 }
 

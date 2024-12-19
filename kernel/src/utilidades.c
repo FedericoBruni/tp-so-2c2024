@@ -312,7 +312,7 @@ void replanificar(TCB *tcb){
             encolar_multinivel(cola, tcb);
         } else{
             COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-            log_info(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
+            log_trace(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
             encolar_multinivel(cola_nueva, tcb);
         }         
     }else{
@@ -353,7 +353,7 @@ void desbloquear_hilo_mutex(MUTEX *mutex){
                     encolar_multinivel(cola, tcb);
                 } else{
                     COLA_PRIORIDAD *cola_nueva = crear_multinivel(tcb);
-                    log_info(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
+                    log_trace(logger,"## Creando Cola Multinivel - Prioridad: <%d>",cola_nueva->prioridad);
                     encolar_multinivel(cola_nueva, tcb);
                 }         
             }else{

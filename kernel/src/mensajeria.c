@@ -222,7 +222,7 @@ int esperar_respuesta(){
             break;
         case FIN_DE_ARCHIVO:
             if (debe_finalizar_proceso()){
-                log_info(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
+                log_trace(logger, "## Finaliza el proceso %d", tcb_en_ejecucion->pcb_pid);
                 PROCESS_EXIT_ULTIMO_HILO(tcb_en_ejecucion); // x ahora, ver si queda o q
                 //PROCESS_EXIT(list_get(tcb_en_ejecucion->pcb->threads, 0));
                 

@@ -39,7 +39,7 @@ int write_mem(char* registroDireccion, char* registroDatos){
         return 0; // en realidad hay q hacer lo del segmentation fault
     }
 
-    log_info(logger,"## TID: %d - Acción: ESCRIBIR - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
+
 
     int valor = *obtenerRegistro(registroDatos);
     enviar_write_mem(valor, dir_fisica);
@@ -74,14 +74,12 @@ int read_mem(char* registroDatos, char* registroDireccion){
         return 0; // en realidad hay q hacer lo del segmentation fault
     }
 
-    log_info(logger,"## TID: %d - Acción: LEER - Dirección Física: %d",contexto_en_ejecucion->contexto_hilo->tid,dir_fisica);
-
     enviar_read_mem(dir_fisica);
     switch(recibir_operacion(fd_memoria)){
         case READ_MEM_RTA:
             int dato = deserializar_rta_read_mem(fd_memoria);
             *obtenerRegistro(registroDatos) = dato;
-            log_info(logger, "## (<PID:TID>) - (<%d>:<%d>) - Dato Leido: <%i> - Direccion Fisica: <%d>",contexto_en_ejecucion->contexto_hilo->pid,contexto_en_ejecucion->contexto_hilo->tid,dato, dir_fisica);
+            log_trace(logger, "## (<PID:TID>) - (<%d>:<%d>) - Dato Leido: <%i> - Direccion Fisica: <%d>",contexto_en_ejecucion->contexto_hilo->pid,contexto_en_ejecucion->contexto_hilo->tid,dato, dir_fisica);
             contexto_en_ejecucion->contexto_hilo->Registros->PC++;
             break;
         default:

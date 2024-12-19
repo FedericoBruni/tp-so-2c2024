@@ -150,7 +150,7 @@ int recibir_operacion(int socket_cliente)
 void aceptar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 {
 	int result_ok = 0;
-	log_info(logger, "## Recibido Handshake: <%s>", desc_code_op[handshake]);
+	log_trace(logger, "## Recibido Handshake: <%s>", desc_code_op[handshake]);
 	send(socket_cliente, &result_ok, sizeof(int), 0);
 }
 
@@ -183,7 +183,7 @@ int enviar_handshake(t_log *logger, int socket_cliente, op_code handshake)
 	}
 	else if (resultado != -1)
 	{
-		log_info(logger, "## Handshake OK %s", desc_code_op[handshake]);
+		log_trace(logger, "## Handshake OK %s", desc_code_op[handshake]);
 	}
 	else
 	{

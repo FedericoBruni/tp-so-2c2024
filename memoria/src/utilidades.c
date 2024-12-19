@@ -816,7 +816,6 @@ int dump_memory(int tid,  int pid){
         
     int fd_filesystem = conectarse_a_filesystem();
     //cargar_int_al_buffer(buffer,valor);
-    log_info(logger,"## Memory Dump solicitado - (PID:TID) - (%d:%d)",pid,tid);
     t_paquete *paquete = crear_paquete(SOL_DUMP, buffer);
     enviar_paquete(paquete, fd_filesystem);
     eliminar_paquete(paquete);

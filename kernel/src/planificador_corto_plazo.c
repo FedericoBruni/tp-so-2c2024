@@ -54,7 +54,7 @@ void fifo()
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <FIFO>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_trace(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <FIFO>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
             enviar_exec_a_cpu(tcb->tid, tcb->pcb_pid);
@@ -78,7 +78,7 @@ void prioridad()
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <PRIORIDADES>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_trace(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <PRIORIDADES>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
             enviar_exec_a_cpu(tcb->tid, tcb->pcb_pid);
@@ -108,7 +108,7 @@ void multinivel()
         if (tcb != NULL)
         {
             tcb_en_ejecucion = tcb;
-            log_info(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <MULTINIVEL>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
+            log_trace(logger, "## Planificando (PID:TID) - (<%d>:<%d>)- Algoritmo <MULTINIVEL>", tcb_en_ejecucion->pcb_pid, tcb_en_ejecucion->tid);
             cambiar_estado_hilo(tcb, EXEC);
             pcb_en_ejecucion = tcb_en_ejecucion->pcb;
 
