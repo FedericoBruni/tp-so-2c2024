@@ -155,6 +155,7 @@ int *reservar_bloques(int cantidad, char* nombre_archivo){
     strcpy(ruta_archivo, mount_dir);
     strcat(ruta_archivo, "/");
     strcat(ruta_archivo, "bitmap.dat");
+    int bloques_libres = cant_bloques_libres();
     archivoBitmap = fopen(ruta_archivo,"r+b");
 
     char byte;
@@ -180,8 +181,7 @@ int *reservar_bloques(int cantidad, char* nombre_archivo){
                 bloques[bloques_reservados] = i*8+j;
                 bloques_reservados++;
                 bloques_restantes--;
-                //log_info(logger, "## Bloque asignado: <%d> - Archivo: <%s> - Bloques Libres: <asd>",bloques[bloques_reservados],nombre_archivo);
-                log_info(logger, "## Bloque asignado: <%d> - Archivo: <%s> - Bloques Libres: <%d>",bloques[bloques_reservados],nombre_archivo,cant_bloques_libres2()-bloques_reservados);
+                log_info(logger, "## Bloque asignado: <%d> - Archivo: <%s> - Bloques Libres: <%d>",bloques[bloques_reservados],nombre_archivo,bloques_libres-bloques_reservados);
             }
         }
     }

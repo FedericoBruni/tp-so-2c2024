@@ -1,4 +1,567 @@
-[TRACE] 20:01:10:461 FileSystem/(9290:9290): ## Servidor levantado y listo para escuchar en el puerto: 8003
-[INFO] 20:01:18:367 FileSystem/(9290:9290): ## Memoria Conectado - FD del socket: 5
-[INFO] 20:01:18:368 FileSystem/(9290:9610): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
-[INFO] 20:07:26:197 FileSystem/(9290:9290): Finalizando ejecución de FILESYSTEM
+[TRACE] 00:21:46:188 FileSystem/(8400:8400): ## Servidor levantado y listo para escuchar en el puerto: 8003
+[INFO] 00:21:46:996 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 5
+[INFO] 00:21:46:996 FileSystem/(8400:8497): ## Recibido Handshake: <HANDSHAKE MEMORIA - FILESYSTEM>
+[INFO] 00:21:51:446 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 6
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Bloque asignado: <0> - Archivo: <1-0-21:21:51:446> - Bloques Libres: <199>
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Bloque asignado: <0> - Archivo: <1-0-21:21:51:446> - Bloques Libres: <198>
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Bloque asignado: <0> - Archivo: <1-0-21:21:51:446> - Bloques Libres: <197>
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Bloque asignado: <0> - Archivo: <1-0-21:21:51:446> - Bloques Libres: <196>
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Archivo Creado: <1-0-21:21:51:446> - Tamaño: <96>
+[INFO] 21:21:51:446 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <INDICE> - Bloque File System: <0>
+[INFO] 21:21:51:472 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <INDICE> - Bloque File System: <0>
+[INFO] 21:21:51:497 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <INDICE> - Bloque File System: <0>
+[INFO] 21:21:51:523 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <DATOS> - Bloque File System: <1>
+[INFO] 21:21:51:548 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <DATOS> - Bloque File System: <2>
+[INFO] 21:21:51:573 FileSystem/(8400:8656): ## Acceso Bloque - Archivo: <1-0-21:21:51:446> - Tipo Bloque: <DATOS> - Bloque File System: <3>
+[INFO] 21:21:51:599 FileSystem/(8400:8656): ## Fin de solicitud - Archivo: <1-0-21:21:51:446>
+[INFO] 21:22:01:209 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 7
+[INFO] 21:22:01:210 FileSystem/(8400:8875): ## Bloque asignado: <7> - Archivo: <2-0-21:22:01:210> - Bloques Libres: <195>
+[INFO] 21:22:01:210 FileSystem/(8400:8875): ## Bloque asignado: <0> - Archivo: <2-0-21:22:01:210> - Bloques Libres: <194>
+[INFO] 21:22:01:210 FileSystem/(8400:8875): ## Bloque asignado: <0> - Archivo: <2-0-21:22:01:210> - Bloques Libres: <193>
+[INFO] 21:22:01:210 FileSystem/(8400:8875): ## Archivo Creado: <2-0-21:22:01:210> - Tamaño: <64>
+[INFO] 21:22:01:210 FileSystem/(8400:8875): ## Acceso Bloque - Archivo: <2-0-21:22:01:210> - Tipo Bloque: <INDICE> - Bloque File System: <4>
+[INFO] 21:22:01:235 FileSystem/(8400:8875): ## Acceso Bloque - Archivo: <2-0-21:22:01:210> - Tipo Bloque: <INDICE> - Bloque File System: <4>
+[INFO] 21:22:01:261 FileSystem/(8400:8875): ## Acceso Bloque - Archivo: <2-0-21:22:01:210> - Tipo Bloque: <DATOS> - Bloque File System: <5>
+[INFO] 21:22:01:286 FileSystem/(8400:8875): ## Acceso Bloque - Archivo: <2-0-21:22:01:210> - Tipo Bloque: <DATOS> - Bloque File System: <6>
+[INFO] 21:22:01:311 FileSystem/(8400:8875): ## Fin de solicitud - Archivo: <2-0-21:22:01:210>
+[INFO] 21:22:22:469 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 8
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Bloque asignado: <7> - Archivo: <3-0-21:22:22:470> - Bloques Libres: <192>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Bloque asignado: <0> - Archivo: <3-0-21:22:22:470> - Bloques Libres: <191>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Bloque asignado: <0> - Archivo: <3-0-21:22:22:470> - Bloques Libres: <190>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Bloque asignado: <0> - Archivo: <3-0-21:22:22:470> - Bloques Libres: <189>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Bloque asignado: <0> - Archivo: <3-0-21:22:22:470> - Bloques Libres: <188>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Archivo Creado: <3-0-21:22:22:470> - Tamaño: <128>
+[INFO] 21:22:22:470 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <INDICE> - Bloque File System: <7>
+[INFO] 21:22:22:496 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <INDICE> - Bloque File System: <7>
+[INFO] 21:22:22:521 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <INDICE> - Bloque File System: <7>
+[INFO] 21:22:22:546 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <INDICE> - Bloque File System: <7>
+[INFO] 21:22:22:571 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <DATOS> - Bloque File System: <8>
+[INFO] 21:22:22:597 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <DATOS> - Bloque File System: <9>
+[INFO] 21:22:22:622 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <DATOS> - Bloque File System: <10>
+[INFO] 21:22:22:647 FileSystem/(8400:9364): ## Acceso Bloque - Archivo: <3-0-21:22:22:470> - Tipo Bloque: <DATOS> - Bloque File System: <11>
+[INFO] 21:22:22:672 FileSystem/(8400:9364): ## Fin de solicitud - Archivo: <3-0-21:22:22:470>
+[INFO] 21:22:24:333 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 9
+[INFO] 21:22:24:333 FileSystem/(8400:9403): ## Bloque asignado: <32685> - Archivo: <7-0-21:22:24:333> - Bloques Libres: <187>
+[INFO] 21:22:24:334 FileSystem/(8400:9403): ## Bloque asignado: <0> - Archivo: <7-0-21:22:24:333> - Bloques Libres: <186>
+[INFO] 21:22:24:334 FileSystem/(8400:9403): ## Bloque asignado: <0> - Archivo: <7-0-21:22:24:333> - Bloques Libres: <185>
+[INFO] 21:22:24:334 FileSystem/(8400:9403): ## Archivo Creado: <7-0-21:22:24:333> - Tamaño: <64>
+[INFO] 21:22:24:334 FileSystem/(8400:9403): ## Acceso Bloque - Archivo: <7-0-21:22:24:333> - Tipo Bloque: <INDICE> - Bloque File System: <12>
+[INFO] 21:22:24:359 FileSystem/(8400:9403): ## Acceso Bloque - Archivo: <7-0-21:22:24:333> - Tipo Bloque: <INDICE> - Bloque File System: <12>
+[INFO] 21:22:24:384 FileSystem/(8400:9403): ## Acceso Bloque - Archivo: <7-0-21:22:24:333> - Tipo Bloque: <DATOS> - Bloque File System: <13>
+[INFO] 21:22:24:410 FileSystem/(8400:9403): ## Acceso Bloque - Archivo: <7-0-21:22:24:333> - Tipo Bloque: <DATOS> - Bloque File System: <14>
+[INFO] 21:22:24:435 FileSystem/(8400:9403): ## Fin de solicitud - Archivo: <7-0-21:22:24:333>
+[INFO] 21:22:36:261 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 10
+[INFO] 21:22:36:261 FileSystem/(8400:9678): ## Bloque asignado: <32685> - Archivo: <12-0-21:22:36:261> - Bloques Libres: <184>
+[INFO] 21:22:36:262 FileSystem/(8400:9678): ## Bloque asignado: <0> - Archivo: <12-0-21:22:36:261> - Bloques Libres: <183>
+[INFO] 21:22:36:262 FileSystem/(8400:9678): ## Bloque asignado: <0> - Archivo: <12-0-21:22:36:261> - Bloques Libres: <182>
+[INFO] 21:22:36:262 FileSystem/(8400:9678): ## Archivo Creado: <12-0-21:22:36:261> - Tamaño: <64>
+[INFO] 21:22:36:262 FileSystem/(8400:9678): ## Acceso Bloque - Archivo: <12-0-21:22:36:261> - Tipo Bloque: <INDICE> - Bloque File System: <15>
+[INFO] 21:22:36:287 FileSystem/(8400:9678): ## Acceso Bloque - Archivo: <12-0-21:22:36:261> - Tipo Bloque: <INDICE> - Bloque File System: <15>
+[INFO] 21:22:36:313 FileSystem/(8400:9678): ## Acceso Bloque - Archivo: <12-0-21:22:36:261> - Tipo Bloque: <DATOS> - Bloque File System: <16>
+[INFO] 21:22:36:338 FileSystem/(8400:9678): ## Acceso Bloque - Archivo: <12-0-21:22:36:261> - Tipo Bloque: <DATOS> - Bloque File System: <17>
+[INFO] 21:22:36:364 FileSystem/(8400:9678): ## Fin de solicitud - Archivo: <12-0-21:22:36:261>
+[INFO] 21:22:43:713 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 11
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <32685> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <181>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <0> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <180>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <0> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <179>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <4> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <178>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <0> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <177>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <4> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <176>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <0> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <175>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <48> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <174>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Bloque asignado: <0> - Archivo: <4-0-21:22:43:714> - Bloques Libres: <173>
+[INFO] 21:22:43:714 FileSystem/(8400:9849): ## Archivo Creado: <4-0-21:22:43:714> - Tamaño: <256>
+[INFO] 21:22:43:715 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:740 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:765 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:790 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:816 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:841 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:866 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:892 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <INDICE> - Bloque File System: <18>
+[INFO] 21:22:43:917 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <19>
+[INFO] 21:22:43:942 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <20>
+[INFO] 21:22:43:967 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <21>
+[INFO] 21:22:43:992 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <22>
+[INFO] 21:22:44:017 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <23>
+[INFO] 21:22:44:043 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <24>
+[INFO] 21:22:44:068 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <25>
+[INFO] 21:22:44:093 FileSystem/(8400:9849): ## Acceso Bloque - Archivo: <4-0-21:22:43:714> - Tipo Bloque: <DATOS> - Bloque File System: <26>
+[INFO] 21:22:44:118 FileSystem/(8400:9849): ## Fin de solicitud - Archivo: <4-0-21:22:43:714>
+[INFO] 21:22:44:578 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 12
+[INFO] 21:22:44:587 FileSystem/(8400:9865): ## Bloque asignado: <7> - Archivo: <17-0-21:22:44:587> - Bloques Libres: <172>
+[INFO] 21:22:44:587 FileSystem/(8400:9865): ## Bloque asignado: <0> - Archivo: <17-0-21:22:44:587> - Bloques Libres: <171>
+[INFO] 21:22:44:588 FileSystem/(8400:9865): ## Bloque asignado: <0> - Archivo: <17-0-21:22:44:587> - Bloques Libres: <170>
+[INFO] 21:22:44:588 FileSystem/(8400:9865): ## Archivo Creado: <17-0-21:22:44:587> - Tamaño: <64>
+[INFO] 21:22:44:588 FileSystem/(8400:9865): ## Acceso Bloque - Archivo: <17-0-21:22:44:587> - Tipo Bloque: <INDICE> - Bloque File System: <27>
+[INFO] 21:22:44:614 FileSystem/(8400:9865): ## Acceso Bloque - Archivo: <17-0-21:22:44:587> - Tipo Bloque: <INDICE> - Bloque File System: <27>
+[INFO] 21:22:44:639 FileSystem/(8400:9865): ## Acceso Bloque - Archivo: <17-0-21:22:44:587> - Tipo Bloque: <DATOS> - Bloque File System: <28>
+[INFO] 21:22:44:664 FileSystem/(8400:9865): ## Acceso Bloque - Archivo: <17-0-21:22:44:587> - Tipo Bloque: <DATOS> - Bloque File System: <29>
+[INFO] 21:22:44:690 FileSystem/(8400:9865): ## Fin de solicitud - Archivo: <17-0-21:22:44:587>
+[INFO] 21:22:44:874 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 13
+[INFO] 21:22:44:874 FileSystem/(8400:9874): ## Bloque asignado: <7> - Archivo: <8-0-21:22:44:874> - Bloques Libres: <169>
+[INFO] 21:22:44:874 FileSystem/(8400:9874): ## Bloque asignado: <0> - Archivo: <8-0-21:22:44:874> - Bloques Libres: <168>
+[INFO] 21:22:44:874 FileSystem/(8400:9874): ## Bloque asignado: <0> - Archivo: <8-0-21:22:44:874> - Bloques Libres: <167>
+[INFO] 21:22:44:875 FileSystem/(8400:9874): ## Bloque asignado: <0> - Archivo: <8-0-21:22:44:874> - Bloques Libres: <166>
+[INFO] 21:22:44:875 FileSystem/(8400:9874): ## Bloque asignado: <0> - Archivo: <8-0-21:22:44:874> - Bloques Libres: <165>
+[INFO] 21:22:44:875 FileSystem/(8400:9874): ## Archivo Creado: <8-0-21:22:44:874> - Tamaño: <128>
+[INFO] 21:22:44:875 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <INDICE> - Bloque File System: <30>
+[INFO] 21:22:44:901 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <INDICE> - Bloque File System: <30>
+[INFO] 21:22:44:926 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <INDICE> - Bloque File System: <30>
+[INFO] 21:22:44:952 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <INDICE> - Bloque File System: <30>
+[INFO] 21:22:44:977 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <DATOS> - Bloque File System: <31>
+[INFO] 21:22:45:002 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <DATOS> - Bloque File System: <32>
+[INFO] 21:22:45:027 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <DATOS> - Bloque File System: <33>
+[INFO] 21:22:45:052 FileSystem/(8400:9874): ## Acceso Bloque - Archivo: <8-0-21:22:44:874> - Tipo Bloque: <DATOS> - Bloque File System: <34>
+[INFO] 21:22:45:078 FileSystem/(8400:9874): ## Fin de solicitud - Archivo: <8-0-21:22:44:874>
+[INFO] 21:23:04:441 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 14
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <32685> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <164>
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <0> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <163>
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <0> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <162>
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <4> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <161>
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <0> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <160>
+[INFO] 21:23:04:442 FileSystem/(8400:10321): ## Bloque asignado: <4> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <159>
+[INFO] 21:23:04:443 FileSystem/(8400:10321): ## Bloque asignado: <0> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <158>
+[INFO] 21:23:04:443 FileSystem/(8400:10321): ## Bloque asignado: <4> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <157>
+[INFO] 21:23:04:443 FileSystem/(8400:10321): ## Bloque asignado: <0> - Archivo: <5-0-21:23:04:442> - Bloques Libres: <156>
+[INFO] 21:23:04:443 FileSystem/(8400:10321): ## Archivo Creado: <5-0-21:23:04:442> - Tamaño: <256>
+[INFO] 21:23:04:443 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:469 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:494 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:520 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:545 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:570 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:596 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:621 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <INDICE> - Bloque File System: <35>
+[INFO] 21:23:04:646 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <36>
+[INFO] 21:23:04:672 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <37>
+[INFO] 21:23:04:697 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <38>
+[INFO] 21:23:04:722 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <39>
+[INFO] 21:23:04:747 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <40>
+[INFO] 21:23:04:773 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <41>
+[INFO] 21:23:04:798 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <42>
+[INFO] 21:23:04:823 FileSystem/(8400:10321): ## Acceso Bloque - Archivo: <5-0-21:23:04:442> - Tipo Bloque: <DATOS> - Bloque File System: <43>
+[INFO] 21:23:04:849 FileSystem/(8400:10321): ## Fin de solicitud - Archivo: <5-0-21:23:04:442>
+[INFO] 21:23:05:005 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 15
+[INFO] 21:23:05:005 FileSystem/(8400:10326): ## Bloque asignado: <32685> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <155>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <0> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <154>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <0> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <153>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <4> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <152>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <0> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <151>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <4> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <150>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <0> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <149>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <4> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <148>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Bloque asignado: <5702887> - Archivo: <9-0-21:23:05:005> - Bloques Libres: <147>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Archivo Creado: <9-0-21:23:05:005> - Tamaño: <256>
+[INFO] 21:23:05:006 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:032 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:057 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:082 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:107 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:133 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:158 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:183 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <INDICE> - Bloque File System: <44>
+[INFO] 21:23:05:208 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <45>
+[INFO] 21:23:05:233 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <46>
+[INFO] 21:23:05:259 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <47>
+[INFO] 21:23:05:284 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <48>
+[INFO] 21:23:05:309 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <49>
+[INFO] 21:23:05:335 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <50>
+[INFO] 21:23:05:360 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <51>
+[INFO] 21:23:05:385 FileSystem/(8400:10326): ## Acceso Bloque - Archivo: <9-0-21:23:05:005> - Tipo Bloque: <DATOS> - Bloque File System: <52>
+[INFO] 21:23:05:410 FileSystem/(8400:10326): ## Fin de solicitud - Archivo: <9-0-21:23:05:005>
+[INFO] 21:23:08:085 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 16
+[INFO] 21:23:08:085 FileSystem/(8400:10393): ## Bloque asignado: <32685> - Archivo: <22-0-21:23:08:085> - Bloques Libres: <146>
+[INFO] 21:23:08:086 FileSystem/(8400:10393): ## Bloque asignado: <0> - Archivo: <22-0-21:23:08:085> - Bloques Libres: <145>
+[INFO] 21:23:08:086 FileSystem/(8400:10393): ## Bloque asignado: <0> - Archivo: <22-0-21:23:08:085> - Bloques Libres: <144>
+[INFO] 21:23:08:086 FileSystem/(8400:10393): ## Archivo Creado: <22-0-21:23:08:085> - Tamaño: <64>
+[INFO] 21:23:08:086 FileSystem/(8400:10393): ## Acceso Bloque - Archivo: <22-0-21:23:08:085> - Tipo Bloque: <INDICE> - Bloque File System: <53>
+[INFO] 21:23:08:111 FileSystem/(8400:10393): ## Acceso Bloque - Archivo: <22-0-21:23:08:085> - Tipo Bloque: <INDICE> - Bloque File System: <53>
+[INFO] 21:23:08:136 FileSystem/(8400:10393): ## Acceso Bloque - Archivo: <22-0-21:23:08:085> - Tipo Bloque: <DATOS> - Bloque File System: <54>
+[INFO] 21:23:08:162 FileSystem/(8400:10393): ## Acceso Bloque - Archivo: <22-0-21:23:08:085> - Tipo Bloque: <DATOS> - Bloque File System: <55>
+[INFO] 21:23:08:187 FileSystem/(8400:10393): ## Fin de solicitud - Archivo: <22-0-21:23:08:085>
+[INFO] 21:23:08:294 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 17
+[INFO] 21:23:08:294 FileSystem/(8400:10397): ## Bloque asignado: <7> - Archivo: <18-0-21:23:08:294> - Bloques Libres: <143>
+[INFO] 21:23:08:295 FileSystem/(8400:10397): ## Bloque asignado: <0> - Archivo: <18-0-21:23:08:294> - Bloques Libres: <142>
+[INFO] 21:23:08:295 FileSystem/(8400:10397): ## Bloque asignado: <0> - Archivo: <18-0-21:23:08:294> - Bloques Libres: <141>
+[INFO] 21:23:08:295 FileSystem/(8400:10397): ## Bloque asignado: <4> - Archivo: <18-0-21:23:08:294> - Bloques Libres: <140>
+[INFO] 21:23:08:295 FileSystem/(8400:10397): ## Bloque asignado: <0> - Archivo: <18-0-21:23:08:294> - Bloques Libres: <139>
+[INFO] 21:23:08:296 FileSystem/(8400:10397): ## Archivo Creado: <18-0-21:23:08:294> - Tamaño: <128>
+[INFO] 21:23:08:296 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <INDICE> - Bloque File System: <56>
+[INFO] 21:23:08:321 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <INDICE> - Bloque File System: <56>
+[INFO] 21:23:08:347 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <INDICE> - Bloque File System: <56>
+[INFO] 21:23:08:372 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <INDICE> - Bloque File System: <56>
+[INFO] 21:23:08:397 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <DATOS> - Bloque File System: <57>
+[INFO] 21:23:08:422 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <DATOS> - Bloque File System: <58>
+[INFO] 21:23:08:448 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <DATOS> - Bloque File System: <59>
+[INFO] 21:23:08:473 FileSystem/(8400:10397): ## Acceso Bloque - Archivo: <18-0-21:23:08:294> - Tipo Bloque: <DATOS> - Bloque File System: <60>
+[INFO] 21:23:08:499 FileSystem/(8400:10397): ## Fin de solicitud - Archivo: <18-0-21:23:08:294>
+[INFO] 21:23:14:801 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 18
+[INFO] 21:23:14:801 FileSystem/(8400:10546): ## Bloque asignado: <32685> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <138>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <0> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <137>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <0> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <136>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <4> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <135>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <0> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <134>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <4> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <133>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <0> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <132>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <48> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <131>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Bloque asignado: <0> - Archivo: <6-0-21:23:14:801> - Bloques Libres: <130>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Archivo Creado: <6-0-21:23:14:801> - Tamaño: <256>
+[INFO] 21:23:14:802 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:828 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:853 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:878 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:904 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:929 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:954 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:14:979 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <INDICE> - Bloque File System: <61>
+[INFO] 21:23:15:004 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <62>
+[INFO] 21:23:15:030 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <63>
+[INFO] 21:23:15:055 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <64>
+[INFO] 21:23:15:080 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <65>
+[INFO] 21:23:15:105 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <66>
+[INFO] 21:23:15:130 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <67>
+[INFO] 21:23:15:156 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <68>
+[INFO] 21:23:15:181 FileSystem/(8400:10546): ## Acceso Bloque - Archivo: <6-0-21:23:14:801> - Tipo Bloque: <DATOS> - Bloque File System: <69>
+[INFO] 21:23:15:206 FileSystem/(8400:10546): ## Fin de solicitud - Archivo: <6-0-21:23:14:801>
+[INFO] 21:23:22:949 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 19
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <32685> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <129>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <0> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <128>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <0> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <127>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <4> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <126>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <0> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <125>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <4> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <124>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <0> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <123>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <69> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <122>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Bloque asignado: <0> - Archivo: <10-0-21:23:22:950> - Bloques Libres: <121>
+[INFO] 21:23:22:950 FileSystem/(8400:10725): ## Archivo Creado: <10-0-21:23:22:950> - Tamaño: <256>
+[INFO] 21:23:22:951 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:22:976 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:001 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:026 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:051 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:077 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:102 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:127 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <INDICE> - Bloque File System: <70>
+[INFO] 21:23:23:152 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <71>
+[INFO] 21:23:23:177 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <72>
+[INFO] 21:23:23:203 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <73>
+[INFO] 21:23:23:228 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <74>
+[INFO] 21:23:23:253 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <75>
+[INFO] 21:23:23:279 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <76>
+[INFO] 21:23:23:304 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <77>
+[INFO] 21:23:23:330 FileSystem/(8400:10725): ## Acceso Bloque - Archivo: <10-0-21:23:22:950> - Tipo Bloque: <DATOS> - Bloque File System: <78>
+[INFO] 21:23:23:355 FileSystem/(8400:10725): ## Fin de solicitud - Archivo: <10-0-21:23:22:950>
+[INFO] 21:23:25:822 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 20
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Bloque asignado: <32685> - Archivo: <23-0-21:23:25:822> - Bloques Libres: <120>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Bloque asignado: <0> - Archivo: <23-0-21:23:25:822> - Bloques Libres: <119>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Bloque asignado: <0> - Archivo: <23-0-21:23:25:822> - Bloques Libres: <118>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Bloque asignado: <4> - Archivo: <23-0-21:23:25:822> - Bloques Libres: <117>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Bloque asignado: <0> - Archivo: <23-0-21:23:25:822> - Bloques Libres: <116>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Archivo Creado: <23-0-21:23:25:822> - Tamaño: <128>
+[INFO] 21:23:25:822 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <INDICE> - Bloque File System: <79>
+[INFO] 21:23:25:848 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <INDICE> - Bloque File System: <79>
+[INFO] 21:23:25:873 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <INDICE> - Bloque File System: <79>
+[INFO] 21:23:25:899 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <INDICE> - Bloque File System: <79>
+[INFO] 21:23:25:924 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <DATOS> - Bloque File System: <80>
+[INFO] 21:23:25:949 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <DATOS> - Bloque File System: <81>
+[INFO] 21:23:25:974 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <DATOS> - Bloque File System: <82>
+[INFO] 21:23:25:999 FileSystem/(8400:10784): ## Acceso Bloque - Archivo: <23-0-21:23:25:822> - Tipo Bloque: <DATOS> - Bloque File System: <83>
+[INFO] 21:23:26:025 FileSystem/(8400:10784): ## Fin de solicitud - Archivo: <23-0-21:23:25:822>
+[INFO] 21:23:31:874 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 21
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <32685> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <115>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <0> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <114>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <0> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <113>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <4> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <112>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <0> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <111>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <4> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <110>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <0> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <109>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <78> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <108>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Bloque asignado: <0> - Archivo: <11-0-21:23:31:874> - Bloques Libres: <107>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Archivo Creado: <11-0-21:23:31:874> - Tamaño: <256>
+[INFO] 21:23:31:874 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:31:900 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:31:925 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:31:950 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:31:975 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:32:000 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:32:025 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:32:051 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <INDICE> - Bloque File System: <84>
+[INFO] 21:23:32:076 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <85>
+[INFO] 21:23:32:101 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <86>
+[INFO] 21:23:32:126 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <87>
+[INFO] 21:23:32:151 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <88>
+[INFO] 21:23:32:177 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <89>
+[INFO] 21:23:32:202 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <90>
+[INFO] 21:23:32:227 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <91>
+[INFO] 21:23:32:253 FileSystem/(8400:10920): ## Acceso Bloque - Archivo: <11-0-21:23:31:874> - Tipo Bloque: <DATOS> - Bloque File System: <92>
+[INFO] 21:23:32:278 FileSystem/(8400:10920): ## Fin de solicitud - Archivo: <11-0-21:23:31:874>
+[INFO] 21:23:43:006 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 22
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <32685> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <106>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <0> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <105>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <0> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <104>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <4> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <103>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <0> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <102>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <4> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <101>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <0> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <100>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <92> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <99>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Bloque asignado: <0> - Archivo: <14-0-21:23:43:006> - Bloques Libres: <98>
+[INFO] 21:23:43:006 FileSystem/(8400:11168): ## Archivo Creado: <14-0-21:23:43:006> - Tamaño: <256>
+[INFO] 21:23:43:007 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:032 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:057 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:082 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:107 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:133 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:158 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:183 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <INDICE> - Bloque File System: <93>
+[INFO] 21:23:43:208 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <94>
+[INFO] 21:23:43:233 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <95>
+[INFO] 21:23:43:258 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <96>
+[INFO] 21:23:43:284 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <97>
+[INFO] 21:23:43:309 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <98>
+[INFO] 21:23:43:334 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <99>
+[INFO] 21:23:43:359 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <100>
+[INFO] 21:23:43:384 FileSystem/(8400:11168): ## Acceso Bloque - Archivo: <14-0-21:23:43:006> - Tipo Bloque: <DATOS> - Bloque File System: <101>
+[INFO] 21:23:43:410 FileSystem/(8400:11168): ## Fin de solicitud - Archivo: <14-0-21:23:43:006>
+[INFO] 21:24:00:781 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 23
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <32685> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <97>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <0> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <96>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <0> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <95>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <4> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <94>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <0> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <93>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <4> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <92>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <0> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <91>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <4> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <90>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Bloque asignado: <0> - Archivo: <19-0-21:24:00:782> - Bloques Libres: <89>
+[INFO] 21:24:00:782 FileSystem/(8400:11566): ## Archivo Creado: <19-0-21:24:00:782> - Tamaño: <256>
+[INFO] 21:24:00:783 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:808 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:833 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:859 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:884 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:909 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:935 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:960 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <INDICE> - Bloque File System: <102>
+[INFO] 21:24:00:986 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <103>
+[INFO] 21:24:01:011 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <104>
+[INFO] 21:24:01:036 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <105>
+[INFO] 21:24:01:061 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <106>
+[INFO] 21:24:01:087 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <107>
+[INFO] 21:24:01:112 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <108>
+[INFO] 21:24:01:138 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <109>
+[INFO] 21:24:01:163 FileSystem/(8400:11566): ## Acceso Bloque - Archivo: <19-0-21:24:00:782> - Tipo Bloque: <DATOS> - Bloque File System: <110>
+[INFO] 21:24:01:188 FileSystem/(8400:11566): ## Fin de solicitud - Archivo: <19-0-21:24:00:782>
+[INFO] 21:24:01:345 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 24
+[INFO] 21:24:01:345 FileSystem/(8400:11571): ## Bloque asignado: <32685> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <88>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <0> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <87>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <0> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <86>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <4> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <85>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <0> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <84>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <4> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <83>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <0> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <82>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <110> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <81>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Bloque asignado: <0> - Archivo: <24-0-21:24:01:345> - Bloques Libres: <80>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Archivo Creado: <24-0-21:24:01:345> - Tamaño: <256>
+[INFO] 21:24:01:346 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:372 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:397 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:423 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:448 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:473 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:498 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:524 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <INDICE> - Bloque File System: <111>
+[INFO] 21:24:01:549 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <112>
+[INFO] 21:24:01:574 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <113>
+[INFO] 21:24:01:600 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <114>
+[INFO] 21:24:01:625 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <115>
+[INFO] 21:24:01:650 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <116>
+[INFO] 21:24:01:675 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <117>
+[INFO] 21:24:01:701 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <118>
+[INFO] 21:24:01:726 FileSystem/(8400:11571): ## Acceso Bloque - Archivo: <24-0-21:24:01:345> - Tipo Bloque: <DATOS> - Bloque File System: <119>
+[INFO] 21:24:01:751 FileSystem/(8400:11571): ## Fin de solicitud - Archivo: <24-0-21:24:01:345>
+[INFO] 21:24:04:617 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 25
+[INFO] 21:24:04:617 FileSystem/(8400:11641): ## Bloque asignado: <32685> - Archivo: <13-0-21:24:04:617> - Bloques Libres: <79>
+[INFO] 21:24:04:617 FileSystem/(8400:11641): ## Bloque asignado: <0> - Archivo: <13-0-21:24:04:617> - Bloques Libres: <78>
+[INFO] 21:24:04:618 FileSystem/(8400:11641): ## Bloque asignado: <0> - Archivo: <13-0-21:24:04:617> - Bloques Libres: <77>
+[INFO] 21:24:04:618 FileSystem/(8400:11641): ## Bloque asignado: <4> - Archivo: <13-0-21:24:04:617> - Bloques Libres: <76>
+[INFO] 21:24:04:618 FileSystem/(8400:11641): ## Bloque asignado: <610> - Archivo: <13-0-21:24:04:617> - Bloques Libres: <75>
+[INFO] 21:24:04:618 FileSystem/(8400:11641): ## Archivo Creado: <13-0-21:24:04:617> - Tamaño: <128>
+[INFO] 21:24:04:618 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <INDICE> - Bloque File System: <120>
+[INFO] 21:24:04:643 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <INDICE> - Bloque File System: <120>
+[INFO] 21:24:04:668 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <INDICE> - Bloque File System: <120>
+[INFO] 21:24:04:693 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <INDICE> - Bloque File System: <120>
+[INFO] 21:24:04:719 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <DATOS> - Bloque File System: <121>
+[INFO] 21:24:04:744 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <DATOS> - Bloque File System: <122>
+[INFO] 21:24:04:769 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <DATOS> - Bloque File System: <123>
+[INFO] 21:24:04:794 FileSystem/(8400:11641): ## Acceso Bloque - Archivo: <13-0-21:24:04:617> - Tipo Bloque: <DATOS> - Bloque File System: <124>
+[INFO] 21:24:04:819 FileSystem/(8400:11641): ## Fin de solicitud - Archivo: <13-0-21:24:04:617>
+[INFO] 21:24:17:601 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 26
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <32685> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <74>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <0> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <73>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <0> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <72>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <4> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <71>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <0> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <70>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <4> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <69>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <0> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <68>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <119> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <67>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Bloque asignado: <0> - Archivo: <25-0-21:24:17:602> - Bloques Libres: <66>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Archivo Creado: <25-0-21:24:17:602> - Tamaño: <256>
+[INFO] 21:24:17:602 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:627 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:653 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:678 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:703 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:729 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:754 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:779 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <INDICE> - Bloque File System: <125>
+[INFO] 21:24:17:805 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <126>
+[INFO] 21:24:17:830 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <127>
+[INFO] 21:24:17:856 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <128>
+[INFO] 21:24:17:881 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <129>
+[INFO] 21:24:17:906 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <130>
+[INFO] 21:24:17:931 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <131>
+[INFO] 21:24:17:957 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <132>
+[INFO] 21:24:17:982 FileSystem/(8400:11933): ## Acceso Bloque - Archivo: <25-0-21:24:17:602> - Tipo Bloque: <DATOS> - Bloque File System: <133>
+[INFO] 21:24:18:007 FileSystem/(8400:11933): ## Fin de solicitud - Archivo: <25-0-21:24:17:602>
+[INFO] 21:24:21:801 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 27
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <32685> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <65>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <0> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <64>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <0> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <63>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <4> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <62>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <0> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <61>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <4> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <60>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <0> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <59>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <133> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <58>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Bloque asignado: <0> - Archivo: <20-0-21:24:21:802> - Bloques Libres: <57>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Archivo Creado: <20-0-21:24:21:802> - Tamaño: <256>
+[INFO] 21:24:21:802 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:828 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:853 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:878 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:903 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:929 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:954 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:21:979 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <INDICE> - Bloque File System: <134>
+[INFO] 21:24:22:005 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <135>
+[INFO] 21:24:22:030 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <136>
+[INFO] 21:24:22:055 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <137>
+[INFO] 21:24:22:080 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <138>
+[INFO] 21:24:22:105 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <139>
+[INFO] 21:24:22:130 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <140>
+[INFO] 21:24:22:155 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <141>
+[INFO] 21:24:22:181 FileSystem/(8400:12021): ## Acceso Bloque - Archivo: <20-0-21:24:21:802> - Tipo Bloque: <DATOS> - Bloque File System: <142>
+[INFO] 21:24:22:206 FileSystem/(8400:12021): ## Fin de solicitud - Archivo: <20-0-21:24:21:802>
+[INFO] 21:24:31:401 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 28
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <32685> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <56>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <0> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <55>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <0> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <54>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <4> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <53>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <0> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <52>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <4> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <51>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <0> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <50>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <142> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <49>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Bloque asignado: <0> - Archivo: <26-0-21:24:31:402> - Bloques Libres: <48>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Archivo Creado: <26-0-21:24:31:402> - Tamaño: <256>
+[INFO] 21:24:31:402 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:428 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:453 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:478 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:504 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:529 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:554 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:579 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <INDICE> - Bloque File System: <143>
+[INFO] 21:24:31:605 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <144>
+[INFO] 21:24:31:630 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <145>
+[INFO] 21:24:31:655 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <146>
+[INFO] 21:24:31:680 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <147>
+[INFO] 21:24:31:706 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <148>
+[INFO] 21:24:31:731 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <149>
+[INFO] 21:24:31:756 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <150>
+[INFO] 21:24:31:781 FileSystem/(8400:12233): ## Acceso Bloque - Archivo: <26-0-21:24:31:402> - Tipo Bloque: <DATOS> - Bloque File System: <151>
+[INFO] 21:24:31:807 FileSystem/(8400:12233): ## Fin de solicitud - Archivo: <26-0-21:24:31:402>
+[INFO] 21:24:34:509 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 29
+[INFO] 21:24:34:509 FileSystem/(8400:12295): ## Bloque asignado: <32685> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <47>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <0> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <46>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <0> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <45>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <4> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <44>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <0> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <43>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <4> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <42>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <0> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <41>
+[INFO] 21:24:34:510 FileSystem/(8400:12295): ## Bloque asignado: <151> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <40>
+[INFO] 21:24:34:511 FileSystem/(8400:12295): ## Bloque asignado: <0> - Archivo: <21-0-21:24:34:509> - Bloques Libres: <39>
+[INFO] 21:24:34:511 FileSystem/(8400:12295): ## Archivo Creado: <21-0-21:24:34:509> - Tamaño: <256>
+[INFO] 21:24:34:511 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:536 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:561 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:587 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:612 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:637 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:663 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:688 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <INDICE> - Bloque File System: <152>
+[INFO] 21:24:34:713 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <153>
+[INFO] 21:24:34:738 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <154>
+[INFO] 21:24:34:764 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <155>
+[INFO] 21:24:34:789 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <156>
+[INFO] 21:24:34:814 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <157>
+[INFO] 21:24:34:840 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <158>
+[INFO] 21:24:34:865 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <159>
+[INFO] 21:24:34:890 FileSystem/(8400:12295): ## Acceso Bloque - Archivo: <21-0-21:24:34:509> - Tipo Bloque: <DATOS> - Bloque File System: <160>
+[INFO] 21:24:34:916 FileSystem/(8400:12295): ## Fin de solicitud - Archivo: <21-0-21:24:34:509>
+[INFO] 21:24:35:213 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 30
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <32685> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <38>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <0> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <37>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <0> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <36>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <4> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <35>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <0> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <34>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <4> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <33>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <0> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <32>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <160> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <31>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Bloque asignado: <0> - Archivo: <15-0-21:24:35:214> - Bloques Libres: <30>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Archivo Creado: <15-0-21:24:35:214> - Tamaño: <256>
+[INFO] 21:24:35:214 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:240 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:265 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:291 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:316 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:341 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:366 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:392 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <INDICE> - Bloque File System: <161>
+[INFO] 21:24:35:417 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <162>
+[INFO] 21:24:35:442 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <163>
+[INFO] 21:24:35:468 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <164>
+[INFO] 21:24:35:493 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <165>
+[INFO] 21:24:35:518 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <166>
+[INFO] 21:24:35:543 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <167>
+[INFO] 21:24:35:569 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <168>
+[INFO] 21:24:35:594 FileSystem/(8400:12304): ## Acceso Bloque - Archivo: <15-0-21:24:35:214> - Tipo Bloque: <DATOS> - Bloque File System: <169>
+[INFO] 21:24:35:619 FileSystem/(8400:12304): ## Fin de solicitud - Archivo: <15-0-21:24:35:214>
+[INFO] 21:24:39:078 FileSystem/(8400:8400): ## Memoria Conectado - FD del socket: 31
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <32685> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <29>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <0> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <28>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <0> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <27>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <4> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <26>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <0> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <25>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <4> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <24>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <0> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <23>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <169> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <22>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Bloque asignado: <0> - Archivo: <16-0-21:24:39:078> - Bloques Libres: <21>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Archivo Creado: <16-0-21:24:39:078> - Tamaño: <256>
+[INFO] 21:24:39:078 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:105 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:130 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:155 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:181 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:206 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:231 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:256 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <INDICE> - Bloque File System: <170>
+[INFO] 21:24:39:281 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <171>
+[INFO] 21:24:39:306 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <172>
+[INFO] 21:24:39:331 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <173>
+[INFO] 21:24:39:357 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <174>
+[INFO] 21:24:39:382 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <175>
+[INFO] 21:24:39:407 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <176>
+[INFO] 21:24:39:432 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <177>
+[INFO] 21:24:39:457 FileSystem/(8400:12385): ## Acceso Bloque - Archivo: <16-0-21:24:39:078> - Tipo Bloque: <DATOS> - Bloque File System: <178>
+[INFO] 21:24:39:483 FileSystem/(8400:12385): ## Fin de solicitud - Archivo: <16-0-21:24:39:078>
+[INFO] 21:24:48:781 FileSystem/(8400:8400): Finalizando ejecución de FILESYSTEM
