@@ -46,7 +46,6 @@ void liberar_tcb(void *ptr_tcb)
                 tcb_encolado=tcb_en_ejecucion;
             }else{
             log_error(logger,"No se encontro el hilo (PID:TID) - (<%i>:<%i>)", tcb->pcb_pid, tcb->tid);
-            return;
             }}
         }   
     }

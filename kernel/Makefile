@@ -104,7 +104,7 @@ kernel:
 memcheck:
 	rm -f logKernel.log
 	make
-	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./bin/kernel archivo1 16
+	valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all ./bin/kernel PRUEBA_FS 8
 
 
 CONFIG_KERNEL_PLANIC = ALGORITMO_PLANIFICACION=FIFO\nQUANTUM=875\nIP_MEMORIA=$(CFG_IP_MEMORIA)\nPUERTO_MEMORIA=8002\nIP_CPU=$(CFG_IP_CPU)\nPUERTO_CPU_DISPATCH=8006\nPUERTO_CPU_INTERRUPT=8007\nLOG_LEVEL=INFO
