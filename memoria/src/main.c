@@ -4,7 +4,7 @@
 extern t_log *logger;
 extern char *puerto_escucha;
 int cliente_fd_dispatch;
-int cliente_fd_kernel;
+//int cliente_fd_kernel;
 int server_fd;
 
 int main(int argc, char *argv[])
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     // pthread_detach(hilo_kernel_memoria);
 
     while(1){
-        cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
+        int cliente_fd_kernel = esperar_cliente(server_fd, logger, "Kernel");
         if (cliente_fd_kernel == -1)
 	    {
 		    log_error(logger, "Error al aceptar Kernel");
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
         log_info(logger, "## Kernel Conectado - FD del socket: %d", cliente_fd_kernel);
 
         pthread_t hilo_kernel_memoria;
-        pthread_create(&hilo_kernel_memoria, NULL, (void *)escuchar_mensajes_kernel, NULL);
+        pthread_create(&hilo_kernel_memoria, NULL, (void *)escuchar_mensajes_kernel, cliente_fd_kernel);
         pthread_detach(hilo_kernel_memoria);
     }
 

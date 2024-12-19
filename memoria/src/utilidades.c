@@ -64,12 +64,10 @@ void terminar_ejecucion(int socket_conexion, int socket_servidor_kernel, int soc
     list_destroy_and_destroy_elements(memoria_usuario->particiones, free);
     free(memoria_usuario);
     //list_destroy_and_destroy_elements(contextos_hilos, eliminar_hilo_y_contexto); ?
-    printf("size ctxs_prcs: %i\n", list_size(contextos_procesos));
     if (list_size(contextos_procesos) > 0) list_destroy_and_destroy_elements(contextos_procesos, free);
     else list_destroy(contextos_procesos);
     if (list_size(contextos_hilos) > 0) list_destroy_and_destroy_elements(contextos_hilos, liberar_contexto_hilo);
     else list_destroy(contextos_hilos);
-    printf("size archivos: %i\n", list_size(archivos));
     if (list_size(archivos) > 0) list_destroy_and_destroy_elements(archivos, liberar_archivo);
     else list_destroy(archivos);
 
@@ -764,7 +762,7 @@ void deserializar_write_mem(int cliente_fd_dispatch) {
     int tid = extraer_int_del_buffer(buffer);
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
     escribir_memoria(direccion, valor);
-    log_info(logger, "## <Escritura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,ctx->LIMITE - ctx->BASE+1);
+    log_info(logger, "## <Escritura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,sizeof(valor));
     
     int rta = WRITE_MEM_RTA;
     send(cliente_fd_dispatch, &rta, sizeof(op_code), 0);
@@ -780,7 +778,7 @@ void deserializar_read_mem(cliente_fd_dispatch) {
     int dato = leer_memoria(direccion);
     //log_info(logger,"## Lecutra - (PID:TID) - (%i:%i) - Dir.Física: %d - Tamaño: %d",pid, tid,direccion,sizeof(dato));
     CONTEXTO_PROCESO *ctx = buscar_contexto_proceso(pid);
-    log_info(logger, "## <Lectura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,ctx->LIMITE - ctx->BASE+1);
+    log_info(logger, "## <Lectura> - (PID:TID) - (<%d>:<%d>) - Dir. Física: <%d> - Tamaño: <%d>", pid, tid, direccion,sizeof(dato));
     enviar_lectura(dato);
     free(buffer->stream);
     free(buffer);

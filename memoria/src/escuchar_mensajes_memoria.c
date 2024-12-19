@@ -1,6 +1,6 @@
 #include "escuchar_mensajes_memoria.h"
 extern t_log *logger;
-extern int cliente_fd_kernel;
+//extern int cliente_fd_kernel;
 extern int server_fd;
 extern int cliente_fd_dispatch;
 extern t_list *contextos_procesos;
@@ -8,7 +8,7 @@ extern t_list *contextos_hilos;
 extern int retardo_respuesta;
 extern MEMORIA_USUARIO* memoria_usuario;
 
-void escuchar_mensajes_kernel(void)
+void escuchar_mensajes_kernel(int cliente_fd_kernel)
 {
     t_buffer *buffer;
 
@@ -105,11 +105,12 @@ void escuchar_mensajes_kernel(void)
     case -1:
         log_error(logger, "Kernel desconectado\n");
         cliente_fd_kernel = -1;
-        return;
+        break;
     default:
         log_warning(logger, "Codigo de operacion invalido Kernel");
         break;
     }
+    close(cliente_fd_kernel);
     //if(buffer){
     //free(buffer->stream);  // Liberar el stream de datos
     //free(buffer);}

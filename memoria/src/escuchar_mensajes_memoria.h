@@ -3,7 +3,7 @@
 #include "utilidades.h"
 #include "utils/utils.h"
 
-void escuchar_mensajes_kernel(void);
+void escuchar_mensajes_kernel(int cliente);
 void escuchar_mensajes_cpu(void);
 
 #endif

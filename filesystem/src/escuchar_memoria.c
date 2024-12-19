@@ -34,9 +34,10 @@ void escuchar_mensajes_memoria(int cliente_fd)
         case -1:
             log_error(logger, "Memoria desconectado\n");
             cliente_fd = -1;
-            return;
+            break;
         default:
             log_warning(logger, "Codigo de operacion invalido");
             break;
     }
+    close(cliente_fd);
 }   
