@@ -170,7 +170,7 @@ void finalizacion_de_hilos(void)
         switch (resultado)
         {
         case 1:
-            log_info(logger, "## (<%d> : <%d>) Finaliza el hilo", tcb->pcb_pid,tcb->tid);
+            log_info(logger, "## (<%d>:<%d>) Finaliza el hilo", tcb->pcb_pid,tcb->tid);
             list_remove_element(tcb->pcb->tids, tcb->tid);
             list_remove_element(tcb->pcb->threads, tcb);
             pthread_mutex_lock(&mutex_liberar_tcb);
