@@ -28,7 +28,6 @@ bool hay_mem = true;
 extern bool fin_ciclo;
 extern t_list *pcbs_aceptados;
 extern pthread_mutex_t mutex_liberar_tcb;
-bool hay_mem = true;
 
 void creacion_de_procesos(void)
 {
@@ -37,11 +36,15 @@ void creacion_de_procesos(void)
     while (true)
     {
 
-        sem_wait(&sem_hay_new);
+      // log_error(logger,"ANTES DE HAY NEW");
+	 sem_wait(&sem_hay_new);
         if(!hay_mem){
-            break;
+        //log_error(logger,"NO HAT MEM IF");
+	sem_post(&sem_syscall_fin);   
+	 continue;
         }
-        sem_wait(&sem_hay_memoria);
+       // log_error(logger,"ANTES DE HAY MEM");
+	sem_wait(&sem_hay_memoria);
         if(fin_ciclo) return;
         //log_warning(logger, "Cola new");
         //imprimir_cola_new(cola_new, mutex_new);
@@ -101,12 +104,13 @@ void finalizacion_de_procesos(void)
             liberar_pcb(pcb);
             //printear_colas_y_prioridades();
             //imprimir_cola_new(cola_new,mutex_new);
-            if(queue_size(cola_new)>=1){
+            hay_mem=true;
+	    if(queue_size(cola_new)>=1){
                 sem_post(&sem_hay_new);
             }
             sem_post(&sem_syscall_fin);
             sem_post(&sem_hay_memoria);
-            hay_mem=true;
+            //hay_mem=true;
             break;
         case 0:
             log_error(logger, "## Error al finalizar el proceso: <%i>", pcb->pid);
