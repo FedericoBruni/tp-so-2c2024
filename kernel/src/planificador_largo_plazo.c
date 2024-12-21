@@ -28,6 +28,7 @@ bool hay_mem = true;
 extern bool fin_ciclo;
 extern t_list *pcbs_aceptados;
 extern pthread_mutex_t mutex_liberar_tcb;
+bool hay_mem = true;
 
 void creacion_de_procesos(void)
 {
@@ -35,8 +36,12 @@ void creacion_de_procesos(void)
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     while (true)
     {
-       sem_wait(&sem_hay_memoria);
+
         sem_wait(&sem_hay_new);
+        if(!hay_mem){
+            break;
+        }
+        sem_wait(&sem_hay_memoria);
         if(fin_ciclo) return;
         //log_warning(logger, "Cola new");
         //imprimir_cola_new(cola_new, mutex_new);
@@ -60,6 +65,7 @@ void creacion_de_procesos(void)
             encolar(cola_new, pcb,mutex_new);
             //log_warning(logger, "Encolé a new porque no había memoria para el proceso: %i, Cola new: ", pcb->pid);
             sem_post(&sem_syscall_fin);
+            hay_mem = false;
             break;
         }
         //break; // por ahora, q lo haga una sola vez pq no tenemos el semaforo
@@ -100,6 +106,7 @@ void finalizacion_de_procesos(void)
             }
             sem_post(&sem_syscall_fin);
             sem_post(&sem_hay_memoria);
+            hay_mem=true;
             break;
         case 0:
             log_error(logger, "## Error al finalizar el proceso: <%i>", pcb->pid);
