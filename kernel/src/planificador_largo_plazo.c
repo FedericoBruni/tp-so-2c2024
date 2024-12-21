@@ -35,7 +35,7 @@ void creacion_de_procesos(void)
     pthread_setcanceltype(PTHREAD_CANCEL_ASYNCHRONOUS, NULL);
     while (true)
     {
-        
+       sem_wait(&sem_hay_memoria);
         sem_wait(&sem_hay_new);
         if(fin_ciclo) return;
         //log_warning(logger, "Cola new");
@@ -52,15 +52,13 @@ void creacion_de_procesos(void)
         case 1:
             list_add(pcbs_aceptados, pcb);
             log_info(logger, "## (<PID>: %i) Se crea el proceso - Estado: NEW", pcb->pid);
-            sem_post(&sem_hay_memoria);
             THREAD_CREATE(pcb,pcb->archivo_pseudocodigo, pcb->prioridad_main);
+            sem_post(&sem_hay_memoria);
             break;
 
         case 0:
             encolar(cola_new, pcb,mutex_new);
             //log_warning(logger, "Encolé a new porque no había memoria para el proceso: %i, Cola new: ", pcb->pid);
-            
-            
             sem_post(&sem_syscall_fin);
             break;
         }
@@ -101,6 +99,7 @@ void finalizacion_de_procesos(void)
                 sem_post(&sem_hay_new);
             }
             sem_post(&sem_syscall_fin);
+            sem_post(&sem_hay_memoria);
             break;
         case 0:
             log_error(logger, "## Error al finalizar el proceso: <%i>", pcb->pid);
