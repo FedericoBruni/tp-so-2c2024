@@ -270,9 +270,10 @@ bool crear_archivo(int pid, int tid, int tamanio, t_list *arrayValores){
     fseek(archivoBloqueDeDatos,bloque_indice*block_size, SEEK_SET);
     for(int i = 0;i<bloques_necesarios - 1;i++){
         fwrite(&bloques_datos[i],sizeof(int),1,archivoBloqueDeDatos);
-        log_info(logger,"## Acceso Bloque - Archivo: <%s> - Tipo Bloque: <INDICE> - Bloque File System: <%d>",nombre_archivo,bloque_indice);
+        //log_info(logger,"## Acceso Bloque - Archivo: <%s> - Tipo Bloque: <INDICE> - Bloque File System: <%d>",nombre_archivo,bloque_indice);
         usleep(retardo_acceso_bloque * 1000);
     }
+    log_info(logger,"## Acceso Bloque - Archivo: <%s> - Tipo Bloque: <INDICE> - Bloque File System: <%d>",nombre_archivo,bloque_indice);
 
     //escribir datos en los bloques de datos
     int ints_escritos = 0;
